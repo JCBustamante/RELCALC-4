@@ -1,0 +1,40 @@
+\BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.0.1}{Notes à propos de ce manuel}{chapter*.2}% 2
+\BOOKMARK [1][-]{section.0.2}{Introduction aux équations différentielles}{chapter*.2}% 3
+\BOOKMARK [1][-]{section.0.3}{Classification des équations différentielles}{chapter*.2}% 4
+\BOOKMARK [0][-]{chapter.1}{Équations du premier ordre}{}% 5
+\BOOKMARK [1][-]{section.1.1}{Les intégrales en tant que solutions}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Champs\040de\040direction}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Les équations séparables}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.4}{Les équations linéaires et le facteur intégrant}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.5}{Les équations autonomes}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.6}{Les équations exactes}{chapter.1}% 11
+\BOOKMARK [0][-]{chapter.2}{EDO d'ordre supérieur}{}% 12
+\BOOKMARK [1][-]{section.2.1}{Équations différentielles de deuxième ordre}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.2}{EDO d'ordre 2 à coefficients constants}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.3}{EDO linéaires d'ordre supérieur}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.4}{Vibrations mécaniques}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.5}{Équations non homogènes }{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Systèmes d’équations différentielles ordinaires}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Introduction aux systèmes d'EDO}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Matrices et systèmes linéaires}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Systèmes linéaires d'EDO}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.4}{Décomposition en valeurs propres}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.5}{Les systèmes bidimensionnels et leurs champs vectoriels}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{Séries de Fourier et EDP}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Conditions\040au\040bord}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.2}{Les séries trigonométriques}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{Plus sur les séries de Fourier}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.4}{Séries de sinus et de cosinus}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.5}{Applications des séries de Fourier}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.6}{Équation de la chaleur}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.7}{Équation d'onde unidimensionnelle}{chapter.4}% 31
+\BOOKMARK [0][-]{appendix.A}{Linear\040algebra}{}% 32
+\BOOKMARK [1][-]{section.A.1}{Vectors,\040mappings,\040and\040matrices}{appendix.A}% 33
+\BOOKMARK [1][-]{section.A.2}{Matrix\040algebra}{appendix.A}% 34
+\BOOKMARK [1][-]{section.A.3}{Elimination}{appendix.A}% 35
+\BOOKMARK [1][-]{section.A.4}{Subspaces,\040dimension,\040and\040the\040kernel}{appendix.A}% 36
+\BOOKMARK [1][-]{section.A.5}{Inner\040product\040and\040projections}{appendix.A}% 37
+\BOOKMARK [1][-]{section.A.6}{Determinant}{appendix.A}% 38
+\BOOKMARK [0][-]{appendix*.71}{Lectures\040additionnelles}{}% 39
+\BOOKMARK [0][-]{appendix*.73}{Solutions à des exercices choisis}{}% 40
