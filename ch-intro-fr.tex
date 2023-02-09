@@ -10,34 +10,33 @@
 \label{notes:section}
 
 %\sectionnotes{\`A propos de l'auteur.}
-Ceci est une traduction d'un manuel libre écrit par Ji\v{r}i Lebl.  Il s'agit d'un premier cours d'équations diff\'erentielles pour les personnes \'etudiant en g\'enie.
+Ceci est une traduction d'un manuel libre écrit par Ji\v{r}\'{\i} Lebl.  Il s'agit d'un premier cours d'équations diff\'erentielles pour les personnes \'etudiant en g\'enie.
 
-Originalement des notes pour
-un cours enseign\'e 
-\`a \href{https://www.math.uiuc.edu/}{University of Illinois at
+Originalement des notes pour un cours enseign\'e 
+\`a \href{https://www.math.uiuc.edu/}{University of Illinois
 Urbana-Champaign} en 2008-2009, l'auteur  les a utilisées ensuite 
-\`a UIUC\@, \href{https://www.math.ucsd.edu/}{University of California, San Diego} (UCSD),
-et \href{https://math.okstate.edu/}{Oklahoma State University} (OSU).
-Normalement, ces cours sont enseign\'es avec le manuel de 
-Edwards and Penney, \emph{Differential
-Equations and Boundary Value Problems: Computing and Modeling}~\cite{EP}, ou de Boyce et DiPrima,
+\`a UIUC\@, \href{https://www.math.ucsd.edu/}{University of California, \`a San Diego} (UCSD) 
+et \`a \href{https://math.okstate.edu/}{Oklahoma State University} (OSU).
+Normalement, ces cours sont enseign\'es avec le livre de 
+Edwards et Penney, \emph{Differential
+Equations and Boundary Value Problems: Computing and Modeling}~\cite{EP}, ou celui de Boyce et DiPrima,
 \emph{Elementary
 Differential Equations and Boundary Value Problems}~\cite{BD},
-et ce livre-ci se veut un remplacement de ces ressources.
+et ce manuel-ci se veut un remplacement de ces ressources.
 
-L'adaptation en français a été écrite pour les cours de GCH217 et MAT217 donnés à l'Université de Sherbrooke.
+L'adaptation en français a été écrite pour les cours de GCH217 et MAT217, donnés à l'Université de Sherbrooke.
 
 Voici d'autres références :
-E.L.\ Ince,
+E. L.\ Ince,
 \emph{Ordinary Differential Equations}~\cite{I}, classique (et \'economique);
-Stanley Farlow, \emph{Differential Equations and Their
+Stanley Farlow, \emph{An Introduction to Differential Equations and Their
 Applications}~\cite{F}; 
-Berg and McGregor,
+Berg et McGregor,
 \emph{Elementary Partial Differential Equations}~\cite{BM}, maintenant disponible dans Dover;
 et William Trench,
 \emph{Elementary
-Differential Equations with Boundary Value Problems}~\cite{T}, ressource libre.
-Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} \`a la fin de ce livre.
+Differential Equations with Boundary Value Problems}~\cite{T}, une ressource libre.
+Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} \`a la fin de ce manuel.
 
 %\subsection{Organisation}
 %
@@ -282,7 +281,7 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} \`a 
 
 \subsection{\'Equations diff\'erentielles}
 
-Les lois de la physique sont g\'en\'eralement exprim\'ees sous forme d'\'equations diff\'erentielles.  Ainsi, toute discipline de science ou de g\'enie utilise les \'equations diff\'erentielles, \`a un niveau plus ou moins sophistiqu\'e.  Comprendre les \'equations diff\'erentielles est essentiel \`a la compr\'ehension de presque tout ce que vous apprendrez dans vos classes de science ou de g\'enie.  On peut penser aux math\'ematiques comme le langage de la science, et les \'equations diff\'erentielles forment une partie importante de ce langage.
+Les lois de la physique sont g\'en\'eralement exprim\'ees sous forme d'\'equations diff\'erentielles.  Ainsi, toute discipline de science ou de g\'enie utilise les \'equations diff\'erentielles, \`a un niveau plus ou moins sophistiqu\'e.  Comprendre les \'equations diff\'erentielles est essentiel \`a la compr\'ehension de presque tout ce que vous apprendrez dans vos cours de science ou de g\'enie.  On peut penser aux math\'ematiques comme au langage de la science, et les \'equations diff\'erentielles forment une partie importante de ce langage.
 %As an analogy,
 %suppose all your classes from now on were given in Swahili.  
 %It would be important to first learn Swahili, or you would have a very
@@ -293,18 +292,18 @@ Et vous avez m\^eme r\'esolu des \'equations diff\'erentielles dans vos cours de
 \begin{equation} \label{eq1}
 \frac{dx}{dt} + x = 2 \cos t .
 \end{equation}
-Ici $x$ est la  \emph{\myindex{variable d\'ependante}} et $t$ est la \emph{\myindex{variable ind\'ependante}}.
+Ici, $x$ est la  \emph{\myindex{variable d\'ependante}}, et $t$ est la \emph{\myindex{variable ind\'ependante}}.
 L'équation \eqref{eq1}
-est un exemple de base d'une \emph{\myindex{\'equation diff\'erentielle}}. Plus pre\'cis\'ement, c'est un exemple d'\emph{\myindex{\'equation diff\'erentielle du premier ordre}}, puisqu'elle n'implique que la premi\`ere d\'eriv\'ee de la variable d\'ependante $x$.  Cette \'equation vient de la loi du refroidissement de Newton, lorsque la temp\'erature ambiante oscille en fonction du temps.
+est un exemple de base d'une \emph{\myindex{\'equation diff\'erentielle}}. Plus précisément, c'est un exemple d'\emph{\myindex{\'equation diff\'erentielle du premier ordre}}, puisqu'elle n'implique que la premi\`ere d\'eriv\'ee de la variable d\'ependante $x$.  Cette \'equation vient de la loi de refroidissement de Newton, lorsque la temp\'erature ambiante oscille en fonction du temps.
 
 \subsection{Solutions d'\'equations diff\'erentielles}
 
-Quand on résoud une \'equation diff\'erentielle comme \eqref{eq1}, l'inconnue est une variable $x$, qui elle-même d\'epend d'une variable $t$.  C'est-\`a-dire, on veut trouver un $x$, dépendant de $t$, tel que, lorsqu'on substitue $x$, $t$ et $\frac{dx}{dt}$ dans l'équation \eqref{eq1}, le c\^ot\'e gauche est \'egal au c\^ot\'e droit et donc l'\'egalit\'e est satisfaite.  C'est le m\^eme principe que pour une \'equation ordinaire (alg\'ebrique) impliquant $x$ et $t$.  Nous affirmons que l'expression suivante est une \emph{\myindex{solution}}\,: 
+Quand on résout une \'equation diff\'erentielle comme \eqref{eq1}, l'inconnue est une variable $x$, qui elle-même d\'epend d'une variable $t$, c'est-\`a-dire qu'on veut trouver un $x$, dépendant de $t$, tel que, lorsqu'on substitue $x$, $t$ et $\frac{dx}{dt}$ dans l'équation \eqref{eq1}, le c\^ot\'e gauche est \'egal au c\^ot\'e droit, et donc l'\'egalit\'e est satisfaite.  C'est le m\^eme principe que pour une \'equation ordinaire (alg\'ebrique) impliquant $x$ et $t$.  Nous affirmons que l'expression suivante est une \emph{\myindex{solution}}\,: 
 \begin{equation*}
 x = x(t) = \cos t + \sin t .
 \end{equation*}
 %
-Comment le v\'erifier?  Il suffit de substituer $x$ dans l'\'equation \eqref{eq1} et vérifier que l'égalité est bel et bien établie.    Nous devons d'abord calculer $\frac{dx}{dt}$.  On trouve que $\frac{dx}{dt} = 
+Comment le v\'erifier?  Il suffit de substituer $x$ dans l'\'equation \eqref{eq1} et de vérifier que l'égalité est bel et bien établie.    Nous devons d'abord calculer $\frac{dx}{dt}$.  On trouve que $\frac{dx}{dt} = 
 -\sin t + \cos t$.  Maintenant, calculons le c\^ot\'e gauche de \eqref{eq1}\,: 
 \begin{equation*}
 \frac{dx}{dt} + x = 
@@ -314,7 +313,7 @@ Comment le v\'erifier?  Il suffit de substituer $x$ dans l'\'equation \eqref{eq1
 =
 2\cos t .
 \end{equation*}
-C'est bien ce qu'on veut\,: nous obtenons exactement le c\^ot\'e droit de l'\'equation.
+C'est bien ce que nous voulons: nous obtenons exactement le c\^ot\'e droit de l'\'equation.
 Mais ce n'est pas tout. 
 Nous affirmons que 
 $x = \cos t + \sin t + e^{-t}$ est aussi une solution.  Vérifions\,: 
@@ -330,7 +329,7 @@ On remplace ceci dans \eqref{eq1}\,:
 \end{equation*}
 Il s'agit bien d'une solution.
 
-Ainsi, plusieurs solutions sont possibles.  Pour cette \'equation en particulier, toutes les solutions peuvent s'\'ecrire sous la forme\,; 
+Ainsi, plusieurs solutions sont possibles.  Pour cette \'equation en particulier, toutes les solutions peuvent s'\'ecrire sous la forme 
 \begin{equation*}
 x = \cos t + \sin t + C e^{-t} 
 \end{equation*}
@@ -344,21 +343,21 @@ pour une constante $C$.  Diff\'erentes constantes $C$ donneront des solutions di
 \caption{Quelques solutions de $\frac{dx}{dt} + x = 2 \cos t$.\label{intro:plotsfig}}
 \end{mywrapfig}%
 
-La résolution d'une \'equation diff\'erentielle peut \^etre tr\`es ardue.  Il n'y a pas une m\'ethode g\'en\'erale pour les r\'esoudre toutes. La plupart du temps, nous verrons comment obtenir des formules exactes pour r\'esoudre certaines \'equations diff\'erentielles, mais parfois nous n'obtiendrons que des solutions approximatives,  De plus, nous passerons un peu de temps \`a comprendre certaines \'equations, sans les r\'esoudre.
+La résolution d'une \'equation diff\'erentielle peut \^etre tr\`es ardue.  Il n'y a pas une m\'ethode g\'en\'erale pour les r\'esoudre toutes. La plupart du temps, nous verrons comment obtenir des formules exactes pour r\'esoudre certaines \'equations diff\'erentielles, mais parfois nous n'obtiendrons que des solutions approximatives. De plus, nous passerons un peu de temps \`a comprendre certaines \'equations, sans les r\'esoudre.
 
-La majeure partie de ce livre est d\'edi\'ee aux 
-\emph{\'equations diff\'erentielles ordinaires\index{ordinary differential equation}}
-ou EDO\index{ODE}, c'est-\`a-dire des \'equations ayant une seule variable ind\'ependante, o\`u les d\'eriv\'ees se prennent en termes de cette unique variable.  Lorsqu'il y a plusieurs variables ind\'ependantes, on obtient des 
-\emph{\'equations aux d\'eriv\'ees partielles \index{partial differential equation}}
+La majeure partie de ce manuel est d\'edi\'ee aux 
+\emph{\'equations diff\'erentielles ordinaires\index{ordinary differential equation}},
+ou EDO\index{ODE}, c'est-\`a-dire aux \'equations ayant une seule variable ind\'ependante, o\`u les d\'eriv\'ees se prennent en termes de cette unique variable.  Lorsqu'il y a plusieurs variables ind\'ependantes, on obtient des 
+\emph{\'equations aux d\'eriv\'ees partielles \index{partial differential equation}},
 ou EDP\index{PDE}.
 %We will briefly see these near the
 %end of the course.
 
 M\^eme pour les EDO, qui sont tr\`es bien comprises, il ne s'agit pas simplement de tourner une manivelle pour obtenir une r\'eponse.  
 %When you can find exact solutions, they are usually preferable to approximate solutions.  
-  C'est important de comprendre comment de telles solutions sont trouv\'ees.  M\^eme si, dans la vraie vie, vous laisserez la plupart des calculs \`a des ordinateurs, vous devez comprendre ce qu'ils font.  Il est parfois n\'ecessaire de simplifier ou transformer votre \'equation pour que la machine la comprenne et la r\'esoude.  Il vous faudra peut-\^etre m\^eme ajouter ou modifier des hypoth\`eses dans votre mod\`ele pour ce faire.
+  C'est important de comprendre comment de telles solutions sont trouv\'ees.  M\^eme si, dans la vraie vie, vous laisserez la plupart des calculs \`a des ordinateurs, vous devez comprendre ce qu'ils font.  Il est parfois n\'ecessaire de simplifier ou de transformer votre \'equation pour que la machine la comprenne et la r\'esolve.  Il vous faudra peut-\^etre m\^eme ajouter ou modifier des hypoth\`eses dans votre mod\`ele pour ce faire.
   
-Pour r\'eussir en g\'enie ou en sciences, vous aurez \`a r\'esoudre des probl\`emes dans votre travail que vous n'aurez jamais vus auparavant.  D'o\`u l'importance d'apprendre des techniques de r\'esolution de probl\`emes, afin d'appliquer ces techniques aux nouveaux probl\`emes.  
+Pour r\'eussir en g\'enie ou en science, vous aurez \`a r\'esoudre des probl\`emes dans votre travail que vous n'aurez jamais vus auparavant, d'o\`u l'importance d'apprendre des techniques de r\'esolution de probl\`emes, afin d'appliquer ces techniques aux nouveaux probl\`emes.  
 %Une erreur courante est de s'attendre \`a une recette qui r\'soudre tous les probl\`emes que vous rencontrerez.  Ce cours n'est pas une exception.
  
 \subsection{En pratique}
@@ -379,15 +378,15 @@ Pour r\'eussir en g\'enie ou en sciences, vous aurez \`a r\'esoudre des probl\`e
 %\inputpdft{1-1-fig}
 %\diffypdfversion{\par\vspace*{5pt}}
 %\end{mywrapfigsimp}
-Comment utilise-t-on les \'equations diff\'erentielles en sciences et en g\'enie?  On commence avec une \emph{\myindex{situation-probl\`eme}} qu'on veut comprendre.  \`A l'aide d'hypoth\`eses suppl\'ementaires pour simplifier le probl\`eme, on cr\'ee un 
+Comment utilise-t-on les \'equations diff\'erentielles en science et en g\'enie?  On commence avec une \emph{\myindex{situation-probl\`eme}} qu'on veut comprendre.  \`A l'aide d'hypoth\`eses suppl\'ementaires pour simplifier le probl\`eme, on cr\'ee un 
 \emph{\myindex{mod\`ele math\'ematique}}.  Autrement dit, on traduit la situation en \'equations diff\'erentielles.  Ensuite, on utilise les math\'ematiques afin d'obtenir une \emph{\myindex{solution math\'ematique}}.  Mais ce n'est pas fini.  Il faut encore interpr\'eter les r\'esultats\,: qu'est-ce que la solution math\'ematique nous dit \`a propos de la situation-probl\`eme de d\'epart?
 
-Pour ce qui est de formuler le mod\`ele math\'ematique, et d'interpr\'eter les r\'esultats, vous ferez cela surtout dans vos cours de g\'enie et de sciences.  Dans ce cours-ci, nous nous concentrerons principalement sur l'analyse math\'ematique.  Parfois, nous travaillerons avec des exemples r\'ealistes simples, afin de d\'evelopper notre intuition et motiver les concepts que nous verrons.
+Pour ce qui est de formuler le mod\`ele math\'ematique, et d'interpr\'eter les r\'esultats, vous ferez cela surtout dans vos cours de g\'enie et de science.  Dans ce cours-ci, nous nous concentrerons principalement sur l'analyse math\'ematique.  Parfois, nous travaillerons avec des exemples r\'ealistes simples afin de d\'evelopper notre intuition et de motiver les concepts que nous verrons.
 
 Consid\'erons ici un exemple.  Une des \'equations les plus fondamentales est le \emph{\myindex{mod\`ele de croissance exponentielle}}.  D\'enotons une population de bact\'eries par la variable $P$ (plus pr\'ecis\'ement, $P$ d\'enote la quantit\'e de population).  On suppose que l'environnement contient suffisamment de nutriments et d'espace.  Dans ce cas-l\`a, le taux de croissance de la population de bact\'eries est proportionnelle \`a la population -- une population plus nombreuse cro\^itra plus rapidement.  D\'enotons le temps (en secondes, disons) par la variable $t$.  Notre mod\`ele est alors\,: 
 %
 \begin{equation*}
-\frac{dP}{dt} = kP 
+\frac{dP}{dt} = kP, 
 \end{equation*}
 o\`u $k > 0$ est une constante.
 
@@ -401,7 +400,7 @@ Supposons qu'il y a 100 bact\'eries au temps 0 et 200 bact\'eries 10 secondes pl
 %
 D'abord, nous devons r\'esoudre l'\'equation diff\'erentielle.  Nous affirmons que la fonction suivante est une solution\,: 
 \begin{equation*}
-P(t) = C e^{kt} 
+P(t) = C e^{kt}, 
 \end{equation*}
 o\`u $C$ est une constante.  V\'erifions ceci\,: 
 \begin{equation*}
@@ -409,17 +408,16 @@ o\`u $C$ est une constante.  V\'erifions ceci\,:
 \end{equation*}
 Il s'agit donc bel et bien d'une solution.
 
-Ensuite?  On ne connait pas la valeur de $C$, ni de $k$.  Mais on sait ceci.
-On sait que $P(0) = 100$, et on sait que
-$P(10) = 200$.  Substituons ces valeurs dans l'expression et regardons ce qu'on obtient\,: 
+Ensuite?  On ne connaît pas la valeur de $C$, ni de $k$.  Mais on sait ceci: $P(0) = 100$ et $P(10) = 200$.  
+Substituons ces valeurs dans l'expression et regardons ce que nous obtenons: 
 \begin{align*}
 & 100 = P(0) = C e^{k0} = C ,\\
 & 200 = P(10) = 100 \, e^{k10} .
 \end{align*}
-Par cons\'equent, $2 = e^{10k}$ ou $\frac{\ln 2}{10} = k \approx 0.069$.
+Par cons\'equent, $2 = e^{10k}$ ou $\frac{\ln 2}{10} = k \approx 0,069$.
 Donc\,: 
 \begin{equation*}
-P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0.069 t} .
+P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0,069 t} .
 \end{equation*}
 \`A une minute, $t=60$, la population est $P(60) = 6400$.  
 Voir la~\figurevref{intro:plotbactfig}.
@@ -437,18 +435,21 @@ Voir la~\figurevref{intro:plotbactfig}.
 %mbxlatex \caption{Bacteria growth in the first 60 seconds.\label{intro:plotbactfig}}
 %mbxlatex \end{myfig}
 
-Parlons maintenant de l'interpr\'etation de ces r\'esultats.  Doit-on penser qu'il y aura exactement 6400 bact\'eries \`a 60 secondes? Bien s\^ur que non.  Nous avons fait des hypoth\`eses simplificatrices qui ne seront pas exactement vraies, mais approximativement vraies.  Si nos hypoth\`eses sont raisonnables, il y aura environ 6400 bact\'eries.  De plus, $P$ devrait \^etre un nombre entier, puisqu'il compte une quantit\'e de bact\'eries.  Pourtant, notre mod\`ele admet des nombres comme $P(61) \approx 6859.35$.
+Parlons maintenant de l'interpr\'etation de ces r\'esultats.  Doit-on penser qu'il y aura exactement 6400 bact\'eries \`a 60 secondes? Bien s\^ur que non.  Nous avons fait des hypoth\`eses simplificatrices qui ne seront pas exactement vraies, mais approximativement vraies.  Si nos hypoth\`eses sont raisonnables, il y aura environ 6400 bact\'eries.  De plus, $P$ devrait \^etre un nombre entier, puisqu'il compte une quantit\'e de bact\'eries.  Pourtant, notre mod\`ele admet des nombres comme $P(61) \approx 6859,35$.
 %Obviously there 
 %are either 6859 bacteria or 6860 bacteria.
 \end{example}
 
-Habituellement, la constante $k$ dans $P' = kP$ est connue, et on cherche \`a r\'esoudre l'\'equation dif\'erentielle pour diff\'erentes \emph{conditions initiales\index{initial condition}}.  Qu'est-ce que \c{c}a veut dire?  Prenons $k=1$ pour simplifier les choses.  Supposons qu'on veut r\'esoudre l'\'equation 
+Habituellement, la constante $k$ dans $P' = kP$ est connue, et l'on cherche \`a r\'esoudre l'\'equation diff\'erentielle pour diff\'erentes \emph{conditions initiales\index{initial condition}}.  Qu'est-ce que \c{c}a veut dire?  Prenons $k=1$ pour simplifier les choses.  Supposons que nous voulons r\'esoudre l'\'equation 
 $\frac{dP}{dt} = P$ 
 avec la condition $P(0) = 1000$ (la condition initiale).
-Alors la solution est (exercice)\,: 
+Alors, la solution est (exercice)\,: 
 \begin{equation*}
 P(t) = 1000 \, e^t .
 \end{equation*}
+
+%%%%%%%%%%%%%%%%%%JP RENDU ICI 2023-02-09
+
 
 On appelle $P(t) = C e^t$ \emph{la \myindex{solution g\'en\'erale}},
 puisque toute solution de l'\'equation peut s'\'ecrire sous cette forme pour un certain choix de la constante $C$.  La condition initiale sert \`a d\'eterminer $C$, afin de trouver la 
