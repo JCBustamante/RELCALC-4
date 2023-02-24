@@ -184,7 +184,7 @@ transform},
   {}% Indent amount 1
   %{\bfseries \itshape}% Theorem head font
   {\bfseries \slshape}% Theorem head font
-  {:}% Punctuation after theorem head
+  {~:}% Punctuation after theorem head
   {.5em}% Space after theorem head 2
   {}% Theorem head spec (can be left empty, meaning "normal")
 
@@ -201,8 +201,8 @@ transform},
 \def\printanswers{
  \cleardoublepage  
  \phantomsection
- \chapter*{Solutions \`a des exercices choisis}
- \markboth{Solutions \`a des exercices choisis}{Solutions \`a des exercices choisis}
+ \chapter*{Solutions à des exercices choisis}
+ \markboth{Solutions à des exercices choisis}{Solutions à des exercices choisis}
  \addfakecontentsline{Solutions \`a des exercices choisis}
  \unvbox\answerscollect\setbox\answerscollect=\vbox{}
 }
@@ -229,10 +229,10 @@ transform},
 \renewcommand{\theexample}{\thesection.\arabic{example}}
 \def\exampleclaim{\par\addvspace{\medskipamount}\noindent\refstepcounter{example}\hbox{\bf
 Exemple
-\thesection.\arabic{example}:}\hspace{0.5em}\ignorespaces}
+\thesection.\arabic{example}~:}\hspace{0.5em}\ignorespaces}
 \def\exampleclaimname#1{\par\addvspace{\medskipamount}\noindent\refstepcounter{example}\hbox{\bf
 Exemple
-\thesection.\arabic{example} {\rm (#1)}:}\hspace{0.5em}\ignorespaces}
+\thesection.\arabic{example} {\rm (#1)}~:}\hspace{0.5em}\ignorespaces}
 \def\endexampleclaim{
 \par\addvspace{\medskipamount}}
 \newenvironment{example}[1][]{\ifx\namearg#1\namearg\exampleclaim\else\exampleclaimname{#1}\fi}{\endexampleclaim}
@@ -241,10 +241,10 @@ Exemple
 \renewcommand{\theremark}{\thesection.\arabic{remark}}
 \def\remarkclaim{\par\addvspace{\medskipamount}\noindent\refstepcounter{remark}\hbox{\bf
 Remarque
-\thesection.\arabic{remark}:}\hspace{0.5em}\ignorespaces}
+\thesection.\arabic{remark}~:}\hspace{0.5em}\ignorespaces}
 \def\remarkclaimname#1{\par\addvspace{\medskipamount}\noindent\refstepcounter{remark}\hbox{\bf
 Remarque
-\thesection.\arabic{remark} {\rm (#1)}:}\hspace{0.5em}\ignorespaces}
+\thesection.\arabic{remark} {\rm (#1)}~:}\hspace{0.5em}\ignorespaces}
 \def\endremarkclaim{
 \par\addvspace{\medskipamount}}
 \newenvironment{remark}[1][]{\ifx\namearg#1\namearg\remarkclaim\else\remarkclaimname{#1}\fi}{\endremarkclaim}
@@ -389,7 +389,7 @@ Remarque
  \vspace*{\stretch{1}}
  \noindent\hspace*{\centeroffset}\makebox[0pt][l]{\begin{minipage}{\textwidth}
  \flushright
- {\Huge\bfseries \sffamily \'Equations diff\'erentielles }
+ {\Huge\bfseries \sffamily Équations différentielles }
  \noindent\rule[-1ex]{\textwidth}{5pt}\\[2.5ex]
  \hfill\emph{\Large \sffamily pour le g\'enie}
  \end{minipage}}
