@@ -10,56 +10,55 @@
 %\sectionnotes{1 lecture (or less)\EPref{, \S1.2 in \cite{EP}}\BDref{,
 %covered in \S1.2 and \S2.1 in \cite{BD}}}
 
-Une équation différentielle du premier ordre est une équation pouvant s'écrire de la forme suivante \,: 
+Une équation différentielle du premier ordre est une équation pouvant s'écrire de la forme suivante: 
 %
 \begin{equation*}
-\frac{dy}{dx} = f(x,y) 
+	\frac{dy}{dx} = f(x,y) 
 \end{equation*}
 ou 
 \begin{equation*}
-y' = f(x,y) .
+	y' = f(x,y) .
 \end{equation*}
 Il n'y a pas de méthode générale simple pour trouver la solution  à toute équation du premier ordre.  Nous verrons quelques cas où c'est possible.  Commençons par supposer que $f$ est une fonction de $x$, seulement, c'est-à-dire\,: 
 \begin{equation} \label{ias:inteq}
-y' = f(x) .
+	y' = f(x) .
 \end{equation}
 On peut alors intégrer des deux côtés pour trouver une solution\,: 
 \begin{equation*}
-\int y'(x) \,dx = \int f(x) \,dx + C ,
+	\int y'(x) \,dx = \int f(x) \,dx + C ,
 \end{equation*}
-c'est-à-dire\,: 
+c'est-à-dire
 \begin{equation*}
-y(x) = \int f(x) \,dx + C .
+	y(x) = \int f(x) \,dx + C .
 \end{equation*}
 Dans ce cas-ci, la solution générale, $y(x)$, est en fait une primitive de $f(x)$, à laquelle on ajoute la constante d'intégration.
 
 \medskip
 
-Prenons ce moment pour aborder un point délicat du vocabulaire de calcul.  Souvent, quand on pense aux intégrales, on pense à une \myindex{intégrale indéfinie}.  En réalité, une intégrale indéfinie est une \emph{\myindex{primitive}} ou, plus précisément, une famille de primitives.  Ce sont les intégrales définies (les intégrales avec des bornes) qui sont les vraies intégrales.  Mais c'est pratique de parler d'intégrale "indéfinie" puisqu'on peut toujours écrire l'intégrale indéfinie 
-$\int f(x) \,dx + C$ comme suit, grâce au théorème fondamental du calcul.\,: 
+Prenons ce moment pour aborder un point délicat du vocabulaire de calcul.  Souvent, quand on pense aux intégrales, on pense à une \myindex{intégrale indéfinie}.  En réalité, une intégrale indéfinie est une \emph{\myindex{primitive}} ou, plus précisément, une famille de primitives.  Ce sont les intégrales définies (les intégrales avec des bornes) qui sont les vraies intégrales.  Mais c'est pratique de parler d'intégrale \og{}indéfinie\fg{} puisqu'on peut toujours écrire l'intégrale indéfinie 
+$\int f(x) \,dx + C$ comme suit, grâce au théorème fondamental du calcul: 
 \begin{equation*}
-\int_{x_0}^x f(t) \,dt + C .
+	\int_{x_0}^x f(t) \,dt + C .
 \end{equation*}
-C'est ce qui nous permet de dire  \emph{ \myindex{intégrer}} quand en réalité, on veut dire  
+C'est ce qui nous permet de dire  \emph{ \myindex{intégrer}}, quand en réalité, on veut dire  
 \emph{trouver la \myindex{primitive}}.
 
-L'intégration est tout simplement un moyen parmi d'autres pour calculer une primitive (moyen qui fonctionne toujours, comme on verra dans les exemples suivants).  Mais on définit l'intégrale comme étant l'aire sous la courbe.  Pour simplifier les choses, nous continuerons d'utiliser la notation intégrale pour écrire une primitive, et \emph{gardez toujours en tête} comment ré-écrire l'intégrale indéfinie comme une intégrale définie.
+L'intégration est tout simplement un moyen parmi d'autres pour calculer une primitive (moyen qui fonctionne toujours, comme on le  verra dans les exemples suivants).  Mais on définit l'intégrale comme étant l'aire sous la courbe.  Pour simplifier les choses, nous continuerons d'utiliser la notation intégrale pour écrire une primitive, et \emph{gardez toujours en tête} comment réécrire l'intégrale indéfinie comme une intégrale définie.
 
 \begin{example}
-Trouvez la solution générale de $y' = 3 x^2$.
+Trouvons la solution générale de $y' = 3 x^2$.
 
 En intégrant des deux côtés, on trouve $y = x^3 + C$.  Vérifions notre solution en prenant sa dérivée : 
 $y' = 3x^2$.  C'est \emph{précisément} notre équation.
 \end{example}
 
-Normalement, on a aussi une {\em condition initiale}, de la forme $y(x_0) = y_0$, où $x_0,y_0$ sont des nombre réels.  (Habituellement, $x_0=0$, mais ce n'est pas toujours le cas.)  Dans ce cas, la solution s'écrit très bien sous forme intégrale.  Supposons que le problème à résoudre est $y' = f(x)$, $y(x_0) = y_0$. Alors la solution est\,:
-%
+Normalement, on a aussi une {\em condition initiale}, de la forme $y(x_0) = y_0$, où $x_0,y_0$ sont des nombre réels  (habituellement, $x_0=0$, mais ce n'est pas toujours le cas).  Dans ce cas, la solution s'écrit très bien sous forme intégrale.  Supposons que le problème à résoudre est $y' = f(x)$, $y(x_0) = y_0$. Alors, la solution est:
 \begin{equation} \label{int:eqdef}
-y(x) = \int_{x_0}^x f(s) \,ds + y_0 .
+	y(x) = \int_{x_0}^x f(s) \,ds + y_0 .
 \end{equation}
-Vérifions.  Par le théorème fondamental du calcul, la dérivée de l'intégrale précédente est $f(x)$ et donc $y(x)$ est bel et bien est une solution à l'équation différentielle.  Maintenant, vérifions qu'elle satisfait aussi la condition initiale\,:
+Vérifions.  Par le théorème fondamental du calcul, la dérivée de l'intégrale précédente est $f(x)$, et donc $y(x)$ est bel et bien est une solution à l'équation différentielle.  Maintenant, vérifions qu'elle satisfait aussi à la condition initiale\,:
 \begin{equation*}
-y(x_0) = \int_{x_0}^{x_0} f(x)\,dx + y_0 = y_0.
+	y(x_0) = \int_{x_0}^{x_0} f(x)\,dx + y_0 = y_0.
 \end{equation*}
 Ainsi, la condition initiale est également vérifiée par l'équation~\eqref{int:eqdef}.
 
@@ -72,16 +71,16 @@ Gardez en tête qu'une intégrale définie et une intégrale indéfinie sont deu
 %closed form for the antiderivative.
 
 \begin{example}
-Résoudre\,: 
+Résolvons:
 \begin{equation*}
-y' = e^{-x^2}, \qquad y(0) = 1 .
+	y' = e^{-x^2}, \qquad y(0) = 1 .
 \end{equation*}
 
 Par la solution précédente, la solution doit être\,:  
 \begin{equation*}
 y(x) = \int_0^x e^{-s^2} \,ds + 1 .
 \end{equation*}
-Or il n'y a pas de formule plus explicite pour la primitive de $e^{-x^2}$.  (On ne peut pas, par exemple, faire un changement de variables...)  Et la solution sous forme intégrale est très correcte, telle quelle.  Elle joue un rôle important, d'ailleurs, en statistique.
+Or, il n'y a pas de formule plus explicite pour la primitive de $e^{-x^2}$  (on ne peut pas, par exemple, faire un changement de variables...).  Et la solution sous forme intégrale est très correcte, telle quelle.  Elle joue un rôle important, d'ailleurs, en statistique.
 \end{example}
 
 La méthode de l'intégrale sert aussi à résoudre des équations de la forme suivante\,: 
@@ -94,13 +93,13 @@ y' = f(y) .
 \end{equation*}
 Le théorème de la fonction inverse, en calcul, nous permet d'échanger les rôles de $x$ et de $y$ pour écrire l'équation sous la forme suivante\,: 
 \begin{equation*}
-\frac{dx}{dy} = \frac{1}{f(y)} .
+	\frac{dx}{dy} = \frac{1}{f(y)} .
 \end{equation*}
-On dirait qu'on fait tout simplement des manipulations algébriques avec $dx$ et $dy$, qu'on traite comme des nombres.  Et c'est vrai que ça marche.  Mais attention! lorsqu'on verra des équations aux dérivées partielles, ce type de raisonnement ne fonctionnera plus.
+On dirait qu'on fait tout simplement des manipulations algébriques avec $dx$ et $dy$, qu'on traite comme des nombres.  Et c'est vrai que ça marche.  Mais attention! Lorsqu'on verra des équations aux dérivées partielles, ce type de raisonnement ne fonctionnera plus.
 
 Dans le cas présent, on peut intégrer l'équation précédente des deux côtés pour obtenir\,: 
 \begin{equation*}
-x(y) = \int \frac{1}{f(y)} \,dy + C .
+	x(y) = \int \frac{1}{f(y)} \,dy + C .
 \end{equation*}
 On peut ensuite tenter de résoudre pour $y$.  Voyons quelques exemples de ceci.
 
@@ -110,46 +109,44 @@ $y=Ce^{kx}$.  Reprenons cet exemple de manière plus systématique.
 
 Observons d'abord que  $y=0$ est une solution.  Supposons donc dorénavant que $y\not= 0$.  On peut alors écrire\,: 
 \begin{equation*}
-\frac{dx}{dy} = \frac{1}{ky} .
+	\frac{dx}{dy} = \frac{1}{ky} .
 \end{equation*}
 On intègre des deux côtés pour obtenir \,: 
 \begin{equation*}
-x(y) = x = \frac{1}{k} \ln \, \lvert y \rvert + D
+	x(y) = x = \frac{1}{k} \ln \, \lvert y \rvert + D,
 \end{equation*}
 où $D$est une constante arbitraire.
 Maintenant, on résoud pour $y$ ou, plus précisément, pour $\lvert y \rvert$\,: 
 \begin{equation*}
-\lvert y \rvert =
-e^{kx-kD} = 
-e^{-kD} e^{k x} .
+	\lvert y \rvert =	e^{kx-kD} = e^{-kD} e^{k x} .
 \end{equation*}
-Puisque $e^{-kD}$ est une constante positive arbitraire, on peut la remplacer par une constante arbitraire $C$; ici $C$ peut aussi prendre la valeur 0 ( incorporant ainsi la solution $y=0$) ou des valeurs négatives, ce qui nous permet de nous débarasser de la valeur absolue.  On obtient alors la solution générale devinée plus tôt, $y = Ce^{kx}$.
+Puisque $e^{-kD}$ est une constante positive arbitraire, on peut la remplacer par une constante arbitraire $C$; ici, $C$ peut aussi prendre la valeur 0 (incorporant ainsi la solution $y=0$) ou des valeurs négatives, ce qui nous permet de nous débarrasser de la valeur absolue.  On obtient alors la solution générale devinée plus tôt, $y = Ce^{kx}$.
 \end{example}
 
 \begin{example}
 Trouvons la solution générale de
 $y' = y^2$.
 
-Notons d'abord que $y=0$ is a solution.  Nous supposerons dorénavant que $y \not= 0$.
+Notons d'abord que $y=0$ est une solution.  Nous supposerons dorénavant que $y \not= 0$.
 Écrivons 
 \begin{equation*}
-\frac{dx}{dy} = \frac{1}{y^2} .
+	\frac{dx}{dy} = \frac{1}{y^2} .
 \end{equation*}
 On intègre pour obtenir 
 \begin{equation*}
-x = \frac{-1}{y} + C .
+	x = \frac{-1}{y} + C .
 \end{equation*}
-On résoud pour $y$\,:
+On résout pour $y$\,:
 \begin{equation*}
-y = \frac{1}{C-x}
+	y = \frac{1}{C-x}.
 \end{equation*}
 La solution générale est donc 
 \begin{equation*}
-y = \frac{1}{C-x} \qquad \text{ou} \qquad y = 0.
+	y = \frac{1}{C-x} \qquad \text{ou} \qquad y = 0.
 \end{equation*}
-Cette solution comporte des singularités. Par exemple, si $C=1$, alors la solution "explose" lorsqu'on s'approche de $x=1$.
+Cette solution comporte des singularités. Par exemple, si $C=1$, alors la solution \og{}explose\fg{} lorsqu'on s'approche de $x=1$.
 Voir la~\figureref{1over1mx:fig}.  En général, c'est difficile de prédire le comportement d'une solution juste en regardant l'équation différentielle.  En effet, l'équation $y' = y^2$ est très jolie et définie partout, mais sa solution est seulement définie sur un intervalle $(-\infty, C)$ ou
-$(C, \infty)$.  Dans une telle situation, on retient seulement une de ces deux solutions, dépendamment de la condition initiale.  Si par exemple on a pour condition initiale $y(0) = 1$, alors la solution est $y=\frac{1}{1-x}$, et cette solution est seulement définie sur l'intervalle  $(-\infty,1)$. Dans la figure, c'est la partie gauche du graphe.
+$(C, \infty)$.  Dans une telle situation, on retient seulement une de ces deux solutions, dépendamment de la condition initiale.  Si,  par exemple, on a pour condition initiale $y(0) = 1$, alors la solution est $y=\frac{1}{1-x}$, et cette solution est seulement définie sur l'intervalle  $(-\infty,1)$. Dans la figure, c'est la partie gauche du graphe.
 
 \begin{myfig}
 \capstart
@@ -168,48 +165,48 @@ Quelle distance a-t-elle parcourue en 2 secondes (si elle commence à $t=0$)?  E
 Dénotons par $x$ la distance parcourue par la voiture.
 L'équation à résoudre est\,: 
 \begin{equation*}
-x' = e^{t/2} .
+	x' = e^{t/2} .
 \end{equation*}
 On intègre cette équation pour obtenir \,:
 \begin{equation*}
-x(t) = 2 e^{t/2} + C . 
+	x(t) = 2 e^{t/2} + C . 
 \end{equation*}
 Il nous reste à déterminer $C$.  On sait qu'à $t=0$,
 $x=0$.  Autrement dit, $x(0) = 0$.  Donc\,: 
 \begin{equation*}
-0 = x(0) = 2e^{0/2} + C = 2 + C .
+	0 = x(0) = 2e^{0/2} + C = 2 + C .
 \end{equation*}
-Ainsi $C = -2$ et
+Ainsi, $C = -2$, et
 \begin{equation*}
-x(t) = 2 e^{t/2} - 2 .
+	x(t) = 2 e^{t/2} - 2 .
 \end{equation*}
 Il nous suffit de substituer $t=2$ et $t=10$ pour obtenir la distance parcourue après 2 et 10 secondes.
 \begin{equation*}
-x(2) = 2e^{2/2} - 2 \approx 3.44 \text{ mètres} ,
-\qquad
-x(10) = 2e^{10/2} - 2 \approx 294 \text{ mètres} .
+	x(2) = 2e^{2/2} - 2 \approx 3,44 \text{ mètres} ,
+	\qquad
+	x(10) = 2e^{10/2} - 2 \approx 294 \text{ mètres} .
 \end{equation*}
 \end{example}
 
 \begin{example}
 Supposons que la voiture accélère à $\unitfrac[t^2]{m}{s^2}$.
-À $t=0$ la voiture est au mètre 1 et roule à une vitesse de 
+À $t=0$, la voiture est au mètre 1 et roule à une vitesse de 
 \unitfrac[10]{m}{s}.  Où est la voiture à $t=10$?
 
-Ceci est en fait un problème du deuxième ordre, puisque l'accélération est la dérivée seconde de la fonction de position.  Dénotant par $x$ la distance parcourue, alors $x'$ est la vitesse et $x''$, l'accélération.
+Ceci est en fait un problème du deuxième ordre, puisque l'accélération est la dérivée seconde de la fonction de position.  Dénotons par $x$ la distance parcourue, alors $x'$ est la vitesse et $x''$, l'accélération.
 Ceci nous donne l'équation différentielle avec conditions initiales suivante\,:
 \begin{equation*}
-x'' = t^2 , \qquad x(0) = 1 , \qquad x'(0) = 10 .
+	x'' = t^2 , \qquad x(0) = 1 , \qquad x'(0) = 10 .
 \end{equation*}
 Posons $x' = v$.  Le problème devient alors
 \begin{equation*}
-v' = t^2, \qquad v(0) = 10 .
+	v' = t^2, \qquad v(0) = 10 .
 \end{equation*}
 On peut résoudre pour $v$, et ensuite intégrer $v$ pour trouver $x$.
 \end{example}
 
 \begin{exercise}
-Résolvez pour $v$, et ensuite pour $x$.  Trouvez $x(10)$ pour répondre à la question.
+Résolvez pour $v$ et ensuite pour $x$.  Trouvez $x(10)$ pour répondre à la question.
 \end{exercise}
 
 \subsection{Exercices}
@@ -347,27 +344,27 @@ Souvent, on ne peut tout simplement pas trouver une solution analytique à cette
 \subsection{Champs de direction}
 
 %As you have seen in IODE Lab I (if you did it),
-L'équation $y' = f(x,y)$ donne une formule pour la pente de la tangente à une solution à chaque point du plan $(x,y)$. Autrement dit, si $y(x)$ est une solution, alors son graphe passe par le point $(x,y)$ et la pente de la tangente au graphe à ce point est donnée par $f(x,y)$. La solution exacte au point $(x,y)$ est approximée par une droite de pente $f(x,y)$, alors on place un petit segment de droite ayant cette pente, à ce point.
+L'équation $y' = f(x,y)$ donne une formule pour la pente de la tangente à une solution à chaque point du plan $(x,y)$. Autrement dit, si $y(x)$ est une solution, alors son graphe passe par le point $(x,y)$, et la pente de la tangente au graphe à ce point est donnée par $f(x,y)$. La solution exacte au point $(x,y)$ est approximée par une droite de pente $f(x,y)$, alors on place un petit segment de droite ayant cette pente, à ce point.
 %
 %And this is the slope a solution $y(x)$ would have 
 %at $x$ if its value was $y$.  In other words, $f(x,y)$ is the slope
 %of a solution whose graph runs through the
 %point $(x,y)$.  At a point $(x,y)$, we plot a short line
 %with the slope $f(x,y)$.
-Par exemple, si $f(x,y)=xy$, alors au point $(2,1.5)$ on trace une petite ligne de pente $xy = 2 \times 1.5 = 3$.  Si $y(x)$ est une solution et que $y(2) = 1.5$, l'équation différentielle impose la condition $y'(2) = 3$.
+Par exemple, si $f(x,y)=xy$, alors, au point $(2;1,5),$ on trace une petite ligne de pente $xy = 2 \times 1,5 = 3$.  Si $y(x)$ est une solution et que $y(2) = 1,5$, l'équation différentielle impose la condition $y'(2) = 3$.
 Voir la \figureref{1.3:fig0}.
 
 \begin{myfig}
 \capstart
 \diffyincludegraphics{width=3in}{width=4.5in}{1-3-xysl-one}
-\caption{La  tangente au point $(2,1.5)$, dont la pente est $y'=xy$ .\label{1.3:fig0}}
+\caption{Tangente au point $(2,1.5)$, dont la pente est $y'=xy$.\label{1.3:fig0}}
 \end{myfig}
 
-Pour visualiser le comportement des solutions, on trace de tels segments de droite à plusieurs points du plan.  (Idéalement, on voudrait voir la tangente à chaque point du plan, ce qui est évidemment impossible.)  Typiquement, on se donne un grillage de points, suffisamment fin pour qu'on voit le comportement des solutions, mais pas trop, sinon on ne voit plus les segments individuels.  On appelle une telle figure le \emph{\myindex{champ de directions}} pour l'équation.
-La~\figureref{1.3:fig1} montre le champ de directions pour l'équation  $y' = xy$ .
+Pour visualiser le comportement des solutions, on trace de tels segments de droite à plusieurs points du plan (idéalement, on voudrait voir la tangente à chaque point du plan, ce qui est évidemment impossible).  Typiquement, on se donne un grillage de points, suffisamment fin pour qu'on voie le comportement des solutions, mais pas trop, sinon, on ne voit plus les segments individuels.  On appelle une telle figure le \emph{\myindex{champ de directions}} pour l'équation.
+La~\figureref{1.3:fig1} montre le champ de directions pour l'équation  $y' = xy$.
 Habituellement, on laissera à un ordinateur le soin de tracer une telle figure.
 
-Supposons qu'on se fait donner une condition initiale, $y(x_0) = y_0$.  Une solution, c'est-à-dire le graphe d'une solution, est une courbe tangente aux segments de droite qu'on a dessinés.  Quelques exemples de solutions sont donnés à la  \figureref{1.3:fig2}.  On peut tracer grosso modo une solution dans le champ de directions, juste en regardant les directions.  Il suffit de tracer une courbe qui passe par la condition initiale et qui est à peu près tangente aux segments du champ de directions.
+Supposons qu'on nous donne une condition initiale, $y(x_0) = y_0$.  Une solution, c'est-à-dire le graphe d'une solution, est une courbe tangente aux segments de droite qu'on a dessinés.  Quelques exemples de solutions sont donnés à la  \figureref{1.3:fig2}.  On peut tracer grosso modo une solution dans le champ de directions, juste en regardant les directions.  Il suffit de tracer une courbe qui passe par la condition initiale et qui est à peu près tangente aux segments du champ de directions.
 
 \begin{myfig}
 \parbox[t]{3.0in}{
@@ -379,17 +376,17 @@ Supposons qu'on se fait donner une condition initiale, $y(x_0) = y_0$.  Une solu
 \parbox[t]{3.0in}{
  \capstart
  \diffyincludegraphics{width=3.0in}{width=4.5in}{1-3-xysl-sol}
- \caption{Champ de directions pour $y' = xy$, avec les graphes de solutions satisfaisant $y(0) = 0.2$, $y(0) = 0$, et $y(0) = -0.2$.\label{1.3:fig2}}
+ \caption{Champ de directions pour $y' = xy$, avec les graphes de solutions satisfaisant à $y(0) = 0,2$, $y(0) = 0$ et $y(0) = -0,2$.\label{1.3:fig2}}
 }
 \end{myfig}
-L'observation du champ de directions suffit pour avoir beaucoup d'information sur le comportement des solutions.  Par exemple, la \figureref{1.3:fig2} nous montre le comportement des solutions selon que $y(0) > 0$, $y(0) = 0$ ou $y(0) < 0$.  Un petit changement dans la condition initiale peut entraîner des différences appréciables dans le comportement des solutions.  Et on peut le voir juste en regardant le champ de directions et en imaginant ce que font les solutions.
+L'observation du champ de directions suffit pour avoir beaucoup d'information sur le comportement des solutions.  Par exemple, la \figureref{1.3:fig2} nous montre le comportement des solutions selon que $y(0) > 0$, $y(0) = 0$ ou $y(0) < 0$.  Un petit changement dans la condition initiale peut entraîner des différences appréciables dans le comportement des solutions.  Et l'on peut le voir juste en regardant le champ de directions et en imaginant ce que font les solutions.
 
-Le comportement est tout autre avec l'équation $y' = -y$.  La~\figureref{1.3:fig3} montre le champ de directions de cette équation, ainsi que quelques solutions.  Lorsqu'on se déplace de gauche à droite (dans la direction où $x$ augmente), on voit que, quelle que soit la valeur de $y(0)$, toutes les solutions tendent vers 0 lorsque $x$ tend vers l'infini.  Ce comportement s'observe bien du champ de directions, sans être obligé de résoudre l'équation explicitement.
+Le comportement est tout autre avec l'équation $y' = -y$.  La~\figureref{1.3:fig3} montre le champ de directions de cette équation, ainsi que quelques solutions.  Lorsqu'on se déplace de gauche à droite (dans la direction où $x$ augmente), on voit que, quelle que soit la valeur de $y(0)$, toutes les solutions tendent vers 0 lorsque $x$ tend vers l'infini.  Ce comportement s'observe bien du champ de directions, sans devoir résoudre l'équation explicitement.
 
 \begin{myfig}
 \capstart
 \diffyincludegraphics{width=3in}{width=4.5in}{1-3-mysl-sol}
-\caption{Champ de directions pour $y' = -y$ avec le graphe de quelques solutions.\label{1.3:fig3}}
+\caption{Champ de directions pour $y' = -y$, avec le graphe de quelques solutions.\label{1.3:fig3}}
 \end{myfig}
 
 \subsection{Existence et unicité}
@@ -404,17 +401,17 @@ y' = f(x,y), \qquad y(x_0) = y_0.
 \end{enumerate}
 Avant de continuer, essayez de répondre à ces questions.  
 
-Tous les exemples vus à date pourraient nous faire croire que la réponse est "oui" aux deux questions.  Mais ce n'est pas toujours le cas.
+Tous les exemples vus jusqu'ici pourraient vous faire croire que la réponse est \og{}oui\fg{} aux deux questions.  Mais ce n'est pas toujours le cas.
 
-Pour les équations décrivant des lois de la nature, on s'attend à ce qu'une solution existe.  Cette solution devrait aussi être unique, du moins si on croit en un univers déterministe.  Si aucune solution existe, ou si elle n'est pas unique, il y a probablement un problème avec le modèle.  C'est donc pertinent de saisir les conditions dans lesquelles une solution unique existe.
+Pour les équations décrivant des lois de la nature, on s'attend à ce qu'une solution existe.  Cette solution devrait aussi être unique, du moins si l'on croit en un univers déterministe.  Si aucune solution n'existe, ou si elle n'est pas unique, il y a probablement un problème avec le modèle.  C'est donc pertinent de saisir les conditions dans lesquelles une solution unique existe.
 
 
 \begin{example}
 Essayons de résoudre l'équation suivante\,: 
 \begin{equation*}
-y' = \frac{1}{x} \quad ,\qquad  y(0) = 0 .
+	y' = \frac{1}{x}, \quad\qquad  y(0) = 0 .
 \end{equation*}
-En intégrant, on trouve la solution générale $y = \ln \, \lvert x \rvert + C$.  Mais cette solution n'est pas définie en $x=0$.  Voir la~\figureref{1.3:xinvfig}.  On aurait pu écrire l'équation comme $x y' = 1$, et on pourrait croire que la solution "devrait être jolie".
+En intégrant, on trouve la solution générale $y = \ln \, \lvert x \rvert + C$.  Mais cette solution n'est pas définie en $x=0$.  Voir la~\figureref{1.3:xinvfig}.  On aurait pu écrire l'équation comme $x y' = 1$ et l'on pourrait croire que la solution \og{}devrait être jolie\fg{}.
 
 \begin{myfig}
 \parbox[t]{3in}{
@@ -426,7 +423,7 @@ En intégrant, on trouve la solution générale $y = \ln \, \lvert x \rvert + C$
 \parbox[t]{3in}{
  \capstart
  \diffyincludegraphics{width=3in}{width=4.5in}{1-3-sqrt-sol}
- \caption{Champ de directions pour $y' = 2 \sqrt{\lvert y \rvert}$ avec deux solutions satisfaisant $y(0) = 0$.\label{1.3:sqrtfig}}
+ \caption{Champ de directions pour $y' = 2 \sqrt{\lvert y \rvert}$,  avec deux solutions satisfaisant à $y(0) = 0$.\label{1.3:sqrtfig}}
 }
 \end{myfig}
 \end{example}
@@ -434,7 +431,7 @@ En intégrant, on trouve la solution générale $y = \ln \, \lvert x \rvert + C$
 \begin{example}
 Résolvons\,:
 \begin{equation*}
-y' = 2 \sqrt{\lvert y \rvert}\quad ,\qquad y(0) = 0 .
+	y' = 2 \sqrt{\lvert y \rvert},\quad\qquad y(0) = 0 .
 \end{equation*}
 
 Voir la~\figureref{1.3:sqrtfig}.
@@ -447,32 +444,32 @@ x^2 & \text{si } \; x \geq 0,\\
 \end{cases}
 \end{equation*}
 \end{example}
-Si on se fie au champ de directions, il peut être difficile de se rendre compte que la solution n'est pas unique.  Que faire?  Heureusement, on a le théorème de Picard\footnote{
-\href{https://fr.wikipedia.org/wiki/Charles_\%C3\%89mile_Picard}{Charles \'Emile Picard}, mathématicien français
-(1856--1941).}. 
+Si l'on se fie au champ de directions, il peut être difficile de se rendre compte que la solution n'est pas unique.  Que faire?  Heureusement, on a le théorème de Picard\footnote{
+\href{https://fr.wikipedia.org/wiki/Charles_\%C3\%89mile_Picard}{Charles Émile Picard}, mathématicien français
+(1856-1941).}. 
 
 \begin{theorem}[Théorème d'existence et d'unicité de Picard]%
 \label{slope:picardthm}%
 \index{existence et unicité}\index{théorème de Picard}
 Si $f(x,y)$ est une fonction continue en $(x,y)$ et $\frac{\partial f}{\partial y}$ existe dans un voisinage d'un point $(x_0,y_0)$, alors il existe une solution à l'équation différentielle
 \begin{equation*}
-y' = f(x,y), \qquad y(x_0) = y_0,
+	y' = f(x,y), \qquad y(x_0) = y_0,
 \end{equation*}
-(possiblement dans un petit intervalle de valeurs de $x$) et de plus, la solution est unique.
+(possiblement dans un petit intervalle de valeurs de $x$) et, de plus, la solution est unique.
 \end{theorem}
 
 Observons que les équations des deux exemples précédents, $y' = \nicefrac{1}{x}$, $y(0) = 0$ et 
-$y' = 2 \sqrt{\lvert y \rvert}$, $y(0) = 0$, ne satisfont pas les conditions du théorème de Picard.  Même lorsque le théorème s'applique, il faut faire attention, puisque la solution ne sera possiblement pas définie pour toutes les valeurs réelles de $x$.
+$y' = 2 \sqrt{\lvert y \rvert}$, $y(0) = 0$, ne satisfont pas aux conditions du théorème de Picard.  Même lorsque le théorème s'applique, il faut faire attention puisque la solution ne sera possiblement pas définie pour toutes les valeurs réelles de $x$.
 
 \begin{example}
 Résolvons\,:
 \begin{equation*}
-y' = y^2, \qquad y(0) = A .
+	y' = y^2, \qquad y(0) = A, 
 \end{equation*}
 où $A$ est une constante quelconque.
 
-On peut résoudre cette équation avec les outils que nous avons déjà vus.  En premier lieu, supposons que $A \not= 0$;
-alors $y$ est différent de 0 pour des valeurs de $x$ proches de 0.  On peut donc ré-écrire l'équation \,: 
+On peut résoudre cette équation avec les outils que nous avons déjà vus.  D'abord, supposons que $A \not= 0$;
+alors, $y$ est différent de 0 pour des valeurs de $x$ proches de 0.  Nous pouvons donc réécrire l'équation: 
 $x' = \nicefrac{1}{y^2}$, ce qui nous donne, en intégrant, 
 $x = \nicefrac{-1}{y} + C$, et donc $y = \frac{1}{C-x}$.  Si $y(0) = A$, alors
 $C = \nicefrac{1}{A}$ et donc 
@@ -481,7 +478,7 @@ y = \frac{1}{\nicefrac{1}{A} - x} .
 \end{equation*}
 Lorsque $A=0$,  $y=0$ est une solution.
 
-Lorsque $A=1$, par exemple, la solution "explose" à  $x=1$.  Ainsi, une solution existe mais elle n'est pas définie pour toute valeur de $x$.  Et ce, même si l'équation $y' = y^2$ semble plutôt innocente.
+Lorsque $A=1$, par exemple, la solution \og{}explose\fg{} à  $x=1$.  Ainsi, une solution existe, mais elle n'est pas définie pour toute valeur de $x$, et ce, même si l'équation $y' = y^2$ semble plutôt innocente.
 \end{example}
 
 Dans ce manuel, nous considérerons principalement des équations dont la solution existe et est unique pour toutes les
@@ -665,12 +662,12 @@ $y' = f(x)$,
 il suffit d'intégrer pour en obtenir la solution\,:
 $y = \int f(x) \,dx + C$. 
 Malheureusement, cette technique ne fonctionne pas dans le cas général, c'est-à-dire 
-$y' = f(x,y)$.
-Car si on intègre des deux côtés, on obtient\,: 
+$y' = f(x,y)$,
+car si l'on intègre des deux côtés, on obtient\,: 
 \begin{equation*}
 y = \int f(x,y) \,dx + C .
 \end{equation*}
-Mais l'intégrale contient des termes en $y$, qu'on ne peut pas tout simplement "traiter comme une constante", puisque c'est une variable dépendante de $x$.
+Mais l'intégrale contient des termes en $y$, qu'on ne peut pas tout simplement \og{}traiter comme une constante\fg{}, puisque c'est une variable dépendante de $x$.
 
 \subsection{Les équations séparables}
 
@@ -678,14 +675,14 @@ On dit qu'une équation différentielle est
 \emph{\myindex{séparable}}
 si elle peut être écrite sous la forme suivante\,: 
 \begin{equation*}
-y' = f(x)g(y) 
+	y' = f(x)g(y), 
 \end{equation*}
 où $f(x)$, $g(y)$ peuvent être des fonctions quelconques.
 Écrivons cette équation à l'aide de la \myindex{notation de Leibniz}\,: 
 \begin{equation*}
 \frac{dy}{dx} = f(x)g(y) .
 \end{equation*}
-On peut alors ré-écrire l'équation comme suit\,: 
+On peut alors réécrire l'équation comme suit\,: 
 \begin{equation*}
 \frac{dy}{g(y)} = f(x) \,dx .
 \end{equation*}
@@ -693,7 +690,7 @@ Les deux côtés de l'équation sont des expressions qu'on peut intégrer\,:
 \begin{equation*}
 \int \frac{dy}{g(y)} = \int f(x) \,dx + C .
 \end{equation*}
-Si on réussit à trouver des primitives de chaque côté, on pourra alors possiblement résoudre pour $y$.
+Si l'on réussit à trouver des primitives de chaque côté, on pourra alors possiblement résoudre pour $y$.
 
 \begin{example} \label{example:yprimeisxy}
 Prenons l'équation  suivante\,: 
@@ -706,7 +703,7 @@ $y \not =0$, ce qui nous permettra de diviser par $y$.
 \begin{equation*}
 \int \frac{dy}{y} = \int x\,dx + C .
 \end{equation*}
-On calcule les primitives de chaque côté et on obtient\,:
+On calcule les primitives de chaque côté et l'on obtient\,:
 \begin{equation*}
 \ln \, \lvert y\rvert = \frac{x^2}{2} + C 
 \end{equation*}
@@ -714,7 +711,7 @@ ou
 \begin{equation*}
 \lvert y \rvert = e^{\frac{x^2}{2} + C} = e^{\frac{x^2}{2}} e^C = D e^{\frac{x^2}{2}} ,
 \end{equation*}
-où $D > 0$ est une constante.  Puisque $y=0$ est aussi une solution, et que, de plus, on a la valeur absolue de $y$, dans l'expression, on peut écrire\,: 
+où $D > 0$ est une constante.  Puisque $y=0$ est aussi une solution et que, de plus, on a la valeur absolue de $y$, dans l'expression, on peut écrire\,: 
 %
 \begin{equation*}
 y = D e^{\frac{x^2}{2}} ,
@@ -725,15 +722,14 @@ y' = D x e^{\frac{x^2}{2}} = x \left( D e^{\frac{x^2}{2}} \right) = xy .
 \end{equation*}
 \end{example}
 
-Regardons de plus près cette méthode.  On pourrait s'inquiéter du fait que les deux intégrales apparaissant dans l'expression sont en termes de variables différentes.  Ça peut sembler erroné... Alors nous allons revoir la méthode de séparation des variables de manière plus rigoureuse.
+Regardons de plus près cette méthode.  On pourrait s'inquiéter du fait que les deux intégrales apparaissant dans l'expression soient en termes de variables différentes.  Ça peut sembler erroné... Alors, nous allons revoir la méthode de séparation des variables de manière plus rigoureuse.
 
-Supposons donc qu'on ait\,: 
+Supposons donc qu'on a: 
 \begin{equation*}
 \frac{dy}{dx} = f(x)g(y) .
 \end{equation*}
-Observons que 
-$y = y(x)$ est une fonction de $x$, et 
-$\frac{dy}{dx}$ l'est également.  On peut donc ré-écrire l'équation comme suit\,: 
+Observons que $y = y(x)$ est une fonction de $x$ et que
+$\frac{dy}{dx}$ l'est également.  On peut donc réécrire l'équation comme suit\,: 
 \begin{equation*}
 \frac{1}{g(y)}\,\frac{dy}{dx} = f(x) .
 \end{equation*}
@@ -749,7 +745,7 @@ Comme on peut voir, on obtient la même formule que plus haut, qui est donc corr
 
 \subsection{Les solutions implicites}
 
-Parfois, on peut avoir de la difficulté avec la méthode des équations séparables, même si les deux intégrales sont résolubles.  Considérons par exemple l'équation séparable suivante\,: 
+Parfois, on peut avoir de la difficulté avec la méthode des équations séparables, même si les deux intégrales sont résolubles.  Considérons, par exemple, l'équation séparable suivante: 
 \begin{equation*}
 y' = \frac{xy}{y^2+1} .
 \end{equation*}
@@ -759,35 +755,35 @@ On sépare les variables\,:
 \end{equation*}
 On intègre\,: 
 \begin{equation*}
-\frac{y^2}{2} + \ln \, \lvert y \rvert = \frac{x^2}{2} + C 
+\frac{y^2}{2} + \ln \, \lvert y \rvert = \frac{x^2}{2} + C. 
 \end{equation*}
-et on ré-écrit pour rendre la solution plus jolie (ici $D = 2C$)\,: 
+Puis on réécrit pour rendre la solution plus jolie (ici, $D = 2C$): 
 \begin{equation*}
 y^2 + 2 \ln \, \lvert y\rvert = x^2 + D .
 \end{equation*}
 Il est difficile de trouver une expression explicite pour $y$, puisqu'on ne peut pas l'isoler dans l'expression.  Dans un tel cas, on obtient ce qu'on appelle une 
 \emph{\myindex{solution implicite}}.
-On peut tout de même vérifier qu'on a bien trouvé une solution à l'équation différentielle.  Il suffit de dériver chaque côté par rapport à $x$, en se souvenant que $y$ est une fonction de $x$, et on obtient\,: 
+On peut tout de même vérifier qu'on a bien trouvé une solution à l'équation différentielle.  Il suffit de dériver chaque côté par rapport à $x$, en se souvenant que $y$ est une fonction de $x$, et l'on obtient: 
 \begin{equation*}
-y'\left(2y + \frac{2}{y}\right) = 2x .
+	y'\left(2y + \frac{2}{y}\right) = 2x .
 \end{equation*}
-En multipliant les deux côtés par $y$ et en divisant par $2(y^2+1)$, on retrouve l'équation différentielle de départ.  (Vérifiez-le.)
+En multipliant les deux côtés par $y$ et en divisant par $2(y^2+1)$, on retrouve l'équation différentielle de départ (vérifiez-le).
 
-Étant donnée une solution implicite, trouver des valeurs de $y$ explicitement peut être difficile.  Il est possible qu'une valeur de $x$ donne plusieurs valeurs possibles de $y$, et qu'il faut alors choisir.  Parfois il est plus simple de penser à $x$ comme une fonction de $y$.  Parfois même ceci est difficile.
+Étant donné une solution implicite, trouver des valeurs de $y$ explicitement peut être difficile.  Il est possible qu'une valeur de $x$ donne plusieurs valeurs possibles de $y$, et qu'il faille alors choisir.  Parfois, il est plus simple de penser à $x$ comme une fonction de $y$.  Parfois, même ceci est difficile.
 
-Dans ce cas, un ordinateur peut être votre ami.  La plupart des logiciels mathématiques proposent une fonction pour tracer la courbe-solution d'une équation implicite.  Par exemple, pour $C=0$, l'ensemble des points $(x,y)$ satisfaisant $y^2+2\ln|y|=x^2$ 
-est une union de deux courbes, illustrées à la \figureref{implicitsols:fig}.  Ce n'est pas le graphe d'une fonction, puisque chaque $x$ admet deux valeurs possibles de $y$.  Mais si on choisit une des deux courbes, on a alors le graphe d'une fonction.  Si de plus on a une condition initiale, on choisit la courbe qui passe par ce point.  AInsi, chaque valeur de $C$ donne deux solutions.  Comme on peut voir, les solutions implicites ne sont pas simples, mais parfois, on ne peut pas obtenir mieux.
+Dans ce cas, un ordinateur peut être votre ami.  La plupart des logiciels mathématiques proposent une fonction pour tracer la courbe-solution d'une équation implicite.  Par exemple, pour $C=0$, l'ensemble des points $(x,y)$ satisfaisant à $y^2+2\ln|y|=x^2$ 
+est une union de deux courbes, illustrées à la \figureref{implicitsols:fig}.  Ce n'est pas le graphe d'une fonction, puisque chaque $x$ admet deux valeurs possibles de $y$.  Mais si l'on choisit une des deux courbes, on a alors le graphe d'une fonction.  Si, de plus, on a une condition initiale, on choisit la courbe qui passe par ce point.  Ainsi, chaque valeur de $C$ donne deux solutions.  Comme on peut le voir, les solutions implicites ne sont pas simples, mais parfois on ne peut pas obtenir mieux.
 
 \begin{myfig}
 \capstart
 \diffyincludegraphics{width=3in}{width=4.5in}{implicitsols}
-\caption{La solution implicite $y^2+2\ln|y|=x^2$ à l'équation $y'=\frac{xy}{y^2+1}$.\label{implicitsols:fig}}
+\caption{Solution implicite $y^2+2\ln|y|=x^2$ à l'équation $y'=\frac{xy}{y^2+1}$.\label{implicitsols:fig}}
 \end{myfig}
 
 Cet exemple admet aussi la solution $y=0$.
 Ainsi, la solution générale est 
 \begin{equation*}
-y^2 + 2 \ln \, \lvert y \rvert = x^2 + C, \qquad \text{ou} \qquad y=0.
+	y^2 + 2 \ln \, \lvert y \rvert = x^2 + C \qquad \text{ou} \qquad y=0.
 \end{equation*}
 Des solutions comme $y=0$
 sont parfois appelées des \emph{solutions singulières\index{solutions singulières}}.
@@ -797,11 +793,11 @@ sont parfois appelées des \emph{solutions singulières\index{solutions singuli�
 \begin{example}
 Résolvons $x^2y' = 1 - x^2+y^2 - x^2y^2$, $y(1) = 0$.
 
-On factorise le côté droit\,: 
+On factorise le côté droit: 
 \begin{equation*}
-x^2y' = (1 - x^2)(1+y^2) .
+x^2y' = (1 - x^2)(1+y^2).
 \end{equation*}
-On sépare les variables, on intègre et on résoud pour $y$\,: 
+On sépare les variables, on intègre et l'on résout pour $y$\,: 
 \begin{align*}
 \frac{y'}{1+y^2} & = \frac{1 - x^2}{x^2} , \\
 \frac{y'}{1+y^2} & = \frac{1}{x^2} - 1 , \\
@@ -809,7 +805,7 @@ On sépare les variables, on intègre et on résoud pour $y$\,:
 y & = \tan \left(\frac{-1}{x} - x + C\right) .
 \end{align*}
 Il reste à résoudre pour la condition initiale,
- $0 = \tan(-2+C)$, et on obtient $C=2$ (ou $C = 2 +
+ $0 = \tan(-2+C)$, et l'on obtient $C=2$ (ou $C = 2 +
 \pi$, ou $C = 2 + 2\pi$, etc.).  La solution particulière recherchée est donc
 \begin{equation*}
 y = \tan \left(\frac{-1}{x} - x + 2 \right) .
@@ -817,36 +813,47 @@ y = \tan \left(\frac{-1}{x} - x + 2 \right) .
 \end{example}
 
 \begin{example} \label{sep:coffeeexample}
-Alex se prépare une tasse de café, qui doit se rendre à 60 degrés (Celsius) parce qu'Alex n'aime pas se brûler.  Initialement, à $t=0$ minutes,
-le café était à 89 degrés.  Une minute plus tard, Alex mesure la température de nouveau, et c'était 85 degrés.  La température ambiante est 22 degrés.  Quand est-ce qu'Alex pourra enfin déguster son café?
+Alex se prépare une tasse de café, qui doit se rendre à 60 degrés (Celsius) parce qu'Alex n'aime pas se brûler.  Initialement, à $t=0$ minute,
+le café était à 89 degrés.  Une minute plus tard, Alex mesure la température de nouveau, et c'est 85 degrés.  La température ambiante est 22 degrés.  Quand est-ce qu'Alex pourra enfin déguster son café?
 
-Posons $T$, la température du café en degrés Celsius, $A$, la température ambiante, toujours en degrés Celsius. La 
-\myindex{loi de refroidissement de Newton} affirme que le taux de changement de la température du café est proportionnelle à la différence entre la température du café et la température ambiante.  Autrement dit\,: 
+Posons $T$, la température du café en degrés Celsius, et $A$, la température ambiante, toujours en degrés Celsius. La 
+\myindex{loi de refroidissement de Newton} affirme que le taux de changement de la température du café est proportionnel à la différence entre la température du café et la température ambiante.  Autrement dit\,: 
 %
 \begin{equation*}
-\frac{dT}{dt} = k(A-T) 
+\frac{dT}{dt} = k(A-T), 
 \end{equation*}
 où $k$ est une constante.
 Dans notre exemple\,: $A=22$, $T(0) = 89$, $T(1) = 85$.
-On sépare les variables et on intègre (ici $C$ et $D$ sont des constantes arbitraires):
+On sépare les variables et l'on intègre (ici, $C$ et $D$ sont des constantes arbitraires):
 \begin{align*}
 \frac{1}{T-A} \, \frac{dT}{dt} & = -k , \\
 \ln (T-A) &= -kt + C , \qquad \text{(notons que } T-A > 0 \text{)} \\
 T-A &= D\, e^{-kt} ,  \\
 T &= A + D\, e^{-kt} .
 \end{align*}
-Substituant la valeur de $A$, on a 
+En substituant la valeur de $A$, on a 
 $T = 22 + D\, e^{-kt}$.  On substitue la condition initiale\,: $89 = T(0) = 22 +
 D$,
 et donc $D = 67$.  Ainsi, 
 $T = 22 + 67\, e^{-kt}$.  La deuxième condition donne que $85 = T(1) = 
-22 + 67\, e^{-k}$.  Résolvant pour $k$ on obtient 
-$k = - \ln \frac{85-22}{67} \approx 0.0616$.  Maintenant, trouvons la valeur de $t$ donnant une température de 60 degrés.  On résoud l'équation suivante\,: 
+22 + 67\, e^{-k}$.  En résolvant pour $k$, on obtient 
+$k = - \ln \frac{85-22}{67} \approx 0,0616$.  Maintenant, trouvons la valeur de $t$ donnant une température de 60 degrés.  On résout l'équation suivante, 
 \begin{equation*}
-60 = 22 + 67 e^{-0.0616t}
+	60 = 22 + 67 e^{-0,0616t}
 \end{equation*}
 pour obtenir 
-$t = - \frac{\ln \frac{60-22}{67}}{0.0616} \approx 9.21$ minutes.  Donc Alex peut commencer à boire son café environ 9 minutes après l'avoir préparé.  (Correspondant à peu près au temps requis pour faire ce calcul.)  Voir la \figureref{sintro:coffeefig}.
+$t = - \frac{\ln \frac{60-22}{67}}{0,0616} \approx 9,21$ minutes.  Donc, Alex peut commencer à boire son café environ 9 minutes après l'avoir préparé (correspondant à peu près au temps requis pour faire ce calcul).  Voir la \figureref{sintro:coffeefig}.
+
+
+
+
+	%%%%%JP rendu ici 2023-02-24
+
+
+
+
+
+
 \begin{myfig}
 \capstart
 %original files coffeefig-1 coffeefig-2
