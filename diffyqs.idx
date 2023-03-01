@@ -1,27 +1,27 @@
-\indexentry{variable d\'ependante|hyperpage}{6}
-\indexentry{variable ind\'ependante|hyperpage}{6}
-\indexentry{\'equation diff\'erentielle|hyperpage}{6}
-\indexentry{\'equation diff\'erentielle du premier ordre|hyperpage}{6}
+\indexentry{variable dépendante|hyperpage}{6}
+\indexentry{variable indépendante|hyperpage}{6}
+\indexentry{équation différentielle|hyperpage}{6}
+\indexentry{équation différentielle du premier ordre|hyperpage}{6}
 \indexentry{solution|hyperpage}{6}
 \indexentry{ordinary differential equation|hyperpage}{7}
 \indexentry{ODE|hyperpage}{7}
 \indexentry{partial differential equation|hyperpage}{7}
 \indexentry{PDE|hyperpage}{7}
-\indexentry{situation-probl\`eme|hyperpage}{8}
-\indexentry{mod\`ele math\'ematique|hyperpage}{8}
-\indexentry{solution math\'ematique|hyperpage}{8}
-\indexentry{mod\`ele de croissance exponentielle|hyperpage}{8}
+\indexentry{situation-problème|hyperpage}{8}
+\indexentry{modèle mathématique|hyperpage}{8}
+\indexentry{solution mathématique|hyperpage}{8}
+\indexentry{modèle de croissance exponentielle|hyperpage}{8}
 \indexentry{initial condition|hyperpage}{9}
-\indexentry{solution g\'en\'erale|hyperpage}{10}
-\indexentry{solution particuli\`ere|hyperpage}{10}
-\indexentry{quatre \'equations fondamentales|hyperpage}{10}
-\indexentry{\'equation diff\'erentielle du second ordre|hyperpage}{10}
+\indexentry{solution générale|hyperpage}{9}
+\indexentry{solution particulière|hyperpage}{9}
+\indexentry{quatre équations fondamentales|hyperpage}{10}
+\indexentry{équation différentielle du second ordre|hyperpage}{10}
 \indexentry{cosinus hyperbolique|hyperpage}{11}
 \indexentry{sinus hyperbolique|hyperpage}{11}
-\indexentry{cat\'enaire|hyperpage}{11}
-\indexentry{Équations diff\'erentielles ordinaires|hyperpage}{14}
+\indexentry{caténaire|hyperpage}{11}
+\indexentry{Équations différentielles ordinaires|hyperpage}{14}
 \indexentry{EDO|hyperpage}{14}
-\indexentry{Équations aux d\'eriv\'ees partielles|hyperpage}{14}
+\indexentry{Équations aux dérivées partielles|hyperpage}{14}
 \indexentry{EDP|hyperpage}{14}
 \indexentry{exponential growth|hyperpage}{14}
 \indexentry{loi de refroidissement de Newton|hyperpage}{14}
@@ -29,15 +29,15 @@
 \indexentry{Équation du transport|hyperpage}{14}
 \indexentry{Équation de la chaleur/diffusion|hyperpage}{14}
 \indexentry{Équation de l'onde en deux dimensions|hyperpage}{14}
-\indexentry{syst\`eme d'\'equations diff\'erentielles|hyperpage}{14}
-\indexentry{\'equations de Maxwell|hyperpage}{14}
+\indexentry{système d'équations différentielles|hyperpage}{14}
+\indexentry{équations de Maxwell|hyperpage}{14}
 \indexentry{ordre|hyperpage}{14}
 \indexentry{linear equation|hyperpage}{15}
 \indexentry{nonlinear equation|hyperpage}{15}
 \indexentry{coefficients|hyperpage}{15}
 \indexentry{Burger|hyperpage}{15}
-\indexentry{homog\`ene|hyperpage}{16}
-\indexentry{non homog\`ene|hyperpage}{16}
+\indexentry{homogène|hyperpage}{16}
+\indexentry{non homogène|hyperpage}{16}
 \indexentry{constant coefficient|hyperpage}{16}
 \indexentry{autonome|hyperpage}{16}
 \indexentry{intégrale indéfinie|hyperpage}{19}
@@ -72,7 +72,7 @@
 \indexentry{portrait de phase|hyperpage}{45}
 \indexentry{équation logistique!avec récolte|hyperpage}{46}
 \indexentry{récolte|hyperpage}{46}
-\indexentry{point critique semistable|hyperpage}{46}
+\indexentry{point critique semi-stable|hyperpage}{46}
 \indexentry{équations exactes|hyperpage}{50}
 \indexentry{fonction potentielle|hyperpage}{50}
 \indexentry{dérivée totale|hyperpage}{50}
@@ -101,10 +101,10 @@
 \indexentry{complex number|hyperpage}{65}
 \indexentry{multiplication of complex numbers|hyperpage}{65}
 \indexentry{formule d'Euler|hyperpage}{66}
-\indexentry{partie réelle|hyperpage}{66}
-\indexentry{partie imaginaire|hyperpage}{66}
+\indexentry{partie réelle|hyperpage}{67}
+\indexentry{partie imaginaire|hyperpage}{67}
 \indexentry{racines complexes|hyperpage}{67}
-\indexentry{Équation de Cauchy--Euler|hyperpage}{68}
+\indexentry{Équation de Cauchy--Euler|hyperpage}{69}
 \indexentry{superposition|hyperpage}{70}
 \indexentry{combinaison linéaire|hyperpage}{70}
 \indexentry{existence and uniqueness|hyperpage}{70}
@@ -164,203 +164,203 @@
 \indexentry{courbe de solution|hyperpage}{96}
 \indexentry{existence and uniqueness for systems|hyperpage}{97}
 \indexentry{Picard's theorem|hyperpage}{97}
-\indexentry{matrice|hyperpage}{100}
-\indexentry{element of a matrix|hyperpage}{100}
-\indexentry{entry of a matrix|hyperpage}{100}
-\indexentry{vecteur|hyperpage}{100}
-\indexentry{vecteur colonne|hyperpage}{100}
-\indexentry{vecteur ligne|hyperpage}{100}
-\indexentry{scalar multiplication|hyperpage}{100}
-\indexentry{scalaire|hyperpage}{100}
-\indexentry{addition of matrices|hyperpage}{100}
-\indexentry{transposition|hyperpage}{101}
-\indexentry{produit scalaire|hyperpage}{101}
-\indexentry{produit intérieur|hyperpage}{101}
-\indexentry{produit des matrices|hyperpage}{101}
-\indexentry{matrice identité|hyperpage}{101}
-\indexentry{matrice unité|hyperpage}{101}
-\indexentry{commutative|hyperpage}{102}
-\indexentry{inversion de matrice|hyperpage}{102}
-\indexentry{invertible matrix|hyperpage}{102}
-\indexentry{singular matrix|hyperpage}{102}
-\indexentry{déterminant|hyperpage}{102}
-\indexentry{parallélogramme|hyperpage}{103}
-\indexentry{cofactor|hyperpage}{103}
-\indexentry{expansion par cofacteurs|hyperpage}{103}
-\indexentry{matrice augmentée|hyperpage}{105}
-\indexentry{inconsistent system|hyperpage}{106}
-\indexentry{élément principal|hyperpage}{106}
-\indexentry{forme échelonnée réduite|hyperpage}{107}
-\indexentry{free variable|hyperpage}{107}
-\indexentry{fonction vectorielle|hyperpage}{109}
-\indexentry{fonction matricielle|hyperpage}{109}
-\indexentry{système linéaire d’EDO de premier ordre|hyperpage}{109}
-\indexentry{coefficients constants|hyperpage}{110}
-\indexentry{homogeneous system|hyperpage}{110}
-\indexentry{superposition|hyperpage}{110}
-\indexentry{linearly independent!for vector-valued functions|hyperpage}{110}
-\indexentry{matrice fundamentale|hyperpage}{111}
-\indexentry{solution matricielle fondamentale|hyperpage}{111}
-\indexentry{équation homogène associée|hyperpage}{111}
-\indexentry{valeur propree|hyperpage}{114}
-\indexentry{vecteur propre correspondant|hyperpage}{114}
-\indexentry{conjugué complexe|hyperpage}{118}
-\indexentry{nœud répulsif|hyperpage}{121}
-\indexentry{nœud instable|hyperpage}{121}
-\indexentry{nœud attractif|hyperpage}{122}
-\indexentry{nœud stable|hyperpage}{122}
-\indexentry{point selle|hyperpage}{122}
-\indexentry{point col|hyperpage}{122}
-\indexentry{ellipses (vector field)|hyperpage}{123}
-\indexentry{point centre|hyperpage}{123}
-\indexentry{foyer répulsif|hyperpage}{123}
-\indexentry{foyer attractif|hyperpage}{124}
-\indexentry{boundary value problem|hyperpage}{127}
-\indexentry{endpoint problem|hyperpage}{127}
-\indexentry{eigenvalue of a boundary value problem|hyperpage}{128}
-\indexentry{fonction propre correspondante|hyperpage}{128}
-\indexentry{corresponding eigenfunction|hyperpage}{128}
-\indexentry{orthogonalité|hyperpage}{131}
-\indexentry{symmetric matrix|hyperpage}{131}
-\indexentry{orthogonal!functions|hyperpage}{131}
-\indexentry{Fredholm alternative!simple case|hyperpage}{132}
-\indexentry{périodique|hyperpage}{136}
-\indexentry{extend periodically|hyperpage}{136}
-\indexentry{periodic extension|hyperpage}{136}
-\indexentry{matrice symétrique|hyperpage}{136}
-\indexentry{orthogonal!vectors|hyperpage}{136}
-\indexentry{produit scalaire à dimensions finies|hyperpage}{137}
-\indexentry{série de Fourier|hyperpage}{138}
-\indexentry{série trigonométrique|hyperpage}{138}
-\indexentry{projection|hyperpage}{138}
-\indexentry{produit scalaire d'une fonction|hyperpage}{138}
-\indexentry{orthogonal!functions|hyperpage}{138}
-\indexentry{dents de scie|hyperpage}{139}
-\indexentry{fonction impaire|hyperpage}{140}
-\indexentry{fonction paire|hyperpage}{140}
-\indexentry{vagues carrées|hyperpage}{141}
-\indexentry{phénomène de Gibbs|hyperpage}{143}
-\indexentry{fréquence fondamentale|hyperpage}{144}
-\indexentry{harmoniques|hyperpage}{144}
-\indexentry{spectre|hyperpage}{144}
-\indexentry{demie-période|hyperpage}{146}
-\indexentry{continue par morceaux|hyperpage}{148}
-\indexentry{lisse par morceaux|hyperpage}{149}
-\indexentry{odd function|hyperpage}{156}
-\indexentry{even function|hyperpage}{156}
-\indexentry{extension périodique impaire|hyperpage}{156}
-\indexentry{extension périodique paire|hyperpage}{156}
-\indexentry{série sinus|hyperpage}{158}
-\indexentry{série cosinus|hyperpage}{158}
-\indexentry{conditions aux frontières de Dirichlet|hyperpage}{160}
-\indexentry{condition à la frontière Neumann|hyperpage}{160}
-\indexentry{solution périodique régulière|hyperpage}{164}
-\indexentry{mks units|hyperpage}{165}
-\indexentry{ résonance pure|hyperpage}{167}
-\indexentry{résonance|hyperpage}{167}
-\indexentry{résonance pratique|hyperpage}{169}
-\indexentry{équation différentielle partielle|hyperpage}{170}
-\indexentry{EDP|hyperpage}{170}
-\indexentry{linear PDE|hyperpage}{170}
-\indexentry{boundary conditions for a PDE|hyperpage}{170}
-\indexentry{initial conditions for a PDE|hyperpage}{170}
-\indexentry{side conditions for a PDE|hyperpage}{170}
-\indexentry{équation de la chaleur|hyperpage}{170}
-\indexentry{EDP parabolique |hyperpage}{170}
-\indexentry{équation de l'onde|hyperpage}{170}
-\indexentry{EDP hyperbolique|hyperpage}{170}
-\indexentry{équation de chaleur à une dimension|hyperpage}{170}
-\indexentry{heat equation|hyperpage}{170}
-\indexentry{de conductivité thermale|hyperpage}{170}
-\indexentry{homogeneous side conditions|hyperpage}{171}
-\indexentry{superposition|hyperpage}{171}
-\indexentry{separation of variables|hyperpage}{172}
-\indexentry{température constante|hyperpage}{180}
-\indexentry{équation d'onde unidimensionnelle|hyperpage}{182}
-\indexentry{wave equation|hyperpage}{182}
-\indexentry{ffréquence fondamentale|hyperpage}{187}
-\indexentry{harmoniques|hyperpage}{187}
-\indexentry{timbre|hyperpage}{187}
-\indexentry{spectre|hyperpage}{187}
-\indexentry{n-dimensional space@$n$-dimensional space|hyperpage}{192}
-\indexentry{euclidean space|hyperpage}{192}
-\indexentry{cartesian plane|hyperpage}{192}
-\indexentry{vector|hyperpage}{192}
-\indexentry{direction|hyperpage}{192}
-\indexentry{magnitude|hyperpage}{193}
-\indexentry{column vector|hyperpage}{193}
-\indexentry{adding vectors|hyperpage}{193}
-\indexentry{subtracting vectors|hyperpage}{193}
-\indexentry{scale a vector|hyperpage}{194}
-\indexentry{scalar|hyperpage}{194}
-\indexentry{direction|hyperpage}{195}
-\indexentry{unit vector|hyperpage}{195}
-\indexentry{vector-valued function|hyperpage}{195}
-\indexentry{linear mapping|hyperpage}{196}
-\indexentry{transformation|hyperpage}{196}
-\indexentry{operator|hyperpage}{196}
-\indexentry{matrix|hyperpage}{196}
-\indexentry{element of a matrix|hyperpage}{197}
-\indexentry{entry of a matrix|hyperpage}{197}
-\indexentry{row vector|hyperpage}{197}
-\indexentry{square matrix|hyperpage}{197}
-\indexentry{standard basis vectors|hyperpage}{197}
-\indexentry{basis|hyperpage}{197}
-\indexentry{linear combination|hyperpage}{197}
-\indexentry{dot product|hyperpage}{204}
-\indexentry{inner product|hyperpage}{204}
-\indexentry{product of matrices|hyperpage}{204}
-\indexentry{matrix product|hyperpage}{204}
-\indexentry{identity matrix|hyperpage}{206}
-\indexentry{associative law|hyperpage}{206}
-\indexentry{distributive law|hyperpage}{206}
-\indexentry{matrix inverse|hyperpage}{207}
-\indexentry{invertible matrix|hyperpage}{207}
-\indexentry{singular matrix|hyperpage}{207}
-\indexentry{diagonal matrix|hyperpage}{209}
-\indexentry{transpose|hyperpage}{210}
-\indexentry{symmetric matrix|hyperpage}{210}
-\indexentry{elimination|hyperpage}{213}
-\indexentry{augmented matrix|hyperpage}{214}
-\indexentry{elementary operations|hyperpage}{214}
-\indexentry{elementary row operations|hyperpage}{214}
-\indexentry{row echelon form|hyperpage}{215}
-\indexentry{echelon form|hyperpage}{215}
-\indexentry{leading entry|hyperpage}{215}
-\indexentry{reduced row echelon form|hyperpage}{215}
-\indexentry{Gauss--Jordan elimination|hyperpage}{215}
-\indexentry{Gaussian elimination|hyperpage}{215}
-\indexentry{row reduction|hyperpage}{215}
-\indexentry{pivot|hyperpage}{215}
-\indexentry{backsubstitution|hyperpage}{217}
-\indexentry{inconsistent|hyperpage}{217}
-\indexentry{free variable|hyperpage}{218}
-\indexentry{homogeneous matrix equation|hyperpage}{218}
-\indexentry{nullspace|hyperpage}{219}
-\indexentry{kernel|hyperpage}{219}
-\indexentry{linear combination|hyperpage}{219}
-\indexentry{linearly independent|hyperpage}{220}
-\indexentry{linearly dependent|hyperpage}{220}
-\indexentry{span|hyperpage}{220}
-\indexentry{rank|hyperpage}{220}
-\indexentry{row space|hyperpage}{221}
-\indexentry{column space|hyperpage}{221}
-\indexentry{subspace|hyperpage}{227}
-\indexentry{basis|hyperpage}{227}
-\indexentry{nullity|hyperpage}{229}
-\indexentry{Fredholm alternative|hyperpage}{231}
-\indexentry{inner product|hyperpage}{233}
-\indexentry{standard inner product|hyperpage}{233}
-\indexentry{orthogonal|hyperpage}{234}
-\indexentry{orthogonal projection|hyperpage}{235}
-\indexentry{projection!orthogonal|hyperpage}{235}
-\indexentry{orthogonal basis|hyperpage}{236}
-\indexentry{orthonormal basis|hyperpage}{236}
-\indexentry{Gram--Schmidt process|hyperpage}{238}
-\indexentry{determinant|hyperpage}{241}
-\indexentry{parallelogram|hyperpage}{241}
-\indexentry{parallelogram|hyperpage}{241}
-\indexentry{cofactor expansion|hyperpage}{242}
-\indexentry{cofactor|hyperpage}{243}
-\indexentry{upper triangular|hyperpage}{243}
-\indexentry{lower triangular|hyperpage}{243}
+\indexentry{matrice|hyperpage}{99}
+\indexentry{element of a matrix|hyperpage}{99}
+\indexentry{entry of a matrix|hyperpage}{99}
+\indexentry{vecteur|hyperpage}{99}
+\indexentry{vecteur colonne|hyperpage}{99}
+\indexentry{vecteur ligne|hyperpage}{99}
+\indexentry{scalar multiplication|hyperpage}{99}
+\indexentry{scalaire|hyperpage}{99}
+\indexentry{addition of matrices|hyperpage}{99}
+\indexentry{transposition|hyperpage}{100}
+\indexentry{produit scalaire|hyperpage}{100}
+\indexentry{produit intérieur|hyperpage}{100}
+\indexentry{produit des matrices|hyperpage}{100}
+\indexentry{matrice identité|hyperpage}{100}
+\indexentry{matrice unité|hyperpage}{100}
+\indexentry{commutative|hyperpage}{101}
+\indexentry{inversion de matrice|hyperpage}{101}
+\indexentry{invertible matrix|hyperpage}{101}
+\indexentry{singular matrix|hyperpage}{101}
+\indexentry{déterminant|hyperpage}{101}
+\indexentry{parallélogramme|hyperpage}{102}
+\indexentry{cofactor|hyperpage}{102}
+\indexentry{expansion par cofacteurs|hyperpage}{102}
+\indexentry{matrice augmentée|hyperpage}{104}
+\indexentry{inconsistent system|hyperpage}{105}
+\indexentry{élément principal|hyperpage}{105}
+\indexentry{forme échelonnée réduite|hyperpage}{106}
+\indexentry{free variable|hyperpage}{106}
+\indexentry{fonction vectorielle|hyperpage}{108}
+\indexentry{fonction matricielle|hyperpage}{108}
+\indexentry{système linéaire d’EDO de premier ordre|hyperpage}{108}
+\indexentry{coefficients constants|hyperpage}{109}
+\indexentry{homogeneous system|hyperpage}{109}
+\indexentry{superposition|hyperpage}{109}
+\indexentry{linearly independent!for vector-valued functions|hyperpage}{109}
+\indexentry{matrice fundamentale|hyperpage}{109}
+\indexentry{solution matricielle fondamentale|hyperpage}{109}
+\indexentry{équation homogène associée|hyperpage}{110}
+\indexentry{valeur propree|hyperpage}{113}
+\indexentry{vecteur propre correspondant|hyperpage}{113}
+\indexentry{conjugué complexe|hyperpage}{117}
+\indexentry{nœud répulsif|hyperpage}{120}
+\indexentry{nœud instable|hyperpage}{120}
+\indexentry{nœud attractif|hyperpage}{121}
+\indexentry{nœud stable|hyperpage}{121}
+\indexentry{point selle|hyperpage}{121}
+\indexentry{point col|hyperpage}{121}
+\indexentry{ellipses (vector field)|hyperpage}{122}
+\indexentry{point centre|hyperpage}{122}
+\indexentry{foyer répulsif|hyperpage}{122}
+\indexentry{foyer attractif|hyperpage}{123}
+\indexentry{boundary value problem|hyperpage}{125}
+\indexentry{endpoint problem|hyperpage}{125}
+\indexentry{eigenvalue of a boundary value problem|hyperpage}{126}
+\indexentry{fonction propre correspondante|hyperpage}{126}
+\indexentry{corresponding eigenfunction|hyperpage}{126}
+\indexentry{orthogonalité|hyperpage}{129}
+\indexentry{symmetric matrix|hyperpage}{129}
+\indexentry{orthogonal!functions|hyperpage}{129}
+\indexentry{Fredholm alternative!simple case|hyperpage}{130}
+\indexentry{périodique|hyperpage}{134}
+\indexentry{extend periodically|hyperpage}{134}
+\indexentry{periodic extension|hyperpage}{134}
+\indexentry{matrice symétrique|hyperpage}{134}
+\indexentry{orthogonal!vectors|hyperpage}{134}
+\indexentry{produit scalaire à dimensions finies|hyperpage}{135}
+\indexentry{série de Fourier|hyperpage}{136}
+\indexentry{série trigonométrique|hyperpage}{136}
+\indexentry{projection|hyperpage}{136}
+\indexentry{produit scalaire d'une fonction|hyperpage}{136}
+\indexentry{orthogonal!functions|hyperpage}{136}
+\indexentry{dents de scie|hyperpage}{137}
+\indexentry{fonction impaire|hyperpage}{138}
+\indexentry{fonction paire|hyperpage}{138}
+\indexentry{vagues carrées|hyperpage}{139}
+\indexentry{phénomène de Gibbs|hyperpage}{141}
+\indexentry{fréquence fondamentale|hyperpage}{142}
+\indexentry{harmoniques|hyperpage}{142}
+\indexentry{spectre|hyperpage}{142}
+\indexentry{demie-période|hyperpage}{144}
+\indexentry{continue par morceaux|hyperpage}{146}
+\indexentry{lisse par morceaux|hyperpage}{147}
+\indexentry{odd function|hyperpage}{154}
+\indexentry{even function|hyperpage}{154}
+\indexentry{extension périodique impaire|hyperpage}{154}
+\indexentry{extension périodique paire|hyperpage}{154}
+\indexentry{série sinus|hyperpage}{156}
+\indexentry{série cosinus|hyperpage}{156}
+\indexentry{conditions aux frontières de Dirichlet|hyperpage}{158}
+\indexentry{condition à la frontière Neumann|hyperpage}{158}
+\indexentry{solution périodique régulière|hyperpage}{162}
+\indexentry{mks units|hyperpage}{163}
+\indexentry{ résonance pure|hyperpage}{165}
+\indexentry{résonance|hyperpage}{165}
+\indexentry{résonance pratique|hyperpage}{167}
+\indexentry{équation différentielle partielle|hyperpage}{168}
+\indexentry{EDP|hyperpage}{168}
+\indexentry{linear PDE|hyperpage}{168}
+\indexentry{boundary conditions for a PDE|hyperpage}{168}
+\indexentry{initial conditions for a PDE|hyperpage}{168}
+\indexentry{side conditions for a PDE|hyperpage}{168}
+\indexentry{équation de la chaleur|hyperpage}{168}
+\indexentry{EDP parabolique |hyperpage}{168}
+\indexentry{équation de l'onde|hyperpage}{168}
+\indexentry{EDP hyperbolique|hyperpage}{168}
+\indexentry{équation de chaleur à une dimension|hyperpage}{168}
+\indexentry{heat equation|hyperpage}{168}
+\indexentry{de conductivité thermale|hyperpage}{168}
+\indexentry{homogeneous side conditions|hyperpage}{169}
+\indexentry{superposition|hyperpage}{169}
+\indexentry{separation of variables|hyperpage}{170}
+\indexentry{température constante|hyperpage}{178}
+\indexentry{équation d'onde unidimensionnelle|hyperpage}{180}
+\indexentry{wave equation|hyperpage}{180}
+\indexentry{ffréquence fondamentale|hyperpage}{185}
+\indexentry{harmoniques|hyperpage}{185}
+\indexentry{timbre|hyperpage}{185}
+\indexentry{spectre|hyperpage}{185}
+\indexentry{n-dimensional space@$n$-dimensional space|hyperpage}{190}
+\indexentry{euclidean space|hyperpage}{190}
+\indexentry{cartesian plane|hyperpage}{190}
+\indexentry{vector|hyperpage}{190}
+\indexentry{direction|hyperpage}{190}
+\indexentry{magnitude|hyperpage}{191}
+\indexentry{column vector|hyperpage}{191}
+\indexentry{adding vectors|hyperpage}{191}
+\indexentry{subtracting vectors|hyperpage}{191}
+\indexentry{scale a vector|hyperpage}{192}
+\indexentry{scalar|hyperpage}{192}
+\indexentry{direction|hyperpage}{193}
+\indexentry{unit vector|hyperpage}{193}
+\indexentry{vector-valued function|hyperpage}{193}
+\indexentry{linear mapping|hyperpage}{194}
+\indexentry{transformation|hyperpage}{194}
+\indexentry{operator|hyperpage}{194}
+\indexentry{matrix|hyperpage}{194}
+\indexentry{element of a matrix|hyperpage}{195}
+\indexentry{entry of a matrix|hyperpage}{195}
+\indexentry{row vector|hyperpage}{195}
+\indexentry{square matrix|hyperpage}{195}
+\indexentry{standard basis vectors|hyperpage}{195}
+\indexentry{basis|hyperpage}{195}
+\indexentry{linear combination|hyperpage}{195}
+\indexentry{dot product|hyperpage}{202}
+\indexentry{inner product|hyperpage}{202}
+\indexentry{product of matrices|hyperpage}{202}
+\indexentry{matrix product|hyperpage}{202}
+\indexentry{identity matrix|hyperpage}{204}
+\indexentry{associative law|hyperpage}{204}
+\indexentry{distributive law|hyperpage}{204}
+\indexentry{matrix inverse|hyperpage}{205}
+\indexentry{invertible matrix|hyperpage}{205}
+\indexentry{singular matrix|hyperpage}{205}
+\indexentry{diagonal matrix|hyperpage}{207}
+\indexentry{transpose|hyperpage}{208}
+\indexentry{symmetric matrix|hyperpage}{208}
+\indexentry{elimination|hyperpage}{211}
+\indexentry{augmented matrix|hyperpage}{212}
+\indexentry{elementary operations|hyperpage}{212}
+\indexentry{elementary row operations|hyperpage}{212}
+\indexentry{row echelon form|hyperpage}{213}
+\indexentry{echelon form|hyperpage}{213}
+\indexentry{leading entry|hyperpage}{213}
+\indexentry{reduced row echelon form|hyperpage}{213}
+\indexentry{Gauss--Jordan elimination|hyperpage}{213}
+\indexentry{Gaussian elimination|hyperpage}{213}
+\indexentry{row reduction|hyperpage}{213}
+\indexentry{pivot|hyperpage}{213}
+\indexentry{backsubstitution|hyperpage}{215}
+\indexentry{inconsistent|hyperpage}{215}
+\indexentry{free variable|hyperpage}{216}
+\indexentry{homogeneous matrix equation|hyperpage}{216}
+\indexentry{nullspace|hyperpage}{217}
+\indexentry{kernel|hyperpage}{217}
+\indexentry{linear combination|hyperpage}{217}
+\indexentry{linearly independent|hyperpage}{218}
+\indexentry{linearly dependent|hyperpage}{218}
+\indexentry{span|hyperpage}{218}
+\indexentry{rank|hyperpage}{218}
+\indexentry{row space|hyperpage}{219}
+\indexentry{column space|hyperpage}{219}
+\indexentry{subspace|hyperpage}{225}
+\indexentry{basis|hyperpage}{225}
+\indexentry{nullity|hyperpage}{227}
+\indexentry{Fredholm alternative|hyperpage}{229}
+\indexentry{inner product|hyperpage}{231}
+\indexentry{standard inner product|hyperpage}{231}
+\indexentry{orthogonal|hyperpage}{232}
+\indexentry{orthogonal projection|hyperpage}{233}
+\indexentry{projection!orthogonal|hyperpage}{233}
+\indexentry{orthogonal basis|hyperpage}{234}
+\indexentry{orthonormal basis|hyperpage}{234}
+\indexentry{Gram--Schmidt process|hyperpage}{236}
+\indexentry{determinant|hyperpage}{239}
+\indexentry{parallelogram|hyperpage}{239}
+\indexentry{parallelogram|hyperpage}{239}
+\indexentry{cofactor expansion|hyperpage}{240}
+\indexentry{cofactor|hyperpage}{241}
+\indexentry{upper triangular|hyperpage}{241}
+\indexentry{lower triangular|hyperpage}{241}

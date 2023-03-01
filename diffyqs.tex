@@ -1,8 +1,8 @@
 \documentclass[12pt]{book}
 
-\usepackage[french]{babel}  %pour les accentuations
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+%\usepackage[french]{babel}  %pour les accentuations
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
 \setlength\parindent{0pt}	%indentation par défaut
 
 
@@ -35,7 +35,7 @@
 
 \author{Ji\v{r}\'i Lebl }
 
-\title{\'Equations diff\'erentielles pour le g\'enie}
+\title{Équations différentielles pour le génie}
 %\title{Notes on Diffy Qs: Differential Equations for Engineers}
 
 % Set up our index
@@ -136,6 +136,7 @@
 %mbxSTARTIGNORE
 
 %also fix above
+%\DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \newcommand{\theversion}{6.1}
 \makediffytitlepage
 
@@ -180,7 +181,7 @@ Copyright \copyright 2008--2020 Ji\v{r}\'i Lebl
 
 \noindent
 
-Cette \{oe}uvre est mise à disposition selon les termes de la licence Creative Commons \emdash Attribution \emdash Partage dans les mêmes conditions \emdash Sans utilisation commerciale 4.0 International. 
+Cette {\oe}uvre est mise à disposition selon les termes de la licence Creative Commons - Attribution - Partage dans les mêmes conditions - Sans utilisation commerciale 4.0 International. 
 %This work
 %PRINT
 % not for lulu
@@ -252,6 +253,7 @@ La source  \LaTeX\ pour la version originale est disponible sur GitHub:  \url{ht
 %at github: \url{https://github.com/jirilebl/diffyqs}
 \end{small}
 
+%%% erreur à revérifier "scalable fonts"??
 \diffytableofcontents
 
 \newpage
@@ -265,22 +267,23 @@ La source  \LaTeX\ pour la version originale est disponible sur GitHub:  \url{ht
 
 % Introduction chapter
 %\input ch-intro.tex
-\input ch-intro-fr.tex
+\include{ch-intro-fr} %\input ch-intro-fr.tex
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % First order ODEs chapter
-\input ch-first-order-ode-fr.tex
+\include{ch-first-order-ode-fr}%\input ch-first-order-ode-fr.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Higher order linear ODEs chapter
-\input ch-higher-order-ode-fr.tex
+\include{ch-higher-order-ode-fr}%\input ch-higher-order-ode-fr.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Systems of ODEs chapter
-\input ch-systems-fr.tex
+\include{ch-systems-fr}%\input ch-systems-fr.tex
 
 %mbxSTARTIGNORE
 %This makes contents fit if needed
@@ -292,7 +295,7 @@ La source  \LaTeX\ pour la version originale est disponible sur GitHub:  \url{ht
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Fourier series and PDEs chapter
-\input ch-fourier-and-pde-fr.tex
+\include{ch-fourier-and-pde-fr}%\input ch-fourier-and-pde-fr.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -325,7 +328,7 @@ La source  \LaTeX\ pour la version originale est disponible sur GitHub:  \url{ht
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Linear algebra appendix
-\input ap-linear-algebra.tex
+\include{ap-linear-algebra}%\input ap-linear-algebra.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -389,7 +392,7 @@ Equations and Boundary Value Problems: Computing and Modeling}},
 to Differential Equations and Their Applications}},
  McGraw-Hill, Inc.,
  Princeton, NJ\@,
- 1994.  (Aussi publi\'e par Dover Publications, 2006.)
+ 1994.  (Aussi publié par Dover Publications, 2006.)
 
 \bibitem[I]{I}
  E.L.\ Ince,
