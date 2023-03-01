@@ -2,7 +2,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Introduction aux systèmes d'EDO} \label{sec:introtosys}
+\section{Introduction aux systèmes d'équations différentielles ordinaires} \label{sec:introtosys}
 
 %\sectionnotes{Lectures supplémentaires : \EPref{\S4.1 dans %\cite{EP}}\BDref{ et
 %\S7.1 dans \cite{BD}}}
@@ -42,7 +42,7 @@ x_3'(t) &= g_3\bigl(x_1(t),x_2(t),x_3(t),t\bigr) .
 
 Généralement, il y a aussi une
 \emph{condition initiale}\index{condition initiale pour un système}.  Comme dans le cas des équations simples, on précise $x_1$, $x_2$, et $x_3$ pour un $t$ fixe.
-Par exemple, $x_1(0) = a_1$, $x_2(0) = a_2$ et $x_3(0) = a_3$, où $a_1$, $a_2$, et $a_3$ sont des constantes quelconques. Pour le système de second ordre, on préciserais également les premières dérivées en un point. Si on trouve une solution avec des constantes et qu’en résolvant celles-ci on trouve une solution pour toute condition initiale, on appelle cette solution la \emph{solution générale}\index{solution générale d'un système}.
+Par exemple, $x_1(0) = a_1$, $x_2(0) = a_2$ et $x_3(0) = a_3$, où $a_1$, $a_2$, et $a_3$ sont des constantes quelconques. Pour le système de second ordre, on préciserais également les premières dérivées en un point. Si l'on trouve une solution avec des constantes et qu’en résolvant celles-ci on trouve une solution pour toute condition initiale, on appelle cette solution la \emph{solution générale}\index{solution générale d'un système}.
 Examinons un exemple simple.
 
 \begin{example}
@@ -63,13 +63,13 @@ ou $y_2 = \frac{C_1}{2}e^{x} + C_2e^{-x}$.  La solution générale du système e
 y_1 = C_1 e^x , \qquad
 y_2 = \frac{C_1}{2}e^{x} + C_2e^{-x} .
 \end{equation*}
-On résout le système pour $C_1$ et $C_2$ pour les conditions initiales. On substitue $x=0$ et on trouve que 
+On résout le système pour $C_1$ et $C_2$ pour les conditions initiales. On substitue $x=0$ et l'on trouve que 
 $C_1=1$ et $C_2=\nicefrac{3}{2}$.  Alors, la solution est
 $y_1 = e^x$ et
 $y_2 = (\nicefrac{1}{2}) e^x + (\nicefrac{3}{2}) e^{-x}$.
 \end{example}
 
-En général, on ne peut pas résoudre chaque variable séparément comme dans l'exemple précédent et il faudra résoudre toutes les variables en même temps. Même si on ne peut pas toujours résoudre le système pour une variable et ensuite la suivante, on essaiera de tirer profit au maximum de cette technique. D’une certaine façon, on résoudra plusieurs équations simples et on regroupera les solutions. Ne nous préoccupons pas encore de la façon de résoudre les systèmes d’équations.
+En général, on ne peut pas résoudre chaque variable séparément comme dans l'exemple précédent et il faudra résoudre toutes les variables en même temps. Même si l'on ne peut pas toujours résoudre le système pour une variable et ensuite la suivante, on essaiera de tirer profit au maximum de cette technique. D’une certaine façon, on résoudra plusieurs équations simples et l'on regroupera les solutions. Ne nous préoccupons pas encore de la façon de résoudre les systèmes d’équations.
 
 Considérons principalement les \emph{\myindex{systèmes linéaires}}.  L’exemple précédent est un \emph{\myindex{système linéaire de premier ordre}}, car les variables dépendantes ou leurs dérivés n'apparaissent pas dans des fonctions non linéaires ou à des puissances supérieures à un ($x$, $y$, $x'$ et $y'$ constantes et les fonctions de $t$
 peuvent être présentes, mais pas $xy$ ni ${(y')}^2$ ni $x^3$).  Voici un exemple plus complexe de système linéaire :
@@ -124,7 +124,7 @@ Si $A$ est plus grande que $B$, il y aura plus de sel qui sort du premier réser
 \inputpdft{cartsfig}
 \end{mywrapfigsimp}
 On a un ressort avec une constante $k$ et deux masses $m_1$
-et $m_2$. Imaginez les masses comme des chariots qui se déplacent sans friction le long d'une voie linéaire. La variable $x_1$ représente le déplacement du premier chariot et $x_2$, le déplacement du second. Les deux chariots reposent sans tension dans le ressort et on marque la position des deux chariots qu'on appelle les positions zéro. Alors $x_1$ indique la distance du premier chariot par rapport à sa position zéro et $x_2$ fait la même chose pour le second. La force exercée par le ressort sur le premier chariot est
+et $m_2$. Imaginez les masses comme des chariots qui se déplacent sans friction le long d'une voie linéaire. La variable $x_1$ représente le déplacement du premier chariot et $x_2$, le déplacement du second. Les deux chariots reposent sans tension dans le ressort et l'on marque la position des deux chariots qu'on appelle les positions zéro. Alors $x_1$ indique la distance du premier chariot par rapport à sa position zéro et $x_2$ fait la même chose pour le second. La force exercée par le ressort sur le premier chariot est
 $k(x_2-x_1)$ étant donné que 
 $x_2-x_1$ représente l’étirement (ou la compression) du ressort par rapport à la position de repos. La force exercée sur le deuxième chariot est l'inverse, donc la même avec un signe négatif. La 
 \myindex{seconde loi de Newton} stipule que la force est égale à la masse multipliée par l’accélération. Le système d’équations est donc
@@ -142,7 +142,7 @@ Avant de parler de la façon de traiter des systèmes différentiels, notons que
 \begin{equation*}
 y^{(n)} = F(y^{(n-1)},\ldots,y',y,x) .
 \end{equation*}
-On définit de nouvelles variables $u_1, u_2, \ldots, u_n$ et on écrit le système
+On définit de nouvelles variables $u_1, u_2, \ldots, u_n$ et l'on écrit le système
 \begin{align*}
 u_1' & = u_2 , \\
 u_2' & = u_3 , \\
@@ -155,7 +155,7 @@ on peut oublier $u_2$ à $u_n$ et garder $y = u_1$.
 Ce $y$ résout l'équation d'origine.
 
 \begin{example}
-Prenons $x''' = 2x''+ 8x' + x + t$.  Si on admet que $u_1 = x$, $u_2 = x'$, $u_3
+Prenons $x''' = 2x''+ 8x' + x + t$.  Si l'on admet que $u_1 = x$, $u_2 = x'$, $u_3
 = x''$, on trouve le système :
 \begin{equation*}
 u_1' = u_2, \qquad u_2' = u_3, \qquad u_3' = 2u_3 + 8u_2 + u_1 + t .
@@ -190,12 +190,12 @@ y' = x,
 \end{equation*}
 où la variable indépendante est $t$.  On désire le résoudre pour les conditions initiales $x(0) = 1$ et $y(0) =0$.
 
-Si on dérive la seconde équation, on obtient
-$y''=x'$.  On sait ce que représente $x'$ en fonction de $x$ et $y$ et on sait que $x=y'$.  Alors,
+Si l'on dérive la seconde équation, on obtient
+$y''=x'$.  On sait ce que représente $x'$ en fonction de $x$ et $y$ et l'on sait que $x=y'$.  Alors,
 \begin{equation*}
 y'' = x' = 2y-x = 2y-y' .
 \end{equation*}
-On a maintenant l'équation $y''+y'-2y = 0$.  On sait comment résoudre cette équation et on trouve que $y = C_1 e^{-2t} + C_2 e^t$.  Maintenant qu'on a $y$,
+On a maintenant l'équation $y''+y'-2y = 0$.  On sait comment résoudre cette équation et l'on trouve que $y = C_1 e^{-2t} + C_2 e^t$.  Maintenant qu'on a $y$,
 on utilise l'équation $y' = x$ pour trouver $x$.
 \begin{equation*}
 x = y' = -2 C_1 e^{-2t} + C_2 e^t .
@@ -225,7 +225,7 @@ Un système où les équations ne dépendent pas de la variable indépendante se
 Pour les systèmes autonomes, on peut utiliser un
 \emph{\myindex{champ de vecteurs associé au système}} ou \emph{\myindex{champ vectoriel}},
 qui est un graphe semblable au champ de directions, mais au lieu de donner une pente à chaque point, on donne une direction (et une amplitude). L’exemple précédent, $x' = 2y-x$, $y' = x$, indique qu’au point $(x,y)$ la direction dans laquelle on doit se déplacer pour satisfaire les équations devrait correspondre à la direction du vecteur $( 2y-x, x )$
-à une vitesse égale à l'amplitude de ce vecteur. On dessine donc le vecteur $(2y-x,x)$ au point $(x,y)$ et on répète pour plusieurs points sur le plan $xy$.
+à une vitesse égale à l'amplitude de ce vecteur. On dessine donc le vecteur $(2y-x,x)$ au point $(x,y)$ et l'on répète pour plusieurs points sur le plan $xy$.
 Par exemple, au point $(1,2)$ on dessine le vecteur
 $\bigl(2(2)-1,1\bigr) = (3,1)$,
 qui pointe vers la droite et légèrement vers le haut, alors qu’au point $(2,1)$ on dessine le vecteur $\bigl(2(1)-2,2\bigr) = (0,2)$
@@ -233,7 +233,7 @@ qui pointe directement vers le haut.
 Lorsqu’on trace les vecteurs, on réduit leur taille afin de pouvoir en placer plusieurs sur le même champ de vecteurs. On s’intéresse principalement à leur direction et à leur taille relative.  Voir
 \figureref{sintro-vectorfield:fig}.
 
-On peut dessiner une trajectoire de la solution dans le plan. Supposons que $x = f(t)$ et $y=g(t)$ est la solution.  On choisit un intervalle de $t$ (disons $0 \leq t \leq 2$ pour l’exemple) et on trace tous les points
+On peut dessiner une trajectoire de la solution dans le plan. Supposons que $x = f(t)$ et $y=g(t)$ est la solution.  On choisit un intervalle de $t$ (disons $0 \leq t \leq 2$ pour l’exemple) et l'on trace tous les points
 $\bigl(f(t),g(t)\bigr)$ pour la plage $t$ sélectionnée. L’image obtenue est appelée \emph{\myindex{portrait de phase}}
 (ou \myindex{portrait de phase du plan}).
 La courbe particulière obtenue est appelée \emph{\myindex{trajectoire}} ou \emph{\myindex{courbe de solution}}.
@@ -382,12 +382,11 @@ Supposons que des réservoirs soient disposés comme dans l’\exampleref{sintro
 \end{tasks}
 \end{exercise}
 \exsol{%
-a) Left to reader.
+a) Laissé au lecteur.
 \quad b) 
 $x_1' = \frac{r}{V} (x_2-x_1)$,
 $x_2' = \frac{r}{V} x_1- \frac{r-s}{V}x_2$.
-\quad c) As $t$ goes to infinity, both $x_1$ and $x_2$ go to zero,
-explanation is left to reader.
+\quad c) Lorsque $t$ tend vers l'infini, chacun de $x_1$ et $x_2$ tendent vers zéro, et le lecteur peut compléter l'explication.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -453,7 +452,7 @@ L’addition\index{addition of matrices} de matrice est aussi simple. On additio
 \end{equation*}
 On ne peut additionner que deux matrices de même taille.
 
-Si on désigne par 0 une matrice dont tous les éléments sont nuls, par
+Si l'on désigne par 0 une matrice dont tous les éléments sont nuls, par
 $c$ et $d$ des scalaires et par $A$, $B$ et $C$ des matrices, on obtient les règles suivantes :
 \begin{align*}
 A + 0 & = A = 0 + A , \\
@@ -479,7 +478,7 @@ La \emph{\myindex{transposition}} est une autre opération matricielle utile. Ce
 \subsection{Multiplication de matrices}
 
 Voyons maintenant la multiplication de matrices. Commençons par définir le
-\emph{\myindex{produit scalaire}} (ou \emph{\myindex{produit intérieur}}) de deux vecteurs. En règle générale, c'est le produit d'un vecteur ligne par un vecteur colonne de même dimension. Pour obtenir le produit scalaire, on multiplie chaque paire d’éléments du premier et du second vecteur et on fait la somme des résultats. Le résultat est un nombre. Par exemple,
+\emph{\myindex{produit scalaire}} (ou \emph{\myindex{produit intérieur}}) de deux vecteurs. En règle générale, c'est le produit d'un vecteur ligne par un vecteur colonne de même dimension. Pour obtenir le produit scalaire, on multiplie chaque paire d’éléments du premier et du second vecteur et l'on fait la somme des résultats. Le résultat est un nombre. Par exemple,
 \begin{equation*}
 \begin{bmatrix}
 a_1 & a_2 & a_3
@@ -574,7 +573,7 @@ Afin que les deux derniers points soient vrais, on doit \myquote{diviser} par un
 \begin{equation*}
 AB = I = BA ,
 \end{equation*}
-alors la matrice $B$ est l'inverse de $A$ et on désigne $B$ par $A^{-1}$.
+alors la matrice $B$ est l'inverse de $A$ et l'on désigne $B$ par $A^{-1}$.
 Si l’inverse de $A$ existe, on dit que $A$ est
 \emph{inversible\index{invertible matrix}}.
 Si $A$ n’est pas inversible, on dit parfois que $A$ est
@@ -582,11 +581,11 @@ Si $A$ n’est pas inversible, on dit parfois que $A$ est
 
 Si $A$ est inversible, alors $AB = AC$ signifie que
 $B = C$ (l’inverse de $A$ est alors unique).
-On multiplie simplement les deux côtés de l’équation par $A^{-1}$ (à gauche) et on obtient
+On multiplie simplement les deux côtés de l’équation par $A^{-1}$ (à gauche) et l'on obtient
 $A^{-1}AB = A^{-1}AC$ ou $IB=IC$ ou $B=C$.
 On voit bien que ${(A^{-1})}^{-1} = A$.
 
-\subsection{Le déterminant}
+\subsection{Déterminant}
 
 Le \emph{\myindex{déterminant}} est un outil utile pour les matrices carrées. Le déterminant d’une matrice $1 \times 1$ est la valeur de son élément unique. Dans le cas d'une matrice $2 \times 2$ on définit
 \begin{equation*}
@@ -603,7 +602,7 @@ ad-bc .
 Avant de passer aux matrices plus grandes, examinons ce que signifie le déterminant. Considérons une matrice $n \times n$
 comme une projection d’un espace euclidien de dimension $n$ sur lui-même, désigné par ${\mathbb{R}}^n$, où $\vec{x}$ est envoyé à $A \vec{x}$.
 Une matrice $A$ de dimension $2 \times 2$ est donc une projection du plan sur lui-même. Le déterminant de 
-$A$ est le facteur par lequel l’aire des objets change. Si on prend le carré unitaire (un carré de 1 x 1) dans le plan, alors la matrice
+$A$ est le facteur par lequel l’aire des objets change. Si l'on prend le carré unitaire (un carré de 1 x 1) dans le plan, alors la matrice
 $A$ transforme le carré en parallélogramme avec une aire égale à $\lvert\det(A)\rvert$.  Le signe
 du $\det(A)$ désigne le changement d'orientation (négatif si les axes s’inversent). Par exemple, prenons
 \begin{equation*}
@@ -855,7 +854,7 @@ On peut appliquer les trois opérations élémentaires suivantes.
 \item Multiplier une ligne par un nombre non nul;
 \item Additionner un multiple d’une ligne à une autre.
 \end{enumerate}
-On répète ces opérations jusqu'à ce que la solution soit évidente ou jusqu’à l’obtention d’une contradiction qui signifie qu’il n’y a pas de solution (par exemple, si on arrive à une équation comme $0=1$).
+On répète ces opérations jusqu'à ce que la solution soit évidente ou jusqu’à l’obtention d’une contradiction qui signifie qu’il n’y a pas de solution (par exemple, si l'on arrive à une équation comme $0=1$).
 
 Examinons l’exemple précédent. Premièrement, multiplions la première ligne par
 $\nicefrac{1}{2}$ pour obtenir
@@ -908,7 +907,7 @@ Finalement, soustrayons la dernière ligne de la première, puis  la seconde de 
 \end{array}
 \right]
 \end{equation*}
-Si on considère les équations que cette matrice augmentée représente, on constate que
+Si l'on considère les équations que cette matrice augmentée représente, on constate que
 $x_1 = -4$, $x_2 = 3$ et $x_3 = 2$.  Il suffit de tester cette solution dans le système original pour voir qu’elle fonctionne.
 
 \begin{exercise}
@@ -936,7 +935,7 @@ $\left[ \begin{smallmatrix}
 
 \medskip
 
-Il se peut que la solution ne soit pas unique ou qu'aucune solution n’existe. Il est facile de savoir si aucune solution n'existe. Lors de la réduction des lignes, si tous les éléments d'une ligne sont nuls sauf le dernier (le dernier élément d’une ligne correspond au côté droit de l'équation), alors le système est \emph{incohérent\index{inconsistent system}} et n'a pas de solution. Par exemple, pour un système de 3 équations à 3 inconnues, si on trouve une ligne telle que $[\,0 \quad 0 \quad 0 ~\,|\,~ 1\,]$ dans la matrice augmentée, on peut conclure que le système est incohérent, car la ligne correspond à $0=1$.
+Il se peut que la solution ne soit pas unique ou qu'aucune solution n’existe. Il est facile de savoir si aucune solution n'existe. Lors de la réduction des lignes, si tous les éléments d'une ligne sont nuls sauf le dernier (le dernier élément d’une ligne correspond au côté droit de l'équation), alors le système est \emph{incohérent\index{inconsistent system}} et n'a pas de solution. Par exemple, pour un système de 3 équations à 3 inconnues, si l'on trouve une ligne telle que $[\,0 \quad 0 \quad 0 ~\,|\,~ 1\,]$ dans la matrice augmentée, on peut conclure que le système est incohérent, car la ligne correspond à $0=1$.
 
 \medskip
 
@@ -984,10 +983,10 @@ il n’est pas nécessaire d’aller plus loin. La dernière ligne correspond à
 
 Si la matrice $A$ est carrée et qu’une solution unique
 $\vec{x}$ à $A \vec{x} = \vec{b}$ existe pour chaque $\vec{b}$ (il n’y a pas de variable libre), alors $A$ est inversible.
-Si on multiplie les deux côtés par $A^{-1}$, on obtient $\vec{x} =
+Si l'on multiplie les deux côtés par $A^{-1}$, on obtient $\vec{x} =
 A^{-1} \vec{b}$.  Le calcul de l’inverse est utile afin de résoudre l’équation pour plusieurs $\vec{b}$ différents.
 
-Il y a une formule pour l’inverse d’une matrice $2 \times 2$, et le calcul de l’inverse de matrices plus larges n’est pas plus compliqué. Même si l’occasion de calculer l’inverse de matrices plus larges que $2 \times 2$ à la main ne se présente pas souvent, voyons comment le faire. Trouver l'inverse de $A$ consiste en fait à résoudre un ensemble d'équations linéaires. Si on peut résoudre $A \vec{x}_k = \vec{e}_k$ où $\vec{e}_k$  est le vecteur avec des 0 partout à l’exception d’un 1 à la $k^{\text{e}}$ position, alors l'inverse est la matrice avec les colonnes $\vec{x}_k$ pour $k=1,2,\ldots,n$
+Il y a une formule pour l’inverse d’une matrice $2 \times 2$, et le calcul de l’inverse de matrices plus larges n’est pas plus compliqué. Même si l’occasion de calculer l’inverse de matrices plus larges que $2 \times 2$ à la main ne se présente pas souvent, voyons comment le faire. Trouver l'inverse de $A$ consiste en fait à résoudre un ensemble d'équations linéaires. Si l'on peut résoudre $A \vec{x}_k = \vec{e}_k$ où $\vec{e}_k$  est le vecteur avec des 0 partout à l’exception d’un 1 à la $k^{\text{e}}$ position, alors l'inverse est la matrice avec les colonnes $\vec{x}_k$ pour $k=1,2,\ldots,n$
 (exercice: pourquoi?).  Par conséquent, afin de trouver l’inverse, on écrit une matrice augmentée $n
 \times 2n$ plus grande $[ \,A ~|~ I\, ]$, où $I$ est la matrice d'identité. On procède alors à la réduction par ligne. La forme échelonnée réduite de $[ \,A ~|~ I\, ]$ 
 sera de la forme $[ \,I ~|~ A^{-1}\, ]$ si et seulement si
@@ -1180,7 +1179,7 @@ $\left[ \begin{smallmatrix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \sectionnewpage
-\section{Systèmes linéaires d'EDO}
+\section{Systèmes linéaires d'équations différentielles ordinaires}
 \label{linsystems:section}
 
 %\sectionnotes{Lectures supplémentaires: \EPref{seconde partie de \S5.1 dans \cite{EP}}\BDref{ et
@@ -1283,7 +1282,7 @@ sont linérairement dépendantes parce que
 $\vec{x}_1 + \vec{x}_3 = \vec{x}_2$ pour chaque $t$. Alors $c_1 =
 1$, $c_2 = -1$ et $c_3 = 1$ fonctionnera dans l’équation ci-dessus.
 
-Cependant, si on modifie légèrement l’exemple pour avoir
+Cependant, si l'on modifie légèrement l’exemple pour avoir
 $\vec{x}_1 = \Bigl[ \begin{smallmatrix} t^2 \\ t \end{smallmatrix} \Bigr]$,
 $\vec{x}_2 = \Bigl[ \begin{smallmatrix} 0 \\ t \end{smallmatrix} \Bigr]$,
 $\vec{x}_3 = \Bigl[ \begin{smallmatrix} -t^2 \\ 1 \end{smallmatrix}
@@ -1634,7 +1633,7 @@ $\vec{v}$ est un vecteur constant arbitraire. On insère ce $\vec{x}$ dans l’�
 \underbrace{\lambda \vec{v} e^{\lambda t}}_{{\vec{x}}'} =
 \underbrace{P\vec{v} e^{\lambda t}}_{P\vec{x}} .
 \end{equation*}
-On diviser par $e^{\lambda t}$ et on remarque qu’on cherche un scalaire $\lambda$
+On diviser par $e^{\lambda t}$ et l'on remarque qu’on cherche un scalaire $\lambda$
 et un vecteur $\vec{v}$ qui satisfont l’équation
 \begin{equation*}
 \lambda \vec{v} = P\vec{v} .
@@ -1731,7 +1730,7 @@ On écrit
 = 
 -(\lambda -1)(\lambda -2)(\lambda-3) .
 \end{multline*}
-Alors les valeurs propres sont $\lambda = 1$, $\lambda = 2$, and
+Alors les valeurs propres sont $\lambda = 1$, $\lambda = 2$ et
 $\lambda = 3$.
 \end{example}
 
@@ -1743,7 +1742,7 @@ Afin de trouver un vecteur propre correspondant à une valeur propre $\lambda$, 
 \begin{equation*}
 (A-\lambda I) \vec{v} = \vec{0} ,
 \end{equation*}
-et on résout pour un vecteur non nul $\vec{v}$.
+et l'on résout pour un vecteur non nul $\vec{v}$.
 Si $\lambda$ est une valeur propre, il y aura au moins une variable libre et, pour chaque valeur propre distincte $\lambda$, il y a toujours un vecteur propre.
 
 \begin{example}
@@ -1795,7 +1794,7 @@ Ce système d’équations linéaires est simple à résoudre. On écrit la matr
 \end{array}
 \right] ,
 \end{equation*}
-et on effectue des opérations sur les lignes (exercice : lesquelles?) jusqu’à obtenir
+et l'on effectue des opérations sur les lignes (exercice : lesquelles?) jusqu’à obtenir
 \begin{equation*}
 \left[
 \begin{array}{ccc|c}
@@ -1808,7 +1807,7 @@ et on effectue des opérations sur les lignes (exercice : lesquelles?) jusqu’�
 Les éléments de $\vec{v}$ doivent satisfaire les équations
 $v_1 - v_2 = 0$ et $v_3 = 0$, et $v_2$ est une variable libre. La valeur de $v_2$ peut être arbitraire (mais non nulle),
 $v_1 = v_2$ et évidemment $v_3 = 0$.
-Par example, si on choisit $v_2 = 1$, alors
+Par example, si l'on choisit $v_2 = 1$, alors
 $\vec{v} =
 \left[ \begin{smallmatrix} 1 \\ 1 \\ 0 \end{smallmatrix} \right]$.
 Vérifions que $\vec{v}$ est vraiment un vecteur propre qui correspond à $\lambda = 3$ :
@@ -1850,7 +1849,7 @@ Dans le cas d’une matrice $2 \times 2$ vous n’avez pas besoin d'effectuer de
 $\left[ \begin{smallmatrix} 2 & 1 \\ 1 & 2 \end{smallmatrix} \right]$.
 \end{exercise}
 
-\subsection{La décomposition en valeurs propres avec des valeurs propres réelles distinctes}
+\subsection{Décomposition en valeurs propres avec des valeurs propres réelles distinctes}
 
 Supposons le système d’équations
 \begin{equation*}
@@ -1958,7 +1957,7 @@ c_1 \\ c_2 \\ c_3
 Vérifiez que ce $\vec{x}$ résout vraiment le système.
 \end{exercise}
 
-Note : Si on écrit une seule équation linéaire homogène à coefficients constants d’ordre $n$ comme un système de premier ordre (comme dans la section \sectionref{sec:introtosys}),
+Note : si l'on écrit une seule équation linéaire homogène à coefficients constants d’ordre $n$ comme un système de premier ordre (comme dans la section \sectionref{sec:introtosys}),
 alors l’équation de valeurs propres
 \begin{equation*}
 \det(P - \lambda I) = 0
@@ -1977,7 +1976,7 @@ Une matrice peut avoir des valeurs propres complexes même si tous les élément
 \end{bmatrix}
 \vec{x} .
 \end{equation*}
-Si on calcule les valeurs propres de la matrice $P = \left[ \begin{smallmatrix} 1 & 1 \\ -1 & 1 \end{smallmatrix}
+Si l'on calcule les valeurs propres de la matrice $P = \left[ \begin{smallmatrix} 1 & 1 \\ -1 & 1 \end{smallmatrix}
 \right]$.
 \begin{equation*}
 \det(P - \lambda I) =
@@ -2108,7 +2107,7 @@ Alors
 e^t \sin t  \\
 e^t \cos t
 \end{bmatrix} ,
-\qquad \text{and} \qquad
+\qquad \text{et} \qquad
 \operatorname{Im} \vec{x}_1 = 
 \begin{bmatrix}
 e^t \cos t \\
@@ -2163,7 +2162,7 @@ a deux solutions linéairement indépendantes à valeurs réelles
 \end{theorem}
 
 Chaque paire de valeurs propres complexes $a+ib$ et $a-ib$,
-donne deux solutions linéairement indépendantes à valeurs réelles. On passe ensuite à la valeur propre suivante, qui est soit réelle ou une autre paire de valeurs propres complexes. Si on a $n$ valeurs propres distinctes (réelles ou complexes), alors on arrive à $n$ solutions linéairement indépendantes. Si on n’a que deux équations ($n=2$) comme dans l'exemple précédent, le travail est terminé après avoir trouvé deux solutions, et la solution générale est
+donne deux solutions linéairement indépendantes à valeurs réelles. On passe ensuite à la valeur propre suivante, qui est soit réelle ou une autre paire de valeurs propres complexes. Si l'on a $n$ valeurs propres distinctes (réelles ou complexes), alors on arrive à $n$ solutions linéairement indépendantes. Si on n’a que deux équations ($n=2$) comme dans l'exemple précédent, le travail est terminé après avoir trouvé deux solutions, et la solution générale est
 \begin{equation*}
 \vec{x} =
 c_1 \vec{x}_1 + c_2 \vec{x}_2
@@ -2363,7 +2362,7 @@ C_2 \left[ \begin{smallmatrix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \sectionnewpage
-\section{Les systèmes bidimensionnels et leurs champs vectoriels}
+\section{Systèmes bidimensionnels et leurs champs vectoriels}
 \label{sec:twodimaut}
 
 \sectionnotes{Lectures supplémentaires \EPref{: partie de \S6.2 dans \cite{EP}}\BDref{,
@@ -2384,7 +2383,7 @@ P \begin{bmatrix} x \\ y \end{bmatrix}
 .
 \end{equation}
 Le système est autonome (comparez avec la section \sectionref{auteq:section})
-et on peut donc tracer un champ vectoriel (voir la fin de la section
+et l'on peut donc tracer un champ vectoriel (voir la fin de la section
 \sectionref{sec:introtosys}).
 On pourra déduire l’apparence du champ de vecteurs et comment les solutions se comportent après avoir trouvé les valeurs et vecteurs propres de la matrice $P$.
 Dans cette section, on suppose que $P$ a deux valeurs propres et deux vecteurs propres correspondants.
@@ -2421,7 +2420,7 @@ P ( \alpha \vec{v} ) =  \alpha ( P \vec{v} )
 La dérivée est un multiple de $\vec{v}$ et pointe donc le long de la ligne définie par $\vec{v}$.  Comme $\lambda > 0$, la dérivée pointe dans la direction de $\vec{v}$ quand $\alpha$ est positif et dans la direction opposée quand $\alpha$ est négatif. Traçons les lignes définies par les vecteurs propres et des flèches sur ces lignes pour indiquer les directions.
 Voir \figurevref{pln:source-eig-arrfig}.
 
-On ajoute le reste des flèches pour le champ vectoriel et on dessine aussi quelques solutions. Voir
+On ajoute le reste des flèches pour le champ vectoriel et l'on dessine aussi quelques solutions. Voir
 \figurevref{pln:source-fullfig}.
 Le graphe ressemble à une source avec des flèches en provenance de l’origine. C’est pourquoi ce type de graphe se nomme un \emph{\myindex{nœud répulsif}} ou parfois un \emph{\myindex{nœud instable}}.
 
@@ -2470,12 +2469,12 @@ $\left[ \begin{smallmatrix} 1 \\ 1 \end{smallmatrix} \right]$.  Le calcul et le 
 $\left[ \begin{smallmatrix} 1 & 1 \\ 0 & -2 \end{smallmatrix} \right]$.
 Les valeurs propres sont 1 et $-2$ et les vecteurs propres correspondants sont
 $\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right]$ et
-$\left[ \begin{smallmatrix} 1 \\ -3 \end{smallmatrix} \right]$.  On inverse les flèches sur une ligne (correspond à la valeur propre négative) et on obtient le graph de la \figurevref{pln:saddle-fullfig}.  Ce type de graphe se nomme un \emph{\myindex{point selle}} ou un \emph{\myindex{point col}}.
+$\left[ \begin{smallmatrix} 1 \\ -3 \end{smallmatrix} \right]$.  On inverse les flèches sur une ligne (correspond à la valeur propre négative) et l'on obtient le graph de la \figurevref{pln:saddle-fullfig}.  Ce type de graphe se nomme un \emph{\myindex{point selle}} ou un \emph{\myindex{point col}}.
 
 \medskip
 
 \pagebreak[0]
-Pour les trois prochains cas, on suppose que les valeurs propres sont complexes. Dans cette situation, les vecteurs propres sont également complexes et on ne peut pas simplement les tracer dans le plan.
+Pour les trois prochains cas, on suppose que les valeurs propres sont complexes. Dans cette situation, les vecteurs propres sont également complexes et l'on ne peut pas simplement les tracer dans le plan.
 
 \medskip
 
@@ -2641,15 +2640,15 @@ Décrivez le comportement des systèmes suivants sans les résoudre :
 \end{tasks}
 \end{exercise}
 \exsol{%
-a) Two eigenvalues: $\pm \sqrt{2}$ so the behavior is a saddle.
+a) Deux valeurs propres: $\pm \sqrt{2}$, donc le comportement est une selle.
 \quad
-b) Two eigenvalues: $1$ and $2$, so the behavior is a source.
+b) Deux valeurs propres: $1$ et $2$, donc le comportement est une source.
 \quad
-c) Two eigenvalues: $\pm 2i$, so the behavior is a center (ellipses).
+c) Deux valeurs propres: $\pm 2i$, donc le comportement est un centre (ellipses).
 \quad
-d) Two eigenvalues: $-1$ and $-2$, so the behavior is a sink.
+d) Deux valeurs propres: $-1$ et $-2$, donc le comportement est un puits.
 \quad
-e) Two eigenvalues: $5$ and $-3$, so the behavior is a saddle.
+e) Deux valeurs propres: $5$ et $-3$, donc le comportement est une selle.
 }
 
 \begin{exercise}

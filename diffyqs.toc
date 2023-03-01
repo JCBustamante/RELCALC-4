@@ -10,33 +10,33 @@
 \contentsline {section}{\numberline {0.3}Classification des équations différentielles}{14}{section.0.3}%
 \contentsline {subsection}{\numberline {0.3.1}Exercices}{16}{subsection.0.3.1}%
 \contentsline {chapter}{\numberline {1}Équations du premier ordre}{19}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Les intégrales en tant que solutions}{19}{section.1.1}%
+\contentsline {section}{\numberline {1.1}Intégrales en tant que solutions}{19}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Exercices}{23}{subsection.1.1.1}%
 \contentsline {section}{\numberline {1.2}Champs de direction}{25}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Champs de direction}{25}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Existence et unicité}{26}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Exercices}{29}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}Les équations séparables}{31}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Les équations séparables}{31}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Les solutions implicites}{32}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.3}Équations séparables}{31}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Équations séparables}{31}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Solutions implicites}{32}{subsection.1.3.2}%
 \contentsline {subsection}{\numberline {1.3.3}Exemples d'équations séparables}{33}{subsection.1.3.3}%
 \contentsline {subsection}{\numberline {1.3.4}Exercices}{36}{subsection.1.3.4}%
-\contentsline {section}{\numberline {1.4}Les équations linéaires et le facteur intégrant}{38}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Équations linéaires et facteur intégrant}{38}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Exercices}{42}{subsection.1.4.1}%
-\contentsline {section}{\numberline {1.5}Les équations autonomes}{44}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Équations autonomes}{44}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Exercices}{47}{subsection.1.5.1}%
-\contentsline {section}{\numberline {1.6}Les équations exactes}{50}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Équations exactes}{50}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Résoudre des équations exactes}{51}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}Exercices}{55}{subsection.1.6.2}%
-\contentsline {chapter}{\numberline {2}EDO d'ordre supérieur}{57}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Équations différentielles de deuxième ordre}{57}{section.2.1}%
+\contentsline {chapter}{\numberline {2}Équations différentielles ordinaires d'ordre supérieur}{57}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Équations différentielles du deuxième ordre}{57}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Exercices}{61}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}EDO d'ordre 2 à coefficients constants}{63}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Équations différentielles d'ordre deux à coefficients constants}{63}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Résoudre les équations à coefficients constants}{63}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Les nombres complexes et la formule d'Euler}{65}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Les racines complexes}{67}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.2}Nombres complexes et formule d'Euler}{65}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Racines complexes}{67}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Exercices}{68}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}EDO linéaires d'ordre supérieur}{70}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Équations différentielles linéaires d'ordre supérieur}{70}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Indépendance linéaire}{70}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}EDO d'ordre supérieur à coefficients constants}{72}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Exercices}{74}{subsection.2.3.3}%
@@ -50,11 +50,11 @@
 \contentsline {subsection}{\numberline {2.4.4}Exercices}{82}{subsection.2.4.4}%
 \contentsline {section}{\numberline {2.5}Équations non homogènes }{84}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Résoudre des équations non homogènes }{84}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Les coefficients indéterminés}{85}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.2}Coefficients indéterminés}{85}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Variation des paramètres}{87}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Exercices}{89}{subsection.2.5.4}%
 \contentsline {chapter}{\numberline {3}Systèmes d’équations différentielles ordinaires}{91}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction aux systèmes d'EDO}{91}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Introduction aux systèmes d'équations différentielles ordinaires}{91}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Systèmes différentiels}{91}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Applications}{93}{subsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.1.3}Passage au premier ordre}{94}{subsection.3.1.3}%
@@ -64,31 +64,31 @@
 \contentsline {section}{\numberline {3.2}Matrices et systèmes linéaires}{99}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Matrices et vecteurs}{99}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Multiplication de matrices}{100}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Le déterminant}{101}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Déterminant}{101}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Résolution de systèmes linéaires}{103}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Calcul de l'inverse}{106}{subsection.3.2.5}%
 \contentsline {subsection}{\numberline {3.2.6}Exercices}{106}{subsection.3.2.6}%
-\contentsline {section}{\numberline {3.3}Systèmes linéaires d'EDO}{108}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Systèmes linéaires d'équations différentielles ordinaires}{108}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Exercices}{111}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Décomposition en valeurs propres}{113}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Matrices de valeurs propres et de vecteurs propres}{113}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}La décomposition en valeurs propres avec des valeurs propres réelles distinctes}{115}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}Décomposition en valeurs propres avec des valeurs propres réelles distinctes}{115}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Valeurs propres complexes}{116}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Exercices}{118}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Les systèmes bidimensionnels et leurs champs vectoriels}{120}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Systèmes bidimensionnels et leurs champs vectoriels}{120}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Exercices}{123}{subsection.3.5.1}%
-\contentsline {chapter}{\numberline {4}Séries de Fourier et EDP}{125}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Conditions au bord}{125}{section.4.1}%
+\contentsline {chapter}{\numberline {4}Séries de Fourier et équations différentielles partielles}{125}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Équations avec conditions au bord}{125}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Valeurs au bord}{125}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Problèmes de valeurs propres}{126}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Orthogonalité des fonctions propres}{129}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}Alternative de Fredholm}{130}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Application}{131}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Exercices}{132}{subsection.4.1.6}%
-\contentsline {section}{\numberline {4.2}Les séries trigonométriques}{134}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Les fonctions périodiques et les motivations}{134}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.2}Séries trigonométriques}{134}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Fonctions périodiques et motivations}{134}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Produit scalaire et décomposition de vecteurs propres }{134}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Les séries trigonométriques}{136}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Séries trigonométriques}{136}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Exercices}{142}{subsection.4.2.4}%
 \contentsline {section}{\numberline {4.3}Plus sur les séries de Fourier}{144}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Fonctions $2L$-périodiques}{144}{subsection.4.3.1}%
@@ -105,7 +105,7 @@
 \contentsline {subsection}{\numberline {4.5.1}Oscillations périodiques forcées}{162}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Résonance}{164}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Exercises}{167}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}Équation de la chaleur}{168}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Équation différentielle partielle, separation de variables, et l'équation de la chaleur}{168}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Chaleur sur un fil isolé}{168}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Séparation de variable}{169}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Extrémités isolées}{174}{subsection.4.6.3}%

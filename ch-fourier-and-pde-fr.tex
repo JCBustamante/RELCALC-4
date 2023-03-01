@@ -1,8 +1,8 @@
-\chapter[Séries de Fourier et EDP]{Séries de Fourier et équations différentielles partielles} \label{FS:chapter}
+\chapter{Séries de Fourier et équations différentielles partielles} \label{FS:chapter}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section[Conditions au bord]{Équations avec conditions au bord} \label{bvp:section}
+\section{Équations avec conditions au bord} \label{bvp:section}
 
 %\sectionnotes{2 lectures\EPref{, similar to \S3.8 in \cite{EP}}\BDref{,
 %\S10.1 and \S11.1 in \cite{BD}}}
@@ -23,7 +23,7 @@ C'est naturel (mais faux) de croire qu'exiger deux solutions garantit l'unicité
 
 \begin{example}
 On prend $\lambda = 1$,
-$a=0$, $b=\pi$.  Ceci donne\,: 
+$a=0$, $b=\pi$.  Ceci donne: 
 \begin{equation*}
 x'' + x = 0, \quad x(0) = 0, \quad x(\pi) = 0.
 \end{equation*}
@@ -34,7 +34,7 @@ où $B$ est une constante arbitraire.
 \end{example}
 
 \begin{example}
-Posons maintenant $\lambda = 2$\,: 
+Posons maintenant $\lambda = 2$: 
 \begin{equation*}
 x'' + 2 x = 0, \quad x(0) = 0, \quad x(\pi) = 0.
 \end{equation*}
@@ -46,7 +46,7 @@ $B = 0$.
 Donc $x=0$ est l'unique solution à ce problème.
 \end{example}
 
-Que se passe-t-il?  On aimerait savoir quelles constantes  $\lambda$ permettent une solution non nulle, et on on s'intéressera à trouver ces solutions. Ce problème est analogue  à trouver les valeurs propres et les vecteurs propres des matrices.
+Que se passe-t-il?  On aimerait savoir quelles constantes  $\lambda$ permettent une solution non nulle, et l'on s'intéressera à trouver ces solutions. Ce problème est analogue  à trouver les valeurs propres et les vecteurs propres des matrices.
 
 \subsection{Problèmes de valeurs propres}
 
@@ -85,7 +85,7 @@ x'' + \lambda x = 0, \quad x(0) = 0, \quad x(\pi) = 0 .
 \end{equation*}
 
 %For reasons that will be clear from the computations,
-On doit considérer chacun des cas suivants séparément\,: $\lambda > 0$, $\lambda = 0$, $\lambda < 0$, puisque la solution générale est différente dans les trois cas.
+On doit considérer chacun des cas suivants séparément: $\lambda > 0$, $\lambda = 0$, $\lambda < 0$, puisque la solution générale est différente dans les trois cas.
 D'abord, on suppose que $\lambda > 0$.  Alors la solution générale à $x''+\lambda x = 0$ est
 \begin{equation*}
 x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t).
@@ -133,11 +133,11 @@ Calculons les valeurs propres et les fonctions propres de
 x'' + \lambda x = 0, \quad x'(0) = 0, \quad x'(\pi) = 0 .
 \end{equation*}
 
-Encore une fois, on doit considérer séparément  les trois cas suivants\,: $\lambda > 0$, $\lambda = 0$, $\lambda
+Encore une fois, on doit considérer séparément  les trois cas suivants: $\lambda > 0$, $\lambda = 0$, $\lambda
 < 0$.
 D'abord, on suppose que $\lambda > 0$.
 La solution générale est alors 
-$x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t)$.  Sa dérivée est\,: 
+$x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t)$.  Sa dérivée est: 
 \begin{equation*}
 x' = -A\sqrt{\lambda}\, \sin ( \sqrt{\lambda}\, t) + B\sqrt{\lambda}\,
 \cos (\sqrt{\lambda}\, t) .
@@ -168,12 +168,12 @@ x' = A\sqrt{-\lambda}\, \sinh ( \sqrt{-\lambda}\, t)
 \end{equation*}
 On a déjà vu (avec les rôles de  $A$ et de $B$ inversés) que, pour que cette expression soit  nulle à $t=0$ et $t=\pi$, on doit avoir $A=B=0$. Ainsi, il n'y a pas de valeur propre négative. 
 
-En somme, les valeurs propres positives et leurs fonctions propres correspondantes sont \,:
+En somme, les valeurs propres positives et leurs fonctions propres correspondantes sont :
 \begin{equation*}
 \lambda_k = k^2 \quad \text{avec fonction propre} \quad x_k = \cos (k t)
 \quad \text{pour tous les entiers } k \geq 1 ,
 \end{equation*}
-et, de plus, il y a une autre valeur propre\,: 
+et, de plus, il y a une autre valeur propre: 
 \begin{equation*}
 \lambda_0 = 0 \qquad \text{avec une fonction propre} \qquad x_0 = 1.
 \end{equation*}
@@ -188,7 +188,7 @@ x'' + \lambda x = 0, \quad x(-\pi) = x(\pi), \quad x'(-\pi) = x'(\pi) .
 \end{equation*}
 On n'a pas de valeur spécifique de fonction ou de dérivée aux extrémités, mais elles sont les mêmes au début et à la fin de l'intervalle. 
 
-On va passer le cas $\lambda < 0$.  Les calculs sont les même que précédemment, et on trouve encore qu'il n'y a pas de valeur propre négative. 
+On va passer le cas $\lambda < 0$.  Les calculs sont les même que précédemment, et l'on trouve encore qu'il n'y a pas de valeur propre négative. 
 
 Pour $\lambda = 0$, la solution générale est $x = At + B$.  La condition
 $x(-\pi) = x(\pi)$ implique que $A=0$ ($A\pi + B = -A\pi +B$ implique que $A=0$).
@@ -213,12 +213,12 @@ A \cos (\sqrt{\lambda}\, \pi) - B \sin ( \sqrt{\lambda}\, \pi)
 A \cos (\sqrt{\lambda}\, \pi) + B \sin ( \sqrt{\lambda}\, \pi).
 \end{equation*}
 Donc, ou bien $B=0$, ou bien $\sin ( \sqrt{\lambda}\, \pi) = 0$.
-De manière similaire à l'exemple précédent (exercice) si on dérive $x$ et qu'on le remplace dans la deuxième condition, on trouve que $A=0$ ou que $\sin ( \sqrt{\lambda}\, \pi) = 0$.
+De manière similaire à l'exemple précédent (exercice) si l'on dérive $x$ et qu'on le remplace dans la deuxième condition, on trouve que $A=0$ ou que $\sin ( \sqrt{\lambda}\, \pi) = 0$.
 Ainsi, à moins que $A$ et $B$ soient tous deux nuls (ce qu'on ne veut pas), on doit avoir $\sin ( \sqrt{\lambda}\, \pi ) = 0$.  Donc, $\sqrt{\lambda}$
 est un entier et les valeurs propres sont encore $\lambda = k^2$ pour un entier
  $k \geq 1$. Dans ce cas, toutefois,  
 $x = A \cos (k t) + B \sin (k t)$ est une fonction propre pour tous  $A$ et pour tous $B$.
-Par conséquent, on a deux fonctions propres linéairement indépendantes\,: $\sin (kt)$ et $\cos (kt)$.
+Par conséquent, on a deux fonctions propres linéairement indépendantes: $\sin (kt)$ et $\cos (kt)$.
 
 On se rappelle que pour une matrice, on peut aussi avoir deux vecteurs propres correspondants à une valeur propre simple si la valeur propre est répétée. 
 
@@ -281,10 +281,10 @@ La terminologie vient du fait que l'intégrale est un type de produit scalaire. 
 D'abord, on a les deux équations suivantes. 
 \begin{equation*}
 x_1'' + \lambda_1 x_1 = 0
-\qquad \text{and} \qquad
+\qquad \text{et} \qquad
 x_2'' + \lambda_2 x_2 = 0.
 \end{equation*}
-On multiplie la première par $x_2$ et la deuxième par $x_1$ et on substitue pour obtenir 
+On multiplie la première par $x_2$ et la deuxième par $x_1$ et l'on substitue pour obtenir 
 \begin{equation*}
 (\lambda_1 - \lambda_2) x_1 x_2 = x_2'' x_1 - x_2 x_1'' .
 \end{equation*}
@@ -301,7 +301,7 @@ Maintenant, on intègre des deux côtés de l'équation:
 = 0 .
 \end{split}
 \end{equation*}
-La dernière égalité tient en raison des conditions aux limites. Par exemple, si on considère 
+La dernière égalité tient en raison des conditions aux limites. Par exemple, si l'on considère 
  \eqref{bv:eq1} on a  $x_1(a) = x_1(b) = x_2(a) = x_2(b) = 0$
 et alors $x_2' x_1 - x_2 x_1'$ est nul pour $a$ et pour $b$.
 Lorsque $\lambda_1 \not= \lambda_2$, le théorème suit.
@@ -313,7 +313,7 @@ Terminez la preuve du théorème (vérifiez la dernière égalité de la preuve)
 
 La fonction $\sin (n t)$ est une fonction propre pour l'équation 
 $x''+\lambda x = 0$, $x(0) = 0$, $x(\pi) = 0$. 
-Donc, pour les entiers positifs $n$ et $m$\,:  
+Donc, pour les entiers positifs $n$ et $m$:  
 \begin{equation*}
 \int_{0}^\pi \sin (mt) \sin (nt) \,dt = 0 ,
 \quad
@@ -405,7 +405,7 @@ aura une infinité de valeurs propres, tandis qu'une matrice n'en a qu'un nombre
 
 \subsection{Application}
 
-Considérons une application physique. On suppose avoir un élastique très tendu qui tourne rapidement ou une corde de densité linéaire uniforme $\rho$, par exemple en
+Considérons une application physique. On suppose avoir un élastique très tendu qui tourne rapidement ou une corde de densité linéaire uniforme $\rho$, par exemple, en
 $\unitfrac{kg}{m}$.
 Mettons ce problème dans un plan $xy$ et $x$ ainsi que $y$
 sont en mètres.  L'axe des $x$ représente la position de la corde. La corde tourne et la vitesse angulaire est $\omega$, mesurée
@@ -420,7 +420,7 @@ On considère une corde idéale qui n'a pas de volume, juste une courbe mathéma
 %the same at both end points.  Hence the magnitude
 %is constant everywhere and we will
 %call its magnitude $T$.
-En supposant que la déviation est petite, on peut utiliser la deuxième loi de Newton (nous n'en faisons pas la démonstration) pour obtenir l'équation suivante\,: 
+En supposant que la déviation est petite, on peut utiliser la deuxième loi de Newton (nous n'en faisons pas la démonstration) pour obtenir l'équation suivante: 
 \begin{equation*}
 T y'' + \rho \omega^2 y = 0 .
 \end{equation*}
@@ -435,7 +435,7 @@ La corde  est de longueur $L$ (en $m$) et est fixée au deux extrémités. Alors
 \caption{Corde tournante.\label{bvp:whirstringfig}}
 \end{myfig}
 
-On réécrit l'équation\,: 
+On réécrit l'équation: 
 $y'' + \frac{\rho \omega^2}{T} y = 0$.
 La configuration est similaire à l'\exampleref{bvp:eig1ex}, sauf que  
 la longueur de l'intervalle est $L$ plutôt que $\pi$.  On cherche les valeurs propres de  $y'' + \lambda y = 0, y(0) = 0, y(L) = 0$ où
@@ -451,7 +451,7 @@ $\sqrt{\lambda} \, L = k \pi$  pour un certain entier $k > 0$, alors
 Qu'est-ce que cela dit sur la forme de la corde? Cela dit que pour tous les paramètres, $\rho$, $\omega$, $T$ qui ne satisfont pas cette condition, la corde demeure dans sa position d'équilibre, $y=0$.  Mais lorsque 
 $\frac{\rho \omega^2}{T} = \frac{k^2 \pi^2}{L^2}$, alors la corde \myquote{sortira} d'une distance $B$. On ne peut pas calculer $B$ avec les informations que l'on a. 
 
-On suppose que  $\rho$ et $T$ sont fixes et on fait varier $\omega$.
+On suppose que  $\rho$ et $T$ sont fixes et l'on fait varier $\omega$.
 Pour la plupart des valeurs de $\omega$ la corde est à l'état d'équilibre. Lorsque la vitesse angulaire  $\omega$ atteint une valeur $\omega = \frac{k \pi \sqrt{T}}{L\sqrt{\rho}}$, alors la corde sort et a la forme d'une vague sinusoïdale croisant l'axe des 
 $x$ $k-1$ fois entre les extrêmités. Par exemple, à $k=1$, la corde ne croise pas l'axe des $x$ et la forme ressemble à la \figurevref{bvp:whirstringfig}.
 D'un autre côté, lorsque  $k=3$ la corde croise l'axe des  $x$ deux fois. On le voit dans la  \figurevref{bvp:whirstring2fig}.
@@ -463,7 +463,7 @@ Lorsque $\omega$ change encore, la corde retourne à sa position d'équilibre. P
 \caption{Corde tournante à la troisième valeur propre ($k=3$).\label{bvp:whirstring2fig}}
 \end{myfig}
 
-Pour un autre exemple, si on a une corde à sauter qui tourne (alors $k=1$ lorsqu'elle sort \myquote{complètement}) et on tire sur les extrémités pour augmenter la tension, alors la vitesse augmente pour que la corde reste \myquote{sortie}.
+Pour un autre exemple, si l'on a une corde à sauter qui tourne (alors $k=1$ lorsqu'elle sort \myquote{complètement}) et l'on tire sur les extrémités pour augmenter la tension, alors la vitesse augmente pour que la corde reste \myquote{sortie}.
  
 
 \subsection{Exercices}
@@ -549,12 +549,12 @@ $\frac{\sqrt{3}}{3} e^{\frac{-3}{2}\sqrt[3]{\lambda}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \sectionnewpage
-\section{Les séries trigonométriques} \label{ts:section}
+\section{Séries trigonométriques} \label{ts:section}
 
 
-\subsection{Les fonctions périodiques et les motivations}
+\subsection{Fonctions périodiques et motivations}
 
-Afin de motiver l'étude des séries de Fourier, considérons le problème suivant\,:
+Afin de motiver l'étude des séries de Fourier, considérons le problème suivant:
 \begin{equation} \label{ts:deq}
 x'' + \omega_0^2 x = f(t) ,
 \end{equation}
@@ -571,17 +571,17 @@ $f(t) = f(t+P)$ pour tous $t$.  On dit alors que $f(t)$ est $P$-périodique.
 On note qu'une fonction $P$-périodique est aussi $2P$-périodique, $3P$-périodique
 et ainsi de suite.
 Par exemple, $\cos (t)$ et $\sin (t)$ sont
-$2\pi$-périodiques.  Alors $\cos (kt)$ et $\sin (kt)$ pour tous les entiers $k$.  Les fonctions constantes sont des exemples extrêmes\,: elles sont périodiques pour n'importe quelle période (exercice). 
+$2\pi$-périodiques.  Alors $\cos (kt)$ et $\sin (kt)$ pour tous les entiers $k$.  Les fonctions constantes sont des exemples extrêmes: elles sont périodiques pour n'importe quelle période (exercice). 
 
 Normalement, on commence avec la fonction $f(t)$ définie sur un certain intervalle $[-L,L]$,
-et on veut
+et l'on veut
 \emph{prolonger $f(t)$ périodiquement}\index{extend periodically}\index{periodic extension}
 pour qu'elle devienne une fonction $2L$-périodique.  On fait cette extension en définissant une nouvelle fonction $F(t)$
 telle que pour tout $t$ dans $[-L,L]$, $F(t) = f(t)$.  Pour tout $t$ dans $[L,3L]$,
 on définit $F(t) = f(t-2L)$, pour $t$ dans $[-3L,-L]$, $F(t) = f(t+2L)$, et ainsi de suite.
 Pour faire ce travail, on a besoin de $f(-L) = f(L)$.
 On pourrait aussi commencer avec $f$
-défini seulement sur un demi-intervalle ouvert $(-L,L]$ et on définit $f(-L) = f(L)$.
+défini seulement sur un demi-intervalle ouvert $(-L,L]$ et l'on définit $f(-L) = f(L)$.
 
 \begin{example}
 Définissons  $f(t) = 1-t^2$ sur $[-1,1]$.  Maintenant, on prolonge $f(t)$ périodiquement pour obtenir une fonction 2-périodique.  Voir la figure~\figureref{ts:perextofinvertedparabolafig}.
@@ -673,15 +673,15 @@ Ainsi,
 \end{equation*}
 \end{example}
 
-\subsection{Les séries trigonométriques}
+\subsection{Séries trigonométriques}
 
 Plutôt que décomposer un vecteur en termes de vecteurs propres d'une matrice, on va décomposer une fonction en termes de fonctions propres associées à un problème de valeur propre. Le problème de valeur propre qu'on utilise pour les séries de Fourier est 
 \begin{equation*}
 x'' + \lambda x = 0, \quad x(-\pi) = x(\pi), \quad x'(-\pi) = x'(\pi) .
 \end{equation*}
-Nous avons calculé les fonctions propres dans l'exemple~\ref{bvp-periodic:example}\,:t 1, $\cos (k t)$,
+Nous avons calculé les fonctions propres dans l'exemple~\ref{bvp-periodic:example}:t 1, $\cos (k t)$,
 $\sin (k t)$.  Ainsi, on veut trouver une représentation d'une fonction 
-$2\pi$-périodique $f(t)$ de la forme suivante\,: 
+$2\pi$-périodique $f(t)$ de la forme suivante: 
 \begin{equation*}
 \mybxbg{~~
 f(t) = \frac{a_0}{2} +
@@ -759,7 +759,7 @@ a_0 = 2
 ~~}
 \end{equation*}
 
-Regardons la formule utilisée pour les propriétés d'orthogonalité. Supposons donc que\,:  
+Regardons la formule utilisée pour les propriétés d'orthogonalité. Supposons donc que:  
 \begin{equation*}
 f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n
 \sin (n t) .
@@ -802,20 +802,20 @@ pour $t$ dans $(-\pi,\pi]$. Nous allons calculer la série de Fourier du prolong
 \diffyincludegraphics{width=3in}{width=4.5in}{ts-sawtooth}
 \caption{Le graphe d'une fonction en dents de scie.\label{ts:sawtoothfig}}
 \end{myfig}
-Calculons les coefficients. On commence avec  $a_0$\,: 
+Calculons les coefficients. On commence avec  $a_0$: 
 \begin{equation*}
 a_0 = \frac{1}{\pi} \int_{-\pi}^\pi t \,dt = 0 .
 \end{equation*}
-Nous nous servirons souvent du résultat suivant\,: sur un intervalle de la forme $[-L,L]$,  l'intégrale d'une fonction impaire est nulle. On rappelle qu'une 
+Nous nous servirons souvent du résultat suivant: sur un intervalle de la forme $[-L,L]$,  l'intégrale d'une fonction impaire est nulle. On rappelle qu'une 
 \emph{\myindex{fonction impaire}} est une fonction 
  $\varphi(t)$ telle que $\varphi(-t) = -\varphi(t)$.  Par exemple, les fonctions $t$, $\sin t$, ou (celle qui est importante présentement)
 $t \cos (nt)$ sont toutes des fonctions impaires.  Ainsi,
 \begin{equation*}
 a_n = \frac{1}{\pi} \int_{-\pi}^\pi t \cos (nt) \,dt = 0 .
 \end{equation*}
-Calculons maintenant $b_n$.  Deuxième résultat utile\,: sur un intervalle de la forme $[-L,L]$, l'intégrale d'une fonction paire est ègale à deux fois l'intégrale de cette même fonction sur $[0,L]$. On rappelle qu'une  \emph{\myindex{fonction paire}}
+Calculons maintenant $b_n$.  Deuxième résultat utile: sur un intervalle de la forme $[-L,L]$, l'intégrale d'une fonction paire est ègale à deux fois l'intégrale de cette même fonction sur $[0,L]$. On rappelle qu'une  \emph{\myindex{fonction paire}}
 est une fonction $\varphi(t)$ telle que  $\varphi(-t) = \varphi(t)$.  Par exemple,
-$t \sin (nt)$ est paire et donc\,: 
+$t \sin (nt)$ est paire et donc: 
 \begin{equation*}
 \begin{split}
 b_n & = \frac{1}{\pi} \int_{-\pi}^\pi t \sin (nt) \,dt \\
@@ -836,7 +836,7 @@ b_n & = \frac{1}{\pi} \int_{-\pi}^\pi t \sin (nt) \,dt \\
 =  \frac{2 \,{(-1)}^{n+1}}{n} .
 \end{split}
 \end{equation*}
-On a utilisé ici le fait suivant\,;  
+On a utilisé ici le fait suivant:  
 \begin{equation*}
 \cos (n\pi) = {(-1)}^n =
 \begin{cases}
@@ -851,7 +851,7 @@ La série est
 \sin (n t) .
 \end{equation*}
 
-Écrivons les trois premières harmoniques de la série pour $f(t)$\,: 
+Écrivons les trois premières harmoniques de la série pour $f(t)$: 
 \begin{equation*}
 2 \, \sin (t)
 - \sin (2t)
@@ -956,7 +956,7 @@ $\pi$ (ce qui inclut la discontinuité), alors
 \frac{2}{2k-1} 
 \sin \bigl( (2k-1)\, t \bigr) = \frac{\pi}{2} .
 \end{equation*}
-Redéfinissons $f(t)$ sur $[-\pi,\pi]$ comme suit\,: 
+Redéfinissons $f(t)$ sur $[-\pi,\pi]$ comme suit: 
 \begin{equation*}
 f(t) =
 \begin{cases}
@@ -1128,7 +1128,7 @@ f(t) =
 + b_n \sin \left(\frac{n \pi}{L} t \right) .
 ~~}
 \end{equation*}
-Si on change les variables à $s$, on voit que 
+Si l'on change les variables à $s$, on voit que 
 \begin{equation*}
 g(s) = 
 \frac{a_0}{2} +
@@ -1167,7 +1167,7 @@ f(t) \, \sin \left( \frac{n \pi}{L} t \right) \, dt .
 ~~}
 \end{equation*}
 
-Les demies périodes de $\pi$ ou 1 sont les plus communes parce qu'elles ont une formule simple. On remarque qu'on n'a pas fait de nouvelles mathématiques, on change simplement les variables. Si on comprend les séries de Fourier pour les fonctions  $2\pi$-périodiques, on comprend les unités différentes dans le temps. Tout ce qu'on fait c'est de bouger quelques constantes, mais toutes les mathématiques pareilles.  
+Les demies périodes de $\pi$ ou 1 sont les plus communes parce qu'elles ont une formule simple. On remarque qu'on n'a pas fait de nouvelles mathématiques, on change simplement les variables. Si l'on comprend les séries de Fourier pour les fonctions  $2\pi$-périodiques, on comprend les unités différentes dans le temps. Tout ce qu'on fait c'est de bouger quelques constantes, mais toutes les mathématiques pareilles.  
 
 \begin{example}
 Soit
@@ -1210,7 +1210,7 @@ a_0 = \int_{-1}^1 \lvert t \rvert \, dt
 1 .
 \end{equation*}
 On devrait être en mesure de trouver cette intégrale en pensant à l'intégrale comme l'aire sous la courbe du graphique sans pour autant faire les calculs. Finalement, on trouve $b_n$.  Ici, on remarque que
-$\lvert t \rvert \sin (n \pi t)$ est impaire, et par conséquent\,: 
+$\lvert t \rvert \sin (n \pi t)$ est impaire, et par conséquent: 
 \begin{equation*}
 b_n = \int_{-1}^1 f(t) \sin (n \pi t) \, dt = 0 .
 \end{equation*}
@@ -1248,7 +1248,7 @@ f(c-) = \lim_{t \uparrow c} f(t),
 \qquad \text{et} \qquad
 f(c+) = \lim_{t \downarrow c} f(t).
 \end{equation*}
-Si on n'est pas familier avec cette notation, 
+Si l'on n'est pas familier avec cette notation, 
 $\lim_{t \uparrow c} f(t)$ signifie qu'on prend la limite de $f(t)$
 lorsque $t$ tend vers $c$ par le bas (i.e.\ $t < c$) et
 $\lim_{t \downarrow c} f(t)$ signifie qu'on prend la limite de $f(t)$
@@ -1328,7 +1328,7 @@ Autrement,
 S'il arrive qu'on aille
 $f(t) = \frac{f(t-)+f(t+)}{2}$ à toutes les discontinuités, la série de Fourier converge à  $f(t)$ partout. On peut toujours simplement redéfinir $f(t)$ en changeant la valeur à chaque discontinuité de manière appropriée. Alors on peut écrire un  signe d'égalité entre $f(t)$ et la série sans avoir peur. On a mentionné  brièvement ce fait à la fin de la section précédente. 
 
-Le théorème ne dit pas la vitesse à laquelle la série converge. En retournant en arrière à la dernière section à la discussion sur le phénomène Gibbs\,: plus on se rapproche de la discontinuité, plus on a besoin de termes pour obtenir une approximation acceptable de la fonction.  
+Le théorème ne dit pas la vitesse à laquelle la série converge. En retournant en arrière à la dernière section à la discussion sur le phénomène Gibbs: plus on se rapproche de la discontinuité, plus on a besoin de termes pour obtenir une approximation acceptable de la fonction.  
 
 \subsection{Dérivation et intégration de séries de Fourier}
 
@@ -1376,7 +1376,7 @@ où  $F'(t) = f(t)$ et $C$ est une constante arbitraire.
 \end{theorem}
 
 On note que la série pour $F(t)$ n'est plus une série de Fourier car elle contient le terme
- $\frac{a_0 t}{2}$.  La primitive d'une fonction périodique n'a plus besoin d'être périodique et on ne devrait pas
+ $\frac{a_0 t}{2}$.  La primitive d'une fonction périodique n'a plus besoin d'être périodique et l'on ne devrait pas
 s'attendre à une série de Fourier.
 
 \subsection{Taux de convergence et différentiabilité}
@@ -1467,9 +1467,9 @@ $\nicefrac{1}{n^3}$ va à zéro.
 \end{example}
 
 Pour les fonctions construites par morceaux à partir de polynômes comme ci-dessus,
-il est généralement vrai que si on a une dérivée, les coefficients de la série de Fourier
-tendront vers zéro approximativement comme $\nicefrac{1}{n^3}$.  Si on n'a
- qu'une fonction continue, alors les coefficients de Fourier tendront vers zéro comme $\nicefrac{1}{n^2}$.  Si on a des discontinuités, alors
+il est généralement vrai que si l'on a une dérivée, les coefficients de la série de Fourier
+tendront vers zéro approximativement comme $\nicefrac{1}{n^3}$.  Si l'on n'a
+ qu'une fonction continue, alors les coefficients de Fourier tendront vers zéro comme $\nicefrac{1}{n^2}$.  Si l'on a des discontinuités, alors
 les coefficients de Fourier tendront vers zéro approximativement comme $\nicefrac{1}{n}$.
 Pour des fonctions plus générales, l'histoire est un peu plus compliquée mais c'est la
 même idée; plus on a de dérivées, plus les coefficients convergent rapidement vers zéro. Un raisonnement similaire fonctionne en sens inverse. Si les coefficients tendent vers 
@@ -1478,7 +1478,7 @@ on obtient une fonction différentiable partout.  Les coefficients de Fourier no
 %Therefore, we can tell a lot about the smoothness of a function by looking
 %at its Fourier coefficients.
 
-Pour justifier ce comportement, prenons par exemple la fonction définie par
+Pour justifier ce comportement, prenons, par exemple, la fonction définie par
 la série Fourier
 \begin{equation*}
 f(t) = \sum_{n=1}^\infty \frac{1}{n^3} \sin (n t) .
@@ -1492,12 +1492,12 @@ Par conséquent, les coefficients diminuent maintenant comme $\nicefrac{1}{n^2}$
 signifie que nous avons une fonction continue.
 La dérivée de $f'(t)$ est définie à la plupart des points, mais il y a des points où $f'(t)$ n'est pas différentiable.
 Il y a des coins, mais pas de sauts.
-Si on dérive à nouveau (là où on peut), on constate que la fonction
+Si l'on dérive à nouveau (là où on peut), on constate que la fonction
 $f''(t)$ n'est pas continue (elle a des sauts).
 \begin{equation*}
 f''(t) = \sum_{n=1}^\infty \frac{-1}{n} \sin (n t) .
 \end{equation*}
-Cette fonction est similaire à la dent de scie. Si on essayait de dériver 
+Cette fonction est similaire à la dent de scie. Si l'on essayait de dériver 
 la série à nouveau, on obtiendrait
 \begin{equation*}
 \sum_{n=1}^\infty -\cos (n t) ,
@@ -1877,7 +1877,7 @@ t\,(1-t)$, $0 \leq t \leq 1$.\label{scs:oddevenextfig}}
 
 Soit $f(t)$ une fonction $2L$-periodique impaire.  On écrit
 la série de Fourier pour $ f (t) $. Tout d'abord, on calcule les coefficients $a_n$ (incluant
-$n=0$) et on obtient
+$n=0$) et l'on obtient
 \begin{equation*}
 a_n = \frac{1}{L} \int_{-L}^L f(t) \cos \left( \frac{n \pi}{L} t \right)
 \, dt = 0 .
@@ -1955,7 +1955,7 @@ a_n =
 \end{theorem}
 
 On appelle la série $\sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t\right)$ 
-la \emph{\myindex{série sinus}} de  $f(t)$ et on appelle la série
+la \emph{\myindex{série sinus}} de  $f(t)$ et l'on appelle la série
 $\frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t
 \right)$
 la \emph{\myindex{série cosinus}} de $f(t)$.  
@@ -2052,8 +2052,8 @@ Les fonctions propres de ce problème de valeurs propres sont les fonctions
 $\sin \left( \frac{n \pi}{L} t \right)$.
 Donc, pour trouver la solution, on trouve d'abord la série sinus de Fourier pour $ f (t) $.
 Ont écrit $ x $ également sous forme de série sinus, mais avec des coefficients inconnus.
-On substitut la série pour $ x $ dans l'équation et on résolve avec les coefficients inconnus.
-Si on a
+On substitue la série pour $ x $ dans l'équation et l'on résout avec les coefficients inconnus.
+Si l'on a
 la \emph{\myindex{condition à la frontière Neumann}}
 $x'(0) = 0$, $x'(L) = 0$, on suit la même procédure en utilisant la série cosinus.
 
@@ -2077,7 +2077,7 @@ on écrit  $x(t)$ comme
 \begin{equation*}
 x(t) = \sum_{n=1}^\infty b_n \sin (n \pi t) .
 \end{equation*}
-On insère et on obtient
+On insère et l'on obtient
 \begin{equation*}
 \begin{split}
 x''(t) + 2 x(t) & =
@@ -2161,7 +2161,7 @@ on écrit $x(t)$ comme une série cosinus
 \begin{equation*}
 x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t) .
 \end{equation*}
-On insère et on obtient
+On insère et l'on obtient
 \begin{equation*}
 \begin{split}
 x''(t) + 2 x(t) & =
@@ -2410,7 +2410,7 @@ a_n \cos \left( \frac{n \pi}{L} t \right) +
 b_n \sin \left( \frac{n \pi}{L} t \right) ,
 \end{equation*}
 où $a_n$ et $b_n$ sont inconnus.
-On remplace $x$ dans l'équation différentielle et on résout pour $a_n$ et pour
+On remplace $x$ dans l'équation différentielle et l'on résout pour $a_n$ et pour
 $b_n$ en terme de $c_n$ et $d_n$.  Ce processus
 est souvent le mieux compris.
 \pagebreak[2]
@@ -2483,7 +2483,7 @@ x(t) = \frac{a_0}{2} +
 \sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
 b_n \sin (n \pi t) .
 \end{equation*}
-On remplace dans l'équation différentielle et on obtient 
+On remplace dans l'équation différentielle et l'on obtient 
 \begin{equation*}
 \begin{split}
 x'' + 2 x & =
@@ -2531,14 +2531,14 @@ $ F (t) $ lui-même. Regardons \figurevref{afs:steadyexfig} pour le graphique de
 \subsection{Résonance}
 
 Tout comme lorsque la fonction de forçage était un simple cosinus, on peut rencontrer de la 
-résonance. On suppose  que $ c = 0 $ et on discute seulement de la résonance pure.
+résonance. On suppose  que $ c = 0 $ et l'on discute seulement de la résonance pure.
 Soit $ F (t) $ $ 2L $-périodique et considérons
 \begin{equation*}
 m x''(t) + k x (t) = F(t) .
 \end{equation*}
 Lorsqu'on développe $ F (t) $, on constate que certains de ses termes coïncident avec le
 solution complémentaire à $ mx '' + kx = 0 $, on ne peut pas utiliser ces termes lorsqu'on
-devine. Comme avant, ils disparaissent quand on les insèrent dans le terme de gauche et on obtient une équation contradictoire (telle que $ 0 = 1 $). On suppose que
+devine. Comme avant, ils disparaissent quand on les insère dans le terme de gauche et l'on obtient une équation contradictoire (telle que $ 0 = 1 $). On suppose que
 \begin{equation*}
 x_c = A \cos (\omega_0 t) + B \sin (\omega_0 t), 
 \end{equation*}
@@ -2600,7 +2600,7 @@ x(t) = c_1 \cos  (3\pi t) + c_2 \sin (3\pi t) + x_p (t)
 \end{equation*}
 pour une solution particulière $x_p$.
 
-Si on essaie un $ x_p $ donné pour une série de Fourier avec $ \ sin (n \pi t) $ comme d'habitude,
+Si l'on essaie un $ x_p $ donné pour une série de Fourier avec $ \ sin (n \pi t) $ comme d'habitude,
 l'équation complémentaire, $ 2x''  + 18 \pi ^2x = 0 $, mange  l'harmonique $3 ^ \text{e} $. Autrement dit, le terme
 avec $ \sin (3 \pi t) $
 est déjà dans dans la solution complémentaire.
@@ -2687,7 +2687,7 @@ t \, \cos (3 \pi t)
 \end{equation*}
 \end{example}
 
-Lorsque $ c> 0 $, on n'a pas à se soucier de la résonance pure. Il n'y a jamais de conflits et on n'a pas besoin de multiplier aucun terme par $ t $. Il existe un concept correspondant de \myindex{résonance pratique}
+Lorsque $ c> 0 $, on n'a pas à se soucier de la résonance pure. Il n'y a jamais de conflits et l'on n'a pas besoin de multiplier aucun terme par $ t $. Il existe un concept correspondant de \myindex{résonance pratique}
 et c'est très similaire aux idées qu'on a déjà explorées dans
 \chapterref{ho:chapter}.
 Fondamentalement, ce qui se passe dans la résonance pratique est que l'un des
@@ -2776,7 +2776,7 @@ $x =
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \sectionnewpage
-\section[Équation de la chaleur]{Équation différentielle partielle, separation de variables, et l'équation de la chaleur}
+\section{Équation différentielle partielle, separation de variables, et l'équation de la chaleur}
 \label{heateq:section}
 
 \sectionnotes{2 lectures\EPref{, \S9.5 dans \cite{EP}}\BDref{,
@@ -2796,7 +2796,7 @@ certaines
 \emph{conditions initiales \index{initial conditions for a PDE}} 
 où la valeur
 de la solution ou de ses dérivés est donnée à un certain temps initial.
-Parfois, de telles conditions sont mélangées et on y fait référence
+Parfois, de telles conditions sont mélangées et l'on y fait référence
 simplement comme
 \emph{conditions aux bord \index{side conditions for a PDE}}.
 
@@ -2838,7 +2838,7 @@ puis la chaleur s'échappe du maximum.  Et vice versa.
 
 On utilise généralement une notation plus pratique pour les dérivées partielles.
 On écrit $ u_t $ au lieu de $\frac{\partial u}{\partial t}$,
-et on écrit $u_{xx}$ plutôt que $\frac{\partial^2 u}{\partial x^2}$.
+et l'on écrit $u_{xx}$ plutôt que $\frac{\partial^2 u}{\partial x^2}$.
 Avec cette notation,  l'équation de la chaleur devient 
 \begin{equation*}
 u_t = k u_{xx} .
@@ -2851,11 +2851,11 @@ et touchent à un corps ayant une chaleur constante,  ou  soit les extrémités 
 Si les extrémités du fil, elles sont maintenues à la température 0, alors
 les conditions sont
 \begin{equation*}
-u(0,t) = 0 \qquad \text{and} \qquad u(L,t) = 0.
+u(0,t) = 0 \qquad \text{et} \qquad u(L,t) = 0.
 \end{equation*}
 Si,  d'autre part,  les extrémités sont également isolées,  les conditions sont
 \begin{equation*}
-u_x(0,t) = 0 \qquad \text{and} \qquad
+u_x(0,t) = 0 \qquad \text{et} \qquad
 u_x(L,t) = 0 .
 \end{equation*}
 Regardons pourquoi c'est ainsi.
@@ -2906,7 +2906,7 @@ La méthode de
 \emph{séparation de variable\index{separation of variables}} consiste à essayer de trouver des solutions qui sont des produits de fonctions à une variable.
 Pour l'équation de la chaleur,  on essaye de trouver des solutions de la forme
 \begin{equation*}
-u(x,t) = X(x)T(t) .
+u(x , t) = X(x)T(t) .
 \end{equation*}
 Estpérer que la solution souhaitée soit de cette forme est trop
 espérer.  Ce qui est parfaitement raisonnable de demander,  cependant,  c'est de trouver
@@ -2919,15 +2919,15 @@ Essayons de résoudre l'équation de la chaleur
 \begin{equation*}
 u_t = k u_{xx}
 \qquad \text{with} \quad
-u(0,t) = 0 ,\quad \quad u(L,t) = 0,
-\quad \text{and} \quad u(x,0) = f(x) .
+u(0 , t) = 0 ,\quad \quad u(L , t) = 0,
+\quad \text{et} \quad u(x,0) = f(x) .
 \end{equation*}
 On suppose que $u(x,t) = X(x)T(t)$.  On essaie de faire en sorte que cette hypothèse satisfasse l'équation différentielle, $ u_t = k u_ {xx} $, et les conditions homogènes,
 $ u (0, t) = 0 $ et $ u (L, t) = 0 $.  Ensuite,  comme la superposition préserve l'équation différentielle et les conditions homogènes secondaires,  on essaie de
 construire une solution à partir de ces éléments de base pour résoudre les
 conditions initiales non homogènes $ u (x, 0) = f (x) $.
 
-D'abord, on remplace $u(x,t) = X(x)T(t)$ dans l'équation de la chaleur et on obtient
+D'abord, on remplace $u(x, t) = X(x)T(t)$ dans l'équation de la chaleur et l'on obtient
 \begin{equation*}
 X(x)T'(t) = k X''(x)T(t) .
 \end{equation*}
@@ -2951,7 +2951,7 @@ X''(x) + \lambda X(x) &= 0 , \\
 T'(t) + \lambda k T(t) &= 0 .
 \end{align*}
 La condition aux limites $ u (0, t) = 0 $ implique $ X (0) T (t) = 0 $.  On cherche
-une solution non triviale et on peut supposer que $ T (t) $ n'est pas identiquement nul.  D'où $ X (0) = 0 $.  De même, $ u (L, t) = 0 $ implique $ X (L) = 0 $.  On
+une solution non triviale et l'on peut supposer que $ T (t) $ n'est pas identiquement nul.  D'où $ X (0) = 0 $.  De même, $ u (L, t) = 0 $ implique $ X (L) = 0 $.  On
 recherche des solutions non triviales $ X $ du problème de valeurs propres
 $X'' + \lambda X = 0$, $X(0) = 0$, $X(L) = 0$.  
 On a déjà constaté que les seules valeurs propres sont $\lambda_n = \frac{n^2 \pi^2}{L^2}$,  pour les entiers 
@@ -3078,7 +3078,7 @@ Enfin,  on répond à la question de la température maximale.  Il est
 relativement facile de voir
 que la température maximale à tout moment fixe est toujours $ x = 0,5 $ dans ,
 le milieu du fil.  Le graphique de $ u (x, t) $ confirme cette intuition.
-Si on branche $ x = 0,5 $,  on obtient
+Si l'on branche $ x = 0,5 $,  on obtient
 \begin{equation*}
 u(0.5,t) = 
 \sum_{\substack{n=1 \\ n \text{ odd}}}^\infty
@@ -3123,7 +3123,7 @@ premier ou les deux premiers termes peuvent être nécessaires.
 
 Revenons à la question qui cherche à savoir quand est-ce que la température maximale est égale à la moitié de la
 température maximale initiale.  Autrement dit,  quand la température
-au milieu $\nicefrac{12.5}{2} = 6.25$.  On remarque sur le graphique que si on utilise
+au milieu $\nicefrac{12.5}{2} = 6.25$.  On remarque sur le graphique que si l'on utilise
 l'approximation par le premier terme on sera assez proche.  On résout 
 \begin{equation*}
 6.25 =
@@ -3177,7 +3177,7 @@ u_x(0,t) = 0, \quad u_x(L,t) = 0,
 \quad \text{et} \quad u(x,0) = f(x) .
 \end{equation*}
 Encore une fois,  on essaye une solution de la forme $ u (x, t) = X (x) T (t) $.  On utilise la même
-procédure qu'avant pour remplacer dans l'équation de la chaleur et on arrive aux
+procédure qu'avant pour remplacer dans l'équation de la chaleur et l'on arrive aux
 deux équations suivantes
 \begin{align*}
 X''(x) + \lambda X(x) &= 0 , \\
@@ -3286,7 +3286,7 @@ au temps $ t $. \label{heat:wireisolexfig}}
 On remarque dans le graphique
 qu'au fil du temps,  la température s'équilibre à travers le fil.  Finalement,  tous les
 termes sauf la constante
-morte,  et on a une température uniforme
+morte,  et l'on a une température uniforme
  $\frac{25}{3} \approx 8.33$ sur toute la longueur du fil.
 \end{example}
 
@@ -3593,7 +3593,7 @@ on peut utiliser la séparation de variables pour trouver de nombreux élément 
 solution résolvant toutes les conditions homogènes.  On peut  ensuite les utiliser pour
 construire une solution satisfaisant la condition non homogène restante.
 Commençons avec  \eqref{wave:weq}.
-On essaie une solution de la forme $w(x,t) = X(x) T(t)$.  On remplace dans l'équation d'onde et on obtient 
+On essaie une solution de la forme $w(x,t) = X(x) T(t)$.  On remplace dans l'équation d'onde et l'on obtient 
 \begin{equation*}
 X(x)T''(t) = a^2 X''(x) T(t) .
 \end{equation*}
@@ -3685,7 +3685,7 @@ $\lambda = \lambda_n = \frac{n^2 \pi^2}{L^2}$ et
 \begin{equation*}
 X_n(x) = \sin \left( \frac{n \pi}{L} x \right) .
 \end{equation*}
-Cette fois,  la condition sur $T$ est $T'(0) = 0$.  Ainsi on obtient que $B = 0$ et on prend
+Cette fois,  la condition sur $T$ est $T'(0) = 0$.  Ainsi, on obtient que $B = 0$ et l'on prend
 \begin{equation*}
 T_n(t) = \cos \left( \frac{n \pi a}{L} t \right).
 \end{equation*}
@@ -3701,7 +3701,7 @@ on étend $f(x)$ en termes de ces sinus:
 f(x) =
 \sum_{n=1}^\infty c_n \sin \left( \frac{n \pi}{L} x \right) .
 \end{equation*}
-Et on écrit la solution à \eqref{wave:zeq} comme une série
+Et l'on écrit la solution à \eqref{wave:zeq} comme une série
 \begin{equation*}
 z(x,t) =
 \sum_{n=1}^\infty
@@ -3890,7 +3890,7 @@ $t=1.2$.%
 Une chose à retenir est le son d'une guitare.  On remarque que
 les fréquences (angulaires) qui apparaissent dans la solution sont
 $n \frac{\pi a}{L}$.  Autrement dit, il existe une certaine base
-\emph{\myindex{ffréquence fondamentale}} $\frac{\pi a}{L}$,  et on obtient aussi
+\emph{\myindex{ffréquence fondamentale}} $\frac{\pi a}{L}$,  et l'on obtient aussi
 tous les multiples de cette fréquence,  qui en musique sont appelés
 la\emph{\myindex{harmoniques}}.  Ces harmoniques qui apparaissent avec une amplitude sont 
 appelées par les musiciens des  \emph{\myindex{timbre}} de la note.
@@ -3908,7 +3908,7 @@ où $T$ est la tension et  $\rho$ est la densité linéaire de la corde.
 Lorsqu'on serre la corde (on tourne la cheville d'accord d'une guitare) augmente $ a $ et
 produit une fréquence fondamentale plus élevée (une note plus aigüe).
 Par contre, en utilisant une corde plus lourde,  on
-réduit $ a $ et on produit une fréquence fondamentale plus basse (une note plus grave).
+réduit $ a $ et l'on produit une fréquence fondamentale plus basse (une note plus grave).
 Une guitare basse a des cordes plus longues et plus épaisses,  tandis qu'un ukulélé a des cordes courtes
 en matériau plus léger.
 
@@ -3925,11 +3925,11 @@ un $ t $ fixe c'est une série de Fourier en $ x $,  et les coefficients sont li
 Si la forme de $ f (x) $ ou la vitesse initiale ont beaucoup de points anguleux,  alors
 l'onde sonore aura beaucoup de points anguleux.  Ce qui est dû au fait que les coefficients de Fourier
 de forme initiale descendes à zéro (comme $n \to \infty$) au même rythme que les coefficients de Fourier
-de l'onde dans le temps (pour un certain $ x $ fixe).  Donc,  si on utilise un objet pointu pour
-pincer la corde,  on obtient un son plus net avec une fréquence beaucoup de haute, tandis que si on utilise notre pouce,  on obtient un son plus doux.  De même si pn s'approche du pont,  on obtient un 
+de l'onde dans le temps (pour un certain $ x $ fixe).  Donc,  si l'on utilise un objet pointu pour
+pincer la corde,  on obtient un son plus net avec une fréquence beaucoup de haute, tandis que si l'on utilise notre pouce,  on obtient un son plus doux.  De même si pn s'approche du pont,  on obtient un 
 un son plus net.
 
-En fait,  si on regarde la formule de la solution,  on voit que pour tout
+En fait,  si l'on regarde la formule de la solution,  on voit que pour tout
  $ x $ fixe, on obtient une série de Fourier presque arbitraire pour $ t $,  à l'exception du 
 terme constant.  On peut essentiellement obtenir le son de notre choix
 en pinçant la corde de la bonne manière.

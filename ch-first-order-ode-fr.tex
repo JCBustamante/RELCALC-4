@@ -4,7 +4,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Les intégrales en tant que solutions}
+\section{Intégrales en tant que solutions}
 \label{integralsols:section}
 
 %\sectionnotes{1 lecture (or less)\EPref{, \S1.2 in \cite{EP}}\BDref{,
@@ -721,7 +721,7 @@ et est unique pour toutes les valeurs de la variable indépendante.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \sectionnewpage
-\section{Les équations séparables}
+\section{Équations séparables}
 \label{separable:section}
 
 %\sectionnotes{1 lecture\EPref{, \S1.4 in \cite{EP}}\BDref{,
@@ -740,7 +740,7 @@ car si l'on intègre des deux côtés, on obtient:
 Mais l'intégrale contient des termes en $y$, qu'on ne peut pas tout simplement \og{}traiter comme une constante\fg{}, puisque c'est une variable dépendante de $x$.
 
 
-\subsection{Les équations séparables}
+\subsection{Équations séparables}
 
 On dit qu'une équation différentielle est \emph{\myindex{séparable}}
 si elle peut être écrite sous la forme suivante:
@@ -816,7 +816,7 @@ Comme on peut voir, on obtient la même formule que plus haut, qui est donc corr
 
 
 
-\subsection{Les solutions implicites}
+\subsection{Solutions implicites}
 
 Parfois, on peut avoir de la difficulté avec la méthode des équations séparables,
 même si les deux intégrales sont résolubles.
@@ -1085,7 +1085,7 @@ $\sin(y) = -\cos(x) + C$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \sectionnewpage
-\section{Les équations linéaires et le facteur intégrant}
+\section{Équations linéaires et facteur intégrant}
 \label{intfactor:section}
 
 %\sectionnotes{1 lecture\EPref{, \S1.5 in \cite{EP}}\BDref{,
@@ -1421,7 +1421,7 @@ $Ah' = d - kh$, où $k$ est une constante mesurée en $\unit{m^2}{s}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \sectionnewpage
-\section{Les équations autonomes}
+\section{Équations autonomes}
 \label{auteq:section}
 
 %\sectionnotes{1 lecture\EPref{, \S2.2 in \cite{EP}}\BDref{,
@@ -1744,7 +1744,7 @@ b) $\frac{kM + \sqrt{{(kM)}^2 + 4Ak}}{2k}$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%% JP ICI 20230227
 \sectionnewpage
-\section{Les équations exactes}
+\section{Équations exactes}
 \label{exact:section}
 
 %\sectionnotes{1--2 lectures, can safely be skipped\EPref{, \S1.6 in \cite{EP}}\BDref{, \S2.6 in \cite{BD}}}
@@ -1753,12 +1753,12 @@ puisqu'elles apparaissent souvent dans des contextes où il y a conservation d'u
 %  To truly make sense out of these
 %equations requires a little bit of multivariable calculus and a tiny
 %bit of physics.
-Dans le contexte d'une EDO du premier ordre, une équation exacte est associée à une fonction à deux variables,
+Dans le contexte d'une équation différentielle (EDO) du premier ordre, une équation exacte est associée à une fonction à deux variables,
 appelée une \emph{\myindex{fonction potentielle}}.
-Intuitivement, on peut penser à l'énergie potentielle, ou alors le potentiel électrique.
+Intuitivement, on peut penser à l'énergie potentielle ou alors au potentiel électrique.
 
 Pour expliquer comment résoudre une équation exacte, on va remonter à la source du problème.
-Supposons donc qu'on ait une fonction potentielle $F(x,y)$, et voyons comment émerge l'équation exacte associée.
+Supposons donc qu'on a une fonction potentielle $F(x , y)$, et voyons comment émerge l'équation exacte associée.
 
 Pour fixer les idées, considérons l'exemple suivant:
 \begin{equation*}
@@ -1788,17 +1788,17 @@ Dans notre exemple:
 En prenant la dérivée totale de chaque côté de l'équation $F(x,y) = C$, on obtient une équation différentielle,  $dF = 0$.
 Cette équation s'écrit de la manière suivante:
 \begin{equation}\label{eq:exact}
-	M \, dx + N \, dy = 0, \qquad \text{ou} \qquad	M + N \, \frac{dy}{dx} = 0
+	M \, dx + N \, dy = 0 \qquad \text{ou} \qquad	M + N \, \frac{dy}{dx} = 0,
 \end{equation}
-où $M=F_x$ et $N=F_y$.  Une équation comme~\eqref{eq:exact} est dite \emph{exacte} lorsqu'elle correspond à $dF = 0$,
+où $M=F_x$ et où $N=F_y$.  Une équation comme~\eqref{eq:exact} est dite \emph{exacte} lorsqu'elle correspond à $dF = 0$,
 pour une fonction potentielle $F$; autrement dit, lorsqu'on peut trouver une fonction potentielle $F$ telle que $F_x=M$ et $F_y=N$.
-Dans notre exemple, on obtient:
+Dans notre exemple, nous obtenons :
 \begin{equation*}
-	2x \, dx + 2y \, dy = 0, \qquad 	\text{ou} \qquad  2x + 2y \, \frac{dy}{dx} = 0 .
+	2x \, dx + 2y \, dy = 0 \qquad 	\text{ou} \qquad  2x + 2y \, \frac{dy}{dx} = 0 .
 \end{equation*}
 L'équation est exacte puisqu'elle a été obtenue en dérivant l'équation $x^2+y^2=C$.
 
-Parfois on voudra écrire $y$ comme une fonction de $x$.  Dans notre exemple:
+Parfois, on voudra écrire $y$ comme une fonction de $x$.  Dans notre exemple:
 \begin{equation*}
 	y = \pm \sqrt{C^2-x^2} .
 \end{equation*}
@@ -1814,7 +1814,7 @@ Ainsi, le champ de vecteurs $\vec{v}$ est \emph{\myindex{conservatif}},
 ce qui implique des conséquences fondamentales pour le travail en présence d'une force.
 En effet, soit $\gamma$ une trajectoire dans le plan (une courbe paramétrée) débutant au point $(x_1,y_1)$
 et finissant au point $(x_2,y_2)$.
-Si l'on pense à $\vec{v}$ comme un champ de forces, alors le travail effectué par cette force
+Si l'on pense à $\vec{v}$ comme à un champ de forces, alors le travail effectué par cette force
 le long de la trajectoire $\gamma$ est:
 \begin{equation*}
 	\int_\gamma \vec{v}(\vec{r}) \cdot d\vec{r}
@@ -1822,7 +1822,7 @@ le long de la trajectoire $\gamma$ est:
 	= F(x_2,y_2) - F(x_1,y_1) .
 \end{equation*}
 Autrement dit, lorsque le champ est conservatif, le travail dépend seulement de la valeur de la fonction potentielle aux extrémités de la trajectoire.
-Si par exemple $F$ est le potentiel gravitationnel, le gradient de $F$, $\vec{v}$, est la force gravitionnelle.
+Si, par exemple, $F$ est le potentiel gravitationnel, le gradient de $F$, $\vec{v}$, est la force gravitationnelle.
 Dire que c'est un champ conservatif, c'est dire que le travail requis pour hisser une boîte du rez-de-chaussée au premier étage
 dépend seulement de la hauteur de l'étage, et non du chemin qu'on prend pour s'y rendre.
 En particulier, aucun travail n'est effectué lorsque la trajectoire suit une courbe $F(x,y) = C$.
@@ -1833,70 +1833,71 @@ et la solution d'une telle équation est une fonction potentielle de ce champ de
 
 \subsection{Résoudre des équations exactes}
 
-Vous vous demandez peut-être, où avons-nous résolu une équation différentielle?
+Vous vous demandez peut-être: où avons-nous résolu une équation différentielle?
 C'est que, dans les applications, on connaît $M$ et $N$, qui sont les dérivées partielles de $F$, mais $F$ elle-même est inconnue.
-Si par exemple on commence avec $2x + 2y \frac{dy}{dx} = 0$, ou encore:
+Si, par exemple, on commence avec $2x + 2y \frac{dy}{dx} = 0$ ou encore avec
 \begin{equation*}
-	x + y \frac{dy}{dx} = 0
+	x + y \frac{dy}{dx} = 0,
 \end{equation*}
 il faut trouver une fonction potentielle $F$ associée à cette équation.
-Il y a un nombre infini de $F$ possibles, puisque la fonction potentielle est seulement définie à constante près.
+Il y a un nombre infini de $F$ possibles, puisque la fonction potentielle est seulement définie à une constante près.
 Une fois trouvée $F$, la solution implicite à l'équation différentielle sera:
 \begin{equation*}
 	F\bigl(x,y(x)\bigr) = C.
 \end{equation*}
 Voyons la démarche dans un exemple.
 \begin{example}
-	Trouvons la solution générale pour 	$2x + 2y \frac{dy}{dx} = 0$.
-	(On va faire semblant qu'on a oublié ce qu'est $F$.)
+	Trouvons la solution générale pour 	$2x + 2y \frac{dy}{dx} = 0$ 
+	(nous ferons semblant que nous avons oublié ce qu'est $F$).
 
 	Si l'on sait déjà que l'équation est exacte, on cherche une fonction potentielle $F$ pour l'équation.
 	On a que $M = 2x$ et $N=2y$.
-	Donc si $F$ existe, on a nécessairement que $F_x (x,y) = 2x$.
-	On intègre par rapport à $x$ et on obtient:
+	Donc, si $F$ existe, on a nécessairement que $F_x (x,y) = 2x$.
+	On intègre par rapport à $x$ et l'on obtient:
 	\begin{equation} \label{eq:exact:fint}
-		F(x,y) = x^2 + A(y)
+		F(x,y) = x^2 + A(y),
 	\end{equation}
-	où $A(y)$ est une fonction arbitraire.  La fonction $A$ est la {\bf constante d'integration}:
+	où $A(y)$ est une fonction arbitraire.  
+	La fonction $A$ est la {\bf constante d'intégration}:
 	elle est seulement constante par rapport à $x$, mais elle peut dépendre de $y$.
-	Ensuite, on dérive \eqref{eq:exact:fint} par rapport à $y$ et on met le résultat égal à $N$, autrement dit $F_y$:
+	Ensuite, on dérive \eqref{eq:exact:fint} par rapport à $y$ et l'on met le résultat égal à $N$, autrement dit $F_y$:
 	\begin{equation*}
 		2y = F_y (x,y) = A'(y) .
 	\end{equation*}
-	En intégrant, on trouve $A(y) = y^2$.  Il n'est pas nécessaire ici d'ajouter une constante d'intégration.
-	(Voir l'exercice.)    Nous avons donc trouvé $F(x,y) = x^2+y^2$.
+	En intégrant, on trouve $A(y) = y^2$.  Il n'est pas nécessaire ici d'ajouter une constante d'intégration	(voir l'exercice).    
+	Nous avons donc trouvé $F(x,y) = x^2+y^2$.
 	Il ne reste qu'à résoudre pour $y$, en fonction de $x$, dans l'équation suivante:
 	\begin{equation*}
 		F\bigl(x,y(x)\bigr) = C .
 	\end{equation*}
-	où $C$ est une constante arbitraire. Dans notre cas, on obtient $y = \pm \sqrt{C^2-x^2}$, comme plus haut.
+	où $C$ est une constante arbitraire. Dans notre cas, nous obtenons $y = \pm \sqrt{C^2-x^2}$, comme plus haut.
 \end{example}
 
 \begin{exercise}\label{exer:exact}
 	Pourquoi n'a-t-on pas besoin d'ajouter une constante d'intégration lorsqu'on intègre $A'(y) = 2y$?
-	Ajoutez une constante d'intégration, disons $3$, et observez la fonction $F$ obtenue.
+	Ajoutez une constante d'intégration, disons 3, et observez la fonction $F$ obtenue.
 	Comparez à la réponse plus haut.  Pourquoi la différence n'est-elle pas importante?
 \end{exercise}
 
 Lorsqu'on sait que l'équation différentielle est exacte, la démarche est donc:
 \begin{enumerate}[(i)]
-	\item Intégrer $F_x = M$ par rapport à $x$, por obtenir $F(x,y) = \text{quelque chose} + A(y)$.
-	\item Dériver cette expression pour $F$ par rapport à $y$, et mettre le résultat égal à
+	\item Intégrer $F_x = M$ par rapport à $x$ por obtenir $F(x, y) = \text{quelque chose} + A(y)$.
+	\item Dériver cette expression pour $F$ par rapport à $y$ et mettre le résultat égal à
 			$N$, afin de déterminer $A(y)$ en intégrant.
 \end{enumerate}
-Alternativement, on peut d'abord dériver par rapport à $y$ et ensuite par rapport à $x$.
+Autrement, on peut d'abord dériver par rapport à $y$ et ensuite par rapport à $x$.
 Voyons un autre exemple.
 
 \begin{example}
 	Considérons $2x+y + xy \frac{dy}{dx} = 0$.
 
-	Donc $M = 2x+y$ et $N=xy$.  On applique la démarche.
+	Donc, $M = 2x+y$ et $N=xy$.  On applique la démarche.
 	Si l'on suppose qu'une fonction potentielle $F$ existe pour l'équation, alors $F_x (x,y) = 2x+y$.
-	On intègre\,;
+	On intègre:
 	\begin{equation*}
-		F(x,y) = x^2 + xy + A(y)
+		F(x,y) = x^2 + xy + A(y),
 	\end{equation*}
-	où $A(y)$ est une fonction quelconque. On dérive par rapport à $y$ et on met le résultat égal à $N$:
+	où $A(y)$ est une fonction quelconque. On dérive par rapport à $y$ et l'on met le résultat égal à $N$:
 	\begin{equation*}
 		N = xy = F_y (x,y) = x+A'(y) .
 	\end{equation*}
@@ -1906,7 +1907,7 @@ Voyons un autre exemple.
 \end{example}
 
 Pouvait-on arriver à cette conclusion sans faire tous ces calculs?  En fait, oui.  Supposons en effet que
-$M = F_x$ et
+$M = F_x$ et que 
 $N = F_y$.  Si les dérivées secondes sont continues, on a forcément que les dérivées mixtes s'interchangent:
 \begin{equation*}
 	\frac{\partial M}{\partial y}
@@ -1914,14 +1915,14 @@ $N = F_y$.  Si les dérivées secondes sont continues, on a forcément que les d
 		=	\frac{\partial^2 F}{\partial x \partial y}
 		= 	\frac{\partial N}{\partial x} .
 \end{equation*}
-Ceci nous donne donc une condition qu'on peut vérifier, sans recourir à des calculs d'intégrales.
-À l'inverse, on a le lemme de Poincaré\footnote{Nommé ainsi en l'honneur de
+Ceci nous donne donc une condition que nous pouvons vérifier, sans recourir à des calculs d'intégrales.
+À l'inverse, on a le lemme de Poincaré$\!$\footnote{Nommé ainsi en l'honneur de
 \href{https://en.wikipedia.org/wiki/Henri_Poincar\%C3\%A9}{Jules Henri
-Poincaré} (1854--1912).}.
+Poincaré} (1854-1912).}.
 
 \begin{theorem}[Poincaré]
-Si $M$ et $N$ sont des fonctions continument différentiables de $(x,y)$, et
-$\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$,
+Si $M$ et $N$ sont des fonctions continûment différentiables de $(x, y)$ et
+que $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$,
 alors il existe une fonction $F(x,y)$, définie localement, telle que $M = \frac{\partial F}{\partial x}$ et
 $N = \frac{\partial F}{\partial y}$.
 \end{theorem}
@@ -1930,38 +1931,38 @@ Le théorème affirme l'existence d'une fonction $F$ \og{}définie localement\fg
 qu'on n'aura pas une fonction définie partout, mais possiblement définie seulement dans une petite région contenant le point initial.
 
 Retournons à notre exemple précédent: $M = 2x + y$ et $N = xy$.
-On note que $M_y = 1$ et  $N_x = y$.
-Les deux expressions ne sont pas égales et donc, l'équation différentielle n'est pas exacte.
+On note que $M_y = 1$ et  que $N_x = y$.
+Les deux expressions ne sont pas égales, et donc l'équation différentielle n'est pas exacte.
 
 \begin{example}
 	Résolvons
 	\begin{equation*}
-		\frac{dy}{dx} = \frac{-2x-y}{x-1} \quad , \qquad y(0) = 1.
+		\frac{dy}{dx} = \frac{-2x-y}{x-1} ,\quad  \qquad y(0) = 1.
 	\end{equation*}
 	D'abord, on écrit l'équation sous la forme suivante:
 	\begin{equation*}
-		(2x+y) + (x-1)\frac{dy}{dx} = 0
+		(2x+y) + (x-1)\frac{dy}{dx} = 0,
 	\end{equation*}
 	donc $M = 2x+y$ et $N = x-1$.  Alors:
 	\begin{equation*}
 		M_y = 1 = N_x .
 	\end{equation*}
-	L'équation différentielle est donc exacte et nous procédons avec la démarche.
-	On intègre $M$ par rapport à $x$, et on trouve:
+	L'équation différentielle est donc exacte, et nous procédons avec la démarche.
+	On intègre $M$ par rapport à $x$, et l'on trouve:
 	\begin{equation*}
 		F(x,y) = x^2+xy + A(y) .
 	\end{equation*}
-	On dérive par rapport à $y$ et on metle résultat égal à $N$:
+	On dérive par rapport à $y$ et l'on met le résultat égal à $N$:
 	\begin{equation*}
 		x-1 = x + A'(y) .
 	\end{equation*}
-	Donc $A'(y) = -1$, et on peut prendre $A(y) = -y$.  Ceci donne $F(x,y) = x^2+xy-y$.
+	Donc, $A'(y) = -1$, et l'on peut prendre $A(y) = -y$.  Ceci donne $F(x, y) = x^2+xy-y$.
 	Nous obtenons ainsi la solution générale à l'équation, sous forme implicite:
 	\begin{equation*}
 		x^2+xy-y = C.
 	\end{equation*}
 	On calcule maintenant la valeur de $C$: puisque $y(0)=1$, on a que
-	$F(0,1) = C$.  Donc $0^2+0\times 1 - 1 = C$, et $C=-1$.
+	$F(0,1) = C$.  Donc, $0^2+0\times 1 - 1 = C$, et $C=-1$.
 	En dernier lieu, on isole le $y$ dans l'expression (puisque c'est possible) pour obtenir une solution explicite:
 	\begin{equation*}
 		y = \frac{-x^2-1}{x-1} .
@@ -1971,22 +1972,21 @@ Les deux expressions ne sont pas égales et donc, l'équation différentielle n'
 \begin{example}
 	Résolvons:
 	\begin{equation*}
-		-\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0 \quad , \qquad y(1) = 2.
+		-\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0, \quad  \qquad y(1) = 2.
 	\end{equation*}
 	D'abord, on laisse en exercice la vérification que 	$M_y = N_x$.
 
 	La condition d'exactitude est vérifiée; pourtant, le champ de vecteurs $(M,N)$ n'est pas conservatif,
 	lorsque considéré sur tout le plan moins l'origine.
 	Le problème est en fait à l'origine $(0,0)$, point où le champ de vecteurs n'est pas défini.
-	Prenons par exemple une courbe $\gamma$ qui encercle l'origine, disons qu'elle part du point $(1,0)$
-	et y retourne par un chemin dans le sens inverse des aiguilles d'une montre;
-	si une fonction potentielle $F$ existe on on obtiendrait alors:
+	Prenons, par exemple, une courbe $\gamma$ qui encercle l'origine, disons qu'elle part du point $(1,0)$
+	et y retourne par un chemin dans le sens inverse des aiguilles d'une montre. 
+	Si une fonction potentielle $F$ existe, on obtiendrait alors:
 	\begin{equation*}
 		0 = F(1,0) - F(1,0) = \int_\gamma F_x \, dx + F_y \, dy
 							= \int_\gamma \frac{-y}{x^2+y^2} \, dx + \frac{x}{x^2+y^2} \, dy = 2\pi .
 	\end{equation*}
-	Bien entendu, c'est impossible.  (Le calcul de l'intégrale de ligne est laissée en exercice;
-	alternativement, consultez votre manuel de calcul à plusieurs variables.)
+	Bien entendu, c'est impossible (le calcul de l'intégrale de ligne est laissé  en exercice; vous pouvez aussi consulter votre manuel de calcul à plusieurs variables). 
 	Ainsi, cette équation différentielle n'admet pas de fonction potentielle définie sur tout le plan moins $(0,0)$.
 
 	Ceci ne contredit pas le lemme de Poincaré.
@@ -1997,9 +1997,10 @@ Les deux expressions ne sont pas égales et donc, l'équation différentielle n'
 		F(x,y) = \operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr) .
 	\end{equation*}
 	La solution implicite est
-	$\operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr) = C$.  Isolant $y$, on obtient
-	$y = \tan(C) x$.  Autrement dit, la solution est une droite.  Posant $y(1) =
-	2$ nous donne $\tan(C) = 2$, et donc $y= 2x$ est la solution désirée.
+	$\operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr) = C$. 
+	En isolant $y$, on obtient
+	$y = \tan(C) x$.  Autrement dit, la solution est une droite.  
+	Poser $y(1) = 2$ nous donne $\tan(C) = 2$, et donc $y= 2x$ est la solution désirée.
 	Voir la~\figureref{exact:y2x}, en notant que la solution est seulement définie pour $x >
 	0$.
 	\begin{myfig}
@@ -2020,13 +2021,13 @@ Les deux expressions ne sont pas égales et donc, l'équation différentielle n'
 	On pose $M= x^2+y^2$ et $N=2y(x+1)$.
 	On suit la démarche:
 	\begin{equation*}
-		F(x,y) = \frac{1}{3}x^3 + xy^2 + A(y)
+		F(x, y) = \frac{1}{3}x^3 + xy^2 + A(y),
 	\end{equation*}
-	et  donc:
+	et  donc
 	\begin{equation*}
 		2y(x+1) = 2xy + A'(y) .
 	\end{equation*}
-	Par conséquent, $A'(y) = 2y$ ou $A(y) = y^2$ et $F(x,y) = \frac{1}{3}x^3 + xy^2 + y^2$.
+	Par conséquent, $A'(y) = 2y$ ou $A(y) = y^2$, et $F(x,y) = \frac{1}{3}x^3 + xy^2 + y^2$.
 	Maintenant, on tente d'isoler le $y$ dans l'expression $F(x,y) = C$.  On peut mettre $y^2$ en évidence et ensuite prendre la racine carrée:
 	%
 	\begin{equation*}
