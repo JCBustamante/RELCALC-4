@@ -1,7 +1,7 @@
 \documentclass[12pt]{book}
 
 %\usepackage[french]{babel}  %pour les accentuations
-%\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}		%%%commentés car déjà appelés dans \usepackage{diffyqssetup}
 %\usepackage[T1]{fontenc}
 \setlength\parindent{0pt}	%indentation par défaut
 
@@ -16,11 +16,11 @@
 %search diffyqssetup.sty)
 
 
-%See text for 
+%See text for
 %FIXMEevillayouthack
 % for evil layout hacks
 %\usepackage[french]{babel}
-\usepackage{diffyqssetup}
+\usepackage{diffyqssetup}			%%%%%% équivalent du preamble habituel
 
 % Useful for making up drafts
 %\usepackage{draftwatermark}
@@ -112,7 +112,7 @@
 %mbx       Derivative works must be prominently marked as such.
 %mbx     </p>
 %mbx     <p>
-%mbx       During the writing of this book, 
+%mbx       During the writing of this book,
 %mbx       the author was in part supported by NSF grant DMS-0900885 and
 %mbx       DMS-1362337.
 %mbx     </p>
@@ -181,7 +181,7 @@ Copyright \copyright 2008--2020 Ji\v{r}\'i Lebl
 
 \noindent
 
-Cette {\oe}uvre est mise à disposition selon les termes de la licence Creative Commons - Attribution - Partage dans les mêmes conditions - Sans utilisation commerciale 4.0 International. 
+Cette {\oe}uvre est mise à disposition selon les termes de la licence Creative Commons - Attribution - Partage dans les mêmes conditions - Sans utilisation commerciale 4.0 International.
 %This work
 %PRINT
 % not for lulu
@@ -193,7 +193,7 @@ Cette {\oe}uvre est mise à disposition selon les termes de la licence Creative 
 %Attribution-Share Alike 4.0 International License.
 %To view a
 %copy of these licenses, visit
-Pour en savoir plus sur cette licence, visitez 
+Pour en savoir plus sur cette licence, visitez
 \url{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr}
 %or
 %\url{https://creativecommons.org/licenses/by-sa/4.0/}
@@ -205,8 +205,8 @@ Pour en savoir plus sur cette licence, visitez
 
 \bigskip
 
-\noindent 
-Vous pouvez imprimer, reproduire et partager ce manuel.  Vous pouvez adapter le contenu comme vous le voulez; vous pouvez toujours présumer que la licence est 
+\noindent
+Vous pouvez imprimer, reproduire et partager ce manuel.  Vous pouvez adapter le contenu comme vous le voulez; vous pouvez toujours présumer que la licence est
 CC-BY-NC-SA ou CC-BY-SA\@,
 selon vos besoins.
 %whichever is compatible with what you wish to do, your derivative works must
@@ -214,14 +214,14 @@ selon vos besoins.
 %Derivative works must be prominently marked as such.
 %If you plan to use it commercially (sell it for more than just
 %duplicating cost), then you need to contact me and we will work something out.
-%If you are printing a course pack for your students, then it is fine if the 
+%If you are printing a course pack for your students, then it is fine if the
 %duplication service is charging a fee for printing and selling the printed
 %copy.  I consider that duplicating cost.
 
 \bigskip
 
 \noindent
-%During the writing of this book, 
+%During the writing of this book,
 %the author was in part supported by NSF grant DMS-0900885 and
 %DMS-1362337.
 
@@ -362,9 +362,9 @@ La source  \LaTeX\ pour la version originale est disponible sur GitHub:  \url{ht
 \label{furtherreading:chapter}
 
 \bibitem[BM]{BM}
- Paul W.\ Berg et James L.\ McGregor, 
+ Paul W.\ Berg et James L.\ McGregor,
  \emph{\href{https://books.google.com/books?id=EfJQAAAAMAAJ}{Elementary
-Partial Differential Equations}}, 
+Partial Differential Equations}},
  Holden-Day,
  San Francisco, CA\@,
  1966.
@@ -415,7 +415,7 @@ Problems}. Books and Monographs. Book 9.  2013.
 %mbx   <title>Further Reading</title>
 %mbx
 %mbx   <biblio type="raw" xml:id="biblio-BM" tag="BM">Paul W. Berg and
-%mbx     James L. McGregor, 
+%mbx     James L. McGregor,
 %mbx     <title><url href="https://books.google.com/books?id=EfJQAAAAMAAJ"
 %mbx     >Elementary Partial Differential Equations</url></title>,
 %mbx     Holden-Day, San Francisco, CA, 1966.</biblio>
@@ -483,4 +483,3 @@ Problems}. Books and Monographs. Book 9.  2013.
 %mbx </backmatter>
 
 \end{document}
-

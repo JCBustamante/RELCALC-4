@@ -1,4 +1,4 @@
-\chapter*{Introduction} \label{intro:chapter}
+ \chapter*{Introduction} \label{intro:chapter}
 %mbxSTARTIGNORE
 \addfakecontentsline{Introduction}
 \markboth{INTRODUCTION}{INTRODUCTION}
@@ -10,22 +10,22 @@
 \label{notes:section}
 
 %\sectionnotes{à propos de l'auteur.}
-Ceci est une traduction d'un manuel libre écrit par Ji\v{r}\'{\i} Lebl.  
+Ceci est une traduction d'un manuel libre écrit par Ji\v{r}\'{\i} Lebl.
 Il s'agit d'un premier cours d'équations différentielles pour les personnes étudiant en génie.
 
 
 Originalement, ce manuel constituait des notes pour un cours enseigné à l'\href{https://www.math.uiuc.edu/}{Université de l'Illinois à Urbana-Champaign (UIUC)}, en 2008-2009. Ensuite, l'auteur les a utilisées à l'\href{https://www.math.ucsd.edu/}{Université de Californie à San Diego (UCSD)} et à l'\href{https://math.okstate.edu/}{Université de l'État d'Oklahoma (OSU)}.
 
-Normalement, ces cours sont enseignés avec le livre de Edwards, Penney et Calvis, 
+Normalement, ces cours sont enseignés avec le livre de Edwards, Penney et Calvis,
 \emph{Differential Equations and Boundary Value Problems: Computing and Modeling}~\cite{EP}, ou avec celui de Boyce et DiPrima,
 \emph{Elementary Differential Equations and Boundary Value Problems}~\cite{BD}, et ce manuel-ci se veut un remplacement de ces ressources.
 
 L'adaptation en français a été écrite pour les cours de GCH217 et MAT217, donnés à l'Université de Sherbrooke.
 
 Voici d'autres références :
-E. L.\ Ince, \emph{Ordinary Differential Equations}~\cite{I}, classique (et économique); 
-Stanley Farlow, \emph{An Introduction to Differential Equations and Their Applications}~\cite{F}; 
-Berg et McGregor, \emph{Elementary Partial Differential Equations}~\cite{BM}, maintenant disponible dans Dover; 
+E. L.\ Ince, \emph{Ordinary Differential Equations}~\cite{I}, classique (et économique);
+Stanley Farlow, \emph{An Introduction to Differential Equations and Their Applications}~\cite{F};
+Berg et McGregor, \emph{Elementary Partial Differential Equations}~\cite{BM}, maintenant disponible dans Dover;
 et William Trench, \emph{Elementary Differential Equations with Boundary Value Problems}~\cite{T}, une ressource libre.
 Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à la fin de ce manuel.
 
@@ -44,7 +44,7 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à l
 %{\text{\Appendixref{linalg:appendix}}} \arrow[dd, dotted]
 %& {\text{\Chapterref{fo:chapter}}} \arrow[d] \\
 %& {\text{\Chapterref{ho:chapter}}} \arrow[dddr] \arrow[dd] \arrow[dl] \arrow[dr] \\
-%{\text{\Chapterref{sys:chapter}}} \arrow[dr, dotted] \arrow[d] & 
+%{\text{\Chapterref{sys:chapter}}} \arrow[dr, dotted] \arrow[d] &
 %  {\text{\Chapterref{ps:chapter}}} \\
 %{\text{\Chapterref{nlin:chapter}}} & {\text{\Chapterref{FS:chapter}}} \arrow[d]
 %\arrow[dr,dotted] \\
@@ -107,7 +107,7 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à l
 %\chapterref{ho:chapter},
 %\chapterref{LT:chapter}, and \chapterref{ps:chapter},
 %(with sections skipped as above).
-%On the other hand, a typical course that covers 
+%On the other hand, a typical course that covers
 %systems will probably need to skip Laplace and power series
 %and cover
 %%\sectionref{introde:section},
@@ -117,7 +117,7 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à l
 %
 %\medskip
 %
-%If sections need to be skipped in the beginning, a good core of the 
+%If sections need to be skipped in the beginning, a good core of the
 %sections on single ODE is:
 %\ref{introde:section},
 %\ref{integralsols:section}--\ref{intfactor:section},
@@ -148,7 +148,7 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à l
 %\chapterref{LT:chapter},
 %\chapterref{ps:chapter}.
 %\\
-%Semester 2: 
+%Semester 2:
 %\Chapterref{sys:chapter},
 %\chapterref{nlin:chapter},
 %\chapterref{FS:chapter},
@@ -165,7 +165,7 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à l
 %\chapterref{fo:chapter} (\ref{integralsols:section}--\ref{numer:section}),
 %\chapterref{ho:chapter},
 %\appendixref{linalg:appendix},
-%\chapterref{sys:chapter} (w/o \sectionref{sec:matrix}), (possibly 
+%\chapterref{sys:chapter} (w/o \sectionref{sec:matrix}), (possibly
 %\chapterref{nlin:chapter}).
 %
 %\medskip
@@ -176,7 +176,7 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à l
 %the chapter on power series (\chapterref{ps:chapter}),
 %and the chapter on nonlinear systems (\chapterref{nlin:chapter}),
 %are more or less interchangeable and can be treated as \myquote{topics}.
-%If \chapterref{nlin:chapter} is covered, it may be best to place it right 
+%If \chapterref{nlin:chapter} is covered, it may be best to place it right
 %after \chapterref{sys:chapter},
 %and \chapterref{SL:chapter} is best covered right after
 %\chapterref{FS:chapter}.
@@ -272,12 +272,12 @@ Voir le chapitre \hyperref[furtherreading:chapter]{Lectures additionnelles} à l
 
 \subsection{Équations différentielles}
 
-Les lois de la physique sont généralement exprimées sous forme d'équations différentielles.  
-Ainsi, toute discipline de science ou de génie utilise les équations différentielles, à un niveau plus ou moins sophistiqué. 
-Comprendre les équations différentielles est essentiel à la compréhension de presque tout ce que vous apprendrez dans vos cours de science ou de génie.  
+Les lois de la physique sont généralement exprimées sous forme d'équations différentielles.
+Ainsi, toute discipline de science ou de génie utilise les équations différentielles, à un niveau plus ou moins sophistiqué.
+Comprendre les équations différentielles est essentiel à la compréhension de presque tout ce que vous apprendrez dans vos cours de science ou de génie.
 On peut penser aux mathématiques comme au langage de la science, et les équations différentielles forment une partie importante de ce langage.
 %As an analogy,
-%suppose all your classes from now on were given in Swahili.  
+%suppose all your classes from now on were given in Swahili.
 %It would be important to first learn Swahili, or you would have a very
 %tough time getting a good grade in your classes.
 
@@ -288,49 +288,49 @@ Et vous avez même résolu des équations différentielles dans vos cours de cal
 \end{equation}
 Ici, $x$ est la  \emph{\myindex{variable dépendante}}, et $t$ est la \emph{\myindex{variable indépendante}}.
 L'équation \eqref{eq1}
-est un exemple de base d'une \emph{\myindex{équation différentielle}}. 
-Plus précisément, c'est un exemple d'\emph{\myindex{équation différentielle du premier ordre}}, puisqu'elle n'implique que la première dérivée de la variable dépendante $x$.  
+est un exemple de base d'une \emph{\myindex{équation différentielle}}.
+Plus précisément, c'est un exemple d'\emph{\myindex{équation différentielle du premier ordre}}, puisqu'elle n'implique que la première dérivée de la variable dépendante $x$.
 Cette équation vient de la loi de refroidissement de Newton, lorsque la température ambiante oscille en fonction du temps.
 
 \subsection{Solutions d'équations différentielles}
 
-Quand on résout une équation différentielle comme \eqref{eq1}, l'inconnue est une variable $x$, qui elle-même dépend d'une variable $t$, 
-c'est-à-dire qu'on veut trouver un $x$, dépendant de $t$, tel que, lorsqu'on substitue $x$, $t$ et $\frac{dx}{dt}$ dans l'équation \eqref{eq1}, 
-le côté gauche est égal au côté droit, et donc l'égalité est satisfaite.  C'est le même principe que pour une équation ordinaire (algébrique) impliquant $x$ et $t$.  
-Nous affirmons que l'expression suivante est une \emph{\myindex{solution}}: 
+Quand on résout une équation différentielle comme \eqref{eq1}, l'inconnue est une variable $x$, qui elle-même dépend d'une variable $t$,
+c'est-à-dire qu'on veut trouver un $x$, dépendant de $t$, tel que, lorsqu'on substitue $x$, $t$ et $\frac{dx}{dt}$ dans l'équation \eqref{eq1},
+le côté gauche est égal au côté droit, et donc l'égalité est satisfaite.  C'est le même principe que pour une équation ordinaire (algébrique) impliquant $x$ et $t$.
+Nous affirmons que l'expression suivante est une \emph{\myindex{solution}}:
 \begin{equation*}
 	x = x(t) = \cos t + \sin t .
 \end{equation*}
 %
 Comment le vérifier?  Il suffit de substituer $x$ dans l'équation \eqref{eq1} et de vérifier que l'égalité est bel et bien établie.
-Nous devons d'abord calculer $\frac{dx}{dt}$.  
-On trouve que $\frac{dx}{dt} = -\sin t + \cos t$.  
-Maintenant, calculons le côté gauche de \eqref{eq1}: 
+Nous devons d'abord calculer $\frac{dx}{dt}$.
+On trouve que $\frac{dx}{dt} = -\sin t + \cos t$.
+Maintenant, calculons le côté gauche de \eqref{eq1}:
 \begin{equation*}
 	\frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t)}_{\frac{dx}{dt}}
 						+ \underbrace{(\cos t + \sin t)}_{x}
 					  = 2\cos t .
 \end{equation*}
 C'est bien ce que nous voulons: nous obtenons exactement le côté droit de l'équation.
-Mais ce n'est pas tout. Nous affirmons que  $x = \cos t + \sin t + e^{-t}$ est aussi une solution.  
-Vérifions: 
+Mais ce n'est pas tout. Nous affirmons que  $x = \cos t + \sin t + e^{-t}$ est aussi une solution.
+Vérifions:
 \begin{equation*}
 	\frac{dx}{dt} = -\sin t + \cos t - e^{-t} .
 \end{equation*}
-On remplace ceci dans \eqref{eq1}: 
+On remplace ceci dans \eqref{eq1}:
 \begin{equation*}
-	\frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t - e^{-t})}_{\frac{dx}{dt}} 
-						+ \underbrace{(\cos t + \sin t + e^{-t})}_{x} 
+	\frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t - e^{-t})}_{\frac{dx}{dt}}
+						+ \underbrace{(\cos t + \sin t + e^{-t})}_{x}
 					  = 2\cos t .
 \end{equation*}
 Il s'agit bien d'une solution.
 
-Ainsi, plusieurs solutions sont possibles.  Pour cette équation en particulier, toutes les solutions peuvent s'écrire sous la forme 
+Ainsi, plusieurs solutions sont possibles.  Pour cette équation en particulier, toutes les solutions peuvent s'écrire sous la forme
 \begin{equation*}
-	x = \cos t + \sin t + C e^{-t} 
+	x = \cos t + \sin t + C e^{-t}
 \end{equation*}
-pour une constante $C$.  Différentes constantes $C$ donneront des solutions différentes, donc il y a vraiment un nombre infini de solutions possibles.  
-Voir la~\figurevref{intro:plotsfig} pour le graphe de quelques solutions.  
+pour une constante $C$.  Différentes constantes $C$ donneront des solutions différentes, donc il y a vraiment un nombre infini de solutions possibles.
+Voir la~\figurevref{intro:plotsfig} pour le graphe de quelques solutions.
 Nous verrons un peu plus tard comment trouver ces solutions de manière générale.
 
 \medskip
@@ -340,30 +340,30 @@ Nous verrons un peu plus tard comment trouver ces solutions de manière généra
 \caption{Quelques solutions de $\frac{dx}{dt} + x = 2 \cos t$.\label{intro:plotsfig}}
 \end{mywrapfig}%
 
-La résolution d'une équation différentielle peut être très ardue.  Il n'y a pas une méthode générale pour les résoudre toutes. 
-La plupart du temps, nous verrons comment obtenir des formules exactes pour résoudre certaines équations différentielles, 
+La résolution d'une équation différentielle peut être très ardue.  Il n'y a pas une méthode générale pour les résoudre toutes.
+La plupart du temps, nous verrons comment obtenir des formules exactes pour résoudre certaines équations différentielles,
 mais parfois nous n'obtiendrons que des solutions approximatives. De plus, nous passerons un peu de temps à comprendre certaines équations, sans les résoudre.
 
-La majeure partie de ce manuel est dédiée aux 
+La majeure partie de ce manuel est dédiée aux
 \emph{équations différentielles ordinaires\index{ordinary differential equation}},
-ou EDO\index{ODE}, c'est-à-dire aux équations ayant une seule variable indépendante, où les dérivées se prennent en termes de cette unique variable.  
-Lorsqu'il y a plusieurs variables indépendantes, on obtient des 
+ou EDO\index{ODE}, c'est-à-dire aux équations ayant une seule variable indépendante, où les dérivées se prennent en termes de cette unique variable.
+Lorsqu'il y a plusieurs variables indépendantes, on obtient des
 \emph{équations aux dérivées partielles\index{partial differential equation}},
 ou EDP\index{PDE}.
 %We will briefly see these near the
 %end of the course.
 
-Même pour les EDO, qui sont très bien comprises, il ne s'agit pas simplement de tourner une manivelle pour obtenir une réponse.  
-%When you can find exact solutions, they are usually preferable to approximate solutions.  
-C'est important de comprendre comment de telles solutions sont trouvées. 
-Même si, dans la vraie vie, vous laisserez la plupart des calculs à des ordinateurs, vous devez comprendre ce qu'ils font.  
-Il est parfois nécessaire de simplifier ou de transformer votre équation pour que la machine la comprenne et la résolve.  
+Même pour les EDO, qui sont très bien comprises, il ne s'agit pas simplement de tourner une manivelle pour obtenir une réponse.
+%When you can find exact solutions, they are usually preferable to approximate solutions.
+C'est important de comprendre comment de telles solutions sont trouvées.
+Même si, dans la vraie vie, vous laisserez la plupart des calculs à des ordinateurs, vous devez comprendre ce qu'ils font.
+Il est parfois nécessaire de simplifier ou de transformer votre équation pour que la machine la comprenne et la résolve.
 Il vous faudra peut-être même ajouter ou modifier des hypothèses dans votre modèle pour ce faire.
-  
-Pour réussir en génie ou en science, vous aurez à résoudre des problèmes dans votre travail que vous n'aurez jamais vus auparavant, 
-d'où l'importance d'apprendre des techniques de résolution de problèmes, afin d'appliquer ces techniques aux nouveaux problèmes.  
+
+Pour réussir en génie ou en science, vous aurez à résoudre des problèmes dans votre travail que vous n'aurez jamais vus auparavant,
+d'où l'importance d'apprendre des techniques de résolution de problèmes, afin d'appliquer ces techniques aux nouveaux problèmes.
 %Une erreur courante est de s'attendre à une recette qui r\'soudre tous les problèmes que vous rencontrerez.  Ce cours n'est pas une exception.
- 
+
 \subsection{En pratique}
 \begin{myfig}
 \begin{tikzpicture}
@@ -381,32 +381,32 @@ d'où l'importance d'apprendre des techniques de résolution de problèmes, afin
 %\inputpdft{1-1-fig}
 %\diffypdfversion{\par\vspace*{5pt}}
 %\end{mywrapfigsimp}
-Comment utilise-t-on les équations différentielles en science et en génie?  
-On commence avec une \emph{\myindex{situation-problème}} qu'on veut comprendre.  
-À l'aide d'hypothèses supplémentaires pour simplifier le problème, on crée un \emph{\myindex{modèle mathématique}}. 
-Autrement dit, on traduit la situation en équations différentielles.  
-Ensuite, on utilise les mathématiques afin d'obtenir une \emph{\myindex{solution mathématique}}.  
-Mais ce n'est pas fini.  Il faut encore interpréter les résultats: qu'est-ce que la solution mathématique 
+Comment utilise-t-on les équations différentielles en science et en génie?
+On commence avec une \emph{\myindex{situation-problème}} qu'on veut comprendre.
+À l'aide d'hypothèses supplémentaires pour simplifier le problème, on crée un \emph{\myindex{modèle mathématique}}.
+Autrement dit, on traduit la situation en équations différentielles.
+Ensuite, on utilise les mathématiques afin d'obtenir une \emph{\myindex{solution mathématique}}.
+Mais ce n'est pas fini.  Il faut encore interpréter les résultats: qu'est-ce que la solution mathématique
 nous dit à propos de la situation-problème de départ?
 
-Pour ce qui est de formuler le modèle mathématique, et d'interpréter les résultats, vous ferez cela surtout dans vos cours de génie et de science.  
-Dans ce cours-ci, nous nous concentrerons principalement sur l'analyse mathématique.  
+Pour ce qui est de formuler le modèle mathématique, et d'interpréter les résultats, vous ferez cela surtout dans vos cours de génie et de science.
+Dans ce cours-ci, nous nous concentrerons principalement sur l'analyse mathématique.
 Parfois, nous travaillerons avec des exemples réalistes simples afin de développer notre intuition et de motiver les concepts que nous verrons.
 
-Considérons ici un exemple.  Une des équations les plus fondamentales est le \emph{\myindex{modèle de croissance exponentielle}}.  
-Dénotons une population de bactéries par la variable $P$ (plus précisément, $P$ dénote la quantité de population).  
-On suppose que l'environnement contient suffisamment de nutriments et d'espace.  
-Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnelle à la population -- 
-une population plus nombreuse croîtra plus rapidement.  
-Dénotons le temps (en secondes, disons) par la variable $t$.  
-0Notre modèle est alors: 
+Considérons ici un exemple.  Une des équations les plus fondamentales est le \emph{\myindex{modèle de croissance exponentielle}}.
+Dénotons une population de bactéries par la variable $P$ (plus précisément, $P$ dénote la quantité de population).
+On suppose que l'environnement contient suffisamment de nutriments et d'espace.
+Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnelle à la population --
+une population plus nombreuse croîtra plus rapidement.
+Dénotons le temps (en secondes, disons) par la variable $t$.
+0Notre modèle est alors:
 \begin{equation*}
-	\frac{dP}{dt} = kP, 
+	\frac{dP}{dt} = kP,
 \end{equation*}
 où $k > 0$ est une constante.
 
 \begin{example}
-Supposons qu'il y a 100 bactéries au temps 0 et 200 bactéries 10 secondes plus tard.  
+Supposons qu'il y a 100 bactéries au temps 0 et 200 bactéries 10 secondes plus tard.
 Combien aura-t-on de bactéries à une minute (60 secondes) du début?
 
 %mbxSTARTIGNORE
@@ -414,30 +414,30 @@ Combien aura-t-on de bactéries à une minute (60 secondes) du début?
 %
 % Make sure to keep the above and the mbx figure below in sync!
 %
-D'abord, nous devons résoudre l'équation différentielle.  
-Nous affirmons que la fonction suivante est une solution: 
+D'abord, nous devons résoudre l'équation différentielle.
+Nous affirmons que la fonction suivante est une solution:
 \begin{equation*}
-	P(t) = C e^{kt}, 
+	P(t) = C e^{kt},
 \end{equation*}
-où $C$ est une constante.  Vérifions ceci: 
+où $C$ est une constante.  Vérifions ceci:
 \begin{equation*}
 	\frac{dP}{dt} = C k e^{kt} = k P .
 \end{equation*}
 Il s'agit donc bel et bien d'une solution.
 
-Ensuite?  On ne connaît pas la valeur de $C$, ni de $k$.  
-Mais on sait ceci: $P(0) = 100$ et $P(10) = 200$.  
-Substituons ces valeurs dans l'expression et regardons ce que nous obtenons: 
+Ensuite?  On ne connaît pas la valeur de $C$, ni de $k$.
+Mais on sait ceci: $P(0) = 100$ et $P(10) = 200$.
+Substituons ces valeurs dans l'expression et regardons ce que nous obtenons:
 \begin{align*}
 	& 100 = P(0) = C e^{k0} = C ,\\
 	& 200 = P(10) = 100 \, e^{k10} .
 \end{align*}
 Par conséquent, $2 = e^{10k}$ ou $\frac{\ln 2}{10} = k \approx 0,069$.
-Donc: 
+Donc:
 \begin{equation*}
 	P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0,069 t} .
 \end{equation*}
-À une minute, $t=60$, la population est $P(60) = 6400$.  
+À une minute, $t=60$, la population est $P(60) = 6400$.
 Voir la~\figurevref{intro:plotbactfig}.
 \begin{myfig}
 \capstart
@@ -452,53 +452,53 @@ Voir la~\figurevref{intro:plotbactfig}.
 %mbxlatex \caption{Bacteria growth in the first 60 seconds.\label{intro:plotbactfig}}
 %mbxlatex \end{myfig}
 
-Parlons maintenant de l'interprétation de ces résultats.  
-Doit-on penser qu'il y aura exactement 6400 bactéries à 60 secondes? 
-Bien sûr que non.  
-Nous avons fait des hypothèses simplificatrices qui ne seront pas exactement vraies, mais approximativement vraies.  
-Si nos hypothèses sont raisonnables, il y aura environ 6400 bactéries.  
-De plus, $P$ devrait être un nombre entier, puisqu'il compte une quantité de bactéries.  
+Parlons maintenant de l'interprétation de ces résultats.
+Doit-on penser qu'il y aura exactement 6400 bactéries à 60 secondes?
+Bien sûr que non.
+Nous avons fait des hypothèses simplificatrices qui ne seront pas exactement vraies, mais approximativement vraies.
+Si nos hypothèses sont raisonnables, il y aura environ 6400 bactéries.
+De plus, $P$ devrait être un nombre entier, puisqu'il compte une quantité de bactéries.
 Pourtant, notre modèle admet des nombres comme $P(61) \approx 6859,35$.
-%Obviously there 
+%Obviously there
 %are either 6859 bacteria or 6860 bacteria.
 \end{example}
 
-Habituellement, la constante $k$ dans $P' = kP$ est connue, et l'on cherche à résoudre 
-l'équation différentielle pour différentes \emph{conditions initiales\index{initial condition}}.  
-Qu'est-ce que ça veut dire?  
-Prenons $k=1$ pour simplifier les choses.  
-Supposons que nous voulons résoudre l'équation $\frac{dP}{dt} = P$ 
+Habituellement, la constante $k$ dans $P' = kP$ est connue, et l'on cherche à résoudre
+l'équation différentielle pour différentes \emph{conditions initiales\index{initial condition}}.
+Qu'est-ce que ça veut dire?
+Prenons $k=1$ pour simplifier les choses.
+Supposons que nous voulons résoudre l'équation $\frac{dP}{dt} = P$
 avec la condition $P(0) = 1000$ (la condition initiale).
-Alors, la solution est (exercice): 
+Alors, la solution est (exercice):
 \begin{equation*}
 	P(t) = 1000 \, e^t .
 \end{equation*}
 
 On appelle $P(t) = C e^t$ \emph{la \myindex{solution générale}},
-puisque toute solution de l'équation peut s'écrire sous cette forme pour un certain choix de la constante $C$.  
-La condition initiale sert à déterminer $C$, afin de trouver la 
-\emph{\myindex{solution particulière}}.  
+puisque toute solution de l'équation peut s'écrire sous cette forme pour un certain choix de la constante $C$.
+La condition initiale sert à déterminer $C$, afin de trouver la
+\emph{\myindex{solution particulière}}.
 %Generally, when we say \myquote{particular solution,} we just mean some solution.
 
 \subsection{Quatre équations fondamentales} \label{subsection:fourfundamental}
 
-Quelques équations apparaissent fréquemment, et nous pouvons trouver utile de tout simplement apprendre par c{\oe}ur leur solution   
-(nous les verrons aussi de manière plus formelle dans les chapitres suivants).  
-Appelons-les nos \myindex{quatre équations fondamentales}. 
-Leurs solutions sont assez simples à deviner 
-en nous rappelant les propriétés des exponentielles, de sinus et de cosinus.  
-Elles sont aussi plutôt simples à vérifier, ce qu'on devrait toujours faire.  
+Quelques équations apparaissent fréquemment, et nous pouvons trouver utile de tout simplement apprendre par c{\oe}ur leur solution
+(nous les verrons aussi de manière plus formelle dans les chapitres suivants).
+Appelons-les nos \myindex{quatre équations fondamentales}.
+Leurs solutions sont assez simples à deviner
+en nous rappelant les propriétés des exponentielles, de sinus et de cosinus.
+Elles sont aussi plutôt simples à vérifier, ce qu'on devrait toujours faire.
 Comme ça, inutile de se demander si l'on s'est rappelé correctement de la solution.
 
 \medskip
 
-Voici notre première équation fondamentale: 
+Voici notre première équation fondamentale:
 \begin{equation*}
-	\frac{dy}{dx} = k y, 
+	\frac{dy}{dx} = k y,
 \end{equation*}
 où $k > 0$ est une constante.
 Ici, $y$ est la variable dépendante et $x$, la variable indépendante.
-La solution générale de cette équation est: 
+La solution générale de cette équation est:
 \begin{equation*}
 	y(x) = C e^{kx} .
 \end{equation*}
@@ -506,11 +506,11 @@ Nous avons vu ceci dans l'exemple précédent de la croissance exponentielle, m�
 
 \medskip
 
-La deuxième équation s'obtient en modifiant légèrement la première: 
+La deuxième équation s'obtient en modifiant légèrement la première:
 \begin{equation*}
-	\frac{dy}{dx} = -k y, 
+	\frac{dy}{dx} = -k y,
 \end{equation*}
-où $k > 0$ est une constante. La solution générale de cette équation est: 
+où $k > 0$ est une constante. La solution générale de cette équation est:
 \begin{equation*}
 	y(x) = C e^{-kx}.
 \end{equation*}
@@ -519,35 +519,35 @@ où $k > 0$ est une constante. La solution générale de cette équation est:
 	Vérifiez que $y$ est bien une solution à cette équation.
 \end{exercise}
 
-Notre troisième équation fondamentale est une 
-\emph{\myindex{équation différentielle du second ordre}}: 
+Notre troisième équation fondamentale est une
+\emph{\myindex{équation différentielle du second ordre}}:
 \begin{equation*}
-	\frac{d^2y}{{dx}^2} = -k^2 y, 
+	\frac{d^2y}{{dx}^2} = -k^2 y,
 \end{equation*}
-où $k > 0$ est une constante. La solution générale de cette équation est: 
+où $k > 0$ est une constante. La solution générale de cette équation est:
 \begin{equation*}
 	y(x) = C_1 \cos(kx) + C_2 \sin(kx).
 \end{equation*}
-Puisque l'équation est de second ordre, la solution contient deux constantes.
+Puisque l'équation est du second ordre, la solution contient deux constantes.
 
 \begin{exercise}
 	Vérifiez que $y$ est bien une solution à cette équation.
 \end{exercise}
 
-Enfin, considérons l'équation suivante, elle aussi du second ordre : 
+Enfin, considérons l'équation suivante, elle aussi du second ordre:
 \begin{equation*}
-	\frac{d^2y}{{dx}^2} = k^2 y, 
+	\frac{d^2y}{{dx}^2} = k^2 y,
 \end{equation*}
-où $k > 0$ est une constante. La solution générale de cette équation est: 
+où $k > 0$ est une constante. La solution générale de cette équation est:
 \begin{equation*}
-	y(x) = C_1 e^{kx} + C_2 e^{-kx} 
+	y(x) = C_1 e^{kx} + C_2 e^{-kx}
 \end{equation*}
 ou
 \begin{equation*}
 	y(x) = D_1 \cosh(kx) + D_2 \sinh(kx) .
 \end{equation*}
 
-Les fonctions $\cosh$ et $\sinh$ se définissent comme suit
+Les fonctions $\cosh$ and $\sinh$ se définissent comme suit:
 \begin{equation*}
 	\cosh x = \frac{e^{x} + e^{-x}}{2} , \qquad
 	\sinh x = \frac{e^{x} - e^{-x}}{2} .
@@ -555,7 +555,7 @@ Les fonctions $\cosh$ et $\sinh$ se définissent comme suit
 Elles s'appellent respectivement \emph{\myindex{cosinus hyperbolique}}
 et \emph{\myindex{sinus hyperbolique}}.
 Elles sont parfois plus simples à utiliser que les fonctions exponentielles.  Elles ont de jolies propriétés, telles que
-$\cosh 0 = 1$, $\sinh 0 = 0$, $\frac{d}{dx} \cosh x = \sinh x$ 
+$\cosh 0 = 1$, $\sinh 0 = 0$, $\frac{d}{dx} \cosh x = \sinh x$
 (non il n'y a pas de signe moins, ce n'est pas une coquille)
 et $\frac{d}{dx} \sinh x = \cosh x$.
 
@@ -564,12 +564,12 @@ et $\frac{d}{dx} \sinh x = \cosh x$.
 \end{exercise}
 
 \begin{example}
-	Pour les équations d'ordre supérieur, les solutions comportent plus de constantes pour lesquelles 
-	on doit résoudre afin d'obtenir une solution particulière.  
-	L'équation  $\frac{d^2y}{dx^2} = 0$ a pour solution générale $y = C_1 x + C_2$; 
-	il suffit d'intégrer deux fois, sans oublier les constantes d'intégration.  
-	Considérons les conditions initiales $y(0) = 2$ et $y'(0) = 3$.  
-	On substitue ces valeurs dans la solution et l'on obtient: 
+	Pour les équations d'ordre supérieur, les solutions comportent plus de constantes pour lesquelles
+	on doit résoudre afin d'obtenir une solution particulière.
+	L'équation  $\frac{d^2y}{dx^2} = 0$ a pour solution générale $y = C_1 x + C_2$;
+	il suffit d'intégrer deux fois, sans oublier les constantes d'intégration.
+	Considérons les conditions initiales $y(0) = 2$ et $y'(0) = 3$.
+	On substitue ces valeurs dans la solution et l'on obtient:
 	\begin{equation*}
 		2 = y(0) = C_1 \cdot 0 + C_2 = C_2, \qquad
 		3 = y'(0) = C_1 .
@@ -577,12 +577,12 @@ et $\frac{d}{dx} \sinh x = \cosh x$.
 	Ainsi, $y = 3x + 2$ est la solution particulière recherchée.
 \end{example}
 
-Fait intéressant à propos de $\cosh$:  le graphe de $\cosh$ est précisément la forme d'une 
-chaînette pendante (pas d'une parabole, contrairement à ce qu'on pourrait croire).  
+Fait intéressant à propos de $\cosh$:  le graphe de $\cosh$ est précisément la forme d'une
+chaînette pendante (pas d'une parabole, contrairement à ce qu'on pourrait croire).
 Cette forme s'appelle une \emph{\myindex{caténaire}}.
-De plus, le graphe de $\cosh$ offre la forme idéale pour une arche supportant son propre poids; 
-une telle arche de forme parabolique risquerait de s'écrouler.  
-Un exemple célèbre est la  {Gateway Arch} de la ville 
+De plus, le graphe de $\cosh$ offre la forme idéale pour une arche supportant son propre poids;
+une telle arche de forme parabolique risquerait de s'écrouler.
+Un exemple célèbre est la  {Gateway Arch} de la ville
 américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 \begin{equation*}
 	y = -127.7 \; \textrm{ft} \cdot \cosh\left( x /127.7  \; \textrm{ft} \right) + 757.7 \;\textrm{ft} .
@@ -605,8 +605,8 @@ américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 \end{exercise}
 
 \begin{exercise}
-	Considérons $y'' + 2y' - 8y = 0$.  
-	Essayez une solution de la forme $y = e^{rx}$ pour une constante (à déterminer) $r$.  
+	Considérons $y'' + 2y' - 8y = 0$.
+	Essayez une solution de la forme $y = e^{rx}$ pour une constante (à déterminer) $r$.
 	Existe-il une valeur de $r$ qui donne une solution? Si oui, trouvez toutes les valeurs possibles de $r$.
 \end{exercise}
 
@@ -616,7 +616,7 @@ américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 \end{exercise}
 
 \begin{exercise}
-	Vérifiez que $x = C_1 e^{-t} + C_2 e^{2t}$ est une solution de $x'' - x' -2 x =	0$.  
+	Vérifiez que $x = C_1 e^{-t} + C_2 e^{2t}$ est une solution de $x'' - x' -2 x =	0$.
 	Trouvez $C_1$ et $C_2$ satisfaisant les conditions initiales $x(0) = 10$
 	et $x'(0) = 0$.
 \end{exercise}
@@ -628,7 +628,7 @@ américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 \end{exercise}
 
 \begin{exercise}
-	Résolvez 
+	Résolvez
 	\begin{tasks}(2)
 		\task $\dfrac{dA}{dt} = -10 A, \quad A(0)=5$
 		\task $\dfrac{dH}{dx} = 3 H, \quad H(0)=1$
@@ -642,14 +642,14 @@ américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 \end{exercise}
 
 \begin{exercise}
-	La population de la ville X était 100 000 il y a 20 ans, et 120 000 il y a 10 ans.  
-	Si on suppose une croissance continue, on peut utiliser le modèle de croissance exponentielle 
+	La population de la ville X était 100~000 il y a 20 ans, et 120~000 il y a 10 ans.  
+	Si on suppose une croissance continue, on peut utiliser le modèle de croissance exponentielle
 	(comme pour une population de bactéries). À combien estimez-vous la population actuelle maintenant?
 \end{exercise}
 
 \begin{exercise}
-	Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million $\$$, 
-	et qu'il a une augmentation salariale de $10\%$ chaque année (donc modèle de croissance exponentielle, comme les bactéries).  
+	Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million $\$$,
+	et qu'il a une augmentation salariale de $10\%$ chaque année (donc modèle de croissance exponentielle, comme les bactéries).
 	Dénotons par $s$ le salaire en millions de dollars, et $t$ le temps en années.
 	\begin{tasks}(2)
 	\task Trouvez $s(0)$ et $s(1)$.
@@ -685,8 +685,8 @@ américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 }
 
 \begin{exercise}
-	Soit $xy'' - y' = 0$.  Essayez une solution de la forme $y = x^r$.  
-	Existe-t-il une valeur de $r$ qui donne une solution?  
+	Soit $xy'' - y' = 0$.  Essayez une solution de la forme $y = x^r$.
+	Existe-t-il une valeur de $r$ qui donne une solution?
 	Si oui, trouvez toutes les valeurs possibles de $r$.
 \end{exercise}
 \exsol{%
@@ -695,7 +695,7 @@ américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 
 
 \begin{exercise}
-	Vérifiez que $x=C_1e^t+C_2$ est une solution de $x''-x' = 0$.  
+	Vérifiez que $x=C_1e^t+C_2$ est une solution de $x''-x' = 0$.
 	Trouvez $C_1$ et $C_2$ telles que $x(0) = 10$ et $x'(0) = 100$.
 \end{exercise}
 \exsol{%
@@ -733,15 +733,15 @@ américaine de Saint-Louis, dont la formule est inscrite dans la structure:
 
 %%Perhaps no [EP] ref?
 %\sectionnotes{less than 1 lecture or left as reading\BDref{, \S1.3 in \cite{BD}}}
-Il y a plusieurs types d'équations différentielles, et on les classifie en différentes catégories selon leurs propriétés.  
+Il y a plusieurs types d'équations différentielles, et on les classifie en différentes catégories selon leurs propriétés.
 Parlons brièvement d'une classification de base.  D'abord, la distinction entre EDO et EDP:
 \begin{itemize}
 \item
-	Dans les \emph{équations différentielles ordinaires}\index{Équations différentielles ordinaires}\index{EDO}, ou EDO, 
+	Dans les \emph{équations différentielles ordinaires}\index{Équations différentielles ordinaires}\index{EDO}, ou EDO,
 	les dérivées sont prises par rapport à une seule variable.  Autrement dit, il y a une seule variable indépendante.
 
 \item
-	Dans les \emph{équations aux dérivées partielles}\index{Équations aux dérivées partielles}\index{EDP}, ou EDP, 
+	Dans les \emph{équations aux dérivées partielles}\index{Équations aux dérivées partielles}\index{EDP}, ou EDP,
 	les dérivées sont prises par rapport à plusieurs variables.  Autrement dit, il y a plusieurs variables indépendantes.
 \end{itemize}
 
@@ -754,17 +754,17 @@ Voici quelques exemples d'équations différentielles ordinaires:
 \end{align*}
 Voici quelques exemples d'équations aux dérivées partielles:
 \begin{align*}
-	& \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0 & & 
+	& \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0 & &
 		\text{(équation du transport\index{Équation du transport})} \\
-	& \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}  & & 
+	& \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}  & &
 		\text{(équation de la chaleur ou de la diffusion\index{Équation de la chaleur/diffusion})} \\
-	& \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} . & & 
+	& \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} . & &
 		\text{(équation de l'onde en 2 dimensions\index{Équation de l'onde en deux dimensions})}
 \end{align*}
 
 Lorsque la situation est soumise à plusieurs équations en même temps, on a un
-\emph{\myindex{système d'équations différentielles}}.  
-Par exemple: 
+\emph{\myindex{système d'équations différentielles}}.
+Par exemple:
 \begin{equation*}
 	y' = x , \qquad x' = y
 \end{equation*}
@@ -775,66 +775,66 @@ Les \myindex{équations de Maxwell} en électromagnétisme forment elles aussi u
 	& \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} &
 	& \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} .
 \end{align*}
-Les opérateurs de divergence $\nabla \cdot$ et de rotationnel $\nabla \times$ 
+Les opérateurs de divergence $\nabla \cdot$ et de rotationnel $\nabla \times$
 s'écrivent en termes de dérivées partielles des fonctions en termes des variables $x$, $y$ et $z$ .
 
 \medskip
 
-Le prochain élément d'information est l'\emph{\myindex{ordre}} de l'équation (ou du système).   
-L'ordre est tout simplement l'ordre de la plus grande dérivée apparaissant dans l'équation.  
-Si la plus grande dérivée est la dérivée première, c'est une équation du premier ordre.  
-Si la dérivée la plus grande est la dérivée seconde, alors c'est une équation du deuxième ordre.  
-Par exemple, la loi de refroidissement de Newton est une équation du premier ordre, 
-alors que l'équation des vibrations mécaniques est une équation du deuxième ordre.  
-L'équation décrivant les vibrations transversales dans une poutre, 
+Le prochain élément d'information est l'\emph{\myindex{ordre}} de l'équation (ou du système).
+L'ordre est tout simplement l'ordre de la plus grande dérivée apparaissant dans l'équation.
+Si la plus grande dérivée est la dérivée première, c'est une équation du premier ordre.
+Si la dérivée la plus grande est la dérivée seconde, alors c'est une équation du deuxième ordre.
+Par exemple, la loi de refroidissement de Newton est une équation du premier ordre,
+alors que l'équation des vibrations mécaniques est une équation du deuxième ordre.
+L'équation décrivant les vibrations transversales dans une poutre,
 \begin{equation*}
 	a^4 \frac{\partial^4 y}{\partial x^4} + \frac{\partial^2 y}{\partial t^2} = 0,
 \end{equation*}
-est une équation aux dérivées partielles d'ordre quatre.  
-En effet, une des dérivées dans l'équation est la quatrième dérivée.  
+est une équation aux dérivées partielles d'ordre quatre.
+En effet, une des dérivées dans l'équation est la quatrième dérivée.
 Le fait que la dérivée en $t$ soit seulement d'ordre deux n'affecte pas l'ordre de l'équation.
 
-Dans le premier chapitre, nous commencerons par les équations différentielles ordinaires du premier ordre, 
-c'est-à-dire les équations de la forme $\frac{dy}{dx} = f(x,y)$.  
+Dans le premier chapitre, nous commencerons par les équations différentielles ordinaires du premier ordre,
+c'est-à-dire les équations de la forme $\frac{dy}{dx} = f(x,y)$.
 En général, les équations de petit ordre sont plus simples à résoudre et à étudier.
 
 \medskip
 
-Dans la classification des équations, on s'intéresse aussi à comment les variables dépendantes 
-apparaissent dans l'équation (ou le système).  
-En particulier, on l'appelle une \emph{équation linéaire}\index{linear equation} 
-si la variable dépendante (ou les variables dépendantes) et ses dérivées apparaissent linéairement,  
-c'est-à-dire qu'elles ne sont pas multipliées ensemble et qu'aucune autre fonction des variables dépendantes n'apparaît dans l'équation.  
-Sinon, il s'agit d'une équation \emph{non linéaire}\index{nonlinear equation}.  
-Une EDO est linéaire si elle peut être exprimée de la manière suivante: 
+Dans la classification des équations, on s'intéresse aussi à comment les variables dépendantes
+apparaissent dans l'équation (ou le système).
+En particulier, on l'appelle une \emph{équation linéaire}\index{linear equation}
+si la variable dépendante (ou les variables dépendantes) et ses dérivées apparaissent linéairement,
+c'est-à-dire qu'elles ne sont pas multipliées ensemble et qu'aucune autre fonction des variables dépendantes n'apparaît dans l'équation.
+Sinon, il s'agit d'une équation \emph{non linéaire}\index{nonlinear equation}.
+Une EDO est linéaire si elle peut être exprimée de la manière suivante:
 \begin{equation} \label{classification:eqlingen}
-a_n(x) \frac{d^n y}{dx^n} 
-	+ a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} 
+a_n(x) \frac{d^n y}{dx^n}
+	+ a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}}
 	+ \cdots
-	+ a_{1}(x) \frac{dy}{dx} 
-	+ a_{0}(x) y 
+	+ a_{1}(x) \frac{dy}{dx}
+	+ a_{0}(x) y
 	= b(x) *.
 \end{equation}
 Les fonctions $a_0$, $a_1$, \ldots, $a_n$ s'appellent les \emph{\myindex{coefficients}}.
-L'équation peut dépendre arbitrairement de la variable indépendante.  
+L'équation peut dépendre arbitrairement de la variable indépendante.
 Ainsi, l'équation suivante est linéaire:
 \begin{equation} \label{classification:eqlinex}
 	e^x \frac{d^2 y}{dx^2} + \sin(x) \frac{d y}{dx} +  x^2 y = \frac{1}{x},
 \end{equation}
 et ce, malgré la présence de $e^x$ et de $\sin(x)$, puisque $y$ et ses dérivées apparaissent de manière linéaire dans l'équation.
 
-Tous les exemples mentionnés au début de la section sont linéaires.  
-Ce n'est peut-être pas évident dans le cas des équations de Maxwell; 
-pour s'en convaincre, on peut écrire la divergence et le rotationnel en termes des dérivées partielles. 
+Tous les exemples mentionnés au début de la section sont linéaires.
+Ce n'est peut-être pas évident dans le cas des équations de Maxwell;
+pour s'en convaincre, on peut écrire la divergence et le rotationnel en termes des dérivées partielles.
 
-Considérons maintenant quelques équations non linéaires.  
-Par exemple, l'équation de \myindex{Burger}, 
+Considérons maintenant quelques équations non linéaires.
+Par exemple, l'équation de \myindex{Burger},
 \begin{equation*}
-	\frac{\partial y}{\partial t} +  \frac{\partial y}{\partial x} 
-	= \nu \frac{\partial^2 y}{\partial x^2}, 
+	\frac{\partial y}{\partial t} +  \frac{\partial y}{\partial x}
+	= \nu \frac{\partial^2 y}{\partial x^2},
 \end{equation*}
-est une EDP du second ordre, qui est non linéaire puisque $y$ et $\frac{\partial y}{\partial x}$ sont multipliés ensemble.
-L'équation suivante: 
+est une EDP du second ordre, qui est non linéaire, puisque $y$ et $\frac{\partial y}{\partial x}$ sont multipliés ensemble.
+L'équation suivante:
 \begin{equation} \label{classification:eqnonlinode}
 	\frac{dx}{dt} = x^2,
 \end{equation}
@@ -842,64 +842,62 @@ est une EDO non linéaire du premier ordre, puisque la variable dépendante $x$ 
 
 \medskip
 
-Une équation qui est linéaire est de plus appelée \emph{\myindex{homogène}} 
-si tous les termes dépendent de la variable dépendante.  
-Autrement dit, il n'y a aucun terme qui dépend uniquement de la variable indépendante.  
-Sinon, l'équation est dite \emph{\myindex{non homogène}}.  
-Par exemple, l'équation de la croissance exponentielle, l'équation de l'onde et l'équation du transport sont homogènes.  
-L'équation des vibrations mécaniques est non homogène à moins que $f(t)$ soit la fonction nulle.  
+Une équation qui est linéaire est de plus appelée \emph{\myindex{homogène}}
+si tous les termes dépendent de la variable dépendante.
+Autrement dit, il n'y a aucun terme qui dépend uniquement de la variable indépendante.
+Sinon, l'équation est dite \emph{\myindex{non homogène}}.
+Par exemple, l'équation de la croissance exponentielle, l'équation de l'onde et l'équation du transport sont homogènes.
+L'équation des vibrations mécaniques est non homogène à moins que $f(t)$ soit la fonction nulle.
 De manière analogue, la loi de refroidissement de Newton est non homogène sauf si la température ambiante $A$ est nulle.
-Une EDO linéaire homogène peut être écrite sous la forme suivante: 
+Une EDO linéaire homogène peut être écrite sous la forme suivante:
 \begin{equation*}
-a_n(x) \frac{d^n y}{dx^n} + 
-a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + 
-\cdots
-+
-a_{1}(x) \frac{dy}{dx}
-+
-a_{0}(x) y = 0 .
+a_n(x) \frac{d^n y}{dx^n}
+	+ a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}}
+	+ \cdots
+	+ a_{1}(x) \frac{dy}{dx}
+	+ a_{0}(x) y = 0 .
 \end{equation*}
 Comparez à \eqref{classification:eqlingen} et observez l'absence de fonction $b(x)$.
 
 \medskip
 
-Lorsque les coefficients d'une équation linéaire sont en fait des constantes, 
+Lorsque les coefficients d'une équation linéaire sont en fait des constantes,
 on dit alors que l'équation est à \emph{coefficients constants}\index{constant coefficient}.
-Les coefficients sont les fonctions multipliées par la variable dépendante ou par une de ses dérivées, 
+Les coefficients sont les fonctions multipliées par la variable dépendante ou par une de ses dérivées,
 et non la fonction $b(x)$ qui apparaît seule.
-Une EDO non homogène à coefficients constants a la forme suivante: 
+Une EDO non homogène à coefficients constants a la forme suivante:
 \begin{equation*}
-	a_n \frac{d^n y}{dx^n} 
-		+ a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} 
+	a_n \frac{d^n y}{dx^n}
+		+ a_{n-1} \frac{d^{n-1} y}{dx^{n-1}}
 		+ \cdots
 		+ a_{1} \frac{dy}{dx}
-		+ a_{0} y 
-		= b(x), 
+		+ a_{0} y
+		= b(x),
 \end{equation*}
-où $a_0, a_1, \ldots, a_n$ sont toutes des constantes, mais où 
+où $a_0, a_1, \ldots, a_n$ sont toutes des constantes, mais où
 $b$ peut dépendre de la variable indépendante $x$.
-L'équation des vibrations mécaniques que nous avons vue plus haut est une 
-EDO non homogène du second ordre à coefficients constants.  
+L'équation des vibrations mécaniques que nous avons vue plus haut est une
+EDO non homogène du second ordre à coefficients constants.
 
-La même nomenclature s'applique aux EDP.  
-Par conséquent, les équations du transport, de la chaleur/diffusion et 
+La même nomenclature s'applique aux EDP.
+Par conséquent, les équations du transport, de la chaleur/diffusion et
 de l'onde sont toutes des EDP linéaires à coefficients constants.
 
 \medskip
 
 Pour terminer, une équation est dite \emph{\myindex{autonome}}
- si l'équation ne dépend pas de la variable indépendante.  
- Pour des EDO autonomes, on pensera souvent à la variable indépendante comme à la variable du temps.  
- Être une équation autonome signifie que l'équation ne varie pas dans le temps.  
- Par exemple, la loi de refroidissement de Newton est autonome, ainsi que l'équation \eqref{classification:eqnonlinode}.  
+ si l'équation ne dépend pas de la variable indépendante.
+ Pour des EDO autonomes, on pensera souvent à la variable indépendante comme à la variable du temps.
+ Être une équation autonome signifie que l'équation ne varie pas dans le temps.
+ Par exemple, la loi de refroidissement de Newton est autonome, ainsi que l'équation \eqref{classification:eqnonlinode}.
  Par contre, les équations de vibrations mécaniques ou \eqref{classification:eqlinex} ne sont pas autonomes.
 
 \subsection{Exercices}
 
 \begin{exercise}
-	Classifiez les équations suivantes. S'agit-il d'une EDO ou d'une EDP?  
-	Est-ce une équation ou un système?  Quel est l'ordre?  
-	Est-ce linéaire ou non-linéaire et si c'est linéaire, est-ce homogène? 
+	Classifiez les équations suivantes. S'agit-il d'une EDO ou d'une EDP?
+	Est-ce une équation ou un système?  Quel est l'ordre?
+	Est-ce linéaire ou non-linéaire et si c'est linéaire, est-ce homogène?
 	à coefficients constants?  Si c'est une EDO, est-elle autonome?
 	\begin{tasks}(2)
 	\task $\displaystyle \sin(t) \frac{d^2 x}{dt^2} + \cos(t) x = t^2$
@@ -914,35 +912,35 @@ Pour terminer, une équation est dite \emph{\myindex{autonome}}
 \begin{exercise}
 Si $\vec{u} = (u_1,u_2,u_3)$ est un vecteur, sa divergence est:
 $\nabla \cdot \vec{u} =
-	\frac{\partial u_1}{\partial x} 
-	+ \frac{\partial u_2}{\partial y} 
-	+ \frac{\partial u_3}{\partial z}$ et son rotationnel est: 
+	\frac{\partial u_1}{\partial x}
+	+ \frac{\partial u_2}{\partial y}
+	+ \frac{\partial u_3}{\partial z}$ et son rotationnel est:
 	$\nabla \times \vec{u} =
 		\Bigl(	\frac{\partial u_3}{\partial y} - \frac{\partial u_2}{\partial z} , ~
 				\frac{\partial u_1}{\partial z} - \frac{\partial u_3}{\partial x} , ~
 				\frac{\partial u_2}{\partial x} - \frac{\partial u_1}{\partial y} \Bigr)$.
-Observez que le rotationnel d'un vecteur est lui-même un vecteur.  
+Observez que le rotationnel d'un vecteur est lui-même un vecteur.
 écrivez les équations de Maxwell en termes de dérivées partielles et classifiez le système.
 \end{exercise}
 
 \begin{exercise}
-	Supposons que $F$ est une fonction linéaire, c'est-à-dire que $F(x,y) = ax+by$ 
+	Supposons que $F$ est une fonction linéaire, c'est-à-dire que $F(x,y) = ax+by$
 	pour des constantes $a$ et $b$.  Classifiez les équations de la forme $F(y',y) = 0$.
 \end{exercise}
 
 \begin{exercise}
-	Trouvez un exemple explicite d'un système de deux EDO satisfaisant les critères suivants: 
-	d'ordre trois, non autonome, non homogène, dont les coefficients sont non constants, 
+	Trouvez un exemple explicite d'un système de deux EDO satisfaisant les critères suivants:
+	d'ordre trois, non autonome, non homogène, dont les coefficients sont non constants,
 	et tel que toutes les dérivées possibles apparaissent dans le système au moins une fois.
 \end{exercise}
 
 \setcounter{exercise}{100}
 
 \begin{exercise}
-	Classifiez les équations suivantes. S'agit-il d'une EDO ou d'une EDP?  
-	Est-ce une équation ou un système?  Quel est l'ordre?  
-	Est-ce linéaire ou non-linéaire et si c'est linéaire, est-ce homogène? 
-	À coefficients constants?  
+	Classifiez les équations suivantes. S'agit-il d'une EDO ou d'une EDP?
+	Est-ce une équation ou un système?  Quel est l'ordre?
+	Est-ce linéaire ou non-linéaire et si c'est linéaire, est-ce homogène?
+	À coefficients constants?
 	Si c'est une EDO, est-elle autonome?
 	\begin{tasks}(2)
 	\task $\displaystyle \frac{\partial^2 v}{\partial x^2} + 3 \frac{\partial^2 v}{\partial y^2} = \sin(x)$
@@ -958,12 +956,12 @@ Observez que le rotationnel d'un vecteur est lui-même un vecteur.
 	b) EDO\@, équation, premier ordre, linéaire, non homogène, coefficients non constants, non autonome.\\
 	c) EDO\@, équation, ordre sept, linéaire, homogène, coefficients constants, autonome.\\
 	d) EDO\@, équation, deuxième ordre, linéaire, non homogène, coefficients constants, autonome.\\
-	e) EDO\@,système, deuxième ordre, non linéaire.\\
+	e) EDO\@, système, deuxième ordre, non linéaire.\\
 	f) EDP\@, équation,  deuxième ordre, non linéaire.
 }
 
 \begin{exercise}
-	Écrivez la forme générale de l'équation différentielle ordinaire d'ordre \emph{zero} et linéaire.  
+	Écrivez la forme générale de l'équation différentielle ordinaire d'ordre \emph{zero} et linéaire.
 	Trouvez sa solution générale.
 \end{exercise}
 \exsol{%
@@ -971,7 +969,7 @@ Observez que le rotationnel d'un vecteur est lui-même un vecteur.
 }
 
 \begin{exercise}
-	Pour quelles valeurs de $k$ l'équation $\frac{dx}{dt}+x^k = t^{k+2}$ est-elle linéaire?  
+	Pour quelles valeurs de $k$ l'équation $\frac{dx}{dt}+x^k = t^{k+2}$ est-elle linéaire?
 	Indice: il y a deux valeurs possibles.
 \end{exercise}
 \exsol{%
