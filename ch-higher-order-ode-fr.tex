@@ -9,40 +9,40 @@
 %first part of \S3.1 in \cite{EP}}\BDref{,
 %parts of \S3.1 and \S3.2 in \cite{BD}}}
 
-Nous abordons maintenant l'\emph{\myindex{équation différentielle linéaire de deuxième ordre}}:
+Nous abordons maintenant l'\emph{\myindex{équation différentielle linéaire du deuxième ordre}}:
 \begin{equation*}
-A(x) y'' + B(x)y' + C(x)y = F(x) .
+	A(x) y'' + B(x)y' + C(x)y = F(x) .
 \end{equation*}
-En divisant par $A(x)$ on obtient : 
+En divisant par $A(x)$, on obtient : 
 \begin{equation} \label{sol:eqlin}
-y'' + p(x)y' + q(x)y = f(x) ,
+	y'' + p(x)y' + q(x)y = f(x) ,
 \end{equation}
-où $p(x) = \nicefrac{B(x)}{A(x)}$, $q(x) = \nicefrac{C(x)}{A(x)}$, et
-$f(x) = \nicefrac{F(x)}{A(x)}$.
-Le terme \emph{linéaire\index{linear equation}} signifie que l'équation ne contient aucune puissance ni fonction de $y$, $y'$, ou $y''$.
+où $p(x) = \nicefrac{B(x)}{A(x)}$, $q(x) = \nicefrac{C(x)}{A(x)}$ 
+et $f(x) = \nicefrac{F(x)}{A(x)}$.
+Le terme \emph{linéaire\index{linear equation}} signifie que l'équation ne contient aucune puissance ni fonction de $y$, $y'$ ou $y''$.
 
-Dans le cas particulier où $f(x) = 0$:
-%
+Dans le cas particulier où $f(x) = 0$,
 \begin{equation} \label{sol:eqlinhom}
-y'' + p(x)y' + q(x)y = 0 .
+	y'' + p(x)y' + q(x)y = 0 .
 \end{equation}
-l'équation est dite 
-\emph{homogène\index{homogeneous linear equation}}.  On a déjà vu quelques équations linéaires homogènes de deuxième ordre:
+l'équation est dite \emph{homogène\index{homogeneous linear equation}}. 
+On a déjà vu quelques équations linéaires homogènes du deuxième ordre.
 \begin{align*}
-\qquad y'' + k^2 y & = 0 &
-& \text{Les deux solutions sont:} \quad y_1 = \cos (kx), \quad y_2 = \sin(kx) . \qquad \\
-\qquad y'' - k^2 y & = 0 &
-& \text{Les deux solutions sont:} \quad y_1 = e^{kx}, \quad y_2 = e^{-kx} . \qquad
+	\qquad y'' + k^2 y & = 0. &
+	& \text{Les deux solutions sont:} \quad y_1 = \cos (kx), \quad y_2 = \sin(kx) . \qquad \\
+	\qquad y'' - k^2 y & = 0. &
+	& \text{Les deux solutions sont:} \quad y_1 = e^{kx}, \quad y_2 = e^{-kx} . \qquad
 \end{align*}
 
 Si l'on connait deux solutions de l'équation linéaire homogène, on connait beaucoup plus que celles-ci.
 
 \begin{theorem}[Superposition]\index{superposition}
-Supposons que $y_1$ et $y_2$ sont deux solutions de l'équation homogène~\eqref{sol:eqlinhom}.  Alors:
-\begin{equation*}
-y(x) = C_1 y_1(x) + C_2 y_2(x) ,
-\end{equation*}
-est aussi une solution de~\eqref{sol:eqlinhom}, pour des contantes arbitraires $C_1$ et $C_2$.
+	Supposons que $y_1$ et $y_2$ sont deux solutions de l'équation homogène~\eqref{sol:eqlinhom}.  
+	Alors,
+	\begin{equation*}
+		y(x) = C_1 y_1(x) + C_2 y_2(x) ,
+	\end{equation*}
+	est aussi une solution de~\eqref{sol:eqlinhom}, pour des contantes arbitraires $C_1$ et $C_2$.
 \end{theorem}
 
 On peut additionner les constantes et les multiplier par des constantes pour obtenir des solutions nouvelles et différentes.  L'expression $C_1 y_1 + C_2 y_2$ s'appelle une
@@ -55,46 +55,42 @@ Prouvons ce théorème, puisque la preuve permet de mieux comprendre le fonction
 Soit 
 $y = C_1 y_1 + C_2 y_2$. \\
 Alors,
-\begin{equation*}
-\begin{split}
-y'' + py' + qy & =
-(C_1 y_1 + C_2 y_2)'' + p(C_1 y_1 + C_2 y_2)' + q(C_1 y_1 + C_2 y_2) \\
-& = C_1 y_1'' + C_2 y_2'' + C_1 p y_1' + C_2 p y_2' + C_1 q y_1 + C_2 q y_2 \\
-& = C_1 ( y_1'' + p y_1' + q y_1 ) + C_2 ( y_2'' + p y_2' + q y_2 ) \\
-& = C_1 \cdot 0 + C_2 \cdot 0 = 0 . \qed
-\end{split}
-\end{equation*}
+\begin{align*}
+y'' + py' + qy & =	(C_1 y_1 + C_2 y_2)'' + p(C_1 y_1 + C_2 y_2)' + q(C_1 y_1 + C_2 y_2) \\
+				& = C_1 y_1'' + C_2 y_2'' + C_1 p y_1' + C_2 p y_2' + C_1 q y_1 + C_2 q y_2 \\
+				& = C_1 ( y_1'' + p y_1' + q y_1 ) + C_2 ( y_2'' + p y_2' + q y_2 ) \\
+				& = C_1 \cdot 0 + C_2 \cdot 0 = 0 . \qed
+\end{align*}
 
 \medskip
 
 La preuve devient plus claire avec l'utilisation d'un opérateur.
-Un \emph{\myindex{opérateur}} est un objet prenant pour entrée des fonctions et redonnant en sortie des fonctions (ça ressemble à la fonction qui, elle, prend en entrée des nombres et donne en sortie des nombres).
+Un \emph{\myindex{opérateur}} est un objet prenant pour entrée des fonctions et redonnant en sortie des fonctions (ça ressemble à la fonction qui, elle, prend pour entrée des nombres et donne en sortie des nombres).
 Définissons $L$ tel que: 
 \begin{equation*}
-Ly = y'' + py' + qy .
+	Ly = y'' + py' + qy .
 \end{equation*}
 L'équation différentielle est alors: $Ly=0$.
 Dire qu'un opérateur (ou une équation)
 $L$ est  \emph{linéaire}\index{linear operator} implique que $L(C_1y_1 + C_2y_2) = 
 C_1 Ly_1 + C_2 Ly_2$.  La preuve faite précédemment devient moins lourde :
 \begin{equation*}
-Ly = L(C_1y_1 + C_2y_2) = 
-C_1 Ly_1 + C_2 Ly_2 = C_1 \cdot 0 + C_2 \cdot 0 = 0 .
+	Ly = L(C_1y_1 + C_2y_2) = 	C_1 Ly_1 + C_2 Ly_2 = C_1 \cdot 0 + C_2 \cdot 0 = 0 .
 \end{equation*}
 
 \medskip
 
-Le principe de superposition nous dit entre autres que $y_1 = \cosh (kx)$ et $y_2 = \sinh (kx)$ sont aussi des solutions de l'équation $y'' - k^2y = 0$.  Pour s'en convaincre, rappelons d'abord la définition de ces deux fonctions:
+Le principe de superposition nous dit entre autres que $y_1 = \cosh (kx)$ et $y_2 = \sinh (kx)$ sont aussi des solutions de l'équation $y'' - k^2y = 0$.  Pour nous en convaincre, rappelons d'abord la définition de ces deux fonctions:
 \begin{align*}
-\cosh x & = \frac{e^x  + e^{-x}}{2} \\
-\sinh x  & = \frac{e^x - e^{-x}}{2}.
+	\cosh x & = \frac{e^x  + e^{-x}}{2} \\
+	\sinh x  & = \frac{e^x - e^{-x}}{2}.
 \end{align*}
 
 Donc, ce sont des solutions par superposition puisqu'elles sont des combinaisons linéaires des solutions $e^x$ et $e^{-x}$.   Les fonctions $\sinh$ et $\cosh$ sont parfois plus simples à utiliser.  Rappelons quelques-unes de leurs propriétés:
 \begin{align*}
-& \cosh 0  = 1 , &   & \sinh 0 = 0 , \\
-& \frac{d}{dx} \Bigl[ \cosh x \Bigr] = \sinh x , &  & \frac{d}{dx} \Bigl[ \sinh x \Bigr] = \cosh x , \\
-& \cosh^2 x - \sinh^2 x = 1 .
+	& \cosh 0  = 1 , &   & \sinh 0 = 0 , \\
+	& \frac{d}{dx} \Bigl[ \cosh x \Bigr] = \sinh x , &  & \frac{d}{dx} \Bigl[ \sinh x \Bigr] = \cosh x , \\
+	& \cosh^2 x - \sinh^2 x = 1 .
 \end{align*}
 
 
@@ -106,30 +102,29 @@ et $\cosh$.
 Quant aux questions de l'existence et de l'unicité, les équations linéaires offrent des réponses simples.
 
 \begin{theorem}[Existence et unicité]\index{existence and uniqueness}
-Supposons que $p, q, f$ sont des fonctions continues sur un intervalle
-$I$, que $a$ est un nombre appartenant à $I$,
-et que $a, b_0, b_1$ sont constantes.
-L'équation suivante: 
-\begin{equation*}
-y'' + p(x) y' + q(x) y = f(x) 
-\end{equation*}
-admet exactement une solution $y(x)$, définie sur le même intervalle $I$, et satisfaisant les conditions initiales: 
-\begin{equation*}
-y(a) = b_0 , \qquad y'(a) = b_1 .
-\end{equation*}
+	Supposons que $p, q, f$ sont des fonctions continues sur un intervalle
+	$I$, que $a$ est un nombre appartenant à $I$ et que $a, b_0, b_1$ sont constantes.
+	L'équation suivante,  
+	\begin{equation*}
+		y'' + p(x) y' + q(x) y = f(x),
+	\end{equation*}
+	admet exactement une solution $y(x)$, définie sur le même intervalle $I$, et satisfaisant aux conditions initiales: 
+	\begin{equation*}
+		y(a) = b_0 , \qquad y'(a) = b_1 .
+	\end{equation*}
 \end{theorem}
 
-Par exemple, l'équation $y'' + k^2 y = 0$, avec conditions initiales $y(0) = b_0$ et $y'(0) = b_1$,
-admet la solution suivante: 
+Par exemple, l'équation $y'' + k^2 y = 0$, avec les conditions initiales $y(0) = b_0$ et $y'(0) = b_1$,
+admet la solution suivante, 
 \begin{equation*}
-y(x) = b_0 \cos (kx) + \frac{b_1}{k} \sin (kx) 
+	y(x) = b_0 \cos (kx) + \frac{b_1}{k} \sin (kx),  
 \end{equation*}
 et cette solution est unique, par le théorème.
 
-L'équation $y'' - k^2 y = 0$, avec conditions initiales $y(0) = b_0$ et $y'(0) = b_1$,
+L'équation $y'' - k^2 y = 0$, avec les conditions initiales $y(0) = b_0$ et $y'(0) = b_1$,
 admet la solution suivante:
 \begin{equation*}
-y(x) = b_0 \cosh (kx) + \frac{b_1}{k} \sinh (kx) .
+	y(x) = b_0 \cosh (kx) + \frac{b_1}{k} \sinh (kx) .
 \end{equation*}
 
 Avec les conditions initiales données, le recours aux fonctions $\cosh(x)$ et $\sinh(x)$  permet de résoudre l'équation d'une manière plus propre qu'en prenant une combinaison linéaire de $e^x$ et $e^{-x}$.
@@ -138,18 +133,18 @@ Avec les conditions initiales données, le recours aux fonctions $\cosh(x)$ et $
 
 Les conditions initiales pour une équation différentielle ordinaire comprennent deux équations. Le bon sens suggère que si l'on a deux constantes arbitraires et deux équations, alors on devrait être capable de résoudre l'équation pour les constantes et de trouver une solution à l'équation différentielle satisfaisant aux conditions initiales. 
 
-\emph{Question:} Supposons qu'on ait trouvé deux solutions distinctes $y_1$ et $y_2$ à l'équation homogène~\eqref{sol:eqlinhom}.  Est-ce que toutes les solutions peuvent s'écrire sous la forme suivante:
+\emph{Question:} Supposons qu'on a trouvé deux solutions distinctes $y_1$ et $y_2$ à l'équation homogène~\eqref{sol:eqlinhom}.  Est-ce que toutes les solutions peuvent s'écrire sous la forme suivante:
 %
 \begin{equation*}
-y = C_1 y_1 + C_2 y_2?
+y = C_1 y_1 + C_2 y_2\,?
 \end{equation*}
 %
-La réponse est oui, à condition que $y_1$ et $y_2$ sont des solutions suffisamment différentes dans le sens suivant.  Disons que $y_1$ et $y_2$ sont \emph{\myindex{linéairement indépendantes}} si l'une n'est pas un multiple de l'autre.
+La réponse est oui, à condition que $y_1$ et $y_2$ soient des solutions suffisamment différentes dans le sens suivant.  Disons que $y_1$ et $y_2$ sont \emph{\myindex{linéairement indépendantes}} si l'une n'est pas un multiple de l'autre.
 
 \begin{theorem}
-Soient $p, q$ des fonctions continues.
-Soient $y_1$ et $y_2$ deux solutions linéairement indépendantes à l'équation homogène \eqref{sol:eqlinhom}. 
-Alors toutes les solutions sont de la forme 
+Soit $p, q$ des fonctions continues.
+Soit $y_1$ et $y_2$ deux solutions linéairement indépendantes de l'équation homogène \eqref{sol:eqlinhom}. 
+Alors, toutes les solutions sont de la forme 
 \begin{equation*}
 y = C_1 y_1 + C_2 y_2 .
 \end{equation*}
@@ -157,90 +152,95 @@ Autrement dit, $y = C_1 y_1 + C_2 y_2$ est la solution générale.
 \end{theorem}
 
 Par exemple, on a trouvé les solutions 
-$y_1 = \sin x$ et $y_2 = \cos x$ pour l'équation $y'' + y = 0$.  Ce n'est pas difficile de voir que le sinus et le cosinus ne peuvent pas s'obtenir en multipliant l'un ou l'autre pas une constante.
+$y_1 = \sin x$ et $y_2 = \cos x$ pour l'équation $y'' + y = 0$.  Ce n'est pas difficile de voir que le sinus et le cosinus ne peuvent pas s'obtenir en multipliant l'un ou l'autre par une constante.
 En effet, si $\sin x = A \cos x$ pour une constante quelconque $A$,
-alors c'est vrai pour $x=0$ et ceci impliquerait  $A = 0$.  Mais alors $\sin x = 0$ pour tout 
-$x$, ce qui est absurde.
-Par conséquent, $y_1$ et $y_2$ sont linéairement indépendantes et: 
+alors c'est vrai pour $x=0$, et ceci impliquerait que  $A = 0$.  
+Mais alors $\sin x = 0$ pour tout $x$, ce qui est absurde.
+Par conséquent, $y_1$ et $y_2$ sont linéairement indépendantes, et
 \begin{equation*}
-y = C_1 \cos x + C_2 \sin x 
+	y = C_1 \cos x + C_2 \sin x 
 \end{equation*}
 est une solution générale à $y'' + y = 0$.
 
 
-C'est plutôt simple de vérifier que deux fonctions sont linéairement indépendantes. Regardons un autre exemple:    $y''-2x^{-2}y = 0$.  Alors $y_1 = x^2$ et $y_2 =
-\nicefrac{1}{x}$ sont des solutions.  Pour vérifier si elles sont linéairement indépendantes, supposons que l'une est un  multiple de l'autre :  $y_1 = A y_2$.  Il suffit de vérifier que  $A$ ne peut pas être une constante.  Dans ce cas, on a $A =
-\nicefrac{y_1}{y_2} = x^3$, ce qui ne peut pas être une constante. Alors $y = C_1 x^2 + C_2 \nicefrac{1}{x}$ est la solution générale à l'équation différentielle.
+C'est plutôt simple de vérifier que deux fonctions sont linéairement indépendantes. 
+Regardons un autre exemple:    $y''-2x^{-2}y = 0$.  
+Alors, $y_1 = x^2$ et $y_2 = \nicefrac{1}{x}$ sont des solutions.  
+Pour vérifier si elles sont linéairement indépendantes, supposons que l'une est un  multiple de l'autre : 
+$y_1 = A y_2$.  Il suffit de vérifier que  $A$ ne peut pas être une constante.  
+Dans ce cas, on a $A = \nicefrac{y_1}{y_2} = x^3$, ce qui ne peut pas être une constante. 
+Alors, $y = C_1 x^2 + C_2 \nicefrac{1}{x}$ est la solution générale à l'équation différentielle.
 
 \medskip
 
-Si l'on a une solution à une équation linéraire homogène de deuxième ordre, on peut en trouver une autre à l'aide de la méthode de  \emph{\myindex{réduction d'ordre}}.  L'idée\, étant donnée une solution $y_1$ à l'équation
+Si l'on a une solution à une équation linéaire homogène du deuxième ordre, on peut en trouver une autre à l'aide de la méthode de  \emph{\myindex{réduction d'ordre}}.  
+L'idée est qu'étant donné une solution $y_1$ à l'équation
 $y'' + p(x) y' + q(x) y = 0$, on essaie une deuxième solution de la forme $y_2(x) = y_1(x) v(x)$.
 On a seulement besoin de trouver $v$.  On met $y_2$ dans l'équation:
+\begin{align*}
+	0 =  y_2'' + p(x) y_2' + q(x) y_2 
+	& =  y_1'' v + 2 y_1' v' + y_1 v''
+			+ p(x) ( y_1' v + y_1 v' )
+			+ q(z) y_1 v \\
+	& = y_1 v'' + (2 y_1' + p(x) y_1) v'
+		+ \cancelto{0}{\bigl( y_1'' + p(x) y_1' + q(x) y_1 \bigr)} v .
+\end{align*}
+En d'autres mots,  $y_1 v'' + (2 y_1' + p(x) y_1) v' = 0$.  
+En posant $w = v'$, on a réduit le problème à une équation linéaire du premier ordre:
 \begin{equation*}
-\begin{split}
-0 = 
-y_2'' + p(x) y_2' + q(x) y_2 & =
-y_1'' v + 2 y_1' v' + y_1 v''
-+ p(x) ( y_1' v + y_1 v' )
-+ q(z) y_1 v
-\\
-& =
-y_1 v''
-+ (2 y_1' + p(x) y_1) v'
-+
-\cancelto{0}{\bigl( y_1'' + p(x) y_1' + q(x) y_1 \bigr)} v .
-\end{split}
-\end{equation*}
-En d'autres mots, 
-$y_1 v'' + (2 y_1' + p(x) y_1) v' = 0$.  Posant $w = v'$, on a réduit le problème à une équation linéaire de premier ordre:
-\begin{equation*}
-y_1 w' + (2 y_1' + p(x) y_1) w = 0.
+	y_1 w' + (2 y_1' + p(x) y_1) w = 0.
 \end{equation*}
 %
 Après avoir résolu cette équation pour $w$,
 on trouve $v$ en intégrant $w$ ($w=v'$).  On trouve alors $y_2$ en calculant
-$y_1 v$.  Par exemple, en admettant que $y_1 = x$ est une solution
+$y_1 v$, par exemple en admettant que $y_1 = x$ est une solution
 de $y''+x^{-1}y'-x^{-2} y=0$.
 L'équation pour $w$ est alors
-$xw' + 3 w = 0$.  On calcule: $w = Cx^{-3}$, et en intégrant on trouve  $v = \frac{-C}{2x^2}$.
+$xw' + 3 w = 0$.  On calcule $w = Cx^{-3}$ et, en intégrant, on trouve  $v = \frac{-C}{2x^2}$.
 Ainsi:
 \begin{equation*}
-y_2 = y_1 v = \frac{-C}{2x}
+	y_2 = y_1 v = \frac{-C}{2x}.
 \end{equation*}
 %
-Tous les $C$ fonctionnent et en choisissant $C=-2$ on obtient $y_2 = \nicefrac{1}{x}$.  Ainsi, la solution générale est:
+Tous les $C$ fonctionnent, et, en choisissant $C=-2$, 
+on obtient $y_2 = \nicefrac{1}{x}$.  Ainsi, la solution générale est:
 \begin{equation*}
-y = C_1 x + C_2\nicefrac{1}{x}.
+	y = C_1 x + C_2\nicefrac{1}{x}.
 \end{equation*}
 
-Comme on a une formule pour la solution d'une équation linéaire de premier ordre, on peut écrire la formule pour $y_2$:
+Comme on a une formule pour la solution d'une équation linéaire du premier ordre, 
+on peut écrire la formule pour $y_2$:
 \begin{equation*}
-y_2(x) = y_1(x) \int \frac{e^{-\int p(x)\,dx}}{{\bigl(y_1(x)\bigr)}^2} \,dx
+	y_2(x) = y_1(x) \int \frac{e^{-\int p(x)\,dx}}{{\bigl(y_1(x)\bigr)}^2} \,dx.
 \end{equation*}
 Toutefois, c'est beaucoup plus facile de se rappeler qu'on doit simplement essayer $y_2(x) =
-y_1(x) v(x)$ et trouver $v(x)$ comme on l'a fait ci-haut.  Ainsi, la méthode fonctionne pour les équations de plus grand ordre aussi: il faut réduire l'ordre pour chacune des solutions trouvées. Il est donc plus facile de se rappeler de comment faire plutôt que de se rappeler d'une formule spécifique. 
+y_1(x) v(x)$ et trouver $v(x)$ comme on l'a fait plus haut.  
+Ainsi, la méthode fonctionne pour les équations de plus grand ordre aussi: 
+il faut réduire l'ordre pour chacune des solutions trouvées. 
+Il est donc plus facile de se rappeler de comment faire plutôt que de se rappeler une formule spécifique. 
+
+
 
 \subsection{Exercices}
 
 \begin{exercise}
-Montrez que $y=e^x$ et $y=e^{2x}$ sont linéairement indépendantes.
+	Montrez que $y=e^x$ et $y=e^{2x}$ sont linéairement indépendantes.
 \end{exercise}
 
 \begin{exercise}
-Soit $y'' + 5 y = 10 x + 5$.  Trouvez (en devinant) la solution. 
+	Soit $y'' + 5 y = 10 x + 5$.  Trouvez (en devinant) la solution. 
 \end{exercise}
 
 \begin{exercise}
-Montrez le principe de superposition pour les équations non homogènes comme suit. Supposez que
-$y_1$ est une solution à  $L y_1 = f(x)$ et que $y_2$ est une solution à 
-$L y_2 = g(x)$ (même opérateur linéaire $L$).  Montrez que $y = y_1+y_2$ est une solution de
-$Ly = f(x) + g(x)$.
+	Montrez le principe de superposition pour les équations non homogènes comme suit. Supposez que
+	$y_1$ est une solution à  $L y_1 = f(x)$ et que $y_2$ est une solution à 
+	$L y_2 = g(x)$ (même opérateur linéaire $L$).  Montrez que $y = y_1+y_2$ est une solution de
+	$Ly = f(x) + g(x)$.
 \end{exercise}
 
 \begin{exercise}
-Pour l'équation $x^2 y'' - x y' = 0$, trouvez deux solutions, montrez qu'elles sont linéairement indépendantes et trouvez la solution générale.
-Astuce : Essayez $y = x^r$.
+	Pour l'équation $x^2 y'' - x y' = 0$, trouvez deux solutions, montrez qu'elles sont linéairement indépendantes et trouvez la solution générale.
+	Astuce : Essayez $y = x^r$.
 \end{exercise}
 
 \pagebreak[2]
@@ -268,32 +268,30 @@ Supposons ${(b-a)}^2-4ac = 0$.  Trouvez la formule pour la solution générale d
 
 
 \begin{exercise}[Réduction d'ordre] \label{exercise:reductionoforder}
-Supposons que $y_1$ est une solution de $y'' + p(x) y' + q(x) y = 0$.
-En l'insérant directement dans l'équation, montrez que 
-\begin{equation*}
-y_2(x) = y_1(x) \int \frac{e^{-\int p(x)\,dx}}{{\bigl(y_1(x)\bigr)}^2} \,dx
-\end{equation*}
-est aussi une solution.
+	Supposons que $y_1$ est une solution de $y'' + p(x) y' + q(x) y = 0$.
+	En l'insérant directement dans l'équation, montrez que 
+	\begin{equation*}
+		y_2(x) = y_1(x) \int \frac{e^{-\int p(x)\,dx}}{{\bigl(y_1(x)\bigr)}^2} \,dx
+	\end{equation*}
+	est aussi une solution.
 \end{exercise}
 
 \begin{exercise}[\myindex{Équation de Chebyshev d'ordre 1}]
-Prenez
-$(1-x^2)y''-xy' + y = 0$.
-\begin{tasks}
-\task Montrez que $y=x$ est une solution.
-\task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante.
-\task Écrivez la solution générale. 
-\end{tasks}
+	Prenez	$(1-x^2)y''-xy' + y = 0$.
+	\begin{tasks}
+		\task Montrez que $y=x$ est une solution.
+		\task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante.
+		\task Écrivez la solution générale. 
+	\end{tasks}
 \end{exercise}
 
 \begin{exercise}[\myindex{Équation d'Hermite d'ordre 2}]
-Prenons
-$y''-2xy' + 4y = 0$.
-\begin{tasks}
-\task Montrez que  $y=1-2x^2$ est une solution.
-\task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante.
-\task Écrivez la solution générale.
-\end{tasks}
+	Prenons	$y''-2xy' + 4y = 0$.
+	\begin{tasks}
+		\task Montrez que  $y=1-2x^2$ est une solution.
+		\task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante.
+		\task Écrivez la solution générale.
+	\end{tasks}
 \end{exercise}
 
 \setcounter{exercise}{100}
@@ -302,40 +300,40 @@ $y''-2xy' + 4y = 0$.
 Est-ce que $\sin(x)$ et $e^x$ sont linéairement indépendantes?  Justifiez votre réponse.
 \end{exercise}
 \exsol{%
-Oui.  Pour justifier, essayez de trouver la constante $A$ telle que $\sin(x) = A e^x$
-pour tout $x$.
+	Oui.  Pour justifier, essayez de trouver la constante $A$ telle que $\sin(x) = A e^x$
+	pour tout $x$.
 }
 
 \begin{exercise}
-Est-ce que  $e^x$ et $e^{x+2}$sont linéairement indépendantes?  Justifiez votre réponse.
+	Est-ce que  $e^x$ et $e^{x+2}$sont linéairement indépendantes?  Justifiez votre réponse.
 \end{exercise}
 \exsol{%
-Non.  $e^{x+2} = e^2 e^x$.
+	Non.  $e^{x+2} = e^2 e^x$.
 }
 
 \begin{exercise}
-Devinez une solution de $y'' + y' + y= 5$.
+	Devinez une solution de $y'' + y' + y= 5$.
 \end{exercise}
 \exsol{%
-$y=5$
+	$y=5$
 }
 
 \begin{exercise}
-Trouvez la solution générale de
-$x y'' + y' = 0$.  Astuce: C'est une équation différentielle de premier ordre pour $y'$.
+	Trouvez la solution générale de
+	$x y'' + y' = 0$.  Astuce: C'est une équation différentielle du premier ordre pour $y'$.
 \end{exercise}
 \exsol{%
-$y=C_1 \ln(x) + C_2$
+	$y=C_1 \ln(x) + C_2$
 }
 
 \begin{exercise}
-Écrivez une équation (en utilisant votre imagination) telle qu'elle a les solutions 
-$e^x$ et $e^{2x}$.  Astuce: Essayez une équation de la forme 
-$y''+Ay'+By = 0$ pour des constances $A$ et $B$,
-mettez dans chacune $e^x$ et $e^{2x}$ et résolvez pour $A$ et $B$.
-\end{exercise}
+	Écrivez une équation (en utilisant votre imagination) telle qu'elle a les solutions 
+	$e^x$ et $e^{2x}$.  Astuce: Essayez une équation de la forme 
+	$y''+Ay'+By = 0$ pour des constances $A$ et $B$,
+	mettez dans chacune $e^x$ et $e^{2x}$ et résolvez pour $A$ et $B$.
+	\end{exercise}
 \exsol{%
-$y''-3y'+2y = 0$
+	$y''-3y'+2y = 0$
 }
 
 
@@ -356,41 +354,49 @@ $y''-3y'+2y = 0$
 
 Considérons le problème suivant: 
 \begin{equation*}
-y''-6y'+8y = 0, \qquad y(0) = - 2, \qquad y'(0) = 6 .
+	y''-6y'+8y = 0, \qquad y(0) = - 2, \qquad y'(0) = 6 .
 \end{equation*}
-Il s'agit d'une équation linéaire homogène de deuxième ordre avec des coefficients constants. Les  \emph{coefficients constants \index{constant coefficient}}
+Il s'agit d'une équation linéaire homogène du deuxième ordre avec des coefficients constants. 
+Les  \emph{coefficients constants\index{constant coefficient}}
 sont des nombres, c'est-à-dire qu'ils ne dépendent pas de $x$.  
 
 Pour deviner une solution, pensez à une fonction qui demeure essentiellement la même lorsqu'elle est dérivée, de manière à ce qu'on puisse prendre un multiple de la fonction, et de sa dérivée,  et arriver à zéro.  Nous parlons d'une exponentielle. 
 
-On va donc essayer\footnote{%
-Essayer une certaine solution avec des paramètres à résoudre est une technique centrale en équations différentielles.  Il y a même un nom pour ce type d'essai:\ emph{\myindex{ansatz}}, qui est un terme allemand voulant dire le  \og{}placement initial d'un outil\fg{}.  NDLT: je n'ai pas vérifié si c'est une traduction correcte.} une solution de la forme $y = e^{rx}$.  Alors $y' = r e^{rx}$ et
-$y'' = r^2 e^{rx}$.  Substituons ces expressions dans l'équation pour obtenir: 
+On va donc essayer$\!$\footnote{%
+Essayer une certaine solution avec des paramètres à résoudre est une technique centrale en équations différentielles.  Il y a même un nom pour ce type d'essai: \emph{\myindex{ansatz}}, qui est un terme allemand voulant dire \og{}hypothèse de départ\fg{} quant à la forme de la solution. %%proposé par JP
+%le  \og{}placement initial d'un outil\fg{}.  
+%NDLT: je n'ai pas vérifié si c'est une traduction correcte.
+} 
+une solution de la forme $y = e^{rx}$.  
+Alors, $y' = r e^{rx}$ et $y'' = r^2 e^{rx}$.  
+Substituons ces expressions dans l'équation pour obtenir: 
 \begin{align*}
-y''-6y'+8y & = 0 , \\
-\underbrace{r^2 e^{rx}}_{y''} -6 \underbrace{r e^{rx}}_{y'}+8 \underbrace{e^{rx}}_{y} & = 0 , \\
-r^2 -6 r +8 & = 0 \qquad \text{(diviser par } e^{rx} \text{)},\\
-(r-2)(r-4) & = 0 .
+	y''-6y'+8y & = 0 , \\
+	\underbrace{r^2 e^{rx}}_{y''} -6 \underbrace{r e^{rx}}_{y'}+8 \underbrace{e^{rx}}_{y} & = 0 , \\
+	r^2 -6 r +8 & = 0 \qquad \text{(diviser par } e^{rx} \text{)},\\
+	(r-2)(r-4) & = 0 .
 \end{align*}
 
 \begin{exercise}
-Vérifiez que $y_1= e^{2x}$ et $y_2= e^{4x}$ sont des solutions.
+	Vérifiez que $y_1= e^{2x}$ et $y_2= e^{4x}$ sont des solutions.
 \end{exercise}
 
-Les fonctions  $e^{2x}$ et $e^{4x}$ sont linéairement indépendantes. Sinon, on pourrait  écrire  $e^{4x} = C e^{2x}$ pour une certaine constante $C$,
-impliquant que $e^{2x} = C$ pour tous $x$; ce qui est impossible. 
+Les fonctions  $e^{2x}$ et $e^{4x}$ sont linéairement indépendantes. 
+Sinon, on pourrait  écrire  $e^{4x} = C e^{2x}$ pour une certaine constante $C$,
+impliquant que $e^{2x} = C$ pour tout $x$, ce qui est impossible. 
 Ainsi, on peut écrire la solution générale comme suit:
 \begin{equation*}
-y = C_1 e^{2x} + C_2 e^{4x} .
+	y = C_1 e^{2x} + C_2 e^{4x} .
 \end{equation*}
 On doit résoudre pour $C_1$ et pour $C_2$.  Pour appliquer les conditions initiales,
 on trouve d'abord $y' = 2 C_1 e^{2x} + 4 C_2 e^{4x}$.  On substitue $x=0$ dans
-$y$ et $y'$, puis on résoud: 
+$y$ et $y'$, puis on résout: 
 \begin{align*}
--2 & = y(0) = C_1 + C_2 , \\
-6 & = y'(0) = 2 C_1 + 4 C_2 .
+	-2 & = y(0) = C_1 + C_2 , \\
+ 	 6 & = y'(0) = 2 C_1 + 4 C_2 .
 \end{align*}
-Il est possible de résoudre avec une matrice ou même avec des notions apprises au secondaire (comparaison, substitution ou réduction). Par exemple, en divisant la deuxième équation par 2, on obtient $3 = C_1 + 2 C_2$, et en soustrayant les deux équations on obtient que $5 = C_2$.  Alors $C_1 = -7$ puisque $-2 = C_1 + 5$.  La solution recherchée est donc:
+Il est possible de résoudre avec une matrice ou même avec des notions apprises au secondaire (comparaison, substitution ou réduction). Par exemple, en divisant la seconde équation par 2, on obtient $3 = C_1 + 2 C_2$ et, en soustrayant les deux équations, on obtient que $5 = C_2$.  
+Alors, $C_1 = -7$ puisque $-2 = C_1 + 5$.  La solution recherchée est donc:
 \begin{equation*}
 y = -7 e^{2x} + 5 e^{4x} .
 \end{equation*}
@@ -418,7 +424,7 @@ Résolvons pour $r$ en utilisant la  \myindex{formule quadratique}:
 \begin{equation*}
 r_1, r_2 = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} .
 \end{equation*}
-Alors $e^{r_1 x}$ et $e^{r_2 x}$ sont des solutions.  Il y a encore une difficulté si $r_1 = r_2$, mais cette difficulté n'est pas difficile à surmonter.  
+Alors, $e^{r_1 x}$ et $e^{r_2 x}$ sont des solutions.  Il y a encore une difficulté si $r_1 = r_2$, mais cette difficulté n'est pas difficile à surmonter.  
 
 \begin{theorem}
 Supposons que $r_1$ et $r_2$ sont des racines caractéristiques de l'équation.
@@ -602,7 +608,7 @@ On peut utiliser la  \hyperref[eulersformula]{formule d'Euler}. Soient:
 \begin{equation*}
 y_1 = e^{(\alpha+i\beta)x} \qquad \text{et} \qquad y_2 = e^{(\alpha-i\beta)x} .
 \end{equation*}
-Alors 
+Alors,  
 \begin{align*}
 y_1 & = e^{\alpha x} \cos (\beta x) + i e^{\alpha x} \sin (\beta x) , \\
 y_2 & = e^{\alpha x} \cos (\beta x) - i e^{\alpha x} \sin (\beta x) .
@@ -622,7 +628,7 @@ ay'' + by' + cy = 0
 \end{equation*}
 supposons que l'équation caractéristique admet des racines complexes $\alpha \pm i \beta$
 (quand $b^2 - 4ac < 0$).
-Alors la solution générale est: 
+Alors, la solution générale est: 
 \begin{equation*}
 y = C_1 e^{\alpha x} \cos (\beta x) + C_2 e^{\alpha x} \sin (\beta x) .
 \end{equation*}
@@ -696,7 +702,7 @@ Trouvez la solution générale de $y'' = 0$ en utilisant les méthodes présent�
 
 \begin{exercise}
 %La méthode de cette section appliqué à des équations d'odres différents de deux. On verra des ordres supérieurs plus tard. 
-Essayez de résoudre l'équation de premier ordre  
+Essayez de résoudre l'équation du premier ordre  
 $2y' + 3y = 0$ en utilisant les méthodes présentées dans cette section. 
 \end{exercise}
 
@@ -802,23 +808,23 @@ $y'' -y'-6y=0$
 %
 %\medskip
 
-On va étudier brièvement les équations ordinaires d'ordre supérieur. Les équations apparaissant dans les applications sont souvent des équation de deuxième ordre. Les équations d'ordre supérieur apparaissent de temps en temps, mais généralement le monde qui nous entoure est de \myquote{deuxième ordre.}  
+On va étudier brièvement les équations ordinaires d'ordre supérieur. Les équations apparaissant dans les applications sont souvent des équation du deuxième ordre. Les équations d'ordre supérieur apparaissent de temps en temps, mais généralement le monde qui nous entoure est de \myquote{deuxième ordre.}  
 
-Les résultats de base à propos des EDO d'ordre supérieur sont essentiellement les mêmes que pour les équations de deuxième ordre, seulement 2 est remplacé par $n$.
+Les résultats de base à propos des EDO d'ordre supérieur sont essentiellement les mêmes que pour les équations du deuxième ordre, seulement 2 est remplacé par $n$.
 Le concept-clé de l'indépendance linéaire est plus compliqué lorsqu'il y a plus de deux fonctions en jeu. Pour les EDO d'ordre supérieur à coefficients constants, les méthodes développées sont aussi plus difficiles à appliquer, mais on ne s'attardera pas à ces complications. Il est aussi possible d'utiliser les méthodes pour les systèmes d'équations linéaires, au~\chapterref{sys:chapter}, pour résoudre les équations d'ordre supérieur à coefficients constants. 
 
 Commençons par les équations linéaires homogènes générales: 
 \begin{equation} \label{hol:eqlinhom}
-y^{(n)} + p_{n-1}(x)y^{(n-1)} + \cdots + p_1(x) y' + p_0(x) y = 0 .
+	y^{(n)} + p_{n-1}(x)y^{(n-1)} + \cdots + p_1(x) y' + p_0(x) y = 0 .
 \end{equation}
 
 \begin{theorem}[Superposition]\index{superposition}
-Supposons que $y_1$, $y_2$, \ldots, $y_n$ sont des solutions de l'équation homogène \eqref{hol:eqlinhom}.  Alors 
-\begin{equation*}
-y(x) = C_1 y_1(x) + C_2 y_2(x) + \cdots + C_n y_n(x) 
-\end{equation*}
-résout aussi \eqref{hol:eqlinhom}
-pour des constantes arbritraires $C_1, C_2, \ldots, C_n$.
+	Supposons que $y_1$, $y_2$, \ldots, $y_n$ sont des solutions de l'équation homogène \eqref{hol:eqlinhom}.  
+	Alors, 
+	\begin{equation*}
+		y(x) = C_1 y_1(x) + C_2 y_2(x) + \cdots + C_n y_n(x) 
+	\end{equation*}
+	résout aussi \eqref{hol:eqlinhom} pour des constantes arbritraires $C_1, C_2, \ldots, C_n$.
 \end{theorem}
 
 En d'autres mots, une \emph{\myindex{combinaison linéaire}} de solutions à \eqref{hol:eqlinhom}
@@ -826,179 +832,191 @@ est aussi uune solution à \eqref{hol:eqlinhom}.
 On a aussi le théorème d'existance et d'unicité pour les équations linéaires non-homogènes. 
 
 \begin{theorem}[Existence et unicité]\index{existence and uniqueness}
-Supposons que $p_0,\ldots, p_{n-1}$, et $f$ sont des fonctions continues sur un intervalle $I$,
-que $a$ est un nombre appartenant à $I$,
-et que $b_0, b_1, \ldots, b_{n-1}$ sont des constantes.
-L'équation: 
-\begin{equation*} %\label{hol:eqlin}
-y^{(n)} + p_{n-1}(x)y^{(n-1)} + \cdots + p_1(x) y' + p_0(x) y = f(x) 
-\end{equation*}
-possède exactement une solution $y(x)$, définie sur le même intervalle $I$, 
-satisfaisant aux conditions initiales suivantes: 
-\begin{equation*}
-y(a) = b_0, \quad y'(a) = b_1, \quad \ldots, \quad y^{(n-1)}(a) = b_{n-1} .
-\end{equation*}
+	Supposons que $p_0,\ldots, p_{n-1}$, et $f$ sont des fonctions continues sur un intervalle $I$,
+	que $a$ est un nombre appartenant à $I$,
+	et que $b_0, b_1, \ldots, b_{n-1}$ sont des constantes.
+	L'équation: 
+	\begin{equation*} %\label{hol:eqlin}
+		y^{(n)} + p_{n-1}(x)y^{(n-1)} + \cdots + p_1(x) y' + p_0(x) y = f(x) 
+	\end{equation*}
+	possède exactement une solution $y(x)$, définie sur le même intervalle $I$, 
+	satisfaisant aux conditions initiales suivantes: 
+	\begin{equation*}
+		y(a) = b_0, \quad y'(a) = b_1, \quad \ldots, \quad y^{(n-1)}(a) = b_{n-1} .
+	\end{equation*}
 \end{theorem}
+
+
+
 
 \subsection{Indépendance linéaire}
 
-Lorsqu'on a seulement deux fonctions $y_1$ et $y_2$, elles sont linéairement indépendantes si elles ne sont pas multiples l'une de l'autre. Dans le cas général de $n$ fonctions, il est plus facile de dire ce qui suit. Les fonctions  
-$y_1$, $y_2$, \ldots, $y_n$ sont \emph{\myindex{linéairement indépendantes}} si l'équation
+Lorsqu'on a seulement deux fonctions $y_1$ et $y_2$, elles sont linéairement indépendantes si elles ne sont pas multiples l'une de l'autre. Dans le cas général de $n$ fonctions, il est plus facile de dire ce qui suit. 
+Les fonctions  $y_1$, $y_2$, \ldots, $y_n$ sont \emph{\myindex{linéairement indépendantes}} si l'équation
 \begin{equation*}
-c_1 y_1 + c_2 y_2 + \cdots + c_n y_n = 0 
+	c_1 y_1 + c_2 y_2 + \cdots + c_n y_n = 0 
 \end{equation*}
-admet uniquement la solution triviale $c_1 = c_2 = \cdots = c_n = 0$.  Si au contraire on peut résoudre l'équation avec certaines constantes non-nulles, par exemple,  $c_1 \not= 0$, alors on peut exprimer $y_1$ comme une combinaison linéaire des autres. Si les fonctions ne sont pas linéairement indépendantes, elles sont  \emph{\myindex{linéairement dépendantes}}.
+admet uniquement la solution triviale $c_1 = c_2 = \cdots = c_n = 0$.  
+Si au contraire on peut résoudre l'équation avec certaines constantes non-nulles, par exemple,  $c_1 \not= 0$, alors on peut exprimer $y_1$ comme une combinaison linéaire des autres. 
+Si les fonctions ne sont pas linéairement indépendantes, elles sont  \emph{\myindex{linéairement dépendantes}}.
 
 \begin{example}
-Montrez que $e^x, e^{2x}, e^{3x}$ sont linéairement indépendantes.
-
-Nous allons considérer ici trois approches différentes pour le montrer.
-(De nombreux manuels introduisent le wronskien pour ceci, mais il est difficile de voir pourquoi ça fonctionne et
-ce n'est pas vraiment nécessaire ici.)
-
-Écrivons
-\begin{equation*}
-c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0.
-\end{equation*}
-On utilise les règles de l'exponentielle et l'on écrit $z = e^x$.  Ainsi, $z^2 = e^{2x}$
-et $z^3 = e^{3x}$.  Alors nous avons
-\begin{equation*}
-c_1 z + c_2 z^2 + c_3 z^3 = 0.
-\end{equation*}
-Le terme de gauche est un polynôme de degré trois en $z$.
-Ou bien il est identiquement nul, ou bien il possède au plus trois zéros. Puisque le résultat doit être identiquement nul, la seule possibilité est que 
-$c_1 = c_2 = c_3 = 0$, et les fonctions sont linéairement indépendantes. 
-
-Essayons une autre approche. Comme précédemment, écrivons 
-\begin{equation*}
-c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0.
-\end{equation*}
-Cette équation doit être valable pour tout $x$.  On divise par  $e^{3x}$ pour obtenir
-\begin{equation*}
-c_1 e^{-2x} + c_2 e^{-x} + c_3 = 0.
-\end{equation*}
-Comme l'équation est vraie pour tout $x$, laissons $x \to \infty$.  En prenant la limite, on voit que $c_3 = 0$.  Ainsi, l'équation devient 
-\begin{equation*}
-c_1 e^x + c_2 e^{2x} = 0.
-\end{equation*}
-Et l'on recommence en divisant par $e^{2x}$, etc.
-
-Regardons encore une autre approche. Écrivons de nouveau:  
-\begin{equation*}
-c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0.
-\end{equation*}
-On peut évaluer l'équation et ses dérivées, avec une valeur de $x$ judicieusement choisie, pour obtenir trois équations pour 
-$c_1$, $c_2$, et $c_3$.
-D'abord, divisons par $e^{x}$ pour simplifier.
-\begin{equation*}
-c_1 + c_2 e^{x} + c_3 e^{2x} = 0.
-\end{equation*}
-Fixons $x=0$ pour obtenir $c_1 + c_2 + c_3 = 0$.  Dérivons des deux côtés: 
-
-\begin{equation*}
-c_2 e^{x} + 2 c_3 e^{2x} = 0 .
-\end{equation*}
-Fixons  $x=0$ pour obtenir $c_2 + 2c_3 = 0$.  Divisons par $e^x$ encore et dérivons pour obtenir 
-$2 c_3 e^{x} = 0$.  Il est clair que   $c_3$ est nul.  Alors $c_2$ doit est nul puique $c_2 = -2c_3$, et $c_1$ doit être nul puisque $c_1 + c_2 + c_3 = 0$.
-
-Il n'y a pas de meilleure approche, les trois sont parfaitement valides. L'important est de comprendre pourquoi les fonctions sont linéairement indépendantes. 
+	Montrez que $e^x, e^{2x}, e^{3x}$ sont linéairement indépendantes.
+	
+	Nous allons considérer ici trois approches différentes pour le montrer.
+	(De nombreux manuels introduisent le wronskien pour ceci, mais il est difficile de voir pourquoi ça fonctionne et
+	ce n'est pas vraiment nécessaire ici.)
+	
+	Écrivons
+	\begin{equation*}
+		c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0.
+	\end{equation*}
+	On utilise les règles de l'exponentielle et l'on écrit $z = e^x$.  
+	Ainsi, $z^2 = e^{2x}$ et $z^3 = e^{3x}$.  
+	Alors, nous avons
+	\begin{equation*}
+		c_1 z + c_2 z^2 + c_3 z^3 = 0.
+	\end{equation*}
+	Le terme de gauche est un polynôme de degré trois en $z$.
+	Ou bien il est identiquement nul, ou bien il possède au plus trois zéros. 
+	Puisque le résultat doit être identiquement nul, la seule possibilité est que 
+	$c_1 = c_2 = c_3 = 0$, et les fonctions sont linéairement indépendantes. 
+	
+	Essayons une autre approche. Comme précédemment, écrivons 
+	\begin{equation*}
+		c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0.
+	\end{equation*}
+	Cette équation doit être valable pour tout $x$.  On divise par  $e^{3x}$ pour obtenir
+	\begin{equation*}
+		c_1 e^{-2x} + c_2 e^{-x} + c_3 = 0.
+	\end{equation*}
+	Comme l'équation est vraie pour tout $x$, laissons $x \to \infty$.  En prenant la limite, on voit que $c_3 = 0$.  Ainsi, l'équation devient 
+	\begin{equation*}
+		c_1 e^x + c_2 e^{2x} = 0.
+	\end{equation*}
+	Et l'on recommence en divisant par $e^{2x}$, etc.
+	
+	Regardons encore une autre approche. Écrivons de nouveau:  
+	\begin{equation*}
+		c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0.
+	\end{equation*}
+	On peut évaluer l'équation et ses dérivées, avec une valeur de $x$ judicieusement choisie, pour obtenir trois équations pour 
+	$c_1$, $c_2$, et $c_3$.
+	D'abord, divisons par $e^{x}$ pour simplifier.
+	\begin{equation*}
+		c_1 + c_2 e^{x} + c_3 e^{2x} = 0.
+	\end{equation*}
+	Fixons $x=0$ pour obtenir $c_1 + c_2 + c_3 = 0$.  Dérivons des deux côtés: 
+	
+	\begin{equation*}
+		c_2 e^{x} + 2 c_3 e^{2x} = 0 .
+	\end{equation*}
+	Fixons  $x=0$ pour obtenir $c_2 + 2c_3 = 0$.  
+	Divisons par $e^x$ encore et dérivons pour obtenir $2 c_3 e^{x} = 0$.  Il est clair que   $c_3$ est nul.  
+	Alors, $c_2$ doit est nul puique $c_2 = -2c_3$, et $c_1$ doit être nul puisque $c_1 + c_2 + c_3 = 0$.
+	
+	Il n'y a pas de meilleure approche, les trois sont parfaitement valides. L'important est de comprendre pourquoi les fonctions sont linéairement indépendantes. 
 \end{example}
-
+	
 \begin{example}
-Par contre, les fonctions  $e^x$, $e^{-x}$, et $\cosh x$ sont linéairement dépendantes.  Pour le voir, il suffit d'appliquer la définition du cosinus hyperbolique : 
-\begin{equation*}
-\cosh x = \frac{e^x + e^{-x}}{2} 
-\qquad
-\text{ou}
-\qquad
-2 \cosh x - e^x - e^{-x} = 0.
-\end{equation*}
+	Par contre, les fonctions  $e^x$, $e^{-x}$, et $\cosh x$ sont linéairement dépendantes.  Pour le voir, il suffit d'appliquer la définition du cosinus hyperbolique : 
+	\begin{equation*}
+		\cosh x = \frac{e^x + e^{-x}}{2} 	\qquad	\text{ou}	\qquad	2 \cosh x - e^x - e^{-x} = 0.
+	\end{equation*}
 \end{example}
 
 \subsection[EDO d'ordre supérieur à coefficients constants]{Équations différentielles d'ordre supérieur à coefficients constants}
 
-Lorsqu'on a une équation linéaire homogène d'ordre supérieur à coefficients constants, la démarche est exactement la même que pour les équations de deuxième ordre. Il faut simplement trouver plus de solutions. Si l'équation est d'ordre
+Lorsqu'on a une équation linéaire homogène d'ordre supérieur à coefficients constants, la démarche est exactement la même que pour les équations du deuxième ordre. Il faut simplement trouver plus de solutions. Si l'équation est d'ordre
 $n$, on doit trouver $n$ solutions linéairement indépendantes.
 L'exemple suivant le montre bien.
 
 \begin{example}
-Trouver la solution générale de l'équation suivante:
-\begin{equation} \label{hol:cceq1}
-y''' - 3 y'' - y' + 3y = 0 .
-\end{equation}
-
-Essayons: $y = e^{rx}$. On substitue dans l'équation et l'on obtient\:
-\begin{equation*}
-\underbrace{r^3 e^{rx}}_{y'''} - 3 \underbrace{r^2 e^{rx}}_{y''} -
-\underbrace{r e^{rx}}_{y'} + 3 \underbrace{e^{rx}}_{y} = 0 .
-\end{equation*}
-On divise par $e^{rx}$.  Alors 
-\begin{equation*}
-r^3 - 3 r^2 - r + 3 = 0 .
-\end{equation*}
-L'astuce est de trouver les racines. Il y a une formule pour les racines pour les polynômes de degré 3 ou 4, mais c'est très compliqué. De plus, il n'y a aucune formule pour les polynômes de degré supérieur. Cela ne veut pas dire que les racines n'existent pas. Il existe toujours 
-$n$ racines pour un polynôme de degré  $n$.  Elles peuvent être répétées \index{repeated roots}
-et elles peuvent être complexes. Les ordinateurs sont très bons pour trouver les racines approximativement pour un polynôme d'ordre  raisonnable.
-
-Un bon point de départ est de tracer le graphe du polynôme et de vérifier où il est nul.
-On pourrait aussi simplement le remplacer par des nombres. On commence par remplacer par les nombres  $r=-2,-1,0,1,2,\ldots$ et l'on regarde si l'on obtient zéro. Par exemple, si on remplace par $r=-2$ dans le polynôme, on obtient $-15$; si on remplace $r=0$ on obtient 3.
-Ceci signifie qu'il y a une racine entre $r=-2$ et $r=0$,
-parce que le signe a changé.
-Si l'on trouve une racine, $r_1$, alors on sait que $(r-r_1)$ est un facteur du polynôme. La division polynomiale peut alors être utilisée. 
-
-On pourrait commencer par $r=0$, $1$, ou $-1$, puisque ces nombres sont faciles à calculer. Dans notre cas, le polynôme a deux racines,  $r_1 = -1$
-et $r_2 = 1$.  
-
-Elle devrait avoir trois racines et la dernière est plutôt facile à trouver. Le terme constant dans un polynôme monique\footnote{Le mot monique veut dire que le coefficient du plus grand degré $r^d$, dans notre cas $r^3$, est 1.}
-est tel que c'est un multiple de l'opposé de toutes les racines, parce que $r^3 - 3 r^2 - r + 3 = (r-r_1)(r-r_2)(r-r_3)$.
-Alors
-\begin{equation*}
-3 = (-r_1)(-r_2)(-r_3) = (1)(-1)(-r_3) = r_3 .
-\end{equation*}
-Vous devriez vérifier si  $r_3 = 3$ est vraiment une racine.  Ainsi, $e^{-x}$, $e^{x}$
-et $e^{3x}$ sont des solutions de \eqref{hol:cceq1}.  Elles sont linéairement indépendantes (ce qui peut être vérifié facilement) et il y a trois racines, ce qui est le nombre exact recherché. 
-Alors, la solution générale est: 
-\begin{equation*}
-y = C_1 e^{-x} + C_2 e^{x} + C_3 e^{3x} .
-\end{equation*}
-
-Supposons les conditions initiales $y(0) = 1$, $y'(0) = 2$,
-et $y''(0) = 3$.  Alors
-\begin{align*}
-1 = y(0) & = C_1 + C_2 + C_3 , \\
-2 = y'(0) & = -C_1 + C_2 + 3C_3 , \\
-3 = y''(0) & = C_1 + C_2 + 9C_3 .
-\end{align*}
-Il est possible de trouver la solution au moyen de techniques algébriques vues au secondaire, mais ce serait souffrant (très très long!). La manière sensée de résoudre un système d'équations est d'utiliser des matrices algébriques. Regardez \sectionref{sec:matrix} ou l'\appendixref{linalg:appendix}.
-Pour l'instant, notons que la solution est  $C_1 =
--\nicefrac{1}{4}$,
-$C_2 = 1$, et $C_3 = \nicefrac{1}{4}$.  La solution particulière à l'EDO est donc:
-\begin{equation*}
-y = \frac{-1}{4}\, e^{-x} + e^x + \frac{1}{4}\, e^{3x} .
-\end{equation*}
+	Trouver la solution générale de l'équation suivante:
+	\begin{equation} \label{hol:cceq1}
+		y''' - 3 y'' - y' + 3y = 0 .
+	\end{equation}
+	
+	Essayons: $y = e^{rx}$. On substitue dans l'équation et l'on obtient\:
+	\begin{equation*}
+		\underbrace{r^3 e^{rx}}_{y'''} - 3 \underbrace{r^2 e^{rx}}_{y''} -
+		\underbrace{r e^{rx}}_{y'} + 3 \underbrace{e^{rx}}_{y} = 0 .
+	\end{equation*}
+	On divise par $e^{rx}$.  Alors, 
+	\begin{equation*}
+		r^3 - 3 r^2 - r + 3 = 0 .
+	\end{equation*}
+	L'astuce est de trouver les racines. Il y a une formule pour les racines pour les polynômes de degré 3 ou 4, mais c'est très compliqué. De plus, il n'y a aucune formule pour les polynômes de degré supérieur. Cela ne veut pas dire que les racines n'existent pas. Il existe toujours 
+	$n$ racines pour un polynôme de degré  $n$.  Elles peuvent être répétées \index{repeated roots}
+	et elles peuvent être complexes. Les ordinateurs sont très bons pour trouver les racines approximativement pour un polynôme d'ordre  raisonnable.
+	
+	Un bon point de départ est de tracer le graphe du polynôme et de vérifier où il est nul.
+	On pourrait aussi simplement le remplacer par des nombres. On commence par remplacer par les nombres  $r=-2,-1,0,1,2,\ldots$ et l'on regarde si l'on obtient zéro. Par exemple, si on remplace par $r=-2$ dans le polynôme, on obtient $-15$; si on remplace $r=0$ on obtient 3.
+	Ceci signifie qu'il y a une racine entre $r=-2$ et $r=0$,
+	parce que le signe a changé.
+	Si l'on trouve une racine, $r_1$, alors on sait que $(r-r_1)$ est un facteur du polynôme. La division polynomiale peut alors être utilisée. 
+	
+	On pourrait commencer par $r=0$, $1$, ou $-1$, puisque ces nombres sont faciles à calculer. Dans notre cas, le polynôme a deux racines,  $r_1 = -1$
+	et $r_2 = 1$.  
+	
+	Elle devrait avoir trois racines et la dernière est plutôt facile à trouver. Le terme constant dans un polynôme monique\footnote{Le mot monique veut dire que le coefficient du plus grand degré $r^d$, dans notre cas $r^3$, est 1.}
+	est tel que c'est un multiple de l'opposé de toutes les racines, parce que 
+	$r^3 - 3 r^2 - r + 3 = (r-r_1)(r-r_2)(r-r_3)$.
+	Alors,
+	\begin{equation*}
+		3 = (-r_1)(-r_2)(-r_3) = (1)(-1)(-r_3) = r_3 .
+	\end{equation*}
+	Vous devriez vérifier si  $r_3 = 3$ est vraiment une racine.  
+	Ainsi, $e^{-x}$, $e^{x}$
+	et $e^{3x}$ sont des solutions de \eqref{hol:cceq1}.  
+	Elles sont linéairement indépendantes (ce qui peut être vérifié facilement) et il y a trois racines, 
+	ce qui est le nombre exact recherché. 
+	Alors, la solution générale est: 
+	\begin{equation*}
+		y = C_1 e^{-x} + C_2 e^{x} + C_3 e^{3x} .
+	\end{equation*}
+	
+	Supposons les conditions initiales $y(0) = 1$, $y'(0) = 2$, et $y''(0) = 3$.  
+	Alors,
+	\begin{align*}
+		1 = y(0) & = C_1 + C_2 + C_3 , \\
+		2 = y'(0) & = -C_1 + C_2 + 3C_3 , \\
+		3 = y''(0) & = C_1 + C_2 + 9C_3 .
+	\end{align*}
+	Il est possible de trouver la solution au moyen de techniques algébriques vues au secondaire, mais ce serait souffrant (très très long!). La manière sensée de résoudre un système d'équations est d'utiliser des matrices algébriques. Regardez \sectionref{sec:matrix} ou l'\appendixref{linalg:appendix}.
+	Pour l'instant, notons que la solution est  
+	$C_1 = -\nicefrac{1}{4}$, $C_2 = 1$, et $C_3 = \nicefrac{1}{4}$.  
+	La solution particulière à l'EDO est donc:
+	\begin{equation*}
+		y = \frac{-1}{4}\, e^{-x} + e^x + \frac{1}{4}\, e^{3x} .
+	\end{equation*}
 \end{example}
 
-Par la suite, supposons qu'on a des racines réelles, mais qu'elles se répètent. Supposons qu'on a la racine $r$ répétée $k$ fois. Dans l'esprit de la solution de deuxième ordre, et pour les mêmes raisons, on a les solutions  suivantes,\: 
+Par la suite, supposons qu'on a des racines réelles, mais qu'elles se répètent. 
+Supposons qu'on a la racine $r$ répétée $k$ fois. 
+Dans l'esprit de la solution du deuxième ordre, et pour les mêmes raisons, on a les solutions  suivantes: 
 \begin{equation*}
-e^{rx}, \quad xe^{rx}, \quad x^2 e^{rx}, \quad \ldots, \quad x^{k-1} e^{rx} .
+	e^{rx}, \quad xe^{rx}, \quad x^2 e^{rx}, \quad \ldots, \quad x^{k-1} e^{rx} .
 \end{equation*}
 On prend une combinaison linéaire de ces solutions et l'on trouve la solution générale. 
 \begin{example}
-Résolvez
-\begin{equation*}
-y^{(4)} - 3 y''' + 3 y'' - y' =  0 .
-\end{equation*}
-
-On note que l'équation caractéristique est 
-\begin{equation*}
-r^4 - 3r^3 + 3r^2 -r = 0 .
-\end{equation*}
-Par un exament attentif, on note que  $r^4 - 3r^3 + 3r^2 -r = r{(r-1)}^3$.  Ainsi, les racines données avec la 
-\myindex{multiplicité} sont $r = 0, 1, 1, 1$.  Alors la solution générale est: 
-\begin{equation*}
-y = \underbrace{(C_1 + C_2 x + C_3 x^2)\, e^x}_{\text{termes venant de }
-r=1} + \underbrace{C_4}_{\text{venant de } r=0} .
-\end{equation*}
+	Résolvez
+	\begin{equation*}
+		y^{(4)} - 3 y''' + 3 y'' - y' =  0 .
+	\end{equation*}
+	
+	On note que l'équation caractéristique est 
+	\begin{equation*}
+		r^4 - 3r^3 + 3r^2 -r = 0 .
+	\end{equation*}
+	Par un exament attentif, on note que  $r^4 - 3r^3 + 3r^2 -r = r{(r-1)}^3$.  
+	Ainsi, les racines données avec la 
+	\myindex{multiplicité} sont $r = 0, 1, 1, 1$.  
+	Alors, la solution générale est: 
+	\begin{equation*}
+		y = \underbrace{(C_1 + C_2 x + C_3 x^2)\, e^x}_{\text{termes venant de }r=1} 
+			+ \underbrace{C_4}_{\text{venant de } r=0} .
+	\end{equation*}
 \end{example}
 
 Le cas des racines complexes est similaire à une équation du deuxième ordre. 
@@ -1007,32 +1025,29 @@ Les racines complexes viennent toujours en paires
 $r = \alpha \pm i \beta$.  Supposons qu'on aille deux racines complexes, chacune répétée $k$ fois.
 La solution correspondante est 
 \begin{equation*}
-( C_0 + C_1 x + \cdots + C_{k-1} x^{k-1} ) \, e^{\alpha x} \cos (\beta x)
-+
-( D_0 + D_1 x + \cdots + D_{k-1} x^{k-1} ) \, e^{\alpha x} \sin (\beta x) .
+	( C_0 + C_1 x + \cdots + C_{k-1} x^{k-1} ) \, e^{\alpha x} \cos (\beta x)
+	+
+	( D_0 + D_1 x + \cdots + D_{k-1} x^{k-1} ) \, e^{\alpha x} \sin (\beta x) .
 \end{equation*}
 où $C_0$, \ldots, $C_{k-1}$, $D_0$, \ldots, $D_{k-1}$ sont des constantes arbitraires. 
 
 \begin{example}
-Résolvons l'équation suivante: 
-\begin{equation*}
-y^{(4)} - 4 y''' + 8 y'' - 8 y' + 4y = 0 .
-\end{equation*}
-
-L'équation caractéristique est: 
-\begin{align*}
-r^4 - 4 r^3 + 8 r^2 - 8 r + 4 & = 0 , \\
-{(r^2-2r+2)}^2 & = 0 , \\
-{\bigl({(r-1)}^2+1\bigr)}^2 & = 0 .
-\end{align*}
-Ainsi, les racines sont  $1 \pm i$, toutes les deux avec multiplicité 2. Alors, la solution générale à l'EDO est  
-\begin{equation*}
-y = 
-( C_1 + C_2 x ) \, e^{x} \cos x
-+
-( C_3 + C_4 x ) \, e^{x} \sin x .
-\end{equation*}
-On a résolu cette équation caractéristique en devinant ou par inspection. Ce n'est pas aussi facile généralement. On aurait aussi pu demander à un ordinateur ou à une calculatrice puissante de calculer les racines. 
+	Résolvons l'équation suivante: 
+	\begin{equation*}
+		y^{(4)} - 4 y''' + 8 y'' - 8 y' + 4y = 0 .
+	\end{equation*}
+	
+	L'équation caractéristique est: 
+	\begin{align*}
+		r^4 - 4 r^3 + 8 r^2 - 8 r + 4 & = 0 , \\
+		{(r^2-2r+2)}^2 & = 0 , \\
+		{\bigl({(r-1)}^2+1\bigr)}^2 & = 0 .
+	\end{align*}
+	Ainsi, les racines sont  $1 \pm i$, toutes les deux avec multiplicité 2. Alors, la solution générale à l'EDO est  
+	\begin{equation*}
+		y = ( C_1 + C_2 x ) \, e^{x} \cos x + ( C_3 + C_4 x ) \, e^{x} \sin x .
+	\end{equation*}
+	On a résolu cette équation caractéristique en devinant ou par inspection. Ce n'est pas aussi facile généralement. On aurait aussi pu demander à un ordinateur ou à une calculatrice puissante de calculer les racines. 
 \end{example}
 
 %FIXME: the operator stuff?
@@ -1069,7 +1084,7 @@ $y = 2 e^{4x} x \cos x$.
 \task
 Trouvez une telle équation.
 \task
-Trouvez les conditions initiales satisfaites par la solution donnée. 
+Trouvez les conditions initiales auxquelles la solution donnée satisfait. 
 \end{tasks}
 \end{exercise}
 
@@ -1173,7 +1188,7 @@ $y'''-y''+y'-y=0$
 %\sectionnotes{2 lectures\EPref{, \S3.4 in \cite{EP}}\BDref{,
 %\S3.7 in \cite{BD}}}
 
-Regardons quelques applications impliquant des équations linéaires de deuxième ordre à coefficients constants. 
+Regardons quelques applications impliquant des équations linéaires du deuxième ordre à coefficients constants. 
 \subsection{Quelques exemples}
 
 \begin{mywrapfigsimp}{2.0in}{2.3in}
@@ -1190,7 +1205,7 @@ Par la \myindex{deuxième loi de Newton} nous savons que la force est égale au 
 \begin{equation*}
 mx'' + cx' + kx = F(t) .
 \end{equation*}
-Il s'agit d'une équation linéaire de deuxième ordre à coefficients constants. Le mouvement  
+Il s'agit d'une équation linéaire du deuxième ordre à coefficients constants. Le mouvement  
 %
 \begin{enumerate}[(i)]
 \item  est \emph{forcé\index{forced motion}}, si $F \not\equiv 0$ (si $F$ est différent de zéro),
@@ -1216,9 +1231,9 @@ Soit $Q(t)$ une charge (en coulombes) sur un condensateur et $I(t)$ le courant. 
 $Q' = I$.  Par des principes élémentaires on trouve 
 $L I' + RI + \nicefrac{Q}{C} = E$.  On dérive pour obtenir :   
 \begin{equation*}
-L I''(t) + R I'(t) + \frac{1}{C} I(t) = E'(t) .
+	L I''(t) + R I'(t) + \frac{1}{C} I(t) = E'(t) .
 \end{equation*}
-Il s'agit d'un équation linéaire non-homogène de deuxième ordre à coefficients constants. 
+Il s'agit d'un équation linéaire non-homogène du deuxième ordre à coefficients constants. 
 Puisque $L, R$, et $C$ sont tous positifs, ce système se comporte exactement comme le système masse-ressort. La position de la masse est remplacée par le courant. La masse est remplacée par l'inducteur, l'amortisseur est remplacé par la résistance et la constante du ressort est remplacée par la capacitance. Les variations du voltage deviennent la fonction de force --- pour un voltage constant, il s'agit d'un mouvement qui n'est pas forcé. 
 
 \medskip
@@ -1231,14 +1246,15 @@ Puisque $L, R$, et $C$ sont tous positifs, ce système se comporte exactement co
 Notre prochain exemple se comporte approximativement comme un système masse-ressort .  
 Supposons que la masse $m$ pende sur un fil de longueur  $L$.  On cherche une équation pour l'angle (en radians). Soit $g$ la force gravitationnelle. La physique élémentaire dit que l'équation est: 
 \begin{equation*}
-\theta'' + \frac{g}{L} \sin \theta = 0 .
+	\theta'' + \frac{g}{L} \sin \theta = 0 .
 \end{equation*}
 
 Dérivons cette équation en utilisant la \myindex{deuxième loi de Newton}:
 La force est égale au produit de la masse et de l'accélération. L'accélération est
-$L \theta''$ et la masse est $m$.  Alors $mL\theta''$ doit être égale à la composante tangentielle de la force gravitationnelle, soit 
+$L \theta''$ et la masse est $m$.  
+Alors, $mL\theta''$ doit être égale à la composante tangentielle de la force gravitationnelle, soit 
 $m g \sin \theta$ dans la direction opposée.
-Alors $mL\theta'' = -mg \sin \theta$.
+Alors, $mL\theta'' = -mg \sin \theta$.
 La masse $m$ est curieusement  annulée de l'équation. 
 
 Maintenant, approximons. Pour un petit $\theta$ nous avons l'approximation 
@@ -1246,60 +1262,64 @@ $\sin \theta \approx \theta$.  On le voit dans la \figurevref{mv:sinthetafig}:  
 $-0.5 < \theta < 0.5$ (en radians), le graphique de  $\sin \theta$ et $\theta$ sont presque les mêmes.
 
 \begin{mywrapfig}{3.25in}
-\capstart
-\diffyincludegraphics{width=3in}{width=4.5in}{mv-sintheta}
+\capstart \diffyincludegraphics{width=3in}{width=4.5in}{mv-sintheta}
 \caption{Le graphique de  $\sin \theta$ et $\theta$ (en radians).\label{mv:sinthetafig}}
 \end{mywrapfig}
 
 Donc, quand le balancement est petit,  $\theta$ est petit et nous pouvons modéliser le comportement par une équation linéaire simple.  
 \begin{equation*}
-\theta'' + \frac{g}{L} \theta = 0 .
+	\theta'' + \frac{g}{L} \theta = 0 .
 \end{equation*}
-Les erreurs de cette approximation d'accumulent. Alors après un long moment, l'état de système dans la vraie vie est assez différent de notre système. Ainsi, nous verrons que dans le système masse-ressort l'amplitude est indépendante de la période. 
+Les erreurs de cette approximation d'accumulent. Alors, après un long moment, l'état de système dans la vraie vie est assez différent de notre système. Ainsi, nous verrons que dans le système masse-ressort l'amplitude est indépendante de la période. 
 Mais ceci n'est plus vrai pour le pendule.  Néanmoins, pour une période de temps assez courte et un petit élan (pour un petit angle $\theta$), l'approximation est raisonnablement bonne. 
 
 Dans les problèmes de la vraie vie, il est souvent nécessaire de faire ce genre de simplifications.  On doit comprendre que les mathématiques et la physique de la situation pour voir si les simplification sont valides dnas le contexte que l'on tente d'étudier. 
+
+
+
+
 
 \subsection{Mouvement libre non amorti}
 
 Dans cette section nous allons seulement considérer les mouvement ou non forcés puisque nous ne savons pas encore comment résoudre des équations non homogènes. Commençons avec le mouvement
 \myindex{non forcé} où $c=0$.  L'équation est: 
 \begin{equation*}
-mx'' + kx = 0 .
+	mx'' + kx = 0 .
 \end{equation*}
 Divisons par $m$ et laissons$\omega_0 = \sqrt{\nicefrac{k}{m}}$ pour réécrire l'équation comme suit: 
 \begin{equation*}
-x'' + \omega_0^2 x = 0 .
+	x'' + \omega_0^2 x = 0 .
 \end{equation*}
 La solution générale à cette équation est : 
 \begin{equation*}
-x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t) .
+	x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t) .
 \end{equation*}
 Par une identité trigonométrique : 
 \begin{equation*}
-A \cos (\omega_0 t) + B \sin (\omega_0 t) =
-C \cos ( \omega_0 t - \gamma ) ,
+	A \cos (\omega_0 t) + B \sin (\omega_0 t) =
+	C \cos ( \omega_0 t - \gamma ) ,
 \end{equation*}
 pour deux constantes différentes $C$ et $\gamma$.
-Il n'est pas difficile de calculer $C= \sqrt{A^2 + B^2}$ et $\tan \gamma =
-\nicefrac{B}{A}$.  Ainsi, soient
-$C$ et $\gamma$ deux constantes arbitraire et écrivons 
+Il n'est pas difficile de calculer 
+$C= \sqrt{A^2 + B^2}$ et $\tan \gamma = \nicefrac{B}{A}$.  
+Ainsi, soit $C$ et $\gamma$ deux constantes arbitraire et écrivons 
 $x(t) = C \cos ( \omega_0 t - \gamma )$.
 
 \begin{exercise}
-Justifiez l'identifité  $A \cos (\omega_0 t) + B \sin (\omega_0 t) =
-C \cos ( \omega_0 t - \gamma )$ et vérifiez l'équation pour $C$
-et $\gamma$.  Astice: Commencer avec  
-$\cos (\alpha-\beta) = \cos (\alpha) \cos
-(\beta) + \sin (\alpha)\sin (\beta)$ et multipliez par $C$.  Alors que devraient être  
-$\alpha$ et $\beta$?
+Justifiez l'identifité  
+	$A \cos (\omega_0 t) + B \sin (\omega_0 t) = C \cos ( \omega_0 t - \gamma )$ 
+	et vérifiez l'équation pour $C$ et $\gamma$.  
+	Astuce: Commencer avec  
+	$\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)$ 
+	et multipliez par $C$.  Alors, que devraient être $\alpha$ et $\beta$?
 \end{exercise}
 
 Tandis que c'est généralement plus facile d'utiliser les premières formes avec  $A$ et $B$
-pour résoudre pour les conditions initiales, la deuxième forme est beaucoup plus naturelle. Les constantes $C$ et $\gamma$ ont des interprétations physiques intéressantes. 
+pour résoudre pour les conditions initiales, la deuxième forme est beaucoup plus naturelle. 
+Les constantes $C$ et $\gamma$ ont des interprétations physiques intéressantes. 
 Écrivez la solution comme
 \begin{equation*}
-x(t) = C \cos ( \omega_0 t - \gamma ) .
+	x(t) = C \cos ( \omega_0 t - \gamma ) .
 \end{equation*}
 Il s'agit d'une oscillation à fréquence pure (une onde sinusoïdale).
 La constante  $C$ est l' \emph{\myindex{amplitude}}, $\omega_0$ est la 
@@ -1310,10 +1330,8 @@ On appelle $\omega_0$ la \emph{\myindex{fréquence angulaire naturelle}}.
 Cette configuration entière est
 appelée le \emph{\myindex{mouvement harmonique simple}}.
 
-Prenons une pause pour expliquer les termes \emph{angulaire}
-et \emph{fréquence}.
-Les unités de
-$\omega_0$ sont des radians par unité de temps, ce ne sont pas des cycles par unité de temps comme la fréquence mesure habituellement. Puisqu'un cycle mesure $2
+Prenons une pause pour expliquer les termes \emph{angulaire} et \emph{fréquence}.
+Les unités de $\omega_0$ sont des radians par unité de temps, ce ne sont pas des cycles par unité de temps comme la fréquence mesure habituellement. Puisqu'un cycle mesure $2
 \pi$ radians, la fréquence usuelle est donnée par  $\frac{\omega_0}{2\pi}$.
 Il s'agit simplement de savoir où nous plaçons la constante $2\pi$, 
 et c'est une question de goût.
@@ -1322,50 +1340,57 @@ La \emph{\myindex{période}} du mouvement est l'inverse de la fréquence  (en cy
 
 
 \begin{example}
-Supposons que $m=\unit[2]{kg}$ et $k=\unitfrac[8]{N}{m}$.  Un système masse-ressort se trouve sur un camion qui se déplace à  \unitfrac[1]{m}{s}.
-Le camion a un accident et s'arrête.  La masse a été tenue en place à 0.5 m de sa position de repos. Pendant l'accident, la masse se déplace. Alors, elle bouge vers l'avant à \unitfrac[1]{m}{s}, pendant que le ressort reste fixé.   La masse commence donc à osciller. Quelle est la fréquence de l'oscillation résultante? Quelle est l'amplitude? Les unités sont des \index{unités mks} mètres-kilogrammes-secondes.
-
-La configuration signifie que la masse était à un demi-mètre dans la 
-direction positive pendant l'accident et
- la masse se déplaçait vers l'avant par rapport à la paroi sur laquelle le ressort était monté,
-(dans la direction positive) à \unitfrac[1]{m}{s}.  Alors l'équation avec les conditions initiales est: 
-\begin{equation*}
-2 x'' + 8 x = 0 , \qquad x(0) = 0.5, \qquad x'(0) = 1.
-\end{equation*}
-On calcule directement $\omega_0 = \sqrt{\nicefrac{k}{m}} = \sqrt{4} = 2$.
-La fréquence angulaire est 2.  La fréquence usuelle en hertz (cycles per
-seconde) est $\nicefrac{2}{2\pi} = \nicefrac{1}{\pi} \approx 0.318$.
-
-%15 is the number of lines, must be adjusted
-\begin{mywrapfig}[15]{3.25in}
-\capstart
-\diffyincludegraphics{width=3in}{width=4.5in}{mv-undamped}
-\caption{Oscillation simple non amortie .\label{mv:undampedfig}}
-\end{mywrapfig}
-
-La solution générale est: 
-\begin{equation*}
-x(t) = A \cos (2t) + B \sin (2t) .
-\end{equation*}
-La condition $x(0) = 0.5$ implique que $A = 0.5$.  Alors $x'(t) = - 2(0.5) \sin (2t)
-+ 2B \cos (2t)$.
-Puisque $x'(0) = 1$, on obtient $B = 0.5$.  Ainsi, l'amplitude est
-$C = \sqrt{A^2+B^2} = \sqrt{0.25+0.25} = \sqrt{0.5} \approx 0.707$.  La solution est: 
-\begin{equation*}
-x(t) = 0.5 \cos (2t) + 0.5 \sin (2t) .
-\end{equation*}
-Le graphe de  $x(t)$ est illustré à la  \figurevref{mv:undampedfig}.
+	Supposons que $m=\unit[2]{kg}$ et $k=\unitfrac[8]{N}{m}$.  
+	Un système masse-ressort se trouve sur un camion qui se déplace à  \unitfrac[1]{m}{s}.
+	Le camion a un accident et s'arrête.  
+	La masse a été tenue en place à 0.5 m de sa position de repos. Pendant l'accident, la masse se déplace. 
+	Alors, elle bouge vers l'avant à \unitfrac[1]{m}{s}, pendant que le ressort reste fixé.   
+	La masse commence donc à osciller. Quelle est la fréquence de l'oscillation résultante? 
+	Quelle est l'amplitude? Les unités sont des \index{unités mks} mètres-kilogrammes-secondes.
+	
+	La configuration signifie que la masse était à un demi-mètre dans la 
+	direction positive pendant l'accident et la masse se déplaçait vers l'avant 
+	par rapport à la paroi sur laquelle le ressort était monté,
+	(dans la direction positive) à \unitfrac[1]{m}{s}.  
+	Alors, l'équation avec les conditions initiales est: 
+	\begin{equation*}
+		2 x'' + 8 x = 0 , \qquad x(0) = 0.5, \qquad x'(0) = 1.
+	\end{equation*}
+	On calcule directement $\omega_0 = \sqrt{\nicefrac{k}{m}} = \sqrt{4} = 2$.
+	La fréquence angulaire est 2.  La fréquence usuelle en hertz (cycles per
+	seconde) est $\nicefrac{2}{2\pi} = \nicefrac{1}{\pi} \approx 0.318$.
+	
+	%15 is the number of lines, must be adjusted
+	\begin{mywrapfig}[15]{3.25in}
+	\capstart \diffyincludegraphics{width=3in}{width=4.5in}{mv-undamped}
+	\caption{Oscillation simple non amortie .\label{mv:undampedfig}}
+	\end{mywrapfig}
+	
+	La solution générale est: 
+	\begin{equation*}
+		x(t) = A \cos (2t) + B \sin (2t) .
+	\end{equation*}
+	La condition $x(0) = 0.5$ implique que $A = 0.5$.  
+	Alors, $x'(t) = - 2(0.5) \sin (2t) + 2B \cos (2t)$.
+	Puisque $x'(0) = 1$, on obtient $B = 0.5$.  Ainsi, l'amplitude est
+	$C = \sqrt{A^2+B^2} = \sqrt{0.25+0.25} = \sqrt{0.5} \approx 0.707$. 
+	La solution est: 
+	\begin{equation*}
+		x(t) = 0.5 \cos (2t) + 0.5 \sin (2t) .
+	\end{equation*}
+	Le graphe de  $x(t)$ est illustré à la  \figurevref{mv:undampedfig}.
 \end{example}
 
 En général, pour un mouvement libre non amorti, la solution: 
 \begin{equation*}
-x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t) 
+	x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t) 
 \end{equation*}
 correspond aux condition initiales $x(0) = A$ et $x'(0) = \omega_0 B$.
 Ainsi, il est facile de comprendre $A$ et $B$ à partir des conditions initiales. 
 
 Calculons la variation de phase de l'exemple.
-Puisque $\tan \gamma = \nicefrac{B}{A} = 1$, on prend l'arctangente de 1 pour obtenir $\nicefrac{\pi}{4}$ ou $\nicefrac{5\pi}{4}$. 
+Puisque $\tan \gamma = \nicefrac{B}{A} = 1$, on prend l'arctangente de 1 pour obtenir 
+$\nicefrac{\pi}{4}$ ou $\nicefrac{5\pi}{4}$. 
 Il faut vérifier à quel quadrant appartient $\gamma$.
 Puisque  $A$ et $B$ sont positifs, $\gamma$ appartient au premier quadrant, et alors $\gamma =
 \nicefrac{\pi}{4}$ ou approximativement 0.785.
@@ -1374,38 +1399,42 @@ Note: Plusieurs calculatrices et logiciels proposent non seulement la fonction
 \texttt{atan}\index{atan} pour arctangente, mais aussi ce qui est appelé  \texttt{atan2}\index{atan2}.
 Cette fonction prend deux arguments, $B$ et $A$, et retourne $\gamma$ dans le bon quadrant.
 
+
+
 \subsection{Mouvement libre amorti}
 
 %mbxINTROSUBSUBSECTION
 
 On considère maintnenant le cas \myindex{amorti}.  L'équation est alors: 
 \begin{equation*}
-m x'' + c x' + kx = 0
+	m x'' + c x' + kx = 0
 \end{equation*}
 et se réécrit comme suit: 
 \begin{equation*}
-x'' + 2p x' + \omega_0^2 x = 0
+	x'' + 2p x' + \omega_0^2 x = 0
 \end{equation*}
 où
 \begin{equation*}
-\omega_0 = \sqrt{\frac{k}{m}}, \qquad p = \frac{c}{2m} .
+	\omega_0 = \sqrt{\frac{k}{m}}, \qquad p = \frac{c}{2m} .
 \end{equation*}
 L'équation caractéristique est
 \begin{equation*}
-r^2 + 2 pr + \omega_0^2 = 0 .
+	r^2 + 2 pr + \omega_0^2 = 0 .
 \end{equation*}
 En utilisant la formule quadratique, nous obtenons les racines 
 \begin{equation*}
-r = -p \pm \sqrt{p^2 - \omega_0^2} .
+	r = -p \pm \sqrt{p^2 - \omega_0^2} .
 \end{equation*}
 La forme de la solution dépend du type de racine que l'on obtient (réelles ou complexes). 
 On obtient des racines réelles si et seulement si le nombre suivant n'est pas négatif (donc plus grand ou égal à zéro): 
 \begin{equation*}
-p^2 - \omega_0^2 = {\left( \frac{c}{2m} \right)}^2 - \frac{k}{m}
-= \frac{c^2 - 4km}{4m^2} .
+	p^2 - \omega_0^2 = {\left( \frac{c}{2m} \right)}^2 - \frac{k}{m}
+					 = \frac{c^2 - 4km}{4m^2} .
 \end{equation*}
-Le signe de $p^2-\omega_0^2$ est le même que le signe de
-$c^2 - 4km$.  Ainsi, on obtient des racines réelles si et seulement si  $c^2-4km$ n'est pas négatif (c'est-à-dire si $c^2 \geq 4km$).
+Le signe de $p^2-\omega_0^2$ est le même que le signe de $c^2 - 4km$.  
+Ainsi, on obtient des racines réelles si et seulement si  $c^2-4km$ n'est pas négatif (c'est-à-dire si $c^2 \geq 4km$).
+
+
 
 \subsubsection{Suramortissement}
 
@@ -1421,18 +1450,20 @@ $c^2 - 4km$.  Ainsi, on obtient des racines réelles si et seulement si  $c^2-4k
 % make sure the MBX below is synced!
 %
 
-Lorsque
-$c^2 - 4km > 0$, le système est \emph{\myindex{suramorti}}.  Dans ce cas, il y a deux racines réelles $r_1$ et $r_2$.  Les deux racines sont négatives:   puisque $\sqrt{p^2 - \omega_0^2}$ est toujours plus petit que$p$,
-alors
-$-p \pm \sqrt{p^2 - \omega_0^2}$ est négative dans tous les cas.
+Lorsque $c^2 - 4km > 0$, le système est \emph{\myindex{suramorti}}.  
+Dans ce cas, il y a deux racines réelles $r_1$ et $r_2$.  
+Les deux racines sont négatives:   puisque $\sqrt{p^2 - \omega_0^2}$ est toujours plus petit que$p$,
+alors $-p \pm \sqrt{p^2 - \omega_0^2}$ est négative dans tous les cas.
 
 
 La solution est 
 \begin{equation*}
-x(t) = C_1 e^{r_1 t} + C_2 e^{r_2 t} .
+	x(t) = C_1 e^{r_1 t} + C_2 e^{r_2 t} .
 \end{equation*}
 Puisque  $r_1, r_2$ sont négatives, $x(t) \to 0$ lorsque $t \to \infty$.
-Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini. Pour quelques graphiques avec des conditions La \figureref{mv:overdampedfig} montre le graphe de quelques solutions, avec des conditions initiales différentes.
+Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini. 
+Pour quelques graphiques avec des conditions, la \figureref{mv:overdampedfig} montre 
+le graphe de quelques solutions, avec des conditions initiales différentes.
 
 %mbxlatex \begin{myfig}
 %mbxlatex \diffyincludegraphics{width=3in}{width=4.5in}{mv-overdamped}
@@ -1444,79 +1475,83 @@ $x$ au plus une fois.  Pour comprendre pourquoi, résolvons
 $0 = C_1 e^{r_1 t} + C_2 e^{r_2 t}$.
 Donc, $C_1 e^{r_1 t} = - C_2 e^{r_2 t}$ et en utilisant les lois des exposants, on obtient  
 \begin{equation*}
-\frac{-C_1}{C_2} = e^{(r_2-r_1) t} .
+	\frac{-C_1}{C_2} = e^{(r_2-r_1) t} .
 \end{equation*}
-Cette équation a au plus une solution  $t \geq 0$.  Pour certaines conditions initiales, le graphique ne croise jamais l'axe des $x$, telle que le montre le graphique précédent. 
+Cette équation a au plus une solution  $t \geq 0$.  
+Pour certaines conditions initiales, le graphique ne croise jamais l'axe des $x$, 
+telle que le montre le graphique précédent. 
 
 \begin{example}
-Supposons que la masse n'est plus au repos. Elle est au repos lorsque   
-$x(0) = x_0$ et $x'(0) = 0$.
-Alors
-\begin{equation*}
-x(t) = \frac{x_0}{r_1-r_2} \left(r_1 e^{r_2 t} - r_2 e^{r_1 t} \right) .
-\end{equation*}
-Il est évident que les conditions initiales sont satisfaites.
+	Supposons que la masse n'est plus au repos. Elle est au repos lorsque   
+	$x(0) = x_0$ et $x'(0) = 0$.
+	Alors,
+	\begin{equation*}
+		x(t) = \frac{x_0}{r_1-r_2} \left(r_1 e^{r_2 t} - r_2 e^{r_1 t} \right) .
+	\end{equation*}
+	Il est évident que les conditions initiales sont satisfaites.
 \end{example}
+
+
 
 \subsubsection{Amortissement critique}
 
-Lorsque
-$c^2 - 4km = 0$, le système présente un \emph{\myindex{amortissement critique}}.  Dans ce cas, il y a une racine double  $-p$.  Notre solution est 
+Lorsque $c^2 - 4km = 0$, le système présente un \emph{\myindex{amortissement critique}}.  
+Dans ce cas, il y a une racine double  $-p$.  Notre solution est 
 \begin{equation*}
-x(t) = C_1 e^{-pt} + C_2 t e^{-pt} .
+	x(t) = C_1 e^{-pt} + C_2 t e^{-pt} .
 \end{equation*}
-Le comportement d'un système avec amortissement critique est très similaire à celui d'un système avec amortissement ordinaire. Après tout, le premier est en quelque sorte un cas limite du deuxième.  Mais ces équations sont aprèss tout des approximations: dans le vrai monde, on est toujours un peu sous-amorti ou un peu trop amorti. On ne s'attardera donc pas sur l'amortissement critique.
+Le comportement d'un système avec amortissement critique est très similaire à celui d'un système avec amortissement ordinaire. Après tout, le premier est en quelque sorte un cas limite du deuxième.  
+Mais ces équations sont aprèss tout des approximations: dans le vrai monde, 
+on est toujours un peu sous-amorti ou un peu trop amorti. 
+On ne s'attardera donc pas sur l'amortissement critique.
 
 \subsubsection{Sous-amortissement}
 
 %13 is the number of lines, must be adjusted
 %mbxSTARTIGNORE
 \begin{mywrapfig}[13]{3.25in}
-\capstart
-\diffyincludegraphics{width=3in}{width=4.5in}{mv-underdamped}
+\capstart \diffyincludegraphics{width=3in}{width=4.5in}{mv-underdamped}
 \caption{Système sous-amorti avec ses courbes enveloppes.\label{mv:underdampedfig}}
 \end{mywrapfig}
 %mbxENDIGNORE
 %
 % make sure the MBX below is synced!
 %
-Lorsque
-$c^2 - 4km < 0$, le système est \emph{\myindex{sous-amorti}}.  Dans ce cas, les racines sont complexes. 
-\begin{equation*}
-\begin{split}
-r & =
--p \pm \sqrt{p^2 - \omega_0^2} \\
-& = 
--p \pm \sqrt{-1}\sqrt{\omega_0^2 - p^2} \\
-& = 
--p \pm i \omega_1 ,
-\end{split}
-\end{equation*}
+Lorsque $c^2 - 4km < 0$, le système est \emph{\myindex{sous-amorti}}. 
+Dans ce cas, les racines sont complexes. 
+\begin{align*}
+	r & = -p \pm \sqrt{p^2 - \omega_0^2} \\
+	  & = -p \pm \sqrt{-1}\sqrt{\omega_0^2 - p^2} \\
+	  & = -p \pm i \omega_1 ,
+\end{align*}
 où $\omega_1 =\sqrt{\omega_0^2 - p^2}$.  Notre solution est
 \begin{equation*}
-x(t) = e^{-pt} \bigl( A \cos (\omega_1 t) + B \sin (\omega_1 t) \bigr) ,
+	x(t) = e^{-pt} \bigl( A \cos (\omega_1 t) + B \sin (\omega_1 t) \bigr) ,
 \end{equation*}
 ou
 \begin{equation*}
-x(t) = C e^{-pt} \cos ( \omega_1 t - \gamma ) .
+	x(t) = C e^{-pt} \cos ( \omega_1 t - \gamma ) .
 \end{equation*}
-Le graphe d'un exemple est illustré dans la  \figureref{mv:underdampedfig}.  Notez que nous avons encore $x(t) \to 0$ lorsque $t \to \infty$.
+Le graphe d'un exemple est illustré dans la  \figureref{mv:underdampedfig}.  
+Notez que nous avons encore $x(t) \to 0$ lorsque $t \to \infty$.
 
 %mbxlatex \begin{myfig}
 %mbxlatex \diffyincludegraphics{width=3in}{width=4.5in}{mv-underdamped}
 %mbxlatex \caption{Underdamped motion with the envelope curves shown.\label{mv:underdampedfig}}
 %mbxlatex \end{myfig}
 
-La figure montre aussi les~\emph{\myindex{courbes enveloppes}}
-$C e^{-pt}$ et $-C e^{-pt}$.  La solution est la ligne qui oscille entre les deux courbes. Les courbes enveloppes donnent l'amplitude maximale de l'oscillation à n'importe quel point donné. Par exemple, si vous sautez en bungee, vous serez très intéressé par le calcul de la courbe enveloppe pour éviter de vous cogner la tête. 
+La figure montre aussi les~\emph{\myindex{courbes enveloppes}} $C e^{-pt}$ et $-C e^{-pt}$.  
+La solution est la ligne qui oscille entre les deux courbes. 
+Les courbes enveloppes donnent l'amplitude maximale de l'oscillation à n'importe quel point donné. 
+Par exemple, si vous sautez en bungee, 
+vous serez très intéressé par le calcul de la courbe enveloppe pour éviter de vous cogner la tête. 
 
-Le changement de phase $\gamma$ fait varier l'oscillation vers la gauche ou vers la droite, mais dans la courbe enveloppe (celle-ci ne change pas, même lorsque $\gamma$
-varie).
+Le changement de phase $\gamma$ fait varier l'oscillation vers la gauche ou vers la droite, 
+mais dans la courbe enveloppe (celle-ci ne change pas, même lorsque $\gamma$ varie).
 
 
-La 
-\emph{\myindex{pseudo-fréquence}}\footnote{On n'appelle pas $\omega_1$ une fréquence puisque la solution n'est pas réellement périodique.} angulaire devient plus petite lorsque l'amortissement 
-$c$, et donc $p$, deviennent plus grands. Ce qui a du sens: lorsque l'amortissement change légèrement, on ne s'attend pas à ce que le comportement de la solution change beaucoup. Lorsque $c$ augmente,  alors à un certain point la solution devrait ressembler à la solution pour un amortissement critique ou un sur-amortissement où il n'y a pas d'oscillation. Alors si $c^2$ approche $4km$, on veut que $\omega_1$ tende vers 0.
+La \emph{\myindex{pseudo-fréquence}}\footnote{On n'appelle pas $\omega_1$ une fréquence puisque la solution n'est pas réellement périodique.} angulaire devient plus petite lorsque l'amortissement 
+$c$, et donc $p$, deviennent plus grands. Ce qui a du sens: lorsque l'amortissement change légèrement, on ne s'attend pas à ce que le comportement de la solution change beaucoup. Lorsque $c$ augmente,  alors à un certain point la solution devrait ressembler à la solution pour un amortissement critique ou un sur-amortissement où il n'y a pas d'oscillation. Alors, si $c^2$ approche $4km$, on veut que $\omega_1$ tende vers 0.
 
 De l'autre côté, lorsque $c$ devient plus petit, $\omega_1$ approche $\omega_0$
 ($\omega_1$est toujours plus petit que $\omega_0$), et la solution ressemble de plus en plus au cas de sous-amortissement. La courbe enveloppe devient de plus en plus plate lorsque $c$, et donc $p$, tendent vers 0.
@@ -1525,100 +1560,102 @@ De l'autre côté, lorsque $c$ devient plus petit, $\omega_1$ approche $\omega_0
 
 \begin{samepage}
 \begin{exercise} \label{mv:ex1}
-Considérez le système masse-ressort  tel que $m=2$, la constante du ressort $k=3$, et la constante d'amortissement $c=1$.
-\begin{tasks}
-\task Écrivez le système et trouvez la solution générale de celui-ci.
-\task Est-ce que le système est en état de  sous-amortissement, sur-amortissement ou d'amortissement critique? 
-\task Si le système n'est pas en amortissment critique, trouve un $c$ qui amène le système dans un état d'amortissement critique. 
-\end{tasks}
+	Considérez le système masse-ressort  tel que $m=2$, la constante du ressort $k=3$, et la constante d'amortissement $c=1$.
+	\begin{tasks}
+		\task Écrivez le système et trouvez la solution générale de celui-ci.
+		\task Est-ce que le système est en état de  sous-amortissement, sur-amortissement ou d'amortissement critique? 
+		\task Si le système n'est pas en amortissment critique, trouve un $c$ qui amène le système dans un état 	
+				d'amortissement critique. 
+	\end{tasks}
 \end{exercise}
 \end{samepage}
 
 \begin{exercise}
-Faites l'\exerciseref{mv:ex1} pour
-$m=3$, $k=12$ et $c=12$.
+Faites l'\exerciseref{mv:ex1} pour $m=3$, $k=12$ et $c=12$.
 \end{exercise}
 
 \begin{exercise} \label{mv:exwt1}
-Utilisant les unités mètres-kilogrammes-secondes\index{mks units},
-supposez que vous avez un ressort de constante  \unitfrac[4]{N}{m}.
-Vous voulez l'utiliser pour peser des objets. Supposez qu'il n'y a pas de friction. Attachez la masse au ressort et mettez-la en mouvement.  
-\begin{tasks}
-\task Vous trouvez que la fréquence est \unit[0.8]{Hz} (cycles per seconde).  Quelle est la masse?
-\task Trouvez la formule pour une masse  $m$ et donnez la fréquence $\omega$ en \unit{Hz}.
-\end{tasks}
+	Utilisant les unités mètres-kilogrammes-secondes\index{mks units},
+	supposez que vous avez un ressort de constante  \unitfrac[4]{N}{m}.
+	Vous voulez l'utiliser pour peser des objets. Supposez qu'il n'y a pas de friction. Attachez la masse au ressort et mettez-la en mouvement.  
+	\begin{tasks}
+		\task Vous trouvez que la fréquence est \unit[0.8]{Hz} (cycles per seconde).  Quelle est la masse?
+		\task Trouvez la formule pour une masse  $m$ et donnez la fréquence $\omega$ en \unit{Hz}.
+	\end{tasks}
 \end{exercise}
 
 \begin{exercise}
-On reprend l'\exerciseref{mv:exwt1} en tenant compte de la friction.
-De plus, supposez que vous ne connaissaez pas la constante du ressort, mais que vous avez deux poids de références  \unit[1]{kg} et \unit[2]{kg} pour calibrer votre système.
-Vous les mettez, chacun leur tour, en mouvement sur votre ressort et vous mesurez la fréquence. Pour la masse de  \unit[1]{kg} vous mesurez \unit[1.1]{Hz}, pour la masse de  \unit[2]{kg} vous mesurez \unit[0.8]{Hz}.
-\begin{tasks}
-\task Trouvez $k$ (la constante du ressort) et $c$ (la constante d'amortissement).
-\task Trouvez la formule pour la masse en terme de fréquence en Hz.  \emph{Notez qu'il pourrait avoir plus qu'une masse possible pour une fréquence donnée.}
-\task Pour un objet inconnu, vous mesurez \unit[0.2]{Hz}, quelle est la masse de cet objet?   Supposez que la masse de l'objet inconnue est supérieure un kilogramme.
-\end{tasks}
+	On reprend l'\exerciseref{mv:exwt1} en tenant compte de la friction.
+	De plus, supposez que vous ne connaissaez pas la constante du ressort, mais que vous avez deux poids de références  \unit[1]{kg} et \unit[2]{kg} pour calibrer votre système.
+	Vous les mettez, chacun leur tour, en mouvement sur votre ressort et vous mesurez la fréquence. Pour la masse de  \unit[1]{kg} vous mesurez \unit[1.1]{Hz}, pour la masse de  \unit[2]{kg} vous mesurez \unit[0.8]{Hz}.
+	\begin{tasks}
+		\task Trouvez $k$ (la constante du ressort) et $c$ (la constante d'amortissement).
+		\task Trouvez la formule pour la masse en terme de fréquence en Hz.  
+				\emph{Notez qu'il pourrait avoir plus qu'une masse possible pour une fréquence donnée.}
+		\task Pour un objet inconnu, vous mesurez \unit[0.2]{Hz}, quelle est la masse de cet objet?   
+				Supposez que la masse de l'objet inconnue est supérieure un kilogramme.
+	\end{tasks}
 \end{exercise}
 
 \begin{exercise}
-On veut mesurer la friction d'une masse de  \unit[0.1]{kg} en la glissant sur une surface lisse (on veut trouver $c$).  Vous avez un ressort de constante  $k=\unitfrac[5]{N}{m}$.  Vous prenez le ressort, vous attachez une masse et vous l'accrochez au mur. Ensuite, vous tirez sur le ressort et vous lâchez la masse. Vous trouvez que la masse oscille avec une fréquence de  \unit[1]{Hz}.
-Quelle est la friction?
+	On veut mesurer la friction d'une masse de  \unit[0.1]{kg} en la glissant sur une surface lisse (on veut trouver $c$).  Vous avez un ressort de constante  $k=\unitfrac[5]{N}{m}$.  Vous prenez le ressort, vous attachez une masse et vous l'accrochez au mur. Ensuite, vous tirez sur le ressort et vous lâchez la masse. Vous trouvez que la masse oscille avec une fréquence de  \unit[1]{Hz}.
+	Quelle est la friction?
 \end{exercise}
 
 \setcounter{exercise}{100}
 
 \begin{exercise}
-Une masse de $2$ kilogrammes est attaché à un ressort de constante $k$ newtons par
-mètre sans amortissement. Supposez que le système est au repos et qu'au temps  $t=0$,on donne une impulsion à la masse, qui  commence à se déplacer à 2 mètres par seconde. Quelle valeur $k$ devrait-elle avoir pour que la masse n'aille pas plus loin que trois mètres de sa position de repos?
+	Une masse de $2$ kilogrammes est attaché à un ressort de constante $k$ newtons par
+	mètre sans amortissement. Supposez que le système est au repos et qu'au temps  $t=0$,on donne une impulsion à la masse, qui  commence à se déplacer à 2 mètres par seconde. Quelle valeur $k$ devrait-elle avoir pour que la masse n'aille pas plus loin que trois mètres de sa position de repos?
 \end{exercise}
 \exsol{%
-$k=\nicefrac{8}{9}$ (et plus)
+	$k=\nicefrac{8}{9}$ (et plus)
 }
 
 \begin{exercise}
-Supposez que vous ayant un  circuit RLC circuit avec un résistance de 100 milliohms (0.1 ohms),
-un inducteur ayant une inductance de 50 millihenries (0.05 henries), et une capacité de 5 farads, avec un voltage constant. 
-\begin{tasks}
-\task Écrivez l'EDO pour le $I$ courant.
-\task Trouvez la solution générale. 
-\task Résolvez pour  $I(0) = 10$ et $I'(0) = 0$.
-\end{tasks}
+	Supposez que vous ayant un  circuit RLC circuit avec un résistance de 100 milliohms (0.1 ohms),
+	un inducteur ayant une inductance de 50 millihenries (0.05 henries), et une capacité de 5 farads, avec un voltage constant. 
+	\begin{tasks}
+		\task Écrivez l'EDO pour le $I$ courant.
+		\task Trouvez la solution générale. 
+		\task Résolvez pour  $I(0) = 10$ et $I'(0) = 0$.
+	\end{tasks}
 \end{exercise}
 \exsol{%
-a) $0.05 I'' + 0.1 I' + (\nicefrac{1}{5}) I = 0$
-\quad
-b) $I = C e^{-t} \cos(\sqrt{3} \, t - \gamma)$
-\quad
-c) $I = 10 e^{-t} \cos(\sqrt{3} \, t) + \frac{10}{\sqrt{3}} e^{-t}
-\sin(\sqrt{3} \, t)$
+	a) $0.05 I'' + 0.1 I' + (\nicefrac{1}{5}) I = 0$
+	\quad
+	b) $I = C e^{-t} \cos(\sqrt{3} \, t - \gamma)$
+	\quad
+	c) $I = 10 e^{-t} \cos(\sqrt{3} \, t) + \frac{10}{\sqrt{3}} e^{-t}
+	\sin(\sqrt{3} \, t)$
 }
 
 \begin{exercise}
-\pagebreak[2]
-Un wagon de  \unit[5000]{kg} frappe un pare-chocs (un ressort) à \unitfrac[1]{m}{s},
-et le ressort comprime de  \unit[0.1]{m}. Supposez qu'il n'y a pas d'amortissement.  
-
-\begin{tasks}
-\task Trouvez $k$.
-\task Quelle est la compression du ressort lorsqu'un wagon de \unit[10000]{kg} le frappe à la même vitesse?
-
-\task Supposons que le ressort brise lorsqu'il comprime de plus de\unit[0.3]{m}.  Quelle serait la masse maximale permise au wagon pour qu'il puisse le frapper à  \unitfrac[1]{m}{s}?
-\task Quel est la masse maximale du wagon pouvant frapper le ressort sans briser à une vitesse de \unitfrac[2]{m}{s}?
-\end{tasks}
+	\pagebreak[2]
+	Un wagon de  \unit[5000]{kg} frappe un pare-chocs (un ressort) à \unitfrac[1]{m}{s},
+	et le ressort comprime de  \unit[0.1]{m}. Supposez qu'il n'y a pas d'amortissement.  
+	
+	\begin{tasks}
+		\task Trouvez $k$.
+		\task Quelle est la compression du ressort lorsqu'un wagon de \unit[10000]{kg} le frappe à la même vitesse?
+		\task Supposons que le ressort brise lorsqu'il comprime de plus de\unit[0.3]{m}.  
+				Quelle serait la masse maximale permise au wagon pour qu'il puisse le frapper à  \unitfrac[1]{m}{s}?
+		\task Quel est la masse maximale du wagon pouvant frapper le ressort sans briser à une vitesse de \unitfrac[2]{m}{s}?
+	\end{tasks}
 \end{exercise}
 \exsol{%
-a) $k=500000$
-\quad
-b) $\frac{1}{5\sqrt{2}} \approx 0.141$
-\quad
-c) \unit[45000]{kg}
-\quad
-d) \unit[11250]{kg}
+	a) $k=500000$
+	\quad
+	b) $\frac{1}{5\sqrt{2}} \approx 0.141$
+	\quad
+	c) \unit[45000]{kg}
+	\quad
+	d) \unit[11250]{kg}
 }
 
 \begin{exercise}
-Une masse de $m$ \unit{kg} est attaché à un ressort de constante $k=\unitfrac[3]{N}{m}$, et
-$c=\unitfrac[2]{Ns}{m}$.  Trouvez la masse  $m_0$ pour laquelle il y a un amortissement critique. Si $m < m_0$, est-ce que le système oscille ou non, et est-ce qu'il s'agit d'un sur-amortissement ou d'un sous-amortissement? 
+	Une masse de $m$ \unit{kg} est attaché à un ressort de constante $k=\unitfrac[3]{N}{m}$, et
+	$c=\unitfrac[2]{Ns}{m}$.  Trouvez la masse  $m_0$ pour laquelle il y a un amortissement critique. Si $m < m_0$, est-ce que le système oscille ou non, et est-ce qu'il s'agit d'un sur-amortissement ou d'un sous-amortissement? 
 \end{exercise}
 \exsol{%
 $m_0 = \frac{1}{3}$.  Si $m < m_0$, alors le système est sur-amorti et ne va pas osciller. 
@@ -1647,102 +1684,100 @@ Par exemple, celles pour les forces de vibration mécanique.
 
 Considérons, par exemple:  
 \begin{equation} \label{eq3.5:nh}
-y'' + 5y'+ 6y = 2x+1 .
+	y'' + 5y'+ 6y = 2x+1 .
 \end{equation}
 %We still say this equation is constant coefficient equation.  We
 %only require constants in front of the $y''$, $y'$, and $y$.
 
 On écrit  $Ly = 2x+1$ lorsque la forme exacte de l'opérateur n'est pas importante. 
-On résout \eqref{eq3.5:nh} de la manière suivante. Premièrement, on trouve la solution générale  $y_c$
+On résout \eqref{eq3.5:nh} de la manière suivante. 
+Premièrement, on trouve la solution générale  $y_c$
 à l'\emph{\myindex{équation homogène associée}}: 
 \begin{equation} \label{eq3.5:h}
-y'' + 5y'+ 6y = 0 .
+	y'' + 5y'+ 6y = 0 .
 \end{equation}
 On nomme $y_c$ la \emph{\myindex{solution complémentaire}}.
-Ensuite, on trouve une seule \emph{\myindex{solution particulière}} $y_p$ à \eqref{eq3.5:nh}, d'une manière quelconque.  La solution générale à \eqref{eq3.5:nh} est alors,: 
+Ensuite, on trouve une seule \emph{\myindex{solution particulière}} $y_p$ à \eqref{eq3.5:nh}, d'une manière quelconque.  La solution générale à \eqref{eq3.5:nh} est alors: 
 \begin{equation*}
-y = y_c + y_p
+	y = y_c + y_p
 \end{equation*}
-On a  $L y_c = 0$ et $L y_p = 2x+1$.  Comme
-$L$ est un \emph{\myindex{opérateur linéaire}}, $L y = L ( y_c + y_p) = L y_c + L y_p = 0
-+ (2x+1)$ et donc $y$ est une solution. Regardons pourquoi on obtient une  solution  \emph{générale}.
+On a  $L y_c = 0$ et $L y_p = 2x+1$.  
+Comme $L$ est un \emph{\myindex{opérateur linéaire}}, 
+$L y = L ( y_c + y_p) = L y_c + L y_p = 0 + (2x+1)$ 
+et donc $y$ est une solution. Regardons pourquoi on obtient une  solution  \emph{générale}.
 
 Soient $y_p$ et $\tilde{y}_p$ deux solutions particulières différentes à \eqref{eq3.5:nh}.
 On écrit la différence
 $w = y_p - \tilde{y}_p$.  On remplace $w$
 dans le membre de gauche de l'équation pour obtenir : 
 \begin{equation*}
-w'' + 5w'+ 6w =
-(y_p'' + 5y_p'+ 6y_p) -
-(\tilde{y}_p'' + 5\tilde{y}_p'+ 6\tilde{y}_p) =
-(2x+1) - (2x+1) = 0 .
+	w'' + 5w'+ 6w 	= 	(y_p'' + 5y_p'+ 6y_p) - (\tilde{y}_p'' + 5\tilde{y}_p'+ 6\tilde{y}_p) 
+					=	(2x+1) - (2x+1) = 0 .
 \end{equation*}
 En utilisant la notation des opérateurs linéaires, le calcul devient plus simple:  
 \begin{equation*}
-Lw = L(y_p - \tilde{y}_p) =
-Ly_p - L\tilde{y}_p =
-(2x+1)-(2x+1) = 0 .
+	Lw = L(y_p - \tilde{y}_p) =	Ly_p - L\tilde{y}_p = (2x+1)-(2x+1) = 0 .
 \end{equation*}
 Alors, $w = y_p - \tilde{y}_p$ est une solution de \eqref{eq3.5:h}; autrement dit,
-$Lw = 0$.  Les deux solutions de \eqref{eq3.5:nh} diffèrent par une solution à l'équation homogène~\eqref{eq3.5:h}.  La solution  $y = y_c + y_p$ inclut \emph{toutes} les
-solutions de \eqref{eq3.5:nh},
+$Lw = 0$.  Les deux solutions de \eqref{eq3.5:nh} diffèrent par une solution à l'équation homogène~\eqref{eq3.5:h}.  La solution  $y = y_c + y_p$ inclut \emph{toutes} les solutions de \eqref{eq3.5:nh}, 
 lorsque $y_c$ est la solution générale à l'équation homogène associée. 
 
 \begin{theorem}
-Soit $Ly=f(x)$ une équation différentielle ordinaire linéaire (pas nécessairement à coefficients constants).  Soit  $y_c$ une solution complémentraire et soit $y_p$ une solution particulière à $Ly=f(x)$.  Alors la solution générale de $Ly=f(x)$ est: 
-\begin{equation*}
-y = y_c + y_p.
-\end{equation*}
+	Soit $Ly=f(x)$ une équation différentielle ordinaire linéaire (pas nécessairement à coefficients constants).  Soit  $y_c$ une solution complémentraire et soit $y_p$ une solution particulière à $Ly=f(x)$.  
+	Alors, la solution générale de $Ly=f(x)$ est: 
+	\begin{equation*}
+		y = y_c + y_p.
+	\end{equation*}
 \end{theorem}
 
-La morale de l'histoire est qu'on peut trouver la solution particulière de n'importe quelle manière. Si l'on trouve une solution particulière différente (avec une méthode différente ou simplement en la devinant), alors on peut toujours trouver la même solution générale. La formule pourrait apparaître différente, et les constantes choisies pour satisfaire aux conditions initiales pourraient être différentes, mais ce serait la même solution.  
+La morale de l'histoire est qu'on peut trouver la solution particulière de n'importe quelle manière. 
+Si l'on trouve une solution particulière différente (avec une méthode différente ou simplement en la devinant), alors on peut toujours trouver la même solution générale. 
+La formule pourrait apparaître différente, et les constantes choisies pour satisfaire aux conditions initiales pourraient être différentes, mais ce serait la même solution.  
+
+
 
 \subsection{Coefficients indéterminés}\index{undetermined coefficients}
 
 L'astuce est, d'une manière quelconque ou par un choix judicieux, de deviner une solution particulière à 
-l'équation~\eqref{eq3.5:nh}.  On note que $2x+1$ est un polynôme, et que le membre de gauche de l'équation sera un polynôme si l'on pose que $y$ est un polynôme de même degré. Essayons: 
+l'équation~\eqref{eq3.5:nh}.  
+On note que $2x+1$ est un polynôme, et que le membre de gauche de l'équation sera un polynôme si l'on pose que $y$ est un polynôme de même degré. Essayons: 
 \begin{equation*}
-y_p = Ax + B .
+	y_p = Ax + B .
 \end{equation*}
 On remplace $y_p$ dans le membre de gauche et l'on obtient: 
-\begin{equation*}
-\begin{split}
-y_p'' + 5y_p'+ 6y_p & =
-(Ax+B)'' + 5(Ax+B)' + 6(Ax+B)
-\\
-& = 
-0 + 5A + 6Ax + 6B = 6Ax+ (5A+6B) .
-\end{split}
-\end{equation*}
-Alors $6Ax+(5A+6B) = 2x+1$.  Donc, $A = \nicefrac{1}{3}$ et $B = \nicefrac{-1}{9}$.
-Par conséquent, 
-$y_p = \frac{1}{3}\, x - \frac{1}{9} = \frac{3x-1}{9}$.
+\begin{align*}
+	y_p'' + 5y_p'+ 6y_p & = (Ax+B)'' + 5(Ax+B)' + 6(Ax+B) \\
+						& = 0 + 5A + 6Ax + 6B = 6Ax+ (5A+6B) .
+\end{align*}
+Alors, $6Ax+(5A+6B) = 2x+1$.  
+Donc, $A = \nicefrac{1}{3}$ et $B = \nicefrac{-1}{9}$.
+Par conséquent, $y_p = \frac{1}{3}\, x - \frac{1}{9} = \frac{3x-1}{9}$.
 En résolvant le problème complémentaire (exercice!), on obtient: 
 \begin{equation*}
-y_c = C_1 e^{-2x} + C_2 e^{-3x}.
+	y_c = C_1 e^{-2x} + C_2 e^{-3x}.
 \end{equation*}
 Ainsi, la solution générale à~\eqref{eq3.5:nh} est: 
 \begin{equation*}
-y = C_1 e^{-2x} + C_2 e^{-3x} + \frac{3x-1}{9} .
+	y = C_1 e^{-2x} + C_2 e^{-3x} + \frac{3x-1}{9} .
 \end{equation*}
-Supposons maintenant que certaines conditions initialessont imposées. Par exemple,  $y(0) = 0$ et
-$y'(0) = \nicefrac{1}{3}$.  D'abord, on trouve que $y' = - 2C_1 e^{-2x} - 3C_2 e^{-3x}
-+ \nicefrac{1}{3}$.
+Supposons maintenant que certaines conditions initialessont imposées. 
+Par exemple,  $y(0) = 0$ et $y'(0) = \nicefrac{1}{3}$.  
+D'abord, on trouve que $y' = - 2C_1 e^{-2x} - 3C_2 e^{-3x} + \nicefrac{1}{3}$.
 Ensuite: 
 \begin{equation*}
-0 = y(0) = C_1 + C_2 -\frac{1}{9} , \qquad
-\frac{1}{3} = y'(0) = - 2C_1 - 3C_2 + \frac{1}{3} .
+			0   = y(0)  = C_1 + C_2 -\frac{1}{9} , \qquad
+	\frac{1}{3} = y'(0) = - 2C_1 - 3C_2 + \frac{1}{3} .
 \end{equation*}
 En résolvant l'équation, on obtient $C_1 = \nicefrac{1}{3}$ et $C_2 = \nicefrac{-2}{9}$.
 La solution particulière voulue est donc:  
 \begin{equation*}
-y(x) = \frac{1}{3} e^{-2x} - \frac{2}{9} e^{-3x} + \frac{3x-1}{9} =
-\frac{3 e^{-2x} - 2 e^{-3x} + 3x-1}{9} .
+	y(x) = \frac{1}{3} e^{-2x} - \frac{2}{9} e^{-3x} + \frac{3x-1}{9} 
+		 = \frac{3 e^{-2x} - 2 e^{-3x} + 3x-1}{9} .
 \end{equation*}
 
 \begin{exercise}
-Vérifiez que $y$ résout  l'équation  \eqref{eq3.5:nh}
-et satisfait aux conditions initiales données.  
+	Vérifiez que $y$ résout  l'équation  \eqref{eq3.5:nh}
+	et satisfait aux conditions initiales données.  
 \end{exercise}
 
 Note: Une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec  $y_c$ et seulement ajouter la solution particulière $y_p$ par la suite.
@@ -1753,32 +1788,28 @@ Note: Une erreur fréquente est de résoudre pour des constantes en utilisant le
 
 Lorsque le membre de droite est composé d'exponentielles, de sinus ou de cosinus, on travaille de manière semblable. Prenons, par exemple: 
 \begin{equation*}
-y''+2y'+2y = \cos (2x) .
+	y''+2y'+2y = \cos (2x) .
 \end{equation*}
 On commence par chercher $y_p$.  On devine que la solution inclut un multiple de  $\cos(2x)$.
 On doit aussi ajouter un multiple de $\sin (2x)$ puisque la dérivée d'un cosinus est un sinus. On essaie donc: 
 \begin{equation*}
-y_p = A \cos (2x) + B \sin (2x) .
+	y_p = A \cos (2x) + B \sin (2x) .
 \end{equation*}
 On substitue  $y_p$ dans l'équation et l'on obtient: 
 \begin{multline*}
-\underbrace{-4 A \cos (2x) - 4 B \sin (2x)}_{y_p''}
-+2 \underbrace{\bigl(-2A \sin (2x) + 2B \cos (2x)\bigr)}_{y_p'}
-\\
-+
-2 \underbrace{\bigl(A \cos (2x) + 2B \sin (2x)\bigr)}_{y_p}
-= \cos (2x) ,
+	\underbrace{-4 A \cos (2x) - 4 B \sin (2x)}_{y_p''}
+		+2 \underbrace{\bigl(-2A \sin (2x) + 2B \cos (2x)\bigr)}_{y_p'}	\\
+		+2 \underbrace{\bigl(A \cos (2x) + 2B \sin (2x)\bigr)}_{y_p}
+	= \cos (2x) ,
 \end{multline*}
 ou
 \begin{equation*}
-(-4A+4B+2A) \cos(2x) +
-(-4B-4A+2B) \sin(2x)
-= \cos(2x) .
+	(-4A+4B+2A) \cos(2x) +	(-4B-4A+2B) \sin(2x) 	= \cos(2x) .
 \end{equation*}
 Le membre de gauche devrait être égal au membre de droite. À savoir,
-$-4A + 4B + 2A = 1$ et
-$-4B - 4A + 2B = 0$.  Alors, $-2A+4B =1$ et $2A+B=0$ et aussi  
-$A=\nicefrac{-1}{10}$ et $B=\nicefrac{1}{5}$.  Alors: 
+$-4A + 4B + 2A = 1$ et $-4B - 4A + 2B = 0$.  
+Alors, $-2A+4B =1$ et $2A+B=0$ et aussi   $A=\nicefrac{-1}{10}$ et $B=\nicefrac{1}{5}$.  
+Alors: 
 \begin{equation*}
 y_p = A \cos (2x) + B \sin (2x) = \frac{-\cos (2x) + 2 \sin (2x)}{10} .
 \end{equation*}
@@ -1794,12 +1825,11 @@ on essaie $y = A e^{3x}$ et l'on essaie de résoudre pour $A$.
 
 Lorsque le membre de droite est un multiple d'un sinus, d'un cosinus, d'une exponentielle ou d'un polynôme, on peut utiliser la règle du produit pour dériver et arriver à une expression à essayer. On a besoin de deviner une forme pour $y_p$ telle que $Ly_p$ est de la même forme, et a tous les termes nécessaires pour le membre de droite. Par exemple: 
 \begin{equation*}
-Ly = (1+3x^2)\,e^{-x}\cos (\pi x) .
+	Ly = (1+3x^2)\,e^{-x}\cos (\pi x) .
 \end{equation*}
 Pour cette équation, on suppose que: 
 \begin{equation*}
-y_p = (A + Bx + Cx^2)\,e^{-x} \cos (\pi x) + 
-(D + Ex + Fx^2)\,e^{-x} \sin (\pi x) .
+	y_p = (A + Bx + Cx^2)\,e^{-x} \cos (\pi x) + (D + Ex + Fx^2)\,e^{-x} \sin (\pi x) .
 \end{equation*}
 On substitue et l'on obtient les équations à résoudre pour 
 $A$, $B$, $C$, $D$, $E$, et $F$.
@@ -1808,226 +1838,213 @@ Comme on peut le voir, ça peut engendrer rapidement un calcul très long et fas
 
 \medskip
 
-Il y a un hic avec tout ça. Il est possible que la supposition faite résolve l'équation homogène associée .  Considérons, par exemple: 
+Il y a un hic avec tout ça. 
+Il est possible que la supposition faite résolve l'équation homogène associée .  Considérons, par exemple: 
 \begin{equation*}
-y'' - 9y = e^{3x} .
+	y'' - 9y = e^{3x} .
 \end{equation*}
 On aimerait poser que  $y = Ae^{3x}$, mais si l'on remplace dans le membre de gauche de l'équation, on obtient:  
 \begin{equation*}
-y''-9y = 9Ae^{3x} - 9Ae^{3x} = 0 \not= e^{3x} .
+	y''-9y = 9Ae^{3x} - 9Ae^{3x} = 0 \not= e^{3x} .
 \end{equation*}
 Il n'y a pas de manière de choisir $A$ pour que le membre de droite soit $e^{3x}$.
-L'astuce, dans ce cas, est de multiplier notre expression par  $x$ pour se débarasser de la duplication de la solution complémentaire. Ainsi, on calcule  $y_c$ (solution de $Ly =
-0$): 
+L'astuce, dans ce cas, est de multiplier notre expression par  $x$ pour se débarasser de la duplication de la solution complémentaire. 
+Ainsi, on calcule  $y_c$ (solution de $Ly = 0$): 
 \begin{equation*}
-y_c = C_1 e^{-3x} + C_2 e^{3x} 
+	y_c = C_1 e^{-3x} + C_2 e^{3x} 
 \end{equation*}
-et l'on note que le terme $e^{3x}$ est dupliqué avec notre expression. On la modifie pour qu'elle devienne  $y = Axe^{3x}$, et alors il n'y a plus de duplication. Essayons: 
-$y' = Ae^{3x} + 3Axe^{3x}$ et 
-$y'' = 6Ae^{3x} + 9Axe^{3x}$, alors: 
+et l'on note que le terme $e^{3x}$ est dupliqué avec notre expression. 
+On la modifie pour qu'elle devienne  $y = Axe^{3x}$, et alors il n'y a plus de duplication. 
+Essayons:  $y' = Ae^{3x} + 3Axe^{3x}$ et  $y'' = 6Ae^{3x} + 9Axe^{3x}$, alors: 
 \begin{equation*}
-y'' -9y = 6Ae^{3x} + 9Axe^{3x} - 9Axe^{3x} = 
-6Ae^{3x} .
+	y'' -9y = 6Ae^{3x} + 9Axe^{3x} - 9Axe^{3x} = 6Ae^{3x} .
 \end{equation*}
 Donc $6Ae^{3x}$ devrait être égal à $e^{3x}$.  Ainsi,
 $6A = 1$ et alors $A=\nicefrac{1}{6}$.  On peut maintenant écrire la solution générale comme suit: 
 \begin{equation*}
-y = y_c + y_p = 
-C_1 e^{-3x} + C_2 e^{3x} + \frac{1}{6}\,xe^{3x} .
+	y = y_c + y_p = C_1 e^{-3x} + C_2 e^{3x} + \frac{1}{6}\,xe^{3x} .
 \end{equation*}
 
 \medskip
 
-Il est possible que la multiplication  par $x$ n'enlève pas la
-duplication.  Voyons, par exemple: 
+Il est possible que la multiplication  par $x$ n'enlève pas la duplication.  
+Voyons, par exemple: 
 \begin{equation*}
-y''-6y'+9y = e^{3x} .
+	y''-6y'+9y = e^{3x} .
 \end{equation*}
-La solution complémentaire est
-$y_c = C_1 e^{3x} + C_2 x e^{3x}$.  Poser $y=A xe^{3x}$
-ne règlera pas le problème.  Dans ce cas, on veut supposer que 
-$y_p = Ax^2e^{3x}$. Ainsi, on veut multiplier notre expression par  $x$
-jusqu'à ce qu'il n'y ait plus de duplication. \emph{Mais pas plus!}  Multiplier trop de fois ne fonctionnera pas plus. 
+La solution complémentaire est $y_c = C_1 e^{3x} + C_2 x e^{3x}$.  
+Poser $y=A xe^{3x}$ ne règlera pas le problème.  
+Dans ce cas, on veut supposer que $y_p = Ax^2e^{3x}$. 
+Ainsi, on veut multiplier notre expression par  $x$ jusqu'à ce qu'il n'y ait plus de duplication. 
+\emph{Mais pas plus!}  Multiplier trop de fois ne fonctionnera pas plus. 
 
 
 \medskip
 
 Finalement, si le membre de droite a différents termes tels que 
 \begin{equation*}
-Ly = e^{2x} + \cos x .
+	Ly = e^{2x} + \cos x .
 \end{equation*}
 Dans ce cas, on trouve  $u$ qui résout $Lu = e^{2x}$ et $v$ qui résout $Lv = \cos x$ (faire chaque terme séparément).  On note que si $y = u+ v$, alors $Ly = e^{2x} + \cos x$ puisque 
-$L$ est linéaire; donc 
-$Ly = L(u+v) = Lu + Lv = e^{2x} + \cos x$.
+$L$ est linéaire; donc  $Ly = L(u+v) = Lu + Lv = e^{2x} + \cos x$.
+
+
 
 \subsection{Variation des paramètres}
 
 La méthode des coefficients indéterminés fonctionne pour plusieurs problèmes de base. Mais elle fonctionne seulement lorsque le membre de droite de l'équation  $Ly = f(x)$ 
 admet un nombre limité de dérivées linéairement indépendantes; à ce moment-là, on peut écrire une expression qui les contient toutes. Quelques équations sont un peu plus difficiles. Considérons, par exemple: 
 \begin{equation*}
-y''+y = \tan x .
+	y''+y = \tan x .
 \end{equation*}
 Toutes les nouvelles dérivées de $\tan x$ sont complètement différentes et ne peuvent pas s'écrire comme une combinaison linéaire des dérivées précédentes. Si l'on commence par dériver  $\tan x$, on obtient:
 \begin{multline*}
-\sec^2 x, \quad
-2\sec^2 x \, \tan x, \quad
-4 \sec^2 x \, \tan^2 x + 2 \sec^4 x, \\
-8 \sec^2 x \, \tan^3 x + 16 \sec^4 x \, \tan x, \quad
-16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x, \quad
-\ldots
+ 	  \sec^2 x, \quad
+	2 \sec^2 x \, \tan x, \quad
+	4 \sec^2 x \, \tan^2 x + 2 \sec^4 x, \\
+	8 \sec^2 x \, \tan^3 x + 16 \sec^4 x \, \tan x, \quad
+	16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x, \quad
+	\ldots
 \end{multline*}
 
 Cette équation fait appel à une méthode différente: la méthode de la
 \emph{\myindex{variation des paramètres}}, qui gère toute équation de
-la forme $Ly = f(x)$, à condition de pouvoir résoudre certaines intégrales.  Pour plus de simplicité, on se limite
- aux équations à coefficients constants du second ordre,
+la forme $Ly = f(x)$, à condition de pouvoir résoudre certaines intégrales.  
+Pour plus de simplicité, on se limite  aux équations à coefficients constants du second ordre,
 mais la méthode fonctionne aussi bien pour les ordres supérieurs (les calculs deviennent plus
 \myindex{fastidieux}). % a bit of fun 
-La méthode fonctionne aussi pour des équations à coefficients non constants, à condition qu'on puisse résoudre l'équation homogène associée.  
+La méthode fonctionne aussi pour des équations à coefficients non constants, 
+à condition qu'on puisse résoudre l'équation homogène associée.  
 
-Il est peut-être préférable d'expliquer cette méthode par un exemple. On essaie de résoudre l'équation:  
+Il est peut-être préférable d'expliquer cette méthode par un exemple. 
+On essaie de résoudre l'équation:  
 \begin{equation*}
-Ly = y''+y = \tan x .
+	Ly = y''+y = \tan x .
 \end{equation*}
 D'abord, on trouve la solution complémentaire (solution à $Ly_c = 0$).  
 On obtient $y_c = C_1 y_1 + C_2 y_2$, où $y_1 = \cos x$ et $y_2 = \sin x$.
 On trouve une solution particulière à l'équation non homogène et l'on trouve: 
 \begin{equation*}
-y_p = y = u_1 y_1 + u_2 y_2 
+	y_p = y = u_1 y_1 + u_2 y_2 
 \end{equation*}
 où $u_1$ et $u_2$ sont des \emph{fonctions} et pas des constantes.
 On essaie de satisfaire à $Ly = \tan x$, ce qui donne les conditions pour les fonctions  $u_1$ et $u_2$.
 On calcule (règle du produit):  
 \begin{equation*}
-y' = (u_1' y_1 + u_2' y_2) + (u_1 y_1' + u_2 y_2').
+	y' = (u_1' y_1 + u_2' y_2) + (u_1 y_1' + u_2 y_2').
 \end{equation*}
 On peut toujours imposer une condition supplémentaire, à notre discrétion, pour simplifier les calculs (on a deux fonctions inconnues, alors on peut ajouter deux conditions). On a besoin que 
 $(u_1' y_1 + u_2' y_2) = 0$.  Ceci rend les calculs de la deuxième dérivée plus faciles: 
 \begin{align*}
-& y' = u_1 y_1' + u_2 y_2' , \\
-& y'' = (u_1' y_1' + u_2' y_2') + (u_1 y_1'' + u_2 y_2'') .
+	& y' = u_1 y_1' + u_2 y_2' , \\
+	& y'' = (u_1' y_1' + u_2' y_2') + (u_1 y_1'' + u_2 y_2'') .
 \end{align*}
 Puisque $y_1$ et $y_2$ sont des solutions de $y''+y = 0$, on trouve 
-$y_1'' = - y_1$
-et $y_2'' = - y_2$.
-(Si l'équation était plus générale  $y''+p(x)y' +q(x)y = 0$, on aurait
-$y_i'' = -p(x)y_i' -q(x)y_i$.) Alors: 
+$y_1'' = - y_1$ et $y_2'' = - y_2$.
+(Si l'équation était plus générale  $y''+p(x)y' +q(x)y = 0$, on aurait $y_i'' = -p(x)y_i' -q(x)y_i$.) 
+Alors: 
 \begin{equation*}
-y'' = (u_1' y_1' + u_2' y_2') - (u_1 y_1 + u_2 y_2) .
+	y'' = (u_1' y_1' + u_2' y_2') - (u_1 y_1 + u_2 y_2) .
 \end{equation*}
 On a $(u_1 y_1 + u_2 y_2) = y$ et alors:
 \begin{equation*}
-y'' = (u_1' y_1' + u_2' y_2') - y 
+	y'' = (u_1' y_1' + u_2' y_2') - y 
 \end{equation*}
 et ainsi: 
 \begin{equation*}
-y'' + y = Ly = u_1' y_1' + u_2' y_2' .
+	y'' + y = Ly = u_1' y_1' + u_2' y_2' .
 \end{equation*}
-Pour  que $y$ satisfasse $Ly = f(x)$ on doit avoir
+Pour  que $y$ satisfasse à $Ly = f(x)$ on doit avoir
 $f(x) = u_1' y_1' + u_2' y_2'$.
 
 On doit résoudre les deux équations (conditions) qu'on a imposées à  $u_1$ et à $u_2$:
 \begin{equation*}
-\mybxbg{~~
-\begin{aligned}
-& u_1' y_1 + u_2' y_2 = 0 ,\\
-& u_1' y_1' + u_2' y_2' = f(x) .
-\end{aligned}
-~~}
+\mybxbg{~~ \begin{aligned}
+				& u_1' y_1 + u_2' y_2 = 0 ,\\
+				& u_1' y_1' + u_2' y_2' = f(x) .
+		\end{aligned}~~}
 \end{equation*}
 On résout pour $u_1'$ et $u_2'$ en termes de $f(x)$, $y_1$ et $y_2$.
-On obtient toujours cette formule pour n'importe quel $Ly = f(x)$, où $Ly =
-y''+p(x)y'+q(x)y$.  Il y a une formule générale pour la solution qu'on peut remplacer, mais à la place de la mémoriser, c'est mieux et plus facile de simplement répéter ce qu'on a fait précédemment. Dans ce cas, les deux équations sont:  
+On obtient toujours cette formule pour n'importe quel $Ly = f(x)$, où $Ly = y''+p(x)y'+q(x)y$.  
+Il y a une formule générale pour la solution qu'on peut remplacer, mais à la place de la mémoriser, c'est mieux et plus facile de simplement répéter ce qu'on a fait précédemment. Dans ce cas, les deux équations sont:  
 \begin{align*}
-u_1' \cos (x) + u_2' \sin (x) &= 0 ,\\
--u_1' \sin (x) + u_2' \cos (x) &= \tan (x) .
+	 u_1' \cos (x) + u_2' \sin (x) &= 0 ,\\
+	-u_1' \sin (x) + u_2' \cos (x) &= \tan (x) .
 \end{align*}
 Ainsi: 
 \begin{align*}
-u_1' \cos (x) \sin (x) + u_2' \sin^2 (x) & = 0 ,\\
--u_1' \sin (x) \cos (x) + u_2' \cos^2 (x) & = \tan (x) \cos (x) = \sin (x) .
+	 u_1' \cos (x) \sin (x) + u_2' \sin^2 (x) & = 0 ,\\
+	-u_1' \sin (x) \cos (x) + u_2' \cos^2 (x) & = \tan (x) \cos (x) = \sin (x) .
 \end{align*}
 Et alors: 
 \begin{align*}
-& u_2' \bigl(\sin^2 (x) + \cos^2 (x)\bigr) = \sin (x) , \\
-& u_2' = \sin (x) , \\
-& u_1' = \frac{- \sin^2 (x)}{\cos (x)} = - \tan (x) \sin (x) .
+	& u_2' \bigl(\sin^2 (x) + \cos^2 (x)\bigr) = \sin (x) , \\
+	& u_2' = \sin (x) , \\
+	& u_1' = \frac{- \sin^2 (x)}{\cos (x)} = - \tan (x) \sin (x) .
 \end{align*}
 On intègre $u_1'$ et $u_2'$ pour obtenir $u_1$ et $u_2$: 
 \begin{align*}
-& u_1 = \int u_1'\,dx 
-= \int - \tan (x) \sin (x)\,dx
-= \frac{1}{2}
-\ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert
-+ \sin (x) , \\
-& u_2 = \int u_2'\,dx 
-= \int \sin (x)\,dx = -\cos (x) .
+	& u_1 = \int u_1'\,dx 	= \int - \tan (x) \sin (x)\,dx 
+		= \frac{1}{2} \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert 	+ \sin (x) , \\
+	& u_2 = \int u_2'\,dx 	= \int \sin (x)\,dx = -\cos (x) .
 \end{align*}
 Alors la solution particulière est : 
 \begin{multline*}
-y_p = u_1 y_1 + u_2 y_2 =
-\frac{1}{2} \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1}
-\right\rvert
-+ \cos (x) \sin (x)
--\cos (x) \sin (x)
-= \\ =
-\frac{1}{2} \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1}
-\right\rvert .
+	y_p = u_1 y_1 + u_2 y_2 =
+	\frac12 \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1}	\right\rvert
+	+ \cos (x) \sin (x) -\cos (x) \sin (x)
+	= \\ = 	\frac12 \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert .
 \end{multline*}
 La solution générale à  $y'' + y = \tan x$ est: 
 \begin{equation*}
-y = C_1 \cos (x) + C_2 \sin (x) +
-\frac{1}{2} \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1}
+	y = C_1 \cos (x) + C_2 \sin (x) + \frac{1}{2} \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1}
 \right\rvert .
 \end{equation*}
 
 \subsection{Exercices}
 
 \begin{exercise}
-Trouvez une solution particulière de
-$y''-y' -6y = e^{2x}$.
+	Trouvez une solution particulière de $y''-y' -6y = e^{2x}$.
 \end{exercise}
 
 \begin{exercise}
-Trouvez une solution particulière de
-$y''-4y' +4y = e^{2x}$.
+	Trouvez une solution particulière de $y''-4y' +4y = e^{2x}$.
 \end{exercise}
 
 \begin{exercise}
-Résolvez le problème à valeurs initiales
-$y''+9y = \cos (3x) + \sin (3x)$ for $y(0) = 2$, $y'(0) = 1$.
+	Résolvez le problème à valeurs initiales
+	$y''+9y = \cos (3x) + \sin (3x)$ for $y(0) = 2$, $y'(0) = 1$.
 \end{exercise}
 
 \begin{exercise}
-
-Configurez la forme de la solution particulière (mais ne résolvez pas 
-pour les coefficients)  $y^{(4)}-2y'''+y'' = e^x$.
+	Configurez la forme de la solution particulière (mais ne résolvez pas 
+	pour les coefficients)  $y^{(4)}-2y'''+y'' = e^x$.
 \end{exercise}
 
 \begin{exercise}
-Configurez la forme de la solution particulière (mais ne résolvez pas 
-pour les coefficients)$y^{(4)}-2y'''+y'' = e^x + x + \sin x$.
+	Configurez la forme de la solution particulière (mais ne résolvez pas 
+	pour les coefficients)$y^{(4)}-2y'''+y'' = e^x + x + \sin x$.
 \end{exercise}
 
 \begin{exercise}
-\pagebreak[2]
-\leavevmode
-\begin{tasks}
-\task Utilisez la variation des paramètres pour trouver une solution particulière de 
-$y''-2y'+y = e^x$.
-\task Trouvez une solution particulière en utilisant les coefficients indéterminés. 
-\task Est-ce que les deux solutions que vous avez trouvées sont les mêmes?
-Vérifiez aussi \exerciseref{exercise:diffvarparunder}.
-\end{tasks}
+	\pagebreak[2]
+	\leavevmode
+	\begin{tasks}
+		\task Utilisez la variation des paramètres pour trouver une solution 
+				particulière de $y''-2y'+y = e^x$.
+		\task Trouvez une solution particulière en utilisant les coefficients indéterminés. 
+		\task Est-ce que les deux solutions que vous avez trouvées sont les mêmes?
+				Vérifiez aussi \exerciseref{exercise:diffvarparunder}.
+	\end{tasks}
 \end{exercise}
 
 \begin{exercise}
-Trouvez une solution particulière de
-$y''-2y' +y = \sin (x^2)$.  C'est correct de laisser une intégrale définie comme réponse. 
+	Trouvez une solution particulière de
+	$y''-2y' +y = \sin (x^2)$.  C'est correct de laisser une intégrale définie comme réponse. 
 \end{exercise}
 
 \begin{exercise}
-Pour une constante arbitraire $c$ trouvez une solution particulière à $y''-y=e^{cx}$. Astuce : Assurez-vous de gérer tous les réels $c$ possibles .
+	Pour une constante arbitraire $c$ trouvez une solution particulière à $y''-y=e^{cx}$. Astuce : Assurez-vous de gérer tous les réels $c$ possibles .
 \end{exercise}
 
 \begin{exercise} \label{exercise:diffvarparunder}

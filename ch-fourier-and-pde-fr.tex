@@ -27,7 +27,8 @@ $a=0$, $b=\pi$.  Ceci donne:
 \begin{equation*}
 x'' + x = 0, \quad x(0) = 0, \quad x(\pi) = 0.
 \end{equation*}
-Alors $x = \sin t$ est une autre solution  (qui s'ajoute à  $x=0$) satisfaisant aux conditions limites. Il y a plus. Écrivons la solution générale de l'équation différentielle, qui est  $x= A \cos t + B \sin t$.
+Alors $x = \sin t$ est une autre solution  (qui s'ajoute à  $x=0$) satisfaisant aux conditions limites. 
+Il y a plus. Écrivons la solution générale de l'équation différentielle, qui est  $x= A \cos t + B \sin t$.
 La condition $x(0) = 0$ implique que $A=0$.  La contrainte $x(\pi) = 0$ ne donne pas plus d'informations lorsque $x = B \sin t$ satisfait déjà aux conditions limites. 
 Par conséquent, il y a une infinité de solutions de la forme  $x = B \sin t$,
 où $B$ est une constante arbitraire.  
@@ -75,7 +76,7 @@ On note la similarité avec les valeurs propres et les vecteurs propres de matri
 
 En d'autres mots, on pense à l'équation différentielle comme un opérateur différentiel, et à une fonction $x(t)$
 comme un vecteur avec une infinité de composantes (une pour chaque $t$).
-Une fonction propre sera une fonction non nulle $x$ qui satisfait  
+Une fonction propre sera une fonction non nulle $x$ qui satisfait à 
 $(L- \lambda)x = 0$. Il y a beaucoup de formalisme provenant de l'algèbre linéaire qui s'applique ici, mais on ne poursuivra pas cette réflexion trop loin.  
 
 \begin{example} \label{bvp:eig1ex}
@@ -448,7 +449,7 @@ $\sqrt{\lambda} \, L = k \pi$  pour un certain entier $k > 0$, alors
 \frac{\rho \omega^2}{T} = \lambda = \frac{k^2 \pi^2}{L^2} .
 \end{equation*}
 
-Qu'est-ce que cela dit sur la forme de la corde? Cela dit que pour tous les paramètres, $\rho$, $\omega$, $T$ qui ne satisfont pas cette condition, la corde demeure dans sa position d'équilibre, $y=0$.  Mais lorsque 
+Qu'est-ce que cela dit sur la forme de la corde? Cela dit que pour tous les paramètres, $\rho$, $\omega$, $T$ qui ne satisfont pas à cette condition, la corde demeure dans sa position d'équilibre, $y=0$.  Mais lorsque 
 $\frac{\rho \omega^2}{T} = \frac{k^2 \pi^2}{L^2}$, alors la corde \myquote{sortira} d'une distance $B$. On ne peut pas calculer $B$ avec les informations que l'on a. 
 
 On suppose que  $\rho$ et $T$ sont fixes et l'on fait varier $\omega$.
@@ -537,7 +538,7 @@ Ainsi, la solution est toujours identiquement nulle. Une condition est toujours 
 
 \begin{exercise}[défi]
 Supposez que $x''' + \lambda x = 0$ et $x(0)=0$, $x'(0) = 0$, $x(1) = 0$.
-Supposez que  $\lambda > 0$.  Trouvez une équation que toutes les valeurs propres satisferont. 
+Supposez que  $\lambda > 0$.  Trouvez une équation à laquelle toutes les valeurs propres satisferont. 
 Astuce : Notez que $-\sqrt[3]{\lambda}$ est une racine de $r^3+\lambda = 0$.
 \end{exercise}
 \exsol{%
@@ -2138,7 +2139,7 @@ On prend le problème de la valeur limite pour $0 < t < 1$,
 x''(t) + 2 x(t) = f(t) ,
 \end{equation*}
 où $f(t) = t$ sur $0 < t < 1$, mais maintenant satisfaisant
-les conditions aux limites de Neumann
+aux conditions aux limites de Neumann
 $x'(0) = 0$, $x'(1)=0$.
 On écrit $f(t)$ comme une série cosinue
 \begin{equation*}
@@ -2337,7 +2338,7 @@ $\sum\limits_{n=1}^\infty \frac{-1}{n^2(1+n^2)} \sin(nt)$
 \begin{exercise}[défi]
 Soit $f(t) = t + \sum_{n=1}^\infty \frac{1}{2^n} \sin(nt)$.  Résolvez
 $x'' + \pi x = f(t)$ pour les conditions de Dirichlet $x(0) = 0$
-et $x(\pi) = 1$.  Astuce:  Notez que $\frac{t}{\pi}$ satisfait les conditions de Dirichlet données.
+et $x(\pi) = 1$.  Astuce:  notez que $\frac{t}{\pi}$ satisfait aux conditions de Dirichlet données.
 \end{exercise}
 \exsol{%
 $\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)$
@@ -2922,7 +2923,7 @@ u_t = k u_{xx}
 u(0 , t) = 0 ,\quad \quad u(L , t) = 0,
 \quad \text{et} \quad u(x,0) = f(x) .
 \end{equation*}
-On suppose que $u(x,t) = X(x)T(t)$.  On essaie de faire en sorte que cette hypothèse satisfasse l'équation différentielle, $ u_t = k u_ {xx} $, et les conditions homogènes,
+On suppose que $u(x,t) = X(x)T(t)$.  On essaie de faire en sorte que cette hypothèse satisfasse à l'équation différentielle, $ u_t = k u_ {xx} $, et les conditions homogènes,
 $ u (0, t) = 0 $ et $ u (L, t) = 0 $.  Ensuite,  comme la superposition préserve l'équation différentielle et les conditions homogènes secondaires,  on essaie de
 construire une solution à partir de ces éléments de base pour résoudre les
 conditions initiales non homogènes $ u (x, 0) = f (x) $.
@@ -2961,7 +2962,7 @@ les solutions
 \begin{equation*}
 X_n (x) = \sin \left(\frac{n \pi}{L} x \right) .
 \end{equation*}
-Le $ T_n $ correspondant doit satisfaire l'équation
+Le $ T_n $ correspondant doit satisfaire à l'équation
 \begin{equation*}
 T_n'(t) + \frac{n^2 \pi^2}{L^2} k T_n(t) = 0 .
 \end{equation*}
@@ -3200,7 +3201,7 @@ X_n (x) = \cos \left( \frac{n \pi}{L} x \right)
 \qquad \text{et} \qquad
 X_0 (x) = 1.
 \end{equation*}
-Le $ T_n $ correspondant doit satisfaire l'équation
+Le $ T_n $ correspondant doit satisfaire à l'équation
 \begin{equation*}
 T_n'(t) + \frac{n^2 \pi^2}{L^2} k T_n(t) = 0 .
 \end{equation*}
@@ -3340,18 +3341,18 @@ Trouvez une solution à la série
 Trouvez une solution à la série 
 \begin{align*}
 & u_t =  u_{xx} , \\
-& u(0,t) = 0 , \quad u(1,t) = 100 , \\
-& u(x,0) = \sin (\pi x) \qquad \text{pour } \; 0 < x < 1 .
+& u(0, t) = 0 , \quad u(1,t) = 100 , \\
+& u(x, 0) = \sin (\pi x) \qquad \text{pour } \; 0 < x < 1 .
 \end{align*}
-Astuce: Utilisez le fait que $u(x,t) = 100 x$ est une solution satisfaisant à 
-$u_t = u_{xx}$, $u(0,t) = 0$, $u(1,t) = 100$.  Ensuite, utilise la superposition.
+Astuce: Utilisez le fait que $u(x, t) = 100 x$ est une solution satisfaisant à 
+$u_t = u_{xx}$, $u(0, t) = 0$, $u(1, t) = 100$.  Ensuite, utilise la superposition.
 \end{exercise}
 
 \begin{exercise}
 Trouvez la \emph{\myindex{température constante}} de la solution comme une fonction de $x$ uniquement,
 en laissant $t \to
 \infty$ dans la solution de l'exercie \ref{heat:cosexr} et \ref{heat:oneto100exr}.
-Vérifiez qu'elle satisfait l'équation $u_{xx} = 0$.
+Vérifiez qu'elle satisfait à l'équation $u_{xx} = 0$.
 \end{exercise}
 
 \begin{exercise}
@@ -3591,7 +3592,7 @@ conditions homogènes telles que
 $y(0,t) = y(L,t) = 0$, $y(x,0) = 0$,  ou $y_t(x,0) = 0$.  Par conséquent,
 on peut utiliser la séparation de variables pour trouver de nombreux élément appartenant à la
 solution résolvant toutes les conditions homogènes.  On peut  ensuite les utiliser pour
-construire une solution satisfaisant la condition non homogène restante.
+construire une solution satisfaisant à la condition non homogène restante.
 Commençons avec  \eqref{wave:weq}.
 On essaie une solution de la forme $w(x,t) = X(x) T(t)$.  On remplace dans l'équation d'onde et l'on obtient 
 \begin{equation*}
@@ -3716,7 +3717,7 @@ c_n
 
 \begin{exercise}
 Remplissez les détails de la dérivé de la solution de \eqref{wave:zeq}.
-Vérifiez que la solution satisfait toutes les conditions secondaires.
+Vérifiez que la solution satisfait à toutes les conditions secondaires.
 \end{exercise}
 
 En réunissant ces deux solutions,  on obtient le théorème  suivant. 

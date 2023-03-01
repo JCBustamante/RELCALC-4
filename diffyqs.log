@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.27)  1 MAR 2023 08:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.27)  1 MAR 2023 11:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1654,14 +1654,14 @@ CONSTANTS \T1/zplTLF/m/n/12 65
 [65]
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/n' in size <8.8> not available
 (Font)              Font shape `T1/zplth-osf/m/it' tried instead on input line 
-550.
+556.
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/it' will be
-(Font)              scaled to size 8.8pt on input line 550.
+(Font)              scaled to size 8.8pt on input line 556.
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/n' in size <6.6> not available
 (Font)              Font shape `T1/zplth-osf/m/it' tried instead on input line 
-550.
+556.
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/it' will be
-(Font)              scaled to size 6.6pt on input line 550.
+(Font)              scaled to size 6.6pt on input line 556.
  [66]
 Overfull \hbox (3.83633pt too wide) has occurred while \output is active
 \T1/zplTLF/m/sl/12 2.2.  ÉQUATIONS DIFFÉRENTIELLES D'ORDRE DEUX À COEFFICIENTS 
@@ -1678,11 +1678,11 @@ CONSTANTS \T1/zplTLF/m/n/12 69
 
 ] [71]
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 952.
+(Font)              scaled to size 10.0pt on input line 962.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 952.
+(Font)              scaled to size 7.3pt on input line 962.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 952.
+(Font)              scaled to size 5.5pt on input line 962.
  [72] [73] [74] [75] (figures/massfigforce.pdf_t
 <figures//massfigforce.pdf, id=1225, 143.53625pt x 64.24pt>
 File: figures//massfigforce.pdf Graphic file (type pdf)
@@ -1709,27 +1709,27 @@ Package pdftex.def Info: figures//mv-pend-deriv.pdf  used on input line 2.
 <figures/mv-sintheta.pdf, id=1243, 380.42125pt x 276.03125pt>
 File: figures/mv-sintheta.pdf Graphic file (type pdf)
 <use figures/mv-sintheta.pdf>
-Package pdftex.def Info: figures/mv-sintheta.pdf  used on input line 1250.
+Package pdftex.def Info: figures/mv-sintheta.pdf  used on input line 1265.
 (pdftex.def)             Requested size: 216.81pt x 157.31837pt.
  [77 <./figures//mv-pend-deriv.pdf> <./figures/mv-sintheta.pdf>] [78]
 <figures/mv-undamped.pdf, id=1264, 380.42125pt x 275.0275pt>
 File: figures/mv-undamped.pdf Graphic file (type pdf)
 <use figures/mv-undamped.pdf>
-Package pdftex.def Info: figures/mv-undamped.pdf  used on input line 1342.
+Package pdftex.def Info: figures/mv-undamped.pdf  used on input line 1365.
 (pdftex.def)             Requested size: 216.81pt x 156.7463pt.
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 1374.
+(Font)              scaled to size 12.0pt on input line 1399.
  [79 <./figures/mv-undamped.pdf>]
 <figures/mv-overdamped.pdf, id=1278, 375.4025pt x 276.03125pt>
 File: figures/mv-overdamped.pdf Graphic file (type pdf)
 <use figures/mv-overdamped.pdf>
-Package pdftex.def Info: figures/mv-overdamped.pdf  used on input line 1416.
+Package pdftex.def Info: figures/mv-overdamped.pdf  used on input line 1445.
 (pdftex.def)             Requested size: 216.81pt x 159.4201pt.
  [80 <./figures/mv-overdamped.pdf>]
 <figures/mv-underdamped.pdf, id=1292, 380.42125pt x 276.03125pt>
 File: figures/mv-underdamped.pdf Graphic file (type pdf)
 <use figures/mv-underdamped.pdf>
-Package pdftex.def Info: figures/mv-underdamped.pdf  used on input line 1476.
+Package pdftex.def Info: figures/mv-underdamped.pdf  used on input line 1513.
 (pdftex.def)             Requested size: 216.81pt x 157.31837pt.
  [81 <./figures/mv-underdamped.pdf>] [82] [83] [84
 
@@ -1799,18 +1799,18 @@ ORDINAIRES \T1/zplTLF/m/n/12 97
 <figures/pln-source-eig.pdf, id=1708, 367.3725pt x 275.0275pt>
 File: figures/pln-source-eig.pdf Graphic file (type pdf)
 <use figures/pln-source-eig.pdf>
-Package pdftex.def Info: figures/pln-source-eig.pdf  used on input line 2402.
+Package pdftex.def Info: figures/pln-source-eig.pdf  used on input line 2406.
 (pdftex.def)             Requested size: 216.81pt x 162.31517pt.
 <figures/pln-source-eig-arr.pdf, id=1711, 367.3725pt x 276.03125pt>
 File: figures/pln-source-eig-arr.pdf Graphic file (type pdf)
 <use figures/pln-source-eig-arr.pdf>
 Package pdftex.def Info: figures/pln-source-eig-arr.pdf  used on input line 243
-2.
+6.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
 <figures/pln-source-full.pdf, id=1712, 367.3725pt x 276.03125pt>
 File: figures/pln-source-full.pdf Graphic file (type pdf)
 <use figures/pln-source-full.pdf>
-Package pdftex.def Info: figures/pln-source-full.pdf  used on input line 2439.
+Package pdftex.def Info: figures/pln-source-full.pdf  used on input line 2443.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
  [120
 
@@ -1818,37 +1818,37 @@ Package pdftex.def Info: figures/pln-source-full.pdf  used on input line 2439.
 <figures/pln-sink-full.pdf, id=1727, 367.3725pt x 276.03125pt>
 File: figures/pln-sink-full.pdf Graphic file (type pdf)
 <use figures/pln-sink-full.pdf>
-Package pdftex.def Info: figures/pln-sink-full.pdf  used on input line 2456.
+Package pdftex.def Info: figures/pln-sink-full.pdf  used on input line 2460.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
 <figures/pln-saddle-full.pdf, id=1728, 367.3725pt x 276.03125pt>
 File: figures/pln-saddle-full.pdf Graphic file (type pdf)
 <use figures/pln-saddle-full.pdf>
-Package pdftex.def Info: figures/pln-saddle-full.pdf  used on input line 2463.
+Package pdftex.def Info: figures/pln-saddle-full.pdf  used on input line 2467.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
  [121 <./figures/pln-source-eig-arr.pdf> <./figures/pln-source-full.pdf> <./fig
 ures/pln-sink-full.pdf> <./figures/pln-saddle-full.pdf>]
 <figures/pln-ellipses.pdf, id=1762, 367.3725pt x 276.03125pt>
 File: figures/pln-ellipses.pdf Graphic file (type pdf)
 <use figures/pln-ellipses.pdf>
-Package pdftex.def Info: figures/pln-ellipses.pdf  used on input line 2505.
+Package pdftex.def Info: figures/pln-ellipses.pdf  used on input line 2509.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
 <figures/pln-spiral-source.pdf, id=1763, 367.3725pt x 276.03125pt>
 File: figures/pln-spiral-source.pdf Graphic file (type pdf)
 <use figures/pln-spiral-source.pdf>
-Package pdftex.def Info: figures/pln-spiral-source.pdf  used on input line 2511
+Package pdftex.def Info: figures/pln-spiral-source.pdf  used on input line 2515
 .
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
  [122 <./figures/pln-ellipses.pdf> <./figures/pln-spiral-source.pdf>]
 <figures/pln-spiral-sink.pdf, id=1784, 367.3725pt x 276.03125pt>
 File: figures/pln-spiral-sink.pdf Graphic file (type pdf)
 <use figures/pln-spiral-sink.pdf>
-Package pdftex.def Info: figures/pln-spiral-sink.pdf  used on input line 2564.
+Package pdftex.def Info: figures/pln-spiral-sink.pdf  used on input line 2568.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
  [123 <./figures/pln-spiral-sink.pdf>]
 <figures/0100vectorfield.pdf, id=1806, 323.2075pt x 245.91875pt>
 File: figures/0100vectorfield.pdf Graphic file (type pdf)
 <use figures/0100vectorfield.pdf>
-Package pdftex.def Info: figures/0100vectorfield.pdf  used on input line 2688.
+Package pdftex.def Info: figures/0100vectorfield.pdf  used on input line 2692.
 (pdftex.def)             Requested size: 144.54pt x 109.97571pt.
 ) [124]
 \openout2 = `ch-fourier-and-pde-fr.aux'.
@@ -1902,7 +1902,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 File: figures/ts-perextofinvertedparabola.pdf Graphic file (type pdf)
 <use figures/ts-perextofinvertedparabola.pdf>
 Package pdftex.def Info: figures/ts-perextofinvertedparabola.pdf  used on input
- line 590.
+ line 591.
 (pdftex.def)             Requested size: 216.81pt x 157.31837pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -1922,7 +1922,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 <figures/ts-sawtooth.pdf, id=1962, 367.3725pt x 275.0275pt>
 File: figures/ts-sawtooth.pdf Graphic file (type pdf)
 <use figures/ts-sawtooth.pdf>
-Package pdftex.def Info: figures/ts-sawtooth.pdf  used on input line 802.
+Package pdftex.def Info: figures/ts-sawtooth.pdf  used on input line 803.
 (pdftex.def)             Requested size: 216.81pt x 162.31517pt.
  [137]
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -1935,19 +1935,19 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 File: figures/ts-sawtooth-fs3-fs20.pdf Graphic file (type pdf)
 <use figures/ts-sawtooth-fs3-fs20.pdf>
 Package pdftex.def Info: figures/ts-sawtooth-fs3-fs20.pdf  used on input line 8
-66.
+67.
 (pdftex.def)             Requested size: 450.9652pt x 164.71385pt.
 <figures/ts-squarewave.pdf, id=1983, 362.35374pt x 275.0275pt>
 File: figures/ts-squarewave.pdf Graphic file (type pdf)
 <use figures/ts-squarewave.pdf>
-Package pdftex.def Info: figures/ts-squarewave.pdf  used on input line 886.
+Package pdftex.def Info: figures/ts-squarewave.pdf  used on input line 887.
 (pdftex.def)             Requested size: 216.81pt x 164.56033pt.
  [139 <./figures/ts-sawtooth-fs3-fs20.pdf>]
 <figures/ts-squarewave-fs3-fs20.pdf, id=2008, 745.70998pt x 276.03024pt>
 File: figures/ts-squarewave-fs3-fs20.pdf Graphic file (type pdf)
 <use figures/ts-squarewave-fs3-fs20.pdf>
 Package pdftex.def Info: figures/ts-squarewave-fs3-fs20.pdf  used on input line
- 940.
+ 941.
 (pdftex.def)             Requested size: 450.9652pt x 166.9293pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -1960,7 +1960,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 File: figures/ts-squarewave-gibbs.pdf Graphic file (type pdf)
 <use figures/ts-squarewave-gibbs.pdf>
 Package pdftex.def Info: figures/ts-squarewave-gibbs.pdf  used on input line 98
-0.
+1.
 (pdftex.def)             Requested size: 216.81pt x 155.67574pt.
  [141 <./figures/ts-squarewave-fs3-fs20.pdf>]
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -1970,15 +1970,15 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 
 [142 <./figures/ts-squarewave-gibbs.pdf>] [143]
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 1115.
+(Font)              scaled to size 14.4pt on input line 1116.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 1115.
+(Font)              scaled to size 10.5pt on input line 1116.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 7.9pt on input line 1115.
+(Font)              scaled to size 7.9pt on input line 1116.
 <figures/gfs-sawcont.pdf, id=2069, 383.4325pt x 276.03125pt>
 File: figures/gfs-sawcont.pdf Graphic file (type pdf)
 <use figures/gfs-sawcont.pdf>
-Package pdftex.def Info: figures/gfs-sawcont.pdf  used on input line 1184.
+Package pdftex.def Info: figures/gfs-sawcont.pdf  used on input line 1185.
 (pdftex.def)             Requested size: 216.81pt x 156.08429pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -1993,7 +1993,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 File: figures/gfs-sawcont-fs3-fs20.pdf Graphic file (type pdf)
 <use figures/gfs-sawcont-fs3-fs20.pdf>
 Package pdftex.def Info: figures/gfs-sawcont-fs3-fs20.pdf  used on input line 1
-237.
+238.
 (pdftex.def)             Requested size: 450.9652pt x 158.57468pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -2005,7 +2005,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 <figures/gfs-smoothex.pdf, id=2124, 388.45125pt x 276.03125pt>
 File: figures/gfs-smoothex.pdf Graphic file (type pdf)
 <use figures/gfs-smoothex.pdf>
-Package pdftex.def Info: figures/gfs-smoothex.pdf  used on input line 1400.
+Package pdftex.def Info: figures/gfs-smoothex.pdf  used on input line 1401.
 (pdftex.def)             Requested size: 216.81pt x 154.06679pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -2029,7 +2029,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 <figures/scs-ext-odd-even.pdf, id=2216, 781.84393pt x 277.034pt>
 File: figures/scs-ext-odd-even.pdf Graphic file (type pdf)
 <use figures/scs-ext-odd-even.pdf>
-Package pdftex.def Info: figures/scs-ext-odd-even.pdf  used on input line 1870.
+Package pdftex.def Info: figures/scs-ext-odd-even.pdf  used on input line 1871.
 
 (pdftex.def)             Requested size: 450.9652pt x 159.79634pt.
 
@@ -2056,7 +2056,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 <figures/bnd-dirich-graph.pdf, id=2272, 365.365pt x 260.975pt>
 File: figures/bnd-dirich-graph.pdf Graphic file (type pdf)
 <use figures/bnd-dirich-graph.pdf>
-Package pdftex.def Info: figures/bnd-dirich-graph.pdf  used on input line 2128.
+Package pdftex.def Info: figures/bnd-dirich-graph.pdf  used on input line 2129.
 
 (pdftex.def)             Requested size: 216.81pt x 154.86592pt.
  [159 <./figures/bnd-dirich-graph.pdf>]
@@ -2082,7 +2082,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 <figures/afs-steadyex.pdf, id=2336, 375.4025pt x 276.03125pt>
 File: figures/afs-steadyex.pdf Graphic file (type pdf)
 <use figures/afs-steadyex.pdf>
-Package pdftex.def Info: figures/afs-steadyex.pdf  used on input line 2524.
+Package pdftex.def Info: figures/afs-steadyex.pdf  used on input line 2525.
 (pdftex.def)             Requested size: 216.81pt x 159.4201pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -2126,7 +2126,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 <figures/heat-wireex-init.pdf, id=2403, 383.4325pt x 276.03125pt>
 File: figures/heat-wireex-init.pdf Graphic file (type pdf)
 <use figures/heat-wireex-init.pdf>
-Package pdftex.def Info: figures/heat-wireex-init.pdf  used on input line 3032.
+Package pdftex.def Info: figures/heat-wireex-init.pdf  used on input line 3033.
 
 (pdftex.def)             Requested size: 216.81pt x 156.08429pt.
 
@@ -2139,7 +2139,7 @@ BLES, ET L'ÉQUATION DE LA CHALEUR \T1/zplTLF/m/n/12 171
 <figures/heat-wireex.pdf, id=2411, 349.305pt x 299.1175pt>
 File: figures/heat-wireex.pdf Graphic file (type pdf)
 <use figures/heat-wireex.pdf>
-Package pdftex.def Info: figures/heat-wireex.pdf  used on input line 3072.
+Package pdftex.def Info: figures/heat-wireex.pdf  used on input line 3073.
 (pdftex.def)             Requested size: 361.34999pt x 309.45001pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -2151,7 +2151,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 <figures/heat-wireex-max.pdf, id=2424, 383.4325pt x 276.03125pt>
 File: figures/heat-wireex-max.pdf Graphic file (type pdf)
 <use figures/heat-wireex-max.pdf>
-Package pdftex.def Info: figures/heat-wireex-max.pdf  used on input line 3109.
+Package pdftex.def Info: figures/heat-wireex-max.pdf  used on input line 3110.
 (pdftex.def)             Requested size: 216.81pt x 156.08429pt.
 
 Overfull \hbox (151.28967pt too wide) has occurred while \output is active
@@ -2175,7 +2175,7 @@ BLES, ET L'ÉQUATION DE LA CHALEUR \T1/zplTLF/m/n/12 175
 <figures/heat-wireisolex.pdf, id=2453, 345.29pt x 298.11375pt>
 File: figures/heat-wireisolex.pdf Graphic file (type pdf)
 <use figures/heat-wireisolex.pdf>
-Package pdftex.def Info: figures/heat-wireisolex.pdf  used on input line 3281.
+Package pdftex.def Info: figures/heat-wireisolex.pdf  used on input line 3282.
 (pdftex.def)             Requested size: 361.34999pt x 311.98244pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -2231,19 +2231,19 @@ Package pdftex.def Info: figures//wave-pluckedstr.pdf  used on input line 2.
 <figures/wave-pluckedex.pdf, id=2542, 348.30125pt x 284.06125pt>
 File: figures/wave-pluckedex.pdf Graphic file (type pdf)
 <use figures/wave-pluckedex.pdf>
-Package pdftex.def Info: figures/wave-pluckedex.pdf  used on input line 3869.
+Package pdftex.def Info: figures/wave-pluckedex.pdf  used on input line 3870.
 (pdftex.def)             Requested size: 361.34999pt x 294.71886pt.
 <figures/wave-plucked-t0-t0p4.pdf, id=2544, 751.73248pt x 261.97774pt>
 File: figures/wave-plucked-t0-t0p4.pdf Graphic file (type pdf)
 <use figures/wave-plucked-t0-t0p4.pdf>
 Package pdftex.def Info: figures/wave-plucked-t0-t0p4.pdf  used on input line 3
-881.
+882.
 (pdftex.def)             Requested size: 450.9652pt x 157.15985pt.
 <figures/wave-plucked-t0p8-t1p2.pdf, id=2545, 751.73248pt x 261.97774pt>
 File: figures/wave-plucked-t0p8-t1p2.pdf Graphic file (type pdf)
 <use figures/wave-plucked-t0p8-t1p2.pdf>
 Package pdftex.def Info: figures/wave-plucked-t0p8-t1p2.pdf  used on input line
- 3883.
+ 3884.
 (pdftex.def)             Requested size: 450.9652pt x 157.15985pt.
 
 Overfull \hbox (1.22029pt too wide) has occurred while \output is active
@@ -2383,12 +2383,12 @@ Package rerunfilecheck Info: File `diffyqs.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  37495 strings out of 476305
- 718733 string characters out of 5794744
+ 718731 string characters out of 5794744
  1997340 words of memory out of 5000000
  54899 multiletter control sequences out of 15000+600000
- 732881 words of font info for 629 fonts, out of 8000000 for 9000
+ 732884 words of font info for 629 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,25n,131p,1006b,929s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,23n,131p,1006b,929s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{C:/Progra
 m Files/MiKTeX 2.9/fonts/enc/dvips/newtx/ntx-ecth-osf.enc}{C:/Program Files/MiK
 TeX 2.9/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:/Program Files/MiKTeX 2.9/fo
@@ -2409,7 +2409,7 @@ ya.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/txsyc.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/newpx/zplb.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/newpx/zplr.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/newpx/zplri.pfb>
-Output written on diffyqs.pdf (254 pages, 2186337 bytes).
+Output written on diffyqs.pdf (254 pages, 2186357 bytes).
 PDF statistics:
  3726 PDF objects out of 4296 (max. 8388607)
  1527 named destinations out of 1728 (max. 500000)
