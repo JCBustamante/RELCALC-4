@@ -52,7 +52,7 @@
 \contentsline {subsection}{\numberline {2.5.1}Résoudre des équations non homogènes }{84}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Coefficients indéterminés}{85}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Variation des paramètres}{87}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Exercices}{89}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.4}Exercices}{90}{subsection.2.5.4}%
 \contentsline {chapter}{\numberline {3}Systèmes d’équations différentielles ordinaires}{91}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Introduction aux systèmes d'équations différentielles ordinaires}{91}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Systèmes différentiels}{91}{subsection.3.1.1}%
@@ -74,7 +74,7 @@
 \contentsline {subsection}{\numberline {3.4.1}Matrices de valeurs propres et de vecteurs propres}{113}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Décomposition en valeurs propres avec des valeurs propres réelles distinctes}{115}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Valeurs propres complexes}{116}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Exercices}{118}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.4}Exercices}{119}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}Systèmes bidimensionnels et leurs champs vectoriels}{120}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Exercices}{123}{subsection.3.5.1}%
 \contentsline {chapter}{\numberline {4}Séries de Fourier et équations différentielles partielles}{125}{chapter.4}%
@@ -99,7 +99,7 @@
 \contentsline {section}{\numberline {4.4}Séries de sinus et de cosinus}{154}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Fonctions périodiques paires et impaires}{154}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Séries sinus et cosinus}{155}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Application}{157}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.3}Application}{158}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Exercises}{160}{subsection.4.4.4}%
 \contentsline {section}{\numberline {4.5}Applications des séries de Fourier}{162}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Oscillations périodiques forcées}{162}{subsection.4.5.1}%

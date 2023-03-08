@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.27)  1 MAR 2023 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.27)  1 MAR 2023 12:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -154,9 +154,6 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/graphics\mathcolor.ltx))
-(C:\Program Files\MiKTeX 2.9\tex/latex/was\icomma.sty
-Package: icomma 2002/03/10 v2.0 (WaS)
-)
 (C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks28
@@ -1380,38 +1377,38 @@ LaTeX Font Info:    Font shape `T1/zplTLF/b/n' will be
 [6
 
 ]
-<figures/intro-plots-alt.pdf, id=290, 366.36874pt x 276.03125pt>
+<figures/intro-plots-alt.pdf, id=291, 366.36874pt x 276.03125pt>
 File: figures/intro-plots-alt.pdf Graphic file (type pdf)
 <use figures/intro-plots-alt.pdf>
-Package pdftex.def Info: figures/intro-plots-alt.pdf  used on input line 339.
+Package pdftex.def Info: figures/intro-plots-alt.pdf  used on input line 345.
 (pdftex.def)             Requested size: 216.81pt x 163.34981pt.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 340.
+(Font)              scaled to size 12.0pt on input line 346.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zplTLF/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 340.
+(Font)              scaled to size 10.95pt on input line 346.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/scit' will be
-(Font)              scaled to size 10.95pt on input line 340.
+(Font)              scaled to size 10.95pt on input line 346.
  [7 <./figures/intro-plots-alt.pdf>] [8]
-<figures/intro-plotbact.pdf, id=312, 388.45125pt x 276.03125pt>
+<figures/intro-plotbact.pdf, id=313, 388.45125pt x 276.03125pt>
 File: figures/intro-plotbact.pdf Graphic file (type pdf)
 <use figures/intro-plotbact.pdf>
-Package pdftex.def Info: figures/intro-plotbact.pdf  used on input line 444.
+Package pdftex.def Info: figures/intro-plotbact.pdf  used on input line 459.
 (pdftex.def)             Requested size: 216.81pt x 154.06679pt.
  [9 <./figures/intro-plotbact.pdf>]
 LaTeX Font Info:    Font shape `T1/zplTLF/b/sl' in size <12> not available
-(Font)              Font shape `T1/zplTLF/m/sl' tried instead on input line 519
+(Font)              Font shape `T1/zplTLF/m/sl' tried instead on input line 534
 .
 LaTeX Font Info:    Font shape `T1/zplTLF/m/sl' will be
-(Font)              scaled to size 12.0pt on input line 519.
+(Font)              scaled to size 12.0pt on input line 534.
 
 [10]
 LaTeX Font Info:    Font shape `T1/zplTLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 588.
+(Font)              scaled to size 8.8pt on input line 603.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 588.
+(Font)              scaled to size 6.6pt on input line 603.
  [11] [12] [13] [14
 
 ] [15] [16]) [17]
@@ -1425,7 +1422,7 @@ LaTeX Font Info:    Font shape `T1/zplTLF/m/n' will be
 ]
 Chapitre 1.
 [19] [20] [21]
-<figures/1over1mx.pdf, id=444, 345.29pt x 260.975pt>
+<figures/1over1mx.pdf, id=445, 345.29pt x 260.975pt>
 File: figures/1over1mx.pdf Graphic file (type pdf)
 <use figures/1over1mx.pdf>
 Package pdftex.def Info: figures/1over1mx.pdf  used on input line 184.
@@ -1434,7 +1431,7 @@ Package pdftex.def Info: figures/1over1mx.pdf  used on input line 184.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/sl' will be
 (Font)              scaled to size 8.8pt on input line 280.
  [23] [24]
-<figures/1-3-xysl-one.pdf, id=488, 345.29pt x 260.975pt>
+<figures/1-3-xysl-one.pdf, id=489, 345.29pt x 260.975pt>
 File: figures/1-3-xysl-one.pdf Graphic file (type pdf)
 <use figures/1-3-xysl-one.pdf>
 Package pdftex.def Info: figures/1-3-xysl-one.pdf  used on input line 406.
@@ -1442,28 +1439,28 @@ Package pdftex.def Info: figures/1-3-xysl-one.pdf  used on input line 406.
  [25
 
  <./figures/1-3-xysl-one.pdf>]
-<figures/1-3-xysl.pdf, id=506, 368.37625pt x 275.0275pt>
+<figures/1-3-xysl.pdf, id=507, 368.37625pt x 275.0275pt>
 File: figures/1-3-xysl.pdf Graphic file (type pdf)
 <use figures/1-3-xysl.pdf>
 Package pdftex.def Info: figures/1-3-xysl.pdf  used on input line 428.
 (pdftex.def)             Requested size: 216.81pt x 161.86613pt.
-<figures/1-3-xysl-sol.pdf, id=507, 368.37625pt x 275.0275pt>
+<figures/1-3-xysl-sol.pdf, id=508, 368.37625pt x 275.0275pt>
 File: figures/1-3-xysl-sol.pdf Graphic file (type pdf)
 <use figures/1-3-xysl-sol.pdf>
 Package pdftex.def Info: figures/1-3-xysl-sol.pdf  used on input line 433.
 (pdftex.def)             Requested size: 216.81pt x 161.86613pt.
-<figures/1-3-mysl-sol.pdf, id=510, 368.37625pt x 275.0275pt>
+<figures/1-3-mysl-sol.pdf, id=511, 368.37625pt x 275.0275pt>
 File: figures/1-3-mysl-sol.pdf Graphic file (type pdf)
 <use figures/1-3-mysl-sol.pdf>
 Package pdftex.def Info: figures/1-3-mysl-sol.pdf  used on input line 448.
 (pdftex.def)             Requested size: 216.81pt x 161.86613pt.
  [26 <./figures/1-3-xysl.pdf> <./figures/1-3-xysl-sol.pdf>]
-<figures/1-3-xinv-sol.pdf, id=530, 368.37625pt x 275.0275pt>
+<figures/1-3-xinv-sol.pdf, id=531, 368.37625pt x 275.0275pt>
 File: figures/1-3-xinv-sol.pdf Graphic file (type pdf)
 <use figures/1-3-xinv-sol.pdf>
 Package pdftex.def Info: figures/1-3-xinv-sol.pdf  used on input line 488.
 (pdftex.def)             Requested size: 216.81pt x 161.86613pt.
-<figures/1-3-sqrt-sol.pdf, id=531, 368.37625pt x 275.0275pt>
+<figures/1-3-sqrt-sol.pdf, id=532, 368.37625pt x 275.0275pt>
 File: figures/1-3-sqrt-sol.pdf Graphic file (type pdf)
 <use figures/1-3-sqrt-sol.pdf>
 Package pdftex.def Info: figures/1-3-sqrt-sol.pdf  used on input line 493.
@@ -1491,19 +1488,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [27 <./figures/1-3-mysl-sol.pdf>] [28 <./figures/1-3-xinv-sol.pdf> <./figures/
 1-3-sqrt-sol.pdf>]
-<figures/yprimex1minusyslope.pdf, id=567, 343.2825pt x 258.9675pt>
+<figures/yprimex1minusyslope.pdf, id=568, 343.2825pt x 258.9675pt>
 File: figures/yprimex1minusyslope.pdf Graphic file (type pdf)
 <use figures/yprimex1minusyslope.pdf>
 Package pdftex.def Info: figures/yprimex1minusyslope.pdf  used on input line 59
 7.
 (pdftex.def)             Requested size: 126.47249pt x 95.4055pt.
-<figures/yprime1minusxslope.pdf, id=568, 343.2825pt x 258.9675pt>
+<figures/yprime1minusxslope.pdf, id=569, 343.2825pt x 258.9675pt>
 File: figures/yprime1minusxslope.pdf Graphic file (type pdf)
 <use figures/yprime1minusxslope.pdf>
 Package pdftex.def Info: figures/yprime1minusxslope.pdf  used on input line 597
 .
 (pdftex.def)             Requested size: 126.47249pt x 95.4055pt.
-<figures/yprimexminus2yslope.pdf, id=569, 343.2825pt x 258.9675pt>
+<figures/yprimexminus2yslope.pdf, id=570, 343.2825pt x 258.9675pt>
 File: figures/yprimexminus2yslope.pdf Graphic file (type pdf)
 <use figures/yprimexminus2yslope.pdf>
 Package pdftex.def Info: figures/yprimexminus2yslope.pdf  used on input line 59
@@ -1512,22 +1509,22 @@ Package pdftex.def Info: figures/yprimexminus2yslope.pdf  used on input line 59
 
 [29 <./figures/yprimex1minusyslope.pdf> <./figures/yprime1minusxslope.pdf> <./f
 igures/yprimexminus2yslope.pdf>]
-<figures/yprimey3slope.pdf, id=607, 343.2825pt x 258.9675pt>
+<figures/yprimey3slope.pdf, id=608, 343.2825pt x 258.9675pt>
 File: figures/yprimey3slope.pdf Graphic file (type pdf)
 <use figures/yprimey3slope.pdf>
 Package pdftex.def Info: figures/yprimey3slope.pdf  used on input line 657.
 (pdftex.def)             Requested size: 144.54pt x 109.03825pt.
-<figures/yprimecosyslope.pdf, id=608, 343.2825pt x 258.9675pt>
+<figures/yprimecosyslope.pdf, id=609, 343.2825pt x 258.9675pt>
 File: figures/yprimecosyslope.pdf Graphic file (type pdf)
 <use figures/yprimecosyslope.pdf>
 Package pdftex.def Info: figures/yprimecosyslope.pdf  used on input line 684.
 (pdftex.def)             Requested size: 126.47249pt x 95.4055pt.
-<figures/yprimecosxyslope.pdf, id=609, 343.2825pt x 258.9675pt>
+<figures/yprimecosxyslope.pdf, id=610, 343.2825pt x 258.9675pt>
 File: figures/yprimecosxyslope.pdf Graphic file (type pdf)
 <use figures/yprimecosxyslope.pdf>
 Package pdftex.def Info: figures/yprimecosxyslope.pdf  used on input line 684.
 (pdftex.def)             Requested size: 126.47249pt x 95.4055pt.
-<figures/yprimesinxslope.pdf, id=610, 343.2825pt x 258.9675pt>
+<figures/yprimesinxslope.pdf, id=611, 343.2825pt x 258.9675pt>
 File: figures/yprimesinxslope.pdf Graphic file (type pdf)
 <use figures/yprimesinxslope.pdf>
 Package pdftex.def Info: figures/yprimesinxslope.pdf  used on input line 684.
@@ -1538,13 +1535,13 @@ LaTeX Font Info:    Font shape `T1/zplTLF/m/sl' will be
 s/yprimesinxslope.pdf>] [31
 
 ] [32]
-<figures/implicitsols.pdf, id=653, 357.335pt x 260.975pt>
+<figures/implicitsols.pdf, id=654, 357.335pt x 260.975pt>
 File: figures/implicitsols.pdf Graphic file (type pdf)
 <use figures/implicitsols.pdf>
 Package pdftex.def Info: figures/implicitsols.pdf  used on input line 864.
 (pdftex.def)             Requested size: 216.81pt x 158.34631pt.
  [33] [34 <./figures/implicitsols.pdf>]
-<figures/coffeefig-1-2.pdf, id=674, 719.61247pt x 261.97774pt>
+<figures/coffeefig-1-2.pdf, id=675, 719.61247pt x 261.97774pt>
 File: figures/coffeefig-1-2.pdf Graphic file (type pdf)
 <use figures/coffeefig-1-2.pdf>
 Package pdftex.def Info: figures/coffeefig-1-2.pdf  used on input line 941.
@@ -1559,19 +1556,19 @@ File: figures//lin-tank.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures//lin-tank.pdf  used on input line 2.
 (pdftex.def)             Requested size: 94.35225pt x 133.4984pt.
 ) [40 <./figures//lin-tank.pdf>]
-<figures/linear-salt-graph.pdf, id=762, 359.3425pt x 260.975pt>
+<figures/linear-salt-graph.pdf, id=763, 359.3425pt x 260.975pt>
 File: figures/linear-salt-graph.pdf Graphic file (type pdf)
 <use figures/linear-salt-graph.pdf>
 Package pdftex.def Info: figures/linear-salt-graph.pdf  used on input line 1275
 .
 (pdftex.def)             Requested size: 216.81pt x 157.46228pt.
  [41 <./figures/linear-salt-graph.pdf>] [42] [43]
-<figures/2-2-coffee.pdf, id=807, 376.40625pt x 275.0275pt>
+<figures/2-2-coffee.pdf, id=808, 376.40625pt x 275.0275pt>
 File: figures/2-2-coffee.pdf Graphic file (type pdf)
 <use figures/2-2-coffee.pdf>
 Package pdftex.def Info: figures/2-2-coffee.pdf  used on input line 1468.
 (pdftex.def)             Requested size: 211.75056pt x 154.72357pt.
-<figures/2-2-logistic.pdf, id=808, 383.4325pt x 275.0275pt>
+<figures/2-2-logistic.pdf, id=809, 383.4325pt x 275.0275pt>
 File: figures/2-2-logistic.pdf Graphic file (type pdf)
 <use figures/2-2-logistic.pdf>
 Package pdftex.def Info: figures/2-2-logistic.pdf  used on input line 1474.
@@ -1580,7 +1577,7 @@ Package pdftex.def Info: figures/2-2-logistic.pdf  used on input line 1474.
 
 ] [45 <./figures/2-2-coffee.pdf> <./figures/2-2-logistic.pdf>] (figures/2-2-l-p
 hasedia.pdf_t
-<figures//2-2-l-phasedia.pdf, id=830, 46.1725pt x 101.37875pt>
+<figures//2-2-l-phasedia.pdf, id=831, 46.1725pt x 101.37875pt>
 File: figures//2-2-l-phasedia.pdf Graphic file (type pdf)
 <use figures//2-2-l-phasedia.pdf>
 Package pdftex.def Info: figures//2-2-l-phasedia.pdf  used on input line 2.
@@ -1589,42 +1586,42 @@ Package pdftex.def Info: figures//2-2-l-phasedia.pdf  used on input line 2.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 1547.
  (figures/2-2-ph-class.pdf_t
-<figures//2-2-ph-class.pdf, id=832, 207.77625pt x 65.24374pt>
+<figures//2-2-ph-class.pdf, id=833, 207.77625pt x 65.24374pt>
 File: figures//2-2-ph-class.pdf Graphic file (type pdf)
 <use figures//2-2-ph-class.pdf>
 Package pdftex.def Info: figures//2-2-ph-class.pdf  used on input line 2.
 (pdftex.def)             Requested size: 207.77573pt x 65.24358pt.
 )
 [46 <./figures//2-2-l-phasedia.pdf> <./figures//2-2-ph-class.pdf>]
-<figures/2-2-logistic-h1.pdf, id=844, 383.4325pt x 275.0275pt>
+<figures/2-2-logistic-h1.pdf, id=845, 383.4325pt x 275.0275pt>
 File: figures/2-2-logistic-h1.pdf Graphic file (type pdf)
 <use figures/2-2-logistic-h1.pdf>
-Package pdftex.def Info: figures/2-2-logistic-h1.pdf  used on input line 1595.
+Package pdftex.def Info: figures/2-2-logistic-h1.pdf  used on input line 1596.
 (pdftex.def)             Requested size: 216.81pt x 155.51672pt.
-<figures/2-2-logistic-hc.pdf, id=845, 383.4325pt x 275.0275pt>
+<figures/2-2-logistic-hc.pdf, id=846, 383.4325pt x 275.0275pt>
 File: figures/2-2-logistic-hc.pdf Graphic file (type pdf)
 <use figures/2-2-logistic-hc.pdf>
-Package pdftex.def Info: figures/2-2-logistic-hc.pdf  used on input line 1602.
+Package pdftex.def Info: figures/2-2-logistic-hc.pdf  used on input line 1603.
 (pdftex.def)             Requested size: 216.81pt x 155.51672pt.
-<figures/2-2-logistic-h2.pdf, id=848, 383.4325pt x 275.0275pt>
+<figures/2-2-logistic-h2.pdf, id=849, 383.4325pt x 275.0275pt>
 File: figures/2-2-logistic-h2.pdf Graphic file (type pdf)
 <use figures/2-2-logistic-h2.pdf>
-Package pdftex.def Info: figures/2-2-logistic-h2.pdf  used on input line 1614.
+Package pdftex.def Info: figures/2-2-logistic-h2.pdf  used on input line 1615.
 (pdftex.def)             Requested size: 216.81pt x 155.51672pt.
  [47 <./figures/2-2-logistic-h1.pdf> <./figures/2-2-logistic-hc.pdf>] [48 <./fi
 gures/2-2-logistic-h2.pdf>] [49]
-<figures/circlesfig.pdf, id=917, 353.32pt x 260.975pt>
+<figures/circlesfig.pdf, id=918, 353.32pt x 260.975pt>
 File: figures/circlesfig.pdf Graphic file (type pdf)
 <use figures/circlesfig.pdf>
-Package pdftex.def Info: figures/circlesfig.pdf  used on input line 1770.
+Package pdftex.def Info: figures/circlesfig.pdf  used on input line 1771.
 (pdftex.def)             Requested size: 216.81pt x 160.14626pt.
  [50
 
  <./figures/circlesfig.pdf>] [51] [52] [53]
-<figures/exact-y2x.pdf, id=962, 353.32pt x 260.975pt>
+<figures/exact-y2x.pdf, id=963, 353.32pt x 260.975pt>
 File: figures/exact-y2x.pdf Graphic file (type pdf)
 <use figures/exact-y2x.pdf>
-Package pdftex.def Info: figures/exact-y2x.pdf  used on input line 2007.
+Package pdftex.def Info: figures/exact-y2x.pdf  used on input line 2008.
 (pdftex.def)             Requested size: 216.81pt x 160.14626pt.
  [54]
 [55 <./figures/exact-y2x.pdf>]) [56]
@@ -1654,14 +1651,14 @@ CONSTANTS \T1/zplTLF/m/n/12 65
 [65]
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/n' in size <8.8> not available
 (Font)              Font shape `T1/zplth-osf/m/it' tried instead on input line 
-556.
+565.
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/it' will be
-(Font)              scaled to size 8.8pt on input line 556.
+(Font)              scaled to size 8.8pt on input line 565.
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/n' in size <6.6> not available
 (Font)              Font shape `T1/zplth-osf/m/it' tried instead on input line 
-556.
+565.
 LaTeX Font Info:    Font shape `T1/zplth-osf/m/it' will be
-(Font)              scaled to size 6.6pt on input line 556.
+(Font)              scaled to size 6.6pt on input line 565.
  [66]
 Overfull \hbox (3.83633pt too wide) has occurred while \output is active
 \T1/zplTLF/m/sl/12 2.2.  ÉQUATIONS DIFFÉRENTIELLES D'ORDRE DEUX À COEFFICIENTS 
@@ -1678,20 +1675,20 @@ CONSTANTS \T1/zplTLF/m/n/12 69
 
 ] [71]
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 962.
+(Font)              scaled to size 10.0pt on input line 964.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 962.
+(Font)              scaled to size 7.3pt on input line 964.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 962.
+(Font)              scaled to size 5.5pt on input line 964.
  [72] [73] [74] [75] (figures/massfigforce.pdf_t
-<figures//massfigforce.pdf, id=1225, 143.53625pt x 64.24pt>
+<figures//massfigforce.pdf, id=1226, 143.53625pt x 64.24pt>
 File: figures//massfigforce.pdf Graphic file (type pdf)
 <use figures//massfigforce.pdf>
 Package pdftex.def Info: figures//massfigforce.pdf  used on input line 2.
 (pdftex.def)             Requested size: 143.53589pt x 64.23984pt.
 )
 (figures/mv-rlc.pdf_t
-<figures//mv-rlc.pdf, id=1226, 94.3525pt x 55.20625pt>
+<figures//mv-rlc.pdf, id=1227, 94.3525pt x 55.20625pt>
 File: figures//mv-rlc.pdf Graphic file (type pdf)
 <use figures//mv-rlc.pdf>
 Package pdftex.def Info: figures//mv-rlc.pdf  used on input line 2.
@@ -1700,36 +1697,36 @@ Package pdftex.def Info: figures//mv-rlc.pdf  used on input line 2.
 
  <./figures//massfigforce.pdf> <./figures//mv-rlc.pdf>] (figures/mv-pend-deriv.
 pdf_t
-<figures//mv-pend-deriv.pdf, id=1241, 123.46124pt x 126.4725pt>
+<figures//mv-pend-deriv.pdf, id=1242, 123.46124pt x 126.4725pt>
 File: figures//mv-pend-deriv.pdf Graphic file (type pdf)
 <use figures//mv-pend-deriv.pdf>
 Package pdftex.def Info: figures//mv-pend-deriv.pdf  used on input line 2.
 (pdftex.def)             Requested size: 123.46092pt x 126.47218pt.
 )
-<figures/mv-sintheta.pdf, id=1243, 380.42125pt x 276.03125pt>
+<figures/mv-sintheta.pdf, id=1244, 380.42125pt x 276.03125pt>
 File: figures/mv-sintheta.pdf Graphic file (type pdf)
 <use figures/mv-sintheta.pdf>
-Package pdftex.def Info: figures/mv-sintheta.pdf  used on input line 1265.
+Package pdftex.def Info: figures/mv-sintheta.pdf  used on input line 1267.
 (pdftex.def)             Requested size: 216.81pt x 157.31837pt.
  [77 <./figures//mv-pend-deriv.pdf> <./figures/mv-sintheta.pdf>] [78]
-<figures/mv-undamped.pdf, id=1264, 380.42125pt x 275.0275pt>
+<figures/mv-undamped.pdf, id=1265, 380.42125pt x 275.0275pt>
 File: figures/mv-undamped.pdf Graphic file (type pdf)
 <use figures/mv-undamped.pdf>
-Package pdftex.def Info: figures/mv-undamped.pdf  used on input line 1365.
+Package pdftex.def Info: figures/mv-undamped.pdf  used on input line 1367.
 (pdftex.def)             Requested size: 216.81pt x 156.7463pt.
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 1399.
+(Font)              scaled to size 12.0pt on input line 1401.
  [79 <./figures/mv-undamped.pdf>]
-<figures/mv-overdamped.pdf, id=1278, 375.4025pt x 276.03125pt>
+<figures/mv-overdamped.pdf, id=1279, 375.4025pt x 276.03125pt>
 File: figures/mv-overdamped.pdf Graphic file (type pdf)
 <use figures/mv-overdamped.pdf>
-Package pdftex.def Info: figures/mv-overdamped.pdf  used on input line 1445.
+Package pdftex.def Info: figures/mv-overdamped.pdf  used on input line 1447.
 (pdftex.def)             Requested size: 216.81pt x 159.4201pt.
  [80 <./figures/mv-overdamped.pdf>]
-<figures/mv-underdamped.pdf, id=1292, 380.42125pt x 276.03125pt>
+<figures/mv-underdamped.pdf, id=1293, 380.42125pt x 276.03125pt>
 File: figures/mv-underdamped.pdf Graphic file (type pdf)
 <use figures/mv-underdamped.pdf>
-Package pdftex.def Info: figures/mv-underdamped.pdf  used on input line 1513.
+Package pdftex.def Info: figures/mv-underdamped.pdf  used on input line 1515.
 (pdftex.def)             Requested size: 216.81pt x 157.31837pt.
  [81 <./figures/mv-underdamped.pdf>] [82] [83] [84
 
@@ -1745,7 +1742,7 @@ Chapitre 3.
 
 
 ] [92] (figures/lin-tank-sys.pdf_t
-<figures//lin-tank-sys.pdf, id=1428, 194.7275pt x 116.435pt>
+<figures//lin-tank-sys.pdf, id=1429, 194.7275pt x 116.435pt>
 File: figures//lin-tank-sys.pdf Graphic file (type pdf)
 <use figures//lin-tank-sys.pdf>
 Package pdftex.def Info: figures//lin-tank-sys.pdf  used on input line 2.
@@ -1757,7 +1754,7 @@ ORDINAIRES \T1/zplTLF/m/n/12 93
  []
 
 [93 <./figures//lin-tank-sys.pdf>] (figures/cartsfig.pdf_t
-<figures//cartsfig.pdf, id=1439, 141.52875pt x 63.23625pt>
+<figures//cartsfig.pdf, id=1440, 141.52875pt x 63.23625pt>
 File: figures//cartsfig.pdf Graphic file (type pdf)
 <use figures//cartsfig.pdf>
 Package pdftex.def Info: figures//cartsfig.pdf  used on input line 2.
@@ -1769,13 +1766,13 @@ ORDINAIRES \T1/zplTLF/m/n/12 95
  []
 
 [95]
-<figures/sintro-vectorfield.pdf, id=1457, 366.36874pt x 276.03125pt>
+<figures/sintro-vectorfield.pdf, id=1458, 366.36874pt x 276.03125pt>
 File: figures/sintro-vectorfield.pdf Graphic file (type pdf)
 <use figures/sintro-vectorfield.pdf>
 Package pdftex.def Info: figures/sintro-vectorfield.pdf  used on input line 250
 .
 (pdftex.def)             Requested size: 216.81pt x 163.34981pt.
-<figures/sintro-vectorfield-sol.pdf, id=1458, 366.36874pt x 276.03125pt>
+<figures/sintro-vectorfield-sol.pdf, id=1459, 366.36874pt x 276.03125pt>
 File: figures/sintro-vectorfield-sol.pdf Graphic file (type pdf)
 <use figures/sintro-vectorfield-sol.pdf>
 Package pdftex.def Info: figures/sintro-vectorfield-sol.pdf  used on input line
@@ -1796,18 +1793,18 @@ ORDINAIRES \T1/zplTLF/m/n/12 97
 [111] [112] [113
 
 ] [114] [115] [116] [117] [118] [119]
-<figures/pln-source-eig.pdf, id=1708, 367.3725pt x 275.0275pt>
+<figures/pln-source-eig.pdf, id=1709, 367.3725pt x 275.0275pt>
 File: figures/pln-source-eig.pdf Graphic file (type pdf)
 <use figures/pln-source-eig.pdf>
 Package pdftex.def Info: figures/pln-source-eig.pdf  used on input line 2406.
 (pdftex.def)             Requested size: 216.81pt x 162.31517pt.
-<figures/pln-source-eig-arr.pdf, id=1711, 367.3725pt x 276.03125pt>
+<figures/pln-source-eig-arr.pdf, id=1712, 367.3725pt x 276.03125pt>
 File: figures/pln-source-eig-arr.pdf Graphic file (type pdf)
 <use figures/pln-source-eig-arr.pdf>
 Package pdftex.def Info: figures/pln-source-eig-arr.pdf  used on input line 243
 6.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
-<figures/pln-source-full.pdf, id=1712, 367.3725pt x 276.03125pt>
+<figures/pln-source-full.pdf, id=1713, 367.3725pt x 276.03125pt>
 File: figures/pln-source-full.pdf Graphic file (type pdf)
 <use figures/pln-source-full.pdf>
 Package pdftex.def Info: figures/pln-source-full.pdf  used on input line 2443.
@@ -1815,37 +1812,37 @@ Package pdftex.def Info: figures/pln-source-full.pdf  used on input line 2443.
  [120
 
  <./figures/pln-source-eig.pdf>]
-<figures/pln-sink-full.pdf, id=1727, 367.3725pt x 276.03125pt>
+<figures/pln-sink-full.pdf, id=1728, 367.3725pt x 276.03125pt>
 File: figures/pln-sink-full.pdf Graphic file (type pdf)
 <use figures/pln-sink-full.pdf>
 Package pdftex.def Info: figures/pln-sink-full.pdf  used on input line 2460.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
-<figures/pln-saddle-full.pdf, id=1728, 367.3725pt x 276.03125pt>
+<figures/pln-saddle-full.pdf, id=1729, 367.3725pt x 276.03125pt>
 File: figures/pln-saddle-full.pdf Graphic file (type pdf)
 <use figures/pln-saddle-full.pdf>
 Package pdftex.def Info: figures/pln-saddle-full.pdf  used on input line 2467.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
  [121 <./figures/pln-source-eig-arr.pdf> <./figures/pln-source-full.pdf> <./fig
 ures/pln-sink-full.pdf> <./figures/pln-saddle-full.pdf>]
-<figures/pln-ellipses.pdf, id=1762, 367.3725pt x 276.03125pt>
+<figures/pln-ellipses.pdf, id=1763, 367.3725pt x 276.03125pt>
 File: figures/pln-ellipses.pdf Graphic file (type pdf)
 <use figures/pln-ellipses.pdf>
 Package pdftex.def Info: figures/pln-ellipses.pdf  used on input line 2509.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
-<figures/pln-spiral-source.pdf, id=1763, 367.3725pt x 276.03125pt>
+<figures/pln-spiral-source.pdf, id=1764, 367.3725pt x 276.03125pt>
 File: figures/pln-spiral-source.pdf Graphic file (type pdf)
 <use figures/pln-spiral-source.pdf>
 Package pdftex.def Info: figures/pln-spiral-source.pdf  used on input line 2515
 .
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
  [122 <./figures/pln-ellipses.pdf> <./figures/pln-spiral-source.pdf>]
-<figures/pln-spiral-sink.pdf, id=1784, 367.3725pt x 276.03125pt>
+<figures/pln-spiral-sink.pdf, id=1785, 367.3725pt x 276.03125pt>
 File: figures/pln-spiral-sink.pdf Graphic file (type pdf)
 <use figures/pln-spiral-sink.pdf>
 Package pdftex.def Info: figures/pln-spiral-sink.pdf  used on input line 2568.
 (pdftex.def)             Requested size: 216.81pt x 162.90756pt.
  [123 <./figures/pln-spiral-sink.pdf>]
-<figures/0100vectorfield.pdf, id=1806, 323.2075pt x 245.91875pt>
+<figures/0100vectorfield.pdf, id=1807, 323.2075pt x 245.91875pt>
 File: figures/0100vectorfield.pdf Graphic file (type pdf)
 <use figures/0100vectorfield.pdf>
 Package pdftex.def Info: figures/0100vectorfield.pdf  used on input line 2692.
@@ -1879,14 +1876,14 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [130] (figures/bvp-whirstring.pdf_t
-<figures//bvp-whirstring.pdf, id=1889, 292.09125pt x 83.31125pt>
+<figures//bvp-whirstring.pdf, id=1890, 292.09125pt x 83.31125pt>
 File: figures//bvp-whirstring.pdf Graphic file (type pdf)
 <use figures//bvp-whirstring.pdf>
 Package pdftex.def Info: figures//bvp-whirstring.pdf  used on input line 2.
 (pdftex.def)             Requested size: 292.09052pt x 83.31104pt.
 ) [131 <./figures//bvp-whirstring.pdf>]
 (figures/bvp-whirstring2.pdf_t
-<figures//bvp-whirstring2.pdf, id=1901, 292.09125pt x 59.22125pt>
+<figures//bvp-whirstring2.pdf, id=1902, 292.09125pt x 59.22125pt>
 File: figures//bvp-whirstring2.pdf Graphic file (type pdf)
 <use figures//bvp-whirstring2.pdf>
 Package pdftex.def Info: figures//bvp-whirstring2.pdf  used on input line 2.
@@ -1898,7 +1895,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [132 <./figures//bvp-whirstring2.pdf>] [133]
-<figures/ts-perextofinvertedparabola.pdf, id=1929, 380.42125pt x 276.03125pt>
+<figures/ts-perextofinvertedparabola.pdf, id=1930, 380.42125pt x 276.03125pt>
 File: figures/ts-perextofinvertedparabola.pdf Graphic file (type pdf)
 <use figures/ts-perextofinvertedparabola.pdf>
 Package pdftex.def Info: figures/ts-perextofinvertedparabola.pdf  used on input
@@ -1919,7 +1916,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [136]
-<figures/ts-sawtooth.pdf, id=1962, 367.3725pt x 275.0275pt>
+<figures/ts-sawtooth.pdf, id=1963, 367.3725pt x 275.0275pt>
 File: figures/ts-sawtooth.pdf Graphic file (type pdf)
 <use figures/ts-sawtooth.pdf>
 Package pdftex.def Info: figures/ts-sawtooth.pdf  used on input line 803.
@@ -1931,19 +1928,19 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [138 <./figures/ts-sawtooth.pdf>]
-<figures/ts-sawtooth-fs3-fs20.pdf, id=1981, 755.74643pt x 276.03024pt>
+<figures/ts-sawtooth-fs3-fs20.pdf, id=1982, 755.74643pt x 276.03024pt>
 File: figures/ts-sawtooth-fs3-fs20.pdf Graphic file (type pdf)
 <use figures/ts-sawtooth-fs3-fs20.pdf>
 Package pdftex.def Info: figures/ts-sawtooth-fs3-fs20.pdf  used on input line 8
 67.
 (pdftex.def)             Requested size: 450.9652pt x 164.71385pt.
-<figures/ts-squarewave.pdf, id=1983, 362.35374pt x 275.0275pt>
+<figures/ts-squarewave.pdf, id=1984, 362.35374pt x 275.0275pt>
 File: figures/ts-squarewave.pdf Graphic file (type pdf)
 <use figures/ts-squarewave.pdf>
 Package pdftex.def Info: figures/ts-squarewave.pdf  used on input line 887.
 (pdftex.def)             Requested size: 216.81pt x 164.56033pt.
  [139 <./figures/ts-sawtooth-fs3-fs20.pdf>]
-<figures/ts-squarewave-fs3-fs20.pdf, id=2008, 745.70998pt x 276.03024pt>
+<figures/ts-squarewave-fs3-fs20.pdf, id=2009, 745.70998pt x 276.03024pt>
 File: figures/ts-squarewave-fs3-fs20.pdf Graphic file (type pdf)
 <use figures/ts-squarewave-fs3-fs20.pdf>
 Package pdftex.def Info: figures/ts-squarewave-fs3-fs20.pdf  used on input line
@@ -1956,7 +1953,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [140 <./figures/ts-squarewave.pdf>]
-<figures/ts-squarewave-gibbs.pdf, id=2021, 384.43625pt x 276.03125pt>
+<figures/ts-squarewave-gibbs.pdf, id=2022, 384.43625pt x 276.03125pt>
 File: figures/ts-squarewave-gibbs.pdf Graphic file (type pdf)
 <use figures/ts-squarewave-gibbs.pdf>
 Package pdftex.def Info: figures/ts-squarewave-gibbs.pdf  used on input line 98
@@ -1975,7 +1972,7 @@ LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
 (Font)              scaled to size 10.5pt on input line 1116.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
 (Font)              scaled to size 7.9pt on input line 1116.
-<figures/gfs-sawcont.pdf, id=2069, 383.4325pt x 276.03125pt>
+<figures/gfs-sawcont.pdf, id=2070, 383.4325pt x 276.03125pt>
 File: figures/gfs-sawcont.pdf Graphic file (type pdf)
 <use figures/gfs-sawcont.pdf>
 Package pdftex.def Info: figures/gfs-sawcont.pdf  used on input line 1185.
@@ -1989,7 +1986,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 [144
 
 ] [145 <./figures/gfs-sawcont.pdf>]
-<figures/gfs-sawcont-fs3-fs20.pdf, id=2089, 787.86644pt x 277.034pt>
+<figures/gfs-sawcont-fs3-fs20.pdf, id=2090, 787.86644pt x 277.034pt>
 File: figures/gfs-sawcont-fs3-fs20.pdf Graphic file (type pdf)
 <use figures/gfs-sawcont-fs3-fs20.pdf>
 Package pdftex.def Info: figures/gfs-sawcont-fs3-fs20.pdf  used on input line 1
@@ -2002,7 +1999,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [146 <./figures/gfs-sawcont-fs3-fs20.pdf>] [147]
-<figures/gfs-smoothex.pdf, id=2124, 388.45125pt x 276.03125pt>
+<figures/gfs-smoothex.pdf, id=2125, 388.45125pt x 276.03125pt>
 File: figures/gfs-smoothex.pdf Graphic file (type pdf)
 <use figures/gfs-smoothex.pdf>
 Package pdftex.def Info: figures/gfs-smoothex.pdf  used on input line 1401.
@@ -2026,7 +2023,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [152] [153]
-<figures/scs-ext-odd-even.pdf, id=2216, 781.84393pt x 277.034pt>
+<figures/scs-ext-odd-even.pdf, id=2217, 781.84393pt x 277.034pt>
 File: figures/scs-ext-odd-even.pdf Graphic file (type pdf)
 <use figures/scs-ext-odd-even.pdf>
 Package pdftex.def Info: figures/scs-ext-odd-even.pdf  used on input line 1871.
@@ -2053,7 +2050,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [158]
-<figures/bnd-dirich-graph.pdf, id=2272, 365.365pt x 260.975pt>
+<figures/bnd-dirich-graph.pdf, id=2273, 365.365pt x 260.975pt>
 File: figures/bnd-dirich-graph.pdf Graphic file (type pdf)
 <use figures/bnd-dirich-graph.pdf>
 Package pdftex.def Info: figures/bnd-dirich-graph.pdf  used on input line 2129.
@@ -2079,7 +2076,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
 [162
 
 ] [163]
-<figures/afs-steadyex.pdf, id=2336, 375.4025pt x 276.03125pt>
+<figures/afs-steadyex.pdf, id=2337, 375.4025pt x 276.03125pt>
 File: figures/afs-steadyex.pdf Graphic file (type pdf)
 <use figures/afs-steadyex.pdf>
 Package pdftex.def Info: figures/afs-steadyex.pdf  used on input line 2525.
@@ -2097,7 +2094,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [166] [167] (figures/heat-wire.pdf_t
-<figures//heat-wire.pdf, id=2381, 284.06125pt x 83.31125pt>
+<figures//heat-wire.pdf, id=2382, 284.06125pt x 83.31125pt>
 File: figures//heat-wire.pdf Graphic file (type pdf)
 <use figures//heat-wire.pdf>
 Package pdftex.def Info: figures//heat-wire.pdf  used on input line 2.
@@ -2123,7 +2120,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [170]
-<figures/heat-wireex-init.pdf, id=2403, 383.4325pt x 276.03125pt>
+<figures/heat-wireex-init.pdf, id=2404, 383.4325pt x 276.03125pt>
 File: figures/heat-wireex-init.pdf Graphic file (type pdf)
 <use figures/heat-wireex-init.pdf>
 Package pdftex.def Info: figures/heat-wireex-init.pdf  used on input line 3033.
@@ -2136,7 +2133,7 @@ BLES, ET L'ÉQUATION DE LA CHALEUR \T1/zplTLF/m/n/12 171
  []
 
 [171]
-<figures/heat-wireex.pdf, id=2411, 349.305pt x 299.1175pt>
+<figures/heat-wireex.pdf, id=2412, 349.305pt x 299.1175pt>
 File: figures/heat-wireex.pdf Graphic file (type pdf)
 <use figures/heat-wireex.pdf>
 Package pdftex.def Info: figures/heat-wireex.pdf  used on input line 3073.
@@ -2148,7 +2145,7 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [172 <./figures/heat-wireex-init.pdf>]
-<figures/heat-wireex-max.pdf, id=2424, 383.4325pt x 276.03125pt>
+<figures/heat-wireex-max.pdf, id=2425, 383.4325pt x 276.03125pt>
 File: figures/heat-wireex-max.pdf Graphic file (type pdf)
 <use figures/heat-wireex-max.pdf>
 Package pdftex.def Info: figures/heat-wireex-max.pdf  used on input line 3110.
@@ -2172,7 +2169,7 @@ BLES, ET L'ÉQUATION DE LA CHALEUR \T1/zplTLF/m/n/12 175
  []
 
 [175]
-<figures/heat-wireisolex.pdf, id=2453, 345.29pt x 298.11375pt>
+<figures/heat-wireisolex.pdf, id=2454, 345.29pt x 298.11375pt>
 File: figures/heat-wireisolex.pdf Graphic file (type pdf)
 <use figures/heat-wireisolex.pdf>
 Package pdftex.def Info: figures/heat-wireisolex.pdf  used on input line 3282.
@@ -2202,7 +2199,7 @@ BLES, ET L'ÉQUATION DE LA CHALEUR \T1/zplTLF/m/n/12 179
  []
 
 [179] (figures/sps-vibstr.pdf_t
-<figures//sps-vibstr.pdf, id=2502, 322.20375pt x 89.33376pt>
+<figures//sps-vibstr.pdf, id=2503, 322.20375pt x 89.33376pt>
 File: figures//sps-vibstr.pdf Graphic file (type pdf)
 <use figures//sps-vibstr.pdf>
 Package pdftex.def Info: figures//sps-vibstr.pdf  used on input line 2.
@@ -2222,24 +2219,24 @@ TIONS DIFFÉRENTIELLES PARTIELLES
  []
 
 [182] (figures/wave-pluckedstr.pdf_t
-<figures//wave-pluckedstr.pdf, id=2530, 292.09125pt x 83.31125pt>
+<figures//wave-pluckedstr.pdf, id=2531, 292.09125pt x 83.31125pt>
 File: figures//wave-pluckedstr.pdf Graphic file (type pdf)
 <use figures//wave-pluckedstr.pdf>
 Package pdftex.def Info: figures//wave-pluckedstr.pdf  used on input line 2.
 (pdftex.def)             Requested size: 292.09052pt x 83.31104pt.
 ) [183]
-<figures/wave-pluckedex.pdf, id=2542, 348.30125pt x 284.06125pt>
+<figures/wave-pluckedex.pdf, id=2543, 348.30125pt x 284.06125pt>
 File: figures/wave-pluckedex.pdf Graphic file (type pdf)
 <use figures/wave-pluckedex.pdf>
 Package pdftex.def Info: figures/wave-pluckedex.pdf  used on input line 3870.
 (pdftex.def)             Requested size: 361.34999pt x 294.71886pt.
-<figures/wave-plucked-t0-t0p4.pdf, id=2544, 751.73248pt x 261.97774pt>
+<figures/wave-plucked-t0-t0p4.pdf, id=2545, 751.73248pt x 261.97774pt>
 File: figures/wave-plucked-t0-t0p4.pdf Graphic file (type pdf)
 <use figures/wave-plucked-t0-t0p4.pdf>
 Package pdftex.def Info: figures/wave-plucked-t0-t0p4.pdf  used on input line 3
 882.
 (pdftex.def)             Requested size: 450.9652pt x 157.15985pt.
-<figures/wave-plucked-t0p8-t1p2.pdf, id=2545, 751.73248pt x 261.97774pt>
+<figures/wave-plucked-t0p8-t1p2.pdf, id=2546, 751.73248pt x 261.97774pt>
 File: figures/wave-plucked-t0p8-t1p2.pdf Graphic file (type pdf)
 <use figures/wave-plucked-t0p8-t1p2.pdf>
 Package pdftex.def Info: figures/wave-plucked-t0p8-t1p2.pdf  used on input line
@@ -2275,7 +2272,7 @@ Annexe A.
 
 
 ] (figures/linalg-vecarrow.pdf_t
-<figures//linalg-vecarrow.pdf, id=2635, 141.52875pt x 95.35625pt>
+<figures//linalg-vecarrow.pdf, id=2636, 141.52875pt x 95.35625pt>
 File: figures//linalg-vecarrow.pdf Graphic file (type pdf)
 <use figures//linalg-vecarrow.pdf>
 Package pdftex.def Info: figures//linalg-vecarrow.pdf  used on input line 2.
@@ -2289,7 +2286,7 @@ LaTeX Font Info:    Font shape `OT1/zplTLF/b/n' will be
 (Font)              scaled to size 6.6pt on input line 113.
  [190 <./figures//linalg-vecarrow.pdf>]
 (figures/linalg-vecadd.pdf_t
-<figures//linalg-vecadd.pdf, id=2648, 141.52875pt x 123.46124pt>
+<figures//linalg-vecadd.pdf, id=2649, 141.52875pt x 123.46124pt>
 File: figures//linalg-vecadd.pdf Graphic file (type pdf)
 <use figures//linalg-vecadd.pdf>
 Package pdftex.def Info: figures//linalg-vecadd.pdf  used on input line 2.
@@ -2302,14 +2299,14 @@ LaTeX Font Info:    Font shape `OT1/zplTLF/b/n' will be
 LaTeX Font Info:    Font shape `OT1/zplTLF/b/n' will be
 (Font)              scaled to size 6.1pt on input line 168.
  (figures/linalg-vecsub.pdf_t
-<figures//linalg-vecsub.pdf, id=2650, 141.52875pt x 95.35625pt>
+<figures//linalg-vecsub.pdf, id=2651, 141.52875pt x 95.35625pt>
 File: figures//linalg-vecsub.pdf Graphic file (type pdf)
 <use figures//linalg-vecsub.pdf>
 Package pdftex.def Info: figures//linalg-vecsub.pdf  used on input line 2.
 (pdftex.def)             Requested size: 141.5284pt x 95.356pt.
 ) [191] [192 <./figures//linalg-vecadd.pdf> <./figures//linalg-vecsub.pdf>]
 (figures/linalg-vecscale.pdf_t
-<figures//linalg-vecscale.pdf, id=2667, 163.61125pt x 81.30376pt>
+<figures//linalg-vecscale.pdf, id=2668, 163.61125pt x 81.30376pt>
 File: figures//linalg-vecscale.pdf Graphic file (type pdf)
 <use figures//linalg-vecscale.pdf>
 Package pdftex.def Info: figures//linalg-vecscale.pdf  used on input line 2.
@@ -2334,28 +2331,21 @@ LaTeX Font Info:    Font shape `OT1/zplTLF/b/n' will be
 [231
 
 ] (figures/vec-angle.pdf_t
-<figures//vec-angle.pdf, id=3106, 75.28125pt x 93.34875pt>
+<figures//vec-angle.pdf, id=3107, 75.28125pt x 93.34875pt>
 File: figures//vec-angle.pdf Graphic file (type pdf)
 <use figures//vec-angle.pdf>
 Package pdftex.def Info: figures//vec-angle.pdf  used on input line 2.
 (pdftex.def)             Requested size: 75.28105pt x 93.34851pt.
 ) [232 <./figures//vec-angle.pdf>]
 (figures/vec-orthoproj.pdf_t
-<figures//vec-orthoproj.pdf, id=3118, 108.405pt x 87.32625pt>
+<figures//vec-orthoproj.pdf, id=3119, 108.405pt x 87.32625pt>
 File: figures//vec-orthoproj.pdf Graphic file (type pdf)
 <use figures//vec-orthoproj.pdf>
 Package pdftex.def Info: figures//vec-orthoproj.pdf  used on input line 2.
 (pdftex.def)             Requested size: 108.40472pt x 87.32603pt.
 ) [233 <./figures//vec-orthoproj.pdf>] [234]
-[235]
-Overfull \hbox (1.54105pt too wide) in paragraph at lines 5864--5867
-[]\T1/zplTLF/m/n/12 (-20) We start with a ba-sis of vec-tors $[]\OML/npxmi/m/it
-/12 ;[]; [] ; []$\T1/zplTLF/m/n/12 (-20) . We construct an or-tho-go-nal ba-sis
- $[]\OML/npxmi/m/it/12 ; []; [] ; []$
- []
-
-[236] [237] [238] (figures/linalg-imagesquare.pdf_t
-<figures//linalg-imagesquare.pdf, id=3193, 240.9pt x 96.36pt>
+[235] [236] [237] [238] (figures/linalg-imagesquare.pdf_t
+<figures//linalg-imagesquare.pdf, id=3194, 240.9pt x 96.36pt>
 File: figures//linalg-imagesquare.pdf Graphic file (type pdf)
 <use figures//linalg-imagesquare.pdf>
 Package pdftex.def Info: figures//linalg-imagesquare.pdf  used on input line 2.
@@ -2382,13 +2372,13 @@ Package rerunfilecheck Info: File `diffyqs.out' has not changed.
 (rerunfilecheck)             Checksum: 6F50EE05AC9EAC8D94BE868C5D50DDC2;9595.
  ) 
 Here is how much of TeX's memory you used:
- 37495 strings out of 476305
- 718731 string characters out of 5794744
+ 37462 strings out of 476305
+ 717862 string characters out of 5794744
  1997340 words of memory out of 5000000
- 54899 multiletter control sequences out of 15000+600000
- 732884 words of font info for 629 fonts, out of 8000000 for 9000
+ 54878 multiletter control sequences out of 15000+600000
+ 732400 words of font info for 625 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,23n,131p,1006b,929s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,23n,131p,1006b,931s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{C:/Progra
 m Files/MiKTeX 2.9/fonts/enc/dvips/newtx/ntx-ecth-osf.enc}{C:/Program Files/MiK
 TeX 2.9/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:/Program Files/MiKTeX 2.9/fo
@@ -2409,9 +2399,9 @@ ya.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/txsyc.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/newpx/zplb.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/newpx/zplr.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/newpx/zplri.pfb>
-Output written on diffyqs.pdf (254 pages, 2186357 bytes).
+Output written on diffyqs.pdf (254 pages, 2188728 bytes).
 PDF statistics:
- 3726 PDF objects out of 4296 (max. 8388607)
+ 3727 PDF objects out of 4296 (max. 8388607)
  1527 named destinations out of 1728 (max. 500000)
  122095 words of extra memory for PDF output out of 128383 (max. 10000000)
 

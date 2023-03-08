@@ -217,7 +217,7 @@ Vous avez probablement vu de tels problèmes dans vos cours de calcul.
 	\end{equation*}
 	Il nous suffit de substituer $t=2$ et $t=10$ pour obtenir la distance parcourue après 2 et 10 secondes.
 	\begin{equation*}
-		x(2) = 2e^{2/2} - 2 \approx 3,44 \text{ mètres} ,
+		x(2) = 2e^{2/2} - 2 \approx 3{,}44 \text{ mètres} ,
 		\qquad
 		x(10) = 2e^{10/2} - 2 \approx 294 \text{ mètres} .
 	\end{equation*}
@@ -927,23 +927,23 @@ sont parfois appelées des \emph{solutions singulières\index{solutions singuli�
 	et donc $D = 67$.
 	Ainsi,  $T = 22 + 67\, e^{-kt}$.
 	La deuxième condition donne que $85 = T(1) = 22 + 67\, e^{-k}$.
-	En résolvant pour $k$, on obtient 	$k = - \ln \frac{85-22}{67} \approx 0,0616$.
+	En résolvant pour $k$, on obtient 	$k = - \ln \frac{85-22}{67} \approx 0{,}0616$.
 	Maintenant, trouvons la valeur de $t$ donnant une température de 60 degrés.
 	On résout l'équation suivante,
 	\begin{equation*}
-		60 = 22 + 67 e^{-0,0616t}
+		60 = 22 + 67 e^{-0{,}0616t}
 	\end{equation*}
 	pour obtenir
-	$t = - \frac{\ln \frac{60-22}{67}}{0,0616} \approx 9,21$ minutes.
+	$t = - \frac{\ln \frac{60-22}{67}}{0{,}0616} \approx 9{,}21$ minutes.
 	Donc, Alex peut commencer à boire son café environ 9 minutes après l'avoir préparé (correspondant à peu près au temps requis pour faire ce calcul).  Voir la \figureref{sintro:coffeefig}.
 	\begin{myfig}
 		%original files coffeefig-1 coffeefig-2
 		\capstart		\diffyincludegraphics{width=6.24in}{width=9in}{coffeefig-1-2}
 		\caption{Graphes de la fonction de température du café $T(t)$.
 		À gauche, des droites horizontales sont tracées aux températures 60, 85 et 89.
-		Des droites verticales sont tracées à $t=1$ et à $t=9,21$.
+		Des droites verticales sont tracées à $t=1$ et à $t=9{,}21$.
 		Observez que la température atteint la valeur 85 à $t=1$, et 60 à
-		$t \approx 9.21$.  À droite, le graphe montre la température pour une plus longue durée,
+		$t \approx 9{,}21$.  À droite, le graphe montre la température pour une plus longue durée,
 		avec une droite horizontale à la valeur de la température ambiante, soit 22.\label{sintro:coffeefig}}
 	\end{myfig}
 \end{example}
@@ -1286,7 +1286,7 @@ Cette formule peut maintenant être lue par une application de calcul numérique
 	\end{equation*}
 	ou
 	\begin{equation*}
-		C=4 ({60}^{3/2}) \approx 1859,03 .
+		C=4 ({60}^{3/2}) \approx 1859{,}03 .
 	\end{equation*}
 
 	On cherche à savoir la valeur de $x$ lorsque le réservoir est plein.  Ceci arrive lorsque $60+2t = 100$, c'est-à-dire à  $t=20$.  Donc:
@@ -1298,8 +1298,8 @@ Cette formule peut maintenant être lue par une application de calcul numérique
 	\end{equation*}
 	Voir la \figureref{linear-salt-graph:fig} pour le graphe de $x$ en fonction de $t$.
 
-	La concentration dans le réservoir plein est approximativement \unitfrac[0,1186]{kg}{litre},
-	alors que la concentration initiale est de $\nicefrac{1}{6}$ ou \unitfrac[0,167]{kg}{litre}.
+	La concentration dans le réservoir plein est approximativement \unitfrac[0{,}1186]{kg}{litre},
+	alors que la concentration initiale est de $\nicefrac{1}{6}$ ou \unitfrac[0{,}167]{kg}{litre}.
 	%mbxlatex \begin{myfig}
 	%mbxlatex \capstart
 	%mbxlatex \diffyincludegraphics{width=3in}{width=4.5in}{linear-salt-graph}
@@ -1399,11 +1399,11 @@ Mais si la solution analytique existe, c'est celle-là que vous devriez donner.
 
 \begin{exercise}
 	Supposons qu'on ait une population de bactéries à laquelle on ajoute graduellement une substance toxique,
-	de telle sorte que le taux de croissance diminue.  Plus précisément, $\frac{dP}{dt} = (2-0.1\,t)P$.
+	de telle sorte que le taux de croissance diminue.  Plus précisément, $\frac{dP}{dt} = (2-0{,}1\,t)P$.
 	Si $P(0) = 1000$, trouvez la population pour $t=5$.
 \end{exercise}
 \exsol{%
-	$P(5) = 1000 e^{2 \times 5 - 0.05 \times {5}^2} = 1000 e^{8.75} \approx 6.31 \times {10}^6$
+	$P(5) = 1000 e^{2 \times 5 - 0{,}05 \times {5}^2} = 1000 e^{8{,}75} \approx 6{,}31 \times {10}^6$
 }
 
 \begin{exercise}
@@ -1442,7 +1442,7 @@ Reprenons, par exemple, le problème du café qui tiédit (\exampleref{sep:coffe
 \end{equation*}
 où $x$ est la température, $t$ est le temps, $k$ est une constante positive,
 et $A$ est la température ambiante.
- Voir la \figureref{2.2:coffeefig} pour un exemple avec $k=0.3$ et $A=5$.
+ Voir la \figureref{2.2:coffeefig} pour un exemple avec $k=0{,}3$ et $A=5$.
 
 On remarque que l'équation admet la solution constante $x=A$ (dans la figure, $x=5$).
 On appelle ces solutions constantes des \emph{solutions d'équilibre}\index{solution d'équilibre}.
@@ -1524,9 +1524,9 @@ Voici comment on fait dans un cas comme celui-ci, où il y a une seule variable 
 
 Dans notre exemple:
 \begin{itemize}
-	\item Pour $x > 5$ : $f(6) = -0,6 < 0$, donc $f(x) < 0$, et la flèche au-dessus de $x=5$ pointe vers le bas.
-	\item Pour $0 < x < 5$: $f(1) = 0,4 > 0$, donc $f(x) > 0$, et la flèche dans cet intervalle pointe vers le haut.
-	\item Pour $x <0$: $f(-1) = -0,6 < 0$, donc $f(x) < 0$, et la flèche dans cet intervalle pointe vers le bas.
+	\item Pour $x > 5$ : $f(6) = -0{,}6 < 0$, donc $f(x) < 0$, et la flèche au-dessus de $x=5$ pointe vers le bas.
+	\item Pour $0 < x < 5$: $f(1) = 0{,}4 > 0$, donc $f(x) > 0$, et la flèche dans cet intervalle pointe vers le haut.
+	\item Pour $x <0$: $f(-1) = -0{,}6 < 0$, donc $f(x) < 0$, et la flèche dans cet intervalle pointe vers le bas.
 \end{itemize}
 
 \begin{center}
@@ -1544,7 +1544,7 @@ Vérifiez votre réponse en comparant avec les graphes plus haut.
 \end{exercise}
 
 \pagebreak[0]
-À l'aide du diagramme de phase, on peut classifier les points critiques comme stables ou instables$\!$\footnote{Parfois, on dira d'un point critique instable qu'il est \emph{semistable}\index{point critique semi-stable}, si une des deux flèches pointe vers le point critique.}.
+À l'aide du diagramme de phase, on peut classifier les points critiques comme stables ou instables\footnote{Parfois, on dira d'un point critique instable qu'il est \emph{semistable}\index{point critique semi-stable}, si une des deux flèches pointe vers le point critique.}.
 
 \begin{center}
 \inputpdft{2-2-ph-class}
@@ -1582,8 +1582,9 @@ En résolvant pour les points critiques, qu'on dénotera par $A$ et $B$, on obti
 
 Par exemple, posons $M=8$ et $k=0.1$.
 Si $h=1$, alors $A$ et $B$ sont distincts et positifs.
-Le champ de directions est illustré à la \figureref{2.2:harv1}.  Tant que la population initiale est au-dessus de $B$,  approximativement 1,55 million, la population n'atteindra pas l'extinction.  En fait, elle tendra vers $A \approx
-6,45$ millions. Si une catastrophe faisait chuter la population en dessous de $B$,
+Le champ de directions est illustré à la \figureref{2.2:harv1}.  Tant que la population initiale est au-dessus de $B$,  approximativement 1,55 million, la population n'atteindra pas l'extinction.  
+En fait, elle tendra vers $A \approx 6{,}45$ millions. 
+Si une catastrophe faisait chuter la population en dessous de $B$,
 les humains disparaîtraient.
 
 \begin{myfig}
@@ -1591,18 +1592,18 @@ les humains disparaîtraient.
  \capstart
  \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h1}
  \caption{Le champ de directions et quelques solutions pour
- $x' = 0.1\,x\,(8-x)-1$.\label{2.2:harv1}}
+ $x' = 0{,}1\,x\,(8-x)-1$.\label{2.2:harv1}}
 }
 \quad
 \parbox[t]{3.0in}{
  \capstart
  \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-hc}
  \caption{Le champ de directions et quelques solutions pour
- $x' = 0.1\,x\,(8-x)-1.6$.\label{2.2:harvc}}
+ $x' = 0{,}1\,x\,(8-x)-1.6$.\label{2.2:harvc}}
 }
 \end{myfig}
 
-Si $h = 1,6$, alors $A=B=4$.  Il y a un unique point critique, et il est instable.
+Si $h = 1{,}6$, alors $A=B=4$.  Il y a un unique point critique, et il est instable.
 Si la population initiale est au-dessus de 4 millions, elle tendra vers 4 millions.
 Mais en dessous de cette valeur, elle tendra vera l'extinction.
 Et si l'état d'équilibre est légèrement perturbé, on risque encore l'extinction. Voir la \figureref{2.2:harvc}.
@@ -1613,7 +1614,7 @@ La population tendra vers zéro, quelle que soit sa quantité initiale.  Voir la
 \begin{myfig}
 	\capstart \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h2}
 	\caption{Le champ de directions et quelques solutions pour
-	$x' = 0.1\,x\,(8-x)-2$.\label{2.2:harv2}}
+	$x' = 0{,}1\,x\,(8-x)-2$.\label{2.2:harv2}}
 \end{myfig}
 
 %$dx/dt = 0.1*x*(8-x)-1$, $t: [0,20], x: [-5,10]$,
@@ -1683,7 +1684,7 @@ La population tendra vers zéro, quelle que soit sa quantité initiale.  Voir la
 	\begin{tasks}
 		\task Esquissez le diagramme de phase et calculez les points critiques.
 		\task Classifiez les points critiques.
-		\task Si $x(0)=0.5$, calculez $\displaystyle \lim_{t\to\infty} x(t)$.
+		\task Si $x(0)=0{,}5$, calculez $\displaystyle \lim_{t\to\infty} x(t)$.
 	\end{tasks}
 \end{exercise}
 \exsol{%
@@ -1916,7 +1917,7 @@ $N = F_y$.  Si les dérivées secondes sont continues, on a forcément que les d
 		= 	\frac{\partial N}{\partial x} .
 \end{equation*}
 Ceci nous donne donc une condition que nous pouvons vérifier, sans recourir à des calculs d'intégrales.
-À l'inverse, on a le lemme de Poincaré$\!$\footnote{Nommé ainsi en l'honneur de
+À l'inverse, on a le lemme de Poincaré\footnote{Nommé ainsi en l'honneur de
 \href{https://en.wikipedia.org/wiki/Henri_Poincar\%C3\%A9}{Jules Henri
 Poincaré} (1854-1912).}.
 

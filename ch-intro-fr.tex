@@ -284,25 +284,30 @@ On peut penser aux mathématiques comme au langage de la science, et les équati
 Vous avez déjà vu plusieurs équations différentielles, peut-être sans savoir que c'en était.
 Et vous avez même résolu des équations différentielles dans vos cours de calcul.  Voyons un exemple que vous n'avez peut-être pas vu:
 \begin{equation} \label{eq1}
-\frac{dx}{dt} + x = 2 \cos t .
+	\frac{dx}{dt} + x = 2 \cos t .
 \end{equation}
 Ici, $x$ est la  \emph{\myindex{variable dépendante}}, et $t$ est la \emph{\myindex{variable indépendante}}.
-L'équation \eqref{eq1}
-est un exemple de base d'une \emph{\myindex{équation différentielle}}.
+L'équation \eqref{eq1} est un exemple de base d'une \emph{\myindex{équation différentielle}}.
 Plus précisément, c'est un exemple d'\emph{\myindex{équation différentielle du premier ordre}}, puisqu'elle n'implique que la première dérivée de la variable dépendante $x$.
 Cette équation vient de la loi de refroidissement de Newton, lorsque la température ambiante oscille en fonction du temps.
 
+
+
 \subsection{Solutions d'équations différentielles}
 
-Quand on résout une équation différentielle comme \eqref{eq1}, l'inconnue est une variable $x$, qui elle-même dépend d'une variable $t$,
-c'est-à-dire qu'on veut trouver un $x$, dépendant de $t$, tel que, lorsqu'on substitue $x$, $t$ et $\frac{dx}{dt}$ dans l'équation \eqref{eq1},
-le côté gauche est égal au côté droit, et donc l'égalité est satisfaite.  C'est le même principe que pour une équation ordinaire (algébrique) impliquant $x$ et $t$.
+Quand on résout une équation différentielle comme \eqref{eq1}, 
+l'inconnue est une variable $x$, qui elle-même dépend d'une variable $t$,
+c'est-à-dire qu'on veut trouver un $x$, dépendant de $t$, tel que, 
+lorsqu'on substitue $x$, $t$ et $\frac{dx}{dt}$ dans l'équation \eqref{eq1},
+le côté gauche est égal au côté droit, et donc l'égalité est satisfaite.  
+C'est le même principe que pour une équation ordinaire (algébrique) impliquant $x$ et $t$.
 Nous affirmons que l'expression suivante est une \emph{\myindex{solution}}:
 \begin{equation*}
 	x = x(t) = \cos t + \sin t .
 \end{equation*}
 %
-Comment le vérifier?  Il suffit de substituer $x$ dans l'équation \eqref{eq1} et de vérifier que l'égalité est bel et bien établie.
+Comment le vérifier?  Il suffit de substituer $x$ dans l'équation \eqref{eq1} 
+et de vérifier que l'égalité est bel et bien établie.
 Nous devons d'abord calculer $\frac{dx}{dt}$.
 On trouve que $\frac{dx}{dt} = -\sin t + \cos t$.
 Maintenant, calculons le côté gauche de \eqref{eq1}:
@@ -325,7 +330,8 @@ On remplace ceci dans \eqref{eq1}:
 \end{equation*}
 Il s'agit bien d'une solution.
 
-Ainsi, plusieurs solutions sont possibles.  Pour cette équation en particulier, toutes les solutions peuvent s'écrire sous la forme
+Ainsi, plusieurs solutions sont possibles.  
+Pour cette équation en particulier, toutes les solutions peuvent s'écrire sous la forme
 \begin{equation*}
 	x = \cos t + \sin t + C e^{-t}
 \end{equation*}
@@ -340,28 +346,37 @@ Nous verrons un peu plus tard comment trouver ces solutions de manière généra
 \caption{Quelques solutions de $\frac{dx}{dt} + x = 2 \cos t$.\label{intro:plotsfig}}
 \end{mywrapfig}%
 
-La résolution d'une équation différentielle peut être très ardue.  Il n'y a pas une méthode générale pour les résoudre toutes.
-La plupart du temps, nous verrons comment obtenir des formules exactes pour résoudre certaines équations différentielles,
-mais parfois nous n'obtiendrons que des solutions approximatives. De plus, nous passerons un peu de temps à comprendre certaines équations, sans les résoudre.
+La résolution d'une équation différentielle peut être très ardue.  
+Il n'y a pas une méthode générale pour les résoudre toutes.
+La plupart du temps, nous verrons comment obtenir des formules exactes 
+pour résoudre certaines équations différentielles,
+mais parfois nous n'obtiendrons que des solutions approximatives. 
+De plus, nous passerons un peu de temps à comprendre certaines équations, sans les résoudre.
 
 La majeure partie de ce manuel est dédiée aux
 \emph{équations différentielles ordinaires\index{ordinary differential equation}},
-ou EDO\index{ODE}, c'est-à-dire aux équations ayant une seule variable indépendante, où les dérivées se prennent en termes de cette unique variable.
+ou EDO\index{ODE}, c'est-à-dire aux équations ayant une seule variable indépendante, 
+où les dérivées se prennent en termes de cette unique variable.
 Lorsqu'il y a plusieurs variables indépendantes, on obtient des
 \emph{équations aux dérivées partielles\index{partial differential equation}},
 ou EDP\index{PDE}.
 %We will briefly see these near the
 %end of the course.
 
-Même pour les EDO, qui sont très bien comprises, il ne s'agit pas simplement de tourner une manivelle pour obtenir une réponse.
+Même pour les EDO, qui sont très bien comprises, 
+il ne s'agit pas simplement de tourner une manivelle pour obtenir une réponse.
 %When you can find exact solutions, they are usually preferable to approximate solutions.
 C'est important de comprendre comment de telles solutions sont trouvées.
-Même si, dans la vraie vie, vous laisserez la plupart des calculs à des ordinateurs, vous devez comprendre ce qu'ils font.
-Il est parfois nécessaire de simplifier ou de transformer votre équation pour que la machine la comprenne et la résolve.
+Même si, dans la vraie vie, vous laisserez la plupart des calculs à des ordinateurs, 
+vous devez comprendre ce qu'ils font.
+Il est parfois nécessaire de simplifier ou de transformer votre équation 
+pour que la machine la comprenne et la résolve.
 Il vous faudra peut-être même ajouter ou modifier des hypothèses dans votre modèle pour ce faire.
 
-Pour réussir en génie ou en science, vous aurez à résoudre des problèmes dans votre travail que vous n'aurez jamais vus auparavant,
-d'où l'importance d'apprendre des techniques de résolution de problèmes, afin d'appliquer ces techniques aux nouveaux problèmes.
+Pour réussir en génie ou en science, vous aurez à résoudre des problèmes 
+dans votre travail que vous n'aurez jamais vus auparavant,
+d'où l'importance d'apprendre des techniques de résolution de problèmes, 
+afin d'appliquer ces techniques aux nouveaux problèmes.
 %Une erreur courante est de s'attendre à une recette qui r\'soudre tous les problèmes que vous rencontrerez.  Ce cours n'est pas une exception.
 
 \subsection{En pratique}
@@ -432,10 +447,10 @@ Substituons ces valeurs dans l'expression et regardons ce que nous obtenons:
 	& 100 = P(0) = C e^{k0} = C ,\\
 	& 200 = P(10) = 100 \, e^{k10} .
 \end{align*}
-Par conséquent, $2 = e^{10k}$ ou $\frac{\ln 2}{10} = k \approx 0,069$.
+Par conséquent, $2 = e^{10k}$ ou $\frac{\ln 2}{10} = k \approx 0{,}069$.
 Donc:
 \begin{equation*}
-	P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0,069 t} .
+	P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0{,}069 t} .
 \end{equation*}
 À une minute, $t=60$, la population est $P(60) = 6400$.
 Voir la~\figurevref{intro:plotbactfig}.
@@ -458,7 +473,7 @@ Bien sûr que non.
 Nous avons fait des hypothèses simplificatrices qui ne seront pas exactement vraies, mais approximativement vraies.
 Si nos hypothèses sont raisonnables, il y aura environ 6400 bactéries.
 De plus, $P$ devrait être un nombre entier, puisqu'il compte une quantité de bactéries.
-Pourtant, notre modèle admet des nombres comme $P(61) \approx 6859,35$.
+Pourtant, notre modèle admet des nombres comme $P(61) \approx 6859{,}35$.
 %Obviously there
 %are either 6859 bacteria or 6860 bacteria.
 \end{example}
