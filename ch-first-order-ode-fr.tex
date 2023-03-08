@@ -1754,7 +1754,7 @@ puisqu'elles apparaissent souvent dans des contextes où il y a conservation d'u
 %  To truly make sense out of these
 %equations requires a little bit of multivariable calculus and a tiny
 %bit of physics.
-Dans le contexte d'une équation différentielle (EDO) du premier ordre, une équation exacte est associée à une fonction à deux variables,
+Dans le contexte d'une équation différentielle ordinaire (EDO) du premier ordre, une équation exacte est associée à une fonction à deux variables,
 appelée une \emph{\myindex{fonction potentielle}}.
 Intuitivement, on peut penser à l'énergie potentielle ou alors au potentiel électrique.
 
@@ -1869,14 +1869,14 @@ Voyons la démarche dans un exemple.
 	Nous avons donc trouvé $F(x,y) = x^2+y^2$.
 	Il ne reste qu'à résoudre pour $y$, en fonction de $x$, dans l'équation suivante:
 	\begin{equation*}
-		F\bigl(x,y(x)\bigr) = C .
+		F\bigl(x,y(x)\bigr) = C, 
 	\end{equation*}
 	où $C$ est une constante arbitraire. Dans notre cas, nous obtenons $y = \pm \sqrt{C^2-x^2}$, comme plus haut.
 \end{example}
 
 \begin{exercise}\label{exer:exact}
 	Pourquoi n'a-t-on pas besoin d'ajouter une constante d'intégration lorsqu'on intègre $A'(y) = 2y$?
-	Ajoutez une constante d'intégration, disons 3, et observez la fonction $F$ obtenue.
+	Ajoutez une constante d'intégration, disons \textit{3}, et observez la fonction $F$ obtenue.
 	Comparez à la réponse plus haut.  Pourquoi la différence n'est-elle pas importante?
 \end{exercise}
 
@@ -1993,7 +1993,7 @@ Les deux expressions ne sont pas égales, et donc l'équation différentielle n'
 	Ceci ne contredit pas le lemme de Poincaré.
 	Notez que l'énoncé du théorème garantit seulement l'existence d'une fonction potentielle définie localement,
 	c'est-à-dire dans un voisinage du point de départ.   Dans notre exemple, puisque $y(1) = 2$, le point de départ est $(1,2)$.
-	En considérant le cas où $x > 0$ et en intégrant $M$ par rapport à $x$ ou $N$ par rapport à $y$, on trouve:
+	En considérant le cas où $x > 0$ et en intégrant $M$ par rapport à $x$, ou $N$ par rapport à $y$, on trouve:
 	\begin{equation*}
 		F(x,y) = \operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr) .
 	\end{equation*}
@@ -2045,7 +2045,7 @@ Les deux expressions ne sont pas égales, et donc l'équation différentielle n'
 \subsection{Exercices}
 
 \begin{exercise}
-	Résolvez les équations exactes suivantes, en laissant la solution sous forme implicite:
+	Résolvez les équations exactes suivantes, en laissant la solution sous forme implicite.
 	\begin{tasks}(2)
 		\task $(2 xy + x^2) \, dx + (x^2+y^2+1) \, dy = 0$
 		\task $x^5 + y^5 \frac{dy}{dx} = 0$
@@ -2112,7 +2112,7 @@ Les deux expressions ne sont pas égales, et donc l'équation différentielle n'
 	\end{exercise}
 \end{samepage}
 
-\setcounter{exercise}{100}
+\setcounter{exercise}{100}  %%%POURQUOI??
 
 \begin{exercise}
 	Résolvez les équations exactes suivantes, en laissant la solution sous forme implicite:

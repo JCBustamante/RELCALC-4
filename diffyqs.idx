@@ -119,7 +119,7 @@
 \indexentry{free motion|hyperpage}{76}
 \indexentry{damped motion|hyperpage}{76}
 \indexentry{undamped motion|hyperpage}{76}
-\indexentry{circuit RCL|hyperpage}{76}
+\indexentry{circuit RLC|hyperpage}{76}
 \indexentry{deuxième loi de Newton|hyperpage}{77}
 \indexentry{non forcé|hyperpage}{78}
 \indexentry{amplitude|hyperpage}{78}
@@ -199,8 +199,8 @@
 \indexentry{homogeneous system|hyperpage}{109}
 \indexentry{superposition|hyperpage}{109}
 \indexentry{linearly independent!for vector-valued functions|hyperpage}{109}
-\indexentry{matrice fundamentale|hyperpage}{110}
-\indexentry{solution matricielle fondamentale|hyperpage}{110}
+\indexentry{matrice fundamentale|hyperpage}{109}
+\indexentry{solution matricielle fondamentale|hyperpage}{109}
 \indexentry{équation homogène associée|hyperpage}{110}
 \indexentry{valeur propree|hyperpage}{113}
 \indexentry{vecteur propre correspondant|hyperpage}{113}

@@ -29,20 +29,20 @@ l'équation est dite \emph{homogène\index{homogeneous linear equation}}.
 On a déjà vu quelques équations linéaires homogènes du deuxième ordre.
 \begin{align*}
 	\qquad y'' + k^2 y & = 0. &
-	& \text{Les deux solutions sont:} \quad y_1 = \cos (kx), \quad y_2 = \sin(kx) . \qquad \\
+	& \text{Les deux solutions sont:} & y_1 &= \cos (kx), & y_2 &= \sin(kx) . \\
 	\qquad y'' - k^2 y & = 0. &
-	& \text{Les deux solutions sont:} \quad y_1 = e^{kx}, \quad y_2 = e^{-kx} . \qquad
+	& \text{Les deux solutions sont:} &y_1 &= e^{kx}, & y_2 &= e^{-kx} . 
 \end{align*}
 
-Si l'on connait deux solutions de l'équation linéaire homogène, on connait beaucoup plus que celles-ci.
+Si l'on connaît deux solutions de l'équation linéaire homogène, on connait beaucoup plus que celles-ci.
 
 \begin{theorem}[Superposition]\index{superposition}
 	Supposons que $y_1$ et $y_2$ sont deux solutions de l'équation homogène~\eqref{sol:eqlinhom}.  
 	Alors,
 	\begin{equation*}
-		y(x) = C_1 y_1(x) + C_2 y_2(x) ,
+		y(x) = C_1 y_1(x) + C_2 y_2(x) 
 	\end{equation*}
-	est aussi une solution de~\eqref{sol:eqlinhom}, pour des contantes arbitraires $C_1$ et $C_2$.
+	est aussi une solution de~\eqref{sol:eqlinhom}, pour des constantes arbitraires $C_1$ et $C_2$.
 \end{theorem}
 
 On peut additionner les constantes et les multiplier par des constantes pour obtenir des solutions nouvelles et différentes.  L'expression $C_1 y_1 + C_2 y_2$ s'appelle une
@@ -82,7 +82,7 @@ C_1 Ly_1 + C_2 Ly_2$.  La preuve faite précédemment devient moins lourde :
 
 Le principe de superposition nous dit entre autres que $y_1 = \cosh (kx)$ et $y_2 = \sinh (kx)$ sont aussi des solutions de l'équation $y'' - k^2y = 0$.  Pour nous en convaincre, rappelons d'abord la définition de ces deux fonctions:
 \begin{align*}
-	\cosh x & = \frac{e^x  + e^{-x}}{2} \\
+	\cosh x & = \frac{e^x  + e^{-x}}{2}, \\
 	\sinh x  & = \frac{e^x - e^{-x}}{2}.
 \end{align*}
 
@@ -153,7 +153,7 @@ Par exemple, on a trouvé les solutions
 $y_1 = \sin x$ et $y_2 = \cos x$ pour l'équation $y'' + y = 0$.  Ce n'est pas difficile de voir que le sinus et le cosinus ne peuvent pas s'obtenir en multipliant l'un ou l'autre par une constante.
 En effet, si $\sin x = A \cos x$ pour une constante quelconque $A$,
 alors c'est vrai pour $x=0$, et ceci impliquerait que  $A = 0$.  
-Mais alors $\sin x = 0$ pour tout $x$, ce qui est absurde.
+Mais, alors, $\sin x = 0$ pour tout $x$, ce qui est absurde.
 Par conséquent, $y_1$ et $y_2$ sont linéairement indépendantes, et
 \begin{equation*}
 	y = C_1 \cos x + C_2 \sin x 
@@ -197,7 +197,7 @@ L'équation pour $w$ est alors
 $xw' + 3 w = 0$.  On calcule $w = Cx^{-3}$ et, en intégrant, on trouve  $v = \frac{-C}{2x^2}$.
 Ainsi:
 \begin{equation*}
-	y_2 = y_1 v = \frac{-C}{2x}.
+	y_2 = y_1 v = \frac{-C}{\phantom-2x}.
 \end{equation*}
 %
 Tous les $C$ fonctionnent, et, en choisissant $C=-2$, 
@@ -215,7 +215,7 @@ Toutefois, c'est beaucoup plus facile de se rappeler qu'on doit simplement essay
 y_1(x) v(x)$ et trouver $v(x)$ comme on l'a fait plus haut.  
 Ainsi, la méthode fonctionne pour les équations de plus grand ordre aussi: 
 il faut réduire l'ordre pour chacune des solutions trouvées. 
-Il est donc plus facile de se rappeler de comment faire plutôt que de se rappeler une formule spécifique. 
+Il est donc plus facile de se rappeler comment faire plutôt que de se rappeler une formule spécifique. 
 
 
 
@@ -548,7 +548,7 @@ Notons que les manuels de génie utilisent souvent la lettre $j$ plutôt que la 
 On peut également définir l'exponentielle $e^{a+ib}$ d'un nombre complexe. 
 À cette fin, on utilise la série de Taylor de $e^x$ en remplaçant la variable $x$ dans la série par un nombre complexe. 
 Puisque les propriétés de l'exponentielle peuvent être prouvées en considérant sa série de Taylor, ces propriétés sont toujours vraies pour les exponentielles complexes.  
-Par exemple, une propriété très importante :   $e^{x+y} = e^x e^y$. 
+Par exemple, une propriété très importante est   $e^{x+y} = e^x e^y$. 
 Ceci signifie que: 
 \begin{equation*}
 	e^{a+ib} = e^a e^{ib}.
@@ -661,7 +661,7 @@ Les valeurs sont réelles lorsque $x$ est réel. Ce n'est pas difficile de voir 
 	Trouvons la solution de  $y'' - 6 y' + 13 y = 0$, $y(0) = 0$, $y'(0) = 10$.
 	
 	L'équation caractéristique est  $r^2 - 6 r + 13 = 0$. 
-	En complétant le carré, on obtient   ${(r-3)}^2 + 2^2 = 0$ et les racines sont
+	En complétant le carré, on obtient   ${(r-3)}^2 + 2^2 = 0$, et les racines sont
 	$r = 3 \pm 2i$.
 	Par le théorème, on a la solution générale suivante:
 	\begin{equation*}
@@ -832,7 +832,7 @@ On a aussi le théorème d'existence et d'unicité pour les équations linéaire
 
 \begin{theorem}[Existence et unicité]\index{existence and uniqueness}
 	Supposons que $p_0,\ldots, p_{n-1}$ et $f$ sont des fonctions continues sur un intervalle $I$,
-	que $a$ est un nombre appartenant à $I$,
+	que $a$ est un nombre appartenant à $I$
 	et que $b_0, b_1, \ldots, b_{n-1}$ sont des constantes.
 	L'équation  
 	\begin{equation*} %\label{hol:eqlin}
@@ -856,7 +856,7 @@ Les fonctions  $y_1$, $y_2$, \ldots, $y_n$ sont \emph{\myindex{linéairement ind
 	c_1 y_1 + c_2 y_2 + \cdots + c_n y_n = 0 
 \end{equation*}
 admet uniquement la solution triviale $c_1 = c_2 = \cdots = c_n = 0$.  
-Si, au contraire, on peut résoudre l'équation avec certaines constantes non ulles, par exemple  $c_1 \not= 0$, alors on peut exprimer $y_1$ comme une combinaison linéaire des autres. 
+Si, au contraire, on peut résoudre l'équation avec certaines constantes non nulles, par exemple  $c_1 \not= 0$, alors on peut exprimer $y_1$ comme une combinaison linéaire des autres. 
 Si les fonctions ne sont pas linéairement indépendantes, elles sont  \emph{\myindex{linéairement dépendantes}}.
 
 \begin{example}
@@ -961,7 +961,7 @@ L'exemple suivant le montre bien.
 	On pourrait commencer par $r=0$, $1$ ou $-1$, puisque ces nombres sont faciles à calculer. Dans notre cas, le polynôme a deux racines,  $r_1 = -1$
 	et $r_2 = 1$.  
 	
-	Il devrait avoir trois racines et la dernière est plutôt facile à trouver. Le terme constant dans un polynôme monique\footnote{Le mot \emph{monique} veut dire que le coefficient du plus grand degré $r^d$, dans notre cas $r^3$, est 1.}
+	Il devrait avoir trois racines, et la dernière est plutôt facile à trouver. Le terme constant dans un polynôme monique\footnote{Le mot \emph{monique} veut dire que le coefficient du plus grand degré $r^d$, dans notre cas $r^3$, est 1.}
 	est tel que c'est un multiple de l'opposé de toutes les racines, parce que 
 	$r^3 - 3 r^2 - r + 3 = (r-r_1)(r-r_2)(r-r_3)$.
 	Alors,
@@ -1011,7 +1011,7 @@ On prend une combinaison linéaire de ces solutions et l'on trouve la solution g
 	\begin{equation*}
 		r^4 - 3r^3 + 3r^2 -r = 0 .
 	\end{equation*}
-	Par un examen attentif, on note que  $r^4 - 3r^3 + 3r^2 -r = r{(r-1)}^3$.  
+	Par un examen attentif on note que  $r^4 - 3r^3 + 3r^2 -r = r{(r-1)}^3$.  
 	Ainsi, les racines données avec la 
 	\myindex{multiplicité} sont $r = 0, 1, 1, 1$.  
 	Alors, la solution générale est: 
@@ -1197,13 +1197,13 @@ Regardons quelques applications impliquant des équations linéaires du deuxièm
 \noindent
 \inputpdft{massfigforce}
 \end{mywrapfigsimp}
-Le premier exemple est une masse sur un ressort. Supposons que nous avons une masse $m > 0$ (en kg) connectée à un mur fixe par un ressort, de constante $k > 0$ (en newtons par mètre). Il pourrait y avoir des forces externes  $F(t)$ (en newtons) agissant sur la masse. Finalement, il y a de la friction qui est mesurée par $c \geq 0$ (en newtons-seconde par mètre) lorsque la masse glisse sur le plancher (ou possiblement un amortisseur est connecté). 
+Le premier exemple est une masse sur un ressort. Supposons que nous avons une masse $m > 0$ (en kg) connectée à un mur fixe par un ressort, de constante $k > 0$ (en newtons par mètre). Il pourrait y avoir des forces externes  $F(t)$ (en newtons) agissant sur la masse. Finalement, il y a de la friction qui est mesurée par $c \geq 0$ (en newtons secondes par mètre) lorsque la masse glisse sur le plancher (ou possiblement un amortisseur est connecté). 
 
 Soit $x$ le déplacement de la masse  ($x=0$ est la position au repos), avec
 $x$ s'éloignant du mur.  
 Par la \myindex{loi de Hooke}, la force exercée sur le ressort est proportionnelle à la compression du ressort.
 Également, il y a  la force exercée par la friction $kx$, dans la direction négative, qui est proportionnelle à la vitesse de la masse.
-Par la \myindex{deuxième loi de Newton} nous savons que la force est égale au produit de la masse et de l'accélération et par conséquent $mx'' = F(t)-cx'-kx$ ou
+Par la \myindex{deuxième loi de Newton}, nous savons que la force est égale au produit de la masse et de l'accélération, et, par conséquent, $mx'' = F(t)-cx'-kx$ ou
 \begin{equation*}
 mx'' + cx' + kx = F(t) .
 \end{equation*}
@@ -1217,7 +1217,7 @@ motion}}, si $F \equiv 0$ (si $F$ est nul),
 \item n'est pas \emph{amorti\index{undamped motion}}, si $c = 0$.
 \end{enumerate}
 %
-Ce système est présent dans beaucoup d'applications même s'il ne le semble pas à première vue. Plusieurs scénarios de la vraie vie peuvent être ramenés à celui d'un ressort relié à une masse. Par exemple, un saut en bungee est essentiellement un système masse-resort (la personne est la masse).  Regardons deux autres exemples.  
+Ce système est présent dans beaucoup d'applications même s'il ne le semble pas à première vue. Plusieurs scénarios de la vraie vie peuvent être ramenés à celui d'un ressort relié à une masse. Par exemple, un saut en \emph{bungee} est essentiellement un système masse-ressort (la personne est la masse).  Regardons deux autres exemples.  
 
 \medskip
 
@@ -1226,17 +1226,17 @@ Ce système est présent dans beaucoup d'applications même s'il ne le semble pa
 \noindent
 \inputpdft{mv-rlc}
 \end{mywrapfigsimp}
-Voici un exemple pour le génie électrique. Considérons l'image du \myindex{circuit RCL}.
-Il y a un ressort avec une résistance de $R$ ohms, un inducteur avec une inductance de $L$ henries,
+Voici un exemple pour le génie électrique. Considérons l'image du \myindex{circuit RLC}.
+Il y a un ressort avec une résistance de $R$ ohms, un inducteur avec une inductance de $L$ henrys,
 et un condensateur avec une capacitance de $C$ farads.  Il y a aussi une source électrique (telle qu'une batterie) ayant un voltage de  $E(t)$ volts au temps $t$ (mesuré en secondes).
-Soit $Q(t)$ une charge (en coulombes) sur un condensateur et $I(t)$ le courant.  La relation entre les deux est
-$Q' = I$.  Par des principes élémentaires on trouve 
+Soit $Q(t)$ une charge (en coulombs) sur un condensateur, et $I(t)$ le courant.  La relation entre les deux est
+$Q' = I$.  Par des principes élémentaires, on trouve 
 $L I' + RI + \nicefrac{Q}{C} = E$.  On dérive pour obtenir :   
 \begin{equation*}
 	L I''(t) + R I'(t) + \frac{1}{C} I(t) = E'(t) .
 \end{equation*}
-Il s'agit d'un équation linéaire non-homogène du deuxième ordre à coefficients constants. 
-Puisque $L, R$, et $C$ sont tous positifs, ce système se comporte exactement comme le système masse-ressort. La position de la masse est remplacée par le courant. La masse est remplacée par l'inducteur, l'amortisseur est remplacé par la résistance et la constante du ressort est remplacée par la capacitance. Les variations du voltage deviennent la fonction de force --- pour un voltage constant, il s'agit d'un mouvement qui n'est pas forcé. 
+Il s'agit d'une équation linéaire non homogène du deuxième ordre à coefficients constants. 
+Puisque $L$, $R$ et $C$ sont tous positifs, ce système se comporte exactement comme le système masse-ressort. La position de la masse est remplacée par le courant. La masse est remplacée par l'inducteur, l'amortisseur est remplacé par la résistance, et la constante du ressort est remplacée par la capacitance. Les variations du voltage deviennent la fonction de force -- pour un voltage constant, il s'agit d'un mouvement qui n'est pas forcé. 
 
 \medskip
 
@@ -1245,40 +1245,40 @@ Puisque $L, R$, et $C$ sont tous positifs, ce système se comporte exactement co
 \noindent
 \inputpdft{mv-pend-deriv}
 \end{mywrapfigsimp}
-Notre prochain exemple se comporte approximativement comme un système masse-ressort .  
-Supposons que la masse $m$ pende sur un fil de longueur  $L$.  On cherche une équation pour l'angle (en radians). Soit $g$ la force gravitationnelle. La physique élémentaire dit que l'équation est: 
+Notre prochain exemple se comporte approximativement comme un système masse-ressort.  
+Supposons que la masse $m$ pend sur un fil de longueur  $L$.  On cherche une équation pour l'angle (en radians). Soit $g$ la force gravitationnelle. La physique élémentaire dit que l'équation est: 
 \begin{equation*}
 	\theta'' + \frac{g}{L} \sin \theta = 0 .
 \end{equation*}
 
-Dérivons cette équation en utilisant la \myindex{deuxième loi de Newton}:
-La force est égale au produit de la masse et de l'accélération. L'accélération est
-$L \theta''$ et la masse est $m$.  
+Dérivons cette équation en utilisant la \myindex{deuxième loi de Newton}: 
+la force est égale au produit de la masse et de l'accélération. L'accélération est
+$L \theta''$, et la masse est $m$.  
 Alors, $mL\theta''$ doit être égale à la composante tangentielle de la force gravitationnelle, soit 
 $m g \sin \theta$ dans la direction opposée.
 Alors, $mL\theta'' = -mg \sin \theta$.
 La masse $m$ est curieusement  annulée de l'équation. 
 
-Maintenant, approximons. Pour un petit $\theta$ nous avons l'approximation 
+Maintenant, approximons. Pour un petit $\theta$, nous avons l'approximation 
 $\sin \theta \approx \theta$.  On le voit dans la \figurevref{mv:sinthetafig}:  sur l'intervalle 
-$-0.5 < \theta < 0.5$ (en radians), le graphique de  $\sin \theta$ et $\theta$ sont presque les mêmes.
+$-0.5 < \theta < 0.5$ (en radians), les graphes de  $\sin \theta$ et de $\theta$ sont presque les mêmes.
 
 \begin{mywrapfig}{3.25in}
 \capstart \diffyincludegraphics{width=3in}{width=4.5in}{mv-sintheta}
-\caption{Le graphique de  $\sin \theta$ et $\theta$ (en radians).\label{mv:sinthetafig}}
+\caption{Graphes de  $\sin \theta$ et de $\theta$ (en radians).\label{mv:sinthetafig}}
 \end{mywrapfig}
 
-Donc, quand le balancement est petit,  $\theta$ est petit et nous pouvons modéliser le comportement par une équation linéaire simple.  
+Donc, quand le balancement est petit,  $\theta$ est petit, et nous pouvons modéliser le comportement par une équation linéaire simple.  
 \begin{equation*}
 	\theta'' + \frac{g}{L} \theta = 0 .
 \end{equation*}
-Les erreurs de cette approximation d'accumulent. Alors, après un long moment, l'état de système dans la vraie vie est assez différent de notre système. Ainsi, nous verrons que dans le système masse-ressort l'amplitude est indépendante de la période. 
-Mais ceci n'est plus vrai pour le pendule.  Néanmoins, pour une période de temps assez courte et un petit élan (pour un petit angle $\theta$), l'approximation est raisonnablement bonne. 
+Les erreurs de cette approximation s'accumulent. Alors, après un long moment, l'état de système dans la vraie vie est assez différent de notre système. Ainsi, nous verrons que, dans le système masse-ressort,  l'amplitude est indépendante de la période. 
+Mais ceci n'est plus vrai pour le pendule.  Néanmoins, pour une période de temps assez courte et pour un petit élan (pour un petit angle $\theta$), l'approximation est raisonnablement bonne. 
 
-Dans les problèmes de la vraie vie, il est souvent nécessaire de faire ce genre de simplifications.  On doit comprendre que les mathématiques et la physique de la situation pour voir si les simplification sont valides dnas le contexte que l'on tente d'étudier. 
+Dans les problèmes de la vraie vie, il est souvent nécessaire de faire ce genre de simplifications.  On doit comprendre les mathématiques et la physique de la situation pour voir si les simplifications sont valides dans le contexte que l'on tente d'étudier. 
 
 
-
+%%%%%%%%%JP rendu ici 20230308
 
 
 \subsection{Mouvement libre non amorti}
