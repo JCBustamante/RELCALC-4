@@ -12,13 +12,12 @@
 Avant de s'attaquer aux séries de Fourier, on va étudier les problèmes \emph{à valeurs au bord\index{boundary value problem}}
  (ou \emph{à valeurs limites\index{endpoint problem}}).  On considère
 \begin{equation*}
-x'' + \lambda x = 0, \quad x(a) = 0, \quad x(b) = 0,
+x'' + \lambda x = 0, \quad x(a) = 0, \quad x(b) = 0
 \end{equation*}
 pour une certaine constante $\lambda$, où $x(t)$ prend ses valeurs  $t$ dans l'intervalle 
 $[a,b]$.
-Précédemment, on a spécifié la valeur de la solution et de sa dérivée en un point. Maintenant, on veut spécifier la valeur de la solution à deux points différents. Lorsque $x=0$ est une solution, l'existence de la solution n'est pas problématique. Par contre, l'unicité de la solution est une autre question. La solution générale de  $x'' + \lambda x = 0$ a deux constantes arbitraires \footnote{%
-On regarde \subsectionref{subsection:fourfundamental} ou \exampleref{example:expsecondorder} et
-\exampleref{example:sincossecondorder}.}.
+Précédemment, on a spécifié la valeur de la solution et de sa dérivée en un point. Maintenant, on veut spécifier la valeur de la solution à deux points différents. Lorsque $x=0$ est une solution, l'existence de la solution n'est pas problématique. Par contre, l'unicité de la solution est une autre question. La solution générale de  $x'' + \lambda x = 0$ a deux constantes arbitraires\footnote{%
+On regarde la \subsectionref{subsection:fourfundamental}, ou l'\exampleref {example:expsecondorder} et l'\exampleref{example:sincossecondorder}.}.
 C'est naturel (mais faux) de croire qu'exiger deux solutions garantit l'unicité. 
 
 \begin{example}
@@ -27,9 +26,9 @@ $a=0$, $b=\pi$.  Ceci donne:
 \begin{equation*}
 x'' + x = 0, \quad x(0) = 0, \quad x(\pi) = 0.
 \end{equation*}
-Alors $x = \sin t$ est une autre solution  (qui s'ajoute à  $x=0$) satisfaisant aux conditions limites. 
+Alors, $x = \sin t$ est une autre solution  (qui s'ajoute à $x=0$) satisfaisant aux conditions limites. 
 Il y a plus. Écrivons la solution générale de l'équation différentielle, qui est  $x= A \cos t + B \sin t$.
-La condition $x(0) = 0$ implique que $A=0$.  La contrainte $x(\pi) = 0$ ne donne pas plus d'informations lorsque $x = B \sin t$ satisfait déjà aux conditions limites. 
+La condition $x(0) = 0$ implique que $A=0$.  La contrainte $x(\pi) = 0$ ne donne pas plus d'information lorsque $x = B \sin t$ satisfait déjà aux conditions limites. 
 Par conséquent, il y a une infinité de solutions de la forme  $x = B \sin t$,
 où $B$ est une constante arbitraire.  
 \end{example}
@@ -39,26 +38,26 @@ Posons maintenant $\lambda = 2$:
 \begin{equation*}
 x'' + 2 x = 0, \quad x(0) = 0, \quad x(\pi) = 0.
 \end{equation*}
-Alors la solution générale est
+Alors, la solution générale est
 $x= A \cos ( \sqrt{2}\,t) + B \sin ( \sqrt{2}\,t)$.  La contrainte $x(0) = 0$ implique encore que $A = 0$.  On applique la seconde condition pour trouver 
 $0=x(\pi) = B \sin ( \sqrt{2}\,\pi)$.
-Lorsque $\sin ( \sqrt{2}\,\pi) \not= 0$ on obtient
+Lorsque $\sin ( \sqrt{2}\,\pi) \not= 0$, on obtient
 $B = 0$.  
-Donc $x=0$ est l'unique solution à ce problème.
+Donc, $x=0$ est l'unique solution à ce problème.
 \end{example}
 
-Que se passe-t-il?  On aimerait savoir quelles constantes  $\lambda$ permettent une solution non nulle, et l'on s'intéressera à trouver ces solutions. Ce problème est analogue  à trouver les valeurs propres et les vecteurs propres des matrices.
+Que se passe-t-il ?  On aimerait savoir quelles constantes  $\lambda$ permettent une solution non nulle et l'on s'intéressera à trouver ces solutions. Ce problème est analogue  à trouver les valeurs propres et les vecteurs propres des matrices.
 
 \subsection{Problèmes de valeurs propres}
 
 Pour la théorie de base des séries de Fourier, on a besoin
-des trois problèmes de valeurs propres suivants. 
+des trois problèmes de valeurs propres suivants : 
 
 \begin{equation} \label{bv:eq1}
 x'' + \lambda x = 0, \quad x(a) = 0, \quad x(b) = 0 ,
 \end{equation}
 \begin{equation} \label{bv:eq2}
-x'' + \lambda x = 0, \quad x'(a) = 0, \quad x'(b) = 0 ,
+x'' + \lambda x = 0, \quad x'(a) = 0, \quad x'(b) = 0
 \end{equation}
 et
 \begin{equation} \label{bv:eq3}
@@ -69,13 +68,13 @@ Un nombre $\lambda$ est appelé une
 de \eqref{bv:eq1}
 (resp.\ \eqref{bv:eq2} ou \eqref{bv:eq3}) si et seulement si il existe une solution non nulle (non identiquement nulle) à \eqref{bv:eq1}
 (resp.\ \eqref{bv:eq2} ou \eqref{bv:eq3})
-donnée par un $\lambda$ spécifique.  Une solution non nulle est appellée 
+donnée par un $\lambda$ spécifique. Une solution non nulle est appelée 
 \emph{\myindex{fonction propre correspondante}}\index{corresponding eigenfunction}.
 
-On note la similarité avec les valeurs propres et les vecteurs propres de matrices. La similarité n'est pas une simple coincidence.  Par exemple, soit $L = -\frac{d^2}{{dt}^2}$ un opérateur linéaire.  Une fonction propre pour $L$ sera une fonction $x(t)$ non nulle telle que $Lx = \lambda x$, pour un certain $\lambda$, qui sera alors une valeur propre de l'opérateur $L$.
+On note la similarité avec les valeurs propres et les vecteurs propres de matrices. La similarité n'est pas une simple coïncidence.  Par exemple, soit $L = -\frac{d^2}{{dt}^2}$ un opérateur linéaire.  Une fonction propre pour $L$ sera une fonction $x(t)$ non nulle telle que $Lx = \lambda x$, pour un certain $\lambda$, qui sera alors une valeur propre de l'opérateur $L$.
 
-En d'autres mots, on pense à l'équation différentielle comme un opérateur différentiel, et à une fonction $x(t)$
-comme un vecteur avec une infinité de composantes (une pour chaque $t$).
+En d'autres mots, on pense à l'équation différentielle comme à un opérateur différentiel, et à une fonction $x(t)$
+comme à un vecteur avec une infinité de composantes (une pour chaque $t$).
 Une fonction propre sera une fonction non nulle $x$ qui satisfait à 
 $(L- \lambda)x = 0$. Il y a beaucoup de formalisme provenant de l'algèbre linéaire qui s'applique ici, mais on ne poursuivra pas cette réflexion trop loin.  
 
@@ -86,8 +85,8 @@ x'' + \lambda x = 0, \quad x(0) = 0, \quad x(\pi) = 0 .
 \end{equation*}
 
 %For reasons that will be clear from the computations,
-On doit considérer chacun des cas suivants séparément: $\lambda > 0$, $\lambda = 0$, $\lambda < 0$, puisque la solution générale est différente dans les trois cas.
-D'abord, on suppose que $\lambda > 0$.  Alors la solution générale à $x''+\lambda x = 0$ est
+On doit considérer chacun des cas suivants séparément, $\lambda > 0$, $\lambda = 0$, $\lambda < 0$, puisque la solution générale est différente dans les trois cas.
+D'abord, on suppose que $\lambda > 0$.  Alors, la solution générale à $x''+\lambda x = 0$ est
 \begin{equation*}
 x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t).
 \end{equation*}
@@ -104,22 +103,23 @@ $k^2$ pour tous les entiers $k \geq 1$.  Les fonctions propres correspondantes p
 
 On suppose que $\lambda = 0$.  Dans ce cas, l'équation est $x'' = 0$,
 et sa solution générale est $x = At + B$.  La condition  $x(0) = 0$ implique que 
- $B=0$, et $x(\pi) = 0$ implique que $A = 0$. Ce qui signifie que $\lambda
+ $B=0$, et $x(\pi) = 0$ implique que $A = 0$, ce qui signifie que $\lambda
 = 0$ n'est \emph{pas} une valeur propre.
 
-Finalement, on suppose que $\lambda < 0$.  Dans ce cas, on a la solution générale \footnote{Rappelons que 
+Finalement, on suppose que $\lambda < 0$. Dans ce cas, on a la solution générale\footnote{%
+Rappelons que 
 $\cosh s = \frac{1}{2}(e^s+e^{-s})$
 et
-$\sinh s = \frac{1}{2}(e^s-e^{-s})$.  En exercice, faites de nouveau les calculs avec la solution générale écrite comme 
+$\sinh s = \frac{1}{2}(e^s-e^{-s})$.  En exercice, faites à nouveau les calculs avec la solution générale écrite comme 
 $x = A e^{\sqrt{-\lambda}\, t} + B e^{-\sqrt{-\lambda}\, t}$ (pour différents  $A$ et $B$ évidemment).}
 \begin{equation*}
 x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t ) .
 \end{equation*}
 Si $x(0) = 0$, ça implique que $A = 0$ (on se rappelle que $\cosh 0 = 1$ et $\sinh 0 =
-0$).  Alors la solution devrait être $x = B \sinh ( \sqrt{-\lambda}\, t )$ et devrait satisfaire à 
-$x(\pi) = 0$.  Ce qui est possible uniquement si $B$ est nul.  Pourquoi? Parce que 
+0$).  Alors, la solution devrait être $x = B \sinh ( \sqrt{-\lambda}\, t )$ et devrait satisfaire à 
+$x(\pi) = 0$, ce qui est possible uniquement si $B$ est nul. Pourquoi? Parce que 
 $\sinh \xi$ est seulement zéro lorsque $\xi=0$.  On devrait calculer sinh pour voir ce fait. On peut aussi le voir de la définition de sinh. On obtient $0 = \sinh \xi = \frac{e^\xi -
-e^{-\xi}}{2}$.  Donc $e^\xi = e^{-\xi}$, ce qui implique que $\xi = -\xi$ et ce qui est seulement vrai si $\xi=0$. Par conséquent, il n'y a pas de valeurs propres négatives.  
+e^{-\xi}}{2}$. Donc, $e^\xi = e^{-\xi}$, ce qui implique que $\xi = -\xi$, ce qui est seulement vrai si $\xi=0$. Par conséquent, il n'y a pas de valeurs propres négatives.  
 
 En somme, les valeurs propres et les fonctions propres correspondantes sont 
 \begin{equation*}
@@ -151,14 +151,14 @@ Ensuite,
 Encore une fois,  $A$ ne peut pas être nul si  $\lambda$ est une valeur propre, et $\sin ( \sqrt{\lambda}\, \pi)$ est identiquement nul lorsque
 $\sqrt{\lambda} = k$,  où $k$ est un nombre entier positif.
 Donc, les valeurs propres positives sont encore 
-$k^2$, pour tous les entiers $k \geq 1$.  et les fonctions propres correspondantes peuvent être prises comme  $x=\cos (k t)$.
+$k^2$ pour tous les entiers $k \geq 1$, et les fonctions propres correspondantes peuvent être prises comme  $x=\cos (k t)$.
 
-Maintenant, on suppose que  $\lambda = 0$.  Dans ce cas, l'équation est $x'' = 0$
+Maintenant, on suppose que  $\lambda = 0$.  Dans ce cas, l'équation est $x'' = 0$,
 et la solution générale est $x = At + B$ so $x' = A$.  La condition 
 $x'(0) = 0$ implique que 
 $A=0$.  La condition $x'(\pi) = 0$ implique aussi que  $A=0$.
-Ainsi, $B$ pourrait être n'importe quoi (choisissons 1). Alors  $\lambda = 0$
-est une valeur propre et $x=1$ est la fonction propre correspondante. 
+Ainsi, $B$ pourrait être n'importe quoi (choisissons 1). Alors, $\lambda = 0$
+est une valeur propre, et $x=1$ est la fonction propre correspondante. 
 
 Finalement, soit $\lambda < 0$.  Dans ce cas, la solution générale est 
 $x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t)$
@@ -169,7 +169,7 @@ x' = A\sqrt{-\lambda}\, \sinh ( \sqrt{-\lambda}\, t)
 \end{equation*}
 On a déjà vu (avec les rôles de  $A$ et de $B$ inversés) que, pour que cette expression soit  nulle à $t=0$ et $t=\pi$, on doit avoir $A=B=0$. Ainsi, il n'y a pas de valeur propre négative. 
 
-En somme, les valeurs propres positives et leurs fonctions propres correspondantes sont :
+En somme, les valeurs propres positives et leurs fonctions propres correspondantes sont
 \begin{equation*}
 \lambda_k = k^2 \quad \text{avec fonction propre} \quad x_k = \cos (k t)
 \quad \text{pour tous les entiers } k \geq 1 ,
@@ -189,16 +189,16 @@ x'' + \lambda x = 0, \quad x(-\pi) = x(\pi), \quad x'(-\pi) = x'(\pi) .
 \end{equation*}
 On n'a pas de valeur spécifique de fonction ou de dérivée aux extrémités, mais elles sont les mêmes au début et à la fin de l'intervalle. 
 
-On va passer le cas $\lambda < 0$.  Les calculs sont les même que précédemment, et l'on trouve encore qu'il n'y a pas de valeur propre négative. 
+On va passer le cas $\lambda < 0$.  Les calculs sont les mêmes que précédemment, et l'on trouve encore qu'il n'y a pas de valeur propre négative. 
 
 Pour $\lambda = 0$, la solution générale est $x = At + B$.  La condition
 $x(-\pi) = x(\pi)$ implique que $A=0$ ($A\pi + B = -A\pi +B$ implique que $A=0$).
-La seconde condition $x'(-\pi) = x'(\pi)$ ne dit rien à propos de  $B$ et donc
+La seconde condition $x'(-\pi) = x'(\pi)$ ne dit rien à propos de $B$, et donc
 $\lambda=0$ est une valeur propre avec les fonctions propres correspondantes $x=1$.
 
-Pour  $\lambda > 0$ on a que 
+Pour $\lambda > 0$, on a que 
 $x = A \cos ( \sqrt{\lambda}\, t ) + B \sin ( \sqrt{\lambda}\, t)$.
-Maintenant
+Maintenant,
 \begin{equation*}
 \underbrace{A \cos (-\sqrt{\lambda}\, \pi) + B \sin (-\sqrt{\lambda}\,
 \pi)}_{x(-\pi)}
@@ -214,14 +214,14 @@ A \cos (\sqrt{\lambda}\, \pi) - B \sin ( \sqrt{\lambda}\, \pi)
 A \cos (\sqrt{\lambda}\, \pi) + B \sin ( \sqrt{\lambda}\, \pi).
 \end{equation*}
 Donc, ou bien $B=0$, ou bien $\sin ( \sqrt{\lambda}\, \pi) = 0$.
-De manière similaire à l'exemple précédent (exercice) si l'on dérive $x$ et qu'on le remplace dans la deuxième condition, on trouve que $A=0$ ou que $\sin ( \sqrt{\lambda}\, \pi) = 0$.
+De manière semblable à l'exemple précédent (exercice), si l'on dérive $x$ et qu'on le remplace dans la seconde condition, on trouve que $A=0$ ou que $\sin ( \sqrt{\lambda}\, \pi) = 0$.
 Ainsi, à moins que $A$ et $B$ soient tous deux nuls (ce qu'on ne veut pas), on doit avoir $\sin ( \sqrt{\lambda}\, \pi ) = 0$.  Donc, $\sqrt{\lambda}$
-est un entier et les valeurs propres sont encore $\lambda = k^2$ pour un entier
+est un entier, et les valeurs propres sont encore $\lambda = k^2$ pour un entier
  $k \geq 1$. Dans ce cas, toutefois,  
-$x = A \cos (k t) + B \sin (k t)$ est une fonction propre pour tous  $A$ et pour tous $B$.
+$x = A \cos (k t) + B \sin (k t)$ est une fonction propre pour tout $A$ et pour tout $B$.
 Par conséquent, on a deux fonctions propres linéairement indépendantes: $\sin (kt)$ et $\cos (kt)$.
 
-On se rappelle que pour une matrice, on peut aussi avoir deux vecteurs propres correspondants à une valeur propre simple si la valeur propre est répétée. 
+On se rappelle que, pour une matrice, on peut aussi avoir deux vecteurs propres correspondant à une valeur propre simple si la valeur propre est répétée. 
 
 En somme, les valeurs propres et les fonctions propres sont 
 \begin{align*}
@@ -237,7 +237,7 @@ En somme, les valeurs propres et les fonctions propres sont
 Une chose qui sera très utile dans la prochaine section est la propriété d'\emph{\myindex{orthogonalité}} des fonctions propres. C'est analogue aux vecteurs propres d'une matrice. Une matrice est 
 \emph{symétrique\index{symmetric matrix}}
 si $A = A^T$ (est égale à sa transposée).
-\emph{Les vecteurs propres de deux valeurs propres distinctes d'une matrice symétrique son orthogonaux.}
+\emph{Les vecteurs propres de deux valeurs propres distinctes d'une matrice symétrique sont orthogonaux.}
 %That symmetry is required.  
 %We will not prove this fact here.
 L'opérateur différentiel que l'on considère agit plutôt comme  une matrice symétrique. Ainsi, on obtient le théorème suivant.  
@@ -268,9 +268,9 @@ L'opérateur différentiel que l'on considère agit plutôt comme  une matrice s
 %\end{equation*}
 
 \begin{theorem} \label{bvp:orthogonaleigen}
-Soient  $x_1(t)$ et $x_2(t)$,  deux fonctions propres du problème 
+Soit  $x_1(t)$ et $x_2(t)$ deux fonctions propres du problème 
 \eqref{bv:eq1}, \eqref{bv:eq2} ou \eqref{bv:eq3}
-pour deux valeurs propres distinctes $\lambda_1$ et $\lambda_2$.  Alors elles sont
+pour deux valeurs propres distinctes $\lambda_1$ et $\lambda_2$. Alors, elles sont
 \emph{orthogonales \index{orthogonal!functions}}
 dans le sens que
 \begin{equation*}
@@ -279,13 +279,13 @@ dans le sens que
 \end{theorem}
 
 La terminologie vient du fait que l'intégrale est un type de produit scalaire. On précisera ce sujet dans la prochaine section. Le théorème a une preuve  très petite, élégante et éclairante qui est présentée ici.  
-D'abord, on a les deux équations suivantes. 
+D'abord, on a les deux équations suivantes : 
 \begin{equation*}
 x_1'' + \lambda_1 x_1 = 0
 \qquad \text{et} \qquad
 x_2'' + \lambda_2 x_2 = 0.
 \end{equation*}
-On multiplie la première par $x_2$ et la deuxième par $x_1$ et l'on substitue pour obtenir 
+On multiplie la première par $x_2$ et la seconde par $x_1$, et l'on substitue pour obtenir 
 \begin{equation*}
 (\lambda_1 - \lambda_2) x_1 x_2 = x_2'' x_1 - x_2 x_1'' .
 \end{equation*}
@@ -302,14 +302,11 @@ Maintenant, on intègre des deux côtés de l'équation:
 = 0 .
 \end{split}
 \end{equation*}
-La dernière égalité tient en raison des conditions aux limites. Par exemple, si l'on considère 
- \eqref{bv:eq1} on a  $x_1(a) = x_1(b) = x_2(a) = x_2(b) = 0$
-et alors $x_2' x_1 - x_2 x_1'$ est nul pour $a$ et pour $b$.
+La dernière égalité tient en raison des conditions aux limites. Par exemple, si l'on considère \eqref{bv:eq1}, on a  $x_1(a) = x_1(b) = x_2(a) = x_2(b) = 0$, et alors $x_2' x_1 - x_2 x_1'$ est nul pour $a$ et pour $b$.
 Lorsque $\lambda_1 \not= \lambda_2$, le théorème suit.
 
 \begin{exercise}[facile]
-Terminez la preuve du théorème (vérifiez la dernière égalité de la preuve) pour les cas 
-\eqref{bv:eq2} et \eqref{bv:eq3}.
+Terminez la preuve du théorème (vérifiez la dernière égalité de la preuve) pour les cas \eqref{bv:eq2} et \eqref{bv:eq3}.
 \end{exercise}
 
 La fonction $\sin (n t)$ est une fonction propre pour l'équation 
@@ -370,19 +367,19 @@ et
 
 \subsection{Alternative de Fredholm}
 
-On arrive maintenant à un théorème très utile des équations différentielles. Le théorème pourrait être plus général que ce qu'on présentera, mais pour les objectifs actuels, il sera suffisant. On en donnera une version un peu plus générale plus tard.
+On arrive maintenant à un théorème très utile des équations différentielles. Le théorème pourrait être plus général que ce qu'on présentera, mais, pour les objectifs actuels, il sera suffisant. On en donnera une version un peu plus générale plus tard.
 
-\begin{theorem}[Alternative de Fredholm%
-\footnote{Nommé d'après le mathématicien suédois
+\begin{theorem}[Alternative de Fredholm\footnote{%
+Nommée d'après le mathématicien suédois
 \href{https://en.wikipedia.org/wiki/Fredholm}{Erik Ivar Fredholm}
-(1866--1927).}]\index{Fredholm alternative!simple case}
+(1866-1927).}]\index{Fredholm alternative!simple case}
 \label{thm:fredholmsimple}
 Exactement l'une des affirmations suivantes est vraie.
 Soit
 \begin{equation} \label{simpfredhomeq}
 x'' + \lambda x = 0, \quad x(a) = 0, \quad x(b) = 0
 \end{equation}
-a une solution non nulle ou 
+a une solution non nulle, soit
 \begin{equation} \label{simpfrednonhomeq}
 x'' + \lambda x = f(t), \quad x(a) = 0, \quad x(b) = 0
 \end{equation}
@@ -391,16 +388,13 @@ a une solution unique pour toutes les fonctions $f$ continues sur $[a,b]$.
 
 Le théorème est également vrai pour les autres types de
 conditions au bord que nous avons considérées.
-Le théorème veut dire que si  $\lambda$ n'est pas une valeur propre, l'équation non homogène  \eqref{simpfrednonhomeq} a une solution unique pour tous les côtés droits. Alternativement, si  $\lambda$ est une valeur propre, alors  
+Le théorème veut dire que si  $\lambda$ n'est pas une valeur propre, l'équation non homogène  \eqref{simpfrednonhomeq} a une solution unique pour tous les côtés droits. Autrement dit, si $\lambda$ est une valeur propre, alors  
 \eqref{simpfrednonhomeq} n'a pas besoin d'avoir une solution pour tous les $f$,
-et en plus, même s'il y a une solution, la solution n'est pas unique.
+et, en plus, même s'il y a une solution, la solution n'est pas unique.
 
-Nous voulons également renforcer l'idée que les opérateurs différentiels linéaires ont
-beaucoup en commun avec les matrices. Il n'est donc pas surprenant qu'il existe une version de dimension finie de l'alternative de Fredholm pour les matrices  également.  On a $A$ une $n \times n$ matrice.  L'alternative de Fredholm dit que $(A-\lambda I) \vec{x}
-= \vec{0}$ a une solution non-triviale, ou que $(A-\lambda I) \vec{x} = \vec{b}$
-a une solution unique pour tous $\vec{b}$.
+Nous voulons également renforcer l'idée que les opérateurs différentiels linéaires ont beaucoup en commun avec les matrices. Il n'est donc pas surprenant qu'il existe une version de dimension finie de l'alternative de Fredholm pour les matrices  également.  On a $A$ une matrice $n \times n$. L'alternative de Fredholm dit que $(A-\lambda I) \vec{x} = \vec{0}$ a une solution non triviale, ou que $(A-\lambda I) \vec{x} = \vec{b}$ a une solution unique pour tout $\vec{b}$.
 
-Beaucoup d'intuition de l'algèbre linéaire peut être appliquée aux opérateurs différentiels linéaires, mais il faut être prudent bien sûr. Par exemple, la différence que nous avons déjà vue est qu'en général un opérateur différentiel
+Beaucoup d'intuition de l'algèbre linéaire peut être appliquée aux opérateurs différentiels linéaires, mais il faut bien sûr être prudent. Par exemple, une différence que nous avons déjà vue est qu'en général un opérateur différentiel
 aura une infinité de valeurs propres, tandis qu'une matrice n'en a qu'un nombre fini.
 
 
@@ -408,27 +402,23 @@ aura une infinité de valeurs propres, tandis qu'une matrice n'en a qu'un nombre
 
 Considérons une application physique. On suppose avoir un élastique très tendu qui tourne rapidement ou une corde de densité linéaire uniforme $\rho$, par exemple, en
 $\unitfrac{kg}{m}$.
-Mettons ce problème dans un plan $xy$ et $x$ ainsi que $y$
-sont en mètres.  L'axe des $x$ représente la position de la corde. La corde tourne et la vitesse angulaire est $\omega$, mesurée
-en $\unitfrac{radians}{s}$.
+Mettons ce problème dans un plan $xy$ avec $x$ et $y$ en mètres. L'axe des $x$ représente la position de la corde. La corde tourne, et la vitesse angulaire est $\omega$, mesurée en $\unitfrac{radians}{s}$.
 Imaginez que l'entièreté du plan $xy$ tourne à une vitesse angulaire  $\omega$.
-De cette manière, la corde reste dans le plan $xy$ et $y$ 
-mesure sa déviation par rapport à la position d'équilibre, $y=0$, sur l'axe des $x$.
-Ainsi, le graphique de $y$ donne la forme de la corde.
-On considère une corde idéale qui n'a pas de volume, juste une courbe mathématique. On suppose que la tension de la corde est une constante $T$ en Newtons.
+De cette manière, la corde reste dans le plan $xy$, et $y$ mesure sa déviation par rapport à la position d'équilibre, $y=0$, sur l'axe des $x$.
+Ainsi, le graphe de $y$ donne la forme de la corde.
+On considère une corde idéale qui n'a pas de volume, juste une courbe mathématique. On suppose que la tension de la corde est une constante $T$ en newtons.
 %If we take a small segment and we look at the tension at the endpoints, we
 %see that this force is tangential and we will assume that the magnitude is
 %the same at both end points.  Hence the magnitude
 %is constant everywhere and we will
 %call its magnitude $T$.
-En supposant que la déviation est petite, on peut utiliser la deuxième loi de Newton (nous n'en faisons pas la démonstration) pour obtenir l'équation suivante: 
+En supposant que la déviation est petite, nous pouvons utiliser la deuxième loi de Newton (nous n'en faisons pas la démonstration) pour obtenir l'équation suivante: 
 \begin{equation*}
 T y'' + \rho \omega^2 y = 0 .
 \end{equation*}
 Pour vérifier les unités, notez que les unités de $y''$ sont $\unitfrac{m}{m^2}$, lorsqu'on dérive par rapport à $x$.
 
-La corde  est de longueur $L$ (en $m$) et est fixée au deux extrémités. Alors, $y(0) = 0$ et $y(L) = 0$.  Voir FIgure~
-\figureref{bvp:whirstringfig}.
+La corde  est de longueur $L$ (en mètres) et est fixée aux deux extrémités. Alors, $y(0) = 0$ et $y(L) = 0$.  Voir la \figureref{bvp:whirstringfig}.
 
 \begin{myfig}
 \capstart
@@ -438,25 +428,25 @@ La corde  est de longueur $L$ (en $m$) et est fixée au deux extrémités. Alors
 
 On réécrit l'équation: 
 $y'' + \frac{\rho \omega^2}{T} y = 0$.
-La configuration est similaire à l'\exampleref{bvp:eig1ex}, sauf que  
-la longueur de l'intervalle est $L$ plutôt que $\pi$.  On cherche les valeurs propres de  $y'' + \lambda y = 0, y(0) = 0, y(L) = 0$ où
+La configuration est semblable à l'\exampleref{bvp:eig1ex}, sauf que  
+la longueur de l'intervalle est $L$ plutôt que $\pi$. On cherche les valeurs propres de  $y'' + \lambda y = 0, y(0) = 0, y(L) = 0$, où
 $\lambda = \frac{\rho \omega^2}{T}$.  Comme précédemment, il n'y a pas de valeur propre négative. Avec $\lambda > 0$,
 la solution générale à cette équation est $y = A \cos (  \sqrt{\lambda} \,x ) + B
 \sin ( \sqrt{\lambda} \,x )$.  La condition $y(0) = 0$ implique que $A = 0$ comme précédemment. La condition $y(L) = 0$ implique que
-$\sin ( \sqrt{\lambda} \, L) = 0$ et ainsi
+$\sin ( \sqrt{\lambda} \, L) = 0$, et ainsi
 $\sqrt{\lambda} \, L = k \pi$  pour un certain entier $k > 0$, alors
 \begin{equation*}
 \frac{\rho \omega^2}{T} = \lambda = \frac{k^2 \pi^2}{L^2} .
 \end{equation*}
 
-Qu'est-ce que cela dit sur la forme de la corde? Cela dit que pour tous les paramètres, $\rho$, $\omega$, $T$ qui ne satisfont pas à cette condition, la corde demeure dans sa position d'équilibre, $y=0$.  Mais lorsque 
+Qu'est-ce que cela dit sur la forme de la corde? Cela dit que, pour tous les paramètres $\rho$, $\omega$, $T$ qui ne satisfont pas à cette condition, la corde demeure dans sa position d'équilibre, $y=0$.  Mais lorsque 
 $\frac{\rho \omega^2}{T} = \frac{k^2 \pi^2}{L^2}$, alors la corde \myquote{sortira} d'une distance $B$. On ne peut pas calculer $B$ avec les informations que l'on a. 
 
 On suppose que  $\rho$ et $T$ sont fixes et l'on fait varier $\omega$.
-Pour la plupart des valeurs de $\omega$ la corde est à l'état d'équilibre. Lorsque la vitesse angulaire  $\omega$ atteint une valeur $\omega = \frac{k \pi \sqrt{T}}{L\sqrt{\rho}}$, alors la corde sort et a la forme d'une vague sinusoïdale croisant l'axe des 
-$x$ $k-1$ fois entre les extrêmités. Par exemple, à $k=1$, la corde ne croise pas l'axe des $x$ et la forme ressemble à la \figurevref{bvp:whirstringfig}.
-D'un autre côté, lorsque  $k=3$ la corde croise l'axe des  $x$ deux fois. On le voit dans la  \figurevref{bvp:whirstring2fig}.
-Lorsque $\omega$ change encore, la corde retourne à sa position d'équilibre. Plus la vitesse angulaire est élevée, plus elle croisera l'axe des  $x$ lorsqu'elle sortira. 
+Pour la plupart des valeurs de $\omega$, la corde est à l'état d'équilibre. Lorsque la vitesse angulaire  $\omega$ atteint une valeur $\omega = \frac{k \pi \sqrt{T}}{L\sqrt{\rho}}$, alors la corde sort et a la forme d'une vague sinusoïdale croisant l'axe des 
+$x$ $k-1$ fois entre les extrémités. Par exemple, à $k=1$, la corde ne croise pas l'axe des $x$, et la forme ressemble à la \figurevref{bvp:whirstringfig} plus haut.
+D'un autre côté, lorsque  $k=3$, la corde croise l'axe des $x$ deux fois. On le voit dans la  \figurevref{bvp:whirstring2fig}.
+Lorsque $\omega$ change encore, la corde retourne à sa position d'équilibre. Plus la vitesse angulaire est élevée, plus la corde croisera l'axe des  $x$ lorsqu'elle sortira.
 
 \begin{myfig}
 \capstart
@@ -464,7 +454,7 @@ Lorsque $\omega$ change encore, la corde retourne à sa position d'équilibre. P
 \caption{Corde tournante à la troisième valeur propre ($k=3$).\label{bvp:whirstring2fig}}
 \end{myfig}
 
-Pour un autre exemple, si l'on a une corde à sauter qui tourne (alors $k=1$ lorsqu'elle sort \myquote{complètement}) et l'on tire sur les extrémités pour augmenter la tension, alors la vitesse augmente pour que la corde reste \myquote{sortie}.
+Pour un autre exemple, si l'on a une corde à sauter qui tourne (alors $k=1$ lorsqu'elle sort \myquote{complètement}) et que l'on tire sur les extrémités pour augmenter la tension, alors la vitesse augmente pour que la corde reste \myquote{sortie}.
  
 
 \subsection{Exercices}
