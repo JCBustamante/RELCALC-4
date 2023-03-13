@@ -542,12 +542,11 @@ $\frac{\sqrt{3}}{3} e^{\frac{-3}{2}\sqrt[3]{\lambda}}
 \sectionnewpage
 \section{Séries trigonométriques} \label{ts:section}
 
-
 \subsection{Fonctions périodiques et motivations}
 
 Afin de motiver l'étude des séries de Fourier, considérons le problème suivant:
 \begin{equation} \label{ts:deq}
-x'' + \omega_0^2 x = f(t) ,
+x'' + \omega_0^2 x = f(t)
 \end{equation}
 pour une certaine fonction périodique $f(t)$.
 On a déjà résolu
@@ -558,24 +557,24 @@ Une manière de résoudre \eqref{ts:deq} est de décomposer $f(t)$ comme une som
 
 Avant de procéder, parlons un peu plus en détail des fonctions périodiques. 
 Une fonction est  \emph{\myindex{périodique}} avec période $P$ si
-$f(t) = f(t+P)$ pour tous $t$.  On dit alors que $f(t)$ est $P$-périodique.
+$f(t) = f(t+P)$ pour tout $t$.  On dit alors que $f(t)$ est $P$-périodique.
 On note qu'une fonction $P$-périodique est aussi $2P$-périodique, $3P$-périodique
 et ainsi de suite.
 Par exemple, $\cos (t)$ et $\sin (t)$ sont
-$2\pi$-périodiques.  Alors $\cos (kt)$ et $\sin (kt)$ pour tous les entiers $k$.  Les fonctions constantes sont des exemples extrêmes: elles sont périodiques pour n'importe quelle période (exercice). 
+$2\pi$-périodiques.  
+% Alors, $\cos (kt)$ et $\sin (kt)$ pour tous les entiers $k$.  
+Les fonctions constantes sont des exemples extrêmes: elles sont périodiques pour n'importe quelle période (exercice). 
 
-Normalement, on commence avec la fonction $f(t)$ définie sur un certain intervalle $[-L,L]$,
-et l'on veut
-\emph{prolonger $f(t)$ périodiquement}\index{extend periodically}\index{periodic extension}
-pour qu'elle devienne une fonction $2L$-périodique.  On fait cette extension en définissant une nouvelle fonction $F(t)$
-telle que pour tout $t$ dans $[-L,L]$, $F(t) = f(t)$.  Pour tout $t$ dans $[L,3L]$,
-on définit $F(t) = f(t-2L)$, pour $t$ dans $[-3L,-L]$, $F(t) = f(t+2L)$, et ainsi de suite.
+Normalement, on commence avec la fonction $f(t)$ définie sur un certain intervalle $[-L,L]$ et l'on veut \emph{prolonger périodiquement}\index{extend periodically}\index{periodic extension} $f(t)$ pour qu'elle devienne une fonction $2L$-périodique.  
+On fait cette extension en définissant une nouvelle fonction $F(t)$
+telle que, pour tout $t$ dans $[-L,L]$, $F(t) = f(t)$. Pour tout $t$ dans $[L,3L]$,
+on définit $F(t) = f(t-2L)$; pour $t$ dans $[-3L,-L]$, $F(t) = f(t+2L)$, et ainsi de suite.
 Pour faire ce travail, on a besoin de $f(-L) = f(L)$.
 On pourrait aussi commencer avec $f$
-défini seulement sur un demi-intervalle ouvert $(-L,L]$ et l'on définit $f(-L) = f(L)$.
+définie seulement sur un demi-intervalle ouvert $(-L,L]$ et on définit $f(-L) = f(L)$.
 
 \begin{example}
-Définissons  $f(t) = 1-t^2$ sur $[-1,1]$.  Maintenant, on prolonge $f(t)$ périodiquement pour obtenir une fonction 2-périodique.  Voir la figure~\figureref{ts:perextofinvertedparabolafig}.
+Définissons  $f(t) = 1-t^2$ sur $[-1,1]$.  Maintenant, on prolonge $f(t)$ périodiquement pour obtenir une fonction 2-périodique. Voir la \figureref{ts:perextofinvertedparabolafig}.
 \begin{myfig}
 \capstart
 \diffyincludegraphics{width=3in}{width=4.5in}{ts-perextofinvertedparabola}
@@ -584,10 +583,10 @@ $1-t^2$.\label{ts:perextofinvertedparabolafig}}
 \end{myfig}
 \end{example}
 
-On doit faire attention à bien distinguer $f(t)$ de ses différents prolongements.  Une erreur commune est de supposer que la formule pour $f(t)$ fonctionne toujours pour ses prolongements. Il faut être particulièrement prudent lorsque $f(t)$ est périodique, mais avec une période différente.
+On doit faire attention à bien distinguer $f(t)$ de ses différents prolongements.  Une erreur commune est de supposer que la formule pour $f(t)$ fonctionne toujours pour ses prolongements. Il faut faire preuve de prudence, particulièrement lorsque $f(t)$ est périodique, mais avec une période différente.
 
 \begin{exercise}
-Définissez $f(t) = \cos t$ sur $[\nicefrac{-\pi}{2},\nicefrac{\pi}{2}]$.  Prenez l'extension $\pi$-périodique et esquissez le graphique. Comparez avec le graphique de $\cos t$.
+Définissez $f(t) = \cos t$ sur $[\nicefrac{-\pi}{2},\nicefrac{\pi}{2}]$.  Prenez l'extension $\pi$-périodique et esquissez le graphe. Comparez avec le graphe de $\cos t$.
 \end{exercise}
 
 \subsection{Produit scalaire et décomposition de vecteurs propres }
@@ -598,7 +597,7 @@ c'est-à-dire lorsque $A^T = A$, les vecteurs propres de $A$ sont orthogonaux. I
 Dans ce cas, le produit scalaire  $\langle \vec{v} , \vec{w} \rangle$
 est le \emph{\myindex{produit scalaire à dimensions finies}}, que l'on peut calculer comme $\vec{v}^T\vec{w}$.
 
-Pour décomposer un vecteur $\vec{v}$ en termes de vecteurs multuellement orthogonaux  $\vec{w}_1$ et $\vec{w}_2$ on écrit
+Pour décomposer un vecteur $\vec{v}$ en termes de vecteurs mutuellement orthogonaux  $\vec{w}_1$ et $\vec{w}_2$, on écrit
 \begin{equation*}
 \vec{v} = a_1 \vec{w}_1  + a_2 \vec{w}_2 .
 \end{equation*}
@@ -610,7 +609,7 @@ On trouve la formule pour $a_1$ et $a_2$. D'abord, on calcule
 =
 a_1 \langle \vec{w}_1 , \vec{w_1} \rangle
 +
-a_2 \underbrace{\langle \vec{w}_2 , \vec{w_1} \rangle}_{=0}
+a_2 \underbrace{\langle \vec{w}_2 , \vec{w_1} \rangle}_{=~0}
 =
 a_1 \langle \vec{w}_1 , \vec{w_1} \rangle .
 \end{equation*}
@@ -620,7 +619,7 @@ a_1 =
 \frac{\langle \vec{v} , \vec{w_1} \rangle}{
 \langle \vec{w}_1 , \vec{w_1} \rangle} .
 \end{equation*}
-De manière similaire
+De façon semblable,
 \begin{equation*}
 a_2 = 
 \frac{\langle \vec{v} , \vec{w_2} \rangle}{
@@ -633,12 +632,12 @@ a_2 =
 $\vec{v} = \left[ \begin{smallmatrix} 2 \\ 3 \end{smallmatrix} \right]$
 comme une combinaison linéaire de 
 $\vec{w_1} = \left[ \begin{smallmatrix} 1 \\ -1 \end{smallmatrix} \right]$
-et
+et de
 $\vec{w_2} = \left[ \begin{smallmatrix} 1 \\ 1 \end{smallmatrix} \right]$.
 
 D'abord, on note que $\vec{w}_1$ et $\vec{w}_2$ sont orthogonaux, puisque 
  $\langle \vec{w}_1 , \vec{w}_2 \rangle = 1(1) + (-1)1 = 0$.
-Alors
+Alors,
 \begin{align*}
 & a_1 = 
 \frac{\langle \vec{v} , \vec{w_1} \rangle}{
@@ -666,11 +665,11 @@ Ainsi,
 
 \subsection{Séries trigonométriques}
 
-Plutôt que décomposer un vecteur en termes de vecteurs propres d'une matrice, on va décomposer une fonction en termes de fonctions propres associées à un problème de valeur propre. Le problème de valeur propre qu'on utilise pour les séries de Fourier est 
+Plutôt que de décomposer un vecteur en termes de vecteurs propres d'une matrice, on va décomposer une fonction en termes de fonctions propres associées à un problème de valeurs propres. Le problème de valeurs propres qu'on utilise pour les séries de Fourier est 
 \begin{equation*}
 x'' + \lambda x = 0, \quad x(-\pi) = x(\pi), \quad x'(-\pi) = x'(\pi) .
 \end{equation*}
-Nous avons calculé les fonctions propres dans l'exemple~\ref{bvp-periodic:example}:t 1, $\cos (k t)$,
+Nous avons calculé les fonctions propres dans l'exemple \ref{bvp-periodic:example} : $1$, $\cos (k t)$ et
 $\sin (k t)$.  Ainsi, on veut trouver une représentation d'une fonction 
 $2\pi$-périodique $f(t)$ de la forme suivante: 
 \begin{equation*}
@@ -679,44 +678,44 @@ f(t) = \frac{a_0}{2} +
 \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t) .
 ~~}
 \end{equation*}
-Cette série s'appelle une  \emph{\myindex{série de Fourier}}%
-\footnote{Nommée d'après le mathématicien français
+Cette série s'appelle une \emph{\myindex{série de Fourier}}\footnote{%
+Nommée d'après le mathématicien français
 \href{https://en.wikipedia.org/wiki/Joseph_Fourier}{Jean Baptiste Joseph Fourier}
-(1768--1830).} ou une
+(1768-1830).} ou
 \emph{\myindex{série trigonométrique}} pour $f(t)$.
-Par convention, on écrit le coefficient de la fonction propre 1 comme $\frac{a_0}{2}$. On peut y penser comme $1 = \cos (0t)$.
+Par convention, on écrit le coefficient de la fonction propre 1 comme $\frac{a_0}{2}$. On peut y penser comme à $1 = \cos (0t)$.
 
 Comme pour les matrices, on veut trouver une  \emph{\myindex{projection}}
-de $f(t)$ sur un sous-espace donné par les fonctions propres. Alors on veut définir le  \emph{\myindex{produit scalaire d'une fonction}}.  Par exemple, pour trouver $a_n$ on veut calculer $\langle \, f(t) \, , \, \cos (nt) \, \rangle$.
+de $f(t)$ sur un sous-espace donné par les fonctions propres. Alors, on veut définir le \emph{\myindex{produit scalaire d'une fonction}}. Par exemple, pour trouver $a_n$, on veut calculer $\langle \, f(t), \, \cos (nt) \, \rangle$.
 On définit le produit scalaire comme
 \begin{equation*}
-\langle \, f(t)\, , \, g(t) \, \rangle \overset{\text{def}}{=}
+\langle \, f(t), \, g(t) \, \rangle \overset{\text{déf}}{=}
 \int_{-\pi}^\pi f(t) \, g(t) \, dt .
 \end{equation*}
 Avec cette définition du produit scalaire, on voit dans les sections précédentes que les fonctions propres  $\cos (kt)$
-(incluent la fonction propre constante), et
-$\sin (kt)$ sont \emph{orthogonaux\index{orthogonal!functions}} dans le sens que
+(incluant la fonction propre constante) et
+$\sin (kt)$ sont \emph{orthogonales\index{orthogonal!functions}} dans le sens que
 \begin{align*}
-\langle \, \cos (mt)\, , \, \cos (nt) \, \rangle = 0 & \qquad \text{pour } m \not= n , \\
-\langle \, \sin (mt)\, , \, \sin (nt) \, \rangle = 0 & \qquad \text{pour } m \not= n , \\
-\langle \, \sin (mt)\, , \, \cos (nt) \, \rangle = 0 & \qquad \text{pour tous } m \text{ et } n .
+\langle \, \cos (mt), \, \cos (nt) \, \rangle = 0 & \qquad \text{pour } m \not= n , \\
+\langle \, \sin (mt), \, \sin (nt) \, \rangle = 0 & \qquad \text{pour } m \not= n , \\
+\langle \, \sin (mt), \, \cos (nt) \, \rangle = 0 & \qquad \text{pour tout } m \text{ et } n .
 \end{align*}
-Pour $n=1,2,3,\ldots$
+Pour $n=1,2,3,\ldots$,
 on a
 \begin{align*}
-\langle \, \cos (nt) \, , \, \cos (nt) \, \rangle &=
+\langle \, \cos (nt), \, \cos (nt) \, \rangle &=
 \int_{-\pi}^\pi \cos(nt)\cos(nt) \, dt
 =
 \pi,
 \\
-\langle \, \sin (nt) \, , \, \sin (nt) \, \rangle &=
+\langle \, \sin (nt), \, \sin (nt) \, \rangle &=
 \int_{-\pi}^\pi \sin(nt)\sin(nt) \, dt
 =
 \pi,
 \end{align*}
 par du calcul élémentaire. Pour la constante, on obtient
 \begin{equation*}
-\langle \, 1 \, , \, 1 \, \rangle
+\langle \, 1, \, 1 \, \rangle
 =
 \int_{-\pi}^\pi 1 \cdot 1 \, dt
  = 2\pi.
@@ -726,12 +725,12 @@ Les coefficients sont donnés par
 \mybxbg{~~
 \begin{aligned}
 & a_n =
-\frac{\langle \, f(t) \, , \, \cos (nt) \, \rangle}{\langle \, \cos (nt) \, , \,
+\frac{\langle \, f(t), \, \cos (nt) \, \rangle}{\langle \, \cos (nt) \, , \,
 \cos (nt) \, \rangle}
 = 
 \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \, dt , \\
 & b_n =
-\frac{\langle \, f(t) \, , \, \sin (nt) \, \rangle}{\langle \, \sin (nt) \, , \,
+\frac{\langle \, f(t), \, \sin (nt) \, \rangle}{\langle \, \sin (nt), \,
 \sin (nt) \, \rangle}
 = 
 \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \, dt .
@@ -739,11 +738,11 @@ Les coefficients sont donnés par
 ~~}
 \end{equation*}
 On compare ces expressions avec les exemples à dimensions finies. 
-Pour $a_0$ on obtient une formule similaire
+Pour $a_0$, on obtient une formule similaire :
 \begin{equation*}
 \mybxbg{~~
 a_0 = 2
-\frac{\langle \, f(t) \, , \, 1 \, \rangle}{\langle \, 1 \, , \,
+\frac{\langle \, f(t), \, 1 \, \rangle}{\langle \, 1, \,
 1 \, \rangle}
 =
 \frac{1}{\pi} \int_{-\pi}^\pi f(t) \, dt .
@@ -755,26 +754,26 @@ Regardons la formule utilisée pour les propriétés d'orthogonalité. Supposons
 f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n
 \sin (n t) .
 \end{equation*}
-Alors pour $m \geq 1$ on a
+Alors, pour $m \geq 1$, on a
 \begin{equation*}
 \begin{split}
-\langle \, f(t)\,,\,\cos (mt) \, \rangle
+\langle \, f(t),\,\cos (mt) \, \rangle
 & =
 \Bigl\langle \, \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n
-\sin (n t) \,,\, \cos (mt) \, \Bigr\rangle \\
+\sin (n t),\, \cos (mt) \, \Bigr\rangle \\
 & =
 \frac{a_0}{2}
-\langle \, 1 \, , \, \cos (mt) \, \rangle
+\langle \, 1, \, \cos (mt) \, \rangle
 + \sum_{n=1}^\infty
-a_n \langle \, \cos (nt) \, , \, \cos (mt) \, \rangle +
-b_n \langle \, \sin (n t) \, , \, \cos (mt) \, \rangle \\
+a_n \langle \, \cos (nt), \, \cos (mt) \, \rangle +
+b_n \langle \, \sin (n t), \, \cos (mt) \, \rangle \\
 & =
-a_m \langle \, \cos (mt) \, , \, \cos (mt) \, \rangle .
+a_m \langle \, \cos (mt), \, \cos (mt) \, \rangle .
 \end{split}
 \end{equation*}
-et ainsi
+Ainsi,
 $a_m =
-\frac{\langle \, f(t) \, , \, \cos (mt) \, \rangle}{\langle \, \cos (mt) \, , \,
+\frac{\langle \, f(t), \, \cos (mt) \, \rangle}{\langle \, \cos (mt), \,
 \cos (mt) \, \rangle}$.
 
 \begin{exercise}
@@ -786,7 +785,7 @@ Prenons la fonction
 \begin{equation*}
 f(t) = t
 \end{equation*}
-pour $t$ dans $(-\pi,\pi]$. Nous allons calculer la série de Fourier du prolongement périodique de $f(t)$.  Le terme \emph{\myindex{dents de scie}} est utilisé pour désigner les fonctions de cette forme.  Le graphe de $f(t)$ se trouve à la~\figureref{ts:sawtoothfig}.
+pour $t$ dans $(-\pi,\pi]$. Nous allons calculer la série de Fourier du prolongement périodique de $f(t)$.  Le terme \emph{\myindex{dents de scie}} est utilisé pour désigner les fonctions de cette forme.  Le graphe de $f(t)$ se trouve à la \figureref{ts:sawtoothfig}.
 
 \begin{myfig}
 \capstart
@@ -799,14 +798,14 @@ a_0 = \frac{1}{\pi} \int_{-\pi}^\pi t \,dt = 0 .
 \end{equation*}
 Nous nous servirons souvent du résultat suivant: sur un intervalle de la forme $[-L,L]$,  l'intégrale d'une fonction impaire est nulle. On rappelle qu'une 
 \emph{\myindex{fonction impaire}} est une fonction 
- $\varphi(t)$ telle que $\varphi(-t) = -\varphi(t)$.  Par exemple, les fonctions $t$, $\sin t$, ou (celle qui est importante présentement)
+ $\varphi(t)$ telle que $\varphi(-t) = -\varphi(t)$.  Par exemple, les fonctions $t$, $\sin t$ ou (celle qui est importante présentement)
 $t \cos (nt)$ sont toutes des fonctions impaires.  Ainsi,
 \begin{equation*}
 a_n = \frac{1}{\pi} \int_{-\pi}^\pi t \cos (nt) \,dt = 0 .
 \end{equation*}
-Calculons maintenant $b_n$.  Deuxième résultat utile: sur un intervalle de la forme $[-L,L]$, l'intégrale d'une fonction paire est ègale à deux fois l'intégrale de cette même fonction sur $[0,L]$. On rappelle qu'une  \emph{\myindex{fonction paire}}
+Calculons maintenant $b_n$.  Deuxième résultat utile: sur un intervalle de la forme $[-L,L]$, l'intégrale d'une fonction paire est égale à deux fois l'intégrale de cette même fonction sur $[0,L]$. On rappelle qu'une  \emph{\myindex{fonction paire}}
 est une fonction $\varphi(t)$ telle que  $\varphi(-t) = \varphi(t)$.  Par exemple,
-$t \sin (nt)$ est paire et donc: 
+$t \sin (nt)$ est paire, et donc: 
 \begin{equation*}
 \begin{split}
 b_n & = \frac{1}{\pi} \int_{-\pi}^\pi t \sin (nt) \,dt \\
@@ -827,12 +826,12 @@ b_n & = \frac{1}{\pi} \int_{-\pi}^\pi t \sin (nt) \,dt \\
 =  \frac{2 \,{(-1)}^{n+1}}{n} .
 \end{split}
 \end{equation*}
-On a utilisé ici le fait suivant:  
+On a utilisé ici le fait suivant :  
 \begin{equation*}
 \cos (n\pi) = {(-1)}^n =
 \begin{cases}
-1 & \text{si } n \text{ pair} , \\
--1 & \text{si } n \text{ impair} .
+1 & \text{si } n \text{ est pair} , \\
+-1 & \text{si } n \text{ est impair} .
 \end{cases}
 \end{equation*}
 La série est
@@ -849,7 +848,7 @@ La série est
 +\frac{2}{3} \sin (3t)
 + \cdots
 \end{equation*}
-Le graphe des trois premiers termes de la série, et celui des vingt premiers, se trouvent à la~\figureref{ts:sawtoothfsfig}.
+Le graphe des trois premiers termes de la série et celui des vingt premiers se trouvent à la~\figureref{ts:sawtoothfsfig}.
 
 \begin{myfig}
 \capstart
@@ -860,7 +859,7 @@ Le graphe des trois premiers termes de la série, et celui des vingt premiers, s
 \end{example}
 
 \begin{example}
-Prenon la fonction
+Prenons la fonction
 \begin{equation*}
 f(t) =
 \begin{cases}
@@ -869,8 +868,8 @@ f(t) =
 \end{cases}
 \end{equation*}
 \nopagebreak[4]%
-Prolongeons $f(t)$ périodiquement et écrivons-la comme une série de Fourier.  Cette fonction ou une de ses variantes apparaissent dans plusieurs applications et on les appelle des 
-\emph{\myindex{vagues carrées}}.  Le graphe du prolongement de $f(t)$ est montré à la~\figureref{ts:squarewavefig}.
+Prolongeons $f(t)$ périodiquement et écrivons-la comme une série de Fourier.  Cette fonction ou une de ses variantes apparaissent dans plusieurs applications, et on les appelle des 
+\emph{\myindex{vagues carrées}}. Le graphe du prolongement de $f(t)$ est montré à la~\figureref{ts:squarewavefig}.
 
 \begin{myfig}
 \capstart
@@ -878,7 +877,7 @@ Prolongeons $f(t)$ périodiquement et écrivons-la comme une série de Fourier. 
 \caption{Le graphe d'une vague carrée.\label{ts:squarewavefig}}
 \end{myfig}
 
-Maintenant, on calcule les coefficients. On commence avec $a_0$
+Maintenant, on calcule les coefficients. On commence avec $a_0$ :
 \begin{equation*}
 a_0 = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \,dt
 = \frac{1}{\pi} \int_{0}^\pi \pi \,dt = \pi .
@@ -888,7 +887,7 @@ Ensuite,
 a_n = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \,dt 
 = \frac{1}{\pi} \int_{0}^\pi \pi \cos (nt) \,dt = 0 .
 \end{equation*}
-et finalement
+Et finalement,
 \begin{equation*}
 \begin{split}
 b_n & = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \,dt \\
@@ -898,14 +897,14 @@ b_n & = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \,dt \\
 = \frac{1 - {(-1)}^n}{n}
 =
 \begin{cases}
-\frac{2}{n} & \text{si } n \text{est impair} , \\
+\frac{2}{n} & \text{si } n \text{ est impair} , \\
 0 & \text{si } n \text{ est pair} .
 \end{cases}
 \end{split}
 \end{equation*}
 La série de Fourier est
 \begin{equation*}
-\frac{\pi}{2} +  \sum_{\substack{n=1\\n \text{ odd}}}^\infty
+\frac{\pi}{2} +  \sum_{\substack{n=1\\n \text{ impair}}}^\infty
 \frac{2}{n} 
 \sin (n t)
 =
@@ -914,7 +913,7 @@ La série de Fourier est
 \sin \bigl( (2k-1)\, t \bigr) .
 \end{equation*}
 
-Voici les trois premières harmoniques de la série pour  $f(t)$.
+Voici les trois premières harmoniques de la série pour  $f(t)$ :
 \begin{equation*}
 \frac{\pi}{2}
 +
@@ -929,7 +928,7 @@ Le graphe des trois premières harmoniques de la série (et aussi des vingt prem
 \capstart
 %original files ts-squarewave-fs3 ts-squarewave-fs20
 \diffyincludegraphics{width=6.24in}{width=9in}{ts-squarewave-fs3-fs20}
-\caption{Trois premières harmoniques (à gauche) et et vingt premières harmoniques (à droite) d'une vague carrée.\label{ts:squarewavefsfig}}
+\caption{Trois premières harmoniques (à gauche) et vingt premières harmoniques (à droite) d'une vague carrée.\label{ts:squarewavefsfig}}
 \end{myfig}
 \end{example}
 
@@ -940,30 +939,30 @@ f(t) =
 \frac{2}{2k-1} 
 \sin \bigl( (2k-1)\, t \bigr) 
 \end{equation*}
-tient seulement pour les valeurs de $t$ où $f(t)$ est continue. On n'obtient pas l'égalité pour $t=-\pi,0,\pi$ et toutes les autres discontinuités de $f(t)$. Ce n'est pas difficile de voir que lorsque $t$ est un entier muliple de 
+tient seulement pour les valeurs de $t$ où $f(t)$ est continue. On n'obtient pas l'égalité pour $t=-\pi,0,\pi$ et pour toutes les autres discontinuités de $f(t)$. Ce n'est pas difficile de voir que lorsque $t$ est un entier muliple de 
 $\pi$ (ce qui inclut la discontinuité), alors
 \begin{equation*}
 \frac{\pi}{2} + \sum_{k=1}^\infty
 \frac{2}{2k-1} 
 \sin \bigl( (2k-1)\, t \bigr) = \frac{\pi}{2} .
 \end{equation*}
-Redéfinissons $f(t)$ sur $[-\pi,\pi]$ comme suit: 
+Redéfinissons $f(t)$ sur $[-\pi,\pi]$ comme suit,
 \begin{equation*}
 f(t) =
 \begin{cases}
 0 & \text{si } \; {-\pi} < t < 0 , \\
 \pi & \text{si } \; \phantom{-}0 < t < \pi , \\
 \nicefrac{\pi}{2} & \text{si } \; \phantom{-}t = -\pi, 
-t = 0,\text{ ou }
-t = \pi 
+t = 0\text{ ou }
+t = \pi,
 \end{cases}
 \end{equation*}
 et prolongeons périodiquement.  Maintenant, la série est égale au prolongement de $f(t)$ partout, y compris aux points de discontinuité. Généralement, on ne s'en fera pas avec le changement de valeur des fonctions à certains points (en nombre fini). 
 
-On discutera davantage de la convergence dans la prochaine section. Cependant, mentionons brièvement un effet de la discontinuité ici. On zoom dans le voisinage de la discontinuité d'une vague carrée. Ensuite, on trace le graphe des 100 premières harmoniques, comme à 
+On discutera davantage de la convergence dans la prochaine section. Cependant, mentionnons brièvement un effet de la discontinuité ici. On zoome dans le voisinage de la discontinuité d'une vague carrée. Ensuite, on trace le graphe des 100 premières harmoniques, comme à 
 la~\figureref{ts:squarewavegibbsfig}.  Tandis que la
 série est une très bonne approximation loin des discontinuités, l'erreur
-(le dépassement) dans le voisinage de la discontinuité à $t=\pi$ ne semble pas devenir plus petit. Ce comportement est connu sous le nom de \emph{\myindex{phénomène de Gibbs}}.
+(le dépassement) dans le voisinage de la discontinuité à $t=\pi$ ne semble pas devenir plus petite. Ce comportement est connu sous le nom de \emph{\myindex{phénomène de Gibbs}}.
 La région où l'erreur est large ne diminue pas, même lorsqu'on prend plus de termes dans la série. 
 
 \begin{myfig}
@@ -972,11 +971,11 @@ La région où l'erreur est large ne diminue pas, même lorsqu'on prend plus de 
 \caption{Phénomène de Gibbs en action.\label{ts:squarewavegibbsfig}}
 \end{myfig}
 
-On peut penser à une fonction périodique comme un \myquote{signal} obtenu par la superposition de plusieurs signaux de fréquence pure. Par exemple, on peut penser à la vague carrée comme un ton d'une certaine fréquence de base. Cette fréquence est nommée la 
+On peut penser à une fonction périodique comme à un \myquote{signal} obtenu par la superposition de plusieurs signaux de fréquence pure. Par exemple, on peut penser à la vague carrée comme un à ton d'une certaine fréquence de base. Cette fréquence est nommée la 
 \emph{\myindex{fréquence fondamentale}}.
 La vague carrée sera la superposition de plusieurs tons purs de fréquences qui sont des multiples de la fréquence fondamentale. En musique, les plus hautes fréquences s'appellent les \emph{\myindex{harmoniques}}.
 L'ensemble des fréquences apparaissant s'appelle le 
-\emph{\myindex{spectre}} du signal. Par contre, une onde sinusoÏdale est un ton pur (pas d'harmonique). La manière la plus simple de créer un son en utilisant un ordinateur est avec des vagues carrées et le son est vraiment différent du ton pur. Si vous avez déjà joué à des jeux vidéos des années 1980, vous avez entendu des sons de vagues carrées. 
+\emph{\myindex{spectre}} du signal. Par contre, une onde sinusoïdale est un ton pur (pas d'harmonique). La manière la plus simple de créer un son en utilisant un ordinateur est avec des vagues carrées, et le son est vraiment différent du ton pur. Si vous avez déjà joué à des jeux vidéo des années 1980, vous avez entendu des sons de vagues carrées. 
 
 
 \subsection{Exercices}
