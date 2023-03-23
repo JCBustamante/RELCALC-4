@@ -1,3 +1,6 @@
+*.gz
+*.aux
+*.idx
 *.aux
 *.log
 *.toc
