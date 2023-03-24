@@ -2,3 +2,8 @@
 *.log
 *.toc
 *.pdf
+*.out
+*.ilg
+*.ind
+*.fls
+*.fdb_latexmk
