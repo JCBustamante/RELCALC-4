@@ -1283,12 +1283,12 @@ Dans les problèmes de la vraie vie, il est souvent nécessaire de faire ce genr
 
 \subsection{Mouvement libre non amorti}
 
-Dans cette section nous allons seulement considérer les mouvement ou non forcés puisque nous ne savons pas encore comment résoudre des équations non homogènes. Commençons avec le mouvement
+Dans cette section, nous allons seulement considérer les mouvements libres ou non forcés puisque nous ne savons pas encore comment résoudre des équations non homogènes. Commençons avec le mouvement
 \myindex{non forcé} où $c=0$.  L'équation est: 
 \begin{equation*}
 	mx'' + kx = 0 .
 \end{equation*}
-Divisons par $m$ et laissons$\omega_0 = \sqrt{\nicefrac{k}{m}}$ pour réécrire l'équation comme suit: 
+Divisons par $m$ et laissons $\omega_0 = \sqrt{\nicefrac{k}{m}}$ pour réécrire l'équation comme suit: 
 \begin{equation*}
 	x'' + \omega_0^2 x = 0 .
 \end{equation*}
@@ -1304,14 +1304,14 @@ Par une identité trigonométrique :
 pour deux constantes différentes $C$ et $\gamma$.
 Il n'est pas difficile de calculer 
 $C= \sqrt{A^2 + B^2}$ et $\tan \gamma = \nicefrac{B}{A}$.  
-Ainsi, soit $C$ et $\gamma$ deux constantes arbitraire et écrivons 
+Ainsi, soit $C$ et $\gamma$ deux constantes arbitraires et écrivons 
 $x(t) = C \cos ( \omega_0 t - \gamma )$.
 
 \begin{exercise}
-Justifiez l'identifité  
+Justifiez l'identité  
 	$A \cos (\omega_0 t) + B \sin (\omega_0 t) = C \cos ( \omega_0 t - \gamma )$ 
 	et vérifiez l'équation pour $C$ et $\gamma$.  
-	Astuce: Commencer avec  
+	Astuce: Commencez avec  
 	$\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)$ 
 	et multipliez par $C$.  Alors, que devraient être $\alpha$ et $\beta$?
 \end{exercise}
@@ -1324,10 +1324,10 @@ Les constantes $C$ et $\gamma$ ont des interprétations physiques intéressantes
 	x(t) = C \cos ( \omega_0 t - \gamma ) .
 \end{equation*}
 Il s'agit d'une oscillation à fréquence pure (une onde sinusoïdale).
-La constante  $C$ est l' \emph{\myindex{amplitude}}, $\omega_0$ est la 
+La constante  $C$ est l'\emph{\myindex{amplitude}}, $\omega_0$ est la 
 \emph{\myindex{fréquence angulaire}}\index{angular frequency},
 et $\gamma$ est le \emph{\myindex{changement de phase}}.
-Le changement de phase déplace uniquement le graphique vers la gauche ou vers la droite (translation horizontale). 
+Le changement de phase déplace uniquement le graphe vers la gauche ou vers la droite (translation horizontale). 
 On appelle $\omega_0$ la \emph{\myindex{fréquence angulaire naturelle}}.
 Cette configuration entière est
 appelée le \emph{\myindex{mouvement harmonique simple}}.
@@ -1338,20 +1338,20 @@ Les unités de $\omega_0$ sont des radians par unité de temps, ce ne sont pas d
 Il s'agit simplement de savoir où nous plaçons la constante $2\pi$, 
 et c'est une question de goût.
 
-La \emph{\myindex{période}} du mouvement est l'inverse de la fréquence  (en cycles par unité de temps et alors i$\frac{2\pi}{\omega_0}$.  C'est le temps qu'il faut pour terminer un cycle complet.
+La \emph{\myindex{période}} du mouvement est l'inverse de la fréquence  (en cycles par unité de temps, et alors i$\frac{2\pi}{\omega_0}$.  C'est le temps qu'il faut pour terminer un cycle complet.
 
 
 \begin{example}
 	Supposons que $m=\unit[2]{kg}$ et $k=\unitfrac[8]{N}{m}$.  
 	Un système masse-ressort se trouve sur un camion qui se déplace à  \unitfrac[1]{m}{s}.
 	Le camion a un accident et s'arrête.  
-	La masse a été tenue en place à 0.5 m de sa position de repos. Pendant l'accident, la masse se déplace. 
+	La masse a été tenue en place à 0{,}5 m de sa position de repos. Pendant l'accident, la masse se déplace. 
 	Alors, elle bouge vers l'avant à \unitfrac[1]{m}{s}, pendant que le ressort reste fixé.   
 	La masse commence donc à osciller. Quelle est la fréquence de l'oscillation résultante? 
 	Quelle est l'amplitude? Les unités sont des \index{unités mks} mètres-kilogrammes-secondes.
 	
 	La configuration signifie que la masse était à un demi-mètre dans la 
-	direction positive pendant l'accident et la masse se déplaçait vers l'avant 
+	direction positive pendant l'accident et que la masse se déplaçait vers l'avant 
 	par rapport à la paroi sur laquelle le ressort était monté,
 	(dans la direction positive) à \unitfrac[1]{m}{s}.  
 	Alors, l'équation avec les conditions initiales est: 
@@ -1359,13 +1359,13 @@ La \emph{\myindex{période}} du mouvement est l'inverse de la fréquence  (en cy
 		2 x'' + 8 x = 0 , \qquad x(0) = 0.5, \qquad x'(0) = 1.
 	\end{equation*}
 	On calcule directement $\omega_0 = \sqrt{\nicefrac{k}{m}} = \sqrt{4} = 2$.
-	La fréquence angulaire est 2.  La fréquence usuelle en hertz (cycles per
+	La fréquence angulaire est 2.  La fréquence usuelle en hertz (cycles par
 	seconde) est $\nicefrac{2}{2\pi} = \nicefrac{1}{\pi} \approx 0.318$.
 	
 	%15 is the number of lines, must be adjusted
 	\begin{mywrapfig}[15]{3.25in}
 	\capstart \diffyincludegraphics{width=3in}{width=4.5in}{mv-undamped}
-	\caption{Oscillation simple non amortie .\label{mv:undampedfig}}
+	\caption{Oscillation simple non amortie.\label{mv:undampedfig}}
 	\end{mywrapfig}
 	
 	La solution générale est: 
@@ -1383,22 +1383,22 @@ La \emph{\myindex{période}} du mouvement est l'inverse de la fréquence  (en cy
 	Le graphe de  $x(t)$ est illustré à la  \figurevref{mv:undampedfig}.
 \end{example}
 
-En général, pour un mouvement libre non amorti, la solution: 
+En général, pour un mouvement libre non amorti, la solution
 \begin{equation*}
 	x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t) 
 \end{equation*}
-correspond aux condition initiales $x(0) = A$ et $x'(0) = \omega_0 B$.
+correspond aux conditions initiales $x(0) = A$ et $x'(0) = \omega_0 B$.
 Ainsi, il est facile de comprendre $A$ et $B$ à partir des conditions initiales. 
 
 Calculons la variation de phase de l'exemple.
-Puisque $\tan \gamma = \nicefrac{B}{A} = 1$, on prend l'arctangente de 1 pour obtenir 
+Puisque $\tan \gamma = \nicefrac{B}{A} = 1$, on prend l'arc tangente de 1 pour obtenir 
 $\nicefrac{\pi}{4}$ ou $\nicefrac{5\pi}{4}$. 
 Il faut vérifier à quel quadrant appartient $\gamma$.
 Puisque  $A$ et $B$ sont positifs, $\gamma$ appartient au premier quadrant, et alors $\gamma =
 \nicefrac{\pi}{4}$ ou approximativement 0.785.
 
 Note: Plusieurs calculatrices et logiciels proposent non seulement la fonction 
-\texttt{atan}\index{atan} pour arctangente, mais aussi ce qui est appelé  \texttt{atan2}\index{atan2}.
+\texttt{atan}\index{atan} pour arc tangente, mais aussi ce qui est appelé  \texttt{atan2}\index{atan2}.
 Cette fonction prend deux arguments, $B$ et $A$, et retourne $\gamma$ dans le bon quadrant.
 
 
@@ -1407,17 +1407,17 @@ Cette fonction prend deux arguments, $B$ et $A$, et retourne $\gamma$ dans le bo
 
 %mbxINTROSUBSUBSECTION
 
-On considère maintnenant le cas \myindex{amorti}.  L'équation est alors: 
+On considère maintenant le cas \myindex{amorti}.  L'équation est alors 
 \begin{equation*}
 	m x'' + c x' + kx = 0
 \end{equation*}
 et se réécrit comme suit: 
 \begin{equation*}
-	x'' + 2p x' + \omega_0^2 x = 0
+	x'' + 2p x' + \omega_0^2 x = 0,
 \end{equation*}
 où
 \begin{equation*}
-	\omega_0 = \sqrt{\frac{k}{m}}, \qquad p = \frac{c}{2m} .
+	\omega_0 = \sqrt{\frac{k}{m}}, \qquad p = \frac{c}{2m}.
 \end{equation*}
 L'équation caractéristique est
 \begin{equation*}
@@ -1454,7 +1454,7 @@ Ainsi, on obtient des racines réelles si et seulement si  $c^2-4km$ n'est pas n
 
 Lorsque $c^2 - 4km > 0$, le système est \emph{\myindex{suramorti}}.  
 Dans ce cas, il y a deux racines réelles $r_1$ et $r_2$.  
-Les deux racines sont négatives:   puisque $\sqrt{p^2 - \omega_0^2}$ est toujours plus petit que$p$,
+Les deux racines sont négatives:   puisque $\sqrt{p^2 - \omega_0^2}$ est toujours plus petite que $p$,
 alors $-p \pm \sqrt{p^2 - \omega_0^2}$ est négative dans tous les cas.
 
 
@@ -1464,7 +1464,7 @@ La solution est
 \end{equation*}
 Puisque  $r_1, r_2$ sont négatives, $x(t) \to 0$ lorsque $t \to \infty$.
 Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini. 
-Pour quelques graphiques avec des conditions, la \figureref{mv:overdampedfig} montre 
+La \figureref{mv:overdampedfig} montre 
 le graphe de quelques solutions, avec des conditions initiales différentes.
 
 %mbxlatex \begin{myfig}
@@ -1475,13 +1475,13 @@ le graphe de quelques solutions, avec des conditions initiales différentes.
 Il n'y a aucune oscillation. En effet, le graphe croise l'axe des 
 $x$ au plus une fois.  Pour comprendre pourquoi, résolvons 
 $0 = C_1 e^{r_1 t} + C_2 e^{r_2 t}$.
-Donc, $C_1 e^{r_1 t} = - C_2 e^{r_2 t}$ et en utilisant les lois des exposants, on obtient  
+Donc, $C_1 e^{r_1 t} = - C_2 e^{r_2 t}$, et, en utilisant les lois des exposants, on obtient  
 \begin{equation*}
 	\frac{-C_1}{C_2} = e^{(r_2-r_1) t} .
 \end{equation*}
 Cette équation a au plus une solution  $t \geq 0$.  
-Pour certaines conditions initiales, le graphique ne croise jamais l'axe des $x$, 
-telle que le montre le graphique précédent. 
+Pour certaines conditions initiales, le graphe ne croise jamais l'axe des $x$, 
+comme le montre le graphe précédent. 
 
 \begin{example}
 	Supposons que la masse n'est plus au repos. Elle est au repos lorsque   
@@ -1502,8 +1502,8 @@ Dans ce cas, il y a une racine double  $-p$.  Notre solution est
 \begin{equation*}
 	x(t) = C_1 e^{-pt} + C_2 t e^{-pt} .
 \end{equation*}
-Le comportement d'un système avec amortissement critique est très similaire à celui d'un système avec amortissement ordinaire. Après tout, le premier est en quelque sorte un cas limite du deuxième.  
-Mais ces équations sont aprèss tout des approximations: dans le vrai monde, 
+Le comportement d'un système avec amortissement critique est très semblable à celui d'un système avec amortissement ordinaire. Après tout, le premier est en quelque sorte un cas limite du second.  
+Mais ces équations sont après tout des approximations: dans le vrai monde, 
 on est toujours un peu sous-amorti ou un peu trop amorti. 
 On ne s'attardera donc pas sur l'amortissement critique.
 
@@ -1528,7 +1528,7 @@ Dans ce cas, les racines sont complexes.
 \end{align*}
 où $\omega_1 =\sqrt{\omega_0^2 - p^2}$.  Notre solution est
 \begin{equation*}
-	x(t) = e^{-pt} \bigl( A \cos (\omega_1 t) + B \sin (\omega_1 t) \bigr) ,
+	x(t) = e^{-pt} \bigl( A \cos (\omega_1 t) + B \sin (\omega_1 t) \bigr) 
 \end{equation*}
 ou
 \begin{equation*}
@@ -1545,18 +1545,17 @@ Notez que nous avons encore $x(t) \to 0$ lorsque $t \to \infty$.
 La figure montre aussi les~\emph{\myindex{courbes enveloppes}} $C e^{-pt}$ et $-C e^{-pt}$.  
 La solution est la ligne qui oscille entre les deux courbes. 
 Les courbes enveloppes donnent l'amplitude maximale de l'oscillation à n'importe quel point donné. 
-Par exemple, si vous sautez en bungee, 
-vous serez très intéressé par le calcul de la courbe enveloppe pour éviter de vous cogner la tête. 
+Le calcul de la courbe enveloppe vous intéressera si, par exemple, vous sautez en \emph{bungee} et vous voulez éviter de vous cogner la tête. 
 
 Le changement de phase $\gamma$ fait varier l'oscillation vers la gauche ou vers la droite, 
 mais dans la courbe enveloppe (celle-ci ne change pas, même lorsque $\gamma$ varie).
 
 
 La \emph{\myindex{pseudo-fréquence}}\footnote{On n'appelle pas $\omega_1$ une fréquence puisque la solution n'est pas réellement périodique.} angulaire devient plus petite lorsque l'amortissement 
-$c$, et donc $p$, deviennent plus grands. Ce qui a du sens: lorsque l'amortissement change légèrement, on ne s'attend pas à ce que le comportement de la solution change beaucoup. Lorsque $c$ augmente,  alors à un certain point la solution devrait ressembler à la solution pour un amortissement critique ou un sur-amortissement où il n'y a pas d'oscillation. Alors, si $c^2$ approche $4km$, on veut que $\omega_1$ tende vers 0.
+$c$, et donc $p$, devient plus grand. Cela a du sens: lorsque l'amortissement change légèrement, on ne s'attend pas à ce que le comportement de la solution change beaucoup. Lorsque $c$ augmente,  alors, à un certain point, la solution devrait ressembler à la solution pour un amortissement critique ou pour un suramortissement où il n'y a pas d'oscillation. Alors, si $c^2$ approche $4km$, on veut que $\omega_1$ tende vers 0.
 
 De l'autre côté, lorsque $c$ devient plus petit, $\omega_1$ approche $\omega_0$
-($\omega_1$est toujours plus petit que $\omega_0$), et la solution ressemble de plus en plus au cas de sous-amortissement. La courbe enveloppe devient de plus en plus plate lorsque $c$, et donc $p$, tendent vers 0.
+($\omega_1$ est toujours plus petit que $\omega_0$), et la solution ressemble de plus en plus au cas de sous-amortissement. La courbe enveloppe devient de plus en plus plate lorsque $c$, et donc $p$, tend vers 0.
 
 \subsection{Exercices}
 
@@ -1675,7 +1674,7 @@ $m_0 = \frac{1}{3}$.  Si $m < m_0$, alors le système est sur-amorti et ne va pa
 \subsection{Résoudre des équations non homogènes }
 
 On a résolu des équations linéaires homogènes à coefficients constants. 
-Qu'en est-il des équations qui ne sont pas homogènes?
+Qu'en est-il des équations qui ne sont pas homogènes? 
 Par exemple, celles pour les forces de vibration mécanique. 
 
 %Now suppose that we drop the requirement of homogeneity.
@@ -1699,16 +1698,17 @@ Premièrement, on trouve la solution générale  $y_c$
 	y'' + 5y'+ 6y = 0 .
 \end{equation}
 On nomme $y_c$ la \emph{\myindex{solution complémentaire}}.
-Ensuite, on trouve une seule \emph{\myindex{solution particulière}} $y_p$ à \eqref{eq3.5:nh}, d'une manière quelconque.  La solution générale à \eqref{eq3.5:nh} est alors: 
+Deuxièmement, on trouve une seule \emph{\myindex{solution particulière}} $y_p$ à \eqref{eq3.5:nh}, d'une manière quelconque.  La solution générale à \eqref{eq3.5:nh} est alors: 
 \begin{equation*}
-	y = y_c + y_p
+	y = y_c + y_p.
 \end{equation*}
 On a  $L y_c = 0$ et $L y_p = 2x+1$.  
 Comme $L$ est un \emph{\myindex{opérateur linéaire}}, 
-$L y = L ( y_c + y_p) = L y_c + L y_p = 0 + (2x+1)$ 
-et donc $y$ est une solution. Regardons pourquoi on obtient une  solution  \emph{générale}.
+$L y = L ( y_c + y_p) = L y_c + L y_p = 0 + (2x+1)$, 
+et donc $y$ est une solution. 
+Regardons pourquoi nous obtenons une  solution  \emph{générale}.
 
-Soient $y_p$ et $\tilde{y}_p$ deux solutions particulières différentes à \eqref{eq3.5:nh}.
+Soit $y_p$ et $\tilde{y}_p$ deux solutions particulières différentes à \eqref{eq3.5:nh}.
 On écrit la différence
 $w = y_p - \tilde{y}_p$.  On remplace $w$
 dans le membre de gauche de l'équation pour obtenir : 
@@ -1716,7 +1716,7 @@ dans le membre de gauche de l'équation pour obtenir :
 	w'' + 5w'+ 6w 	= 	(y_p'' + 5y_p'+ 6y_p) - (\tilde{y}_p'' + 5\tilde{y}_p'+ 6\tilde{y}_p) 
 					=	(2x+1) - (2x+1) = 0 .
 \end{equation*}
-En utilisant la notation des opérateurs linéaires, le calcul devient plus simple:  
+Quand on utilise la notation des opérateurs linéaires, le calcul devient plus simple:  
 \begin{equation*}
 	Lw = L(y_p - \tilde{y}_p) =	Ly_p - L\tilde{y}_p = (2x+1)-(2x+1) = 0 .
 \end{equation*}
@@ -1725,7 +1725,7 @@ $Lw = 0$.  Les deux solutions de \eqref{eq3.5:nh} diffèrent par une solution à
 lorsque $y_c$ est la solution générale à l'équation homogène associée. 
 
 \begin{theorem}
-	Soit $Ly=f(x)$ une équation différentielle ordinaire linéaire (pas nécessairement à coefficients constants).  Soit  $y_c$ une solution complémentraire et soit $y_p$ une solution particulière à $Ly=f(x)$.  
+	Soit $Ly=f(x)$ une équation différentielle ordinaire linéaire (pas nécessairement à coefficients constants).  Soit  $y_c$ une solution complémentaire et soit $y_p$ une solution particulière à $Ly=f(x)$.  
 	Alors, la solution générale de $Ly=f(x)$ est: 
 	\begin{equation*}
 		y = y_c + y_p.
@@ -1742,7 +1742,7 @@ La formule pourrait apparaître différente, et les constantes choisies pour sat
 
 L'astuce est, d'une manière quelconque ou par un choix judicieux, de deviner une solution particulière à 
 l'équation~\eqref{eq3.5:nh}.  
-On note que $2x+1$ est un polynôme, et que le membre de gauche de l'équation sera un polynôme si l'on pose que $y$ est un polynôme de même degré. Essayons: 
+On note que $2x+1$ est un polynôme et que le membre de gauche de l'équation sera un polynôme si l'on pose que $y$ est un polynôme de même degré. Essayons: 
 \begin{equation*}
 	y_p = Ax + B .
 \end{equation*}
@@ -1762,7 +1762,7 @@ Ainsi, la solution générale à~\eqref{eq3.5:nh} est:
 \begin{equation*}
 	y = C_1 e^{-2x} + C_2 e^{-3x} + \frac{3x-1}{9} .
 \end{equation*}
-Supposons maintenant que certaines conditions initialessont imposées. 
+Supposons maintenant que certaines conditions initiales sont imposées. 
 Par exemple,  $y(0) = 0$ et $y'(0) = \nicefrac{1}{3}$.  
 D'abord, on trouve que $y' = - 2C_1 e^{-2x} - 3C_2 e^{-3x} + \nicefrac{1}{3}$.
 Ensuite: 
@@ -1782,7 +1782,7 @@ La solution particulière voulue est donc:
 	et satisfait aux conditions initiales données.  
 \end{exercise}
 
-Note: Une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec  $y_c$ et seulement ajouter la solution particulière $y_p$ par la suite.
+Note: Une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec  $y_c$ et de seulement ajouter la solution particulière $y_p$ par la suite.
  \emph{Ça ne fonctionnera pas}.  Vous devez d'abord calculer $y = y_c + y_p$ et
 \emph{seulement ensuite} résoudre pour les constantes en utilisant les conditions initiales. 
 
@@ -1802,26 +1802,26 @@ On substitue  $y_p$ dans l'équation et l'on obtient:
 	\underbrace{-4 A \cos (2x) - 4 B \sin (2x)}_{y_p''}
 		+2 \underbrace{\bigl(-2A \sin (2x) + 2B \cos (2x)\bigr)}_{y_p'}	\\
 		+2 \underbrace{\bigl(A \cos (2x) + 2B \sin (2x)\bigr)}_{y_p}
-	= \cos (2x) ,
+	= \cos (2x) 
 \end{multline*}
 ou
 \begin{equation*}
 	(-4A+4B+2A) \cos(2x) +	(-4B-4A+2B) \sin(2x) 	= \cos(2x) .
 \end{equation*}
-Le membre de gauche devrait être égal au membre de droite. À savoir,
+Le membre de gauche devrait être égal au membre de droite, à savoir 
 $-4A + 4B + 2A = 1$ et $-4B - 4A + 2B = 0$.  
-Alors, $-2A+4B =1$ et $2A+B=0$ et aussi   $A=\nicefrac{-1}{10}$ et $B=\nicefrac{1}{5}$.  
+Alors, $-2A+4B =1$ et $2A+B=0$, et aussi   $A=\nicefrac{-1}{10}$ et $B=\nicefrac{1}{5}$.  
 Alors: 
 \begin{equation*}
 y_p = A \cos (2x) + B \sin (2x) = \frac{-\cos (2x) + 2 \sin (2x)}{10} .
 \end{equation*}
 
-De manière similaire, si le membre de droite contient une exponentielle, on essaie une exponentielle. Par exemple, pour: 
+De manière similaire, si le membre de droite contient une exponentielle, on essaie une exponentielle. Par exemple, pour 
 %if the equation is (where $L$ is a linear constant coefficient operator)
 \begin{equation*}
-Ly = e^{3x}
+Ly = e^{3x},
 \end{equation*}
-on essaie $y = A e^{3x}$ et l'on essaie de résoudre pour $A$.
+on essaie $y = A e^{3x}$ et l'on tente de résoudre pour $A$.
 
 \medskip
 
@@ -1834,35 +1834,36 @@ Pour cette équation, on suppose que:
 	y_p = (A + Bx + Cx^2)\,e^{-x} \cos (\pi x) + (D + Ex + Fx^2)\,e^{-x} \sin (\pi x) .
 \end{equation*}
 On substitue et l'on obtient les équations à résoudre pour 
-$A$, $B$, $C$, $D$, $E$, et $F$.
+$A$, $B$, $C$, $D$, $E$ et $F$.
 Comme on peut le voir, ça peut engendrer rapidement un calcul très long et fastidieux.  
 %C'est \myindex{la vie}! %bit more fun
 
 \medskip
 
 Il y a un hic avec tout ça. 
-Il est possible que la supposition faite résolve l'équation homogène associée .  Considérons, par exemple: 
+Il est possible que la supposition faite résolve l'équation homogène associée. 
+Considérons, par exemple: 
 \begin{equation*}
 	y'' - 9y = e^{3x} .
 \end{equation*}
-On aimerait poser que  $y = Ae^{3x}$, mais si l'on remplace dans le membre de gauche de l'équation, on obtient:  
+On aimerait poser que  $y = Ae^{3x}$, mais, si l'on remplace dans le membre de gauche de l'équation, on obtient:  
 \begin{equation*}
 	y''-9y = 9Ae^{3x} - 9Ae^{3x} = 0 \not= e^{3x} .
 \end{equation*}
 Il n'y a pas de manière de choisir $A$ pour que le membre de droite soit $e^{3x}$.
-L'astuce, dans ce cas, est de multiplier notre expression par  $x$ pour se débarasser de la duplication de la solution complémentaire. 
-Ainsi, on calcule  $y_c$ (solution de $Ly = 0$): 
+L'astuce, dans ce cas, est de multiplier notre expression par  $x$ pour nous débarrasser de la duplication de la solution complémentaire. 
+Ainsi, nous calculons $y_c$ (solution de $Ly = 0$), 
 \begin{equation*}
-	y_c = C_1 e^{-3x} + C_2 e^{3x} 
+	y_c = C_1 e^{-3x} + C_2 e^{3x}, 
 \end{equation*}
-et l'on note que le terme $e^{3x}$ est dupliqué avec notre expression. 
+et nous notons que le terme $e^{3x}$ est dupliqué avec notre expression. 
 On la modifie pour qu'elle devienne  $y = Axe^{3x}$, et alors il n'y a plus de duplication. 
-Essayons:  $y' = Ae^{3x} + 3Axe^{3x}$ et  $y'' = 6Ae^{3x} + 9Axe^{3x}$, alors: 
+Essayons:  $y' = Ae^{3x} + 3Axe^{3x}$ et  $y'' = 6Ae^{3x} + 9Axe^{3x}$, alors 
 \begin{equation*}
 	y'' -9y = 6Ae^{3x} + 9Axe^{3x} - 9Axe^{3x} = 6Ae^{3x} .
 \end{equation*}
-Donc $6Ae^{3x}$ devrait être égal à $e^{3x}$.  Ainsi,
-$6A = 1$ et alors $A=\nicefrac{1}{6}$.  On peut maintenant écrire la solution générale comme suit: 
+Donc, $6Ae^{3x}$ devrait être égal à $e^{3x}$.  Ainsi,
+$6A = 1$, et alors $A=\nicefrac{1}{6}$.  On peut maintenant écrire la solution générale comme suit: 
 \begin{equation*}
 	y = y_c + y_p = C_1 e^{-3x} + C_2 e^{3x} + \frac{1}{6}\,xe^{3x} .
 \end{equation*}
@@ -1875,9 +1876,9 @@ Voyons, par exemple:
 	y''-6y'+9y = e^{3x} .
 \end{equation*}
 La solution complémentaire est $y_c = C_1 e^{3x} + C_2 x e^{3x}$.  
-Poser $y=A xe^{3x}$ ne règlera pas le problème.  
+Poser $y=A xe^{3x}$ ne réglera pas le problème.  
 Dans ce cas, on veut supposer que $y_p = Ax^2e^{3x}$. 
-Ainsi, on veut multiplier notre expression par  $x$ jusqu'à ce qu'il n'y ait plus de duplication. 
+Ainsi, nous voulons multiplier notre expression par  $x$ jusqu'à ce qu'il n'y ait plus de duplication. 
 \emph{Mais pas plus!}  Multiplier trop de fois ne fonctionnera pas plus. 
 
 
@@ -1885,10 +1886,10 @@ Ainsi, on veut multiplier notre expression par  $x$ jusqu'à ce qu'il n'y ait pl
 
 Finalement, si le membre de droite a différents termes tels que 
 \begin{equation*}
-	Ly = e^{2x} + \cos x .
+	Ly = e^{2x} + \cos x, 
 \end{equation*}
-Dans ce cas, on trouve  $u$ qui résout $Lu = e^{2x}$ et $v$ qui résout $Lv = \cos x$ (faire chaque terme séparément).  On note que si $y = u+ v$, alors $Ly = e^{2x} + \cos x$ puisque 
-$L$ est linéaire; donc  $Ly = L(u+v) = Lu + Lv = e^{2x} + \cos x$.
+dans ce cas, on trouve  $u$ qui résout $Lu = e^{2x}$ et $v$ qui résout $Lv = \cos x$ (faire chaque terme séparément).  On note que si $y = u+ v$, alors $Ly = e^{2x} + \cos x$ puisque 
+$L$ est linéaire; donc,  $Ly = L(u+v) = Lu + Lv = e^{2x} + \cos x$.
 
 
 
@@ -1905,14 +1906,14 @@ Toutes les nouvelles dérivées de $\tan x$ sont complètement différentes et n
 	2 \sec^2 x \, \tan x, \quad
 	4 \sec^2 x \, \tan^2 x + 2 \sec^4 x, \\
 	8 \sec^2 x \, \tan^3 x + 16 \sec^4 x \, \tan x, \quad
-	16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x, \quad
+	16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x \quad
 	\ldots
 \end{multline*}
 
 Cette équation fait appel à une méthode différente: la méthode de la
 \emph{\myindex{variation des paramètres}}, qui gère toute équation de
 la forme $Ly = f(x)$, à condition de pouvoir résoudre certaines intégrales.  
-Pour plus de simplicité, on se limite  aux équations à coefficients constants du second ordre,
+Pour plus de simplicité, on se limite  aux équations à coefficients constants du deuxième ordre,
 mais la méthode fonctionne aussi bien pour les ordres supérieurs (les calculs deviennent plus
 \myindex{fastidieux}). % a bit of fun 
 La méthode fonctionne aussi pour des équations à coefficients non constants, 
@@ -1927,7 +1928,7 @@ D'abord, on trouve la solution complémentaire (solution à $Ly_c = 0$).
 On obtient $y_c = C_1 y_1 + C_2 y_2$, où $y_1 = \cos x$ et $y_2 = \sin x$.
 On trouve une solution particulière à l'équation non homogène et l'on trouve: 
 \begin{equation*}
-	y_p = y = u_1 y_1 + u_2 y_2 
+	y_p = y = u_1 y_1 + u_2 y_2, 
 \end{equation*}
 où $u_1$ et $u_2$ sont des \emph{fonctions} et pas des constantes.
 On essaie de satisfaire à $Ly = \tan x$, ce qui donne les conditions pour les fonctions  $u_1$ et $u_2$.
@@ -1935,28 +1936,28 @@ On calcule (règle du produit):
 \begin{equation*}
 	y' = (u_1' y_1 + u_2' y_2) + (u_1 y_1' + u_2 y_2').
 \end{equation*}
-On peut toujours imposer une condition supplémentaire, à notre discrétion, pour simplifier les calculs (on a deux fonctions inconnues, alors on peut ajouter deux conditions). On a besoin que 
+Nous pouvons toujours imposer une condition supplémentaire, à notre discrétion, pour simplifier les calculs (nous avons deux fonctions inconnues, alors nous pouvons ajouter deux conditions). On a besoin que 
 $(u_1' y_1 + u_2' y_2) = 0$.  Ceci rend les calculs de la deuxième dérivée plus faciles: 
 \begin{align*}
 	& y' = u_1 y_1' + u_2 y_2' , \\
 	& y'' = (u_1' y_1' + u_2' y_2') + (u_1 y_1'' + u_2 y_2'') .
 \end{align*}
 Puisque $y_1$ et $y_2$ sont des solutions de $y''+y = 0$, on trouve 
-$y_1'' = - y_1$ et $y_2'' = - y_2$.
-(Si l'équation était plus générale  $y''+p(x)y' +q(x)y = 0$, on aurait $y_i'' = -p(x)y_i' -q(x)y_i$.) 
+$y_1'' = - y_1$ et $y_2'' = - y_2$ 
+(si l'équation était plus générale,  $y''+p(x)y' +q(x)y = 0$, on aurait $y_i'' = -p(x)y_i' -q(x)y_i$).  
 Alors: 
 \begin{equation*}
 	y'' = (u_1' y_1' + u_2' y_2') - (u_1 y_1 + u_2 y_2) .
 \end{equation*}
-On a $(u_1 y_1 + u_2 y_2) = y$ et alors:
+On a $(u_1 y_1 + u_2 y_2) = y$, et alors
 \begin{equation*}
 	y'' = (u_1' y_1' + u_2' y_2') - y 
 \end{equation*}
-et ainsi: 
+et ainsi 
 \begin{equation*}
 	y'' + y = Ly = u_1' y_1' + u_2' y_2' .
 \end{equation*}
-Pour  que $y$ satisfasse à $Ly = f(x)$ on doit avoir
+Pour  que $y$ satisfasse à $Ly = f(x)$, on doit avoir
 $f(x) = u_1' y_1' + u_2' y_2'$.
 
 On doit résoudre les deux équations (conditions) qu'on a imposées à  $u_1$ et à $u_2$:
@@ -1968,7 +1969,7 @@ On doit résoudre les deux équations (conditions) qu'on a imposées à  $u_1$ e
 \end{equation*}
 On résout pour $u_1'$ et $u_2'$ en termes de $f(x)$, $y_1$ et $y_2$.
 On obtient toujours cette formule pour n'importe quel $Ly = f(x)$, où $Ly = y''+p(x)y'+q(x)y$.  
-Il y a une formule générale pour la solution qu'on peut remplacer, mais à la place de la mémoriser, c'est mieux et plus facile de simplement répéter ce qu'on a fait précédemment. Dans ce cas, les deux équations sont:  
+Il y a une formule générale pour la solution qu'on peut remplacer, mais, au lieu de la mémoriser, c'est mieux et plus facile de simplement répéter ce qu'on a fait précédemment. Dans ce cas, les deux équations sont:  
 \begin{align*}
 	 u_1' \cos (x) + u_2' \sin (x) &= 0 ,\\
 	-u_1' \sin (x) + u_2' \cos (x) &= \tan (x) .
@@ -1990,13 +1991,13 @@ On intègre $u_1'$ et $u_2'$ pour obtenir $u_1$ et $u_2$:
 		= \frac{1}{2} \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert 	+ \sin (x) , \\
 	& u_2 = \int u_2'\,dx 	= \int \sin (x)\,dx = -\cos (x) .
 \end{align*}
-Alors la solution particulière est : 
-\begin{multline*}
-	y_p = u_1 y_1 + u_2 y_2 =
+Alors, la solution particulière est : 
+\begin{align*}
+	y_p &= u_1 y_1 + u_2 y_2 =
 	\frac12 \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1}	\right\rvert
-	+ \cos (x) \sin (x) -\cos (x) \sin (x)
-	= \\ = 	\frac12 \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert .
-\end{multline*}
+	+ \cos (x) \sin (x) -\cos (x) \sin (x)	\\ 
+	&= 	\frac12 \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert .
+\end{align*}
 La solution générale à  $y'' + y = \tan x$ est: 
 \begin{equation*}
 	y = C_1 \cos (x) + C_2 \sin (x) + \frac{1}{2} \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1}
