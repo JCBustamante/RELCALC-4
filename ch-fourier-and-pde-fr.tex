@@ -1104,8 +1104,8 @@ $\frac{\pi^4}{5} + \sum\limits_{n=1}^\infty
 
 \subsection{Fonctions $2L$-périodiques}
 
-On a calculé les séries de Fourier pour une fonction $2\pi$-périodique, mais qu'en est-il des fonctions ayant des périodes différentes? En fait, le calcul est un simple cas de changement de variable. On doit simplement  redimensionner l'axe indépendant. On suppose avoir une fonction  $2L$-périodique $f(t)$.  Alors, $L$ est appelé la  \emph{\myindex{demie-période}}.  Soit $s = \frac{\pi}{L}  t$.
-Alors la fonction
+On a calculé les séries de Fourier pour une fonction $2\pi$-périodique, mais qu'en est-il des fonctions ayant des périodes différentes? En fait, le calcul est un simple cas de changement de variables. On doit simplement  redimensionner l'axe indépendant. On suppose avoir une fonction  $2L$-périodique $f(t)$.  Alors, $L$ est appelé la  \emph{\myindex{demi-période}}.  Soit $s = \frac{\pi}{L}  t$.
+Alors, la fonction
 \begin{equation*}
 g(s) = f\left(\frac{L}{\pi} s \right)
 \end{equation*}
@@ -1125,7 +1125,7 @@ g(s) =
 \sum_{n=1}^\infty a_n \cos (n s)
 + b_n \sin (n s) .
 \end{equation*}
-On calcule $a_n$ et $b_n$ comme avant.  Ensuite, on écrit les intégrales, on change les variables de $s$ à $t$, tel que $ds = \frac{\pi}{L} \, dt$.
+On calcule $a_n$ et $b_n$ comme avant.  Ensuite, on écrit les intégrales en changeant les variables de $s$ à $t$ tel que $ds = \frac{\pi}{L} \, dt$.
 \begin{equation*}
 \mybxbg{~~
 \begin{aligned}
@@ -1157,14 +1157,14 @@ f(t) \, \sin \left( \frac{n \pi}{L} t \right) \, dt .
 ~~}
 \end{equation*}
 
-Les demies périodes de $\pi$ ou 1 sont les plus communes parce qu'elles ont une formule simple. On remarque qu'on n'a pas fait de nouvelles mathématiques, on change simplement les variables. Si l'on comprend les séries de Fourier pour les fonctions  $2\pi$-périodiques, on comprend les unités différentes dans le temps. Tout ce qu'on fait c'est de bouger quelques constantes, mais toutes les mathématiques pareilles.  
+Les demi-périodes de $\pi$ ou 1 sont les plus communes parce qu'elles ont une formule simple. On remarque qu'on n'a pas fait de nouvelles mathématiques, on change simplement les variables. Si l'on comprend les séries de Fourier pour les fonctions  $2\pi$-périodiques, on comprend les unités différentes dans le temps. Tout ce qu'on fait, c'est bouger quelques constantes, mais toutes les mathématiques sont pareilles.
 
 \begin{example}
 Soit
 \begin{equation*}
 f(t) =
 \lvert t \rvert
-\qquad \text{for } \; {-1} < t \leq 1,
+\quad \text{pour} \quad {-1} < t \leq 1,
 \end{equation*}
 prolongée périodiquement.  Le graphe est donné par la \figureref{gfs:sawcontfig}.
 Calculons la série de Fourier de $f(t)$.
@@ -1176,8 +1176,8 @@ Calculons la série de Fourier de $f(t)$.
 \end{myfig}
 
 On veut écrire $f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t) + b_n
-\sin (n \pi t)$.  Pour $n \geq 1$ on note que $\lvert t \rvert \cos (n \pi t)$
-est paire et aussi
+\sin (n \pi t)$.  Pour $n \geq 1$, on note que $\lvert t \rvert \cos (n \pi t)$
+est paire et aussi que
 \begin{equation*}
 \begin{split}
 a_n & = \int_{-1}^1 f(t) \cos (n \pi t) \, dt \\
@@ -1188,8 +1188,8 @@ a_n & = \int_{-1}^1 f(t) \cos (n \pi t) \, dt \\
  =  \frac{2 \bigl( {(-1)}^n -1 \bigr) }{n^2 \pi^2}
 =
 \begin{cases}
-0 & \text{if } n \text{ est paire} , \\
-\frac{-4 }{n^2 \pi^2} & \text{if } n \text{est impaire}  .
+0 & \text{si } n \text{ est pair} , \\
+\frac{-4 }{n^2 \pi^2} & \text{si } n \text{ est impair}  .
 \end{cases}
 \end{split}
 \end{equation*}
@@ -1199,7 +1199,7 @@ a_0 = \int_{-1}^1 \lvert t \rvert \, dt
 =
 1 .
 \end{equation*}
-On devrait être en mesure de trouver cette intégrale en pensant à l'intégrale comme l'aire sous la courbe du graphique sans pour autant faire les calculs. Finalement, on trouve $b_n$.  Ici, on remarque que
+On devrait être en mesure de trouver cette intégrale en pensant à l'intégrale comme à l'aire sous la courbe du graphe sans pour autant faire les calculs. Finalement, on trouve $b_n$.  Ici, on remarque que
 $\lvert t \rvert \sin (n \pi t)$ est impaire, et par conséquent: 
 \begin{equation*}
 b_n = \int_{-1}^1 f(t) \sin (n \pi t) \, dt = 0 .
@@ -1207,10 +1207,10 @@ b_n = \int_{-1}^1 f(t) \sin (n \pi t) \, dt = 0 .
 Ainsi, la série est
 \begin{equation*}
 \frac{1}{2} + 
-\sum_{\substack{n=1 \\ n \text{ odd}}}^\infty \frac{-4}{n^2 \pi^2} \cos (n \pi t) .
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty \frac{-4}{n^2 \pi^2} \cos (n \pi t) .
 \end{equation*}
 
-Écrivons explicitement les premiers termes de la série jusqu'à la troisième harmonique.
+Écrivons explicitement les premiers termes de la série jusqu'à la troisième harmonique :
 \begin{equation*}
 \frac{1}{2} -
 \frac{4}{\pi^2} \cos (\pi t)
@@ -1218,7 +1218,7 @@ Ainsi, la série est
 \frac{4}{9 \pi^2} \cos (3 \pi t)
 - \cdots
 \end{equation*}
-Voir \figureref{gfs:sawcontfsfig}.  On devrait remarquer à quel point le graphe est proche de la vraie fonction. On devrait aussi remarquer qu'il n'y a pas de 
+Voir la \figureref{gfs:sawcontfsfig}.  On devrait remarquer à quel point le graphe est proche de la vraie fonction. On devrait aussi remarquer qu'il n'y a pas de 
 \myquote{phénomène de Gibbs} puisqu'il n'y a pas de discontinuité.
 
 \begin{myfig}
@@ -1232,18 +1232,18 @@ et jusqu'à la vingtième harmonique (à droite).\label{gfs:sawcontfsfig}}
 
 \subsection{Convergence}
 
-On aura besoin de la limite d'un côté de la fonction. On utilisera la notation suivante 
+On aura besoin de la limite d'un côté de la fonction. On utilisera la notation suivante :
 \begin{equation*}
 f(c-) = \lim_{t \uparrow c} f(t),
 \qquad \text{et} \qquad
 f(c+) = \lim_{t \downarrow c} f(t).
 \end{equation*}
-Si l'on n'est pas familier avec cette notation, 
+Si l'on a pas l'habitude de cette notation, 
 $\lim_{t \uparrow c} f(t)$ signifie qu'on prend la limite de $f(t)$
-lorsque $t$ tend vers $c$ par le bas (i.e.\ $t < c$) et
+lorsque $t$ tend vers $c$ par le bas (c'est-à-dire $t < c$) et
 $\lim_{t \downarrow c} f(t)$ signifie qu'on prend la limite de $f(t)$
-lorsque $t$ tend vers $c$ par le haut (i.e.\ $t > c$).
-Par exemple, pour la vague carrée 
+lorsque $t$ tend vers $c$ par le haut (c'est-à-dire $t > c$).
+Par exemple, pour la vague carrée, 
 \begin{equation} \label{gfs:sqwaveeq}
 f(t) =
 \begin{cases}
@@ -1253,7 +1253,7 @@ f(t) =
 \end{equation}
 sur $f(0-) = 0$ et $f(0+) = \pi$.
 
-Soit $f(t)$ une fonction définit sur l'intervalle $[a,b]$.  On suppose trouver un nombre de points fini 
+Soit $f(t)$ une fonction définie sur l'intervalle $[a,b]$. On suppose trouver un nombre de points fini
 $a=t_0$, $t_1$, $t_2$, \ldots, $t_k=b$ dans l'intervalle, tel que  $f(t)$ est continue sur les intervalles
   $(t_0,t_1)$, 
 $(t_1,t_2)$, \ldots, 
@@ -1300,7 +1300,7 @@ Soit
 \right)
 + b_n \sin \left( \frac{n \pi}{L} t \right)
 \end{equation*}
-une série de Fourier pour $f(t)$.  Alors la série converge pour tout $t$.  Si $f(t)$ est continue à $t$,  alors
+une série de Fourier pour $f(t)$.  Alors, la série converge pour tout $t$.  Si $f(t)$ est continue à $t$,  alors
 \begin{equation*}
 f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty
 a_n \cos \left( \frac{n \pi}{L} t \right)
@@ -1315,26 +1315,25 @@ Autrement,
 \end{equation*}
 \end{theorem}
 
-S'il arrive qu'on aille
-$f(t) = \frac{f(t-)+f(t+)}{2}$ à toutes les discontinuités, la série de Fourier converge à  $f(t)$ partout. On peut toujours simplement redéfinir $f(t)$ en changeant la valeur à chaque discontinuité de manière appropriée. Alors on peut écrire un  signe d'égalité entre $f(t)$ et la série sans avoir peur. On a mentionné  brièvement ce fait à la fin de la section précédente. 
+S'il arrive qu'on ait
+$f(t) = \frac{f(t-)+f(t+)}{2}$ à toutes les discontinuités, la série de Fourier converge à  $f(t)$ partout. On peut toujours simplement redéfinir $f(t)$ en changeant la valeur à chaque discontinuité de manière appropriée. Alors, on peut écrire un  signe d'égalité entre $f(t)$ et la série sans avoir peur. On a mentionné  brièvement ce fait à la fin de la section précédente. 
 
-Le théorème ne dit pas la vitesse à laquelle la série converge. En retournant en arrière à la dernière section à la discussion sur le phénomène Gibbs: plus on se rapproche de la discontinuité, plus on a besoin de termes pour obtenir une approximation acceptable de la fonction.  
+Le théorème ne dit pas la vitesse à laquelle la série converge. Retournons en arrière à la dernière section, à la discussion sur le phénomène de Gibbs : plus on se rapproche de la discontinuité, plus on a besoin de termes pour obtenir une approximation acceptable de la fonction.
 
 \subsection{Dérivation et intégration de séries de Fourier}
 
-Non seulement la série de Fourier converge bien, mais elle est facile à différencier
-et à intégrer. Nous pouvons la faire simplement en différenciant ou en intégrant terme par terme.
+Non seulement la série de Fourier converge bien, mais elle est facile à différentier
+et à intégrer. Nous pouvons la faire simplement en différentiant ou en intégrant terme par terme.
 
 \begin{theorem}
-Supposons
+Supposons que
 \begin{equation*}
 f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t
 \right)
 + b_n \sin \left( \frac{n \pi}{L} t \right)
 \end{equation*}
-est une fonction continue lisse par morceaux et la dérivée $f'(t)$ est  lisse
-par morceaux. Alors la dérivée peut être
-obtenue en différenciant terme par terme.
+est une fonction continue lisse par morceaux et que la dérivée $f'(t)$ est  lisse
+par morceaux. Alors, la dérivée peut être obtenue en différentiant terme par terme.
 
 \begin{equation*}
 f'(t) = \sum_{n=1}^\infty \frac{-a_n n \pi}{L} 
@@ -1343,31 +1342,27 @@ f'(t) = \sum_{n=1}^\infty \frac{-a_n n \pi}{L}
 \end{equation*}
 \end{theorem}
 
-Il est important que la fonction soit continue. Il peut avoir des coins, mais pas de
-sauts. Sinon, la dérivée de la série ne parviendra pas à converger. Comme 
+Il est important que la fonction soit continue. Il peut y avoir des coins, mais pas de sauts. Sinon, la dérivée de la série ne parviendra pas à converger. Comme 
 exercice, prenez la série obtenue pour la vague carrée et essayez de la
-différencier. De même, on peut également intégrer une série de Fourier.
+différentier. De même, on peut également intégrer une série de Fourier.
 
 \begin{theorem}
-Supposons
+Supposons que
 \begin{equation*}
 f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty
 a_n \cos \left( \frac{n \pi}{L} t \right)
 + b_n \sin \left( \frac{n \pi}{L} t \right)
 \end{equation*}
-est une fonction lisse par morceaux. Alors la primitive est
-obtenue en intégrant terme par terme et ainsi
+est une fonction lisse par morceaux. Alors, la primitive est obtenue en intégrant terme par terme, et ainsi
 \begin{equation*}
 F(t) = \frac{a_0 t}{2} + C + \sum_{n=1}^\infty
 \frac{a_n L}{n \pi} \sin \left( \frac{n \pi}{L} t \right)
 + \frac{-b_n L}{n \pi}  \cos \left( \frac{n \pi}{L} t \right) ,
 \end{equation*}
-où  $F'(t) = f(t)$ et $C$ est une constante arbitraire. 
+où $F'(t) = f(t)$ et $C$ est une constante arbitraire. 
 \end{theorem}
 
-On note que la série pour $F(t)$ n'est plus une série de Fourier car elle contient le terme
- $\frac{a_0 t}{2}$.  La primitive d'une fonction périodique n'a plus besoin d'être périodique et l'on ne devrait pas
-s'attendre à une série de Fourier.
+On note que la série pour $F(t)$ n'est plus une série de Fourier, car elle contient le terme $\frac{a_0 t}{2}$. La primitive d'une fonction périodique n'a plus besoin d'être périodique, et on ne devrait pas s'attendre à une série de Fourier.
 
 \subsection{Taux de convergence et différentiabilité}
 
@@ -1379,11 +1374,10 @@ Prenons la fonction
 f(t) =
 \begin{cases}
 (t+1)\,t & \text{si } \; {-1} < t \leq 0 , \\
-(1-t)\,t & \text{si } \; \phantom{-}0 < t \leq 1 ,
+(1-t)\,t & \text{si } \; \phantom{-}0 < t \leq 1
 \end{cases}
 \end{equation*}
-et prolongeons-la à une fonction 
-2-périodique.  Voir~\figureref{gfs:smoothexfig}.
+et prolongeons-la à une fonction 2-périodique. Voir la \figureref{gfs:smoothexfig}.
 
 \begin{myfig}
 \capstart
@@ -1399,7 +1393,7 @@ Calculez  $f''(0+)$ et $f''(0-)$.
 \end{exercise}
 
 Voici les coefficients de la série de Fourier.  Leur calcul 
-implique plusieurs intégrations par parties et est laissé à l'étudiant.
+implique plusieurs intégrations par parties et est laissé en exercice.
 
 \begin{align*}
 a_0 & = 
@@ -1431,50 +1425,48 @@ f(t) \, \sin (n\pi t) \, dt =
 \frac{4 ( 1-{(-1)}^n)}{\pi^3 n^3} 
 =
 \begin{cases}
-\frac{8}{\pi^3 n^3} & \text{si } n \text{ est impaire} , \\
-0 & \text{si } n \text{ est paire} .
+\frac{8}{\pi^3 n^3} & \text{si } n \text{ est impair} , \\
+0 & \text{si } n \text{ est pair} .
 \end{cases}
 \end{align*}
-Alors la série est 
+Alors, la série est 
 \begin{equation*}
-\sum_{\substack{n=1 \\ n \text{ odd}}}^\infty \frac{8}{\pi^3 n^3} \sin (n \pi t) .
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty \frac{8}{\pi^3 n^3} \sin (n \pi t) .
 \end{equation*}
 
-Cette série converge très vite.
-Si vous calculez jusqu'à la troisième harmonique, c'est la fonction
+Cette série converge très vite. Si vous calculez jusqu'à la troisième harmonique, c'est la fonction
 \begin{equation*}
 \frac{8}{\pi^3} \sin (\pi t) + 
-\frac{8}{27 \pi^3} \sin (3 \pi t) ,
+\frac{8}{27 \pi^3} \sin (3 \pi t).
 \end{equation*}
 
 Son graphe est presque impossible à distinguer de celui de $f(t)$ dans la 
 \figureref{gfs:smoothexfig}.
 En effet, le coefficient
-$\frac{8}{27 \pi^3}$ est déjà juste 0.0096 (approximativement).
+$\frac{8}{27 \pi^3}$ est déjà juste $0.0096$ (approximativement).
 La raison de ce comportement est le terme $n^3$ au dénominateur.
-le coefficient $b_n$, dans ce cas, va à zéro aussi vite que
+Le coefficient $b_n$, dans ce cas, va à zéro aussi vite que
 $\nicefrac{1}{n^3}$ va à zéro.
 \end{example}
 
 Pour les fonctions construites par morceaux à partir de polynômes comme ci-dessus,
 il est généralement vrai que si l'on a une dérivée, les coefficients de la série de Fourier
-tendront vers zéro approximativement comme $\nicefrac{1}{n^3}$.  Si l'on n'a
- qu'une fonction continue, alors les coefficients de Fourier tendront vers zéro comme $\nicefrac{1}{n^2}$.  Si l'on a des discontinuités, alors
+tendront vers zéro approximativement comme $\nicefrac{1}{n^3}$. Si l'on n'a qu'une fonction continue, alors les coefficients de Fourier tendront vers zéro comme $\nicefrac{1}{n^2}$.  Si l'on a des discontinuités, alors
 les coefficients de Fourier tendront vers zéro approximativement comme $\nicefrac{1}{n}$.
-Pour des fonctions plus générales, l'histoire est un peu plus compliquée mais c'est la
-même idée; plus on a de dérivées, plus les coefficients convergent rapidement vers zéro. Un raisonnement similaire fonctionne en sens inverse. Si les coefficients tendent vers 
+Pour des fonctions plus générales, l'histoire est un peu plus compliquée, mais c'est la
+même idée : plus on a de dérivées, plus les coefficients convergent rapidement vers zéro. Un raisonnement similaire fonctionne en sens inverse. Si les coefficients tendent vers 
 zéro comme $\nicefrac{1}{n^2}$, on obtient toujours une fonction continue. S'ils tendent vers zéro comme $\nicefrac{1}{n^3}$, 
 on obtient une fonction différentiable partout.  Les coefficients de Fourier nous en disent long sur la différentiabilité de la fonction. 
 %Therefore, we can tell a lot about the smoothness of a function by looking
 %at its Fourier coefficients.
 
 Pour justifier ce comportement, prenons, par exemple, la fonction définie par
-la série Fourier
+la série de Fourier
 \begin{equation*}
 f(t) = \sum_{n=1}^\infty \frac{1}{n^3} \sin (n t) .
 \end{equation*}
 
-Lorsqu'on dérive terme par terme, on remarque
+Lorsqu'on dérive terme par terme, on remarque que
 \begin{equation*}
 f'(t) = \sum_{n=1}^\infty \frac{1}{n^2} \cos (n t) .
 \end{equation*}
@@ -1482,22 +1474,22 @@ Par conséquent, les coefficients diminuent maintenant comme $\nicefrac{1}{n^2}$
 signifie que nous avons une fonction continue.
 La dérivée de $f'(t)$ est définie à la plupart des points, mais il y a des points où $f'(t)$ n'est pas différentiable.
 Il y a des coins, mais pas de sauts.
-Si l'on dérive à nouveau (là où on peut), on constate que la fonction
+Si l'on dérive à nouveau (là où l'on peut), on constate que la fonction
 $f''(t)$ n'est pas continue (elle a des sauts).
 \begin{equation*}
 f''(t) = \sum_{n=1}^\infty \frac{-1}{n} \sin (n t) .
 \end{equation*}
-Cette fonction est similaire à la dent de scie. Si l'on essayait de dériver 
+Cette fonction est semblable aux dents de scie. Si l'on essayait de dériver 
 la série à nouveau, on obtiendrait
 \begin{equation*}
 \sum_{n=1}^\infty -\cos (n t) ,
 \end{equation*}
-qui ne converge pas!
+qui ne converge pas !
 
 \begin{exercise}
 Utilisez un ordinateur pour tracer la série qu'on a obtenue pour $f(t)$, $f'(t)$ et
-$f''(t)$.  Autrement dit, tracer les 5 premières harmoniques des fonctions. À quels
- points  $f''(t)$ a-t-elle des discontinuités?
+$f''(t)$.  Autrement dit, tracez les 5 premières harmoniques des fonctions. À quels
+ points  $f''(t)$ a-t-elle des discontinuités ?
 \end{exercise}
 
 \subsection{Exercices}
