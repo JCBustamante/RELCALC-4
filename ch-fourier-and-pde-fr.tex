@@ -1792,59 +1792,51 @@ Cette observation n'est pas une coïncidence. Regardons les fonctions périodiqu
 
 Rappelons-nous qu'une fonction $f(t)$ est \emph{impaire}\index{odd function} si $f(-t) =
 -f(t)$.  Une fonction $f(t)$ est \emph{paire}\index{even function} si
-$f(-t) = f(t)$.  Par exemple, $\cos (n t)$ est paire et  $\sin (n t)$ est impaire.
-De même, la fonction $t^k$est paire si $k$ est paire et impaire si $k$ est impaire.
+$f(-t) = f(t)$.  Par exemple, $\cos (n t)$ est paire, et  $\sin (n t)$ est impaire.
+De même, la fonction $t^k$ est paire si $k$ est pair, et impaire si $k$ est impair.
 
 \begin{exercise}
-Prenez deux fonctions $f(t)$ et $g(t)$ et définissez leur produit $h(t) =
+Prenez deux fonctions $f(t)$ et $g(t)$, et définissez leur produit $h(t) =
 f(t)g(t)$.
 \begin{tasks}
 \task Supposez que $f(t)$ et $g(t)$ sont impaires.  Est-ce que $h(t)$ est impaire ou paire?
-\task Supposez que l'une est paire et l'autre est impaire. Est-ce que $h(t)$ est impaire ou paire?
+\task Supposez que l'une est paire et que l'autre est impaire. Est-ce que $h(t)$ est impaire ou paire?
 \task Supposez que les deux sont paires. Est-ce que $h(t)$ est impaire ou paire?
 \end{tasks}
 \end{exercise}
 
-Si $f(t)$ et $g(t)$ sont toutes les deux impaires, alors $f(t)+g(t)$ est impaire.  De même, pour
-des fonctions paires. D'autre part,
-si  $f(t)$ est impaire et $g(t)$est paire,  alors on ne peut rien dire sur la somme
-$f(t) + g(t)$.  En fait, une série de Fourier est une somme d'une fonction impaire (les termes sinus) et d'une fonction paire (les termes cosinus).
+D'une part, si $f(t)$ et $g(t)$ sont toutes les deux impaires, alors $f(t)+g(t)$ est impaire.  De même pour des fonctions paires. D'autre part, si  $f(t)$ est impaire et que $g(t)$ est paire,  alors on ne peut rien dire sur la somme $f(t) + g(t)$.  En fait, une série de Fourier est la somme d'une fonction impaire (les termes sinus) et d'une fonction paire (les termes cosinus).
 
-Dans cette section, on considère les fonctions périodiques impaires et paires. On a défini précédemment l'extension $2L$-periodique de la fonction définie sur l'intervalle $[-L,L]$.  Parfois, on s'intéresse seulement aux fonctions dans l'intervalle $[0,L]$ et ce serait pratique pour avoir une fonction impaire (resp. \ paire). Si la fonction est impaire (resp. \ paire), tous les termes cosinus (resp. \ sine) disparaissent.
-Ce que nous allons faire est prendre l'extension impaire (resp. \ paire) de la fonction à $[-L,L]$ 
+Dans cette section, on considère les fonctions périodiques impaires et paires. On a défini précédemment l'extension $2L$-périodique de la fonction définie sur l'intervalle $[-L,L]$. Parfois, on s'intéresse seulement aux fonctions dans l'intervalle $[0,L]$, et ce serait pratique pour avoir une fonction impaire (resp. paire). Si la fonction est impaire (resp. paire), tous les termes cosinus (resp. sinus) disparaissent.
+Ce que nous allons faire est prendre l'extension impaire (resp. paire) de la fonction à $[-L,L]$ 
 puis l'étendre périodiquement à une fonction $2L$-périodique.  
 
-On prend une fonction $f(t)$ définie sur $[0,L]$.  Sur $(-L,L]$ la fonction est définie.
+On prend une fonction $f(t)$ définie sur $[0,L]$.  Sur $(-L,L]$, la fonction est définie.
 \begin{align*}
-F_{\text{impaire}}(t) & \overset{\text{def}}{=}
+F_{\text{impaire}}(t) & \overset{\text{déf}}{=}
 \begin{cases}
 f(t) & \text{si } \; \phantom{-}0 \leq t \leq L , \\
 -f(-t) & \text{si } \; {-L} < t < 0 ,
 \end{cases}
 \\
-F_{\text{paire}}(t) & \overset{\text{def}}{=}
+F_{\text{paire}}(t) & \overset{\text{déf}}{=}
 \begin{cases}
 f(t) & \text{si } \; \phantom{-}0 \leq t \leq L , \\
 f(-t) & \text{si } \; {-L} < t < 0 .
 \end{cases}
 \end{align*}
-On étend $F_{\text{impaire}}(t)$ et $F_{\text{paire}}(t)$ à une $2L$-periodique.
-Alors
-$F_{\text{impaire}}(t)$ est appelée l' \emph{\myindex{extension périodique impaire}} de $f(t)$, et
-$F_{\text{paire}}(t)$ est appelée l'
-\emph{\myindex{extension périodique paire}} de $f(t)$.
+On étend $F_{\text{impaire}}(t)$ et $F_{\text{paire}}(t)$ à une $2L$-périodique.
+Alors, $F_{\text{impaire}}(t)$ est appelée l' \emph{\myindex{extension périodique impaire}} de $f(t)$, et $F_{\text{paire}}(t)$ est appelée l'\emph{\myindex{extension périodique paire}} de $f(t)$.  % TODO enelver espace apres l' 
 Pour l'extension impaire, on suppose généralement que $f(0) = f(L) = 0$.
 
 \begin{exercise}
 Vérifiez que $F_{\text{impaire}}(t)$ est impaire et que  $F_{\text{paire}}(t)$ est paire.
-Pour $F_{\text{impaire}}$,
-assumez $f(0) = f(L) = 0$.
+Pour $F_{\text{impaire}}$, supposez que $f(0) = f(L) = 0$.
 \end{exercise}
 
 \begin{example}
-Prenez la fonction $f(t) = t\,(1-t)$ definie sur $[0,1]$. 
-La \figurevref{scs:oddevenextfig}
-montre les graphiques des extensions périodiques impaires et paires de $f(t)$.
+Prenez la fonction $f(t) = t\,(1-t)$ définie sur $[0,1]$. 
+La \figurevref{scs:oddevenextfig} montre les graphes des extensions périodiques impaires et paires de $f(t)$.  % TODO regler langue de reference (on the facing page)
 
 \begin{myfig}
 \capstart
@@ -1852,25 +1844,20 @@ montre les graphiques des extensions périodiques impaires et paires de $f(t)$.
 \diffyincludegraphics{width=6.24in}{width=9in}{scs-ext-odd-even}
 \caption{Extension 2-périodique impaire et paire de $f(t) =
 t\,(1-t)$, $0 \leq t \leq 1$.\label{scs:oddevenextfig}}
-\end{myfig}
+\end{myfig}  % TODO 0.0 deux fois sur l'axe, devrait etre 0.1
 \end{example}
 
 \subsection{Séries sinus et cosinus}
 
-Soit $f(t)$ une fonction $2L$-periodique impaire.  On écrit
-la série de Fourier pour $ f (t) $. Tout d'abord, on calcule les coefficients $a_n$ (incluant
-$n=0$) et l'on obtient
+Soit $f(t)$ une fonction $2L$-périodique impaire.  On écrit la série de Fourier pour $f(t)$. Tout d'abord, on calcule les coefficients $a_n$ (incluant $n=0$) et l'on obtient
 \begin{equation*}
 a_n = \frac{1}{L} \int_{-L}^L f(t) \cos \left( \frac{n \pi}{L} t \right)
 \, dt = 0 .
 \end{equation*}
 Autrement dit, il n'y a pas de terme cosinus dans la série de Fourier d'une fonction impaire.
-L'intégrale est nulle, car $f(t) \cos \left( {n \pi}{L} t \right)$
-est une fonction impaire (le produit d'une fonction impaire et d'une
-fonction paire est impaire) et l'intégrale d'une fonction impaire sur un intervalle symétrique est toujours égal à zéro. L'intégrale d'une fonction paire sur un intervalle symétrique
-$[-L,L]$  est le double de l'intégrale de la fonction sur l'intervalle $[0,L]$.
-La fonction $f(t) \sin \left( \frac{n \pi}{L} t \right)$ est le produit de deux fonctions impaires
-et est donc paire.
+L'intégrale est nulle, car $f(t) \cos \left( {n \pi}{L} t \right)$ est une fonction impaire (le produit d'une fonction impaire et d'une fonction paire est impaire), et l'intégrale d'une fonction impaire sur un intervalle symétrique est toujours égale à zéro. 
+L'intégrale d'une fonction paire sur un intervalle symétrique $[-L,L]$ est le double de l'intégrale de la fonction sur l'intervalle $[0,L]$.
+La fonction $f(t) \sin \left( \frac{n \pi}{L} t \right)$ est le produit de deux fonctions impaires et est donc paire.
 \begin{equation*}
 b_n = 
 \frac{1}{L} \int_{-L}^L f(t) \sin \left( \frac{n \pi}{L} t \right) \, dt =
@@ -1881,35 +1868,31 @@ On écrit maintenant la série de Fourier de $f(t)$ comme
 \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t \right) .
 \end{equation*}
 
-De même, si $f(t)$ est une fonction  $2L$-périodique paire.  Pour le même 
-raison que ci-dessus, on constate que $b_n = 0$ et
+De même si $f(t)$ est une fonction  $2L$-périodique paire. Pour la même raison que ci-dessus, on constate que $b_n = 0$ et 
 \begin{equation*}
 a_n = 
 \frac{2}{L} \int_{0}^L f(t) \cos \left( \frac{n \pi}{L} t \right) \, dt .
 \end{equation*}
-La formule fonctionne toujours pour $n=0$, auquel cas il devient
+La formule fonctionne toujours pour $n=0$, auquel cas on obtient
 \begin{equation*}
 a_0 = 
 \frac{2}{L} \int_{0}^L f(t) \, dt .
 \end{equation*}
-La série Fourier est alors
+La série de Fourier est alors
 \begin{equation*}
 \frac{a_0}{2}
 +
 \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right) .
 \end{equation*}
 
-Une conséquence intéressante est que les coefficients de la série de Fourier d'une fonction impaire (ou paire) peuvent être calculés en intégrant simplement sur la moitié de l'intervalle $[0,L]$.  Par conséquent, on peut calculer la série de Fourier de
-l'extension impaire (ou paire) d'une fonction en calculant certaines intégrales sur l'intervalle
-où la fonction d'origine est définie.
+Une conséquence intéressante est que les coefficients de la série de Fourier d'une fonction impaire (ou paire) peuvent être calculés en intégrant simplement sur la moitié de l'intervalle $[0,L]$. Par conséquent, on peut calculer la série de Fourier de l'extension impaire (ou paire) d'une fonction en calculant certaines intégrales sur l'intervalle où la fonction d'origine est définie.
 
 \begin{theorem}
 Soit $f(t)$ une fonction lisse par morceaux définie sur $[0,L]$.
-Puis l'extension périodique impaire
-de $f(t)$ a la série Fourier
+Alors l'extension périodique impaire de $f(t)$ a la série Fourier
 \begin{equation*}
 \mybxbg{~~
-F_{\text{odd}}(t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t
+F_{\text{impaire}}(t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t
 \right) ,
 ~~}
 \end{equation*}
@@ -1923,7 +1906,7 @@ b_n =
 L'extension périodique paire de $f (t)$ a la série de Fourier
 \begin{equation*}
 \mybxbg{~~
-F_{\text{even}}(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left(
+F_{\text{paire}}(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left(
 \frac{n \pi}{L} t \right) ,
 ~~}
 \end{equation*}
@@ -1937,28 +1920,20 @@ a_n =
 \end{theorem}
 
 On appelle la série $\sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t\right)$ 
-la \emph{\myindex{série sinus}} de  $f(t)$ et l'on appelle la série
-$\frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t
-\right)$
-la \emph{\myindex{série cosinus}} de $f(t)$.  
-On ne se soucie pas souvent de ce qui se passe en dehors de $ [0, L] $. Dans ce cas,
+la \emph{\myindex{série sinus}} de  $f(t)$, et l'on appelle la série
+$\frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right)$ la \emph{\myindex{série cosinus}} de $f(t)$.
+On ne se soucie pas souvent de ce qui se passe en dehors de $[0, L]$. Dans ce cas,
 on choisit la série qui correspond le mieux au problème.
 
 Il n'est pas nécessaire de commencer par la série de Fourier complète pour obtenir
-les séries de sinus et de cosinus. La série de sinus est en réalité le développement des fonctions propres de $ f (t) $ en utilisant les
-fonctions propres du problème des valeurs propres $x''+\lambda x = 0$, $x(0) = 0$,
-$x(L) = L$.  La série de cosinus est le développement des fonctions propres de $ f (t) $
-en utilisant les fonctions propres du problème des valeurs propres $x''+\lambda x = 0$, $x'(0) = 0$,
-$x'(L) = L$.  On aurait donc pu obtenir les mêmes formules
-en définissant le produit intérieur
+les séries de sinus et de cosinus. La série sinus est en réalité le développement des fonctions propres de $f(t)$ en utilisant les fonctions propres du problème des valeurs propres $x''+\lambda x = 0$, $x(0) = 0$, $x(L) = L$.
+La série cosinus est le développement des fonctions propres de $f(t)$ en utilisant les fonctions propres du problème des valeurs propres $x''+\lambda x = 0$, $x'(0) = 0$, $x'(L) = L$.
+On aurait donc pu obtenir les mêmes formules en définissant le produit intérieur
 \begin{equation*}
-\langle f(t), g(t) \rangle = \int_0^L f(t) g(t) \, dt ,
+\langle f(t), g(t) \rangle = \int_0^L f(t) g(t) \, dt
 \end{equation*}
-et en suivant la procédure de \sectionref{ts:section}.  Ce point de vue est
-utile, car on utilise couramment une série spécifique qui est née de la question sous-jacente qui a
-conduit à un certain problème de valeur propre. Si la valeur propre du
-problème n'est pas l'une des trois que nous avons abordées jusqu'à présent, on peut toujours faire un
-développement des fonctions propres en généralisant les résultats de ce chapitre. (Voir les références pour en savoir plus long.)
+et en suivant la procédure de \sectionref{ts:section}. Ce point de vue est
+utile, car on utilise couramment une série spécifique qui est née de la question sous-jacente qui a conduit à un certain problème de valeurs propres. Si la valeur propre du problème n'est pas l'une des trois que nous avons abordées jusqu'à présent, on peut toujours faire un développement des fonctions propres en généralisant les résultats de ce chapitre (voir les références pour en savoir plus).
 %On va
 %faire face à une telle généralisation dans le \chapterref{SL:chapter}.
 
@@ -1967,7 +1942,7 @@ développement des fonctions propres en généralisant les résultats de ce chap
 %+ b_n \sin \left( \frac{n \pi}{L} t \right) ,
 
 \begin{example}
-Trouvez la série de Fourier de l'extension périodique paire de
+Trouvons la série de Fourier de l'extension périodique paire de
 la fonction $f(t) = t^2$ pour $0 \leq t \leq \pi$.
 
 On veut écrire
@@ -1977,7 +1952,7 @@ f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) ,
 où
 \begin{equation*}
 a_0 = \frac{2}{\pi}
-\int_0^\pi t^2 \, dt = \frac{2 \pi^2}{3} ,
+\int_0^\pi t^2 \, dt = \frac{2 \pi^2}{3}
 \end{equation*}
 et
 \begin{equation*}
@@ -1997,11 +1972,9 @@ a_n & = \frac{2}{\pi}
 \frac{4{(-1)}^n}{n^2} .
 \end{split}
 \end{equation*}
-Notez qu'on a \myquote{detecté} la continuité de l'extension depuis le
-les coefficients décroissants comme $ \ frac {1} {n ^ 2} $. Autrement dit, l'extension périodique paire
-de $ t ^ 2 $ n'a pas de discontinuités de saut. Elle a des coins, car
-la dérivée, qui est une fonction impaire et une série sinus, a des sauts; il existe
-une série de Fourier dont les coefficients sont seulement décroissants comme $ \ frac {1} {n} $. 
+Notez qu'on a \myquote{détecté} la continuité de l'extension depuis les coefficients décroissants comme $\frac{1}{n^2}$.  % TODO : myquote guillemets francais
+Autrement dit, l'extension périodique paire de $t^2 $ n'a pas de discontinuités de saut. Elle a des coins, car la dérivée, qui est une fonction impaire et une série sinus, a des sauts.
+Il existe une série de Fourier dont les coefficients sont seulement décroissants comme $\frac{1}{n}$.
 
 Explicitement, les premiers termes de la série sont
 \begin{equation*}
@@ -2012,7 +1985,7 @@ Explicitement, les premiers termes de la série sont
 \begin{exercise}
 \leavevmode
 \begin{tasks}
-\task Calculez la dérivée de l'extension périodique paire de $ f (t) $ ci-dessus et vérifiez s'il y a des sauts de discontinuité. Utilisez la définition réelle de $ f (t) $, pas sa série cosinus!
+\task Calculez la dérivée de l'extension périodique paire de $ f (t) $ ci-dessus et vérifiez s'il y a des discontinuités de saut. Utilisez la définition réelle de $ f (t) $, pas sa série cosinus!
 \task Pourquoi est-ce que la dérivée de l'extension périodique paire de $ f (t) $ est l'extension périodique impaire de $ f '(t) $?
 \end{tasks}
 \end{exercise}
@@ -2022,32 +1995,28 @@ Explicitement, les premiers termes de la série sont
 La série de Fourier est liée aux problèmes de valeurs limites
 qu'on a étudiés plus tôt. Voyons cette connexion dans une application.
 
-Considérons le problème de valeur limite pour $0 < t < L$,
+Considérons le problème de valeurs limites pour $0 < t < L$,
 \begin{equation*}
 x''(t) + \lambda\, x(t) = f(t) ,
 \end{equation*}
-pour les \emph{\myindex{conditions aux frontières de Dirichlet}}
-$x(0) = 0$, $x(L) = 0$.
-L'alternative de Fredholm(\thmvref{thm:fredholmsimple})
-dit que tant que $ \ lambda $ n'est pas une valeur propre du problème homogène sous-jacent, il existe une solution unique.
+pour les \emph{\myindex{conditions aux frontières de Dirichlet}} $x(0) = 0$, $x(L) = 0$.
+L'alternative de Fredholm (\thmvref{thm:fredholmsimple}) dit que tant que $\lambda$ n'est pas une valeur propre du problème homogène sous-jacent, il existe une solution unique.
 Les fonctions propres de ce problème de valeurs propres sont les fonctions
 $\sin \left( \frac{n \pi}{L} t \right)$.
 Donc, pour trouver la solution, on trouve d'abord la série sinus de Fourier pour $ f (t) $.
-Ont écrit $ x $ également sous forme de série sinus, mais avec des coefficients inconnus.
-On substitue la série pour $ x $ dans l'équation et l'on résout avec les coefficients inconnus.
-Si l'on a
-la \emph{\myindex{condition à la frontière Neumann}}
-$x'(0) = 0$, $x'(L) = 0$, on suit la même procédure en utilisant la série cosinus.
+On écrit $x$ également sous forme de série sinus, mais avec des coefficients inconnus.
+On substitue la série à $x$ dans l'équation et on résout avec les coefficients inconnus.
+Si l'on a la \emph{\myindex{condition à la frontière Neumann}} $x'(0) = 0$, $x'(L) = 0$, on suit la même procédure en utilisant la série cosinus.
 
-On voit comment cette méthode fonctionne avec des exemples.
+Voyons comment cette méthode fonctionne avec des exemples.
 
 \begin{example}
-Prenons le problème à valeur limite pour $0 < t < 1$,
+Prenons le problème à valeurs limites pour $0 < t < 1$
 \begin{equation*}
 x''(t) + 2 x(t) = f(t) ,
 \end{equation*}
-où $f(t) = t$ on $0 < t < 1$, et satisfaisant à la condition aux frontières de Dirichlet  $x(0) = 0$, $x(1)=0$.
-On écrit $f(t)$ comme une série sinus
+où $f(t) = t$ pour $0 < t < 1$, et satisfaisant à la condition aux frontières de Dirichlet  $x(0) = 0$, $x(1)=0$.
+On écrit $f(t)$ comme une série sinus :
 \begin{equation*}
 f(t) = \sum_{n=1}^\infty c_n \sin (n \pi t) .
 \end{equation*}
@@ -2055,7 +2024,7 @@ On calcule
 \begin{equation*}
 c_n = 2 \int_0^1 t \sin (n \pi t) \,dt = \frac{2 \, {(-1)}^{n+1}}{n \pi} .
 \end{equation*}
-on écrit  $x(t)$ comme
+On écrit  $x(t)$ comme
 \begin{equation*}
 x(t) = \sum_{n=1}^\infty b_n \sin (n \pi t) .
 \end{equation*}
@@ -2094,17 +2063,17 @@ b_n
 =
 \frac{2\,{(-1)}^{n+1}}{n \pi (2 - n^2 \pi^2)} .
 \end{equation*}
-Puisque $ 2 $ n'est pas une valeur propre du problème, on a que $ 2-n ^ 2 \ pi ^ 2 $ n'est pas nul pour tout $ n $, et qu'on peut résoudre pour $ b_n $. On a ainsi obtenu une série de Fourier pour la solution
+Puisque $ 2 $ n'est pas une valeur propre du problème, on a que $ 2-n ^ 2 \ pi ^ 2 $ n'est pas nul pour tout $ n $ et qu'on peut résoudre pour $ b_n $. On a ainsi obtenu une série de Fourier pour la solution :
 \begin{equation*}
 x(t) = 
 \sum_{n=1}^\infty
 \frac{2\,{(-1)}^{n+1}}{n \pi \,(2 - n^2 \pi^2)}
 \sin (n \pi t) .
 \end{equation*}
-Regardons \figurevref{bnd-dirich-graph:fig} pour le graphique de la solution.
-On note que puisque les fonctions propres satisfont aux conditions aux limites,
+Regardons la \figurevref{bnd-dirich-graph:fig} pour le graphe de la solution.
+On note que, puisque les fonctions propres satisfont aux conditions aux limites
 et que $ x $ s'écrit en fonction des conditions aux limites, alors $ x $
-satisfait aux conditions aux limites
+satisfait aux conditions aux limites.
 \begin{myfig}
 \capstart
 \diffyincludegraphics{width=3in}{width=4.5in}{bnd-dirich-graph}
@@ -2115,31 +2084,30 @@ satisfait aux conditions aux limites
 
 \begin{example}
 De même, on traite les conditions de Neumann.
-On prend le problème de la valeur limite pour $0 < t < 1$,
+On prend le problème de la valeur limite pour $0 < t < 1$
 \begin{equation*}
 x''(t) + 2 x(t) = f(t) ,
 \end{equation*}
-où $f(t) = t$ sur $0 < t < 1$, mais maintenant satisfaisant
-aux conditions aux limites de Neumann
+où $f(t) = t$ sur $0 < t < 1$, mais maintenant satisfaisant aux conditions aux limites de Neumann
 $x'(0) = 0$, $x'(1)=0$.
-On écrit $f(t)$ comme une série cosinue
+On écrit $f(t)$ comme une série cosinus :
 \begin{equation*}
 f(t) = \frac{c_0}{2} + \sum_{n=1}^\infty c_n \cos (n \pi t) ,
 \end{equation*}
 où
 \begin{equation*}
-c_0 = 2 \int_0^1 t \,dt = 1 ,
+c_0 = 2 \int_0^1 t \,dt = 1
 \end{equation*}
 et
 \begin{equation*}
 c_n = 2 \int_0^1 t \cos (n \pi t) \,dt =
 \frac{2\bigl({(-1)}^n-1\bigr)}{\pi^2 n^2} = 
 \begin{cases}
-\frac{-4}{\pi^2 n^2} & \text{if } n \text{ odd} , \\
-0 & \text{if } n \text{ even}.
+\frac{-4}{\pi^2 n^2} & \text{si } n \text{ est impair} , \\
+0 & \text{si } n \text{ est pair}.
 \end{cases}
 \end{equation*}
-on écrit $x(t)$ comme une série cosinus
+On écrit $x(t)$ comme une série cosinus :
 \begin{equation*}
 x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t) .
 \end{equation*}
@@ -2160,12 +2128,12 @@ a_0 +
 & = f(t)
 =
 \frac{1}{2} +
-\sum_{\substack{n=1\\n~\text{odd}}}^\infty
+\sum_{\substack{n=1\\n~\text{impair}}}^\infty
 \frac{-4}{\pi^2 n^2} \cos (n \pi t) .
 \end{split}
 \end{equation*}
-Donc, $a_0 = \frac{1}{2}$, $a_n = 0$ pour $n$ paire ($n \geq 2$) et pour
-$n$ impaire on a
+Donc, $a_0 = \frac{1}{2}$, $a_n = 0$ pour $n$ pair ($n \geq 2$) et, pour
+$n$ impair, on a
 \begin{equation*}
 a_n (2 - n^2 \pi^2)
 =
@@ -2177,11 +2145,11 @@ a_n
 =
 \frac{-4}{n^2 \pi^2 (2 - n^2 \pi^2)} .
 \end{equation*}
-La série Fourier pour la solution $x(t)$ est
+La série de Fourier pour la solution $x(t)$ est
 \begin{equation*}
 x(t) = 
 \frac{1}{4} +
-\sum_{\substack{n=1\\n~\text{odd}}}^\infty
+\sum_{\substack{n=1\\n~\text{impair}}}^\infty
 \frac{-4}{n^2 \pi^2 (2 - n^2 \pi^2)} 
 \cos (n \pi t) .
 \end{equation*}
@@ -2265,7 +2233,7 @@ Soit $f(t) = \nicefrac{t}{3}$ sur $0 \leq t < 3$.
 a)
 $\nicefrac{1}{2}
 +
-\sum\limits_{\substack{n=1\\n\text{ odd}}}^\infty
+\sum\limits_{\substack{n=1\\n\text{ impair}}}^\infty
 \frac{-4}{\pi^2 n^2}
 \cos\bigl(\frac{n\pi}{3} t \bigr)$
 \qquad
@@ -2287,7 +2255,7 @@ a)
 $\cos(2t)$
 \qquad
 b) 
-$\sum\limits_{\substack{n=1 \\n \text{ odd}}}^\infty
+$\sum\limits_{\substack{n=1 \\n \text{ impair}}}^\infty
 \frac{-4n}{\pi n^2 - 4 \pi}
 \sin(n t)$
 }
@@ -2295,7 +2263,7 @@ $\sum\limits_{\substack{n=1 \\n \text{ odd}}}^\infty
 \begin{exercise}
 Soit $f(t)$ définie sur $0 \leq t < 1$.  Maintenant prenez
 la moyenne des deux extensions
-$g(t) = \frac{F_{\text{odd}}(t)+ F_{\text{even}}(t)}{2}$.
+$g(t) = \frac{F_{\text{impaire}}(t)+ F_{\text{paire}}(t)}{2}$.
 \begin{tasks}(2)
 \task Qu'est-ce que $g(t)$ si $0 \leq t < 1$ (Justifiez!)
 \task Qu'est-ce que $g(t)$ si $-1 < t < 0$ (Justifiez!)
@@ -2494,7 +2462,7 @@ b_n =
 
 La solution périodique constant a la série de Fourier
 \begin{equation*}
-x_{sp}(t) = \frac{1}{4} + \sum_{\substack{n=1 \\ n \text{ odd}}}^\infty
+x_{sp}(t) = \frac{1}{4} + \sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{2}{\pi n (2 - n^2 \pi^2 )}
 \sin (n \pi t) .
 \end{equation*}
@@ -2612,7 +2580,7 @@ x_p''(t) =
 \pi \, \cos (3 \pi t) - 9\pi^2 b_3 \, t \, \sin (3 \pi t)
 \\
 {} +
-\sum_{\substack{n=1 \\ n~\text{odd} \\ n\not= 3}}^\infty
+\sum_{\substack{n=1 \\ n~\text{impair} \\ n\not= 3}}^\infty
 (-n^2 \pi^2 b_n ) \,
 \sin (n \pi t) . 
 \end{multline*}
@@ -2643,7 +2611,7 @@ On simplifie
 12 b_3
 \pi \cos (3 \pi t)
 +
-\sum_{\substack{n=1 \\ n~\text{odd} \\ n\not= 3}}^\infty
+\sum_{\substack{n=1 \\ n~\text{impair} \\ n\not= 3}}^\infty
 (-2n^2 \pi^2 b_n + 18\pi^2 b_n)
 \sin (n \pi t) . 
 \end{equation*}
@@ -2663,7 +2631,7 @@ x_p(t) =
 \,
 t \, \cos (3 \pi t)
 +
-\sum_{\substack{n=1 \\ n~\text{odd} \\ n\not= 3}}^\infty
+\sum_{\substack{n=1 \\ n~\text{impair} \\ n\not= 3}}^\infty
 \frac{2}{\pi^3 n(9 - n^2)}
 \sin (n \pi t) . 
 \end{equation*}
@@ -3043,7 +3011,7 @@ La solution $u(x,t)$,  dans le graphique
 est donnée par la série:
 \begin{equation*}
 u(x,t) = 
-\sum_{\substack{n=1 \\ n \text{ odd}}}^\infty
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{400}{\pi^3 n^3}
 \sin (n \pi x )
 \, e^{-n^2 \pi^2 \, 0.003 \, t} .
@@ -3063,7 +3031,7 @@ le milieu du fil.  Le graphique de $ u (x, t) $ confirme cette intuition.
 Si l'on branche $ x = 0,5 $,  on obtient
 \begin{equation*}
 u(0.5,t) = 
-\sum_{\substack{n=1 \\ n \text{ odd}}}^\infty
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{400}{\pi^3 n^3}
 \sin (n \pi\, 0.5 )
 \, e^{-n^2 \pi^2 \, 0.003 \, t} .
