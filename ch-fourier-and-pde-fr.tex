@@ -2310,22 +2310,17 @@ $\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)$
 \inputpdft{massfigforce}
 \end{mywrapfigsimp}
 Revenons aux oscillations forcées. Considérons un système masse-ressort comme
-avant, où nous avons une masse $ m $
-sur un ressort ayant une constante de ressort $ k $,
-avec un amortissement $ c $, et une force $ F (t) $ est appliquée à la masse. Supposons que
-la fonction de forçage $ F (t) $ est $ 2L $ -périodique pour un certain $ L> 0 $.
-Nous avons vu
-ce problème dans le \chapterref{ho:chapter} avec $ F (t) = F_0 \cos (\omega t) $. L'équation qui régit cette configuration particulière est
+précédemment, où nous avons une masse $m$ sur un ressort ayant une constante de ressort $k$, avec un amortissement $c$, et une force $F(t)$ est appliquée à la masse. 
+Supposons que la fonction de forçage $ F (t) $ est $2L$-périodique pour un certain $L > 0$.
+Nous avons vu ce problème dans le \chapterref{ho:chapter} avec $ F (t) = F_0 \cos (\omega t) $. L'équation qui régit cette configuration particulière est
 \begin{equation} \label{afs:eq}
 mx''(t) + cx'(t) + kx(t) = F(t) .
 \end{equation}
 
-La solution générale de \eqref{afs:eq} consiste en la solution complémentaire $ x_c $, qui
-résout l'équation homogène associée $ mx '' + cx '+ kx = 0 $, et
-une solution particulière de \eqref{afs:eq} qu'on appelle $ x_p $. Pour $ c> 0 $,
+La solution générale de \eqref{afs:eq} consiste en la solution complémentaire $ x_c $, qui résout l'équation homogène associée $mx'' + cx' + kx = 0$, et en une solution particulière de \eqref{afs:eq} qu'on appelle $x_p$. Pour $c > 0$,
 la solution complémentaire $ x_c $ est décroissante.
 Par conséquent, on s'intéresse surtout à la solution particulière $ x_p $ qui est périodique avec la même période que $ F (t) $. On appelle cette solution particulière la
-\emph{\myindex{solution périodique régulière}} et on l'écrit  $ x_ {sp} $ comme précédemment.
+\emph{\myindex{solution périodique régulière}} et on l'écrit  $ x_{sp} $ comme précédemment.
 Ce qui est nouveau dans cette section est que nous considérons une fonction forcée arbitraire $ F (t) $ au lieu d'un simple cosinus.
 
 Par souci de simplicité, supposons que $ c = 0 $. Le problème avec $ c> 0 $ est très
@@ -2346,7 +2341,7 @@ $mx''(t) + kx(t) = F(t)$ sont de la forme
 $A \cos (\omega_0 t) + B \sin (\omega_0 t) + x_{sp}$.
 La solution périodique constante $x_{sp}$ a la même période que  $F(t)$.
 
-Dans l'esprit de la dernière section et avec l'idée des coefficients indéterminés
+Dans l'esprit de la dernière section et avec l'idée des coefficients indéterminés,
 on écrit d'abord
 \begin{equation*}
 F(t) = \frac{c_0}{2} + \sum_{n=1}^\infty
@@ -2361,17 +2356,14 @@ b_n \sin \left( \frac{n \pi}{L} t \right) ,
 \end{equation*}
 où $a_n$ et $b_n$ sont inconnus.
 On remplace $x$ dans l'équation différentielle et l'on résout pour $a_n$ et pour
-$b_n$ en terme de $c_n$ et $d_n$.  Ce processus
-est souvent le mieux compris.
+$b_n$ en termes de $c_n$ et $d_n$. Ce processus est souvent le mieux compris.
 \pagebreak[2]
 
 \begin{example} \label{afs:steadyex}
-Supposons que $k=2$, et $m=1$.
-Les unités sont à nouveau les unités mks\index{mks units}
-(mètres-kilogrammes-secondes).
-Il y a un jetpack attaché à la masse, qui tire avec une force de 1
+Supposons que $k=2$ et $m=1$.
+Les unités sont de nouveau les unités mks\index{mks units} (mètres-kilogrammes-secondes).
+Il y a un \emph{jetpack} attaché à la masse, qui tire avec une force de 1
 newton pendant 1 seconde, puis s'éteint pendant 1 seconde, et ainsi de suite. On veut trouver la solution périodique constante.
-
 
 L'équation est donc
 \begin{equation*}
@@ -2381,11 +2373,11 @@ où $F(t)$ est la fonction intermédiaire
 \begin{equation*}
 F(t) =
 \begin{cases}
-0 & \text{if } \; {-1} < t < 0 , \\
-1 & \text{if } \; \phantom{-}0 < t < 1 ,
+0 & \text{si } \; {-1} < t < 0 , \\
+1 & \text{si } \; \phantom{-}0 < t < 1 ,
 \end{cases}
 \end{equation*}
-étend périodiquement.
+étendue périodiquement.
 On écrit
 \begin{equation*}
 F(t) = \frac{c_0}{2} + \sum_{n=1}^\infty
@@ -2395,7 +2387,7 @@ d_n \sin (n \pi t) .
 On calcule
 \begin{align*}
 c_n & = \int_{-1}^1 F(t) \cos (n \pi t) \, dt = 
-\int_{0}^1 \cos (n \pi t) \, dt = 0 \qquad \text{for } \; n \geq 1,
+\int_{0}^1 \cos (n \pi t) \, dt = 0 \qquad \text{pour } \; n \geq 1,
 \\
 c_0 & = \int_{-1}^1 F(t) \, dt = 
 \int_{0}^1 \, dt = 1 ,
@@ -2408,13 +2400,13 @@ d_n & = \int_{-1}^1 F(t) \sin (n \pi t) \, dt
 \\
 & = \frac{1-{(-1)}^n}{\pi n} =
 \begin{cases}
-\frac{2}{\pi n} & \text{if } n \text{ impaire} , \\
-0 & \text{if } n \text{ paire} .
+\frac{2}{\pi n} & \text{si } n \text{ est impair} , \\
+0 & \text{si } n \text{ est pair} .
 \end{cases}
 \end{align*}
-Alors
+Alors,
 \begin{equation*}
-F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
+F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{2}{\pi n} \sin (n \pi t) .
 \end{equation*}
 
@@ -2424,76 +2416,73 @@ x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty
 a_n \cos (n \pi t) +
 b_n \sin (n \pi t) .
 \end{equation*}
-On remplace $x$ idans l'équation différentielle $x''+2x = F(t)$,
-il est clair que $a_n = 0$ pour $n \geq 1$ car il n'y a pas de termes correspondants
-dans la série pour
-$F(t)$.  De manière similaire $b_n = 0$ pour $n$ pair.  Ainsi, on essaie
+
+On remplace $x$ dans l'équation différentielle $x''+2x = F(t)$.
+Il est clair que $a_n = 0$ pour $n \geq 1$, car il n'y a pas de termes correspondants
+dans la série pour $F(t)$.
+De manière similaire, $b_n = 0$ pour $n$ pair.  Ainsi, on essaie
 \begin{equation*}
 x(t) = \frac{a_0}{2} +
-\sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 b_n \sin (n \pi t) .
 \end{equation*}
 On remplace dans l'équation différentielle et l'on obtient 
 \begin{equation*}
 \begin{split}
 x'' + 2 x & =
-\sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \Bigl[ - b_n n^2 \pi^2 \sin (n \pi t) \Bigr] + 
 a_0 +
 2
-\sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \Bigl[ b_n \sin (n \pi t) \Bigr]
 \\
 & =
 a_0 +
-\sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 b_n (2 - n^2 \pi^2 ) \sin (n \pi t)
 \\
 & =
-F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
+F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{2}{\pi n} \sin (n \pi t) .
 \end{split}
 \end{equation*}
-Alors $a_0 = \frac{1}{2}$, $b_n = 0$ pour un $n$ pair, et pour un $n$ impair, on obtient 
+Alors, $a_0 = \frac{1}{2}$, $b_n = 0$ pour un $n$ pair, et, pour un $n$ impair, on obtient 
 \begin{equation*}
 b_n = 
 \frac{2}{\pi n (2 - n^2 \pi^2 )} .
 \end{equation*}
 
-La solution périodique constant a la série de Fourier
+La solution périodique constante a la série de Fourier
 \begin{equation*}
 x_{sp}(t) = \frac{1}{4} + \sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{2}{\pi n (2 - n^2 \pi^2 )}
 \sin (n \pi t) .
 \end{equation*}
-On sait que c'est la solution périodique constante car elle ne contient aucun terme
+On sait que c'est la solution périodique constante, car elle ne contient aucun terme
 de la solution complémentaire et elle est périodique avec la même période que
-$ F (t) $ lui-même. Regardons \figurevref{afs:steadyexfig} pour le graphique de cette solution.
+$ F (t) $ elle-même. Regardons la \figurevref{afs:steadyexfig} pour le graphe de cette solution.  % TODO : figurevref on the next page -> francais
 \begin{myfig}
 \capstart
 \diffyincludegraphics{width=3in}{width=4.5in}{afs-steadyex}
-\caption{Graphe de la fonction périodique constante  $x_{sp}$, de l' 
-\exampleref{afs:steadyex}.%
+\caption{Graphe de la fonction périodique constante  $x_{sp}$ de l'\exampleref{afs:steadyex}.
 \label{afs:steadyexfig}}
 \end{myfig}
 \end{example}
 
 \subsection{Résonance}
 
-Tout comme lorsque la fonction de forçage était un simple cosinus, on peut rencontrer de la 
-résonance. On suppose  que $ c = 0 $ et l'on discute seulement de la résonance pure.
-Soit $ F (t) $ $ 2L $-périodique et considérons
+Tout comme lorsque la fonction de forçage était un simple cosinus, on peut rencontrer de la résonance. On suppose  que $ c = 0 $ et on discute seulement de la résonance pure.
+Soit $ F (t) $ $ 2L $-périodique, et considérons
 \begin{equation*}
 m x''(t) + k x (t) = F(t) .
 \end{equation*}
-Lorsqu'on développe $ F (t) $, on constate que certains de ses termes coïncident avec le
-solution complémentaire à $ mx '' + kx = 0 $, on ne peut pas utiliser ces termes lorsqu'on
-devine. Comme avant, ils disparaissent quand on les insère dans le terme de gauche et l'on obtient une équation contradictoire (telle que $ 0 = 1 $). On suppose que
+Lorsqu'on développe $ F (t) $, on constate que certains de ses termes coïncident avec la solution complémentaire à $ mx '' + kx = 0 $; on ne peut pas utiliser ces termes lorsqu'on devine. Comme précédemment, ils disparaissent quand on les insère dans le terme de gauche et on obtient une équation contradictoire (telle que $ 0 = 1 $). On suppose que
 \begin{equation*}
 x_c = A \cos (\omega_0 t) + B \sin (\omega_0 t), 
 \end{equation*}
 où $\omega_0 = \frac{N \pi}{L}$ pour un certain entier positif $N$.
-On doit modifier notre supposition et essayer  
+Nous devons modifier notre supposition et essayer  
 \begin{equation*}
 x(t) = \frac{a_0}{2} +
 t \left(
@@ -2503,20 +2492,18 @@ b_N \sin \left( \frac{N \pi}{L} t \right) \right) +
 a_n \cos \left( \frac{n \pi}{L} t \right) +
 b_n \sin \left( \frac{n \pi}{L} t \right) .
 \end{equation*}
-En d'autres mots, on multiplie le terme par $ t $. AÀpartir de là, on
-procéde comme avant.
+En d'autres mots, on multiplie le terme par $ t $. À partir de là, on
+procède comme avant.
 
 Bien sûr, la solution n'est pas une série de Fourier (ce n'est même pas
 périodique), car elle contient les termes multipliés par $ t $. De plus, les
 termes
 $t \left( a_N \cos \left( \frac{N \pi}{L} t \right) +
-b_N \sin \left( \frac{N \pi}{L} t \right) \right)$ dominent éventuellement et mènent à une oscillation intense. Comme précédemment, ce comportement est appelé une  \emph{\myindex{ résonance pure}} ou  \emph{\myindex{résonance}}.
+b_N \sin \left( \frac{N \pi}{L} t \right) \right)$ dominent éventuellement et mènent à une oscillation intense. Comme précédemment, ce comportement est appelé une \emph{\myindex{résonance pure}} ou \emph{\myindex{résonance}}.
 
 On note qu'il peut maintenant y avoir une infinité de fréquences de résonance à atteindre.
 Autrement dit, lorsqu'on change la fréquence de $ F $ (on change $ L $),  différents termes de la série de Fourier de $ F $ peuvent interférer avec la solution complémentaire et provoquer une résonance.
-Cependant, il faut noter que puisque tout est une approximation et en
-particulier $ c $ n'est jamais réellement zéro, mais quelque chose de très proche de zéro,
-seulement la première fréquences de résonance compte dans la vraie vie.
+Cependant, il faut noter que, puisque tout est une approximation et en particulier $c$ n'est jamais réellement zéro, mais quelque chose très proche de zéro, seule la première fréquence de résonance compte dans la vraie vie.
 
 \begin{example}
 On veut résoudre l'équation
@@ -2528,13 +2515,13 @@ où
 F(t) =
 \begin{cases}
 -1 & \text{si } \; {-1} < t < 0 , \\
-1 & \text{si } \; \phantom{-}0 < t < 1 ,
+1 & \text{si } \; \phantom{-}0 < t < 1
 \end{cases}
 \end{equation*}
-étendue périodiquement.  On note que
+étendue périodiquement. On note que
 \begin{equation*}
 F(t) =
-\sum_{\substack{n=1 \\ n \text{ impaire}}}^\infty
+\sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{4}{\pi n}
 \sin (n \pi t) . 
 \end{equation*}
@@ -2551,11 +2538,9 @@ x(t) = c_1 \cos  (3\pi t) + c_2 \sin (3\pi t) + x_p (t)
 pour une solution particulière $x_p$.
 
 Si l'on essaie un $ x_p $ donné pour une série de Fourier avec $ \ sin (n \pi t) $ comme d'habitude,
-l'équation complémentaire, $ 2x''  + 18 \pi ^2x = 0 $, mange  l'harmonique $3 ^ \text{e} $. Autrement dit, le terme
-avec $ \sin (3 \pi t) $
-est déjà dans dans la solution complémentaire.
-Par conséquent, on retire ce terme et
-on le multiplie par $ t $. On ajoute également un terme cosinus pour que tout soit correct.
+l'équation complémentaire, $2x'' + 18 \pi ^2x = 0$, \myquote{mange} la troisième harmonique.  % TODO myquote guillemets francais
+Autrement dit, le terme avec $\sin(3 \pi t)$ est déjà dans la solution complémentaire.
+Par conséquent, on retire ce terme et on le multiplie par $t$. On ajoute également un terme cosinus pour que tout soit correct.
 Ainsi, on essaie
 \begin{equation*}
 x_p(t) =
@@ -2565,7 +2550,7 @@ t \cos (3 \pi t )
 b_3
 t \sin (3 \pi t)
 +
-\sum_{\substack{n=1 \\ n~\text{impaire} \\ n\not= 3}}^\infty
+\sum_{\substack{n=1 \\ n~\text{impair} \\ n \not= 3}}^\infty
 b_n
 \sin (n \pi t) . 
 \end{equation*}
@@ -2602,7 +2587,7 @@ On remplace maintenant du côté gauche de l'équation différentielle.
 (-2n^2 \pi^2 b_n + 18\pi^2 b_n) \,
 \sin (n \pi t) . 
 \end{align*}
-On simplifie
+On simplifie :
 \begin{equation*}
 2x_p'' + 18\pi^2 x_p =
 - 12 a_3
@@ -2616,12 +2601,12 @@ On simplifie
 \sin (n \pi t) . 
 \end{equation*}
 Cette série doit être égale à la série pour $F(t)$.
-On résolve pour $a_3$ et pour $b_n$.
+On résout pour $a_3$ et pour $b_n$.
 \begin{align*}
 & a_3 = \frac{4/(3\pi)}{-12\pi} = \frac{-1}{9\pi^2} , \\
 & b_3 = 0 , \\
 & b_n = \frac{4}{n\pi(18\pi^2 - 2n^2 \pi^2)} 
-= \frac{2}{\pi^3 n(9 - n^2)} \qquad \text{pour } n \text{ impaire et } n\not=3 .
+= \frac{2}{\pi^3 n(9 - n^2)} \qquad \text{pour } n \text{ impair et } n\not=3 .
 \end{align*}
 
 Ainsi,
@@ -2637,11 +2622,8 @@ t \, \cos (3 \pi t)
 \end{equation*}
 \end{example}
 
-Lorsque $ c> 0 $, on n'a pas à se soucier de la résonance pure. Il n'y a jamais de conflits et l'on n'a pas besoin de multiplier aucun terme par $ t $. Il existe un concept correspondant de \myindex{résonance pratique}
-et c'est très similaire aux idées qu'on a déjà explorées dans
-\chapterref{ho:chapter}.
-Fondamentalement, ce qui se passe dans la résonance pratique est que l'un des
- coefficients de la série pour $ x_ {sp} $ peut devenir très gros. On ne va pas s'intéresser à ces détails ici.  
+Lorsque $c > 0$, on n'a pas à se soucier de la résonance pure. Il n'y a jamais de conflits, et l'on n'a besoin de multiplier aucun terme par $t$. Il existe un concept correspondant de \myindex{résonance pratique}, et c'est très semblable aux idées qu'on a déjà explorées dans le \chapterref{ho:chapter}.
+Fondamentalement, ce qui se passe dans la résonance pratique est que l'un des coefficients de la série pour $ x_ {sp} $ peut devenir très gros. On ne va pas s'intéresser à ces détails ici.  
 
 \subsection{Exercises}
 

@@ -7,3 +7,5 @@
 *.ind
 *.fls
 *.fdb_latexmk
+*.idx
+*.synctex.gz
