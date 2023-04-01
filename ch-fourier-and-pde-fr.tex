@@ -3367,14 +3367,13 @@ a) $0$,
 %\S10.7 dans \cite{BD}}}
 %
 Imaginez avoir une corde de guitare tendue de longueur $ L $.  On considère les vibrations dans une seule direction.  
-Soit $ x $  la position le long de la chaîne,  soit $ t $ le temps,  et soit $ y $ le déplacement de la corde depuis la position de repos.
-Regardons
-\figurevref{we:vibstrfig}.
+Soit $ x $  la position le long de la corde,  soit $ t $ le temps,  et soit $ y $ le déplacement de la corde depuis la position de repos.
+Regardons la \figurevref{we:vibstrfig}.
 
 \begin{myfig}
 \capstart
 \inputpdft{sps-vibstr}
-\caption{Chaîne vibrante de longueur $ L $,  où $ x $ est la position et $ y $ est le déplacement.\label{we:vibstrfig}}
+\caption{Corde vibrante de longueur $ L $,  où $ x $ est la position et $ y $ est le déplacement.\label{we:vibstrfig}}
 \end{myfig}
 
 L'équation qui régit cette configuration se nomme
@@ -3386,23 +3385,21 @@ a^2 y_{xx} ,
 ~~}
 \end{equation*}
 pour une certaine constante $a > 0$.
-L'intuition est similaire à l'équation de la chaleur. En remplaçant la vitesse par
-l'accélération: l'accélération en un point spécifique qui est proportionnel à la seconde
-dérivé de la forme de la corde.  En d'autres termes,
-quand la chaîne est
-concave alors $u_{xx}$ est négatif et la chaîne veut accélérer
-vers le bas,  donc $u_{tt}$ devrait être négatif.  Et vice versa.
-L'équation d'onde est un exemple d'ÉDP hyperbolique.
+L'intuition est semblable à l'équation de la chaleur, en remplaçant la vitesse par
+l'accélération : l'accélération en un point spécifique est proportionnelle à la seconde
+dérivée de la forme de la corde.  En d'autres termes, quand la corde est
+concave, $u_{xx}$ est négatif, et la corde veut accélérer vers le bas, donc $u_{tt}$ devrait être négatif, et vice versa.
+L'équation d'onde est un exemple d'EDP hyperbolique.
 
-Supposons que les extrémités de la corde soient fixées comme sur la guitare:
+Supposons que les extrémités de la corde sont fixées comme sur une guitare :
 \begin{equation*}
 y(0,t) = 0 \qquad \text{et} \qquad y(L,t) = 0.
 \end{equation*}
 Notez qu'on a deux conditions le long de l'axe $ x $, car il y a
-deux dérivés dans la direction $ x $.
+deux dérivées dans la direction $ x $.
 
-Il existe également deux dérivés le long de la direction $ t $.  On a donc besoin
-deux autres conditions ici.  On doit connaître la position initiale
+Il existe également deux dérivées le long de la direction $ t $.  On a donc besoin
+de deux autres conditions ici.  On doit connaître la position initiale
 et la vitesse initiale de la corde.  Pour certaines fonctions $ f (x) $ et $ g (x) $, on impose
 \begin{equation*}
 y(x,0) = f(x)  \qquad \text{et} \qquad y_t (x,0) =
@@ -3421,7 +3418,7 @@ Les deux problèmes que nous allons résoudre sont
 w_{tt} = a^2 w_{xx} , &  \\
 w(0,t) = w(L,t) = 0 , &  \\
 w(x,0) = 0 & \qquad \text{pour } \; 0 < x < L , \\
-w_t(x,0) = g(x) & \qquad \text{pour } \; 0 < x < L ,
+w_t(x,0) = g(x) & \qquad \text{pour } \; 0 < x < L
 \end{array}
 \end{equation}
 et
@@ -3435,7 +3432,7 @@ z_t(x,0) = 0 & \qquad \text{pour } \; 0 < x < L .
 \end{equation}
 
 Le principe de superposition implique que 
-$y = w + z$ résolve l'équation d'onde et aussi 
+$y = w + z$ résout l'équation d'onde, et aussi que
 $y(x,0) = w(x,0) + z(x,0) = f(x)$ et
 $y_t(x,0) = w_t(x,0) + z_t(x,0) = g(x)$.  Par conséquent,  $y$ est une solution à 
 
@@ -3450,10 +3447,10 @@ y_t(x,0) = g(x) & \qquad \text{pour } \; 0 < x < L .
 
 La raison de toute cette complexité est que la superposition ne fonctionne que pour les
 conditions homogènes telles que
-$y(0,t) = y(L,t) = 0$, $y(x,0) = 0$,  ou $y_t(x,0) = 0$.  Par conséquent,
-on peut utiliser la séparation des variables pour trouver de nombreux élément appartenant à la
+$y(0,t) = y(L,t) = 0$, $y(x,0) = 0$ ou $y_t(x,0) = 0$.  Par conséquent,
+on peut utiliser la séparation des variables pour trouver de nombreux éléments appartenant à la
 solution résolvant toutes les conditions homogènes.  On peut  ensuite les utiliser pour
-construire une solution satisfaisant à la condition non homogène restante.
+construire une solution satisfaisant la condition non homogène restante.
 Commençons avec  \eqref{wave:weq}.
 On essaie une solution de la forme $w(x,t) = X(x) T(t)$.  On remplace dans l'équation d'onde et l'on obtient 
 \begin{equation*}
@@ -3463,18 +3460,18 @@ En réécrivant,  on obtient
 \begin{equation*}
 \frac{T''(t)}{a^2 T(t)} = \frac{X''(x)}{X(x)} .
 \end{equation*}
-Encore une fois, le côté gauche dépend seulement de $ t $ et le côté droit dépend
-seulement de $ x $.  Donc les deux côtés sont égales à une constante que l'on nomme
-$-\lambda$:
+Encore une fois, le côté gauche dépend seulement de $ t $, et le côté droit dépend
+seulement de $ x $.  Donc, les deux côtés sont égaux à une constante que l'on nomme
+$-\lambda$ :
 \begin{equation*}
 \frac{T''(t)}{a^2 T(t)} = -\lambda = \frac{X''(x)}{X(x)} .
 \end{equation*}
-On résolve pour obtenir deux équations différentielles ordinaires
+On résout pour obtenir deux équations différentielles ordinaires :
 \begin{align*}
 X''(x) + \lambda X(x) &= 0 , \\
 T''(t) + \lambda a^2 T(t) &= 0 .
 \end{align*}
-Les conditions $0 = w(0,t) = X(0) T(t)$ impliquent $X(0) = 0$ et
+Les conditions $0 = w(0,t) = X(0) T(t)$ impliquent que $X(0) = 0$, et
 $w(L,t) = 0$ implique que $X(L) = 0$.  Par conséquent,  les seules solutions non triviales
  pour la première équation sont 
 $\lambda = \lambda_n = \frac{n^2 \pi^2}{L^2}$ et elles sont
@@ -3486,7 +3483,7 @@ La solution générale pour $T$ pour un $\lambda_n$ particulier est
 T_n(t) = A \cos \left( \frac{n \pi a}{L} t \right)
 + B \sin \left( \frac{n \pi a}{L} t \right).
 \end{equation*}
-On résout aussi les conditions $w(x,0) = 0$ ou $X(x)T(0) = 0$.  Ce qui implique que $T(0) = 0$,  ce qui force $A = 0$.  Un choix judicieux est $B=\frac{L}{n \pi a}$ (vous verrez pourquoi dans un instant)
+On résout aussi les conditions $w(x,0) = 0$ ou $X(x)T(0) = 0$. Ceci implique que $T(0) = 0$,  ce qui force $A = 0$.  Un choix judicieux est $B=\frac{L}{n \pi a}$ (vous verrez pourquoi dans un instant),
 et alors
 \begin{equation*}
 T_n(t) = \frac{L}{n \pi a} \sin \left( \frac{n \pi a}{L} t \right).
@@ -3514,8 +3511,8 @@ On étend $g(x)$ en termes de ces sinus:
 g(x) =
 \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} x \right) .
 \end{equation*}
-En utilisant la superposition
-on écrit la solution à \eqref{wave:weq} comme une série
+En utilisant la superposition,
+on écrit la solution à \eqref{wave:weq} comme une série :
 \begin{equation*}
 w(x,t) =
 \sum_{n=1}^\infty
@@ -3534,20 +3531,20 @@ Vérifiez que $w(x,0) = 0$ et
 $w_t(x,0) = g(x)$.
 \end{exercise}
 
-On résout \eqref{wave:zeq} similarly.  On essaie encore
+On résout \eqref{wave:zeq} de façon sembable.  On essaie encore
 $z(x,y) = X(x)T(t)$.  
 La procédure fonctionne exactement de la même manière qu'avant.
 On obtient
 \begin{align*}
 X''(x) + \lambda X(x) &= 0 , \\
-T''(t) + \lambda a^2 T(t) &= 0 ,
+T''(t) + \lambda a^2 T(t) &= 0
 \end{align*}
-et les conditions $X(0) = 0$, $X(L) = 0$.  Alors encore une fois, 
-$\lambda = \lambda_n = \frac{n^2 \pi^2}{L^2}$ et
+et les conditions $X(0) = 0$, $X(L) = 0$.  Alors, encore une fois, 
+$\lambda = \lambda_n = \frac{n^2 \pi^2}{L^2}$, et
 \begin{equation*}
 X_n(x) = \sin \left( \frac{n \pi}{L} x \right) .
 \end{equation*}
-Cette fois,  la condition sur $T$ est $T'(0) = 0$.  Ainsi, on obtient que $B = 0$ et l'on prend
+Cette fois,  la condition sur $T$ est $T'(0) = 0$.  Ainsi, on obtient que $B = 0$, et l'on prend
 \begin{equation*}
 T_n(t) = \cos \left( \frac{n \pi a}{L} t \right).
 \end{equation*}
@@ -3558,12 +3555,12 @@ z_n(x,t) =
 \cos \left( \frac{n \pi a}{L} t \right) .
 \end{equation*}
 Comme $z_n(x,0) = \sin \left( \frac{n \pi}{L} x \right)$,
-on étend $f(x)$ en termes de ces sinus:
+on étend $f(x)$ en termes de ses sinus:
 \begin{equation*}
 f(x) =
 \sum_{n=1}^\infty c_n \sin \left( \frac{n \pi}{L} x \right) .
 \end{equation*}
-Et l'on écrit la solution à \eqref{wave:zeq} comme une série
+Et l'on écrit la solution à \eqref{wave:zeq} comme une série :
 \begin{equation*}
 z(x,t) =
 \sum_{n=1}^\infty
@@ -3577,8 +3574,8 @@ c_n
 \end{equation*}
 
 \begin{exercise}
-Remplissez les détails de la dérivé de la solution de \eqref{wave:zeq}.
-Vérifiez que la solution satisfait à toutes les conditions secondaires.
+Remplissez les détails de la dérivée de la solution de \eqref{wave:zeq}.
+Vérifiez que la solution satisfait toutes les conditions secondaires.
 \end{exercise}
 
 En réunissant ces deux solutions,  on obtient le théorème  suivant. 
@@ -3600,7 +3597,7 @@ f(x) =
 g(x) =
 \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} x \right) .
 \end{equation*}
-Alors la solution $ y (x, t) $ peut être écrite comme une somme des solutions
+Alors, la solution $ y (x, t) $ peut être écrite comme une somme des solutions
 de \eqref{wave:weq} et de  \eqref{wave:zeq}:
 \begin{equation*}
 \mybxbg{~~
@@ -3635,8 +3632,8 @@ c_n
 
 \begin{example} \label{example:pluckedstring}
 Considérons une corde de longueur 2 qui est pincée au milieu.
-Elle a une forme initiale donnée dans \ figurevref {wave: pluckedstrfig}.
-C'est,
+Elle a une forme initiale donnée dans la \figurevref{wave:pluckedstrfig}.
+C'est
 \begin{equation*}
 f(x) = \begin{cases}
 0.1\, x & \text{si } \; 0 \leq x \leq 1 , \\
@@ -3652,15 +3649,15 @@ l'\exampleref{example:pluckedstring}.\label{wave:pluckedstrfig}}
 \end{myfig}
 
 Laissons la corde commencer à la position de repos ($g(x) =
-0$), et laissons $a=1$ pour simplifier les choses.  En d'autres termes,  on souhaite
-résoudre le problème:
+0$) et supposons que $a=1$ pour simplifier les choses. En d'autres termes,  on souhaite
+résoudre le problème :
 \begin{align*}
 & y_{tt} = y_{xx}, \\
 & y(0,t) = y(2,t)= 0 , \\
 & y(x,0) = f(x) \quad \text{et} \quad y_t(x,0)= 0 .
 \end{align*}
 
-On laisse au lecteur le soin de calculer la série sinusoïdale de $ f (x) $.  La série
+On laisse en exercice le calcul de la série sinusoïdale de $ f (x) $.  La série
 sera
 \begin{equation*}
 f(x) = \sum_{n=1}^\infty
@@ -3671,7 +3668,7 @@ f(x) = \sum_{n=1}^\infty
 On note que
 $\sin \left( \frac{n \pi}{2} \right)$
 est la séquence $1, 0, -1, 0, 1, 0, -1, \ldots$
-for $n = 1,2,3,4,\ldots$.  Ainsi,
+pour $n = 1,2,3,4,\ldots$  Ainsi,
 \begin{equation*}
 f(x) = 
 \frac{0.8}{\pi^2}
@@ -3720,11 +3717,9 @@ y(x,t) & =
 
 Regardons la 
 \figureref{wave:pluckedexfig} pour un graphique où
- $0 < t < 3$.  On remarque 
-que contrairement à l'équation de la chaleur,  la solution ne devient pas
-\myquote{plus lisse}.  On verra la raison de ce comportement dans la
-section suivante où on dérira la solution de l'équation d'onde d'une autre
-façon.
+$0 < t < 3$.  On remarque que, contrairement à l'équation de la chaleur,  la solution ne devient pas plus \myquote{lisse}. On verra la raison de ce comportement dans la
+section suivante, où l'on décrira la solution de l'équation d'onde d'une autre
+façon.  % TODO : section suivante ?
 
 \begin{myfig}
 \capstart
@@ -3733,9 +3728,9 @@ façon.
 \end{myfig}
 
 Assurez-vous de bien comprendre ce qu'est l'intrigue dans la figure.  Pour chaque $ t $ fixe,  on peut penser à la fonction
-$ y (x, t) $ comme une fonction de $ x $ uniquement.  Cette fonction donne la forme de la corde
-au temps $ t $.  Regardons la  \figurevref{wave:pluckedtsfig} pour le graphique de $ y $ en fonction de $ x $ à plusieurs valeurs différentes de $ t $.
-Sur ce graphique,  on peut voir que ce n'est pas lisse c'est correct.  
+$ y (x, t) $ comme à une fonction de $ x $ uniquement.  Cette fonction donne la forme de la corde
+au temps $ t $.  Regardons la \figurevref{wave:pluckedtsfig} pour le graphe de $ y $ en fonction de $ x $ à plusieurs valeurs différentes de $ t $.
+Sur ce graphe,  on peut voir que ce n'est pas lisse, et c'est correct.  % TODO ref on page...
 
 \begin{myfig}
 \capstart
@@ -3743,57 +3738,55 @@ Sur ce graphique,  on peut voir que ce n'est pas lisse c'est correct.
 \diffyincludegraphics{width=6.24in}{width=9in}{wave-plucked-t0-t0p4}
 \\[5pt]
 \diffyincludegraphics{width=6.24in}{width=9in}{wave-plucked-t0p8-t1p2}
-\caption{La corde pincée pour $t=0$, $t=0.4$, $t=0.8$,  et
+\caption{La corde pincée pour $t=0$, $t=0.4$, $t=0.8$ et
 $t=1.2$.%
 \label{wave:pluckedtsfig}}
 \end{myfig}
 \end{example}
 
-Une chose à retenir est le son d'une guitare.  On remarque que
+Une chose à retenir est le son d'une guitare. On remarque que
 les fréquences (angulaires) qui apparaissent dans la solution sont
-$n \frac{\pi a}{L}$.  Autrement dit, il existe une certaine base
-\emph{\myindex{ffréquence fondamentale}} $\frac{\pi a}{L}$,  et l'on obtient aussi
+$n \frac{\pi a}{L}$.  Autrement dit, il existe une certaine
+\emph{\myindex{fréquence fondamentale}} de base $\frac{\pi a}{L}$,  et l'on obtient aussi
 tous les multiples de cette fréquence,  qui en musique sont appelés
-la\emph{\myindex{harmoniques}}.  Ces harmoniques qui apparaissent avec une amplitude sont 
-appelées par les musiciens des  \emph{\myindex{timbre}} de la note.
-Les mathématiciens appellent généralement cela le \emph{\myindex{spectre}}.
+les \emph{\myindex{harmoniques}}.  Ces harmoniques qui apparaissent avec une amplitude sont 
+appelées par les musiciennes et les musiciens des \emph{\myindex{timbres}} de la note.
+La communauté mathématique appelle généralement cela le \emph{\myindex{spectre}}.
 Parce que toutes les fréquences sont des multiples d'une fréquence (la fondamentale),
 on obtient un beau son agréable.
 
 La fréquence fondamentale $\frac{\pi a}{L}$ augmente lorsqu'on diminue la longueur $ L $.  Autrement dit,  si
-on place un doigt sur la touche puis qu'on pince la corde,  on obtient un son plus aigü.
+l'on place un doigt sur la touche puis qu'on pince la corde,  on obtient un son plus aigu.
 On remarque que la constante $ a $ est donnée par
 \begin{equation*}
 a = \sqrt{\frac{T}{\rho}} ,
 \end{equation*}
 où $T$ est la tension et  $\rho$ est la densité linéaire de la corde.
-Lorsqu'on serre la corde (on tourne la cheville d'accord d'une guitare) augmente $ a $ et
-produit une fréquence fondamentale plus élevée (une note plus aigüe).
+Serrer la corde (en tournant la cheville d'accord d'une guitare) augmente $ a $ et
+produit une fréquence fondamentale plus élevée (une note plus aiguë).
 Par contre, en utilisant une corde plus lourde,  on
 réduit $ a $ et l'on produit une fréquence fondamentale plus basse (une note plus grave).
-Une guitare basse a des cordes plus longues et plus épaisses,  tandis qu'un ukulélé a des cordes courtes
-en matériau plus léger.
+Une guitare basse a des cordes plus longues et plus épaisses,  tandis qu'un ukulélé a des cordes courtes en matériau plus léger.
 
 Quelque chose d'assez intéressant est la presque symétrie entre l'espace et le temps.
-Dans sa forme la plus simple,  on voit cette symétrie dans les solutions
+Dans sa forme la plus simple, cette symétrie est vue dans les solutions
 \begin{equation*}
 \sin \left( \frac{n \pi}{L} x \right)
 \sin \left( \frac{n \pi a}{L} t \right)  .
 \end{equation*}
 Sauf pour le $ a $, le temps et l'espace sont identiques.
 
-En général, la solution pour un $ x $ fixe est une série de Fourier en $ t $,  pour
-un $ t $ fixe c'est une série de Fourier en $ x $,  et les coefficients sont liés.
+En général, la solution pour un $ x $ fixe est une série de Fourier en $ t $; pour
+un $ t $ fixe, c'est une série de Fourier en $ x $,  et les coefficients sont liés.
 Si la forme de $ f (x) $ ou la vitesse initiale ont beaucoup de points anguleux,  alors
-l'onde sonore aura beaucoup de points anguleux.  Ce qui est dû au fait que les coefficients de Fourier
-de forme initiale descendes à zéro (comme $n \to \infty$) au même rythme que les coefficients de Fourier
-de l'onde dans le temps (pour un certain $ x $ fixe).  Donc,  si l'on utilise un objet pointu pour
-pincer la corde,  on obtient un son plus net avec une fréquence beaucoup de haute, tandis que si l'on utilise notre pouce,  on obtient un son plus doux.  De même si pn s'approche du pont,  on obtient un 
-un son plus net.
+l'onde sonore aura beaucoup de points anguleux.  Ceci est dû au fait que les coefficients de Fourier
+de forme initiale descendent à zéro (quand $n \to \infty$) au même rythme que les coefficients de Fourier
+de l'onde dans le temps (pour un certain $ x $ fixe).  Donc,  si nous utilisons un objet pointu pour
+pincer la corde,  on obtient un son plus net avec une fréquence plus élevée, tandis que si nous utilisons notre pouce, nous obtenons un son plus doux.  De même, si l'on s'approche du pont,  on obtient un un son plus net.
 
-En fait,  si l'on regarde la formule de la solution,  on voit que pour tout
- $ x $ fixe, on obtient une série de Fourier presque arbitraire pour $ t $,  à l'exception du 
-terme constant.  On peut essentiellement obtenir le son de notre choix
+En fait,  si l'on regarde la formule de la solution,  on voit que, pour tout
+$ x $ fixe, on obtient une série de Fourier presque arbitraire pour $ t $,  à l'exception du 
+terme constant.  Nous pouvons essentiellement obtenir le son de notre choix
 en pinçant la corde de la bonne manière.
 Bien sûr,  on  envisage une corde idéale sans rigidité et sans la résistance de l'air.  Ces variables ont clairement un impact sur le son également.
 
