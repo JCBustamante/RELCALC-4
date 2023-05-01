@@ -1,0 +1,664 @@
+<section xml:id="sec_ccsol">
+  <title>&#xc9;quations diff&#xe9;rentielles d'ordre deux &#xe0; coefficients constants</title>
+  <subsection>
+    <title>R&#xe9;soudre les &#xe9;quations &#xe0; coefficients constants</title>
+    <p>
+      Consid&#xe9;rons le probl&#xe8;me suivant:
+      <me>
+        y''-6y'+8y = 0, \qquad y(0) = - 2, \qquad y'(0) = 6
+      </me>.
+    </p>
+    <p>
+      Il s'agit d'une &#xe9;quation lin&#xe9;aire homog&#xe8;ne du deuxi&#xe8;me ordre avec des coefficients constants.
+      Les <em>coefficients constants
+          <idx><h>constant coefficient</h></idx>
+      </em> sont des nombres,
+      c'est-&#xe0;-dire qu'ils ne d&#xe9;pendent pas de <m>x</m>.
+    </p>
+    <p>
+      Pour deviner une solution, pensez &#xe0;
+      une fonction qui demeure essentiellement la même lorsqu'elle est d&#xe9;riv&#xe9;e, de mani&#xe8;re &#xe0;
+      ce qu'on puisse prendre un multiple de la fonction,
+      et de sa d&#xe9;riv&#xe9;e, et arriver &#xe0; z&#xe9;ro.
+      Nous parlons d'une exponentielle.
+    </p>
+    <p>
+      On va donc essayer<fn>
+      Essayer une certaine solution avec des param&#xe8;tres &#xe0;
+      r&#xe9;soudre est une technique centrale en &#xe9;quations diff&#xe9;rentielles.
+      Il y a même un nom pour ce type d'essai:
+      <em>\myindex{ansatz}</em>,
+      qui est un terme allemand voulant dire hypoth&#xe8;se de d&#xe9;part quant &#xe0;
+      la forme de la solution.
+      </fn> une solution de la forme <m>y = e^{rx}</m>.
+      Alors, <m>y' = r e^{rx}</m> et <m>y'' = r^2 e^{rx}</m>.
+      Substituons ces expressions dans l'&#xe9;quation pour obtenir:
+      <md>
+        <mrow>y''-6y'+8y \amp  = 0 ,</mrow>
+        <mrow>\underbrace{r^2 e^{rx}}_{y''} -6 \underbrace{r e^{rx}}_{y'}+8 \underbrace{e^{rx}}_{y} \amp  = 0 ,</mrow>
+        <mrow>r^2 -6 r +8 \amp  = 0 \qquad \text{ (diviser par }  e^{rx} \text{)} ,</mrow>
+        <mrow>(r-2)(r-4) \amp  = 0 </mrow>
+      </md>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          V&#xe9;rifiez que <m>y_1= e^{2x}</m> et <m>y_2= e^{4x}</m> sont des solutions.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Les fonctions <m>e^{2x}</m> et <m>e^{4x}</m> sont lin&#xe9;airement ind&#xe9;pendantes.
+      Sinon, on pourrait &#xe9;crire
+      <m>e^{4x} = C e^{2x}</m> pour une certaine constante <m>C</m>,
+      impliquant que <m>e^{2x} = C</m> pour tout <m>x</m>, ce qui est impossible.
+      Ainsi, on peut &#xe9;crire la solution g&#xe9;n&#xe9;rale comme suit:
+      <me>
+        y = C_1 e^{2x} + C_2 e^{4x}
+      </me>.
+    </p>
+    <p>
+      On doit r&#xe9;soudre pour <m>C_1</m> et pour <m>C_2</m>.
+      Pour appliquer les conditions initiales,
+      on trouve d'abord <m>y' = 2 C_1 e^{2x} + 4 C_2 e^{4x}</m>.
+      On substitue <m>x=0</m> dans <m>y</m> et <m>y'</m>, puis on r&#xe9;sout:
+      <md>
+        <mrow>-2 \amp  = y(0) = C_1 + C_2 ,</mrow>
+        <mrow>6 \amp  = y'(0) = 2 C_1 + 4 C_2 </mrow>
+      </md>.
+    </p>
+    <p>
+      Il est possible de r&#xe9;soudre avec une matrice ou même avec des notions apprises au secondaire
+      (comparaison, substitution ou r&#xe9;duction).
+      Par exemple,
+      en divisant la seconde &#xe9;quation par 2, on obtient <m>3 = C_1 + 2 C_2</m> et,
+      en soustrayant les deux &#xe9;quations,
+      on obtient que <m>5 = C_2</m>.
+      Alors, <m>C_1 = -7</m> puisque <m>-2 = C_1 + 5</m>.
+      La solution recherch&#xe9;e est donc:
+      <me>
+        y = -7 e^{2x} + 5 e^{4x}
+      </me>.
+    </p>
+    <p>
+      G&#xe9;n&#xe9;ralisons l'exemple &#xe0; une m&#xe9;thode.
+      Supposons que nous avons l'&#xe9;quation suivante:
+      <men xml:id="ccsol_eq">
+        a y'' + b y' + c y = 0
+      </men>,
+      où <m>a, b, c</m> sont constantes.
+      Essayons une solution <m>y = e^{rx}</m> pour obtenir:
+      <me>
+        a r^2 e^{rx} +  b r e^{rx} +  c e^{rx} = 0
+      </me>.
+    </p>
+    <p>
+      Divisons par <m>e^{rx}</m> pour obtenir l'<em>&#xe9;quation caract&#xe9;ristique<idx><h>&#xe9;quation caract&#xe9;ristique</h></idx>
+      </em> de cette &#xe9;quation diff&#xe9;rentielle:
+      <me>
+        a r^2 + b r +  c = 0
+      </me>.
+    </p>
+    <p>
+      R&#xe9;solvons pour <m>r</m> en utilisant la formule quadratique:
+          <idx><h>formule quadratique</h></idx>
+      <me>
+        r_1, r_2 = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+      </me>.
+    </p>
+    <p>
+      Alors, <m>e^{r_1 x}</m> et <m>e^{r_2 x}</m> sont des solutions.
+      Il y a encore un &#xe9;cueil si <m>r_1 = r_2</m>,
+      mais celui-ci n'est pas difficile &#xe0; surmonter.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Supposons que <m>r_1</m> et <m>r_2</m> sont des racines caract&#xe9;ristiques de l'&#xe9;quation.
+          <ol label="i">
+            <li>
+              <p>
+                Si <m>r_1</m> et <m>r_2</m> sont distinctes et r&#xe9;elles
+                (quand <m>b^2 - 4ac > 0</m>),
+                alors <xref ref="ccsol_eq"/> admet la solution g&#xe9;n&#xe9;rale suivante:
+                <me>
+                  y = C_1 e^{r_1 x} + C_2 e^{r_2 x}
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Si <m>r_1 = r_2</m>
+                (quand <m>b^2 - 4ac = 0</m>),
+                alors <xref ref="ccsol_eq"/> admet la solution g&#xe9;n&#xe9;rale suivante:
+                <me>
+                  y = (C_1 + C_2 x)\, e^{r_1 x}
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <example xml:id="example_expsecondorder">
+      <statement>
+        <p>
+          R&#xe9;solvons l'&#xe9;quation suivante:
+          <me>
+            y'' - k^2 y = 0
+          </me>.
+        </p>
+        <p>
+          L'&#xe9;quation caract&#xe9;ristique est
+          <m>r^2 - k^2 = 0</m> ou <m>(r-k)(r+k) = 0</m>.
+          Par cons&#xe9;quent,
+          <m>e^{-k x}</m> et <m>e^{kx}</m> sont deux solutions lin&#xe9;airement ind&#xe9;pendantes,
+          et la solution g&#xe9;n&#xe9;rale est:
+          <me>
+            y = C_1 e^{kx} + C_2e^{-kx}
+          </me>.
+        </p>
+        <p>
+          Puisqu'on a vu que
+          <md>
+            <mrow>\cosh s \amp  = \frac{e^s+e^{-s}}{2},</mrow>
+            <mrow>\sinh s \amp  = \frac{e^s-e^{-s}}{2}</mrow>
+          </md>,
+          on peut &#xe9;crire la solution g&#xe9;n&#xe9;rale comme suit:
+          <me>
+            y = D_1 \cosh(kx) + D_2 \sinh(kx)
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+      <p>
+        Trouvons la solution g&#xe9;n&#xe9;rale de l'&#xe9;quation diff&#xe9;rentielle suivante:
+        <me>
+          y'' -8 y' + 16 y = 0
+        </me>.
+      </p>
+      <p>
+        L'&#xe9;quation caract&#xe9;ristique est <m>r^2 - 8 r + 16 = {(r-4)}^2 = 0</m>.
+        L'&#xe9;quation a une racine double <m>r_1 = r_2 = 4</m>.
+        La solution g&#xe9;n&#xe9;rale est ainsi:
+        <me>
+          y = (C_1 + C_2 x)\, e^{4 x} = C_1 e^{4x} + C_2 x e^{4x}
+        </me>.
+      </p>
+      <exercise>
+        <statement>
+          <p>
+            V&#xe9;rifiez que <m>e^{4x}</m> et
+            <m>x e^{4x}</m> sont lin&#xe9;airement ind&#xe9;pendantes.
+          </p>
+        </statement>
+      </exercise>
+      <p>
+        Il est clair que <m>e^{4x}</m> est une solution de l'&#xe9;quation.
+        Si <m>x e^{4x}</m> r&#xe9;sout l'&#xe9;quation,
+        alors on aura termin&#xe9;
+        le travail de r&#xe9;solution,
+        puisque les deux fonctions sont lin&#xe9;airement ind&#xe9;pendantes.
+        On calcule <m>y' = e^{4x} + 4xe^{4x}</m> et <m>y'' = 8 e^{4x} + 16xe^{4x}</m>.
+        On substitue ces expressions dans l'&#xe9;quation diff&#xe9;rentielle:
+        <me>
+          y'' - 8 y' + 16 y = 8 e^{4x} + 16xe^{4x} - 8(e^{4x} + 4xe^{4x}) + 16 xe^{4x} =   0
+        </me>.
+      </p>
+      </statement>
+    </example>
+    <p>
+      Remarquons que les &#xe9;quations lin&#xe9;aires &#xe0;
+      coefficients constants pr&#xe9;sentant une racine double sont rares.
+      Si l'on choisissait au hasard les coefficients d'une &#xe9;quation lin&#xe9;aire,
+      obtenir une racine double serait peu probable.
+      Toutefois, il y a quelques ph&#xe9;nom&#xe8;nes naturels
+      (tels que la r&#xe9;sonance, qu'on abordera plus tard)
+      qui sont d&#xe9;crits par une &#xe9;quation diff&#xe9;rentielle pr&#xe9;sentant une racine double.
+    </p>
+    <p>
+      Expliquons rapidement pourquoi la solution
+      <m>x e^{r x}</m> fonctionne lorsque les racines sont doubles.
+      On va y penser comme &#xe0;
+      la limite d'une &#xe9;quation dont les racines sont distinctes mais tr&#xe8;s proches.
+      Notons que la fonction <m>\frac{e^{r_2 x} - e^{r_1 x}}{r_2 - r_1}</m> est une solution lorsque les racines <m>r_1,r_2</m> sont distinctes.
+      Quand on prend la limite lorsque <m>r_1</m> tend vers <m>r_2</m>, &#xe7;a revient &#xe0;
+      la d&#xe9;riv&#xe9;e de <m>e^{rx}</m> par rapport &#xe0;
+      la variable <m>r</m>.
+      La limite est donc la valeur de cette d&#xe9;riv&#xe9;e, <m>x e^{rx}</m>,
+      et c'est une solution dans le cas d'une racine double.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Nombres complexes et formule d'Euler</title>
+    <p>
+      Un polynôme peut avoir des racines complexes.
+      L'&#xe9;quation <m>r^2 + 1 = 0</m> ne poss&#xe8;de aucune racine r&#xe9;elle,
+      mais poss&#xe8;de deux racines complexes.
+      Ici, on r&#xe9;vise quelques propri&#xe9;t&#xe9;s des nombres complexes.
+          <idx><h>complex number</h></idx>
+    </p>
+    <p>
+      Les nombres complexes peuvent faire un peu peur, notamment &#xe0;
+      cause de la terminologie.
+      Cependant, il n'y a rien d'imaginaire ni de tr&#xe8;s compliqu&#xe9;
+      avec les nombres complexes.
+      Un nombre complexe est simplement une paire de nombres r&#xe9;els <m>(a,b)</m>.
+      On peut voir les nombres complexes comme des points du plan.
+      Ainsi, on additionne les nombres complexes directement : <m>(a, b)+(c, d)=(a+c, b+d)</m>.
+      On d&#xe9;finit la multiplication <idx><h>multiplication of complex numbers</h></idx> comme suit:
+      <me>
+        (a, b) \times (c, d) \overset{\text{ d\'ef } }{=} (ac-bd, ad+bc)
+      </me>.
+    </p>
+    <p>
+      On d&#xe9;finit ainsi la multiplication afin que toutes les propri&#xe9;t&#xe9;s standards de l'arithm&#xe9;tique fonctionnent.
+      Par contre, il est important de savoir que <m>(0,1) \times (0, 1) = (-1, 0)</m>,
+      autrement dit:
+      <me>
+        i^2=-1
+      </me>.
+    </p>
+    <p>
+      G&#xe9;n&#xe9;ralement, on &#xe9;crit <m>(a, b)</m> tel que <m>a+ib</m>,
+      et l'on traite <m>i</m> comme une variable.
+      Quand <m>b</m> est &#xe9;gal &#xe0;
+      z&#xe9;ro, alors <m>(a,0)</m> est simplement le nombre <m>a</m>.
+      On fait de l'arithm&#xe9;tique avec les nombres complexes simplement comme si c'&#xe9;tait des polynômes.
+      Lorsqu'on a <m>i^2</m>, on peut simplement le remplacer par <m>-1</m>.
+      Par exemple:
+      <me>
+        (2+3i)(4i) - 5i = (2\times 4)i + (3 \times 4) i^2 - 5i = 8i + 12 (-1) - 5i = -12 + 3i
+      </me>.
+    </p>
+    <p>
+      Les nombres <m>i</m> et <m>-i</m> sont les deux racines de <m>r^2 + 1 = 0</m>.
+      Notons que les manuels de g&#xe9;nie utilisent souvent la lettre <m>j</m> plutôt que la lettre <m>i</m> pour repr&#xe9;senter les racines carr&#xe9;es de <m>-1</m>.
+      Dans ce manuel,
+      on utilisera la convention des math&#xe9;maticiens et des math&#xe9;maticiennes,
+      c'est-&#xe0;-dire la lettre <m>i</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Pour bien comprendre les identit&#xe9;s suivantes,
+          prenez le temps de les justifier. \begin{tasks}(2) \task <m>i^2 = -1</m>,
+          <m>i^3 = -i</m>,
+          <m>i^4 = 1</m> \task <m>\dfrac{1}{i} = -i</m> \task <m>(3-7i)(-2-9i) = \cdots = -69-13i</m> \task
+          <m>(3-2i)(3+2i) = 3^2 - {(2i)}^2 = 3^2 + 2^2 = 13</m> \task <m>\frac{1}{3-2i} = \frac{1}{3-2i} \frac{3+2i}{3+2i} = \frac{3+2i}{13} = \frac{3}{13}+\frac{2}{13}i</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      [2] On peut &#xe9;galement d&#xe9;finir l'exponentielle
+      <m>e^{a+ib}</m> d'un nombre complexe. À cette fin,
+      on utilise la s&#xe9;rie de Taylor de <m>e^x</m> en rempla&#xe7;ant la variable <m>x</m> dans la s&#xe9;rie par un nombre complexe.
+      Puisque les propri&#xe9;t&#xe9;s de l'exponentielle peuvent être prouv&#xe9;es en consid&#xe9;rant sa s&#xe9;rie de Taylor,
+      ces propri&#xe9;t&#xe9;s sont toujours vraies pour les exponentielles complexes.
+      Par exemple, une propri&#xe9;t&#xe9;
+      tr&#xe8;s importante est <m>e^{x+y} = e^x e^y</m>.
+      Ceci signifie que:
+      <me>
+        e^{a+ib} = e^a e^{ib}
+      </me>.
+    </p>
+    <p>
+      Par cons&#xe9;quent, si l'on peut calculer <m>e^{ib}</m>,
+      on peut calculer <m>e^{a+ib}</m>.
+      Pour <m>e^{ib}</m>, on utilise la <em>formule d'Euler
+          <idx><h>formule d'Euler</h></idx>
+      </em>.
+    </p>
+    <theorem xml:id="eulersformula">
+      <title>La formule d'Euler</title>
+      <statement>
+        <me>
+          \mybxbg{~~
+          e^{i \theta} = \cos \theta + i \sin \theta
+          \qquad \text{ et }  \qquad
+          e^{- i \theta} = \cos \theta - i \sin \theta .
+          ~~}
+        </me>
+      </statement>
+    </theorem>
+    <p>
+      En d'autres mots,
+      <m>e^{a+ib} = e^a \bigl( \cos(b) + i \sin(b) \bigr) = e^a \cos(b) + i e^a \sin(b)</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Utilisez la formule d'Euler pour v&#xe9;rifier les identit&#xe9;s suivantes :
+          <me>
+            \cos \theta = \frac{e^{i \theta} + e^{-i \theta}}{2} \qquad \text{ et }  \qquad \sin \theta = \frac{e^{i \theta} - e^{-i \theta}}{2i}
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Consid&#xe9;rez l'&#xe9;galit&#xe9; suivante:
+          <m>e^{i(2\theta)} = {\bigl(e^{i \theta} \bigr)}^2</m>.
+          Utilisez la formule d'Euler de chaque côt&#xe9; pour d&#xe9;duire :
+          <me>
+            \cos (2\theta) = \cos^2 \theta - \sin^2 \theta \qquad \text{ et }  \qquad \sin (2\theta) = 2 \sin \theta \cos \theta
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Pour un nombre complexe <m>a+ib</m>,
+      on appelle <m>a</m> la <em>partie r&#xe9;elle
+          <idx><h>partie r&#xe9;elle</h></idx>
+      </em>, et <m>b</m> la <em>partie imaginaire
+          <idx><h>partie imaginaire</h></idx>
+      </em> du nombre.
+      La notation suivante est souvent utilis&#xe9;e :
+      <me>
+        \operatorname{Re}(a+ib) = a \qquad \text{ et }  \qquad \operatorname{Im}(a+ib) = b
+      </me>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Racines complexes</title>
+    <p>
+      Supposons que nous avons une &#xe9;quation <m>ay'' + by' + cy = 0</m>,
+      dont l'&#xe9;quation caract&#xe9;ristique
+      <m>a r^2 + b r + c = 0</m> admet des racines complexes.
+          <idx><h>racines complexes</h></idx>
+      En utilisant la formule quadratique,
+      on obtient les racines <m>\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</m>.
+      Ces racines sont complexes si <m>b^2 - 4ac \lt  0</m>.
+      Dans ce cas, les racines sont:
+      <me>
+        r_1, r_2 = \frac{-b}{2a} \pm i\frac{\sqrt{4ac - b^2}}{2a}
+      </me>.
+    </p>
+    <p>
+      On a toujours un nombre pair de racines de la forme <m>\alpha \pm i \beta</m>.
+      Dans ce cas,
+      on peut &#xe9;crire la solution de la mani&#xe8;re suivante:
+      <me>
+        y = C_1 e^{(\alpha+i\beta)x} + C_2 e^{(\alpha-i\beta)x}
+      </me>.
+    </p>
+    <p>
+      Toutefois, l'exponentielle a maintenant des valeurs complexes.
+      On doit laisser <m>C_1</m> et <m>C_2</m> être des nombres complexes pour obtenir une solution &#xe0;
+      valeurs r&#xe9;elles.
+      Bien qu'il n'y ait rien de faux dans cette m&#xe9;thode,
+      les calculs peuvent devenir compliqu&#xe9;s;
+      il est donc g&#xe9;n&#xe9;ralement pr&#xe9;f&#xe9;rable de trouver deux solutions &#xe0;
+      valeurs r&#xe9;elles.
+    </p>
+    <p>
+      On peut utiliser la formule d'Euler.
+      Soit:
+      <me>
+        y_1 = e^{(\alpha+i\beta)x} \qquad \text{ et }  \qquad y_2 = e^{(\alpha-i\beta)x}
+      </me>.
+    </p>
+    <p>
+      Alors,
+      <md>
+        <mrow>y_1 \amp  = e^{\alpha x} \cos (\beta x) + i e^{\alpha x} \sin (\beta x) ,</mrow>
+        <mrow>y_2 \amp  = e^{\alpha x} \cos (\beta x) - i e^{\alpha x} \sin (\beta x) </mrow>
+      </md>.
+    </p>
+    <p>
+      Les combinaisons lin&#xe9;aires des solutions sont aussi des solutions.
+      Ainsi, les fonctions suivantes sont aussi des solutions:
+      <md>
+        <mrow>y_3 \amp  = \frac{y_1 + y_2}{2} = e^{\alpha x} \cos (\beta x),</mrow>
+        <mrow>y_4 \amp  = \frac{y_1 - y_2}{2i} = e^{\alpha x} \sin (\beta x) </mrow>
+      </md>.
+    </p>
+    <p>
+      Les valeurs sont r&#xe9;elles lorsque <m>x</m> est r&#xe9;el.
+      Ce n'est pas difficile de voir qu'elles sont lin&#xe9;airement ind&#xe9;pendantes
+      (pas multiples l'une de l'autre).
+      On obtient alors le th&#xe9;or&#xe8;me suivant.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          &#xc9;tant donn&#xe9; l'&#xe9;quation suivante,
+          <me>
+            ay'' + by' + cy = 0
+          </me>,
+          supposons que l'&#xe9;quation caract&#xe9;ristique admet des racines complexes <m>\alpha \pm i \beta</m>
+          (quand <m>b^2 - 4ac \lt  0</m>).
+          Alors, la solution g&#xe9;n&#xe9;rale est:
+          <me>
+            y = C_1 e^{\alpha x} \cos (\beta x) + C_2 e^{\alpha x} \sin (\beta x)
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+    <example xml:id="example_sincossecondorder">
+      <statement>
+        <p>
+          Trouvons la solution g&#xe9;n&#xe9;rale de <m>y'' + k^2 y = 0</m>,
+          pour une constante <m>k > 0</m>.
+        </p>
+        <p>
+          L'&#xe9;quation caract&#xe9;ristique est <m>r^2 + k^2 = 0</m>.
+          Donc, les racines sont <m>r = \pm ik</m>, et,
+          par le th&#xe9;or&#xe8;me, on a la solution g&#xe9;n&#xe9;rale suivante:
+          <me>
+            y = C_1 \cos (kx) + C_2 \sin (kx)
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Trouvons la solution de <m>y'' - 6 y' + 13 y = 0</m>,
+          <m>y(0) = 0</m>, <m>y'(0) = 10</m>.
+        </p>
+        <p>
+          L'&#xe9;quation caract&#xe9;ristique est <m>r^2 - 6 r + 13 = 0</m>.
+          En compl&#xe9;tant le carr&#xe9;, on obtient <m>{(r-3)}^2 + 2^2 = 0</m>,
+          et les racines sont <m>r = 3 \pm 2i</m>.
+          Par le th&#xe9;or&#xe8;me, on a la solution g&#xe9;n&#xe9;rale suivante:
+          <me>
+            y = C_1 e^{3x} \cos (2x) + C_2 e^{3x} \sin (2x)
+          </me>.
+        </p>
+        <p>
+          Pour trouver une solution satisfaisant aux conditions initiales,
+          on met <m>x=0</m> et l'on obtient :
+          <me>
+            0 = y(0) = C_1 e^{0} \cos 0 + C_2 e^{0} \sin 0  = C_1
+          </me>.
+        </p>
+        <p>
+          Ainsi, <m>C_1 = 0</m> et <m>y = C_2 e^{3x} \sin (2x)</m>.
+          On d&#xe9;rive:
+          <me>
+            y' = 3C_2 e^{3x} \sin (2x) + 2C_2 e^{3x} \cos (2x)
+          </me>.
+        </p>
+        <p>
+          On met <m>x=0</m> de nouveau dans les conditions initiales et l'on obtient <m>10 = y'(0) = 2C_2</m> ou <m>C_2 = 5</m>.
+          La solution recherch&#xe9;e est donc:
+          <me>
+            y = 5 e^{3x} \sin (2x)
+          </me>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>2y'' + 2y' -4 y = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y'' + 9y' - 10 y = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y'' - 8y' + 16 y = 0</m>,
+          <m>y(0) = 2</m>, <m>y'(0) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y'' + 9y' = 0</m>,
+          <m>y(0) = 1</m>, <m>y'(0) = 1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>2y'' + 50y = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y'' + 6 y' + 13 y = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y'' = 0</m> en utilisant les m&#xe9;thodes pr&#xe9;sent&#xe9;es dans cette section.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Essayez de r&#xe9;soudre l'&#xe9;quation du premier ordre
+          <m>2y' + 3y = 0</m> en utilisant les m&#xe9;thodes pr&#xe9;sent&#xe9;es dans cette section.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Revisitons l'&#xe9;quation de Cauchy<ndash/>Euler <idx><h>&#xc9;quation de Cauchy<ndash/>Euler</h></idx>
+          (<xref ref="sol_eulerex">exercice</xref>).
+          Supposons maintenant que <m>{(b-a)}^2-4ac \lt 0</m>.
+          Trouvez la formule de la solution g&#xe9;n&#xe9;rale <m>a x^2 y'' + b x y' + c y = 0</m>.
+          Astuce : Remarquez que <m>x^r = e^{r \ln x}</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution de <m>y''-(2\alpha) y' + \alpha^2 y=0</m>,
+          <m>y(0) = a</m>, <m>y'(0)=b</m>,
+          où <m>\alpha</m>, <m>a</m>, et <m>b</m> sont des nombres r&#xe9;els.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Construisez une &#xe9;quation telle que
+          <m>y = C_1 e^{-2x} \cos(3x) + C_2 e^{-2x} \sin(3x)</m> est la solution g&#xe9;n&#xe9;rale.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y''+4y'+2y=0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = C_1 e^{(-2+\sqrt{2}) x} + C_2 e^{(-2-\sqrt{2}) x}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y''-6y'+9y=0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = C_1 e^{3x} + C_2 x e^{3x}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>2y''+y'+y=0</m>,
+          <m>y(0) = 1</m>, <m>y'(0)=-2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = e^{-x/4} \cos\bigl((\nicefrac{\sqrt{7}}{4})x\bigr) - \sqrt{7} e^{-x/4} \sin\bigl((\nicefrac{\sqrt{7}}{4})x\bigr)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>2y''+y'-3y=0</m>,
+          <m>y(0) = a</m>, <m>y'(0)=b</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = \frac{2(a-b)}{5} \, e^{-3x/2}+\frac{3 a+2 b}{5} \, e^x</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>z''(t) = -2z'(t)-2z(t)</m>,
+          <m>z(0) = 2</m>, <m>z'(0)= -2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>z(t) = 2e^{-t} \cos(t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y''-(\alpha+\beta) y' + \alpha \beta y=0</m>,
+          <m>y(0) = a</m>, <m>y'(0)=b</m>,
+          où <m>\alpha</m>, <m>\beta</m>, <m>a</m>,
+          <m>b</m> sont des nombres r&#xe9;els,
+          et <m>\alpha \not= \beta</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = \frac{a \beta-b}{\beta-\alpha} e^{\alpha x} + \frac{b-a \alpha}{\beta-\alpha} e^{\beta x}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Construisez une &#xe9;quation telle que
+          <m>y = C_1 e^{3x} + C_2 e^{-2x}</m> est une solution g&#xe9;n&#xe9;rale.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y'' -y'-6y=0</m> }
+    </p>
+  </subsection>
+</section>

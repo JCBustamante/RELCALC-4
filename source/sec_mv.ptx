@@ -1,0 +1,732 @@
+<section xml:id="sec_mv">
+  <title>Vibrations m&#xe9;caniques</title>
+  <introduction>
+    <p>
+      Regardons quelques applications impliquant des &#xe9;quations lin&#xe9;aires du deuxi&#xe8;me ordre &#xe0;
+      coefficients constants.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Quelques exemples</title>
+    <p>
+      \begin{mywrapfigsimp}{2.0in}{2.3in}
+    </p>
+    <p>
+      <image width="73%" source="massfigforce"/> \end{mywrapfigsimp} Le premier exemple est une masse sur un ressort.
+      Supposons que nous avons une masse <m>m > 0</m>
+      (en kg)
+      connect&#xe9;e &#xe0;
+      un mur fixe par un ressort, de constante <m>k > 0</m>
+      (en newtons par m&#xe8;tre).
+      Il pourrait y avoir des forces externes <m>F(t)</m>
+      (en newtons)
+      agissant sur la masse.
+      Finalement, il y a de la friction qui est mesur&#xe9;e par <m>c \geq 0</m>
+      (en newtons secondes par m&#xe8;tre)
+      lorsque la masse glisse sur le plancher
+      (ou possiblement un amortisseur est connect&#xe9;).
+    </p>
+    <p>
+      Soit <m>x</m> le d&#xe9;placement de la masse (<m>x=0</m> est la position au repos),
+      avec <m>x</m> s'&#xe9;loignant du mur.
+      Par la loi de Hooke,
+          <idx><h>loi de Hooke</h></idx>
+      la force exerc&#xe9;e sur le ressort est proportionnelle &#xe0;
+      la compression du ressort. &#xc9;galement,
+      il y a la force exerc&#xe9;e par la friction <m>kx</m>,
+      dans la direction n&#xe9;gative,
+      qui est proportionnelle &#xe0;
+      la vitesse de la masse.
+      Par la deuxi&#xe8;me loi de Newton,
+          <idx><h>deuxi&#xe8;me loi de Newton</h></idx>
+      nous savons que la force est &#xe9;gale au produit de la masse et de l'acc&#xe9;l&#xe9;ration,
+      et, par cons&#xe9;quent, <m>mx'' = F(t)-cx'-kx</m> ou
+      <me>
+        mx'' + cx' + kx = F(t)
+      </me>.
+    </p>
+    <p>
+      Il s'agit d'une &#xe9;quation lin&#xe9;aire du deuxi&#xe8;me ordre &#xe0;
+      coefficients constants.
+      Le mouvement
+      <ol label="i">
+        <li>
+          <p>
+            est <em>forc&#xe9;
+              <idx><h>forced motion</h></idx>
+            </em>, si <m>F \not\equiv 0</m> (si <m>F</m> est diff&#xe9;rent de z&#xe9;ro),
+          </p>
+        </li>
+        <li>
+          <p>
+            n'est pas <em>forc&#xe9;
+              <idx><h>unforced motion</h></idx>
+            </em> ou <em>libre
+              <idx><h>free motion</h></idx>
+            </em>, si <m>F \equiv 0</m> (si <m>F</m> est nul),
+          </p>
+        </li>
+        <li>
+          <p>
+            est <em>amorti
+              <idx><h>damped motion</h></idx>
+            </em>, si <m>c > 0</m>, et
+          </p>
+        </li>
+        <li>
+          <p>
+            n'est pas <em>amorti
+              <idx><h>undamped motion</h></idx>
+            </em>, si <m>c = 0</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Ce syst&#xe8;me est pr&#xe9;sent dans beaucoup d'applications même s'il ne le semble pas &#xe0; premi&#xe8;re vue.
+      Plusieurs sc&#xe9;narios de la vraie vie peuvent être ramen&#xe9;s &#xe0;
+      celui d'un ressort reli&#xe9; &#xe0; une masse.
+      Par exemple, un saut en <em>bungee</em>
+      est essentiellement un syst&#xe8;me masse-ressort
+      (la personne est la masse).
+      Regardons deux autres exemples.
+    </p>
+    <p>
+      \begin{mywrapfigsimp}[5]{1.35in}{1.65in}
+    </p>
+    <p>
+      <image width="73%" source="mv-rlc"/> \end{mywrapfigsimp} Voici un exemple pour le g&#xe9;nie &#xe9;lectrique.
+      Consid&#xe9;rons l'image du circuit RLC.
+          <idx><h>circuit RLC</h></idx>
+      Il y a un ressort avec une r&#xe9;sistance de <m>R</m> ohms,
+      un inducteur avec une inductance de <m>L</m> henrys,
+      et un condensateur avec une capacitance de <m>C</m> farads.
+      Il y a aussi une source &#xe9;lectrique
+      (telle qu'une batterie)
+      ayant un voltage de <m>E(t)</m> volts au temps <m>t</m>
+      (mesur&#xe9; en secondes).
+      Soit <m>Q(t)</m> une charge
+      (en coulombs)
+      sur un condensateur, et <m>I(t)</m> le courant.
+      La relation entre les deux est <m>Q' = I</m>.
+      Par des principes &#xe9;l&#xe9;mentaires,
+      on trouve <m>L I' + RI + \nicefrac{Q}{C} = E</m>.
+      On d&#xe9;rive pour obtenir :
+      <me>
+        L I''(t) + R I'(t) + \frac{1}{C} I(t) = E'(t)
+      </me>.
+    </p>
+    <p>
+      Il s'agit d'une &#xe9;quation lin&#xe9;aire non homog&#xe8;ne du deuxi&#xe8;me ordre &#xe0;
+      coefficients constants.
+      Puisque <m>L</m>, <m>R</m> et <m>C</m> sont tous positifs,
+      ce syst&#xe8;me se comporte exactement comme le syst&#xe8;me masse-ressort.
+      La position de la masse est remplac&#xe9;e par le courant.
+      La masse est remplac&#xe9;e par l'inducteur,
+      l'amortisseur est remplac&#xe9;
+      par la r&#xe9;sistance,
+      et la constante du ressort est remplac&#xe9;e par la capacitance.
+      Les variations du voltage deviennent la fonction de force <mdash/> pour un voltage constant,
+      il s'agit d'un mouvement qui n'est pas forc&#xe9;.
+    </p>
+    <p>
+      \begin{mywrapfigsimp}[10]{1.8in}{2.16in}
+    </p>
+    <p>
+      <image width="73%" source="mv-pend-deriv"/> \end{mywrapfigsimp} Notre prochain exemple se comporte approximativement comme un syst&#xe8;me masse-ressort.
+      Supposons que la masse <m>m</m> pend sur un fil de longueur <m>L</m>.
+      On cherche une &#xe9;quation pour l'angle
+      (en radians).
+      Soit <m>g</m> la force gravitationnelle.
+      La physique &#xe9;l&#xe9;mentaire dit que l'&#xe9;quation est:
+      <me>
+        \theta'' + \frac{g}{L} \sin \theta = 0
+      </me>.
+    </p>
+    <p>
+      D&#xe9;rivons cette &#xe9;quation en utilisant la deuxi&#xe8;me loi de Newton:
+          <idx><h>deuxi&#xe8;me loi de Newton</h></idx>
+      la force est &#xe9;gale au produit de la masse et de l'acc&#xe9;l&#xe9;ration.
+      L'acc&#xe9;l&#xe9;ration est
+      <m>L \theta''</m>, et la masse est <m>m</m>.
+      Alors, <m>mL\theta''</m> doit être &#xe9;gale &#xe0;
+      la composante tangentielle de la force gravitationnelle,
+      soit <m>m g \sin \theta</m> dans la direction oppos&#xe9;e.
+      Alors, <m>mL\theta'' = -mg \sin \theta</m>.
+      La masse <m>m</m> est curieusement annul&#xe9;e de l'&#xe9;quation.
+    </p>
+    <p>
+      Maintenant, approximons.
+      Pour un petit <m>\theta</m>,
+      nous avons l'approximation <m>\sin \theta \approx \theta</m>.
+      On le voit dans <xref ref="mv_sinthetafig">la</xref>:
+      sur l'intervalle <m>-0.5 \lt \theta \lt 0.5</m>
+      (en radians),
+      les graphes de <m>\sin \theta</m> et de <m>\theta</m> sont presque les mêmes.
+    </p>
+    <figure xml:id="mv_sinthetafig">
+      <caption>Graphes de  <m>\sin \theta</m> et de <m>\theta</m> (en radians).</caption>
+      {3.25in}
+      \diffyincludegraphics{width=3in}{width=4.5in}{mv-sintheta}
+    </figure>
+    <p>
+      Donc, quand le balancement est petit, <m>\theta</m> est petit,
+      et nous pouvons mod&#xe9;liser le comportement par une &#xe9;quation lin&#xe9;aire simple.
+      <me>
+        \theta'' + \frac{g}{L} \theta = 0
+      </me>.
+    </p>
+    <p>
+      Les erreurs de cette approximation s'accumulent.
+      Alors, apr&#xe8;s un long moment,
+      l'&#xe9;tat de syst&#xe8;me dans la vraie vie est assez diff&#xe9;rent de notre syst&#xe8;me.
+      Ainsi, nous verrons que,
+      dans le syst&#xe8;me masse-ressort,
+      l'amplitude est ind&#xe9;pendante de la p&#xe9;riode.
+      Mais ceci n'est plus vrai pour le pendule.
+      N&#xe9;anmoins,
+      pour une p&#xe9;riode de temps assez courte et pour un petit &#xe9;lan
+      (pour un petit angle <m>\theta</m>),
+      l'approximation est raisonnablement bonne.
+    </p>
+    <p>
+      Dans les probl&#xe8;mes de la vraie vie,
+      il est souvent n&#xe9;cessaire de faire ce genre de simplifications.
+      On doit comprendre les math&#xe9;matiques et la physique de la situation pour voir si les simplifications sont valides dans le contexte que l'on tente d'&#xe9;tudier.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Mouvement libre non amorti</title>
+    <p>
+      Dans cette section,
+      nous allons seulement consid&#xe9;rer les mouvements libres ou non forc&#xe9;s puisque nous ne savons pas encore comment r&#xe9;soudre des &#xe9;quations non homog&#xe8;nes.
+      Commen&#xe7;ons avec le mouvement non forc&#xe9;
+          <idx><h>non forc&#xe9;</h></idx>
+      où <m>c=0</m>.
+      L'&#xe9;quation est:
+      <me>
+        mx'' + kx = 0
+      </me>.
+    </p>
+    <p>
+      Divisons par <m>m</m> et laissons
+      <m>\omega_0 = \sqrt{\nicefrac{k}{m}}</m> pour r&#xe9;&#xe9;crire l'&#xe9;quation comme suit:
+      <me>
+        x'' + \omega_0^2 x = 0
+      </me>.
+    </p>
+    <p>
+      La solution g&#xe9;n&#xe9;rale &#xe0;
+      cette &#xe9;quation est :
+      <me>
+        x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t)
+      </me>.
+    </p>
+    <p>
+      Par une identit&#xe9; trigonom&#xe9;trique :
+      <me>
+        A \cos (\omega_0 t) + B \sin (\omega_0 t) = C \cos ( \omega_0 t - \gamma )
+      </me>,
+      pour deux constantes diff&#xe9;rentes <m>C</m> et <m>\gamma</m>.
+      Il n'est pas difficile de calculer
+      <m>C= \sqrt{A^2 + B^2}</m> et <m>\tan \gamma = \nicefrac{B}{A}</m>.
+      Ainsi, soit <m>C</m> et <m>\gamma</m> deux constantes arbitraires et &#xe9;crivons <m>x(t) = C \cos ( \omega_0 t - \gamma )</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Justifiez l'identit&#xe9;
+          <m>A \cos (\omega_0 t) + B \sin (\omega_0 t) = C \cos ( \omega_0 t - \gamma )</m> et v&#xe9;rifiez l'&#xe9;quation pour <m>C</m> et <m>\gamma</m>.
+          Astuce: Commencez avec <m>\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)</m> et multipliez par <m>C</m>.
+          Alors, que devraient être <m>\alpha</m> et <m>\beta</m>?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Tandis que c'est g&#xe9;n&#xe9;ralement plus facile d'utiliser les premi&#xe8;res formes avec <m>A</m> et <m>B</m> pour r&#xe9;soudre pour les conditions initiales,
+      la deuxi&#xe8;me forme est beaucoup plus naturelle.
+      Les constantes <m>C</m> et <m>\gamma</m> ont des interpr&#xe9;tations physiques int&#xe9;ressantes. &#xc9;crivez la solution comme
+      <me>
+        x(t) = C \cos ( \omega_0 t - \gamma )
+      </me>.
+    </p>
+    <p>
+      Il s'agit d'une oscillation &#xe0; fr&#xe9;quence pure
+      (une onde sinusoïdale).
+      La constante <m>C</m> est l'<em>amplitude
+          <idx><h>amplitude</h></idx>
+      </em>, <m>\omega_0</m> est la <em>fr&#xe9;quence angulaire<idx><h>fr&#xe9;quence angulaire</h></idx>
+      </em>,
+          <idx><h>angular frequency</h></idx>
+      et <m>\gamma</m> est le <em>changement de phase
+          <idx><h>changement de phase</h></idx>
+      </em>.
+      Le changement de phase d&#xe9;place uniquement le graphe vers la gauche ou vers la droite
+      (translation horizontale).
+      On appelle <m>\omega_0</m> la <em>fr&#xe9;quence angulaire naturelle<idx><h>fr&#xe9;quence angulaire naturelle</h></idx>
+      </em>.
+      Cette configuration enti&#xe8;re est appel&#xe9;e le
+      <em>mouvement harmonique simple<idx><h>mouvement harmonique simple</h></idx>
+      </em>.
+    </p>
+    <p>
+      Prenons une pause pour expliquer les termes <em>angulaire</em>
+      et <em>fr&#xe9;quence</em>.
+      Les unit&#xe9;s de <m>\omega_0</m> sont des radians par unit&#xe9;
+      de temps, ce ne sont pas des cycles par unit&#xe9;
+      de temps comme la fr&#xe9;quence mesure habituellement.
+      Puisqu'un cycle mesure <m>2 \pi</m> radians,
+      la fr&#xe9;quence usuelle est donn&#xe9;e par <m>\frac{\omega_0}{2\pi}</m>.
+      Il s'agit simplement de savoir où nous pla&#xe7;ons la constante <m>2\pi</m>,
+      et c'est une question de goût.
+    </p>
+    <p>
+      La <em>p&#xe9;riode
+          <idx><h>p&#xe9;riode</h></idx>
+      </em> du mouvement est l'inverse de la fr&#xe9;quence (en cycles par unit&#xe9;
+      de temps, et alors i<m>\frac{2\pi}{\omega_0}</m>.
+      C'est le temps qu'il faut pour terminer un cycle complet.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Supposons que <m>m=\unit[2]{kg}</m> et <m>k=\unitfrac[8]{N}{m}</m>.
+          Un syst&#xe8;me masse-ressort se trouve sur un camion qui se d&#xe9;place &#xe0; \unitfrac[1]{m}{s}. Le camion a un accident et s'arrête.
+          La masse a &#xe9;t&#xe9;
+          tenue en place &#xe0; 0{,}5 m de sa position de repos.
+          Pendant l'accident, la masse se d&#xe9;place.
+          Alors, elle bouge vers l'avant &#xe0; \unitfrac[1]{m}{s}, pendant que le ressort reste fix&#xe9;. La masse commence donc &#xe0; osciller.
+          Quelle est la fr&#xe9;quence de l'oscillation r&#xe9;sultante?
+          Quelle est l'amplitude?
+          Les unit&#xe9;s sont des
+              <idx><h>unit&#xe9;s mks</h></idx>
+          m&#xe8;tres-kilogrammes-secondes.
+        </p>
+        <p>
+          La configuration signifie que la masse &#xe9;tait &#xe0;
+          un demi-m&#xe8;tre dans la direction positive pendant l'accident et que la masse se d&#xe9;pla&#xe7;ait vers l'avant par rapport &#xe0;
+          la paroi sur laquelle le ressort &#xe9;tait mont&#xe9;,
+          (dans la direction positive)
+          &#xe0; \unitfrac[1]{m}{s}. Alors,
+          l'&#xe9;quation avec les conditions initiales est:
+          <me>
+            2 x'' + 8 x = 0 , \qquad x(0) = 0.5, \qquad x'(0) = 1
+          </me>.
+        </p>
+        <p>
+          On calcule directement <m>\omega_0 = \sqrt{\nicefrac{k}{m}} = \sqrt{4} = 2</m>.
+          La fr&#xe9;quence angulaire est 2.
+          La fr&#xe9;quence usuelle en hertz
+          (cycles par seconde)
+          est <m>\nicefrac{2}{2\pi} = \nicefrac{1}{\pi} \approx 0.318</m>.
+        </p>
+        <figure xml:id="mv_undampedfig">
+          <caption>Oscillation simple non amortie.</caption>
+          {3.25in}
+          \diffyincludegraphics{width=3in}{width=4.5in}{mv-undamped}
+        </figure>
+        <p>
+          La solution g&#xe9;n&#xe9;rale est:
+          <me>
+            x(t) = A \cos (2t) + B \sin (2t)
+          </me>.
+        </p>
+        <p>
+          La condition <m>x(0) = 0.5</m> implique que <m>A = 0.5</m>.
+          Alors, <m>x'(t) = - 2(0.5) \sin (2t) + 2B \cos (2t)</m>.
+          Puisque <m>x'(0) = 1</m>, on obtient <m>B = 0.5</m>.
+          Ainsi, l'amplitude est <m>C = \sqrt{A^2+B^2} = \sqrt{0.25+0.25} = \sqrt{0.5} \approx 0.707</m>.
+          La solution est:
+          <me>
+            x(t) = 0.5 \cos (2t) + 0.5 \sin (2t)
+          </me>.
+        </p>
+        <p>
+          Le graphe de <m>x(t)</m> est illustr&#xe9; &#xe0;
+          <xref ref="mv_undampedfig">la</xref>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      En g&#xe9;n&#xe9;ral, pour un mouvement libre non amorti,
+      la solution
+      <me>
+        x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t)
+      </me>
+      correspond aux conditions initiales
+      <m>x(0) = A</m> et <m>x'(0) = \omega_0 B</m>.
+      Ainsi, il est facile de comprendre <m>A</m> et <m>B</m> &#xe0;
+      partir des conditions initiales.
+    </p>
+    <p>
+      Calculons la variation de phase de l'exemple.
+      Puisque <m>\tan \gamma = \nicefrac{B}{A} = 1</m>,
+      on prend l'arc tangente de 1 pour obtenir
+      <m>\nicefrac{\pi}{4}</m> ou <m>\nicefrac{5\pi}{4}</m>.
+      Il faut v&#xe9;rifier &#xe0;
+      quel quadrant appartient <m>\gamma</m>.
+      Puisque <m>A</m> et <m>B</m> sont positifs,
+      <m>\gamma</m> appartient au premier quadrant,
+      et alors <m>\gamma = \nicefrac{\pi}{4}</m> ou approximativement 0.785.
+    </p>
+    <p>
+      Note: Plusieurs calculatrices et logiciels proposent non seulement la fonction <c>atan</c>
+          <idx><h>atan</h></idx>
+      pour arc tangente, mais aussi ce qui est appel&#xe9;
+      <c>atan2</c>.
+          <idx><h>atan2</h></idx>
+      Cette fonction prend deux arguments,
+      <m>B</m> et <m>A</m>, et retourne <m>\gamma</m> dans le bon quadrant.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Mouvement libre amorti</title>
+    <introduction>
+      <p>
+        On consid&#xe8;re maintenant le cas amorti.
+            <idx><h>amorti</h></idx>
+        L'&#xe9;quation est alors
+        <me>
+          m x'' + c x' + kx = 0
+        </me>
+        et se r&#xe9;&#xe9;crit comme suit:
+        <me>
+          x'' + 2p x' + \omega_0^2 x = 0
+        </me>,
+        où
+        <me>
+          \omega_0 = \sqrt{\frac{k}{m}}, \qquad p = \frac{c}{2m}
+        </me>.
+      </p>
+      <p>
+        L'&#xe9;quation caract&#xe9;ristique est
+        <me>
+          r^2 + 2 pr + \omega_0^2 = 0
+        </me>.
+      </p>
+      <p>
+        En utilisant la formule quadratique, nous obtenons les racines
+        <me>
+          r = -p \pm \sqrt{p^2 - \omega_0^2}
+        </me>.
+      </p>
+      <p>
+        La forme de la solution d&#xe9;pend du type de racine que l'on obtient (r&#xe9;elles ou complexes).
+        On obtient des racines r&#xe9;elles si et seulement si le nombre suivant n'est pas n&#xe9;gatif (donc plus grand ou &#xe9;gal &#xe0; z&#xe9;ro):
+        <me>
+          p^2 - \omega_0^2 = {\left( \frac{c}{2m} \right)}^2 - \frac{k}{m} = \frac{c^2 - 4km}{4m^2}
+        </me>.
+      </p>
+      <p>
+        Le signe de <m>p^2-\omega_0^2</m> est le même que le signe de <m>c^2 - 4km</m>.
+        Ainsi, on obtient des racines r&#xe9;elles si et seulement si <m>c^2-4km</m> n'est pas n&#xe9;gatif (c'est-&#xe0;-dire si <m>c^2 \geq 4km</m>).
+      </p>
+    </introduction>
+    <subsubsection>
+      <title>Suramortissement</title>
+      <figure xml:id="mv_overdampedfig">
+        <caption>Mouvement suramorti, avec quelques conditions initiales diff&#xe9;rentes.</caption>
+        {3.25in}
+        \diffyincludegraphics{width=3in}{width=4.5in}{mv-overdamped}
+      </figure>
+      <p>
+        Lorsque <m>c^2 - 4km > 0</m>,
+        le syst&#xe8;me est <em>suramorti
+            <idx><h>suramorti</h></idx>
+        </em>.
+        Dans ce cas,
+        il y a deux racines r&#xe9;elles <m>r_1</m> et <m>r_2</m>.
+        Les deux racines sont n&#xe9;gatives:
+        puisque <m>\sqrt{p^2 - \omega_0^2}</m> est toujours plus petite que <m>p</m>,
+        alors <m>-p \pm \sqrt{p^2 - \omega_0^2}</m> est n&#xe9;gative dans tous les cas.
+      </p>
+      <p>
+        La solution est
+        <me>
+          x(t) = C_1 e^{r_1 t} + C_2 e^{r_2 t}
+        </me>.
+      </p>
+      <p>
+        Puisque <m>r_1, r_2</m> sont n&#xe9;gatives,
+        <m>x(t) \to 0</m> lorsque <m>t \to \infty</m>.
+        Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini.
+        <xref ref="mv_overdampedfig">La</xref>
+        montre le graphe de quelques solutions,
+        avec des conditions initiales diff&#xe9;rentes.
+      </p>
+      <p>
+        Il n'y a aucune oscillation.
+        En effet, le graphe croise l'axe des <m>x</m> au plus une fois.
+        Pour comprendre pourquoi,
+        r&#xe9;solvons <m>0 = C_1 e^{r_1 t} + C_2 e^{r_2 t}</m>.
+        Donc, <m>C_1 e^{r_1 t} = - C_2 e^{r_2 t}</m>,
+        et, en utilisant les lois des exposants, on obtient
+        <me>
+          \frac{-C_1}{C_2} = e^{(r_2-r_1) t}
+        </me>.
+      </p>
+      <p>
+        Cette &#xe9;quation a au plus une solution <m>t \geq 0</m>.
+        Pour certaines conditions initiales,
+        le graphe ne croise jamais l'axe des <m>x</m>,
+        comme le montre le graphe pr&#xe9;c&#xe9;dent.
+      </p>
+      <example>
+        <statement>
+          <p>
+            Supposons que la masse n'est plus au repos.
+            Elle est au repos lorsque <m>x(0) = x_0</m> et <m>x'(0) = 0</m>.
+            Alors,
+            <me>
+              x(t) = \frac{x_0}{r_1-r_2} \left(r_1 e^{r_2 t} - r_2 e^{r_1 t} \right)
+            </me>.
+          </p>
+          <p>
+            Il est &#xe9;vident que les conditions initiales sont satisfaites.
+          </p>
+        </statement>
+      </example>
+    </subsubsection>
+    <subsubsection>
+      <title>Amortissement critique</title>
+      <p>
+        Lorsque <m>c^2 - 4km = 0</m>,
+        le syst&#xe8;me pr&#xe9;sente un
+        <em>amortissement critique
+            <idx><h>amortissement critique</h></idx>
+        </em>.
+        Dans ce cas, il y a une racine double <m>-p</m>.
+        Notre solution est
+        <me>
+          x(t) = C_1 e^{-pt} + C_2 t e^{-pt}
+        </me>.
+      </p>
+      <p>
+        Le comportement d'un syst&#xe8;me avec amortissement critique est tr&#xe8;s semblable &#xe0;
+        celui d'un syst&#xe8;me avec amortissement ordinaire.
+        Apr&#xe8;s tout,
+        le premier est en quelque sorte un cas limite du second.
+        Mais ces &#xe9;quations sont apr&#xe8;s tout des approximations:
+        dans le vrai monde,
+        on est toujours un peu sous-amorti ou un peu trop amorti.
+        On ne s'attardera donc pas sur l'amortissement critique.
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Sous-amortissement</title>
+      <figure xml:id="mv_underdampedfig">
+        <caption>Syst&#xe8;me sous-amorti avec ses courbes enveloppes.</caption>
+        {3.25in}
+        \diffyincludegraphics{width=3in}{width=4.5in}{mv-underdamped}
+      </figure>
+      <p>
+        Lorsque <m>c^2 - 4km \lt  0</m>,
+        le syst&#xe8;me est <em>sous-amorti
+            <idx><h>sous-amorti</h></idx>
+        </em>.
+        Dans ce cas, les racines sont complexes.
+        <md>
+          <mrow>r \amp  = -p \pm \sqrt{p^2 - \omega_0^2}</mrow>
+          <mrow>\amp  = -p \pm \sqrt{-1}\sqrt{\omega_0^2 - p^2}</mrow>
+          <mrow>\amp  = -p \pm i \omega_1 </mrow>
+        </md>,
+        où <m>\omega_1 =\sqrt{\omega_0^2 - p^2}</m>.
+        Notre solution est
+        <me>
+          x(t) = e^{-pt} \bigl( A \cos (\omega_1 t) + B \sin (\omega_1 t) \bigr)
+        </me>
+        ou
+        <me>
+          x(t) = C e^{-pt} \cos ( \omega_1 t - \gamma )
+        </me>.
+      </p>
+      <p>
+        Le graphe d'un exemple est illustr&#xe9;
+        dans <xref ref="mv_underdampedfig">la</xref>.
+        Notez que nous avons encore
+        <m>x(t) \to 0</m> lorsque <m>t \to \infty</m>.
+      </p>
+      <p>
+        La figure montre aussi les<nbsp/><em>courbes enveloppes
+            <idx><h>courbes enveloppes</h></idx>
+        </em> <m>C e^{-pt}</m> et <m>-C e^{-pt}</m>.
+        La solution est la ligne qui oscille entre les deux courbes.
+        Les courbes enveloppes donnent l'amplitude maximale de l'oscillation &#xe0;
+        n'importe quel point donn&#xe9;. Le calcul de la courbe enveloppe vous int&#xe9;ressera si,
+        par exemple,
+        vous sautez en <em>bungee</em> et vous voulez &#xe9;viter de vous cogner la tête.
+      </p>
+      <p>
+        Le changement de phase <m>\gamma</m> fait varier l'oscillation vers la gauche ou vers la droite,
+        mais dans la courbe enveloppe
+        (celle-ci ne change pas, même lorsque <m>\gamma</m> varie).
+      </p>
+      <p>
+        La <em>pseudo-fr&#xe9;quence
+            <idx><h>pseudo-fr&#xe9;quence</h></idx>
+        </em><fn>
+        On n'appelle pas <m>\omega_1</m> une fr&#xe9;quence puisque la solution n'est pas r&#xe9;ellement p&#xe9;riodique.
+        </fn> angulaire devient plus petite lorsque l'amortissement <m>c</m>,
+        et donc <m>p</m>, devient plus grand.
+        Cela a du sens:
+        lorsque l'amortissement change l&#xe9;g&#xe8;rement, on ne s'attend pas &#xe0;
+        ce que le comportement de la solution change beaucoup.
+        Lorsque <m>c</m> augmente, alors, &#xe0;
+        un certain point, la solution devrait ressembler &#xe0;
+        la solution pour un amortissement critique ou pour un suramortissement où il n'y a pas d'oscillation.
+        Alors, si <m>c^2</m> approche <m>4km</m>,
+        on veut que <m>\omega_1</m> tende vers 0.
+      </p>
+      <p>
+        De l'autre côt&#xe9;, lorsque <m>c</m> devient plus petit,
+        <m>\omega_1</m> approche <m>\omega_0</m> (<m>\omega_1</m> est toujours plus petit que <m>\omega_0</m>),
+        et la solution ressemble de plus en plus au cas de sous-amortissement.
+        La courbe enveloppe devient de plus en plus plate lorsque <m>c</m>,
+        et donc <m>p</m>, tend vers 0.
+      </p>
+    </subsubsection>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <p>
+      \begin{samepage}
+    </p>
+    <exercise xml:id="mv_ex1">
+      <statement>
+        <p>
+          Consid&#xe9;rez le syst&#xe8;me masse-ressort tel que <m>m=2</m>,
+          la constante du ressort <m>k=3</m>,
+          et la constante d'amortissement <m>c=1</m>. \begin{tasks} \task &#xc9;crivez le syst&#xe8;me et trouvez la solution g&#xe9;n&#xe9;rale de celui-ci. \task Est-ce que le syst&#xe8;me est en &#xe9;tat de sous-amortissement,
+          sur-amortissement ou d'amortissement critique? \task Si le syst&#xe8;me n'est pas en amortissment critique,
+          trouve un <m>c</m> qui am&#xe8;ne le syst&#xe8;me dans un &#xe9;tat d'amortissement critique. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \end{samepage}
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Faites l' <xref ref="mv_ex1"></xref> pour <m>m=3</m>,
+          <m>k=12</m> et <m>c=12</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="mv_exwt1">
+      <statement>
+        <p>
+          Utilisant les unit&#xe9;s m&#xe8;tres-kilogrammes-secondes,
+              <idx><h>mks units</h></idx>
+          supposez que vous avez un ressort de constante \unitfrac[4]N{m}. Vous voulez l'utiliser pour peser des objets.
+          Supposez qu'il n'y a pas de friction.
+          Attachez la masse au ressort et mettez-la en mouvement. \begin{tasks} \task Vous trouvez que la fr&#xe9;quence est \unit[0.8]{Hz}
+          (cycles per seconde).
+          Quelle est la masse? \task Trouvez la formule pour une masse <m>m</m> et donnez la fr&#xe9;quence <m>\omega</m> en \unit{Hz}. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          On reprend l' <xref ref="mv_exwt1"></xref>
+          en tenant compte de la friction.
+          De plus, supposez que vous ne connaissaez pas la constante du ressort,
+          mais que vous avez deux poids de r&#xe9;f&#xe9;rences \unit[1]{kg} et \unit[2]{kg} pour calibrer votre syst&#xe8;me.
+          Vous les mettez, chacun leur tour,
+          en mouvement sur votre ressort et vous mesurez la fr&#xe9;quence.
+          Pour la masse de \unit[1]{kg} vous mesurez \unit[1.1]{Hz}, pour la masse de \unit[2]{kg} vous mesurez \unit[0.8]{Hz}. \begin{tasks} \task Trouvez <m>k</m>
+          (la constante du ressort)
+          et <m>c</m>
+          (la constante d'amortissement). \task Trouvez la formule pour la masse en terme de fr&#xe9;quence en Hz.
+          <em>Notez qu'il pourrait avoir plus qu'une masse possible pour une fr&#xe9;quence donn&#xe9;e.</em>
+          \task Pour un objet inconnu,
+          vous mesurez \unit[0.2]{Hz}, quelle est la masse de cet objet?
+          Supposez que la masse de l'objet inconnue est sup&#xe9;rieure un kilogramme. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          On veut mesurer la friction d'une masse de \unit[0.1]{kg} en la glissant sur une surface lisse
+          (on veut trouver <m>c</m>).
+          Vous avez un ressort de constante <m>k=\unitfrac[5]{N}{m}</m>.
+          Vous prenez le ressort,
+          vous attachez une masse et vous l'accrochez au mur.
+          Ensuite, vous tirez sur le ressort et vous lâchez la masse.
+          Vous trouvez que la masse oscille avec une fr&#xe9;quence de \unit[1]{Hz}. Quelle est la friction?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Une masse de <m>2</m> kilogrammes est attach&#xe9; &#xe0;
+          un ressort de constante <m>k</m> newtons par m&#xe8;tre sans amortissement.
+          Supposez que le syst&#xe8;me est au repos et qu'au temps <m>t=0</m>,on donne une impulsion &#xe0;
+          la masse, qui commence &#xe0;
+          se d&#xe9;placer &#xe0; 2 m&#xe8;tres par seconde.
+          Quelle valeur <m>k</m> devrait-elle avoir pour que la masse n'aille pas plus loin que trois m&#xe8;tres de sa position de repos?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>k=\nicefrac{8}{9}</m>
+      (et plus)
+      }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que vous ayant un circuit RLC circuit avec un r&#xe9;sistance de 100 milliohms (0.1 ohms),
+          un inducteur ayant une inductance de 50 millihenries (0.05 henries),
+          et une capacit&#xe9;
+          de 5 farads,
+          avec un voltage constant. \begin{tasks} \task &#xc9;crivez l'EDO pour le <m>I</m> courant. \task Trouvez la solution g&#xe9;n&#xe9;rale. \task R&#xe9;solvez pour
+          <m>I(0) = 10</m> et <m>I'(0) = 0</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>0.05 I'' + 0.1 I' + (\nicefrac{1}{5}) I = 0</m> b)
+      <m>I = C e^{-t} \cos(\sqrt{3} \, t - \gamma)</m> c) <m>I = 10 e^{-t} \cos(\sqrt{3} \, t) + \frac{10}{\sqrt{3}} e^{-t} \sin(\sqrt{3} \, t)</m> }
+    </p>
+    <exercise>
+      <title>2</title>
+      <statement>
+        <p>
+          Un wagon de \unit[5000]{kg} frappe un pare-chocs
+          (un ressort)
+          &#xe0; \unitfrac[1]{m}{s}, et le ressort comprime de \unit[0.1]{m}. Supposez qu'il n'y a pas d'amortissement.
+        </p>
+        <p>
+          \begin{tasks} \task Trouvez <m>k</m>. \task Quelle est la compression du ressort lorsqu'un wagon de \unit[10000]{kg} le frappe &#xe0;
+          la même vitesse? \task Supposons que le ressort brise lorsqu'il comprime de plus de\unit[0.3]{m}. Quelle serait la masse maximale permise au wagon pour qu'il puisse le frapper &#xe0; \unitfrac[1]{m}{s}? \task Quel est la masse maximale du wagon pouvant frapper le ressort sans briser &#xe0;
+          une vitesse de \unitfrac[2]{m}{s}? \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>k=500000</m> b)
+      <m>\frac{1}{5\sqrt{2}} \approx 0.141</m> c) \unit[45000]{kg} d) \unit[11250]{kg} }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Une masse de <m>m</m> \unit{kg} est attach&#xe9; &#xe0;
+          un ressort de constante <m>k=\unitfrac[3]{N}{m}</m>,
+          et <m>c=\unitfrac[2]{Ns}{m}</m>.
+          Trouvez la masse <m>m_0</m> pour laquelle il y a un amortissement critique.
+          Si <m>m \lt m_0</m>, est-ce que le syst&#xe8;me oscille ou non,
+          et est-ce qu'il s'agit d'un sur-amortissement ou d'un sous-amortissement?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>m_0 = \frac{1}{3}</m>.
+      Si <m>m \lt m_0</m>,
+      alors le syst&#xe8;me est sur-amorti et ne va pas osciller. }
+    </p>
+  </subsection>
+</section>

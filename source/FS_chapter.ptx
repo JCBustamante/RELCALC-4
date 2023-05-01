@@ -1,0 +1,16 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="FS_chapter">
+  <title>S&#xe9;ries de Fourier et &#xe9;quations diff&#xe9;rentielles partielles</title>
+  <xi:include  href="bvp_section.ptx"/>
+  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
+  <xi:include  href="ts_section.ptx"/>
+  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
+  <xi:include  href="moreonfourier_section.ptx"/>
+  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
+  <xi:include  href="sec_scs.ptx"/>
+  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
+  <xi:include  href="appoffourier_section.ptx"/>
+  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
+  <xi:include  href="heateq_section.ptx"/>
+  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
+  <xi:include  href="we_section.ptx"/>
+</chapter>

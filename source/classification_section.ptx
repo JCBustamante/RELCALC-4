@@ -1,0 +1,320 @@
+<section xml:id="classification_section">
+  <title>Classification des &#xe9;quations diff&#xe9;rentielles</title>
+  <introduction>
+    <p>
+      Il y a plusieurs types d'&#xe9;quations diff&#xe9;rentielles,
+      et on les classifie en diff&#xe9;rentes cat&#xe9;gories selon leurs propri&#xe9;t&#xe9;s.
+      Parlons bri&#xe8;vement d'une classification de base.
+      D'abord, la distinction entre EDO et EDP:
+      <ul>
+        <li>
+          <p>
+            Dans les <em>&#xe9;quations diff&#xe9;rentielles ordinaires</em><idx><h>&#xc9;quations diff&#xe9;rentielles ordinaires</h></idx>,
+              <idx><h>EDO</h></idx>
+            ou EDO, les d&#xe9;riv&#xe9;es sont prises par rapport &#xe0; une seule variable.
+            Autrement dit, il y a une seule variable ind&#xe9;pendante.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dans les <em>&#xe9;quations aux d&#xe9;riv&#xe9;es partielles</em><idx><h>&#xc9;quations aux d&#xe9;riv&#xe9;es partielles</h></idx>,
+              <idx><h>EDP</h></idx>
+            ou EDP, les d&#xe9;riv&#xe9;es sont prises par rapport &#xe0; plusieurs variables.
+            Autrement dit, il y a plusieurs variables ind&#xe9;pendantes.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Voici quelques exemples d'&#xe9;quations diff&#xe9;rentielles ordinaires:
+      <md>
+        <mrow>\amp  \frac{d y}{dt} = ky  \amp  \amp  \text{(croissance exponentielle\knownindex{\lt h>exponential growth\lt /h>})}</mrow>
+        <mrow>\amp  \frac{d y}{dt} = k(A-y)  \amp  \amp  \text{(\myindex{loi de refroidissement de Newton})}</mrow>
+        <mrow>\amp  m \frac{d^2 x}{dt^2} + c \frac{dx}{dt} + kx = f(t) . \amp  \amp \text{(vibrations m\'ecaniques\knownindex{\lt h>mechanical vibrations\lt /h>})}</mrow>
+      </md>
+    </p>
+    <p>
+      Voici quelques exemples d'&#xe9;quations aux d&#xe9;riv&#xe9;es partielles:
+      <md>
+        <mrow>\amp  \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0 \amp  \amp \text{(\'equation du transport\knownindex{\lt h>\'Equation du transport\lt /h>})}</mrow>
+        <mrow>\amp  \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}  \amp  \amp \text{(\'equation de la chaleur ou de la diffusion\knownindex{\lt h>\'Equation de la chaleur/diffusion\lt /h>})}</mrow>
+        <mrow>\amp  \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} . \amp  \amp \text{(\'equation de l'onde en 2 dimensions\knownindex{\lt h>\'Equation de l'onde en deux dimensions\lt /h>})}</mrow>
+      </md>
+    </p>
+    <p>
+      Lorsque la situation est soumise &#xe0;
+      plusieurs &#xe9;quations en même temps,
+      on a un <em>syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles<idx><h>syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles</h></idx>
+      </em>.
+      Par exemple:
+      <me>
+        y' = x , \qquad x' = y
+      </me>
+      est un syst&#xe8;me simple d'&#xe9;quations diff&#xe9;rentielles ordinaires.
+      Les &#xe9;quations de Maxwell<idx><h>&#xe9;quations de Maxwell</h></idx> en &#xe9;lectromagn&#xe9;tisme forment elles aussi un syst&#xe8;me d'&#xe9;quations aux d&#xe9;riv&#xe9;es partielles:
+      <md>
+        <mrow>\amp  \nabla \cdot \vec{D} = \rho \amp  \amp  \nabla \cdot \vec{B} = 0</mrow>
+        <mrow>\amp  \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} \amp \amp  \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} </mrow>
+      </md>.
+    </p>
+    <p>
+      Les op&#xe9;rateurs de divergence <m>\nabla \cdot</m> et de rotationnel
+      <m>\nabla \times</m> s'&#xe9;crivent en termes de d&#xe9;riv&#xe9;es partielles des fonctions en termes des variables <m>x</m>,
+      <m>y</m> et <m>z</m> .
+    </p>
+    <p>
+      Le prochain &#xe9;l&#xe9;ment d'information est l'<em>ordre
+          <idx><h>ordre</h></idx>
+      </em> de l'&#xe9;quation
+      (ou du syst&#xe8;me).
+      L'ordre est tout simplement l'ordre de la plus grande d&#xe9;riv&#xe9;e apparaissant dans l'&#xe9;quation.
+      Si la plus grande d&#xe9;riv&#xe9;e est la d&#xe9;riv&#xe9;e premi&#xe8;re,
+      c'est une &#xe9;quation du premier ordre.
+      Si la d&#xe9;riv&#xe9;e la plus grande est la d&#xe9;riv&#xe9;e seconde,
+      alors c'est une &#xe9;quation du deuxi&#xe8;me ordre.
+      Par exemple,
+      la loi de refroidissement de Newton est une &#xe9;quation du premier ordre,
+      alors que l'&#xe9;quation des vibrations m&#xe9;caniques est une &#xe9;quation du deuxi&#xe8;me ordre.
+      L'&#xe9;quation d&#xe9;crivant les vibrations transversales dans une poutre,
+      <me>
+        a^4 \frac{\partial^4 y}{\partial x^4} + \frac{\partial^2 y}{\partial t^2} = 0
+      </me>,
+      est une &#xe9;quation aux d&#xe9;riv&#xe9;es partielles d'ordre quatre.
+      En effet, une des d&#xe9;riv&#xe9;es dans l'&#xe9;quation est la quatri&#xe8;me d&#xe9;riv&#xe9;e.
+      Le fait que la d&#xe9;riv&#xe9;e en <m>t</m> soit seulement d'ordre deux n'affecte pas l'ordre de l'&#xe9;quation.
+    </p>
+    <p>
+      Dans le premier chapitre,
+      nous commencerons par les &#xe9;quations diff&#xe9;rentielles ordinaires du premier ordre,
+      c'est-&#xe0;-dire les &#xe9;quations de la forme <m>\frac{dy}{dx} = f(x,y)</m>.
+      En g&#xe9;n&#xe9;ral,
+      les &#xe9;quations de petit ordre sont plus simples &#xe0;
+      r&#xe9;soudre et &#xe0; &#xe9;tudier.
+    </p>
+    <p>
+      Dans la classification des &#xe9;quations,
+      on s'int&#xe9;resse aussi &#xe0;
+      comment les variables d&#xe9;pendantes apparaissent dans l'&#xe9;quation
+      (ou le syst&#xe8;me).
+      En particulier, on l'appelle une
+      <em>&#xe9;quation lin&#xe9;aire</em>
+          <idx><h>linear equation</h></idx>
+      si la variable d&#xe9;pendante
+      (ou les variables d&#xe9;pendantes)
+      et ses d&#xe9;riv&#xe9;es apparaissent lin&#xe9;airement,
+      c'est-&#xe0;-dire qu'elles ne sont pas multipli&#xe9;es ensemble et qu'aucune autre fonction des variables d&#xe9;pendantes n'appara&#xee;t dans l'&#xe9;quation.
+      Sinon, il s'agit d'une &#xe9;quation
+      <em>non lin&#xe9;aire</em>.
+          <idx><h>nonlinear equation</h></idx>
+      Une EDO est lin&#xe9;aire si elle peut être exprim&#xe9;e de la mani&#xe8;re suivante:
+      <men xml:id="classification_eqlingen">
+        a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = b(x) *
+      </men>.
+    </p>
+    <p>
+      Les fonctions <m>a_0</m>, <m>a_1</m>,
+      <ellipsis/>, <m>a_n</m> s'appellent les <em>coefficients
+          <idx><h>coefficients</h></idx>
+      </em>.
+      L'&#xe9;quation peut d&#xe9;pendre arbitrairement de la variable ind&#xe9;pendante.
+      Ainsi, l'&#xe9;quation suivante est lin&#xe9;aire:
+      <men xml:id="classification_eqlinex">
+        e^x \frac{d^2 y}{dx^2} + \sin(x) \frac{d y}{dx} +  x^2 y = \frac{1}{x}
+      </men>,
+      et ce, malgr&#xe9; la pr&#xe9;sence de <m>e^x</m> et de <m>\sin(x)</m>,
+      puisque <m>y</m> et ses d&#xe9;riv&#xe9;es apparaissent de mani&#xe8;re lin&#xe9;aire dans l'&#xe9;quation.
+    </p>
+    <p>
+      Tous les exemples mentionn&#xe9;s au d&#xe9;but de la section sont lin&#xe9;aires.
+      Ce n'est peut-être pas &#xe9;vident dans le cas des &#xe9;quations de Maxwell;
+      pour s'en convaincre,
+      on peut &#xe9;crire la divergence et le rotationnel en termes des d&#xe9;riv&#xe9;es partielles.
+    </p>
+    <p>
+      Consid&#xe9;rons maintenant quelques &#xe9;quations non lin&#xe9;aires.
+      Par exemple, l'&#xe9;quation de Burger,
+          <idx><h>Burger</h></idx>
+      <me>
+        \frac{\partial y}{\partial t} +  \frac{\partial y}{\partial x} = \nu \frac{\partial^2 y}{\partial x^2}
+      </me>,
+      est une EDP du second ordre, qui est non lin&#xe9;aire,
+      puisque <m>y</m> et <m>\frac{\partial y}{\partial x}</m> sont multipli&#xe9;s ensemble.
+      L'&#xe9;quation suivante:
+      <men xml:id="classification_eqnonlinode">
+        \frac{dx}{dt} = x^2
+      </men>,
+      est une EDO non lin&#xe9;aire du premier ordre,
+      puisque la variable d&#xe9;pendante <m>x</m> est au carr&#xe9;.
+    </p>
+    <p>
+      Une &#xe9;quation qui est lin&#xe9;aire est de plus appel&#xe9;e <em>homog&#xe8;ne
+          <idx><h>homog&#xe8;ne</h></idx>
+      </em> si tous les termes d&#xe9;pendent de la variable d&#xe9;pendante.
+      Autrement dit,
+      il n'y a aucun terme qui d&#xe9;pend uniquement de la variable ind&#xe9;pendante.
+      Sinon, l'&#xe9;quation est dite <em>non homog&#xe8;ne
+          <idx><h>non homog&#xe8;ne</h></idx>
+      </em>.
+      Par exemple, l'&#xe9;quation de la croissance exponentielle,
+      l'&#xe9;quation de l'onde et l'&#xe9;quation du transport sont homog&#xe8;nes.
+      L'&#xe9;quation des vibrations m&#xe9;caniques est non homog&#xe8;ne &#xe0;
+      moins que <m>f(t)</m> soit la fonction nulle.
+      De mani&#xe8;re analogue,
+      la loi de refroidissement de Newton est non homog&#xe8;ne sauf si la temp&#xe9;rature ambiante <m>A</m> est nulle.
+      Une EDO lin&#xe9;aire homog&#xe8;ne peut être &#xe9;crite sous la forme suivante:
+      <me>
+        a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = 0
+      </me>.
+    </p>
+    <p>
+      Comparez &#xe0; <xref ref="classification_eqlingen"/> et observez l'absence de fonction <m>b(x)</m>.
+    </p>
+    <p>
+      Lorsque les coefficients d'une &#xe9;quation lin&#xe9;aire sont en fait des constantes,
+      on dit alors que l'&#xe9;quation est &#xe0;
+      <em>coefficients constants</em>.
+          <idx><h>constant coefficient</h></idx>
+      Les coefficients sont les fonctions multipli&#xe9;es par la variable d&#xe9;pendante ou par une de ses d&#xe9;riv&#xe9;es,
+      et non la fonction <m>b(x)</m> qui appara&#xee;t seule.
+      Une EDO non homog&#xe8;ne &#xe0;
+      coefficients constants a la forme suivante:
+      <me>
+        a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1} \frac{dy}{dx} + a_{0} y = b(x)
+      </me>,
+      où <m>a_0, a_1, \ldots, a_n</m> sont toutes des constantes,
+      mais où <m>b</m> peut d&#xe9;pendre de la variable ind&#xe9;pendante <m>x</m>.
+      L'&#xe9;quation des vibrations m&#xe9;caniques que nous avons vue plus haut est une EDO non homog&#xe8;ne du second ordre &#xe0;
+      coefficients constants.
+    </p>
+    <p>
+      La même nomenclature s'applique aux EDP. Par cons&#xe9;quent,
+      les &#xe9;quations du transport,
+      de la chaleur/diffusion et de l'onde sont toutes des EDP lin&#xe9;aires &#xe0;
+      coefficients constants.
+    </p>
+    <p>
+      Pour terminer, une &#xe9;quation est dite <em>autonome
+          <idx><h>autonome</h></idx>
+      </em> si l'&#xe9;quation ne d&#xe9;pend pas de la variable ind&#xe9;pendante.
+      Pour des EDO autonomes, on pensera souvent &#xe0;
+      la variable ind&#xe9;pendante comme &#xe0;
+      la variable du temps. Être une &#xe9;quation autonome signifie que l'&#xe9;quation ne varie pas dans le temps.
+      Par exemple, la loi de refroidissement de Newton est autonome,
+      ainsi que l'&#xe9;quation <xref ref="classification_eqnonlinode"/>.
+      Par contre, les &#xe9;quations de vibrations m&#xe9;caniques ou <xref ref="classification_eqlinex"/> ne sont pas autonomes.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          Classifiez les &#xe9;quations suivantes.
+          S'agit-il d'une EDO ou d'une EDP? Est-ce une &#xe9;quation ou un syst&#xe8;me?
+          Quel est l'ordre?
+          Est-ce lin&#xe9;aire ou non-lin&#xe9;aire et si c'est lin&#xe9;aire,
+          est-ce homog&#xe8;ne? &#xe0;
+          coefficients constants?
+          Si c'est une EDO, est-elle autonome? \begin{tasks}(2) \task
+          <m>\displaystyle \sin(t) \frac{d^2 x}{dt^2} + \cos(t) x = t^2</m> \task <m>\displaystyle \frac{\partial u}{\partial x} + 3 \frac{\partial u}{\partial y} = xy</m> \task
+          <m>\displaystyle y''+3y+5x=0, x''+x-y=0</m> \task <m>\displaystyle \frac{\partial^2 u}{\partial t^2} + u\frac{\partial^2 u}{\partial s^2} = 0</m> \task
+          <m>\displaystyle x''+tx^2=t</m> \task <m>\displaystyle \frac{d^4 x}{dt^4} = 0</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Si <m>\vec{u} = (u_1,u_2,u_3)</m> est un vecteur, sa divergence est:
+          <m>\nabla \cdot \vec{u} = \frac{\partial u_1}{\partial x} + \frac{\partial u_2}{\partial y} + \frac{\partial u_3}{\partial z}</m> et son rotationnel est:
+          <m>\nabla \times \vec{u} = \Bigl( \frac{\partial u_3}{\partial y} - \frac{\partial u_2}{\partial z} , ~ \frac{\partial u_1}{\partial z} - \frac{\partial u_3}{\partial x} , ~ \frac{\partial u_2}{\partial x} - \frac{\partial u_1}{\partial y} \Bigr)</m>.
+          Observez que le rotationnel d'un vecteur est lui-même un vecteur. &#xe9;crivez les &#xe9;quations de Maxwell en termes de d&#xe9;riv&#xe9;es partielles et classifiez le syst&#xe8;me.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que <m>F</m> est une fonction lin&#xe9;aire,
+          c'est-&#xe0;-dire que <m>F(x,y) = ax+by</m> pour des constantes <m>a</m> et <m>b</m>.
+          Classifiez les &#xe9;quations de la forme <m>F(y',y) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez un exemple explicite d'un syst&#xe8;me de deux EDO satisfaisant aux crit&#xe8;res suivants:
+          d'ordre trois, non autonome,
+          non homog&#xe8;ne, dont les coefficients sont non constants,
+          et tel que toutes les d&#xe9;riv&#xe9;es possibles apparaissent dans le syst&#xe8;me au moins une fois.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Classifiez les &#xe9;quations suivantes.
+          S'agit-il d'une EDO ou d'une EDP? Est-ce une &#xe9;quation ou un syst&#xe8;me?
+          Quel est l'ordre?
+          Est-ce lin&#xe9;aire ou non-lin&#xe9;aire et si c'est lin&#xe9;aire,
+          est-ce homog&#xe8;ne? À coefficients constants?
+          Si c'est une EDO, est-elle autonome? \begin{tasks}(2) \task
+          <m>\displaystyle \frac{\partial^2 v}{\partial x^2} + 3 \frac{\partial^2 v}{\partial y^2} = \sin(x)</m> \task <m>\displaystyle \frac{d x}{dt} + \cos(t) x = t^2+t+1</m> \task
+          <m>\displaystyle \frac{d^7 F}{dx^7} = 3F(x)</m> \task <m>\displaystyle y''+8y'=1</m> \task
+          <m>\displaystyle x''+tyx'=0, y''+txy = 0</m> \task <m>\displaystyle \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial s^2} + u^2</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> }a) EDP , &#xe9;quation,
+      deuxi&#xe8;me ordre,
+      lin&#xe9;aire, non homog&#xe8;ne, coefficients constants.
+    </p>
+    <p>
+      b) EDO , &#xe9;quation, premier ordre, lin&#xe9;aire,
+      non homog&#xe8;ne, coefficients non constants, non autonome.
+    </p>
+    <p>
+      c) EDO , &#xe9;quation, ordre sept,
+      lin&#xe9;aire, homog&#xe8;ne,
+      coefficients constants, autonome.
+    </p>
+    <p>
+      d) EDO , &#xe9;quation, deuxi&#xe8;me ordre, lin&#xe9;aire,
+      non homog&#xe8;ne, coefficients constants, autonome.
+    </p>
+    <p>
+      e) EDO , syst&#xe8;me, deuxi&#xe8;me ordre, non lin&#xe9;aire.
+    </p>
+    <p>
+      f) EDP , &#xe9;quation, deuxi&#xe8;me ordre, non lin&#xe9;aire. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          &#xc9;crivez la forme g&#xe9;n&#xe9;rale de l'&#xe9;quation diff&#xe9;rentielle ordinaire d'ordre
+          <em>zero</em> et lin&#xe9;aire.
+          Trouvez sa solution g&#xe9;n&#xe9;rale.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> &#xe9;quation:
+      <m>a(x) y = b(x)</m>, solution:
+      <m>y = \frac{b(x)}{a(x)}</m>. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Pour quelles valeurs de <m>k</m> l'&#xe9;quation
+          <m>\frac{dx}{dt}+x^k = t^{k+2}</m> est-elle lin&#xe9;aire?
+          Indice: il y a deux valeurs possibles.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>k=0</m> ou <m>k=1</m> }
+    </p>
+  </subsection>
+</section>
