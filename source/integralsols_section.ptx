@@ -1,0 +1,559 @@
+<section xml:id="integralsols_section">
+  <title>Int&#xe9;grales en tant que solutions</title>
+  <introduction>
+    <p>
+      Une &#xe9;quation diff&#xe9;rentielle du premier ordre est une &#xe9;quation pouvant s'&#xe9;crire de la forme suivante:
+      <me>
+        \frac{dy}{dx} = f(x,y)
+      </me>
+      ou
+      <me>
+        y' = f(x,y)
+      </me>.
+    </p>
+    <p>
+      Il n'y a pas de m&#xe9;thode g&#xe9;n&#xe9;rale simple pour trouver la solution &#xe0;
+      toute &#xe9;quation du premier ordre.
+      Nous verrons quelques cas où c'est possible.
+      Commen&#xe7;ons par supposer que <m>f</m> est une fonction de <m>x</m>,
+      seulement, c'est-&#xe0;-dire:
+      <men xml:id="ias_inteq">
+        y' = f(x)
+      </men>.
+    </p>
+    <p>
+      On peut alors int&#xe9;grer des deux côt&#xe9;s pour trouver une solution:
+      <me>
+        \int y'(x) \,dx = \int f(x) \,dx + C
+      </me>,
+      c'est-&#xe0;-dire
+      <me>
+        y(x) = \int f(x) \,dx + C
+      </me>.
+    </p>
+    <p>
+      Dans ce cas-ci, la solution g&#xe9;n&#xe9;rale,
+      <m>y(x)</m>, est en fait une primitive de <m>f(x)</m>, &#xe0;
+      laquelle on ajoute la constante d'int&#xe9;gration.
+    </p>
+    <p>
+      Prenons ce moment pour aborder un point d&#xe9;licat du vocabulaire de calcul.
+      Souvent, quand on pense aux int&#xe9;grales, on pense &#xe0;
+      une int&#xe9;grale ind&#xe9;finie.
+          <idx><h>int&#xe9;grale ind&#xe9;finie</h></idx>
+      En r&#xe9;alit&#xe9;, une int&#xe9;grale ind&#xe9;finie est une <em>primitive
+          <idx><h>primitive</h></idx>
+      </em> ou, plus pr&#xe9;cis&#xe9;ment,
+      une famille de primitives.
+      Ce sont les int&#xe9;grales d&#xe9;finies
+      (les int&#xe9;grales avec des bornes)
+      qui sont les vraies int&#xe9;grales.
+      Mais c'est pratique de parler d'int&#xe9;grale ind&#xe9;finie puisqu'on peut toujours &#xe9;crire l'int&#xe9;grale ind&#xe9;finie <m>\int f(x) \,dx + C</m> comme suit,
+      grâce au th&#xe9;or&#xe8;me fondamental du calcul:
+      <me>
+        \int_{x_0}^x f(t) \,dt + C
+      </me>.
+    </p>
+    <p>
+      C'est ce qui nous permet de dire <em>int&#xe9;grer
+          <idx><h>int&#xe9;grer</h></idx>
+      </em> quand, en r&#xe9;alit&#xe9;, on veut dire
+      <em>trouver la primitive
+          <idx><h>primitive</h></idx>
+      </em>.
+    </p>
+    <p>
+      L'int&#xe9;gration est tout simplement un moyen parmi d'autres pour calculer une primitive
+      (moyen qui fonctionne toujours,
+      comme on le verra dans les exemples suivants).
+      Mais on d&#xe9;finit l'int&#xe9;grale comme &#xe9;tant l'aire sous la courbe.
+      Pour simplifier les choses,
+      nous continuerons d'utiliser la notation int&#xe9;grale pour &#xe9;crire une primitive,
+      et <em>gardez toujours en tête</em>
+      comment r&#xe9;&#xe9;crire l'int&#xe9;grale ind&#xe9;finie comme une int&#xe9;grale d&#xe9;finie.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Trouvons la solution g&#xe9;n&#xe9;rale de <m>y' = 3 x^2</m>.
+        </p>
+        <p>
+          En int&#xe9;grant des deux côt&#xe9;s, on trouve <m>y = x^3 + C</m>.
+          V&#xe9;rifions notre solution en prenant sa d&#xe9;riv&#xe9;e : <m>y' = 3x^2</m>.
+          C'est <em>pr&#xe9;cis&#xe9;ment</em> notre &#xe9;quation.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Normalement, on a aussi une <em>condition initiale</em>,
+      de la forme <m>y(x_0) = y_0</m>,
+      où <m>x_0,y_0</m> sont des nombre r&#xe9;els
+      (habituellement, <m>x_0=0</m>,
+      mais ce n'est pas toujours le cas).
+      Dans ce cas,
+      la solution s'&#xe9;crit tr&#xe8;s bien sous forme int&#xe9;grale.
+      Supposons que le probl&#xe8;me &#xe0;
+      r&#xe9;soudre est <m>y' = f(x)</m>, <m>y(x_0) = y_0</m>.
+      Alors, la solution est:
+      <men xml:id="int_eqdef">
+        y(x) = \int_{x_0}^x f(s) \,ds + y_0
+      </men>.
+    </p>
+    <p>
+      V&#xe9;rifions.
+      Par le th&#xe9;or&#xe8;me fondamental du calcul,
+      la d&#xe9;riv&#xe9;e de l'int&#xe9;grale pr&#xe9;c&#xe9;dente est <m>f(x)</m>,
+      et donc <m>y(x)</m> est bel et bien est une solution &#xe0;
+      l'&#xe9;quation diff&#xe9;rentielle.
+      Maintenant, v&#xe9;rifions qu'elle satisfait aussi &#xe0;
+      la condition initiale:
+      <me>
+        y(x_0) = \int_{x_0}^{x_0} f(x)\,dx + y_0 = y_0
+      </me>.
+    </p>
+    <p>
+      Ainsi, la condition initiale est &#xe9;galement v&#xe9;rifi&#xe9;e par l'&#xe9;quation<nbsp/><xref ref="int_eqdef"/>.
+    </p>
+    <p>
+      Gardez en tête qu'une int&#xe9;grale d&#xe9;finie et une int&#xe9;grale ind&#xe9;finie sont deux choses tr&#xe8;s diff&#xe9;rentes.
+      La valeur d'une int&#xe9;grale d&#xe9;finie est toujours un nombre.
+      Par cons&#xe9;quent,
+      <xref ref="int_eqdef"/> est une formule qu'on peut utiliser pour obtenir n'importe quelle valeur sp&#xe9;cifique de la solution.
+      C'est une fonction comme une autre.
+      Il n'est pas toujours possible ni n&#xe9;cessaire de trouver une formule analytique pour la primitive.
+    </p>
+    <example>
+      <statement>
+        <p>
+          R&#xe9;solvons
+          <me>
+            y' = e^{-x^2}, \qquad y(0) = 1
+          </me>.
+        </p>
+        <p>
+          Par la solution pr&#xe9;c&#xe9;dente, la solution doit être:
+          <me>
+            y(x) = \int_0^x e^{-s^2} \,ds + 1
+          </me>.
+        </p>
+        <p>
+          Or, il n'y a pas de formule plus explicite pour la primitive de <m>e^{-x^2}</m>
+          (on ne peut pas, par exemple,
+          faire un changement de variables...).
+          Et la solution sous forme int&#xe9;grale est tr&#xe8;s correcte,
+          telle quelle.
+          Elle joue un rôle important, d'ailleurs, en statistique.
+        </p>
+      </statement>
+    </example>
+    <p>
+      La m&#xe9;thode de l'int&#xe9;grale sert aussi &#xe0;
+      r&#xe9;soudre des &#xe9;quations de la forme suivante:
+      <me>
+        y' = f(y)
+      </me>.
+    </p>
+    <p>
+      &#xc9;crivons cette &#xe9;quation dans la notation de Leibniz:
+          <idx><h>notation de Leibniz</h></idx>
+      <me>
+        \frac{dy}{dx} = f(y)
+      </me>.
+    </p>
+    <p>
+      Le th&#xe9;or&#xe8;me de la fonction inverse, en calcul,
+      nous permet d'&#xe9;changer les rôles de <m>x</m> et de <m>y</m> pour &#xe9;crire l'&#xe9;quation sous la forme suivante:
+      <me>
+        \frac{dx}{dy} = \frac{1}{f(y)}
+      </me>.
+    </p>
+    <p>
+      On dirait qu'on fait tout simplement des manipulations alg&#xe9;briques avec <m>dx</m> et <m>dy</m>,
+      qu'on traite comme des nombres.
+      Et c'est vrai que &#xe7;a marche.
+      Mais attention!
+      Lorsqu'on verra des &#xe9;quations aux d&#xe9;riv&#xe9;es partielles,
+      ce type de raisonnement ne fonctionnera plus.
+    </p>
+    <p>
+      Dans le cas pr&#xe9;sent,
+      on peut int&#xe9;grer l'&#xe9;quation pr&#xe9;c&#xe9;dente des deux côt&#xe9;s pour obtenir:
+      <me>
+        x(y) = \int \frac{1}{f(y)} \,dy + C
+      </me>.
+    </p>
+    <p>
+      On peut ensuite tenter de r&#xe9;soudre pour <m>y</m>.
+      Voyons quelques exemples de ceci.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Plus haut, nous avons r&#xe9;solu l'&#xe9;quation <m>y' = ky</m>
+          (pour <m>k > 0</m>)
+          en devinant que c'&#xe9;tait <m>y=Ce^{kx}</m>.
+          Reprenons cet exemple de mani&#xe8;re plus syst&#xe9;matique.
+        </p>
+        <p>
+          Observons d'abord que <m>y=0</m> est une solution.
+          Supposons donc dor&#xe9;navant que <m>y\not= 0</m>.
+          On peut alors &#xe9;crire:
+          <me>
+            \frac{dx}{dy} = \frac{1}{ky}
+          </me>.
+        </p>
+        <p>
+          On int&#xe8;gre des deux côt&#xe9;s pour obtenir :
+          <me>
+            x(y) = x = \frac{1}{k} \ln \, \lvert y\rvert  + D
+          </me>,
+          où <m>D</m> est une constante arbitraire.
+          Maintenant, on r&#xe9;sout pour <m>y</m> ou,
+          plus pr&#xe9;cis&#xe9;ment, pour <m>\lvert y \rvert</m>:
+          <me>
+            \lvert y \rvert = e^{kx-kD} =  e^{-kD} e^{k x}
+          </me>.
+        </p>
+        <p>
+          Puisque <m>e^{-kD}</m> est une constante positive arbitraire,
+          on peut la remplacer par une constante arbitraire <m>C</m>;
+          ici, <m>C</m> peut aussi prendre la valeur 0
+          (incorporant ainsi la solution <m>y=0</m>)
+          ou des valeurs n&#xe9;gatives,
+          ce qui nous permet de nous d&#xe9;barasser de la valeur absolue.
+          On obtient alors la solution g&#xe9;n&#xe9;rale devin&#xe9;e plus tôt, <m>y = Ce^{kx}</m>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Trouvons la solution g&#xe9;n&#xe9;rale de <m>y' = y^2</m>.
+        </p>
+        <p>
+          Notons d'abord que <m>y=0</m> est une solution.
+          Nous supposerons dor&#xe9;navant que <m>y \not= 0</m>. &#xc9;crivons
+          <me>
+            \frac{dx}{dy} = \frac{1}{y^2}
+          </me>.
+        </p>
+        <p>
+          On int&#xe8;gre pour obtenir
+          <me>
+            x = \frac{-1}{y} + C
+          </me>.
+        </p>
+        <p>
+          On r&#xe9;sout pour <m>y</m>:
+          <me>
+            y = \frac{1}{C-x}
+          </me>.
+        </p>
+        <p>
+          La solution g&#xe9;n&#xe9;rale est donc
+          <me>
+            y = \frac{1}{C-x} \qquad \text{ ou }  \qquad y = 0
+          </me>.
+        </p>
+        <p>
+          Cette solution comporte des singularit&#xe9;s.
+          Par exemple, si <m>C=1</m>,
+          alors la solution explose lorsqu'on s'approche de <m>x=1</m>.
+          Voir <xref ref="x1over1mx_fig">la</xref>.
+          En g&#xe9;n&#xe9;ral,
+          c'est difficile de pr&#xe9;dire le comportement d'une solution juste en regardant l'&#xe9;quation diff&#xe9;rentielle.
+          En effet, l'&#xe9;quation <m>y' = y^2</m> est tr&#xe8;s jolie et d&#xe9;finie partout,
+          mais sa solution est seulement d&#xe9;finie sur un intervalle
+          <m>(-\infty, C)</m> ou <m>(C, \infty)</m>.
+          Dans une telle situation,
+          on retient seulement une de ces deux solutions,
+          d&#xe9;pendamment de la condition initiale.
+          Si, par exemple, on a pour condition initiale <m>y(0) = 1</m>,
+          alors la solution est <m>y=\frac{1}{1-x}</m>,
+          et cette solution est seulement d&#xe9;finie sur l'intervalle <m>(-\infty,1)</m>.
+          Dans la figure, c'est la partie gauche du graphe.
+        </p>
+        <figure xml:id="x1over1mx_fig">
+          <caption>Graphe de <m>y=\frac{1}{1-x}</m>.</caption>
+          \diffyincludegraphics{width=3in}{width=4.5in}{1over1mx}
+        </figure>
+      </statement>
+    </example>
+    <p>
+      Parmi les probl&#xe8;mes classiques menant &#xe0;
+      des &#xe9;quations diff&#xe9;rentielles r&#xe9;solubles par int&#xe9;gration,
+      on retrouve les probl&#xe8;mes de vitesse,
+          <idx><h>vitesse</h></idx>
+      d'acc&#xe9;l&#xe9;ration
+          <idx><h>acc&#xe9;l&#xe9;ration</h></idx>
+      et de distance.
+          <idx><h>distance</h></idx>
+      Vous avez probablement vu de tels probl&#xe8;mes dans vos cours de calcul.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Supposons qu'une voiture roule &#xe0;
+          une vitesse de <m>e^{t/2}</m> m&#xe8;tres par seconde,
+          où <m>t</m> est le temps mesur&#xe9; en secondes.
+          Quelle distance a-t-elle parcourue en 2 secondes (si elle commence &#xe0; <m>t=0</m>)?
+          En 10 secondes?
+        </p>
+        <p>
+          D&#xe9;notons par <m>x</m> la distance parcourue par la voiture.
+          L'&#xe9;quation &#xe0; r&#xe9;soudre est:
+          <me>
+            x' = e^{t/2}
+          </me>.
+        </p>
+        <p>
+          On int&#xe8;gre cette &#xe9;quation pour obtenir :
+          <me>
+            x(t) = 2 e^{t/2} + C
+          </me>.
+        </p>
+        <p>
+          Il nous reste &#xe0; d&#xe9;terminer <m>C</m>.
+          On sait qu'&#xe0; <m>t=0</m>, <m>x=0</m>.
+          Autrement dit, <m>x(0) = 0</m>.
+          Donc:
+          <me>
+            0 = x(0) = 2e^{0/2} + C = 2 + C
+          </me>.
+        </p>
+        <p>
+          Ainsi, <m>C = -2</m>, et
+          <me>
+            x(t) = 2 e^{t/2} - 2
+          </me>.
+        </p>
+        <p>
+          Il nous suffit de substituer <m>t=2</m> et <m>t=10</m> pour obtenir la distance parcourue apr&#xe8;s 2 et 10 secondes.
+          <me>
+            x(2) = 2e^{2/2} - 2 \approx 3{,}44 \text{ m\`etres }  , \qquad x(10) = 2e^{10/2} - 2 \approx 294 \text{ m\`etres }
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Supposons que la voiture acc&#xe9;l&#xe8;re &#xe0;
+          <m>\unitfrac[t^2]{m}{s^2}</m>. À <m>t=0</m>,
+          la voiture est au m&#xe8;tre 1 et roule &#xe0;
+          une vitesse de \unitfrac[10]{m}{s}. Où est la voiture &#xe0; <m>t=10</m>?
+        </p>
+        <p>
+          Ceci est en fait un probl&#xe8;me du deuxi&#xe8;me ordre,
+          puisque l'acc&#xe9;l&#xe9;ration est la d&#xe9;riv&#xe9;e seconde de la fonction de position.
+          D&#xe9;notons par <m>x</m> la distance parcourue,
+          alors <m>x'</m> est la vitesse,
+          et <m>x''</m>, l'acc&#xe9;l&#xe9;ration.
+          Ceci nous donne l'&#xe9;quation diff&#xe9;rentielle avec conditions initiales suivante:
+          <me>
+            x'' = t^2 , \qquad x(0) = 1 , \qquad x'(0) = 10
+          </me>.
+        </p>
+        <p>
+          Posons <m>x' = v</m>.
+          Le probl&#xe8;me devient alors
+          <me>
+            v' = t^2, \qquad v(0) = 10
+          </me>.
+        </p>
+        <p>
+          On peut r&#xe9;soudre pour <m>v</m> et ensuite int&#xe9;grer <m>v</m> pour trouver <m>x</m>.
+        </p>
+      </statement>
+    </example>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez pour <m>v</m> et ensuite pour <m>x</m>.
+          Trouvez <m>x(10)</m> pour r&#xe9;pondre &#xe0; la question.
+        </p>
+      </statement>
+    </exercise>
+  </introduction>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez<m>\frac{dy}{dx} = x^2+x</m>, <m>y(1)=3</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\frac{dy}{dx} = \sin (5x)</m>, <m>y(0)=2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\frac{dy}{dx} = \frac{1}{x^2-1}</m>, <m>y(0)=0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y' = y^3</m>, <m>y(0)=1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>un peu plus difficile</title>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y' = (y-1)(y+1)</m>, <m>y(0)=3</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\frac{dy}{dx} = \frac{1}{y+1}</m>, <m>y(0)=0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>plus difficile</title>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y'' = \sin x</m>,
+          <m>y(0)=0</m>, <m>y'(0) = 2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Une fus&#xe9;e se d&#xe9;place &#xe0;
+          une vitesse de \unitfrac[<m>2t^2+1</m>]{km}{s}
+          (<m>t</m> est mesur&#xe9; en secondes).
+          La terre est directement derri&#xe8;re la fus&#xe9;e et &#xe0;
+          <m>t=0</m>, elle est &#xe0; 1000 kilom&#xe8;tres de la terre. À quelle distance se trouve la fus&#xe9;e 1 minute plus tard?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\frac{dx}{dt} = \sin(t^2)+t</m>, <m>x(0)=20</m>.
+          Vous pouvez laisser votre r&#xe9;ponse sous forme d'int&#xe9;grale d&#xe9;finie.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Une balle tombe avec une acc&#xe9;l&#xe9;ration constante de <m>9,8</m> m&#xe8;tres par seconde au carr&#xe9;. &#xc9;crivez l'&#xe9;quation diff&#xe9;rentielle pour la hauteur <m>h</m> en m&#xe8;tres.
+          Ensuite, en supposant que <m>h(0) = 100</m> m&#xe8;tres,
+          calculez le temps qu'il faudra &#xe0;
+          la balle pour toucher au sol.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y' = e^x</m>,
+          et ensuite <m>y' = e^y</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\frac{dy}{dx} = e^x + x</m>, <m>y(0) = 10</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = e^x + \frac{x^2}{2} + 9</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>x' = \frac{1}{x^2}</m>, <m>x(1)=1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = {(3t-2)}^{1/3}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>x' = \frac{1}{\cos(x)}</m>,
+          <m>x(0)=\frac{\pi}{2}</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \sin^{-1} \bigl(t+1\bigr)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Max est dans une voiture partant de Qu&#xe9;bec et filant &#xe0;
+          <m>10t+70</m> kilom&#xe8;tres par heure,où <m>t</m>est mesur&#xe9;
+          en heures. À <m>t=0</m>, Max est &#xe0; 10 kilom&#xe8;tres de Qu&#xe9;bec. À quelle distance de Qu&#xe9;bec sera Max deux heures plus tard?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> 170 }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y' = y^n</m>,
+          <m>y(0) = 1</m>, où <m>n</m> est un entier positif.
+          Indice: il y a plusieurs cas &#xe0; consid&#xe9;rer.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Si <m>n \not= 1</m>,
+      alors <m>y={\bigl((1-n)x+1\bigr)}^{1/(1-n)}</m>.
+      Si <m>n=1</m>, alors <m>y = e^x</m>. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Une boule de neige fond;
+          le taux de variation du volume de la boule est proportionnelle &#xe0; sa surface.
+          Si le rayon de la boule est <m>r</m> centim&#xe8;tres,
+          son volume est <m>\nicefrac{4}{3}\,\pi r^3</m> centim&#xe8;tres cube et la surface est<m>4 \pi r^2</m> centim&#xe8;tres carr&#xe9;. Trouvez l'&#xe9;quation diff&#xe9;rentielle d&#xe9;crivant la variation de <m>r</m>.
+          Ensuite, supposons qu'&#xe0;
+          <m>t=0</m> minutes,
+          le rayon est de 10 centim&#xe8;tres et qu'apr&#xe8;s 5 minutes,
+          le rayon est de 8 centim&#xe8;tres.
+          Dans combien de temps est-ce que la boule de neige aura compl&#xe8;tement fondu?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> L'&#xe9;quation est <m>r' = -C</m>,
+      où <m>C</m> est une constante.
+      La boule de neige aura compl&#xe8;tement fondu 25 minutes apr&#xe8;s <m>t=0</m>. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale &#xe0; <m>y''''= 0</m>.
+          Combien de constantes distinctes sont n&#xe9;cessaires?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/>
+      <m>y = Ax^3 + Bx^2 + Cx + D</m>, donc quatre constantes. }
+    </p>
+  </subsection>
+</section>

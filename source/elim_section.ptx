@@ -1,0 +1,1066 @@
+<section xml:id="elim_section">
+  <title>Elimination</title>
+  <subsection>
+    <title>Linear systems of equations</title>
+    <p>
+      One application of matrices is to solve systems of linear equations<fn>
+      Although perhaps we have this backwards,
+      quite often we solve a linear system of equations to find out something about matrices,
+      rather than vice versa.
+      </fn>.
+      Consider the following system of linear equations
+      <men xml:id="linalg_elim_eq">
+        \begin{aligned} 2 x_1 +           2 x_2 +           2 x_3 \amp  = 2 , \\ x_1 +  x_2 +           3 x_3 \amp  = 5 , \\ x_1 +           4 x_2 +  x_3 \amp  = 10 . \end{aligned}
+      </men>
+    </p>
+    <p>
+      There is a systematic procedure called <em>elimination
+          <idx><h>elimination</h></idx>
+      </em> to solve such a system.
+      In this procedure,
+      we attempt to eliminate each variable from all but one equation.
+      We want to end up with equations such as <m>x_3 = 2</m>,
+      where we can just read off the answer.
+    </p>
+    <p>
+      We write a system of linear equations as a matrix equation:
+      <me>
+        A \vec{x} = \vec{b}
+      </me>.
+    </p>
+    <p>
+      The system <xref ref="linalg_elim_eq"/> is written as
+      <me>
+        \underbrace{ \begin{bmatrix} 2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \\ 1 \amp  4 \amp  1 \end{bmatrix} }_{A} \underbrace{ \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} }_{\vec{x}} = \underbrace{ \begin{bmatrix} 2 \\ 5 \\ 10 \end{bmatrix} }_{\vec{b}}
+      </me>.
+    </p>
+    <p>
+      If we knew the inverse of <m>A</m>, then we would be done;
+      we would simply solve the equation:
+      <me>
+        \vec{x} = A^{-1} A \vec{x} = A^{-1} \vec{b}
+      </me>.
+    </p>
+    <p>
+      Well, but that is part of the problem,
+      we do not know how to compute the inverse for matrices bigger than <m>2 \times 2</m>.
+      We will see later that to compute the inverse we are really solving
+      <m>A \vec{x} = \vec{b}</m> for several different <m>\vec{b}</m>.
+      In other words,
+      we will need to do elimination to find <m>A^{-1}</m>.
+      In addition, we may wish to solve
+      <m>A \vec{x} = \vec{b}</m> even if <m>A</m> is not invertible,
+      or perhaps not even square.
+    </p>
+    <p>
+      Let us return to the equations themselves and see how we can manipulate them.
+      There are a few operations we can perform on the equations that do not change the solution.
+      First, perhaps an operation that may seem stupid,
+      we can swap two equations in <xref ref="linalg_elim_eq"/>:
+      <me>
+        \begin{aligned} x_1 +  x_2 +           3 x_3 \amp  = 5 , \\ 2 x_1 +           2 x_2 +           2 x_3 \amp  = 2 , \\ x_1 +           4 x_2 +  x_3 \amp  = 10 . \end{aligned}
+      </me>
+    </p>
+    <p>
+      Clearly these new equations have the same solutions <m>x_1,x_2,x_3</m>.
+      A second operation is that we can multiply an equation by a nonzero number.
+      For example,
+      we multiply the third equation in <xref ref="linalg_elim_eq"/> by 3:
+      <me>
+        \begin{aligned} 2 x_1 +   2 x_2 + 2 x_3 \amp  = 2 , \\ x_1 +    x_2 + 3 x_3 \amp  = 5 , \\ 3 x_1 +             12 x_2 + 3 x_3 \amp  = 30 . \end{aligned}
+      </me>
+    </p>
+    <p>
+      Finally we can add a multiple of one equation to another equation.
+      For example,
+      we add 3 times the third equation in <xref ref="linalg_elim_eq"/> to the second equation:
+      <me>
+        \begin{aligned} 2 x_1 +   2 x_2 +  2 x_3 \amp  = 2 , \\ (1+3) x_1 + (1+12)   x_2 +  (3+3) x_3 \amp  = 5+30 , \\ x_1 +   4 x_2 +  x_3 \amp  = 10 . \end{aligned}
+      </me>
+    </p>
+    <p>
+      The same <m>x_1,x_2,x_3</m> should still be solutions to the new equations.
+      These were just examples; we did not get any closer to the solution.
+      We must to do these three operations in some more logical manner,
+      but it turns out these three operations suffice to solve every linear equation.
+    </p>
+    <p>
+      The first thing is to write the equations in a more compact manner.
+      Given
+      <me>
+        A \vec{x} = \vec{b}
+      </me>,
+      we write down the so-called <em>augmented matrix
+          <idx><h>augmented matrix</h></idx>
+      </em>
+      <me>
+        [ A ~|~ \vec{b} ]
+      </me>,
+      where the vertical line is just a marker for us to know where the
+      <q>right-hand side</q>
+      of the equation starts.
+      For example,
+      for the system <xref ref="linalg_elim_eq"/> the augmented matrix is
+      <me>
+        \left[ \begin{array}{ccc|c} 2 \amp  2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \amp  5 \\ 1 \amp  4 \amp  1 \amp  10 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      The entire process of elimination, which we will describe,
+      is often applied to any sort of matrix,
+      not just an augmented matrix.
+      Simply think of the matrix as the <m>3 \times 4</m> matrix
+      <me>
+        \begin{bmatrix} 2 \amp  2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \amp  5 \\ 1 \amp  4 \amp  1 \amp  10 \end{bmatrix}
+      </me>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Row echelon form and elementary operations</title>
+    <p>
+      We apply the three operations above to the matrix.
+      We call these the <em>elementary operations
+          <idx><h>elementary operations</h></idx>
+      </em> or <em>elementary row operations<idx><h>elementary row operations</h></idx>
+      </em>.
+      Translating the operations to the matrix setting, the operations become:
+      <ol label="i">
+        <li>
+          <p>
+            Swap two rows.
+          </p>
+        </li>
+        <li>
+          <p>
+            Multiply a row by a nonzero number.
+          </p>
+        </li>
+        <li>
+          <p>
+            Add a multiple of one row to another row.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      [2] We run these operations until we get into a state where it is easy to read off the answer,
+      or until we get into a contradiction indicating no solution.
+    </p>
+    <p>
+      More specifically,
+      we run the operations until we obtain the so-called <em>row echelon form
+          <idx><h>row echelon form</h></idx>
+      </em>.
+          <idx><h>echelon form</h></idx>
+      Let us call the first
+      (from the left)
+      nonzero entry in each row the <em>leading entry
+          <idx><h>leading entry</h></idx>
+      </em>.
+      A matrix is in <em>row echelon form</em>
+      if the following conditions are satisfied:
+      <ol label="i">
+        <li>
+          <p>
+            The leading entry in any row is strictly to the right of the leading entry of the row above.
+          </p>
+        </li>
+        <li>
+          <p>
+            Any zero rows are below all the nonzero rows.
+          </p>
+        </li>
+        <li>
+          <p>
+            All leading entries are 1.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      A matrix is in <em>reduced row echelon form<idx><h>reduced row echelon form</h></idx>
+      </em> if furthermore the following condition is satisfied.
+      <ol label="iresume">
+        <li>
+          <p>
+            All the entries above a leading entry are zero.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <example>
+      <statement>
+        <p>
+          The following matrices are in row echelon form.
+          The leading entries are marked:
+          <me>
+            \begin{bmatrix} \mybxsm{1} \amp  2 \amp  9 \amp  3 \\ 0 \amp  0 \amp  \mybxsm{1} \amp  5 \\ 0 \amp  0 \amp  0 \amp  \mybxsm{1} \end{bmatrix} \qquad \begin{bmatrix} \mybxsm{1} \amp  -1 \amp  -3  \\ 0 \amp  \mybxsm{1} \amp  5  \\ 0 \amp  0 \amp  \mybxsm{1} \end{bmatrix} \qquad \begin{bmatrix} \mybxsm{1} \amp  2 \amp  1 \\ 0 \amp  \mybxsm{1} \amp  2 \\ 0 \amp  0 \amp  0 \end{bmatrix} \qquad \begin{bmatrix} 0 \amp  \mybxsm{1} \amp  -5 \amp  2 \\ 0 \amp  0 \amp  0 \amp  \mybxsm{1} \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix}
+          </me>
+        </p>
+        <p>
+          Note that the definition applies to matrices of any size.
+          None of the matrices above are in
+          <em>reduced</em> row echelon form.
+          For example,
+          in the first matrix none of the entries above the second and third leading entries are zero;
+          they are 9, 3, and 5.
+        </p>
+        <p>
+          The following matrices are in reduced row echelon form.
+          The leading entries are marked:
+          <me>
+            \begin{bmatrix} \mybxsm{1} \amp  3 \amp  0 \amp  8 \\ 0 \amp  0 \amp  \mybxsm{1} \amp  6 \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix} \qquad \begin{bmatrix} \mybxsm{1} \amp  0 \amp  2 \amp   0  \\ 0 \amp  \mybxsm{1} \amp  3 \amp  0  \\ 0 \amp  0 \amp  0 \amp  \mybxsm{1} \end{bmatrix} \qquad \begin{bmatrix} \mybxsm{1} \amp  0 \amp  3 \\ 0 \amp  \mybxsm{1} \amp  -2 \\ 0 \amp  0 \amp  0 \end{bmatrix} \qquad \begin{bmatrix} 0 \amp  \mybxsm{1} \amp  2 \amp  0 \\ 0 \amp  0 \amp  0 \amp  \mybxsm{1} \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <p>
+      The procedure we will describe to find a reduced row echelon form of a matrix is called
+      <em>Gauss<ndash/>Jordan elimination<idx><h>Gauss<ndash/>Jordan elimination</h></idx>
+      </em>.
+      The first part of it, which obtains a row echelon form,
+      is called <em>Gaussian elimination
+          <idx><h>Gaussian elimination</h></idx>
+      </em> or <em>row reduction
+          <idx><h>row reduction</h></idx>
+      </em>.
+      For some problems, a row echelon form is sufficient,
+      and it is a bit less work to only do this first part.
+    </p>
+    <p>
+      To attain the row echelon form we work systematically.
+      We go column by column, starting at the first column.
+      We find topmost entry in the first column that is not zero,
+      and we call it the <em>pivot
+          <idx><h>pivot</h></idx>
+      </em>.
+      If there is no nonzero entry we move to the next column.
+      We swap rows to put the row with the pivot as the first row.
+      We divide the first row by the pivot to make the pivot entry be a 1.
+      Now look at all the rows below and subtract the correct multiple of the pivot row so that all the entries below the pivot become zero.
+    </p>
+    <p>
+      After this procedure we forget that we had a first row
+      (it is now fixed),
+      and we forget about the column with the pivot and all the preceding zero columns.
+      Below the pivot row, all the entries in these columns are just zero.
+      Then we focus on the smaller matrix and we repeat the steps above.
+    </p>
+    <p>
+      It is best shown by example,
+      so let us go back to the example from the beginning of the section.
+      We keep the vertical line in the matrix,
+      even though the procedure works on any matrix,
+      not just an augmented matrix.
+      We start with the first column and we locate the pivot,
+      in this case the first entry of the first column.
+      <me>
+        \left[ \begin{array}{ccc|c} \mybxsm{2} \amp  2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \amp  5 \\ 1 \amp  4 \amp  1 \amp  10 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      We multiply the first row by <m>\nicefrac{1}{2}</m>.
+      <me>
+        \left[ \begin{array}{ccc|c} \mybxsm{1} \amp  1 \amp  1 \amp  1 \\ 1 \amp  1 \amp  3 \amp  5 \\ 1 \amp  4 \amp  1 \amp  10 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      We subtract the first row from the second and third row
+      (two elementary operations).
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  0 \amp  2 \amp  4 \\ 0 \amp  3 \amp  0 \amp  9 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      We are done with the first column and the first row for now.
+      We almost pretend the matrix doesn't have the first column and the first row.
+      <me>
+        \left[ \begin{array}{ccc|c} * \amp  * \amp  * \amp  * \\ * \amp  0 \amp  2 \amp  4 \\ * \amp  3 \amp  0 \amp  9 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      OK , look at the second column,
+      and notice that now the pivot is in the third row.
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  0 \amp  2 \amp  4 \\ 0 \amp  \mybxsm{3} \amp  0 \amp  9 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      We swap rows.
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  \mybxsm{3} \amp  0 \amp  9 \\ 0 \amp  0 \amp  2 \amp  4 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      And we divide the pivot row by 3.
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  \mybxsm{1} \amp  0 \amp  3 \\ 0 \amp  0 \amp  2 \amp  4 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      We do not need to subtract anything as everything below the pivot is already zero.
+      We move on, we again start ignoring the second row and second column and focus on
+      <me>
+        \left[ \begin{array}{ccc|c} * \amp  * \amp  * \amp  * \\ * \amp  * \amp  * \amp  * \\ * \amp  * \amp  2 \amp  4 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      We find the pivot, then divide that row by 2:
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  1 \amp  0 \amp  3 \\ 0 \amp  0 \amp  \mybxsm{2} \amp  4 \end{array} \right] \qquad \to \qquad \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  1 \amp  0 \amp  3 \\ 0 \amp  0 \amp  1 \amp  2 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      The matrix is now in row echelon form.
+    </p>
+    <p>
+      The equation corresponding to the last row is <m>x_3 = 2</m>.
+      We know <m>x_3</m> and we could substitute it into the first two equations to get equations for <m>x_1</m> and <m>x_2</m>.
+      Then we could do the same thing with <m>x_2</m>,
+      until we solve for all 3 variables.
+      This procedure is called <em>backsubstitution
+          <idx><h>backsubstitution</h></idx>
+      </em> and we can achieve it via elementary operations.
+      We start from the lowest pivot
+      (leading entry in the row echelon form)
+      and subtract the right multiple from the row above to make all the entries above this pivot zero.
+      Then we move to the next pivot and so on.
+      After we are done, we will have a matrix in reduced row echelon form.
+    </p>
+    <p>
+      We continue our example.
+      Subtract the last row from the first to get
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  0 \amp  -1 \\ 0 \amp  1 \amp  0 \amp  3 \\ 0 \amp  0 \amp  1 \amp  2 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      The entry above the pivot in the second row is already zero.
+      So we move onto the next pivot,
+      the one in the second row.
+      We subtract this row from the top row to get
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  0 \amp  0 \amp  -4 \\ 0 \amp  1 \amp  0 \amp  3 \\ 0 \amp  0 \amp  1 \amp  2 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      The matrix is in reduced row echelon form.
+    </p>
+    <p>
+      If we now write down the equations for <m>x_1,x_2,x_3</m>, we find
+      <me>
+        x_1 = -4, \qquad x_2 = 3, \qquad x_3 = 2
+      </me>.
+    </p>
+    <p>
+      In other words, we have solved the system.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Non-unique solutions and inconsistent systems</title>
+    <p>
+      It is possible that the solution of a linear system of equations is not unique,
+      or that no solution exists.
+      Suppose for a moment that the row echelon form we found was
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  2 \amp  3 \amp  4 \\ 0 \amp  0 \amp  1 \amp  3 \\ 0 \amp  0 \amp  0 \amp  1 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      Then we have an equation <m>0=1</m> coming from the last row.
+      That is impossible and the equations are <em>inconsistent
+          <idx><h>inconsistent</h></idx>
+      </em>.
+      There is no solution to <m>A \vec{x} = \vec{b}</m>.
+    </p>
+    <p>
+      On the other hand, if we find a row echelon form
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  2 \amp  3 \amp  4 \\ 0 \amp  0 \amp  1 \amp  3 \\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right]
+      </me>,
+      then there is no issue with finding solutions.
+      In fact, we will find way too many.
+      Let us continue with backsubstitution (subtracting 3 times the third row from the first) to find the reduced row echelon form and let's mark the pivots.
+      <me>
+        \left[ \begin{array}{ccc|c} \mybxsm{1} \amp  2 \amp  0 \amp  -5 \\ 0 \amp  0 \amp  \mybxsm{1} \amp  3 \\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right]
+      </me>
+    </p>
+    <p>
+      The last row is all zeros; it just says <m>0=0</m> and we ignore it.
+      The two remaining equations are
+      <me>
+        x_1 + 2 x_2 = -5 , \qquad x_3 = 3
+      </me>.
+    </p>
+    <p>
+      Let us solve for the variables that corresponded to the pivots,
+      that is <m>x_1</m> and <m>x_3</m> as there was a pivot in the first column and in the third column:
+      <md>
+        <mrow>\amp  x_1 = - 2 x_2 -5 ,</mrow>
+        <mrow>\amp  x_3 = 3 </mrow>
+      </md>.
+    </p>
+    <p>
+      The variable <m>x_2</m> can be anything you wish and we still get a solution.
+      The <m>x_2</m> is called a <em>free variable
+          <idx><h>free variable</h></idx>
+      </em>.
+      There are infinitely many solutions,
+      one for every choice of <m>x_2</m>.
+      For example, if we pick <m>x_2=0</m>,
+      then <m>x_1 = -5</m>, and <m>x_3 = 3</m> give a solution.
+      But we also get a solution by picking say <m>x_2 = 1</m>,
+      in which case <m>x_1 = -9</m> and <m>x_3 = 3</m>,
+      or by picking <m>x_2 = -5</m> in which case <m>x_1 = 5</m> and <m>x_3 = 3</m>.
+    </p>
+    <p>
+      The general idea is that if any row has all zeros in the columns corresponding to the variables,
+      but a nonzero entry in the column corresponding to the right-hand side <m>\vec{b}</m>,
+      then the system is inconsistent and has no solutions.
+      In other words,
+      the system is inconsistent if you find a pivot on the right side of the vertical line drawn in the augmented matrix.
+      Otherwise, the system is consistent,
+      and at least one solution exists. [2]
+    </p>
+    <p>
+      If the system is consistent:
+      <ol label="i">
+        <li>
+          <p>
+            If every column corresponding to a variable has a pivot element,
+            then the solution is unique.
+          </p>
+        </li>
+        <li>
+          <p>
+            If there are columns corresponding to variables with no pivot,
+            then those are <em>free variables</em>
+            that can be chosen arbitrarily,
+            and there are infinitely many solutions.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      When <m>\vec{b} = \vec{0}</m>,
+      we have a so-called <em>homogeneous matrix equation<idx><h>homogeneous matrix equation</h></idx>
+      </em>
+      <me>
+        A \vec{x} = \vec{0}
+      </me>.
+    </p>
+    <p>
+      There is no need to write an augmented matrix in this case.
+      As the elementary operations do not do anything to a zero column,
+      it always stays a zero column.
+      Moreover, <m>A \vec{x} = \vec{0}</m> always has at least one solution,
+      namely <m>\vec{x} = \vec{0}</m>.
+      Such a system is always consistent.
+      It may have other solutions: If you find any free variables,
+      then you get infinitely many solutions.
+    </p>
+    <p>
+      The set of solutions of <m>A \vec{x} = \vec{0}</m> comes up quite often so people give it a name.
+      It is called the <em>nullspace
+          <idx><h>nullspace</h></idx>
+      </em> or the <em>kernel
+          <idx><h>kernel</h></idx>
+      </em> of <m>A</m>.
+      One place where the kernel comes up is invertibility of a square matrix <m>A</m>.
+      If the kernel of <m>A</m> contains a nonzero vector,
+      then it contains infinitely many vectors
+      (there was a free variable).
+      But then it is impossible to invert <m>\vec{0}</m>,
+      since infinitely many vectors go to <m>\vec{0}</m>,
+      so there is no unique vector that <m>A</m> takes to <m>\vec{0}</m>.
+      So if the kernel is nontrivial,
+      that is, if there are any nonzero vectors, in other words,
+      if there are any free variables, or in yet other words,
+      if the row echelon form of <m>A</m> has columns without pivots,
+      then <m>A</m> is not invertible.
+      We will return to this idea later.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Linear independence and rank</title>
+    <p>
+      If rows of a matrix correspond to equations,
+      it might be good to find out how many equations do we really need to find the same set of solutions.
+      Similarly, if we find a number of solutions to a linear equation <m>A \vec{x} = \vec{0}</m>,
+      we may ask if we found enough so that all other solutions can be formed out of the given set.
+      The concept we want is that of linear independence.
+      The same concept is useful for differential equations,
+      for example in <xref ref="ho_chapter"></xref>.
+    </p>
+    <p>
+      Given row or column vectors
+      <m>\vec{y}_1, \vec{y}_2, \ldots, \vec{y}_n</m>, a <em>linear combination
+          <idx><h>linear combination</h></idx>
+      </em> is an expression of the form
+      <me>
+        \alpha_1 \vec{y}_1 + \alpha_2 \vec{y}_2 + \cdots + \alpha_n \vec{y}_n
+      </me>,
+      where <m>\alpha_1, \alpha_2, \ldots, \alpha_n</m> are all scalars.
+      For example,
+      <m>3 \vec{y}_1 + \vec{y}_2 - 5 \vec{y}_3</m> is a linear combination of <m>\vec{y}_1</m>,
+      <m>\vec{y}_2</m>, and <m>\vec{y}_3</m>.
+    </p>
+    <p>
+      We have seen linear combinations before.
+      The expression
+      <me>
+        A \vec{x}
+      </me>
+      is a linear combination of the columns of <m>A</m>, while
+      <me>
+        \vec{x}^T A = (A^T \vec{x})^T
+      </me>
+      is a linear combination of the rows of <m>A</m>.
+    </p>
+    <p>
+      The way linear combinations come up in our study of differential equations is similar to the following computation.
+      Suppose that <m>\vec{x}_1</m>,
+      <m>\vec{x}_2</m>, <ellipsis/>,
+      <m>\vec{x}_n</m> are solutions to <m>A \vec{x}_1 = \vec{0}</m>,
+      <m>A \vec{x}_2 = \vec{0}</m>,
+      <ellipsis/>, <m>A \vec{x}_n = \vec{0}</m>.
+      Then the linear combination
+      <me>
+        \vec{y} = \alpha_1 \vec{x}_1 + \alpha_2 \vec{x}_2 + \cdots + \alpha_n \vec{x}_n
+      </me>
+      is a solution to <m>A \vec{y} = \vec{0}</m>:
+      <md>
+        A \vec{y} = A (\alpha_1 \vec{x}_1 + \alpha_2 \vec{x}_2 + \cdots + \alpha_n \vec{x}_n ) = \\ = \alpha_1 A \vec{x}_1 + \alpha_2 A \vec{x}_2 + \cdots + \alpha_n A \vec{x}_n = \alpha_1 \vec{0} + \alpha_2 \vec{0} + \cdots + \alpha_n \vec{0} = \vec{0} .
+      </md>
+    </p>
+    <p>
+      So if you have found enough solutions, you have them all.
+      The question is, when did we find enough of them?
+    </p>
+    <p>
+      We say the vectors <m>\vec{y}_1</m>, <m>\vec{y}_2</m>,
+      <ellipsis/>, <m>\vec{y}_n</m> are
+      <em>linearly independent
+          <idx><h>linearly independent</h></idx>
+      </em> if the only solution to
+      <me>
+        \alpha_1 \vec{x}_1 + \alpha_2 \vec{x}_2 + \cdots + \alpha_n \vec{x}_n = \vec{0}
+      </me>
+      is <m>\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0</m>.
+      Otherwise, we say the vectors are <em>linearly dependent
+          <idx><h>linearly dependent</h></idx>
+      </em>.
+    </p>
+    <p>
+      For example,
+      the vectors <m>\left[ \begin{matrix}1 \\ 2 \end{matrix}  \right]</m> and
+      <m>\left[ \begin{matrix}0 \\ 1 \end{matrix}  \right]</m> are linearly independent.
+      Let's try:
+      <me>
+        \alpha_1 \begin{bmatrix} 1 \\ 2 \end{bmatrix} + \alpha_2 \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} \alpha_1 \\ 2 \alpha_1 + \alpha_2 \end{bmatrix} = \vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      So <m>\alpha_1 = 0</m>,
+      and then it is clear that <m>\alpha_2 = 0</m> as well.
+      In other words, the vectors are linearly independent.
+    </p>
+    <p>
+      If a set of vectors is linearly dependent,
+      that is, some of the <m>\alpha_j</m>'s are nonzero,
+      then we can solve for one vector in terms of the others.
+      Suppose <m>\alpha_1 \not= 0</m>.
+      Since <m>\alpha_1 \vec{x}_1 + \alpha_2 \vec{x}_2 + \cdots + \alpha_n \vec{x}_n = \vec{0}</m>, then
+      <me>
+        \vec{x}_1 = \frac{-\alpha_2}{\alpha_1} \vec{x}_2 - \frac{-\alpha_3}{\alpha_1} \vec{x}_3 + \cdots + \frac{-\alpha_n}{\alpha_1} \vec{x}_n
+      </me>.
+    </p>
+    <p>
+      For example,
+      <me>
+        2 \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} -4 \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} + 2 \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+      </me>,
+      and so
+      <me>
+        \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} = 2 \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} - \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      You may have noticed that solving for those
+      <m>\alpha_j</m>'s is just solving linear equations,
+      and so you may not be surprised that to check if a set of vectors is linearly independent we use row reduction.
+    </p>
+    <p>
+      Given a set of vectors,
+      we may not be interested in just finding if they are linearly independent or not,
+      we may be interested in finding a linearly independent subset.
+      Or perhaps we may want to find some other vectors that give the same linear combinations and are linearly independent.
+      The way to figure this out is to form a matrix out of our vectors.
+      If we have row vectors we consider them as rows of a matrix.
+      If we have column vectors we consider them columns of a matrix.
+      The set of all linear combinations of a set of vectors is called their <em>span
+          <idx><h>span</h></idx>
+      </em>.
+      <me>
+        \operatorname{span} \bigl\{ \vec{x}_1, \vec{x}_2 , \ldots , \vec{x}_n \bigr\} = \bigl\{ \text{Set of all linear combinations of \(\vec{x}_1, \vec{x}_2 , \ldots , \vec{x}_n\)} \bigr\}
+      </me>.
+    </p>
+    <p>
+      Given a matrix <m>A</m>,
+      the maximal number of linearly independent rows is called the <em>rank
+          <idx><h>rank</h></idx>
+      </em> of <m>A</m>, and we write
+      <q><m>\operatorname{rank} A</m></q>
+      for the rank.
+      For example,
+      <me>
+        \operatorname{rank} \begin{bmatrix} 1 \amp  1 \amp  1 \\ 2 \amp  2 \amp  2 \\ -1 \amp  -1 \amp  -1 \end{bmatrix} = 1
+      </me>.
+    </p>
+    <p>
+      The second and third row are multiples of the first one.
+      We cannot choose more than one row and still have a linearly independent set.
+      But what is
+      <me>
+        \operatorname{rank} \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \\ 7 \amp  8 \amp  9 \end{bmatrix}  =  ?
+      </me>
+    </p>
+    <p>
+      That seems to be a tougher question to answer.
+      The first two rows are linearly independent,
+      so the rank is at least two.
+      If we would set up the equations for the <m>\alpha_1</m>,
+      <m>\alpha_2</m>, and <m>\alpha_3</m>,
+      we would find a system with infinitely many solutions.
+      One solution is
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \end{bmatrix} -2 \begin{bmatrix} 4 \amp  5 \amp  6 \end{bmatrix} + \begin{bmatrix} 7 \amp  8 \amp  9 \end{bmatrix} = \begin{bmatrix} 0 \amp  0 \amp  0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      So the set of all three rows is linearly dependent, the rank cannot be 3.
+      Therefore the rank is 2.
+    </p>
+    <p>
+      But how can we do this in a more systematic way?
+      We find the row echelon form!
+      <me>
+        \text{ Row echelon form of }  \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6  \\ 7 \amp  8 \amp  9 \end{bmatrix}  \text{ is }  \begin{bmatrix} 1 \amp  2 \amp  3 \\ 0 \amp  1 \amp  2  \\ 0 \amp  0 \amp  0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      The elementary row operations do not change the set of linear combinations of the rows
+      (that was one of the main reasons for defining them as they were).
+      In other words,
+      the span of the rows of the <m>A</m> is the same as the span of the rows of the row echelon form of <m>A</m>.
+      In particular,
+      the number of linearly independent rows is the same.
+      And in the row echelon form, all nonzero rows are linearly independent.
+      This is not hard to see.
+      Consider the two nonzero rows in the example above.
+      Suppose we tried to solve for the
+      <m>\alpha_1</m> and <m>\alpha_2</m> in
+      <me>
+        \alpha_1 \begin{bmatrix} 1 \amp  2 \amp  3 \end{bmatrix} + \alpha_2 \begin{bmatrix} 0 \amp  1 \amp  2 \end{bmatrix} = \begin{bmatrix} 0 \amp  0 \amp  0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Since the first column of the row echelon matrix has zeros except in the first row means that <m>\alpha_1 = 0</m>.
+      For the same reason, <m>\alpha_2</m> is zero.
+      We only have two nonzero rows,
+      and they are linearly independent,
+      so the rank of the matrix is 2.
+    </p>
+    <p>
+      The span of the rows is called the <em>row space
+          <idx><h>row space</h></idx>
+      </em>.
+      The row space of <m>A</m> and the row echelon form of <m>A</m> are the same.
+      In the example,
+      <me>
+        \begin{split} \text{ row space of } \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \\ 7 \amp  8 \amp  9 \end{bmatrix} \amp  = \operatorname{span} \left\{ \begin{bmatrix} 1 \amp  2 \amp  3 \end{bmatrix} , \begin{bmatrix} 4 \amp  5 \amp  6 \end{bmatrix} , \begin{bmatrix} 7 \amp  8 \amp  9 \end{bmatrix} \right\} \\ \amp  = \operatorname{span} \left\{ \begin{bmatrix} 1 \amp  2 \amp  3 \end{bmatrix} , \begin{bmatrix} 0 \amp  1 \amp  2 \end{bmatrix} \right\} . \end{split}
+      </me>
+    </p>
+    <p>
+      Similarly to row space, the span of columns is called the <em>column space
+          <idx><h>column space</h></idx>
+      </em>.
+      <me>
+        \text{ column space of } \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \\ 7 \amp  8 \amp  9 \end{bmatrix} = \operatorname{span} \left\{ \begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix} , \begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} , \begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} \right\}
+      </me>.
+    </p>
+    <p>
+      So it may also be good to find the number of linearly independent columns of <m>A</m>.
+      One way to do that is to find the number of linearly independent rows of <m>A^T</m>.
+      It is a tremendously useful fact that the number of linearly independent columns is always the same as the number of linearly independent rows:
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          <m>\operatorname{rank} A = \operatorname{rank} A^T</m>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      In particular,
+      to find a set of linearly independent columns we need to look at where the pivots were.
+      If you recall above, when solving
+      <m>A \vec{x} = \vec{0}</m> the key was finding the pivots,
+      any non-pivot columns corresponded to free variables.
+      That means we can solve for the non-pivot columns in terms of the pivot columns.
+      Let's see an example.
+      First we reduce some random matrix:
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \amp  4 \\ 2 \amp  4 \amp  5 \amp  6 \\ 3 \amp  6 \amp  7 \amp  8 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      We find a pivot and reduce the rows below:
+      <me>
+        \begin{bmatrix} \mybxsm{1} \amp  2 \amp  3 \amp  4 \\ 2 \amp  4 \amp  5 \amp  6 \\ 3 \amp  6 \amp  7 \amp  8 \end{bmatrix} \to \begin{bmatrix} \mybxsm{1} \amp  2 \amp  3 \amp  4 \\ 0 \amp  0 \amp  -1 \amp  -2 \\ 3 \amp  6 \amp  7 \amp  8 \end{bmatrix} \to \begin{bmatrix} \mybxsm{1} \amp  2 \amp  3 \amp  4 \\ 0 \amp  0 \amp  -1 \amp  -2 \\ 0 \amp  0 \amp  -2 \amp  -4 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      We find the next pivot, make it one, and rinse and repeat:
+      <me>
+        \begin{bmatrix} \mybxsm{1} \amp  2 \amp  3 \amp  4 \\ 0 \amp  0 \amp  \mybxsm{-1} \amp  -2 \\ 0 \amp  0 \amp  -2 \amp  -4 \end{bmatrix} \to \begin{bmatrix} \mybxsm{1} \amp  2 \amp  3 \amp  4 \\ 0 \amp  0 \amp  \mybxsm{1} \amp  2 \\ 0 \amp  0 \amp  -2 \amp  -4 \end{bmatrix} \to \begin{bmatrix} \mybxsm{1} \amp  2 \amp  3 \amp  4 \\ 0 \amp  0 \amp  \mybxsm{1} \amp  2 \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      The final matrix is the row echelon form of the matrix.
+      Consider the pivots that we marked.
+      The pivot columns are the first and the third column.
+      All other columns correspond to free variables when solving <m>A \vec{x} = \vec{0}</m>,
+      so all other columns can be solved in terms of the first and the third column.
+      In other words
+      <me>
+        \text{ column space of } \begin{bmatrix} 1 \amp  2 \amp  3 \amp  4 \\ 2 \amp  4 \amp  5 \amp  6 \\ 3 \amp  6 \amp  7 \amp  8 \end{bmatrix} = \operatorname{span} \left\{ \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} , \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} , \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix} , \begin{bmatrix} 4 \\ 6 \\ 8 \end{bmatrix} \right\} = \operatorname{span} \left\{ \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} , \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix} \right\}
+      </me>.
+    </p>
+    <p>
+      We could perhaps use another pair of columns to get the same span,
+      but the first and the third are guaranteed to work because they are pivot columns.
+    </p>
+    <p>
+      The discussion above could be expanded into a proof of the theorem if we wanted.
+      As each nonzero row in the row echelon form contains a pivot,
+      then the rank is the number of pivots,
+      which is the same as the maximal number of linearly independent columns.
+    </p>
+    <p>
+      The idea also works in reverse.
+      Suppose we have a bunch of column vectors and we just need to find a linearly independent set.
+      For example, suppose we started with the vectors
+      <me>
+        \vec{v}_1 = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} ,  \vec{v}_2 = \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} ,  \vec{v}_3 = \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix} ,  \vec{v}_4 = \begin{bmatrix} 4 \\ 6 \\ 8 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      These vectors are not linearly independent as we saw above.
+      In particular, the span <m>\vec{v}_1</m> and
+      <m>\vec{v}_3</m> is the same as the spen of all four of the vectors.
+      So <m>\vec{v}_2</m> and <m>\vec{v}_4</m> can both be written as linear combinations of
+      <m>\vec{v}_1</m> and <m>\vec{v}_3</m>.
+      A common thing that comes up in practice is that one gets a set of vectors whose span is the set of solutions of some problem.
+      But perhaps we get way too many vectors, we want to simplify.
+      For example above,
+      all vectors in the span of <m>\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4</m> can be written
+      <m>\alpha_1 \vec{v}_1 + \alpha_2 \vec{v}_2 + \alpha_3 \vec{v}_3 + \alpha_4 \vec{v}_4</m> for some numbers <m>\alpha_1,\alpha_2,\alpha_3,\alpha_4</m>.
+      But it is also true that every such vector can be written as
+      <m>a \vec{v}_1 + b \vec{v}_3</m> for two numbers <m>a</m> and <m>b</m>.
+      And one has to admit, that looks much simpler.
+      Moreover, these numbers <m>a</m> and <m>b</m> are unique.
+      More on that in the next section.
+    </p>
+    <p>
+      To find this linearly independent set we simply take our vectors and form the matrix <m>[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \vec{v}_4 ]</m>, that is,
+      the matrix
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \amp  4 \\ 2 \amp  4 \amp  5 \amp  6 \\ 3 \amp  6 \amp  7 \amp  8 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      We crank up the row-reduction machine,
+      feed this matrix into it, and find the pivot columns and pick those.
+      In this case, <m>\vec{v}_1</m> and <m>\vec{v}_3</m>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Computing the inverse</title>
+    <p>
+      If the matrix <m>A</m> is square and there exists a unique solution <m>\vec{x}</m> to
+      <m>A \vec{x} = \vec{b}</m> for any <m>\vec{b}</m>
+      (there are no free variables),
+      then <m>A</m> is invertible.
+      This is equivalent to the <m>n \times n</m> matrix <m>A</m> being of rank <m>n</m>.
+    </p>
+    <p>
+      In particular,
+      if <m>A \vec{x} = \vec{b}</m> then <m>\vec{x} = A^{-1} \vec{b}</m>.
+      Now we just need to compute what <m>A^{-1}</m> is.
+      We can surely do elimination every time we want to find <m>A^{-1} \vec{b}</m>,
+      but that would be ridiculous.
+      The mapping <m>A^{-1}</m> is linear and hence given by a matrix,
+      and we have seen that to figure out the matrix we just need to find where does <m>A^{-1}</m> take the standard basis vectors <m>\vec{e}_1</m>,
+      <m>\vec{e}_2</m>,
+      <ellipsis/>, <m>\vec{e}_n</m>.
+    </p>
+    <p>
+      That is, to find the first column of <m>A^{-1}</m> we solve <m>A \vec{x} = \vec{e}_1</m>,
+      because then <m>A^{-1} \vec{e}_1 = \vec{x}</m>.
+      To find the second column of <m>A^{-1}</m> we solve <m>A \vec{x} = \vec{e}_2</m>.
+      And so on.
+      It is really just <m>n</m> eliminations that we need to do.
+      But it gets even easier.
+      If you think about it,
+      the elimination is the same for everything on the left side of the augmented matrix.
+      Doing <m>n</m> eliminations separately we would redo most of the computations.
+      Best is to do all at once.
+    </p>
+    <p>
+      Therefore, to find the inverse of <m>A</m>,
+      we write an <m>n \times 2n</m> augmented matrix <m>[ \,A ~|~ I\, ]</m>,
+      where <m>I</m> is the identity matrix,
+      whose columns are precisely the standard basis vectors.
+      We then perform row reduction until we arrive at the reduced row echelon form.
+      If <m>A</m> is invertible,
+      then pivots can be found in every column of <m>A</m>,
+      and so the reduced row echelon form of
+      <m>[ \,A ~|~ I\, ]</m> looks like <m>[ \,I ~|~ A^{-1}\, ]</m>.
+      We then just read off the inverse <m>A^{-1}</m>.
+      If you do not find a pivot in every one of the first <m>n</m> columns of the augmented matrix,
+      then <m>A</m> is not invertible.
+    </p>
+    <p>
+      This is best seen by example.
+      Suppose we wish to invert the matrix
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \\ 2 \amp  0 \amp  1 \\ 3 \amp  1 \amp  0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      We write the augmented matrix and we start reducing:
+      <md>
+        <mrow>\amp  \left[ \begin{array}{ccc|ccc} \mybxsm{1} \amp  2 \amp  3 \amp  1 \amp  0 \amp  0</mrow>
+        <mrow>2 \amp  0 \amp  1 \amp  0 \amp  1 \amp  0</mrow>
+        <mrow>3 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \end{array} \right] \to \amp  \amp \left[ \begin{array}{ccc|ccc} \mybxsm{1} \amp  2 \amp  3 \amp  1 \amp  0 \amp  0</mrow>
+        <mrow>0 \amp  -4 \amp  -5 \amp  -2 \amp  1 \amp  0</mrow>
+        <mrow>0 \amp  -5 \amp  -9 \amp  -3 \amp  0 \amp  1 \end{array} \right] \to</mrow>
+        <mrow>\to \amp  \left[ \begin{array}{ccc|ccc} \mybxsm{1} \amp  2 \amp  3 \amp  1 \amp  0 \amp  0</mrow>
+        <mrow>0 \amp  \mybxsm{1} \amp  \nicefrac{5}{4} \amp  \nicefrac{1}{2} \amp  \nicefrac{1}{4} \amp  0</mrow>
+        <mrow>0 \amp  -5 \amp  -9 \amp  -3 \amp  0 \amp  1 \end{array} \right] \to \amp  \amp \left[ \begin{array}{ccc|ccc} \mybxsm{1} \amp  2 \amp  3 \amp  1 \amp  0 \amp  0</mrow>
+        <mrow>0 \amp  \mybxsm{1} \amp  \nicefrac{5}{4} \amp  \nicefrac{1}{2} \amp  \nicefrac{1}{4} \amp  0</mrow>
+        <mrow>0 \amp  0 \amp  \nicefrac{-11}{4} \amp  \nicefrac{-1}{2} \amp  \nicefrac{-5}{4} \amp  1 \end{array} \right] \to</mrow>
+        <mrow>\to \amp  \left[ \begin{array}{ccc|ccc} \mybxsm{1} \amp  2 \amp  3 \amp  1 \amp  0 \amp  0</mrow>
+        <mrow>0 \amp  \mybxsm{1} \amp  \nicefrac{5}{4} \amp  \nicefrac{1}{2} \amp  \nicefrac{1}{4} \amp  0</mrow>
+        <mrow>0 \amp  0 \amp  \mybxsm{1} \amp  \nicefrac{2}{11} \amp  \nicefrac{5}{11} \amp  \nicefrac{-4}{11} \end{array} \right] \to \amp  \amp \left[ \begin{array}{ccc|ccc} \mybxsm{1} \amp  2 \amp  0 \amp  \nicefrac{5}{11} \amp  \nicefrac{-5}{11} \amp  \nicefrac{12}{11}</mrow>
+        <mrow>0 \amp  \mybxsm{1} \amp  0 \amp  \nicefrac{3}{11} \amp  \nicefrac{-9}{11} \amp  \nicefrac{5}{11}</mrow>
+        <mrow>0 \amp  0 \amp  \mybxsm{1} \amp  \nicefrac{2}{11} \amp  \nicefrac{5}{11} \amp  \nicefrac{-4}{11} \end{array} \right] \to</mrow>
+        <mrow>\to \amp  \left[ \begin{array}{ccc|ccc} \mybxsm{1} \amp  0 \amp  0 \amp  \nicefrac{-1}{11} \amp  \nicefrac{3}{11} \amp  \nicefrac{2}{11}</mrow>
+        <mrow>0 \amp  \mybxsm{1} \amp  0 \amp  \nicefrac{3}{11} \amp  \nicefrac{-9}{11} \amp  \nicefrac{5}{11}</mrow>
+        <mrow>0 \amp  0 \amp  \mybxsm{1} \amp  \nicefrac{2}{11} \amp  \nicefrac{5}{11} \amp  \nicefrac{-4}{11} \end{array} \right] </mrow>
+      </md>.
+    </p>
+    <p>
+      So
+      <me>
+        {\begin{bmatrix} 1 \amp  2 \amp  3 \\ 2 \amp  0 \amp  1 \\ 3 \amp  1 \amp  0 \end{bmatrix}}^{-1} = \begin{bmatrix} \nicefrac{-1}{11} \amp  \nicefrac{3}{11} \amp  \nicefrac{2}{11} \\ \nicefrac{3}{11} \amp  \nicefrac{-9}{11} \amp  \nicefrac{5}{11} \\ \nicefrac{2}{11} \amp  \nicefrac{5}{11} \amp  \nicefrac{-4}{11} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Not too terrible, no?
+      Perhaps harder than inverting a
+      <m>2 \times 2</m> matrix for which we had a formula, but not too bad.
+      Really in practice this is done efficiently by a computer.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises</title>
+    <p>
+      \begin{samepage}
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Compute the reduced row echelon form for the following matrices: \begin{tasks}(4) \task <m>\begin{bmatrix}1 \amp 3 \amp 1 \\ 0 \amp 1 \amp 1 \end{bmatrix}</m> \task <m>\begin{bmatrix}3 \amp 3 \\ 6 \amp -3 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}3 \amp 6 \\ -2 \amp -3 \end{bmatrix}</m> \task <m>\begin{bmatrix}6 \amp 6 \amp 7 \amp 7 \\ 1 \amp 1 \amp 0 \amp 1 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}9 \amp 3 \amp 0 \amp 2 \\ 8 \amp 6 \amp 3 \amp 6 \\ 7 \amp 9 \amp 7 \amp 9 \end{bmatrix}</m> \task <m>\begin{bmatrix}2 \amp 1 \amp 3 \amp -3 \\ 6 \amp 0 \amp 0 \amp -1 \\ -2 \amp 4 \amp 4 \amp 3 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}6 \amp 6 \amp 5 \\ 0 \amp -2 \amp 2 \\ 6 \amp 5 \amp 6 \end{bmatrix}</m> \task <m>\begin{bmatrix}0 \amp 2 \amp 0 \amp -1 \\ 6 \amp 6 \amp -3 \amp 3 \\ 6 \amp 2 \amp -3 \amp 5 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \end{samepage}
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Compute the inverse of the given matrices \begin{tasks}(3) \task <m>\begin{bmatrix}1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}1 \amp 1 \amp 1 \\ 0 \amp 2 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix}</m> \task <m>\begin{bmatrix}1 \amp 2 \amp 3 \\ 2 \amp 0 \amp 1 \\ 0 \amp 2 \amp 1 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Solve (find all solutions),
+          or show no solution exists \begin{tasks}(2) \task
+          <m>\begin{aligned}4x_1+3x_2 \amp = -2 \\ -x_1+ x_2 \amp = 4 \end{aligned}</m> \task <m>\begin{aligned}x_1+5x_2+3x_3 \amp = 7 \\ 8x_1+7x_2+8x_3 \amp = 8 \\ 4x_1+8x_2+6x_3 \amp = 4 \end{aligned}</m> \task
+          <m>\begin{aligned}4x_1+8x_2+2x_3 \amp = 3 \\ -x_1-2x_2+3x_3 \amp = 1 \\ 4x_1+8x_2 \amp = 2 \end{aligned}</m> \task <m>\begin{aligned}x+2y+3z \amp = 4 \\ 2 x- y+3z \amp = 1 \\ 3 x+ y+6z \amp = 6 \end{aligned}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          By computing the inverse,
+          solve the following systems for <m>\vec{x}</m>. \begin{tasks}(2) \task
+          <m>\begin{bmatrix}4 \amp 1 \\ -1 \amp 3 \end{bmatrix} \vec{x} = \begin{bmatrix}13 \\ 26 \end{bmatrix}</m> \task <m>\begin{bmatrix}3 \amp 3 \\ 3 \amp 4 \end{bmatrix} \vec{x} = \begin{bmatrix}2 \\ -1 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise_rankmatrix">
+      <statement>
+        <p>
+          Compute the rank of the given matrices \begin{tasks}(3) \task <m>\begin{bmatrix}6 \amp 3 \amp 5 \\ 1 \amp 4 \amp 1 \\ 7 \amp 7 \amp 6 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}5 \amp -2 \amp -1 \\ 3 \amp 0 \amp 6 \\ 2 \amp 4 \amp 5 \end{bmatrix}</m> \task <m>\begin{bmatrix}1 \amp 2 \amp 3 \\ -1 \amp -2 \amp -3 \\ 2 \amp 4 \amp 6 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          For the matrices in <xref ref="exercise_rankmatrix"></xref>,
+          find a linearly independent set of row vectors that span the row space
+          (they don't need to be rows of the matrix).
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          For the matrices in <xref ref="exercise_rankmatrix"></xref>,
+          find a linearly independent set of columns that span the column space.
+          That is, find the pivot columns of the matrices.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Find a linearly independent subset of the following vectors that has the same span.
+          <me>
+            \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix} , \begin{bmatrix} 2 \\ -2 \\ -4 \end{bmatrix} , \begin{bmatrix} -2 \\ 4 \\ 1 \end{bmatrix} , \begin{bmatrix} -1 \\ 3 \\ -2 \end{bmatrix}
+          </me>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute the reduced row echelon form for the following matrices: \begin{tasks}(4) \task <m>\begin{bmatrix}1 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \end{bmatrix}</m> \task <m>\begin{bmatrix}1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}1 \amp 1 \\ -2 \amp -2 \end{bmatrix}</m> \task <m>\begin{bmatrix}1 \amp -3 \amp 1 \\ 4 \amp 6 \amp -2 \\ -2 \amp 6 \amp -2 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}2 \amp 2 \amp 5 \amp 2 \\ 1 \amp -2 \amp 4 \amp -1 \\ 0 \amp 3 \amp 1 \amp -2 \end{bmatrix}</m> \task <m>\begin{bmatrix}-2 \amp 6 \amp 4 \amp 3 \\ 6 \amp 0 \amp -3 \amp 0 \\ 4 \amp 2 \amp -1 \amp 1 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}</m> \task <m>\begin{bmatrix}1 \amp 2 \amp 3 \amp 3 \\ 1 \amp 2 \amp 3 \amp 5 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}1 \amp 0 \\ 0 \amp 1 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}1 \amp 1 \\ 0 \amp 0 \end{bmatrix}</m> d)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 0 \\ 0 \amp 1 \amp -1/3 \\ 0 \amp 0 \amp 0 \end{bmatrix}</m> e)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 0 \amp 77/15 \\ 0 \amp 1 \amp 0 \amp -2/15 \\ 0 \amp 0 \amp 1 \amp -8/5 \end{bmatrix}</m> f)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp -1/2 \amp 0 \\ 0 \amp 1 \amp 1/2 \amp 1/2 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}</m> g)<nbsp/><m>\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}</m> h)<nbsp/><m>\begin{bmatrix}1 \amp 2 \amp 3 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \end{bmatrix}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Compute the inverse of the given matrices \begin{tasks}(3) \task <m>\begin{bmatrix}0 \amp 1 \amp 0 \\ -1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}1 \amp 1 \amp 1 \\ 1 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}</m> \task <m>\begin{bmatrix}2 \amp 4 \amp 0 \\ 2 \amp 2 \amp 3 \\ 2 \amp 4 \amp 1 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>\begin{bmatrix}0 \amp -1 \amp 0 \\ 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}0 \amp 0 \amp 1 \\ 0 \amp 1 \amp -1 \\ 1 \amp -1 \amp 0 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}\nicefrac{5}{2} \amp 1 \amp -3 \\ -1 \amp \nicefrac{-1}{2} \amp \nicefrac{3}{2} \\ -1 \amp 0 \amp 1 \end{bmatrix}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Solve (find all solutions),
+          or show no solution exists \begin{tasks}(2) \task
+          <m>\begin{aligned}4x_1+3x_2 \amp = -1 \\ 5x_1+6x_2 \amp = 4 \end{aligned}</m> \task <m>\begin{aligned}5x+6y+5z \amp = 7 \\ 6x+8y+6z \amp = -1 \\ 5x+2y+5z \amp = 2 \end{aligned}</m> \task
+          <m>\begin{aligned}a+b+c \amp = -1 \\ a+5b+6c \amp = -1 \\ -2a+5b+6c \amp = 8 \end{aligned}</m> \task <m>\begin{aligned}-2 x_1+2x_2+8x_3 \amp = 6 \\ x_2+x_3 \amp = 2 \\ x_1+4x_2+x_3 \amp = 7 \end{aligned}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>x_1=-2</m>,
+      <m>x_2 = \nicefrac{7}{3}</m> b)<nbsp/>no solution c)<nbsp/><m>a = -3</m>,
+      <m>b=10</m>,
+      <m>c=-8</m> d)<nbsp/><m>x_3</m> is free,
+      <m>x_1 = -1+3x_3</m>, <m>x_2 = 2-x_3</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          By computing the inverse,
+          solve the following systems for <m>\vec{x}</m>. \begin{tasks}(2) \task
+          <m>\begin{bmatrix}-1 \amp 1 \\ 3 \amp 3 \end{bmatrix} \vec{x} = \begin{bmatrix}4 \\ 6 \end{bmatrix}</m> \task <m>\begin{bmatrix}2 \amp 7 \\ 1 \amp 6 \end{bmatrix} \vec{x} = \begin{bmatrix}1 \\ 3 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>\begin{bmatrix}-1 \\ 3 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}-3 \\ 1 \end{bmatrix}</m> }
+    </p>
+    <exercise xml:id="exercise_rankmatrixans">
+      <statement>
+        <p>
+          Compute the rank of the given matrices \begin{tasks}(3) \task <m>\begin{bmatrix}7 \amp -1 \amp 6 \\ 7 \amp 7 \amp 7 \\ 7 \amp 6 \amp 2 \end{bmatrix}</m> \task
+          <m>\begin{bmatrix}1 \amp 1 \amp 1 \\ 1 \amp 1 \amp 1 \\ 2 \amp 2 \amp 2 \end{bmatrix}</m> \task <m>\begin{bmatrix}0 \amp 3 \amp -1 \\ 6 \amp 3 \amp 1 \\ 4 \amp 7 \amp -1 \end{bmatrix}</m> \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) 3 b) 1 c) 2 }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          For the matrices in <xref ref="exercise_rankmatrixans"></xref>,
+          find a linearly independent set of row vectors that span the row space
+          (they don't need to be rows of the matrix).
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 0 \end{bmatrix}</m>,
+      <m>\begin{bmatrix}0 \amp 1 \amp 0 \end{bmatrix}</m>,
+      <m>\begin{bmatrix}0 \amp 0 \amp 1 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}1 \amp 1 \amp 1 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp \nicefrac{1}{3} \end{bmatrix}</m>,
+      <m>\begin{bmatrix}0 \amp 1 \amp \nicefrac{-1}{3} \end{bmatrix}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          For the matrices in <xref ref="exercise_rankmatrixans"></xref>,
+          find a linearly independent set of columns that span the column space.
+          That is, find the pivot columns of the matrices.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>\begin{bmatrix}7 \\ 7 \\ 7 \end{bmatrix}</m>,
+      <m>\begin{bmatrix}-1 \\ 7 \\ 6 \end{bmatrix}</m>,
+      <m>\begin{bmatrix}7 \\ 6 \\ 2 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}1 \\ 1 \\ 2 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}0 \\ 6 \\ 4 \end{bmatrix}</m>,
+      <m>\begin{bmatrix}3 \\ 3 \\ 7 \end{bmatrix}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Find a linearly independent subset of the following vectors that has the same span.
+          <me>
+            \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} , \begin{bmatrix} 3 \\ 1 \\ -5 \end{bmatrix} , \begin{bmatrix} 0 \\ 3 \\ -1 \end{bmatrix} , \begin{bmatrix} -3 \\ 2 \\ 4 \end{bmatrix}
+          </me>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\begin{bmatrix}3 \\ 1 \\ -5 \end{bmatrix} , \begin{bmatrix}0 \\ 3 \\ -1 \end{bmatrix}</m> }
+    </p>
+  </subsection>
+</section>

@@ -1,0 +1,541 @@
+<section xml:id="separable_section">
+  <title>&#xc9;quations s&#xe9;parables</title>
+  <introduction>
+    <p>
+      Lorsqu'une &#xe9;quation diff&#xe9;rentielle s'&#xe9;crit sous la forme <m>y' = f(x)</m>,
+      il suffit d'int&#xe9;grer pour en obtenir la solution:
+      <m>y = \int f(x) \,dx + C</m>.
+      Malheureusement,
+      cette technique ne fonctionne pas dans le cas g&#xe9;n&#xe9;ral,
+      c'est-&#xe0;-dire <m>y' = f(x , y)</m>,
+      car si l'on int&#xe8;gre des deux côt&#xe9;s, on obtient:
+      <me>
+        y = \int f(x,y) \,dx + C
+      </me>.
+    </p>
+    <p>
+      Mais l'int&#xe9;grale contient des termes en <m>y</m>,
+      qu'on ne peut pas tout simplement traiter comme une constante,
+      puisque c'est une variable d&#xe9;pendante de <m>x</m>.
+    </p>
+  </introduction>
+  <subsection>
+    <title>&#xc9;quations s&#xe9;parables</title>
+    <p>
+      On dit qu'une &#xe9;quation diff&#xe9;rentielle est <em>s&#xe9;parable
+          <idx><h>s&#xe9;parable</h></idx>
+      </em> si elle peut être &#xe9;crite sous la forme suivante:
+      <me>
+        y' = f(x)g(y)
+      </me>,
+      où <m>f(x)</m>,
+      <m>g(y)</m> peuvent être des fonctions quelconques. &#xc9;crivons cette &#xe9;quation &#xe0;
+      l'aide de la notation de Leibniz:
+          <idx><h>notation de Leibniz</h></idx>
+      <me>
+        \frac{dy}{dx} = f(x)g(y)
+      </me>.
+    </p>
+    <p>
+      On peut alors r&#xe9;&#xe9;crire l'&#xe9;quation comme suit:
+      <me>
+        \frac{dy}{g(y)} = f(x) \,dx
+      </me>.
+    </p>
+    <p>
+      Les deux côt&#xe9;s de l'&#xe9;quation sont des expressions qu'on peut int&#xe9;grer:
+      <me>
+        \int \frac{dy}{g(y)} = \int f(x) \,dx + C
+      </me>.
+    </p>
+    <p>
+      Si l'on r&#xe9;ussit &#xe0;
+      trouver des primitives de chaque côt&#xe9;, on pourra alors possiblement r&#xe9;soudre pour <m>y</m>.
+    </p>
+    <example xml:id="example_yprimeisxy">
+      <statement>
+        <p>
+          Prenons l'&#xe9;quation suivante:
+          <me>
+            y' = xy
+          </me>.
+        </p>
+        <p>
+          On observe que <m>y=0</m> est une solution.
+          Nous gardons cette solution en m&#xe9;moire et supposons maintenant que <m>y \not =0</m>,
+          ce qui nous permettra de diviser par <m>y</m>. &#xc9;crivons l'&#xe9;quation comme suit:
+          <m>\frac{dy}{dx} = xy</m>.
+          On int&#xe8;gre de chaque côt&#xe9;:
+          <me>
+            \int \frac{dy}{y} = \int x\,dx + C
+          </me>.
+        </p>
+        <p>
+          On calcule les primitives de chaque côt&#xe9; et l'on obtient:
+          <me>
+            \ln \, \lvert y\rvert = \frac{x^2}{2} + C
+          </me>
+          ou
+          <me>
+            \lvert y \rvert = e^{\frac{x^2}{2} + C} = e^{\frac{x^2}{2}} e^C = D e^{\frac{x^2}{2}}
+          </me>,
+          où <m>D > 0</m> est une constante.
+          Puisque <m>y=0</m> est aussi une solution et que, de plus,
+          on a la valeur absolue de <m>y</m>,
+          dans l'expression, on peut &#xe9;crire:
+          <me>
+            y = D e^{\frac{x^2}{2}}
+          </me>,
+          où <m>D</m> est une constante quelconque,
+          pouvant être 0 ou n&#xe9;gative.
+          V&#xe9;rifions que c'est une solution:
+          <me>
+            y' = D x e^{\frac{x^2}{2}} = x \left( D e^{\frac{x^2}{2}} \right) = xy
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Regardons de plus pr&#xe8;s cette m&#xe9;thode.
+      On pourrait s'inqui&#xe9;ter du fait que les deux int&#xe9;grales apparaissant dans l'expression soient en termes de variables diff&#xe9;rentes. Ça peut sembler erron&#xe9;... Alors,
+      nous allons revoir la m&#xe9;thode de s&#xe9;paration des variables de mani&#xe8;re plus rigoureuse.
+    </p>
+    <p>
+      Supposons donc qu'on a:
+      <me>
+        \frac{dy}{dx} = f(x)g(y)
+      </me>.
+    </p>
+    <p>
+      Observons que <m>y = y(x)</m> est une fonction de <m>x</m> et que
+      <m>\frac{dy}{dx}</m> l'est &#xe9;galement.
+      On peut donc r&#xe9;&#xe9;crire l'&#xe9;quation comme suit:
+      <me>
+        \frac{1}{g(y)}\,\frac{dy}{dx} = f(x)
+      </me>.
+    </p>
+    <p>
+      Maintenant, int&#xe9;grons les deux côt&#xe9;s par rapport &#xe0; <m>x</m>:
+      <me>
+        \int \frac{1}{g(y)}\,\frac{dy}{dx} \,dx = \int f(x) \,dx + C
+      </me>.
+    </p>
+    <p>
+      On fait un changement de variables dans l'int&#xe9;grale de gauche:
+      <me>
+        \int \frac{1}{g(y)}\,dy = \int f(x) \,dx + C
+      </me>.
+    </p>
+    <p>
+      Comme on peut voir,
+      on obtient la même formule que plus haut, qui est donc correcte.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Solutions implicites</title>
+    <p>
+      Parfois, on peut avoir de la difficult&#xe9;
+      avec la m&#xe9;thode des &#xe9;quations s&#xe9;parables,
+      même si les deux int&#xe9;grales sont r&#xe9;solubles.
+      Consid&#xe9;rons, par exemple,
+      l'&#xe9;quation s&#xe9;parable suivante:
+      <me>
+        y' = \frac{xy}{y^2+1}
+      </me>.
+    </p>
+    <p>
+      On s&#xe9;pare les variables:
+      <me>
+        \frac{y^2+1}{y}\,dy = \left(y+\frac{1}{y}\right)\,dy = x\,dx
+      </me>.
+    </p>
+    <p>
+      On int&#xe8;gre:
+      <me>
+        \frac{y^2}{2} + \ln \, \lvert y \rvert = \frac{x^2}{2} + C
+      </me>.
+    </p>
+    <p>
+      Puis, on r&#xe9;&#xe9;crit pour rendre la solution plus jolie (ici,
+      <m>D = 2C</m>):
+      <me>
+        y^2 + 2 \ln \, \lvert y\rvert = x^2 + D
+      </me>.
+    </p>
+    <p>
+      Il est difficile de trouver une expression explicite pour <m>y</m>,
+      puisqu'on ne peut pas l'isoler dans l'expression.
+      Dans un tel cas,
+      on obtient ce qu'on appelle une <em>solution implicite
+          <idx><h>solution implicite</h></idx>
+      </em>.
+      On peut tout de même v&#xe9;rifier qu'on a bien trouv&#xe9; une solution &#xe0;
+      l'&#xe9;quation diff&#xe9;rentielle.
+      Il suffit de d&#xe9;river chaque côt&#xe9; par rapport &#xe0;
+      <m>x</m>, en se souvenant que <m>y</m> est une fonction de <m>x</m>,
+      et l'on obtient:
+      <me>
+        y'\left(2y + \frac{2}{y}\right) = 2x
+      </me>.
+    </p>
+    <p>
+      En multipliant les deux côt&#xe9;s par <m>y</m> et en divisant par <m>2(y^2+1)</m>,
+      on retrouve l'&#xe9;quation diff&#xe9;rentielle de d&#xe9;part (v&#xe9;rifiez-le).
+    </p>
+    <p>
+      &#xc9;tant donn&#xe9; une solution implicite,
+      trouver des valeurs de <m>y</m> explicitement peut être difficile.
+      Il est possible qu'une valeur de <m>x</m> donne plusieurs valeurs possibles de <m>y</m> et qu'il faille alors choisir.
+      Parfois, il est plus simple de penser &#xe0;
+      <m>x</m> comme &#xe0;
+      une fonction de <m>y</m>.
+      Parfois, même ceci est difficile.
+    </p>
+    <p>
+      Dans ce cas, un ordinateur peut être votre ami.
+      La plupart des logiciels math&#xe9;matiques proposent une fonction pour tracer la courbe-solution d'une &#xe9;quation implicite.
+      Par exemple, pour <m>C=0</m>,
+      l'ensemble des points <m>(x,y)</m> satisfaisant &#xe0;
+      <m>y^2+2\ln|y|=x^2</m> est une union de deux courbes, illustr&#xe9;es &#xe0;
+      <xref ref="implicitsols_fig">la</xref>.
+      Ce n'est pas le graphe d'une fonction,
+      puisque chaque <m>x</m> admet deux valeurs possibles de <m>y</m>.
+      Mais si l'on choisit une des deux courbes,
+      on a alors le graphe d'une fonction.
+      Si, de plus, on a une condition initiale,
+      on choisit la courbe qui passe par ce point.
+      Ainsi, chaque valeur de <m>C</m> donne deux solutions.
+      Comme on peut voir, les solutions implicites ne sont pas simples,
+      mais parfois on ne peut pas obtenir mieux.
+    </p>
+    <figure xml:id="implicitsols_fig">
+      <caption>Solution implicite <m>y^2+2\ln|y|=x^2</m> &#xe0; l'&#xe9;quation <m>y'=\frac{xy}{y^2+1}</m>.</caption>
+      \diffyincludegraphics{width=3in}{width=4.5in}{implicitsols}
+    </figure>
+    <p>
+      Cet exemple admet aussi la solution <m>y=0</m>.
+      Ainsi, la solution g&#xe9;n&#xe9;rale est
+      <me>
+        y^2 + 2 \ln \, \lvert y \rvert = x^2 + C \qquad \text{ ou }  \qquad y=0
+      </me>.
+    </p>
+    <p>
+      Des solutions comme <m>y=0</m> sont parfois appel&#xe9;es des
+      <em>solutions singuli&#xe8;res<idx><h>solutions singuli&#xe8;res</h></idx>
+      </em>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exemples d'&#xe9;quations s&#xe9;parables</title>
+    <example>
+      <statement>
+        <p>
+          R&#xe9;solvons <m>x^2y' = 1 - x^2+y^2 - x^2y^2</m>, <m>y(1) = 0</m>.
+        </p>
+        <p>
+          On factorise le côt&#xe9; droit:
+          <me>
+            x^2y' = (1 - x^2)(1+y^2)
+          </me>.
+        </p>
+        <p>
+          On s&#xe9;pare les variables,
+          on int&#xe8;gre et l'on r&#xe9;sout pour <m>y</m>:
+          <md>
+            <mrow>\frac{y'}{1+y^2} \amp  = \frac{1 - x^2}{x^2} ,</mrow>
+            <mrow>\frac{y'}{1+y^2} \amp  = \frac{1}{x^2} - 1 ,</mrow>
+            <mrow>\operatorname{arctan} (y) \amp  = \frac{-1}{x} - x + C ,</mrow>
+            <mrow>y \amp  = \tan \left(\frac{-1}{x} - x + C\right) </mrow>
+          </md>.
+        </p>
+        <p>
+          Il reste &#xe0; r&#xe9;soudre pour la condition initiale,
+          <m>0 = \tan(-2+C)</m>, et l'on obtient <m>C=2</m>
+          (ou <m>C = 2 + \pi</m>, ou <m>C = 2 + 2\pi</m>, etc.).
+          La solution particuli&#xe8;re recherch&#xe9;e est donc
+          <me>
+            y = \tan \left(\frac{-1}{x} - x + 2 \right)
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <example xml:id="sep_coffeeexample">
+      <statement>
+        <p>
+          Alex se pr&#xe9;pare une tasse de caf&#xe9;, qui doit se rendre &#xe0; 60 degr&#xe9;s (Celsius) parce qu'Alex n'aime pas se brûler.
+          Initialement, &#xe0; <m>t=0</m> minute,
+          le caf&#xe9; &#xe9;tait &#xe0; 89 degr&#xe9;s.
+          Une minute plus tard, Alex mesure la temp&#xe9;rature de nouveau,
+          et c'est 85 degr&#xe9;s.
+          La temp&#xe9;rature ambiante est 22 degr&#xe9;s.
+          Quand est-ce qu'Alex pourra enfin d&#xe9;guster son caf&#xe9;?
+        </p>
+        <p>
+          Posons <m>T</m>, la temp&#xe9;rature du caf&#xe9;
+          en degr&#xe9;s Celsius, et <m>A</m>,
+          la temp&#xe9;rature ambiante,
+          toujours en degr&#xe9;s Celsius.
+          La loi de refroidissement de Newton<idx><h>loi de refroidissement de Newton</h></idx> affirme que le taux de changement de la temp&#xe9;rature du caf&#xe9; est proportionnel &#xe0;
+          la diff&#xe9;rence entre la temp&#xe9;rature du caf&#xe9;
+          et la temp&#xe9;rature ambiante.
+          Autrement dit:
+          <me>
+            \frac{dT}{dt} = k(A-T)
+          </me>,
+          où <m>k</m> est une constante.
+          Dans notre exemple: <m>A=22</m>,
+          <m>T(0) = 89</m>, <m>T(1) = 85</m>.
+          On s&#xe9;pare les variables et l'on int&#xe8;gre (ici,
+          <m>C</m> et <m>D</m> sont des constantes arbitraires):
+          <md>
+            <mrow>\frac{1}{T-A} \, \frac{dT}{dt} \amp  = -k ,</mrow>
+            <mrow>\ln (T-A)  \amp = -kt + C , \qquad \text{ (notons que }  T-A > 0 \text{)}</mrow>
+            <mrow>T-A    \amp = D\, e^{-kt} ,</mrow>
+            <mrow>T      \amp = A + D\, e^{-kt} </mrow>
+          </md>.
+        </p>
+        <p>
+          En substituant la valeur de <m>A</m>,
+          on a <m>T = 22 + D\, e^{-kt}</m>.
+          On substitue la condition initiale:
+          <m>89 = T(0) = 22 + D</m>, et donc <m>D = 67</m>.
+          Ainsi, <m>T = 22 + 67\, e^{-kt}</m>.
+          La deuxi&#xe8;me condition donne que <m>85 = T(1) = 22 + 67\, e^{-k}</m>.
+          En r&#xe9;solvant pour <m>k</m>,
+          on obtient <m>k = - \ln \frac{85-22}{67} \approx 0{,}0616</m>.
+          Maintenant, trouvons la valeur de <m>t</m> donnant une temp&#xe9;rature de 60 degr&#xe9;s.
+          On r&#xe9;sout l'&#xe9;quation suivante,
+          <me>
+            60 = 22 + 67 e^{-0{,}0616t}
+          </me>
+          pour obtenir <m>t = - \frac{\ln \frac{60-22}{67}}{0{,}0616} \approx 9{,}21</m> minutes.
+          Donc, Alex peut commencer &#xe0; boire son caf&#xe9;
+          environ 9 minutes apr&#xe8;s l'avoir pr&#xe9;par&#xe9;
+          (correspondant &#xe0; peu pr&#xe8;s au temps requis pour faire ce calcul).
+          Voir <xref ref="sintro_coffeefig">la</xref>.
+        </p>
+        <figure xml:id="sintro_coffeefig">
+          <caption>Graphes de la fonction de temp&#xe9;rature du caf&#xe9; <m>T(t)</m>.
+          À gauche, des droites horizontales sont trac&#xe9;es aux temp&#xe9;ratures 60, 85 et 89.
+          Des droites verticales sont trac&#xe9;es &#xe0; <m>t=1</m> et &#xe0; <m>t=9{,}21</m>.
+          Observez que la temp&#xe9;rature atteint la valeur 85 &#xe0; <m>t=1</m>, et 60 &#xe0;
+          <m>t \approx 9{,}21</m>.  À droite, le graphe montre la temp&#xe9;rature pour une plus longue dur&#xe9;e,
+          avec une droite horizontale &#xe0; la valeur de la temp&#xe9;rature ambiante, soit 22.</caption>
+          \diffyincludegraphics{width=6.24in}{width=9in}{coffeefig-1-2}
+        </figure>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Trouvons la solution g&#xe9;n&#xe9;rale de <m>y' = \frac{-xy^2}{3}</m>
+          (incluant les solutions singuli&#xe8;res).
+        </p>
+        <p>
+          Notons d'abord que <m>y=0</m> est une solution
+          (singuli&#xe8;re).
+          Supposons donc pour la suite que <m>y \not= 0</m>.
+          On s&#xe9;pare les variables et l'on int&#xe8;gre:
+          <md>
+            <mrow>\frac{-3}{y^2} y' \amp  = x  \displaybreak[0]</mrow>
+            <mrow>\frac{3}{y}   \amp  = \frac{x^2}{2} + C  \displaybreak[0]</mrow>
+            <mrow>y \amp  = \frac{3}{\nicefrac{x^2}{2} + C} = \frac{6}{x^2 + 2C}</mrow>
+          </md>.
+        </p>
+        <p>
+          La solution g&#xe9;n&#xe9;rale est donc
+          <md>
+            <mrow>y = \frac{6}{x^2 + 2C} \qquad \text{ ou }  \qquad y=0 </mrow>
+          </md>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y' = \nicefrac{x}{y}</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez<m>y' = x^2y</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\dfrac{dx}{dt} = (x^2-1)\,t</m>, <m>x(0) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\dfrac{dx}{dt} = x\,\sin(t)</m>, for <m>x(0) = 1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\dfrac{dy}{dx} = xy+x+y+1</m>.
+          Indice: factorisez le côt&#xe9; droit.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>xy' = y + 2x^2 y</m>, <m>y(1) = 1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez<m>\dfrac{dy}{dx} = \dfrac{y^2+1}{x^2+1}</m>,
+          <m>y(0) = 1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution implicite pour <m>\dfrac{dy}{dx} = \dfrac{x^2+1}{y^2+1}</m>,
+          <m>y(0) = 1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution explicite pour <m>y' = xe^{-y}</m>,
+          <m>y(0)=1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution explicite pour <m>xy' = e^{-y}</m>,
+          <m>y(1)=1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution explicite pour <m>y' = ye^{-x^2}</m>,
+          <m>y(0)=1</m>.
+          Au besoin, votre r&#xe9;ponse peut inclure une int&#xe9;grale.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons qu'une tasse de caf&#xe9;
+          est &#xe0; 100 degr&#xe9;s Celsius au temps <m>t=0</m>,
+          et 70 degr&#xe9;s &#xe0;
+          <m>t=10</m> minutes, et 50 degr&#xe9;s &#xe0; <m>t=20</m> minutes.
+          Calculez la temp&#xe9;rature ambiante.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y'=2xy</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = Ce^{x^2}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>x'=3xt^2-3t^2</m>, <m>x(0)=2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = e^{t^3}+1</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution implicite pour <m>x'=\frac{1}{3x^2+1}</m>,
+          <m>x(0)=1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x^3+x=t+2</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution explicite pour <m>x y' = y^2</m>,
+          <m>y(1) = 1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = \frac{1}{1-\ln x}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution implicite pour <m>y' = \frac{\sin(x)}{\cos(y)}</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sin(y) = -\cos(x) + C</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Reprenez l' <xref ref="sep_coffeeexample"></xref>
+          avec les mêmes valeurs: 89 degr&#xe9;s &#xe0;
+          <m>t=0</m>, 85 degr&#xe9;s &#xe0;
+          <m>t=1</m>, et une temp&#xe9;rature ambiante de 22 degr&#xe9;s.
+          Supposons que ces temp&#xe9;ratures ont &#xe9;t&#xe9;
+          mesur&#xe9;es avec une pr&#xe9;cision de <m>\pm 0.5</m> degr&#xe9;s. À cause de cette impr&#xe9;cision,
+          on ne conna&#xee;t qu'un intervalle de temps pour que la temp&#xe9;rature du caf&#xe9;
+          atteigne exactement 60 degr&#xe9;s.
+          Trouvez cet intervalle de temps.
+          Indice: quel type d'erreur rend le temps de refroidissement plus long?
+          Plus court?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> L'intervalle de temps est d'environ 7.45 &#xe0; 12.15 minutes. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Une population de lapins <m>x</m> sur une &#xee;le est modelis&#xe9;e par l'&#xe9;quation suivante:
+          <m>x' = x- \bigl(\nicefrac{1}{1000} \bigr) x^2</m>,
+          où la variable ind&#xe9;pendante <m>t</m> est le temps,
+          mesur&#xe9;
+          en mois. À <m>t=0</m>,
+          l'&#xee;le contient 40 lapins. \begin{tasks} \task R&#xe9;solvez l'&#xe9;quation diff&#xe9;rentielle avec condition initiale. \task Combien de lapins habitent l'&#xee;le apr&#xe8;s 1 mois, 5 mois, 10 mois, 15 mois?
+          Arrondissez &#xe0; l'entier le plus proche. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
+      <m>x = \frac{1000e^t}{e^t+24}</m>. b) 102 lapins apr&#xe8;s un mois, 861 apr&#xe8;s 5 mois, 999 apr&#xe8;s 10 mois, 1000 apr&#xe8;s 15 mois. }
+    </p>
+  </subsection>
+</section>

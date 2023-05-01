@@ -1,0 +1,425 @@
+<section xml:id="appoffourier_section">
+  <title>Applications des s&#xe9;ries de Fourier</title>
+  <subsection>
+    <title>Oscillations p&#xe9;riodiques forc&#xe9;es</title>
+    <p>
+      \begin{mywrapfigsimp}{2.0in}{2.3in}
+    </p>
+    <p>
+      <image width="73%" source="massfigforce"/> \end{mywrapfigsimp} Revenons aux oscillations forc&#xe9;es.
+      Consid&#xe9;rons un syst&#xe8;me masse-ressort comme pr&#xe9;c&#xe9;demment,
+      où nous avons une masse <m>m</m> sur un ressort ayant une constante de ressort <m>k</m>,
+      avec un amortissement <m>c</m>,
+      et une force <m>F(t)</m> est appliqu&#xe9;e &#xe0; la masse.
+      Supposons que la fonction de for&#xe7;age <m>F (t)</m> est <m>2L</m>-p&#xe9;riodique pour un certain <m>L > 0</m>.
+      Nous avons vu ce probl&#xe8;me dans <xref ref="ho_chapter">le</xref>
+      avec <m>F (t) = F_0 \cos (\omega t)</m>.
+      L'&#xe9;quation qui r&#xe9;git cette configuration particuli&#xe8;re est
+      <men xml:id="afs_eq">
+        mx''(t) + cx'(t) + kx(t) = F(t)
+      </men>.
+    </p>
+    <p>
+      La solution g&#xe9;n&#xe9;rale de <xref ref="afs_eq"/> consiste en la solution compl&#xe9;mentaire <m>x_c</m>,
+      qui r&#xe9;sout l'&#xe9;quation homog&#xe8;ne associ&#xe9;e <m>mx'' + cx' + kx = 0</m>,
+      et en une solution particuli&#xe8;re de <xref ref="afs_eq"/> qu'on appelle <m>x_p</m>.
+      Pour <m>c > 0</m>,
+      la solution compl&#xe9;mentaire <m>x_c</m> est d&#xe9;croissante.
+      Par cons&#xe9;quent, on s'int&#xe9;resse surtout &#xe0;
+      la solution particuli&#xe8;re <m>x_p</m> qui est p&#xe9;riodique avec la même p&#xe9;riode que <m>F (t)</m>.
+      On appelle cette solution particuli&#xe8;re la
+      <em>solution p&#xe9;riodique r&#xe9;guli&#xe8;re<idx><h>solution p&#xe9;riodique r&#xe9;guli&#xe8;re</h></idx>
+      </em> et on l'&#xe9;crit <m>x_{sp}</m> comme pr&#xe9;c&#xe9;demment.
+      Ce qui est nouveau dans cette section est que nous consid&#xe9;rons une fonction forc&#xe9;e arbitraire <m>F (t)</m> au lieu d'un simple cosinus.
+    </p>
+    <p>
+      Par souci de simplicit&#xe9;, supposons que <m>c = 0</m>.
+      Le probl&#xe8;me avec <m>c> 0</m> est tr&#xe8;s similaire.
+    </p>
+    <p>
+      L'&#xe9;quation
+      <me>
+        mx'' + kx = 0
+      </me>
+      a une solution g&#xe9;n&#xe9;rale
+      <me>
+        x(t) = A \cos (\omega_0 t) + B \sin (\omega_0 t)
+      </me>,
+      où <m>\omega_0 = \sqrt{\frac{k}{m}}</m>.
+      Toutes les solutions de <m>mx''(t) + kx(t) = F(t)</m> sont de la forme <m>A \cos (\omega_0 t) + B \sin (\omega_0 t) + x_{sp}</m>.
+      La solution p&#xe9;riodique constante <m>x_{sp}</m> a la même p&#xe9;riode que <m>F(t)</m>.
+    </p>
+    <p>
+      Dans l'esprit de la derni&#xe8;re section et avec l'id&#xe9;e des coefficients ind&#xe9;termin&#xe9;s, on &#xe9;crit d'abord
+      <me>
+        F(t) = \frac{c_0}{2} + \sum_{n=1}^\infty c_n \cos \left( \frac{n \pi}{L} t \right) + d_n \sin \left( \frac{n \pi}{L} t \right)
+      </me>.
+    </p>
+    <p>
+      Ensuite, on &#xe9;crit une proposition de solution p&#xe9;riodique constante <m>x</m> telle que
+      <me>
+        x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right) + b_n \sin \left( \frac{n \pi}{L} t \right)
+      </me>,
+      où <m>a_n</m> et <m>b_n</m> sont inconnus.
+      On remplace <m>x</m> dans l'&#xe9;quation diff&#xe9;rentielle et l'on r&#xe9;sout pour <m>a_n</m> et pour <m>b_n</m> en termes de <m>c_n</m> et <m>d_n</m>.
+      Ce processus est souvent le mieux compris. [2]
+    </p>
+    <example xml:id="afs_steadyex">
+      <statement>
+        <p>
+          Supposons que <m>k=2</m> et <m>m=1</m>.
+          Les unit&#xe9;s sont de nouveau les unit&#xe9;s mks
+              <idx><h>mks units</h></idx>
+          (m&#xe8;tres-kilogrammes-secondes).
+          Il y a un <em>jetpack</em> attach&#xe9; &#xe0;
+          la masse, qui tire avec une force de 1 newton pendant 1 seconde,
+          puis s'&#xe9;teint pendant 1 seconde, et ainsi de suite.
+          On veut trouver la solution p&#xe9;riodique constante.
+        </p>
+        <p>
+          L'&#xe9;quation est donc
+          <me>
+            x'' + 2 x = F(t)
+          </me>,
+          où <m>F(t)</m> est la fonction interm&#xe9;diaire
+          <me>
+            F(t) = \begin{cases} 0 \amp  \text{ si }  \; {-1} \lt  t \lt  0 , \\ 1 \amp  \text{ si }  \; 0 \lt  t \lt  1 , \end{cases}
+          </me>
+        </p>
+        <p>
+          &#xe9;tendue p&#xe9;riodiquement.
+          On &#xe9;crit
+          <me>
+            F(t) = \frac{c_0}{2} + \sum_{n=1}^\infty c_n \cos (n \pi t) + d_n \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On calcule
+          <md>
+            <mrow>c_n \amp  = \int_{-1}^1 F(t) \cos (n \pi t) \, dt = \int_{0}^1 \cos (n \pi t) \, dt = 0 \qquad \text{ pour }  \; n \geq 1,</mrow>
+            <mrow>c_0 \amp  = \int_{-1}^1 F(t) \, dt = \int_{0}^1 \, dt = 1 ,</mrow>
+            <mrow>d_n \amp  = \int_{-1}^1 F(t) \sin (n \pi t) \, dt</mrow>
+            <mrow>\amp  = \int_{0}^1 \sin (n \pi t) \, dt</mrow>
+            <mrow>\amp  = \left[ \frac{-\cos (n \pi t)}{n \pi} \right]_{t=0}^1</mrow>
+            <mrow>\amp  = \frac{1-{(-1)}^n}{\pi n} = \begin{cases} \frac{2}{\pi n} \amp  \text{ si }  n \text{ est impair }  ,</mrow>
+            <mrow>0 \amp  \text{ si }  n \text{ est pair }  . \end{cases}</mrow>
+          </md>
+        </p>
+        <p>
+          Alors,
+          <me>
+            F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{2}{\pi n} \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On veut essayer
+          <me>
+            x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t) + b_n \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On remplace <m>x</m> dans l'&#xe9;quation diff&#xe9;rentielle <m>x''+2x = F(t)</m>.
+          Il est clair que <m>a_n = 0</m> pour <m>n \geq 1</m>,
+          car il n'y a pas de termes correspondants dans la s&#xe9;rie pour <m>F(t)</m>.
+          De mani&#xe8;re similaire, <m>b_n = 0</m> pour <m>n</m> pair.
+          Ainsi, on essaie
+          <me>
+            x(t) = \frac{a_0}{2} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty b_n \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On remplace dans l'&#xe9;quation diff&#xe9;rentielle et l'on obtient
+          <me>
+            \begin{split} x'' + 2 x \amp  = \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \Bigl[ - b_n n^2 \pi^2 \sin (n \pi t) \Bigr] + a_0 + 2 \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \Bigl[ b_n \sin (n \pi t) \Bigr] \\ \amp  = a_0 + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty b_n (2 - n^2 \pi^2 ) \sin (n \pi t) \\ \amp  = F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{2}{\pi n} \sin (n \pi t) . \end{split}
+          </me>
+        </p>
+        <p>
+          Alors, <m>a_0 = \frac{1}{2}</m>,
+          <m>b_n = 0</m> pour un <m>n</m> pair, et,
+          pour un <m>n</m> impair, on obtient
+          <me>
+            b_n = \frac{2}{\pi n (2 - n^2 \pi^2 )}
+          </me>.
+        </p>
+        <p>
+          La solution p&#xe9;riodique constante a la s&#xe9;rie de Fourier
+          <me>
+            x_{sp}(t) = \frac{1}{4} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{2}{\pi n (2 - n^2 \pi^2 )} \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On sait que c'est la solution p&#xe9;riodique constante,
+          car elle ne contient aucun terme de la solution compl&#xe9;mentaire et elle est p&#xe9;riodique avec la même p&#xe9;riode que <m>F (t)</m> elle-même.
+          Regardons <xref ref="afs_steadyexfig">la</xref>
+          pour le graphe de cette solution.
+        </p>
+        <figure xml:id="afs_steadyexfig">
+          <caption>Graphe de la fonction p&#xe9;riodique constante  <m>x_{sp}</m> de l' <xref ref="afs_steadyex"></xref>.</caption>
+          \diffyincludegraphics{width=3in}{width=4.5in}{afs-steadyex}
+        </figure>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>R&#xe9;sonance</title>
+    <p>
+      Tout comme lorsque la fonction de for&#xe7;age &#xe9;tait un simple cosinus,
+      on peut rencontrer de la r&#xe9;sonance.
+      On suppose que <m>c = 0</m> et on discute seulement de la r&#xe9;sonance pure.
+      Soit <m>F (t)</m> <m>2L</m>-p&#xe9;riodique, et consid&#xe9;rons
+      <me>
+        m x''(t) + k x (t) = F(t)
+      </me>.
+    </p>
+    <p>
+      Lorsqu'on d&#xe9;veloppe <m>F (t)</m>,
+      on constate que certains de ses termes coïncident avec la solution compl&#xe9;mentaire &#xe0;
+      <m>mx '' + kx = 0</m>;
+      on ne peut pas utiliser ces termes lorsqu'on devine.
+      Comme pr&#xe9;c&#xe9;demment,
+      ils disparaissent quand on les ins&#xe8;re dans le terme de gauche et on obtient une &#xe9;quation contradictoire
+      (telle que <m>0 = 1</m>).
+      On suppose que
+      <me>
+        x_c = A \cos (\omega_0 t) + B \sin (\omega_0 t)
+      </me>,
+      où <m>\omega_0 = \frac{N \pi}{L}</m> pour un certain entier positif <m>N</m>.
+      Nous devons modifier notre supposition et essayer
+      <me>
+        x(t) = \frac{a_0}{2} + t \left( a_N \cos \left( \frac{N \pi}{L} t \right) + b_N \sin \left( \frac{N \pi}{L} t \right) \right) + \sum_{\substack{n=1\\n\not= N} }^\infty a_n \cos \left( \frac{n \pi}{L} t \right) + b_n \sin \left( \frac{n \pi}{L} t \right)
+      </me>.
+    </p>
+    <p>
+      En d'autres mots,
+      on multiplie le terme par <m>t</m>. À partir de l&#xe0;, on proc&#xe8;de comme avant.
+    </p>
+    <p>
+      Bien sûr, la solution n'est pas une s&#xe9;rie de Fourier
+      (ce n'est même pas p&#xe9;riodique),
+      car elle contient les termes multipli&#xe9;s par <m>t</m>.
+      De plus, les termes <m>t \left( a_N \cos \left( \frac{N \pi}{L} t \right) + b_N \sin \left( \frac{N \pi}{L} t \right) \right)</m> dominent &#xe9;ventuellement et m&#xe8;nent &#xe0;
+      une oscillation intense.
+      Comme pr&#xe9;c&#xe9;demment,
+      ce comportement est appel&#xe9;
+      une <em>r&#xe9;sonance pure
+          <idx><h>r&#xe9;sonance pure</h></idx>
+      </em> ou <em>r&#xe9;sonance
+          <idx><h>r&#xe9;sonance</h></idx>
+      </em>.
+    </p>
+    <p>
+      On note qu'il peut maintenant y avoir une infinit&#xe9;
+      de fr&#xe9;quences de r&#xe9;sonance &#xe0; atteindre.
+      Autrement dit, lorsqu'on change la fr&#xe9;quence de <m>F</m>
+      (on change <m>L</m>),
+      diff&#xe9;rents termes de la s&#xe9;rie de Fourier de <m>F</m> peuvent interf&#xe9;rer avec la solution compl&#xe9;mentaire et provoquer une r&#xe9;sonance.
+      Cependant, il faut noter que,
+      puisque tout est une approximation et en particulier <m>c</m> n'est jamais r&#xe9;ellement z&#xe9;ro,
+      mais quelque chose tr&#xe8;s proche de z&#xe9;ro,
+      seule la premi&#xe8;re fr&#xe9;quence de r&#xe9;sonance compte dans la vraie vie.
+    </p>
+    <example>
+      <statement>
+      <p>
+        On veut r&#xe9;soudre l'&#xe9;quation
+        <men xml:id="afs_eq-resonance">
+          2 x'' + 18 \pi^2 x = F(t)
+        </men>,
+        où
+        <me>
+          F(t) = \begin{cases} -1 \amp  \text{ si }  \; {-1} \lt  t \lt  0 , \\ 1 \amp  \text{ si }  \; 0 \lt  t \lt  1 \end{cases}
+        </me>
+      </p>
+      <p>
+        &#xe9;tendue p&#xe9;riodiquement.
+        On note que
+        <me>
+          F(t) = \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{4}{\pi n} \sin (n \pi t)
+        </me>.
+      </p>
+      <exercise>
+        <statement>
+          <p>
+            Calculez la s&#xe9;rie de Fourier de <m>F</m> pour v&#xe9;rifier l'&#xe9;quation ci-dessus.
+          </p>
+        </statement>
+      </exercise>
+      <p>
+        Lorsque <m>\sqrt{\frac{k}{m}} = \sqrt{\frac{18\pi^2}{2}} = 3\pi</m>,
+        la solution de <xref ref="afs_eq-resonance"/> est
+        <me>
+          x(t) = c_1 \cos  (3\pi t) + c_2 \sin (3\pi t) + x_p (t)
+        </me>
+        pour une solution particuli&#xe8;re <m>x_p</m>.
+      </p>
+      <p>
+        Si l'on essaie un <m>x_p</m> donn&#xe9;
+        pour une s&#xe9;rie de Fourier avec <m>\ sin (n \pi t)</m> comme d'habitude,
+        l'&#xe9;quation compl&#xe9;mentaire,
+        <m>2x'' + 18 \pi ^2x = 0</m>,
+        <q>mange</q>
+        la troisi&#xe8;me harmonique.
+        Autrement dit,
+        le terme avec <m>\sin(3 \pi t)</m> est d&#xe9;j&#xe0;
+        dans la solution compl&#xe9;mentaire.
+        Par cons&#xe9;quent,
+        on retire ce terme et on le multiplie par <m>t</m>.
+        On ajoute &#xe9;galement un terme cosinus pour que tout soit correct.
+        Ainsi, on essaie
+        <me>
+          x_p(t) = a_3 t \cos (3 \pi t ) + b_3 t \sin (3 \pi t) + \sum_{\substack{n=1 \\ n~\text{ impair }  \\ n \not= 3} }^\infty b_n \sin (n \pi t)
+        </me>.
+      </p>
+      <p>
+        Calculons la deuxi&#xe8;me d&#xe9;riv&#xe9;e.
+        <md>
+          x_p''(t) = - 6 a_3 \pi \, \sin (3 \pi t) - 9\pi^2 a_3 \, t \, \cos (3 \pi t) + 6 b_3 \pi \, \cos (3 \pi t) - 9\pi^2 b_3 \, t \, \sin (3 \pi t) \\ {} + \sum_{\substack{n=1 \\ n~\text{ impair }  \\ n\not= 3} }^\infty (-n^2 \pi^2 b_n ) \, \sin (n \pi t) .
+        </md>
+      </p>
+      <p>
+        On remplace maintenant du côt&#xe9;
+        gauche de l'&#xe9;quation diff&#xe9;rentielle.
+        <md>
+          <mrow>2x_p'' + 18\pi^2 x_p = \amp - 12 a_3 \pi \sin (3 \pi t) - 18\pi^2 a_3 t \cos (3 \pi t) + 12 b_3 \pi \cos (3 \pi t) - 18\pi^2 b_3 t \sin (3 \pi t)</mrow>
+          <mrow>\amp   ~ {} + 18 \pi^2 a_3 t \cos (3 \pi t) ~ {} + 18 \pi^2 b_3 t \sin (3 \pi t)</mrow>
+          <mrow>\amp  {} + \sum_{\substack{n=1 \\ n~\text{ impaire }  \\ n\not= 3} }^\infty (-2n^2 \pi^2 b_n + 18\pi^2 b_n) \, \sin (n \pi t) </mrow>
+        </md>.
+      </p>
+      <p>
+        On simplifie :
+        <me>
+          2x_p'' + 18\pi^2 x_p = - 12 a_3 \pi \sin (3 \pi t) + 12 b_3 \pi \cos (3 \pi t) + \sum_{\substack{n=1 \\ n~\text{ impair }  \\ n\not= 3} }^\infty (-2n^2 \pi^2 b_n + 18\pi^2 b_n) \sin (n \pi t)
+        </me>.
+      </p>
+      <p>
+        Cette s&#xe9;rie doit être &#xe9;gale &#xe0;
+        la s&#xe9;rie pour <m>F(t)</m>.
+        On r&#xe9;sout pour <m>a_3</m> et pour <m>b_n</m>.
+        <md>
+          <mrow>\amp  a_3 = \frac{4/(3\pi)}{-12\pi} = \frac{-1}{9\pi^2} ,</mrow>
+          <mrow>\amp  b_3 = 0 ,</mrow>
+          <mrow>\amp  b_n = \frac{4}{n\pi(18\pi^2 - 2n^2 \pi^2)} = \frac{2}{\pi^3 n(9 - n^2)} \qquad \text{ pour }  n \text{ impair et }  n\not=3 </mrow>
+        </md>.
+      </p>
+      <p>
+        Ainsi,
+        <me>
+          x_p(t) = \frac{-1}{9\pi^2} \, t \, \cos (3 \pi t) + \sum_{\substack{n=1 \\ n~\text{ impair }  \\ n\not= 3} }^\infty \frac{2}{\pi^3 n(9 - n^2)} \sin (n \pi t)
+        </me>.
+      </p>
+      </statement>
+    </example>
+    <p>
+      Lorsque <m>c > 0</m>, on n'a pas &#xe0;
+      se soucier de la r&#xe9;sonance pure.
+      Il n'y a jamais de conflits,
+      et l'on n'a besoin de multiplier aucun terme par <m>t</m>.
+      Il existe un concept correspondant de r&#xe9;sonance pratique,
+          <idx><h>r&#xe9;sonance pratique</h></idx>
+      et c'est tr&#xe8;s semblable aux id&#xe9;es qu'on a d&#xe9;j&#xe0;
+      explor&#xe9;es dans <xref ref="ho_chapter">le</xref>.
+      Fondamentalement,
+      ce qui se passe dans la r&#xe9;sonance pratique est que l'un des coefficients de la s&#xe9;rie pour <m>x_ {sp}</m> peut devenir tr&#xe8;s gros.
+      On ne va pas s'int&#xe9;resser &#xe0;
+      ces d&#xe9;tails ici.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises</title>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = \frac{1}{2} + \sum_{n=1}^\infty \frac{1}{n^2} \cos (n \pi t)</m>.
+          Trouvez la solution p&#xe9;riodique r&#xe9;guli&#xe8;re pour <m>x'' + 2 x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = \sum_{n=1}^\infty \frac{1}{n^3} \sin (n \pi t)</m>.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + x' + x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = \sum_{n=1}^\infty \frac{1}{n^2} \cos (n \pi t)</m>.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + 4 x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = t</m> pour <m>-1 \lt t \lt 1</m> et &#xe9;tendez p&#xe9;riodiquement.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = t</m> pour <m>-1 \lt t \lt 1</m> et &#xe9;tendez p&#xe9;riodiquement.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + \pi^2 x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = \sin(2\pi t) + 0.1 \cos(10 \pi t)</m>.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + \sqrt{2}\, x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \frac{1}{\sqrt{2}-4 \pi^2} \sin(2\pi t) + \frac{0.1}{\sqrt{2}-100 \pi^2} \cos(10 \pi t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = \sum_{n=1}^\infty e^{-n} \cos(2 n t)</m>.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + 3 x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \sum\limits_{n=1}^\infty \frac{e^{-n}}{3-{(2n)}^2} \cos(2n t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = \lvert t \rvert</m> pour
+          <m>-1 \leq t \leq 1</m> &#xe9;tendue p&#xe9;riodiquement.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + \sqrt{3}\, x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \frac{1}{2\sqrt{3}} + \sum\limits_{\substack{n=1 \\ n \text{ impaire } } }^\infty \frac{-4}{n^2 \pi^2 (\sqrt{3}-n^2 \pi^2)} \cos (n \pi t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>F(t) = \lvert t \rvert</m> pour
+          <m>-1 \leq t \leq 1</m> &#xe9;tendue p&#xe9;riodiquement.
+          Trouvez la solution p&#xe9;riodique constante de <m>x'' + \pi^2 x = F(t)</m>.
+          Exprimez votre solution sous la forme d'une s&#xe9;rie de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \frac{1}{2\sqrt{3}} - \frac{2}{\pi^3} t \sin(\pi t) + \sum\limits_{\substack{n=3 \\ n \text{ impaire } } }^\infty \frac{-4}{n^2 \pi^4 (1-n^2)} \cos (n \pi t)</m> }
+    </p>
+  </subsection>
+</section>

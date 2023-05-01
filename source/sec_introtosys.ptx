@@ -1,0 +1,656 @@
+<section xml:id="sec_introtosys">
+  <title>Introduction aux syst&#xe8;mes d'&#xe9;quations diff&#xe9;rentielles ordinaires</title>
+  <subsection>
+    <title>Syst&#xe8;mes diff&#xe9;rentiels</title>
+    <p>
+      Un probl&#xe8;me n'a pas toujours qu'une seule variable d&#xe9;pendante et qu'une seule &#xe9;quation.
+      Comme on le verra,
+      des syst&#xe8;mes peuvent être compos&#xe9;s de plusieurs &#xe9;quations et de plusieurs variables d&#xe9;pendantes même s'il n'y a qu'une seule &#xe9;quation au d&#xe9;part.
+    </p>
+    <p>
+      S'il y a plusieurs variables d&#xe9;pendantes, <m>y_1</m>,
+      <m>y_2</m>, <ellipsis/>, <m>y_n</m>,
+      alors il peut y avoir une &#xe9;quation diff&#xe9;rentielle comprenant toutes ces variables et leurs d&#xe9;riv&#xe9;es par rapport &#xe0;
+      une variable ind&#xe9;pendante <m>x</m>.
+      Par exemple, <m>y_1'' = f(y_1',y_2',y_1,y_2,x)</m>.
+      G&#xe9;n&#xe9;ralement, lorsqu'il y a deux variables d&#xe9;pendantes,
+      il y a deux &#xe9;quations telles que
+      <md>
+        <mrow>y_1'' \amp  = f_1(y_1',y_2',y_1,y_2,x) ,</mrow>
+        <mrow>y_2'' \amp  = f_2(y_1',y_2',y_1,y_2,x)</mrow>
+      </md>
+      pour des fonctions <m>f_1</m> et <m>f_2</m>.
+      On appelle &#xe7;a un <em>syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles<idx><h>syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles</h></idx>
+      </em>.
+      De fa&#xe7;on plus pr&#xe9;cise,
+      l'&#xe9;quation pr&#xe9;c&#xe9;dente est un
+      <em>syst&#xe8;me d'EDO du second ordre<idx><h>syst&#xe8;me d'EDO du second ordre</h></idx>
+      </em> &#xe9;tant donn&#xe9;
+      la pr&#xe9;sence d'une d&#xe9;riv&#xe9;e du second ordre.
+      Le syst&#xe8;me
+      <md>
+        <mrow>x_1' \amp  = g_1(x_1,x_2,x_3,t) ,</mrow>
+        <mrow>x_2' \amp  = g_2(x_1,x_2,x_3,t) ,</mrow>
+        <mrow>x_3' \amp  = g_3(x_1,x_2,x_3,t)</mrow>
+      </md>
+      est du <em>premier ordre
+          <idx><h>premier ordre</h></idx>
+      </em>, où <m>x_1,x_2</m> et <m>x_3</m> sont les variables d&#xe9;pendantes et où <m>t</m> est la variable ind&#xe9;pendante.
+    </p>
+    <p>
+      La terminologie des syst&#xe8;mes est essentiellement la même que pour les &#xe9;quations simples.
+      Pour le syst&#xe8;me pr&#xe9;c&#xe9;dent,
+      une <em>solution</em><idx><h>solution pour un syst&#xe8;me</h></idx> est un ensemble de trois fonctions <m>x_1(t)</m>,
+      <m>x_2(t)</m>, <m>x_3(t)</m> telles que
+      <md>
+        <mrow>x_1'(t) \amp = g_1\bigl(x_1(t),x_2(t),x_3(t),t\bigr) ,</mrow>
+        <mrow>x_2'(t) \amp = g_2\bigl(x_1(t),x_2(t),x_3(t),t\bigr) ,</mrow>
+        <mrow>x_3'(t) \amp = g_3\bigl(x_1(t),x_2(t),x_3(t),t\bigr) </mrow>
+      </md>.
+    </p>
+    <p>
+      G&#xe9;n&#xe9;ralement, il y a aussi une
+      <em>condition initiale</em>.
+          <idx><h>condition initiale pour un syst&#xe8;me</h></idx>
+      Comme dans le cas des &#xe9;quations simples,
+      on pr&#xe9;cise <m>x_1</m>, <m>x_2</m> et <m>x_3</m> pour un <m>t</m> fixe.
+      Par exemple, <m>x_1(0) = a_1</m>,
+      <m>x_2(0) = a_2</m> et <m>x_3(0) = a_3</m>,
+      où <m>a_1</m>,
+      <m>a_2</m> et <m>a_3</m> sont des constantes quelconques.
+      Pour le syst&#xe8;me du second ordre,
+      on pr&#xe9;ciserait &#xe9;galement les premi&#xe8;res d&#xe9;riv&#xe9;es en un point.
+      Si l'on trouve une solution avec des constantes et que,
+      en r&#xe9;solvant celles-ci,
+      on trouve une solution pour toute condition initiale,
+      on appelle cette solution la <em>solution g&#xe9;n&#xe9;rale</em>.
+          <idx><h>solution g&#xe9;n&#xe9;rale d'un syst&#xe8;me</h></idx>
+      Examinons un exemple simple.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Il est parfois facile de trouver la solution en r&#xe9;solvant un syst&#xe8;me pour une variable puis pour la seconde.
+          Prenons le syst&#xe8;me du premier ordre
+          <md>
+            <mrow>y_1' \amp  = y_1 ,</mrow>
+            <mrow>y_2' \amp  = y_1 - y_2 </mrow>
+          </md>,
+          où <m>y_1</m> et <m>y_2</m> sont les variables d&#xe9;pendantes et où <m>x</m> est la variable ind&#xe9;pendante.
+          Consid&#xe9;rons les conditions initiales
+          <m>y_1(0) = 1</m> et <m>y_2(0) = 2</m>.
+        </p>
+        <p>
+          On remarque que <m>y_1 = C_1 e^x</m> est la solution g&#xe9;n&#xe9;rale de la premi&#xe8;re &#xe9;quation.
+          En substituant ensuite ce <m>y_1</m> dans la seconde &#xe9;quation,
+          on obtient <m>y_2' = C_1e^x - y_2</m>,
+          qui est une &#xe9;quation lin&#xe9;aire du premier ordre facilement r&#xe9;soluble pour <m>y_2</m>.
+          Avec la m&#xe9;thode du facteur int&#xe9;grant, on obtient
+          <me>
+            e^x y_2 = \frac{C_1}{2}e^{2x} + C_2
+          </me>
+          ou <m>y_2 = \frac{C_1}{2}e^{x} + C_2e^{-x}</m>.
+          La solution g&#xe9;n&#xe9;rale du syst&#xe8;me est donc :
+          <me>
+            y_1 = C_1 e^x , \qquad y_2 = \frac{C_1}{2}e^{x} + C_2e^{-x}
+          </me>.
+        </p>
+        <p>
+          On r&#xe9;sout le syst&#xe8;me pour <m>C_1</m> et <m>C_2</m> pour les conditions initiales.
+          On substitue <m>x=0</m> et l'on trouve que <m>C_1=1</m> et <m>C_2=\nicefrac{3}{2}</m>.
+          Alors, la solution est <m>y_1 = e^x</m> et <m>y_2 = (\nicefrac{1}{2}) e^x + (\nicefrac{3}{2}) e^{-x}</m>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      En g&#xe9;n&#xe9;ral,
+      on ne peut pas r&#xe9;soudre chaque variable s&#xe9;par&#xe9;ment comme dans l'exemple pr&#xe9;c&#xe9;dent,
+      et il faudra r&#xe9;soudre toutes les variables en même temps.
+      Même si l'on ne peut pas toujours r&#xe9;soudre le syst&#xe8;me pour une variable et ensuite pour la suivante,
+      on essaiera de tirer profit au maximum de cette technique.
+      D'une certaine fa&#xe7;on,
+      on r&#xe9;soudra plusieurs &#xe9;quations simples et l'on regroupera les solutions.
+      Ne nous pr&#xe9;occupons pas encore de la fa&#xe7;on de r&#xe9;soudre les syst&#xe8;mes d'&#xe9;quations.
+    </p>
+    <p>
+      Consid&#xe9;rons principalement les
+      <em>syst&#xe8;mes lin&#xe9;aires<idx><h>syst&#xe8;mes lin&#xe9;aires</h></idx>
+      </em>.
+      L'exemple pr&#xe9;c&#xe9;dent est un
+      <em>syst&#xe8;me lin&#xe9;aire du premier ordre<idx><h>syst&#xe8;me lin&#xe9;aire du premier ordre</h></idx>
+      </em>, car les variables d&#xe9;pendantes ou leurs d&#xe9;riv&#xe9;es n'apparaissent pas dans des fonctions non lin&#xe9;aires ou &#xe0;
+      des puissances sup&#xe9;rieures &#xe0;
+      un (<m>x</m>, <m>y</m>, <m>x'</m> et <m>y'</m> constantes,
+      et les fonctions de <m>t</m> peuvent être pr&#xe9;sentes,
+      mais pas <m>xy</m> ni <m>{(y')}^2</m> ni <m>x^3</m>).
+      Voici un exemple plus complexe de syst&#xe8;me lin&#xe9;aire :
+      <md>
+        <mrow>y_1'' \amp = e^t y_1' + t^2 y_1 + 5 y_2 + \sin(t),</mrow>
+        <mrow>y_2'' \amp = t y_1'-y_2' + 2 y_1 + \cos(t)</mrow>
+      </md>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Applications</title>
+    <p>
+      Voici quelques applications simples de syst&#xe8;mes diff&#xe9;rentiels et la mani&#xe8;re de mettre en place les &#xe9;quations.
+    </p>
+    <example xml:id="sintro_closedbrine-example">
+      <statement>
+        <p>
+          Tout d'abord,
+          examinons des r&#xe9;servoirs de solution saline, mais,
+          cette fois-ci, l'eau circule de l'un &#xe0;
+          l'autre, et vice versa.
+          Consid&#xe9;rons que les r&#xe9;servoirs sont m&#xe9;lang&#xe9;s uniform&#xe9;ment.
+        </p>
+        <figure xml:id="sintro_closedbrine">
+          <caption>Syst&#xe8;me ferm&#xe9; de deux r&#xe9;servoirs de solution saline.</caption>
+          <image width="73%" source="lin-tank-sys"/>
+        </figure>
+        <p>
+          Supposons que nous avons deux r&#xe9;servoirs contenant un volume de <m>V</m> litres d'eau sal&#xe9;e.
+          Le premier r&#xe9;servoir contient <m>x_1</m> grammes de sel,
+          et le second, <m>x_2</m> grammes.
+          La solution est parfaitement m&#xe9;lang&#xe9;e et s'&#xe9;coule d'un r&#xe9;servoir &#xe0; l'autre &#xe0;
+          la vitesse de <m>r</m> litres par seconde.
+          Voir <xref ref="sintro_closedbrine">la</xref>.
+        </p>
+        <p>
+          Le taux de variation de <m>x_1</m>,
+          c'est-&#xe0;-dire <m>x_1'</m>,
+          est la diff&#xe9;rence entre les d&#xe9;bits d'entr&#xe9;e et de sortie.
+          Le d&#xe9;bit entrant correspond &#xe0; la densit&#xe9;
+          du sel dans le r&#xe9;servoir 2 (<m>\frac{x_2}{V}</m>) multipli&#xe9;e par le d&#xe9;bit <m>r</m>.
+          Le d&#xe9;bit sortant correspond &#xe0; la densit&#xe9;
+          du sel dans le r&#xe9;servoir 1 (<m>\frac{x_1}{V}</m>) multipli&#xe9;e par le d&#xe9;bit <m>r</m>.
+          En d'autres termes, on a
+          <me>
+            x_1' = \frac{x_2}{V} r - \frac{x_1}{V} r = \frac{r}{V} x_2 - \frac{r}{V} x_1 = \frac{r}{V} (x_2-x_1)
+          </me>.
+        </p>
+        <p>
+          De la même fa&#xe7;on,
+          on trouve le taux de variation de <m>x_2'</m> quand les rôles de <m>x_1</m> et <m>x_2</m> sont invers&#xe9;s.
+          En r&#xe9;sum&#xe9;, le syst&#xe8;me d'EDO de ce probl&#xe8;me est
+          <md>
+            <mrow>x_1' \amp  = \frac{r}{V} (x_2-x_1),</mrow>
+            <mrow>x_2' \amp  = \frac{r}{V} (x_1-x_2)</mrow>
+          </md>.
+        </p>
+        <p>
+          Ici, on ne peut pas r&#xe9;soudre le syst&#xe8;me s&#xe9;par&#xe9;ment pour <m>x_1</m> ou <m>x_2</m>.
+          On doit simultan&#xe9;ment le r&#xe9;soudre pour <m>x_1</m> et <m>x_2</m>,
+          ce qui est &#xe9;vident &#xe9;tant donn&#xe9; que la quantit&#xe9;
+          de sel dans un r&#xe9;servoir affecte celle dans l'autre.
+          On ne peut d&#xe9;terminer <m>x_1</m> sans <m>x_2</m>,
+          et vice versa.
+        </p>
+        <p>
+          On ne sait pas encore comment trouver toutes les solutions,
+          mais on peut au moins en trouver certaines de fa&#xe7;on intuitive.
+          Supposons que nous savons que les r&#xe9;servoirs contiennent la même quantit&#xe9;
+          de sel au d&#xe9;part.
+          On a donc la condition initiale <m>x_1(0)=x_2(0) = C</m>.
+          Dans ce cas, la quantit&#xe9;
+          de sel qui sort de chaque r&#xe9;servoir est la même,
+          alors les concentrations ne changent pas.
+          En d'autres termes, <m>x_1 = C</m> et <m>x_2 = C</m>
+          (les fonctions constantes)
+          est une solution : <m>x_1' = x_2' = 0</m> et <m>x_2-x_1 = x_1-x_2 = 0</m>,
+          alors les &#xe9;quations sont satisfaites.
+        </p>
+        <p>
+          R&#xe9;fl&#xe9;chissons encore un peu avant de r&#xe9;soudre le syst&#xe8;me.
+          Supposons des conditions initiales
+          <m>x_1(0) = A</m> et <m>x_2(0) = B</m>,
+          pour deux constantes diff&#xe9;rentes <m>A</m> et <m>B</m>.
+          On a un syst&#xe8;me ferm&#xe9;, alors la quantit&#xe9;
+          totale de sel est constante.
+          Donc, <m>x_1+x_2</m> est constant et &#xe9;gal &#xe0; <m>A+B</m>.
+          Si <m>A</m> est plus grande que <m>B</m>,
+          il y aura plus de sel qui sort du premier r&#xe9;servoir qu'il y en entre. &#xc9;ventuellement,
+          apr&#xe8;s une longue p&#xe9;riode, la quantit&#xe9;
+          de sel dans chaque r&#xe9;servoir sera &#xe9;gale.
+          Donc, la solution de <m>x_1</m> et <m>x_2</m> tend vers <m>\frac{A+B}{2}</m>.
+          Vous d&#xe9;couvrirez que c'est vrai quand vous aurez appris &#xe0;
+          r&#xe9;soudre des syst&#xe8;mes diff&#xe9;rentiels.
+        </p>
+      </statement>
+    </example>
+    <example xml:id="sintro_carts-example">
+      <statement>
+        <p>
+          &#xc9;tudions un exemple du second ordre.
+          Reprenons le montage avec une masse et un ressort, mais,
+          cette fois-ci, consid&#xe9;rons deux masses.
+        </p>
+        <p>
+          \begin{mywrapfigsimp}{2.0in}{2.3in}
+        </p>
+        <p>
+          <image width="73%" source="cartsfig"/> \end{mywrapfigsimp} On a un ressort avec une constante <m>k</m> et deux masses <m>m_1</m> et <m>m_2</m>.
+          Imaginez les masses comme des chariots qui se d&#xe9;placent sans friction le long d'une voie lin&#xe9;aire.
+          La variable <m>x_1</m> repr&#xe9;sente le d&#xe9;placement du premier chariot,
+          et <m>x_2</m>, le d&#xe9;placement du second.
+          Les deux chariots reposent sans tension dans le ressort,
+          et l'on marque la position des deux chariots qu'on appelle les positions z&#xe9;ro.
+          Alors, <m>x_1</m> indique la distance du premier chariot par rapport &#xe0;
+          sa position z&#xe9;ro, et <m>x_2</m> fait la même chose pour le second.
+          La force exerc&#xe9;e par le ressort sur le premier chariot est
+          <m>k(x_2-x_1)</m> &#xe9;tant donn&#xe9;
+          que <m>x_2-x_1</m> repr&#xe9;sente l'&#xe9;tirement
+          (ou la compression)
+          du ressort par rapport &#xe0;
+          la position de repos.
+          La force exerc&#xe9;e sur le second chariot est l'inverse,
+          donc la même avec un signe n&#xe9;gatif.
+          La deuxi&#xe8;me loi de Newton<idx><h>deuxi&#xe8;me loi de Newton</h></idx> stipule que la force est &#xe9;gale &#xe0;
+          la masse multipli&#xe9;e par l'acc&#xe9;l&#xe9;ration.
+          Le syst&#xe8;me d'&#xe9;quations est donc
+          <md>
+            <mrow>m_1 x_1'' \amp  = k(x_2-x_1) ,</mrow>
+            <mrow>m_2 x_2'' \amp  = - k(x_2-x_1) </mrow>
+          </md>.
+        </p>
+        <p>
+          Encore une fois,
+          on ne peut le r&#xe9;soudre pour les variables <m>x_1</m> et <m>x_2</m> s&#xe9;par&#xe9;ment.
+          Il est clair qu'on doit r&#xe9;soudre le syst&#xe8;me pour <m>x_1</m> et <m>x_2</m> en même temps,
+          car les d&#xe9;placements des deux chariots sont interreli&#xe9;s.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Passage au premier ordre</title>
+    <p>
+      Avant de parler de la fa&#xe7;on de traiter des syst&#xe8;mes diff&#xe9;rentiels,
+      notons que, dans un certain sens,
+      nous pouvons ne consid&#xe9;rer que les syst&#xe8;mes du premier ordre.
+      Prenons une &#xe9;quation diff&#xe9;rentielle de <m>n^{\text{e} }</m> ordre :
+      <me>
+        y^{(n)} = F(y^{(n-1)},\ldots,y',y,x)
+      </me>.
+    </p>
+    <p>
+      On d&#xe9;finit de nouvelles variables
+      <m>u_1, u_2, \ldots,
+      u_n</m> et l'on &#xe9;crit le syst&#xe8;me :
+      <md>
+        <mrow>u_1' \amp  = u_2 ,</mrow>
+        <mrow>u_2' \amp  = u_3 ,</mrow>
+        <mrow>\amp  ~\, \vdots</mrow>
+        <mrow>u_{n-1}' \amp  = u_n ,</mrow>
+        <mrow>u_n' \amp  = F(u_n,u_{n-1},\ldots,u_2,u_1,x) </mrow>
+      </md>.
+    </p>
+    <p>
+      On r&#xe9;sout ce syst&#xe8;me pour <m>u_1</m>,
+      <m>u_2</m>, <ellipsis/>, <m>u_n</m>.
+      Apr&#xe8;s avoir trouv&#xe9;
+      la solution pour les <m>u</m>,
+      on peut oublier <m>u_2</m> &#xe0;
+      <m>u_n</m> et garder <m>y = u_1</m>.
+      Ce <m>y</m> r&#xe9;sout l'&#xe9;quation d'origine.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Prenons <m>x''' = 2x''+ 8x' + x + t</m>.
+          Si l'on admet que <m>u_1 = x</m>,
+          <m>u_2 = x'</m> et <m>u_3 = x''</m>,
+          on trouve le syst&#xe8;me :
+          <me>
+            u_1' = u_2, \qquad u_2' = u_3, \qquad u_3' = 2u_3 + 8u_2 + u_1 + t
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      On peut suivre une d&#xe9;marche similaire pour un syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles d'ordre sup&#xe9;rieur.
+      Par exemple,
+      un syst&#xe8;me de <m>k</m> &#xe9;quations diff&#xe9;rentielles avec <m>k</m> inconnues,
+      toutes d'ordre <m>n</m>, peut être ramen&#xe9; &#xe0;
+      un syst&#xe8;me du premier ordre de
+      <m>n \times k</m> &#xe9;quations et de <m>n \times k</m> inconnues.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Reprenons l'exemple des chariots,
+          <me>
+            m_1 x_1'' = k(x_2-x_1), \qquad m_2 x_2'' = - k(x_2-x_1)
+          </me>.
+        </p>
+        <p>
+          Admettons que <m>u_1 = x_1</m>,
+          <m>u_2 = x_1'</m>, <m>u_3 = x_2</m> et <m>u_4 = x_2'</m>.
+          Le syst&#xe8;me du second ordre devient le syst&#xe8;me du premier ordre :
+          <me>
+            u_1' = u_2, \qquad m_1 u_2' = k(u_3-u_1), \qquad u_3' = u_4, \qquad m_2 u_4' = - k(u_3-u_1)
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Le principe fonctionne dans les deux sens.
+          Prenons le syst&#xe8;me
+          <me>
+            x' = 2y-x , \qquad y' = x
+          </me>,
+          où la variable ind&#xe9;pendante est <m>t</m>.
+          On d&#xe9;sire le r&#xe9;soudre pour les conditions initiales <m>x(0) = 1</m> et <m>y(0) =0</m>.
+        </p>
+        <p>
+          Si l'on d&#xe9;rive la seconde &#xe9;quation, on obtient <m>y''=x'</m>.
+          On sait ce que repr&#xe9;sente <m>x'</m> en fonction de <m>x</m> et <m>y</m>,
+          et l'on sait que <m>x=y'</m>.
+          Alors,
+          <me>
+            y'' = x' = 2y-x = 2y-y'
+          </me>.
+        </p>
+        <p>
+          On a maintenant l'&#xe9;quation <m>y''+y'-2y = 0</m>.
+          On sait comment r&#xe9;soudre cette &#xe9;quation et l'on trouve que <m>y = C_1 e^{-2t} + C_2 e^t</m>.
+          Maintenant qu'on a <m>y</m>,
+          on utilise l'&#xe9;quation <m>y' = x</m> pour trouver <m>x</m> :
+          <me>
+            x = y' = -2 C_1 e^{-2t} + C_2 e^t
+          </me>.
+        </p>
+        <p>
+          On r&#xe9;sout pour les conditions initiales
+          <m>1 = x(0) = -2 C_1 + C_2</m> et <m>0 = y(0) = C_1 + C_2</m>.
+          Ainsi, <m>C_1 = -C_2</m> et <m>1 = 3C_2</m>.
+          Donc, <m>C_1 = \nicefrac{-1}{3}</m> et <m>C_2 = \nicefrac{1}{3}</m>.
+          La solution est
+          <me>
+            x = \frac{2e^{-2t} + e^t}{3} ,\qquad y = \frac{-e^{-2t} + e^t}{3}
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <exercise>
+      <statement>
+        <p>
+          Remplacez les termes et v&#xe9;rifiez que la solution est bonne.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      L'aller-retour entre les syst&#xe8;mes et les &#xe9;quations d'ordre sup&#xe9;rieur est utile pour d'autres raisons.
+      Par exemple, le logiciel utilis&#xe9;
+      pour r&#xe9;soudre num&#xe9;riquement les EDO (approximation) traite g&#xe9;n&#xe9;ralement les syst&#xe8;mes du premier ordre.
+      Pour l'utiliser, on doit donc prendre l'EDO &#xe0;
+      r&#xe9;soudre et la ramener &#xe0;
+      un syst&#xe8;me du premier ordre.
+      En r&#xe9;alit&#xe9;, c'est assez simple d'adapter le code informatique pour la m&#xe9;thode d'Euler ou celle de Runge-Kutta pour les &#xe9;quations du premier ordre afin de r&#xe9;soudre ces syst&#xe8;mes.
+      Il suffit alors de traiter la variable d&#xe9;pendante comme un vecteur au lieu d'un nombre.
+      La syntaxe est semblable pour la plupart des langages informatiques math&#xe9;matiques.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Syst&#xe8;mes autonomes et champs de vecteurs</title>
+    <p>
+      Un syst&#xe8;me où les &#xe9;quations ne d&#xe9;pendent pas de la variable ind&#xe9;pendante se nomme un
+      <em>syst&#xe8;me autonome
+          <idx><h>syst&#xe8;me autonome</h></idx>
+      </em>.
+      Par exemple, le syst&#xe8;me <m>x'=2y-x</m>,
+      <m>y'=x</m> est autonome, car <m>t</m> est la variable ind&#xe9;pendante,
+      mais elle n'appara&#xee;t pas dans les &#xe9;quations.
+    </p>
+    <p>
+      Pour les syst&#xe8;mes autonomes,
+      on peut utiliser un <em>champ de vecteurs associ&#xe9;
+      au syst&#xe8;me<idx><h>champ de vecteurs associ&#xe9;
+      au syst&#xe8;me</h></idx>
+      </em> ou <em>champ vectoriel
+          <idx><h>champ vectoriel</h></idx>
+      </em>, qui est un graphe semblable au champ de directions, mais,
+      au lieu de donner une pente &#xe0;
+      chaque point, on donne une direction
+      (et une amplitude).
+      L'exemple pr&#xe9;c&#xe9;dent,
+      <m>x' = 2y-x</m>, <m>y' = x</m>,
+      indique que, au point <m>(x,y)</m>,
+      la direction dans laquelle on doit se d&#xe9;placer pour satisfaire aux &#xe9;quations devrait correspondre &#xe0;
+      la direction du vecteur <m>( 2y-x, x )</m> &#xe0;
+      une vitesse &#xe9;gale &#xe0;
+      l'amplitude de ce vecteur.
+      On dessine donc le vecteur
+      <m>(2y-x,x)</m> au point <m>(x,y)</m> et l'on r&#xe9;p&#xe8;te pour plusieurs points sur le plan <m>xy</m>.
+      Par exemple, au point <m>(1,2)</m>,
+      on dessine le vecteur <m>\bigl(2(2)-1,1\bigr) = (3,1)</m>,
+      qui pointe vers la droite et l&#xe9;g&#xe8;rement vers le haut,
+      alors que, au point <m>(2,1)</m>,
+      on dessine le vecteur <m>\bigl(2(1)-2,2\bigr) = (0,2)</m>,
+      qui pointe directement vers le haut.
+      Lorsqu'on trace les vecteurs,
+      on r&#xe9;duit leur taille afin de pouvoir en placer plusieurs sur le même champ de vecteurs.
+      On s'int&#xe9;resse principalement &#xe0;
+      leur direction et &#xe0;
+      leur taille relative.
+      Voir <xref ref="sintro-vectorfield_fig">la</xref>.
+    </p>
+    <p>
+      On peut dessiner une trajectoire de la solution dans le plan.
+      Supposons que <m>x = f(t)</m> et que <m>y=g(t)</m> est la solution.
+      Nous choisissons un intervalle de <m>t</m>
+      (disons <m>0 \leq t \leq 2</m> pour l'exemple)
+      et nous tra&#xe7;ons trace tous les points
+      <m>\bigl(f(t),g(t)\bigr)</m> pour la plage <m>t</m> s&#xe9;lectionn&#xe9;e.
+      L'image obtenue est appel&#xe9;e <em>portrait de phase
+          <idx><h>portrait de phase</h></idx>
+      </em>
+      (ou <em>portrait de phase du plan<idx><h>portrait de phase du plan</h></idx>
+      </em>).
+      La courbe particuli&#xe8;re obtenue est appel&#xe9;e <em>trajectoire
+          <idx><h>trajectoire</h></idx>
+      </em> ou <em>courbe de solution
+          <idx><h>courbe de solution</h></idx>
+      </em>.
+      <xref ref="sintro-vectorfield-sol_fig">La</xref>
+      donne un exemple de trac&#xe9;. Sur le graphe,
+      la solution commence au point <m>(1,0)</m> et se d&#xe9;place le long du champ vectoriel sur une distance de deux unit&#xe9;s de <m>t</m>.
+      Ce syst&#xe8;me a &#xe9;t&#xe9;
+      r&#xe9;solu avec pr&#xe9;cision,
+      alors on calcule <m>x(2)</m> et <m>y(2)</m> pour trouver
+      <m>x(2) \approx 2.475</m> et <m>y(2) \approx 2.457</m>.
+      Ce point correspond &#xe0; l'extr&#xe9;mit&#xe9;
+      sup&#xe9;rieure droite de la courbe de solution trac&#xe9;e sur le graphe.
+    </p>
+    <figure xml:id="sintro-vectorfield_fig">
+      <caption>Portrait de phase pour <m>x' = 2y-x</m>, <m>y' = x</m>.</caption>
+      \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield}
+      <nbsp/><nbsp/>
+      \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield-sol}
+      \caption{Portrait de phase pour <m>x' = 2y-x</m>, <m>y' = x</m>, avec la trajectoire de la solution commen&#xe7;ant au point <m>(1,0)</m>
+      pour <m>0 \leq t \leq 2</m>. }
+    </figure>
+    <p>
+      Observez la similitude avec les diagrammes pour les syst&#xe8;mes autonomes &#xe0; une dimension.
+      Toutefois, remarquez comment les choses se compliquent quand on n'ajoute qu'une autre dimension.
+      On peut tracer des portraits de phase et des trajectoires dans le plan <m>xy</m> même si le syst&#xe8;me n'est pas autonome.
+      Cependant, dans ce cas,
+      on ne peut pas dessiner de champ de vecteurs &#xe9;tant donn&#xe9;
+      que le champ se modifie &#xe0;
+      mesure que <m>t</m> change.
+      Chaque <m>t</m> donne un champ vectoriel diff&#xe9;rent.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Th&#xe9;or&#xe8;me de Picard</title>
+    <p>
+      Avant d'aller plus loin,
+      mentionnons que le th&#xe9;or&#xe8;me de Picard sur l'existence et l'unicit&#xe9;
+      est toujours valable pour les syst&#xe8;mes d'EDO . Rappelons ce th&#xe9;or&#xe8;me pour les syst&#xe8;mes diff&#xe9;rentiels.
+      Un syst&#xe8;me du premier ordre g&#xe9;n&#xe9;rique prend la forme
+      <men xml:id="eq_general-system">
+        \begin{aligned} x_1' \amp  = F_1(x_1,x_2,\ldots,x_n,t) , \\ x_2' \amp  = F_2(x_1,x_2,\ldots,x_n,t) , \\ \amp  \vdots \\ x_n' \amp  = F_n(x_1,x_2,\ldots,x_n,t) . \end{aligned}
+      </men>
+    </p>
+    <theorem xml:id="sys_picardthm">
+      <title>Th&#xe9;or&#xe8;me de Picard sur l'existence et l'unicit&#xe9; des syst&#xe8;mes</title>
+      <statement>
+        <p>
+              <idx><h>existence and uniqueness for systems</h></idx>
+              <idx><h>Picard's theorem</h></idx>
+          Si, pour chaque <m>j=1,2,\ldots,n</m> et pour chaque <m>k = 1,2,\ldots,n</m>, chaque <m>F_j</m> est continue et que la d&#xe9;riv&#xe9;e <m>\frac{\partial F_j}{\partial x_k}</m> existe et est continue dans une r&#xe9;gion contenant <m>(x_1^0,x_2^0,\ldots,x_n^0,t^0)</m>, alors la solution &#xe0; <xref ref="eq_general-system"/> soumise aux conditions initiales <m>x_1(t^0) = x_1^0</m>, <m>x_2(t^0) = x_2^0</m>, <ellipsis/>, <m>x_n(t^0) = x_n^0</m> existe (du moins pour un petit intervalle autour de <m>t</m>) et est unique.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Plus simplement,
+      une solution unique existe pour toute condition initiale si le syst&#xe8;me est raisonnable
+      (<m>F_j</m> et ses d&#xe9;riv&#xe9;es partielles selon <m>x</m> sont continues).
+      Quant aux &#xe9;quations simples,
+      il se peut qu'il n'y ait pas de solution pour chaque temps <m>t</m>,
+      mais il peut y en avoir pour au moins de courtes p&#xe9;riodes.
+      Comme on peut transformer n'importe quelle EDO d'ordre <m>n</m> en un syst&#xe8;me du premier ordre,
+      ce th&#xe9;or&#xe8;me permet &#xe9;galement l'existence et l'unicit&#xe9;
+      des solutions pour des &#xe9;quations d'ordre sup&#xe9;rieur qui n'ont pas encore &#xe9;t&#xe9; &#xe9;nonc&#xe9;es explicitement.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>x_1' = x_2 - x_1 + t</m>,
+          <m>x_2' = x_2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>x_1' = 3 x_1 - x_2 + e^t</m>,
+          <m>x_2' = x_1</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          &#xc9;crivez <m>ay'' + by' + cy = f(x)</m> sous forme de syst&#xe8;me d'EDO de premier ordre.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          &#xc9;crivez <m>x'' + y^2 y' - x^3 = \sin(t)</m>,
+          <m>y'' + {(x'+y')}^2 -x = 0</m> sous forme de syst&#xe8;me d'EDO de premier ordre.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que deux masses sur des chariots se d&#xe9;pla&#xe7;ant sur une surface sans friction soient aux positions <m>x_1</m> et <m>x_2</m> comme dans l' <xref ref="sintro_carts-example"></xref>.
+          Supposons qu'une fus&#xe9;e applique une force <m>F</m> de direction positive sur le chariot <m>x_1</m>.
+          Configurez le syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que des r&#xe9;servoirs soient dispos&#xe9;s comme dans l' <xref ref="sintro_closedbrine-example"></xref>
+          et que les deux aient un volume de d&#xe9;part <m>V</m>,
+          mais maintenant,
+          le d&#xe9;bit du r&#xe9;servoir 1 vers le r&#xe9;servoir 2 est <m>r_1</m> et le d&#xe9;bit du r&#xe9;servoir 2 vers le r&#xe9;servoir 1 est <m>r_2</m>.
+          Dans ce cas, les volumes changeront.
+          Configurez le syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution g&#xe9;n&#xe9;rale de <m>y_1' = 3 y_1</m>,
+          <m>y_2' = y_1 + y_2</m>, <m>y_3' = y_1 + y_3</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y_1 = C_1 e^{3x}</m>,
+      <m>y_2 = y(x) = C_2 e^x+ \frac{C_1}{2} e^{3 x}</m>,
+      <m>y_3 = y(x) = C_3 e^x+ \frac{C_1}{2} e^{3 x}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>y'=2x</m>, <m>x'=x+y</m>,
+          <m>x(0)=1</m>, <m>y(0)=3</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x=\frac{5}{3} e^{2t} - \frac{2}{3} e^{-t}</m>,
+      <m>y=\frac{5}{3} e^{2t} + \frac{4}{3} e^{-t}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          &#xc9;crivez <m>x''' = x+t</m> sous forme de syst&#xe8;me du premier ordre.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x_1' = x_2</m>,
+      <m>x_2' = x_3</m>, <m>x_3' = x_1+t</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          &#xc9;crivez <m>y_1'' + y_1 + y_2 = t</m>,
+          <m>y_2'' + y_1 - y_2 = t^2</m> sous forme de syst&#xe8;me du premier ordre.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y_3' + y_1 + y_2 = t</m>,
+      <m>y_4' + y_1 - y_2 = t^2</m>,
+      <m>y_1' = y_3</m>, <m>y_2' = y_4</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que deux masses sur des chariots qui se d&#xe9;placent sur une surface sans friction soient aux positions <m>x_1</m> et <m>x_2</m> comme dans l' <xref ref="sintro_carts-example"></xref>.
+          Supposons que la position initiale soit
+          <m>x_1(0)=x_2(0)=0</m> et que la vitesse initiale soit
+          <m>x_1'(0) = x_2'(0) = a</m> pour un nombre quelconque <m>a</m>.
+          Utilisez votre intuition pour r&#xe9;soudre le syst&#xe8;me diff&#xe9;rentiel et expliquez votre raisonnement.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x_1 = x_2 = at</m>.
+      Explanation of the intuition is left to reader. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que des r&#xe9;servoirs soient dispos&#xe9;s comme dans l' <xref ref="sintro_closedbrine-example"></xref>,
+          mais cette fois, de l'eau propre s'&#xe9;coule &#xe0;
+          un d&#xe9;bit de <m>s</m> litres par seconde vers le r&#xe9;servoir 1 et une solution saline s'&#xe9;coule dans le r&#xe9;servoir 2 et dans les &#xe9;gouts avec un même d&#xe9;bit de <m>s</m> litres par seconde. \begin{tasks} \task Dessinez le sch&#xe9;ma. \task Configurez le syst&#xe8;me d'&#xe9;quations diff&#xe9;rentielles. \task De fa&#xe7;on intuitive,
+          qu'arrive-t-il lorsque <m>t</m> tend vers l'infini?
+          Expliquez. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) Laiss&#xe9;
+      au lecteur. b) <m>x_1' = \frac{r}{V} (x_2-x_1)</m>,
+      <m>x_2' = \frac{r}{V} x_1- \frac{r-s}{V}x_2</m>. c) Lorsque <m>t</m> tend vers l'infini,
+      chacun de <m>x_1</m> et <m>x_2</m> tendent vers z&#xe9;ro,
+      et le lecteur peut compl&#xe9;ter l'explication. }
+    </p>
+  </subsection>
+</section>

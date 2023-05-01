@@ -1,0 +1,791 @@
+<section xml:id="sec_matrix">
+  <title>Matrices et syst&#xe8;mes lin&#xe9;aires</title>
+  <introduction>
+    <p>
+      PLACEHOLDER
+    </p>
+    <p>
+      Lecture suppl&#xe9;mentaire dans l' <xref ref="linalg_appendix"></xref>.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Matrices et vecteurs</title>
+    <p>
+      Avant de parler de syst&#xe8;mes lin&#xe9;aires d'EDO, il faut parler de matrices,
+      alors une r&#xe9;vision rapide s'impose.
+      Une <em>matrice
+          <idx><h>matrice</h></idx>
+      </em> est un tableau de <m>m \times n</m> nombres
+      (<m>m</m> lignes et <m>n</m> colonnes).
+      Par exemple,
+      on &#xe9;crit une matrice <m>3 \times 5</m> comme suit :
+      <me>
+        A = \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \amp  a_{14} \amp  a_{15} \\ a_{21} \amp  a_{22} \amp  a_{23} \amp  a_{24} \amp  a_{25} \\ a_{31} \amp  a_{32} \amp  a_{33} \amp  a_{34} \amp  a_{35} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      On appelle <em>&#xe9;l&#xe9;ments</em>
+          <idx><h>element of a matrix</h></idx>
+      ou <em>composantes</em>
+          <idx><h>entry of a matrix</h></idx>
+      les nombres <m>a_{ij}</m>.
+    </p>
+    <p>
+      Un <em>vecteur
+          <idx><h>vecteur</h></idx>
+      </em> d&#xe9;signe g&#xe9;n&#xe9;ralement un <em>vecteur colonne
+          <idx><h>vecteur colonne</h></idx>
+      </em>, c'est-&#xe0;-dire une matrice <m>m \times 1</m>.
+      Lorsqu'on parle d'un <em>vecteur ligne
+          <idx><h>vecteur ligne</h></idx>
+      </em>, on le pr&#xe9;cise
+      (un vecteur ligne est une matrice <m>1 \times n</m>).
+      On d&#xe9;signe g&#xe9;n&#xe9;ralement les matrices par des lettres majuscules,
+      et les vecteurs par des minuscules avec une fl&#xe8;che au-dessus,
+      comme <m>\vec{x}</m> ou <m>\vec{b}</m>.
+      Un vecteur ne comprenant que des 0 s'&#xe9;crit <m>\vec{0}</m>.
+    </p>
+    <p>
+      D&#xe9;finissons quelques op&#xe9;rations sur les matrices.
+      Comme on veut que les matrices
+      <m>1 \times 1</m> se comportent comme des nombres,
+      les op&#xe9;rations doivent être compatibles avec ce principe.
+    </p>
+    <p>
+      Pour commencer, on peut multiplier
+          <idx><h>scalar multiplication</h></idx>
+      une matrice par un <em>scalaire
+          <idx><h>scalaire</h></idx>
+      </em>
+      (un nombre).
+      On multiplie simplement chaque &#xe9;l&#xe9;ment de la matrice par le scalaire.
+      Par exemple,
+      <me>
+        2 \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix} = \begin{bmatrix} 2 \amp  4 \amp  6 \\ 8 \amp  10 \amp  12 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      L'addition
+          <idx><h>addition of matrices</h></idx>
+      de matrices est aussi simple.
+      On additionne &#xe9;l&#xe9;ment par &#xe9;l&#xe9;ment.
+      Par exemple,
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix} + \begin{bmatrix} 1 \amp  1 \amp  -1 \\ 0 \amp  2 \amp  4 \end{bmatrix} = \begin{bmatrix} 2 \amp  3 \amp  2 \\ 4 \amp  7 \amp  10 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      On ne peut additionner que deux matrices de même taille.
+    </p>
+    <p>
+      Si l'on d&#xe9;signe par 0 une matrice dont tous les &#xe9;l&#xe9;ments sont nuls,
+      par <m>c</m> et <m>d</m> des scalaires, et par <m>A</m>,
+      <m>B</m> et <m>C</m> des matrices,
+      on obtient les r&#xe8;gles suivantes :
+      <md>
+        <mrow>A + 0 \amp  = A = 0 + A ,</mrow>
+        <mrow>A + B \amp  = B + A ,</mrow>
+        <mrow>(A + B) + C \amp  = A + (B + C) ,</mrow>
+        <mrow>c(A+B) \amp  = cA+cB,</mrow>
+        <mrow>(c+d)A \amp  = cA + dA</mrow>
+      </md>.
+    </p>
+    <p>
+      La <em>transposition
+          <idx><h>transposition</h></idx>
+      </em> est une autre op&#xe9;ration matricielle utile.
+      Cette op&#xe9;ration intervertit simplement les lignes et les colonnes d'une matrice.
+      La transposition de <m>A</m> est not&#xe9;e <m>A^T</m>.
+      Par exemple,
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix}^T = \begin{bmatrix} 1 \amp  4 \\ 2 \amp  5 \\ 3 \amp  6 \end{bmatrix}
+      </me>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Multiplication de matrices</title>
+    <p>
+      Voyons maintenant la multiplication de matrices.
+      Commen&#xe7;ons par d&#xe9;finir le <em>produit scalaire
+          <idx><h>produit scalaire</h></idx>
+      </em> (ou <em>produit int&#xe9;rieur
+          <idx><h>produit int&#xe9;rieur</h></idx>
+      </em>) de deux vecteurs.
+      En r&#xe8;gle g&#xe9;n&#xe9;rale,
+      c'est le produit d'un vecteur ligne par un vecteur colonne de même dimension.
+      Pour obtenir le produit scalaire,
+      on multiplie chaque paire d'&#xe9;l&#xe9;ments du premier et du second vecteur,
+      et l'on fait la somme des r&#xe9;sultats.
+      Le r&#xe9;sultat est un nombre.
+      Par exemple,
+      <me>
+        \begin{bmatrix} a_1 \amp  a_2 \amp  a_3 \end{bmatrix} \cdot \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} = a_1 b_1 + a_2 b_2 + a_3 b_3
+      </me>.
+    </p>
+    <p>
+      Le principe est le même pour les vecteurs plus grands
+      (ou plus petits).
+    </p>
+    <p>
+      D&#xe9;finissons ensuite le <em>produit des matrices
+          <idx><h>produit des matrices</h></idx>
+      </em>.
+      D&#xe9;signons par <m>\operatorname{ligne}_i(A)</m> la
+      <m>i^{\text{e} }</m> ligne de <m>A</m> et par
+      <m>\operatorname{colonne}_j(A)</m> la <m>j^{\text{e} }</m> colonne de <m>A</m>.
+      Pour une matrice <m>A</m> de dimension
+      <m>m \times n</m> et pour une matrice <m>B</m> de dimension <m>n \times p</m>,
+      <m>AB</m> d&#xe9;signe le produit.
+      La matrice <m>AB</m> est de dimension <m>m \times p</m>,
+      et le <m>ij^{\text{e} }</m> &#xe9;l&#xe9;ment est le produit scalaire
+      <me>
+        \operatorname{ligne}_i(A) \cdot \operatorname{colonne}_j(B)
+      </me>.
+    </p>
+    <p>
+      Notez la correspondance des tailles : <m>m \times n</m> multipli&#xe9;e par
+      <m>n \times p</m> donne <m>m \times p</m>.
+      Par exemple,
+      <md>
+        \begin{bmatrix}1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix} \begin{bmatrix}1 \amp  0 \amp  -1 \\ 1 \amp  1 \amp  1 \\ 1 \amp  0 \amp  0 \end{bmatrix} = \\ = \begin{bmatrix}1\cdot 1 + 2\cdot 1 + 3 \cdot 1 \amp  \amp 1\cdot 0 + 2\cdot 1 + 3 \cdot 0 \amp  \amp 1\cdot (-1) + 2\cdot 1 + 3 \cdot 0 \\ 4\cdot 1 + 5\cdot 1 + 6 \cdot 1 \amp  \amp 4\cdot 0 + 5\cdot 1 + 6 \cdot 0 \amp  \amp 4\cdot (-1) + 5\cdot 1 + 6 \cdot 0 \end{bmatrix} = \begin{bmatrix}6 \amp  2 \amp  1 \\ 15 \amp  5 \amp  1 \end{bmatrix} .
+      </md>
+    </p>
+    <p>
+      Pour la multiplication de matrices,
+      on veut un &#xe9;l&#xe9;ment neutre jouant le rôle de 1.
+      Cet &#xe9;l&#xe9;ment neutre est la
+      <em>matrice identit&#xe9;
+          <idx><h>matrice identit&#xe9;</h></idx>
+      </em> ou <em>matrice unit&#xe9;
+          <idx><h>matrice unit&#xe9;</h></idx>
+      </em>.
+      La matrice identit&#xe9;
+      est une matrice carr&#xe9;e avec des 1 sur la diagonale et avec des 0 ailleurs.
+      On la d&#xe9;signe g&#xe9;n&#xe9;ralement par <m>I</m>.
+      Pour chaque dimension, il y a une matrice identit&#xe9;
+      diff&#xe9;rente, et la dimension est parfois inscrite en indice.
+      Par exemple,
+      <m>I_3</m> repr&#xe9;sente une matrice identit&#xe9; <m>3 \times 3</m>.
+      <me>
+        I = I_3 = \begin{bmatrix} 1 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Les r&#xe8;gles suivantes s'appliquent &#xe0;
+      la multiplication de matrices.
+      Supposons que <m>A</m>,
+      <m>B</m> et <m>C</m> sont des matrices de dimensions appropri&#xe9;es pour que les r&#xe8;gles suivantes soient logiques.
+      Le symbole <m>\alpha</m> repr&#xe9;sente un scalaire
+      (nombre).
+      <md>
+        <mrow>A(BC) \amp  = (AB)C,</mrow>
+        <mrow>A(B+C) \amp  = AB + AC,</mrow>
+        <mrow>(B+C)A \amp  = BA + CA,</mrow>
+        <mrow>\alpha(AB) \amp  = (\alpha A)B = A(\alpha B),</mrow>
+        <mrow>IA \amp  = A = AI </mrow>
+      </md>.
+    </p>
+    <p>
+      [2] Quelques avertissements s'imposent.
+      <ol label="i">
+        <li>
+          <p>
+            En r&#xe8;gle g&#xe9;n&#xe9;rale, <m>AB \not= BA</m>
+            (le hasard peut faire que ce soit vrai).
+            La multiplication de matrices n'est pas commutative.
+              <idx><h>commutative</h></idx>
+          Par exemple,
+            prenez <m>A = \left[ \begin{matrix}1 \amp 1 \\ 1 \amp 1 \end{matrix} \right]</m> et <m>B = \left[ \begin{matrix}1 \amp 0 \\ 0 \amp 2 \end{matrix} \right]</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Le fait que <m>AB = AC</m> ne signifie pas n&#xe9;cessairement que <m>B=C</m>,
+            même si <m>A</m> n'est pas nulle.
+          </p>
+        </li>
+        <li>
+          <p>
+            Le fait que <m>AB = 0</m> ne signifie pas n&#xe9;cessairement que <m>A=0</m> ou <m>B=0</m>.
+            Essayez, par exemple,
+            avec <m>A = B = \left[ \begin{matrix}0 \amp 1 \\ 0 \amp 0 \end{matrix} \right]</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Afin que les deux derniers points soient vrais, on doit
+      <q>diviser</q>
+      par une matrice.
+      C'est ici qu'entre en jeu l'<em>inversion de matrice
+          <idx><h>inversion de matrice</h></idx>
+      </em>.
+      Supposons que <m>A</m> et <m>B</m> sont des matrices <m>n \times n</m> telles que
+      <me>
+        AB = I = BA
+      </me>,
+      alors la matrice <m>B</m> est l'inverse de <m>A</m>,
+      et nous d&#xe9;signons <m>B</m> par <m>A^{-1}</m>.
+      Si l'inverse de <m>A</m> existe,
+      on dit que <m>A</m> est <em>inversible
+          <idx><h>invertible matrix</h></idx>
+      </em>.
+      Si <m>A</m> n'est pas inversible,
+      on dit parfois que <m>A</m> est <em>singuli&#xe8;re
+          <idx><h>singular matrix</h></idx>
+      </em>.
+    </p>
+    <p>
+      Si <m>A</m> est inversible,
+      alors <m>AB = AC</m> signifie que <m>B = C</m> (l'inverse de <m>A</m> est alors unique).
+      On multiplie simplement les deux côt&#xe9;s de l'&#xe9;quation par <m>A^{-1}</m> (&#xe0;
+      gauche) et l'on obtient <m>A^{-1}AB = A^{-1}AC</m> ou <m>IB=IC</m> ou <m>B=C</m>.
+      On voit bien que <m>{(A^{-1})}^{-1} = A</m>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>D&#xe9;terminant</title>
+    <p>
+      Le <em>d&#xe9;terminant
+          <idx><h>d&#xe9;terminant</h></idx>
+      </em> est un outil utile pour les matrices carr&#xe9;es.
+      Le d&#xe9;terminant d'une matrice
+      <m>1 \times 1</m> est la valeur de son &#xe9;l&#xe9;ment unique.
+      Dans le cas d'une matrice <m>2 \times 2</m>, on d&#xe9;finit
+      <me>
+        \det \left( \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix} \right) \overset{\text{ def } }{=} ad-bc
+      </me>.
+    </p>
+    <p>
+      Avant de passer aux matrices plus grandes,
+      examinons ce que signifie le d&#xe9;terminant.
+      Consid&#xe9;rons une matrice
+      <m>n \times n</m> comme une projection d'un espace euclidien de dimension <m>n</m> sur lui-même,
+      d&#xe9;sign&#xe9;
+      par <m>{\mathbb{R}}^n</m>,
+      où <m>\vec{x}</m> est envoy&#xe9; &#xe0; <m>A \vec{x}</m>.
+      Une matrice <m>A</m> de dimension
+      <m>2 \times 2</m> est donc une projection du plan sur lui-même.
+      Le d&#xe9;terminant de <m>A</m> est le facteur par lequel l'aire des objets change.
+      Si l'on prend le carr&#xe9; unitaire
+      (un carr&#xe9;
+      de 1 x 1)
+      dans le plan, alors la matrice <m>A</m> transforme le carr&#xe9;
+      en parall&#xe9;logramme avec une aire &#xe9;gale &#xe0;
+      <m>\lvert\det(A)\rvert</m>.
+      Le signe du <m>\det(A)</m> d&#xe9;signe le changement d'orientation (n&#xe9;gatif si les axes s'inversent).
+      Par exemple, prenons
+      <me>
+        A = \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Alors, <m>\det(A) = 1+1 = 2</m>.
+      Voyez comment le carr&#xe9; (unitaire) avec les sommets <m>(0,0)</m>,
+      <m>(1,0)</m>,
+      <m>(0,1)</m> et <m>(1,1)</m> se transforme. &#xc9;videmment,
+      <m>(0,0)</m> demeure &#xe0; <m>(0,0)</m>.
+      <me>
+        \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} , \qquad \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \qquad \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      L'image du carr&#xe9; est un autre carr&#xe9;
+      avec les sommets <m>(0,0)</m>,
+      <m>(1,-1)</m>, <m>(1,1)</m> et <m>(2,0)</m>.
+      La longueur du côt&#xe9; du carr&#xe9;
+      image est de <m>\sqrt{2}</m>,
+      et son aire est donc de 2.
+    </p>
+    <p>
+      À l'&#xe9;cole secondaire,
+      vous avez peut-être appris une formule pour calculer l'aire d'un parall&#xe9;logramme
+          <idx><h>parall&#xe9;logramme</h></idx>
+      &#xe0; partir des sommets <m>(0,0)</m>, <m>(a,c)</m>,
+      <m>(b,d)</m> et <m>(a+b,c+d)</m>.
+      C'est justement
+      <me>
+        \left\lvert \, \det \left( \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix} \right) \, \right\lvert
+      </me>.
+    </p>
+    <p>
+      Les lignes verticales dans l'&#xe9;quation ci-dessus signifient
+      <em>valeur</em> absolue.
+      La matrice <m>\left[ \begin{matrix}a \amp b \\ c \amp d \end{matrix} \right]</m> transforme le carr&#xe9;
+      unitaire en parall&#xe9;logramme.
+    </p>
+    <p>
+      Regardons maintenant le d&#xe9;terminant de matrices plus grandes.
+      On d&#xe9;finit <m>A_{ij}</m> comme la matrice <m>A</m> avec la <m>i^{\text{e} }</m> ligne et la
+      <m>j^{\text{e} }</m> colonne effac&#xe9;es.
+      Pour calculer le d&#xe9;terminant d'une matrice,
+      il faut choisir une ligne,
+      disons la <m>i^{\text{e} }</m> ligne, et calculer :
+      <me>
+        \mybxbg{~~ \det (A) = \sum_{j=1}^n {(-1)}^{i+j} a_{ij} \det (A_{ij}) . ~~}
+      </me>
+    </p>
+    <p>
+      Pour la premi&#xe8;re ligne, on obtient
+      <me>
+        \det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + a_{13} \det (A_{13}) - \cdots \begin{cases} + a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est impair, }  \\ - a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est pair. } \end{cases}
+      </me>
+    </p>
+    <p>
+      On alterne entre l'addition et la soustraction des d&#xe9;terminants de la sous-matrice <m>A_{ij}</m> multipli&#xe9;s par <m>a_{ij}</m> pour un <m>i</m> fixe et pour tous les <m>j</m>.
+      Dans le cas de la premi&#xe8;re ligne d'une matrice <m>3 \times 3</m>,
+      on obtient <m>\det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + a_{13} \det (A_{13})</m>.
+      Par exemple,
+      <me>
+        \begin{split} \det \left( \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \\ 7 \amp  8 \amp  9 \end{bmatrix} \right) \amp  = 1 \cdot \det \left( \begin{bmatrix} 5 \amp  6 \\ 8 \amp  9 \end{bmatrix} \right) - 2 \cdot \det \left( \begin{bmatrix} 4 \amp  6 \\ 7 \amp  9 \end{bmatrix} \right) + 3 \cdot \det \left( \begin{bmatrix} 4 \amp  5 \\ 7 \amp  8 \end{bmatrix} \right) \\ \amp  = 1 (5 \cdot 9 - 6 \cdot 8) - 2 (4 \cdot 9 - 6 \cdot 7) + 3 (4 \cdot 8 - 5 \cdot 7) = 0 . \end{split}
+      </me>
+    </p>
+    <p>
+      On appelle <em>cofacteurs
+          <idx><h>cofactor</h></idx>
+      </em> de la matrice les nombres <m>{(-1)}^{i+j}\det(A_{ij})</m> et
+      <em>expansion par cofacteurs<idx><h>expansion par cofacteurs</h></idx>
+      </em> cette fa&#xe7;on de calculer le d&#xe9;terminant.
+      On obtient toujours le même nombre,
+      peu importe la ligne choisie.
+      On peut aussi calculer le d&#xe9;terminant par expansion le long d'une colonne
+      (en choisissant une colonne au lieu d'une ligne dans l'exemple ci-dessus).
+      L'&#xe9;quation <m>\det(A) = \det(A^T)</m> est vraie.
+    </p>
+    <p>
+      On note habituellement un d&#xe9;terminant avec une paire de lignes verticales :
+      <me>
+        \begin{vmatrix} a \amp  b \\ c \amp  d \end{vmatrix} = \det \left( \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix} \right)
+      </me>.
+    </p>
+    <p>
+      Cette notation peut être d&#xe9;routante &#xe9;tant donn&#xe9;
+      que les lignes verticales repr&#xe9;sentent habituellement une quantit&#xe9;
+      positive, alors que les d&#xe9;terminants peuvent être n&#xe9;gatifs.
+      Pensez aussi &#xe0; la difficult&#xe9;
+      d'&#xe9;crire la valeur absolue d'un d&#xe9;terminant.
+      Cette notation ne sera pas utilis&#xe9;e dans ce manuel.
+    </p>
+    <p>
+      Les d&#xe9;terminants renseignent sur la mise &#xe0;
+      l'&#xe9;chelle d'une projection.
+      Si <m>B</m> double les dimensions d'une forme g&#xe9;om&#xe9;trique et que <m>A</m> les triple,
+      alors <m>AB</m>
+      (qui applique d'abord <m>B</m> et ensuite <m>A</m> &#xe0;
+      un objet)
+      devrait multiplier la grosseur par <m>6</m>.
+      En g&#xe9;n&#xe9;ral, l'affirmation suivante est vraie :
+      <me>
+        \det(AB) = \det(A)\det(B)
+      </me>.
+    </p>
+    <p>
+      Cette propri&#xe9;t&#xe9;
+      est l'une des plus utiles et elle est fr&#xe9;quemment utilis&#xe9;e pour calculer les d&#xe9;terminants.
+      Il est int&#xe9;ressant de noter la cons&#xe9;quence de cette propri&#xe9;t&#xe9;
+      sur l'existence des matrices inversibles.
+      Prenons <m>A</m> et <m>B</m> qui sont l'inverse l'une de l'autre,
+      c'est-&#xe0;-dire <m>AB=I</m>.
+      Alors,
+      <me>
+        \det(A)\det(B) = \det(AB) = \det(I) = 1
+      </me>.
+    </p>
+    <p>
+      Ni <m>\det(A)</m> ni <m>\det(B)</m> ne peuvent être nuls.
+      Reformulons ce principe en th&#xe9;or&#xe8;me &#xe9;tant donn&#xe9;
+      qu'il sera tr&#xe8;s important dans le cadre de ce cours.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Une matrice <m>A</m> de dimension
+          <m>n \times n</m> est inversible si et seulement si <m>\det (A) \not= 0</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      En r&#xe9;alit&#xe9;, <m>\det(A^{-1}) \det(A) = 1</m> signifie que <m>\det(A^{-1}) = \frac{1}{\det(A)}</m>.
+      On conna&#xee;t donc la valeur du d&#xe9;terminant de <m>A^{-1}</m> avant de savoir comment calculer <m>A^{-1}</m>.
+    </p>
+    <p>
+      Il y a une formule simple pour l'inverse d'une matrice <m>2 \times 2</m> :
+      <me>
+        \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix}^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d \amp  -b \\ -c \amp  a \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Remarquez la pr&#xe9;sence du d&#xe9;terminant de la matrice
+      <m>[\begin{matrix}a\amp b\\c\amp d \end{matrix} ]</m> dans le d&#xe9;nominateur de la fraction.
+      La formule fonctionne seulement si le d&#xe9;terminant est non nul,
+      sinon on obtient une division par z&#xe9;ro.
+    </p>
+  </subsection>
+  <subsection>
+    <title>R&#xe9;solution de syst&#xe8;mes lin&#xe9;aires</title>
+    <p>
+      Les matrices peuvent entre autres servir &#xe0;
+      r&#xe9;soudre des syst&#xe8;mes d'&#xe9;quations lin&#xe9;aires.
+      La fa&#xe7;on la plus simple de le d&#xe9;montrer est &#xe0; l'aide d'un exemple.
+      Supposons le syst&#xe8;me lin&#xe9;aire d'&#xe9;quations suivant :
+      <md>
+        <mrow>2 x_1 +      2 x_2 +      2 x_3 \amp  = 2 ,</mrow>
+        <mrow>x_1 +  x_2 +      3 x_3 \amp  = 5 ,</mrow>
+        <mrow>x_1 +      4 x_2 +  x_3 \amp  = 10 </mrow>
+      </md>.
+    </p>
+    <p>
+      Sans modifier la solution,
+      on peut permuter des &#xe9;quations dans ce syst&#xe8;me,
+      multiplier n'importe quelle &#xe9;quation par un nombre non nul et additionner un multiple d'une &#xe9;quation &#xe0; une autre.
+      Ces op&#xe9;rations sont toujours suffisantes pour trouver une solution.
+    </p>
+    <p>
+      &#xc9;crire le syst&#xe8;me sous forme d'&#xe9;quation matricielle rend l'analyse plus simple.
+      Le syst&#xe8;me pr&#xe9;c&#xe9;dent peut s'&#xe9;crire
+      <me>
+        \begin{bmatrix} 2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \\ 1 \amp  4 \amp  1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 2 \\ 5 \\ 10 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Afin de r&#xe9;soudre le syst&#xe8;me,
+      il suffit d'assembler la matrice de coefficients (celle &#xe0;
+      gauche dans l'&#xe9;quation) et de placer le vecteur &#xe0;
+      droite pour obtenir ce que l'on appelle une
+      <em>matrice augment&#xe9;e
+          <idx><h>matrice augment&#xe9;e</h></idx>
+      </em> :
+      <me>
+        \left[ \begin{array}{ccc|c} 2 \amp  2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \amp  5 \\ 1 \amp  4 \amp  1 \amp  10 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      [2] On peut appliquer les trois op&#xe9;rations &#xe9;l&#xe9;mentaires suivantes :
+      <ol label="i">
+        <li>
+          <p>
+            Permuter deux lignes;
+          </p>
+        </li>
+        <li>
+          <p>
+            Multiplier une ligne par un nombre non nul;
+          </p>
+        </li>
+        <li>
+          <p>
+            Additionner un multiple d'une ligne &#xe0; une autre.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      On r&#xe9;p&#xe8;te ces op&#xe9;rations jusqu'&#xe0;
+      ce que la solution soit &#xe9;vidente ou jusqu'&#xe0;
+      l'obtention d'une contradiction qui signifie qu'il n'y a pas de solution
+      (par exemple, si l'on arrive &#xe0;
+      une &#xe9;quation comme <m>0=1</m>).
+    </p>
+    <p>
+      Examinons l'exemple pr&#xe9;c&#xe9;dent.
+      Premi&#xe8;rement,
+      multiplions la premi&#xe8;re ligne par <m>\nicefrac{1}{2}</m> pour obtenir
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 1 \amp  1 \amp  3 \amp  5 \\ 1 \amp  4 \amp  1 \amp  10 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      Deuxi&#xe8;mement,
+      soustrayons la premi&#xe8;re rang&#xe9;e de la deuxi&#xe8;me et de la troisi&#xe8;me :
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  0 \amp  2 \amp  4 \\ 0 \amp  3 \amp  0 \amp  9 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      Troisi&#xe8;mement, multiplions la derni&#xe8;re rang&#xe9;e par
+      <m>\nicefrac{1}{3}</m> et la deuxi&#xe8;me par <m>\nicefrac{1}{2}</m> :
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  0 \amp  1 \amp  2 \\ 0 \amp  1 \amp  0 \amp  3 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      Quatri&#xe8;mement, permutons les lignes 2 et 3 :
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  1 \amp  1 \amp  1 \\ 0 \amp  1 \amp  0 \amp  3 \\ 0 \amp  0 \amp  1 \amp  2 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      Finalement, soustrayons la derni&#xe8;re ligne de la premi&#xe8;re,
+      puis la deuxi&#xe8;me de la premi&#xe8;re :
+      <me>
+        \left[ \begin{array}{ccc|c} 1 \amp  0 \amp  0 \amp  -4 \\ 0 \amp  1 \amp  0 \amp  3 \\ 0 \amp  0 \amp  1 \amp  2 \end{array} \right]
+      </me>.
+    </p>
+    <p>
+      Si l'on consid&#xe8;re les &#xe9;quations que cette matrice augment&#xe9;e repr&#xe9;sente,
+      on constate que <m>x_1 = -4</m>,
+      <m>x_2 = 3</m> et <m>x_3 = 2</m>.
+      Il suffit de tester cette solution dans le syst&#xe8;me original pour voir qu'elle fonctionne.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          V&#xe9;rifiez que la solution pr&#xe9;c&#xe9;dente r&#xe9;sout r&#xe9;ellement les &#xe9;quations propos&#xe9;es.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      En notation matricielle, cette &#xe9;quation s'&#xe9;crit
+      <me>
+        A \vec{x} = \vec{b}
+      </me>,
+      où <m>A</m> est la matrice
+      <m>\left[ \begin{matrix}2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \\ 1 \amp  4 \amp  1 \end{matrix}  \right]</m> et où <m>\vec{b}</m> est le vecteur <m>\left[ \begin{matrix}2 \\ 5 \\ 10 \end{matrix}  \right]</m>.
+      On peut aussi solutionner avec la matrice inverse :
+      <me>
+        \vec{x} = A^{-1} A \vec{x} = A^{-1} \vec{b}
+      </me>.
+    </p>
+    <p>
+      Il se peut que la solution ne soit pas unique ou qu'aucune solution n'existe.
+      Il est facile de savoir si aucune solution n'existe.
+      Lors de la r&#xe9;duction des lignes,
+      si tous les &#xe9;l&#xe9;ments d'une ligne sont nuls sauf le dernier
+      (le dernier &#xe9;l&#xe9;ment d'une ligne correspond au côt&#xe9;
+      droit de l'&#xe9;quation),
+      alors le syst&#xe8;me est <em>incoh&#xe9;rent
+          <idx><h>inconsistent system</h></idx>
+      </em> et n'a pas de solution.
+      Par exemple,
+      pour un syst&#xe8;me de 3 &#xe9;quations &#xe0; 3 inconnues,
+      si l'on trouve une ligne telle que
+      <m>[\,0 0 0 ~\,|\,~ 1\,]</m> dans la matrice augment&#xe9;e, on peut conclure que le syst&#xe8;me est incoh&#xe9;rent,
+      car la ligne correspond &#xe0; <m>0=1</m>.
+    </p>
+    <p>
+      En r&#xe8;gle g&#xe9;n&#xe9;rale,
+      on utilise les op&#xe9;rations sur les lignes jusqu'&#xe0;
+      ce que les conditions suivantes soient remplies.
+      Le premier &#xe9;l&#xe9;ment non nul (&#xe0;
+      partir de la gauche) de chaque ligne est appel&#xe9;
+      <em>&#xe9;l&#xe9;ment principal<idx><h>&#xe9;l&#xe9;ment principal</h></idx>
+      </em>.
+      <ol label="i">
+        <li>
+          <p>
+            Chaque premier &#xe9;l&#xe9;ment non nul d'une ligne est dans la colonne &#xe0;
+            droite du premier &#xe9;l&#xe9;ment non nul de la ligne sup&#xe9;rieure.
+          </p>
+        </li>
+        <li>
+          <p>
+            Les lignes nulles se trouvent sous toutes les lignes non nulles.
+          </p>
+        </li>
+        <li>
+          <p>
+            Chaque premier &#xe9;l&#xe9;ment non nul est &#xe9;gal &#xe0; 1.
+          </p>
+        </li>
+        <li>
+          <p>
+            Tous les &#xe9;l&#xe9;ments au-dessus et en dessous de chaque premier &#xe9;l&#xe9;ment non nul sont &#xe9;gaux &#xe0; 0.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      On dit d'une telle matrice qu'elle est &#xe0;
+      sa <em>forme &#xe9;chelonn&#xe9;e r&#xe9;duite<idx><h>forme &#xe9;chelonn&#xe9;e r&#xe9;duite</h></idx>
+      </em>.
+      On appelle <em>variables libres
+          <idx><h>free variable</h></idx>
+      </em> les variables qui correspondent aux colonnes sans premier &#xe9;l&#xe9;ment non nul.
+      On peut remplacer les variables libres par n'importe quoi et r&#xe9;soudre ensuite pour le reste des inconnues.
+    </p>
+    <example>
+      <statement>
+        <p>
+          La matrice augment&#xe9;e suivante est &#xe0;
+          sa forme &#xe9;chelonn&#xe9;e r&#xe9;duite.
+          <me>
+            \left[ \begin{array}{ccc|c} 1 \amp  2 \amp  0 \amp  3 \\ 0 \amp  0 \amp  1 \amp  1 \\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right]
+          </me>
+        </p>
+        <p>
+          Supposons que les variables sont <m>x_1</m>, <m>x_2</m> et <m>x_3</m>.
+          Alors, <m>x_2</m> est la variable libre,
+          <m>x_1 = 3 - 2x_2</m> et <m>x_3 = 1</m>.
+        </p>
+        <p>
+          Cependant, si le proc&#xe9;d&#xe9;
+          de r&#xe9;duction de lignes m&#xe8;ne &#xe0; la matrice
+          <me>
+            \left[ \begin{array}{ccc|c} 1 \amp  2 \amp  13 \amp  3 \\ 0 \amp  0 \amp  1 \amp  1 \\ 0 \amp  0 \amp  0 \amp  3 \end{array} \right]
+          </me>,
+          il n'est pas n&#xe9;cessaire d'aller plus loin.
+          La derni&#xe8;re ligne correspond &#xe0;
+          l'&#xe9;quation <m>0 x_1 + 0 x_2 + 0 x_3 = 3</m>, qui n'a aucun sens.
+          Par cons&#xe9;quent, aucune solution n'existe.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Calcul de l'inverse</title>
+    <p>
+      Si la matrice <m>A</m> est carr&#xe9;e et qu'une solution unique <m>\vec{x}</m> &#xe0;
+      <m>A \vec{x} = \vec{b}</m> existe pour chaque <m>\vec{b}</m>
+      (il n'y a pas de variable libre),
+      alors <m>A</m> est inversible.
+      Si l'on multiplie les deux côt&#xe9;s par <m>A^{-1}</m>,
+      on obtient <m>\vec{x} = A^{-1} \vec{b}</m>.
+      Le calcul de l'inverse est utile afin de r&#xe9;soudre l'&#xe9;quation pour plusieurs <m>\vec{b}</m> diff&#xe9;rents.
+    </p>
+    <p>
+      Il y a une formule pour l'inverse d'une matrice <m>2 \times 2</m>,
+      et le calcul de l'inverse de matrices plus larges n'est pas plus compliqu&#xe9;. Même si l'occasion de calculer l'inverse de matrices plus larges que <m>2 \times 2</m> &#xe0;
+      la main ne se pr&#xe9;sente pas souvent, voyons comment le faire.
+      Trouver l'inverse de <m>A</m> consiste en fait &#xe0;
+      r&#xe9;soudre un ensemble d'&#xe9;quations lin&#xe9;aires.
+      Si l'on peut r&#xe9;soudre <m>A \vec{x}_k = \vec{e}_k</m>,
+      où <m>\vec{e}_k</m> est le vecteur avec des 0 partout &#xe0;
+      l'exception d'un 1 &#xe0;
+      la <m>k^{\text{e} }</m> position,
+      alors l'inverse est la matrice avec les colonnes
+      <m>\vec{x}_k</m> pour <m>k=1,2,\ldots,n</m>
+      (exercice: pourquoi?).
+      Par cons&#xe9;quent, afin de trouver l'inverse,
+      on &#xe9;crit une matrice augment&#xe9;e
+      <m>n \times 2n</m> plus grande <m>[ \,A ~|~ I\, ]</m>,
+      où <m>I</m> est la matrice identit&#xe9;. On proc&#xe8;de alors &#xe0;
+      la r&#xe9;duction par ligne.
+      La forme &#xe9;chelonn&#xe9;e r&#xe9;duite de <m>[ \,A ~|~ I\, ]</m> sera de la forme
+      <m>[ \,I ~|~ A^{-1}\, ]</m> si et seulement si <m>A</m> est inversible.
+      Il suffit alors de lire l'inverse <m>A^{-1}</m>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\left[ \begin{matrix}1 \amp 2 \\ 3 \amp 4 \end{matrix} \right] \vec{x} = \left[ \begin{matrix}5 \\ 6 \end{matrix} \right]</m> en utilisant la matrice inverse.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez le d&#xe9;terminant de <m>\left[ \begin{matrix}9 \amp -2 \amp -6 \\ -8 \amp 3 \amp 6 \\ 10 \amp -2 \amp -6 \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez le d&#xe9;terminant de <m>\left[ \begin{matrix}1 \amp 2 \amp 3 \amp 1 \\ 4 \amp 0 \amp 5 \amp 0 \\ 6 \amp 0 \amp 7 \amp 0 \\ 8 \amp 0 \amp 10 \amp 1 \end{matrix} \right]</m>.
+          Conseil : Proc&#xe9;dez &#xe0;
+          l'expansion le long de la ligne ou de la colonne qui simplifiera les calculs.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez l'inverse de <m>\left[ \begin{matrix}1 \amp 2 \amp 3 \\ 1 \amp 1 \amp 1 \\ 0 \amp 1 \amp 0 \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Pour quel <m>h</m> la matrice
+          <m>\left[ \begin{matrix}1 \amp 2 \amp 3 \\ 4 \amp 5 \amp 6 \\ 7 \amp 8 \amp h \end{matrix} \right]</m> n'est pas inversible?
+          Est-ce que <m>h</m> est unique? a plusieurs valeurs? a une infinit&#xe9; de solution?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Pour quel <m>h</m> la matrice
+          <m>\left[ \begin{matrix}h \amp 1 \amp 1 \\ 0 \amp h \amp 0 \\ 1 \amp 1 \amp h \end{matrix} \right]</m> n'est pas inversible?
+          Trouvez tous les <m>h</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\left[ \begin{matrix}9 \amp -2 \amp -6 \\ -8 \amp 3 \amp 6 \\ 10 \amp -2 \amp -6 \end{matrix} \right] \vec{x} = \left[ \begin{matrix}1 \\ 2 \\ 3 \end{matrix} \right]</m> .
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\left[ \begin{matrix}5 \amp 3 \amp 7 \\ 8 \amp 4 \amp 4 \\ 6 \amp 3 \amp 3 \end{matrix} \right] \vec{x} = \left[ \begin{matrix}2 \\ 0 \\ 0 \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\left[ \begin{matrix}3 \amp 2 \amp 3 \amp 0 \\ 3 \amp 3 \amp 3 \amp 3 \\ 0 \amp 2 \amp 4 \amp 2 \\ 2 \amp 3 \amp 4 \amp 3 \end{matrix} \right] \vec{x} = \left[ \begin{matrix}2 \\ 0 \\ 4 \\ 1 \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez 3 matrices <m>2 \times 2</m> non nulles <m>A</m>,
+          <m>B</m> et <m>C</m> telles que <m>AB = AC</m>, mais <m>B \not= C</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez le d&#xe9;terminant de <m>\left[ \begin{matrix}1 \amp 1 \amp 1 \\ 2 \amp 3 \amp -5 \\ 1 \amp -1 \amp 0 \end{matrix} \right]</m>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>-15</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez <m>t</m> tel que <m>\left[ \begin{matrix}1 \amp t \\ -1 \amp 2 \end{matrix} \right]</m> n'est pas inversible.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>-2</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          R&#xe9;solvez <m>\left[ \begin{matrix}1 \amp 1 \\ 1 \amp -1 \end{matrix} \right] \vec{x} = \left[ \begin{matrix}10 \\ 20 \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\vec{x} = \left[ \begin{matrix}15 \\ -5 \end{matrix} \right]</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>a, b, c</m> sont des nombres non nuls,
+          que <m>M=\left[ \begin{matrix}a \amp 0 \\ 0 \amp b \end{matrix} \right]</m> et
+          <m>N=\left[ \begin{matrix}a \amp 0 \amp 0 \\ 0 \amp b \amp 0 \\ 0 \amp 0 \amp c \end{matrix} \right]</m>. \begin{tasks}(2) \task Calculez <m>M^{-1}</m>. \task Calculez <m>N^{-1}</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
+      <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \\ 0 \amp \nicefrac{1}{b} \end{matrix} \right]</m> b) <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \amp 0 \\ 0 \amp \nicefrac{1}{b} \amp 0 \\ 0 \amp 0 \amp \nicefrac{1}{c} \end{matrix} \right]</m> }
+    </p>
+  </subsection>
+</section>

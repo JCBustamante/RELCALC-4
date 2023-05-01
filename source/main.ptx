@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <docinfo>
+<macros>
+\newcommand{\theversion}{6.2}
+\newcommand{\nicefrac}[2]{\frac{#1}{#2}}
+\renewcommand{\bibname}{Lectures additionnelles}
+\def\wrapfigure{\wrapfloat{figure}}
+\def\wraptable{\wrapfloat{table}}
+\def\caption{\wf}
+\def\endwrapfigure{\endwrapfloat}
+\def\endwraptable{\endwrapfloat}
+\def\pagetotal{\maxdimen}
+\def\parshape{\WF}
+\def\everypar{\WF}
+\def\noexpand{\clearpage}
+\def\expandafter{\noexpand}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\noexpand{\float}
+\def\csname{endwrap#2\endcsname \endwrapfloat}
+\def\expandafter{\noexpand}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\myindex}[1]{#1\index{#1}}
+\newcommand{\myquote}[1]{``#1''}
+\newcommand{\sectionnewpage}{\clearpage}
+\newcommand{\EPref}[1]{#1}
+\newcommand{\BDref}[1]{#1}
+\newcommand{\theanswer}{\textbf{\theexercise:}}
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+\def\exampleclaim{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\exampleclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endexampleclaim{
+\addvspace{\medskipamount}}
+\renewcommand{\theremark}{\thesection.\arabic{remark}}
+\def\remarkclaim{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\remarkclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endremarkclaim{
+\addvspace{\medskipamount}}
+\newcommand{\figurevref}[1]{\ref{#1}}
+\newcommand{\figureref}[1]{\ref{#1}}
+\newcommand{\tablevref}[1]{\ref{#1}}
+\newcommand{\tableref}[1]{\ref{#1}}
+\newcommand{\chapterref}[1]{\ref{#1}}
+\newcommand{\Chapterref}[1]{\ref{#1}}
+\newcommand{\appendixref}[1]{\ref{#1}}
+\newcommand{\Appendixref}[1]{\ref{#1}}
+\newcommand{\sectionref}[1]{\ref{#1}}
+\newcommand{\subsectionref}[1]{\ref{#1}}
+\newcommand{\subsectionvref}[1]{\ref{#1}}
+\newcommand{\exercisevref}[1]{\ref{#1}}
+\newcommand{\exerciseref}[1]{\ref{#1}}
+\newcommand{\examplevref}[1]{\ref{#1}}
+\newcommand{\exampleref}[1]{\ref{#1}}
+\newcommand{\thmvref}[1]{\ref{#1}}
+\newcommand{\thmref}[1]{\ref{#1}}
+\newcommand{\addfakecontentsline}[1]{\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\addextraspacetotoc}{}
+\newcommand{\diffyincludegraphics}[3]{\includegraphics[#1]{figures/#3}}
+\newcommand{\diffypdfversion}[1]{#1}
+\newcommand{\mybeginframe}{\begin{tcolorbox}[colback=white,colframe=lightgray,left=5pt,right=5pt]}
+\newcommand{\myendframe}{\end{tcolorbox}}
+\newcommand{\mybxbg}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,top=1.5pt,bottom=1.5pt]{#1}}
+\newcommand{\mybxsm}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]{#1}}
+\newcommand{\diffytableofcontents}{
+\microtypesetup{protrusion=false}
+\microtypesetup{protrusion=true}
+}
+\newcommand{\infinity}{\infty}
+</macros>
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usepackage{pgfplots}
+</latex-image-preamble>
+  </docinfo>
+  <book>
+    <title>\'Equations diff\'erentielles pour le g\'enie</title>
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Jiri Lebl</personname>
+        </author>
+      </titlepage>
+    </frontmatter>
+    <xi:include href="./intro_chapter.ptx"/>
+    <xi:include href="./fo_chapter.ptx"/>
+    <xi:include href="./ho_chapter.ptx"/>
+    <xi:include href="./sys_chapter.ptx"/>
+    <xi:include href="./FS_chapter.ptx"/>
+    <xi:include href="./linalg_appendix.ptx"/>
+    <backmatter>
+      <xi:include href="./bibliography.ptx"/>
+      <index>
+        <title>Index</title>
+        <index-list/>
+      </index>
+    </backmatter>
+  </book>
+</pretext>
