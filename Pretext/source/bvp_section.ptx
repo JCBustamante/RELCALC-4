@@ -1,0 +1,752 @@
+<section xml:id="bvp_section">
+  <title>&#xc9;quations avec conditions au bord</title>
+  <subsection>
+    <title>Valeurs au bord</title>
+    <p>
+      Avant de s'attaquer aux séries de Fourier,
+      on va étudier les problèmes
+      <em>à valeurs au bord
+          <idx><h>boundary value problem</h></idx>
+      </em>
+      (ou <em>à valeurs limites
+          <idx><h>endpoint problem</h></idx>
+      </em>).
+      On considère
+      <me>
+        x'' + \lambda x = 0,  x(a) = 0,  x(b) = 0
+      </me>
+      pour une certaine constante <m>\lambda</m>,
+      où <m>x(t)</m> prend ses valeurs <m>t</m> dans l'intervalle <m>[a,b]</m>.
+      Précédemment, on a spécifié
+      la valeur de la solution et de sa dérivée en un point.
+      Maintenant, on veut spécifier la valeur de la solution à
+      deux points différents.
+      Lorsque <m>x=0</m> est une solution,
+      l'existence de la solution n'est pas problématique.
+      Par contre, l'unicité de la solution est une autre question.
+      La solution générale de
+      <m>x'' + \lambda x = 0</m> a deux constantes arbitraires<fn>
+      On regarde <xref ref="subsection_fourfundamental">la</xref>,
+      ou l' <xref ref="example_expsecondorder"></xref>
+      et l' <xref ref="example_sincossecondorder"></xref>.
+      </fn>.
+      C'est naturel
+      (mais faux)
+      de croire qu'exiger deux solutions garantit l'unicité.
+    </p>
+    <example>
+      <statement>
+        <p>
+          On prend <m>\lambda = 1</m>, <m>a=0</m>, <m>b=\pi</m>.
+          Ceci donne:
+          <me>
+            x'' + x = 0,  x(0) = 0,  x(\pi) = 0
+          </me>.
+        </p>
+        <p>
+          Alors, <m>x = \sin t</m> est une autre solution
+          (qui s'ajoute à
+          <m>x=0</m>)
+          satisfaisant aux conditions limites.
+          Il y a plus. &#xc9;crivons la solution générale de l'équation différentielle,
+          qui est <m>x= A \cos t + B \sin t</m>.
+          La condition <m>x(0) = 0</m> implique que <m>A=0</m>.
+          La contrainte <m>x(\pi) = 0</m> ne donne pas plus d'information lorsque
+          <m>x = B \sin t</m> satisfait déjà
+          aux conditions limites.
+          Par conséquent, il y a une infinité
+          de solutions de la forme <m>x = B \sin t</m>,
+          où <m>B</m> est une constante arbitraire.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Posons maintenant <m>\lambda = 2</m>:
+          <me>
+            x'' + 2 x = 0,  x(0) = 0,  x(\pi) = 0
+          </me>.
+        </p>
+        <p>
+          Alors, la solution générale est <m>x= A \cos ( \sqrt{2}\,t) + B \sin ( \sqrt{2}\,t)</m>.
+          La contrainte <m>x(0) = 0</m> implique encore que <m>A = 0</m>.
+          On applique la seconde condition pour trouver <m>0=x(\pi) = B \sin ( \sqrt{2}\,\pi)</m>.
+          Lorsque <m>\sin ( \sqrt{2}\,\pi) \not= 0</m>, on obtient <m>B = 0</m>.
+          Donc, <m>x=0</m> est l'unique solution à ce problème.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Que se passe-t-il ? On aimerait savoir quelles constantes <m>\lambda</m> permettent une solution non nulle et l'on s'intéressera à
+      trouver ces solutions.
+      Ce problème est analogue à
+      trouver les valeurs propres et les vecteurs propres des matrices.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Problèmes de valeurs propres</title>
+    <p>
+      Pour la théorie de base des séries de Fourier,
+      on a besoin des trois problèmes de valeurs propres suivants :
+      <men xml:id="bv_eq1">
+        x'' + \lambda x = 0,  x(a) = 0,  x(b) = 0
+      </men>,
+      <men xml:id="bv_eq2">
+        x'' + \lambda x = 0,  x'(a) = 0,  x'(b) = 0
+      </men>
+      et
+      <men xml:id="bv_eq3">
+        x'' + \lambda x = 0,  x(a) = x(b),  x'(a) = x'(b)
+      </men>.
+    </p>
+    <p>
+      Un nombre <m>\lambda</m> est appelé
+      une <em>valeur propre <idx><h>eigenvalue of a boundary value problem</h></idx>
+      </em> de <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) si et seulement si il existe une solution non nulle
+      (non identiquement nulle)
+      à
+      <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) donnée par un <m>\lambda</m> spécifique.
+      Une solution non nulle est appelée
+      <em>fonction propre correspondante<idx><h>fonction propre correspondante</h></idx>
+      </em>.
+          <idx><h>corresponding eigenfunction</h></idx>
+    </p>
+    <p>
+      On note la similarité
+      avec les valeurs propres et les vecteurs propres de matrices.
+      La similarité n'est pas une simple coïncidence.
+      Par exemple,
+      soit <m>L = -\frac{d^2}{{dt}^2}</m> un opérateur linéaire.
+      Une fonction propre pour <m>L</m> sera une fonction <m>x(t)</m> non nulle telle que <m>Lx = \lambda x</m>,
+      pour un certain <m>\lambda</m>,
+      qui sera alors une valeur propre de l'opérateur <m>L</m>.
+    </p>
+    <p>
+      En d'autres mots, on pense à
+      l'équation différentielle comme à
+      un opérateur différentiel, et à
+      une fonction <m>x(t)</m> comme à
+      un vecteur avec une infinité de composantes
+      (une pour chaque <m>t</m>).
+      Une fonction propre sera une fonction non nulle <m>x</m> qui satisfait à
+      <m>(L- \lambda)x = 0</m>.
+      Il y a beaucoup de formalisme provenant de l'algèbre linéaire qui s'applique ici,
+      mais on ne poursuivra pas cette réflexion trop loin.
+    </p>
+    <example xml:id="bvp_eig1ex">
+      <statement>
+        <p>
+          Trouvons les valeurs propres et les fonctions propres de
+          <me>
+            x'' + \lambda x = 0,  x(0) = 0,  x(\pi) = 0
+          </me>.
+        </p>
+        <p>
+          On doit considérer chacun des cas suivants séparément,
+          <m>\lambda > 0</m>, <m>\lambda = 0</m>, <m>\lambda \lt  0</m>,
+          puisque la solution générale est différente dans les trois cas.
+          D'abord, on suppose que <m>\lambda > 0</m>.
+          Alors, la solution générale à
+          <m>x''+\lambda x = 0</m> est
+          <me>
+            x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t)
+          </me>.
+        </p>
+        <p>
+          La condition <m>x(0) = 0</m> implique immédiatement que <m>A = 0</m>.
+          Ensuite,
+          <me>
+            0 = x(\pi) = B \sin ( \sqrt{\lambda}\, \pi )
+          </me>.
+        </p>
+        <p>
+          Si <m>B</m> est nul, alors <m>x</m> est une solution nulle.
+          Alors, pour obtenir une solution non nulle,
+          on doit avoir que <m>\sin ( \sqrt{\lambda}\, \pi) = 0</m>.
+          Donc, <m>\sqrt{\lambda}\, \pi</m> doit être un entier multiple de <m>\pi</m>.
+          En d'autres mots,
+          <m>\sqrt{\lambda} = k</m> pour un entier positif <m>k</m>.
+          Ainsi, les valeurs propres positives sont <m>k^2</m> pour tous les entiers <m>k \geq 1</m>.
+          Les fonctions propres correspondantes peuvent être vues comme <m>x=\sin (k t)</m>.
+          Tout comme les vecteurs propres,
+          les multiples d'une fonction propre sont des fonctions propres.
+        </p>
+        <p>
+          On suppose que <m>\lambda = 0</m>.
+          Dans ce cas, l'équation est <m>x'' = 0</m>,
+          et sa solution générale est <m>x = At + B</m>.
+          La condition <m>x(0) = 0</m> implique que <m>B=0</m>,
+          et <m>x(\pi) = 0</m> implique que <m>A = 0</m>,
+          ce qui signifie que <m>\lambda = 0</m> n'est
+          <em>pas</em> une valeur propre.
+        </p>
+        <p>
+          Finalement, on suppose que <m>\lambda \lt  0</m>.
+          Dans ce cas, on a la solution générale<fn>
+          Rappelons que <m>\cosh s = \frac{1}{2}(e^s+e^{-s})</m> et <m>\sinh s = \frac{1}{2}(e^s-e^{-s})</m>.
+          En exercice, faites à
+          nouveau les calculs avec la solution générale écrite comme <m>x = A e^{\sqrt{-\lambda}\, t} + B e^{-\sqrt{-\lambda}\, t}</m>
+          (pour différents  <m>A</m> et <m>B</m> évidemment).
+          </fn>
+          <me>
+            x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t )
+          </me>.
+        </p>
+        <p>
+          Si <m>x(0) = 0</m>, &#xe7;a implique que <m>A = 0</m>
+          (on se rappelle que <m>\cosh 0 = 1</m> et <m>\sinh 0 = 0</m>).
+          Alors, la solution devrait être
+          <m>x = B \sinh ( \sqrt{-\lambda}\, t )</m> et devrait satisfaire à
+          <m>x(\pi) = 0</m>,
+          ce qui est possible uniquement si <m>B</m> est nul.
+          Pourquoi?
+          Parce que <m>\sinh \xi</m> est seulement zéro lorsque <m>\xi=0</m>.
+          On devrait calculer sinh pour voir ce fait.
+          On peut aussi le voir de la définition de sinh.
+          On obtient <m>0 = \sinh \xi = \frac{e^\xi - e^{-\xi}}{2}</m>.
+          Donc, <m>e^\xi = e^{-\xi}</m>,
+          ce qui implique que <m>\xi = -\xi</m>,
+          ce qui est seulement vrai si <m>\xi=0</m>.
+          Par conséquent, il n'y a pas de valeurs propres négatives.
+        </p>
+        <p>
+          En somme, les valeurs propres et les fonctions propres correspondantes sont
+          <me>
+            \lambda_k = k^2  \text{ avec fonction propre }   x_k = \sin (k t) \text{ pour tous les entiers }  k \geq 1
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Calculons les valeurs propres et les fonctions propres de
+          <me>
+            x'' + \lambda x = 0,  x'(0) = 0,  x'(\pi) = 0
+          </me>.
+        </p>
+        <p>
+          Encore une fois,
+          on doit considérer séparément les trois cas suivants:
+          <m>\lambda > 0</m>, <m>\lambda = 0</m>, <m>\lambda \lt  0</m>.
+          D'abord, on suppose que <m>\lambda > 0</m>.
+          La solution générale est alors <m>x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t)</m>.
+          Sa dérivée est:
+          <me>
+            x' = -A\sqrt{\lambda}\, \sin ( \sqrt{\lambda}\, t) + B\sqrt{\lambda}\, \cos (\sqrt{\lambda}\, t)
+          </me>.
+        </p>
+        <p>
+          La condition <m>x'(0) = 0</m> implique immédiatement que <m>B = 0</m>.
+          Ensuite,
+          <me>
+            0 = x'(\pi) = -A\sqrt{\lambda}\, \sin ( \sqrt{\lambda}\, \pi)
+          </me>.
+        </p>
+        <p>
+          Encore une fois,
+          <m>A</m> ne peut pas être nul si <m>\lambda</m> est une valeur propre,
+          et <m>\sin ( \sqrt{\lambda}\, \pi)</m> est identiquement nul lorsque <m>\sqrt{\lambda} = k</m>,
+          où <m>k</m> est un nombre entier positif.
+          Donc, les valeurs propres positives sont encore <m>k^2</m> pour tous les entiers <m>k \geq 1</m>,
+          et les fonctions propres correspondantes peuvent être prises comme <m>x=\cos (k t)</m>.
+        </p>
+        <p>
+          Maintenant, on suppose que <m>\lambda = 0</m>.
+          Dans ce cas, l'équation est <m>x'' = 0</m>,
+          et la solution générale est <m>x = At + B</m> so <m>x' = A</m>.
+          La condition <m>x'(0) = 0</m> implique que <m>A=0</m>.
+          La condition <m>x'(\pi) = 0</m> implique aussi que <m>A=0</m>.
+          Ainsi, <m>B</m> pourrait être n'importe quoi
+          (choisissons 1).
+          Alors, <m>\lambda = 0</m> est une valeur propre,
+          et <m>x=1</m> est la fonction propre correspondante.
+        </p>
+        <p>
+          Finalement, soit <m>\lambda \lt  0</m>.
+          Dans ce cas,
+          la solution générale est <m>x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t)</m> et
+          <me>
+            x' = A\sqrt{-\lambda}\, \sinh ( \sqrt{-\lambda}\, t) + B\sqrt{-\lambda}\, \cosh ( \sqrt{-\lambda}\, t )
+          </me>.
+        </p>
+        <p>
+          On a déjà vu
+          (avec les rôles de <m>A</m> et de <m>B</m> inversés)
+          que, pour que cette expression soit nulle à
+          <m>t=0</m> et <m>t=\pi</m>, on doit avoir <m>A=B=0</m>.
+          Ainsi, il n'y a pas de valeur propre négative.
+        </p>
+        <p>
+          En somme, les valeurs propres positives et leurs fonctions propres correspondantes sont
+          <me>
+            \lambda_k = k^2  \text{ avec fonction propre }   x_k = \cos (k t) \text{ pour tous les entiers }  k \geq 1
+          </me>,
+          et, de plus, il y a une autre valeur propre:
+          <me>
+            \lambda_0 = 0 \qquad \text{ avec une fonction propre }  \qquad x_0 = 1
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Le problème suivant est celui qui a mené à
+      la série de Fourier générale.
+    </p>
+    <example xml:id="bvp-periodic_example">
+      <statement>
+        <p>
+          Calculons les valeurs propres et les fonctions propres de
+          <me>
+            x'' + \lambda x = 0,  x(-\pi) = x(\pi),  x'(-\pi) = x'(\pi)
+          </me>.
+        </p>
+        <p>
+          On n'a pas de valeur spécifique de fonction ou de dérivée aux extrémités, mais elles sont les mêmes au début et à
+          la fin de l'intervalle.
+        </p>
+        <p>
+          On va passer le cas <m>\lambda \lt 0</m>.
+          Les calculs sont les mêmes que précédemment,
+          et l'on trouve encore qu'il n'y a pas de valeur propre négative.
+        </p>
+        <p>
+          Pour <m>\lambda = 0</m>,
+          la solution générale est <m>x = At + B</m>.
+          La condition <m>x(-\pi) = x(\pi)</m> implique que <m>A=0</m>
+          (<m>A\pi + B = -A\pi +B</m> implique que <m>A=0</m>).
+          La seconde condition <m>x'(-\pi) = x'(\pi)</m> ne dit rien à
+          propos de <m>B</m>, et donc
+          <m>\lambda=0</m> est une valeur propre avec les fonctions propres correspondantes <m>x=1</m>.
+        </p>
+        <p>
+          Pour <m>\lambda > 0</m>,
+          on a que <m>x = A \cos ( \sqrt{\lambda}\, t ) + B \sin ( \sqrt{\lambda}\, t)</m>.
+          Maintenant,
+          <me>
+            \underbrace{A \cos (-\sqrt{\lambda}\, \pi) + B \sin (-\sqrt{\lambda}\, \pi)}_{x(-\pi)} = \underbrace{A \cos (  \sqrt{\lambda}\, \pi ) + B \sin ( \sqrt{\lambda}\, \pi)}_{x(\pi)}
+          </me>.
+        </p>
+        <p>
+          On se rappelle que <m>\cos (- \theta) = \cos (\theta)</m> et <m>\sin (-\theta) = - \sin (\theta)</m>.
+          Donc,
+          <me>
+            A \cos (\sqrt{\lambda}\, \pi) - B \sin ( \sqrt{\lambda}\, \pi) = A \cos (\sqrt{\lambda}\, \pi) + B \sin ( \sqrt{\lambda}\, \pi)
+          </me>.
+        </p>
+        <p>
+          Donc, ou bien <m>B=0</m>, ou bien <m>\sin ( \sqrt{\lambda}\, \pi) = 0</m>.
+          De manière semblable à
+          l'exemple précédent (exercice),
+          si l'on dérive <m>x</m> et qu'on le remplace dans la seconde condition,
+          on trouve que <m>A=0</m> ou que <m>\sin ( \sqrt{\lambda}\, \pi) = 0</m>.
+          Ainsi, à moins que <m>A</m> et <m>B</m> soient tous deux nuls
+          (ce qu'on ne veut pas),
+          on doit avoir <m>\sin ( \sqrt{\lambda}\, \pi ) = 0</m>.
+          Donc, <m>\sqrt{\lambda}</m> est un entier,
+          et les valeurs propres sont encore
+          <m>\lambda = k^2</m> pour un entier <m>k \geq 1</m>.
+          Dans ce cas, toutefois,
+          <m>x = A \cos (k t) + B \sin (k t)</m> est une fonction propre pour tout <m>A</m> et pour tout <m>B</m>.
+          Par conséquent,
+          on a deux fonctions propres linéairement indépendantes:
+          <m>\sin (kt)</m> et <m>\cos (kt)</m>.
+        </p>
+        <p>
+          On se rappelle que, pour une matrice,
+          on peut aussi avoir deux vecteurs propres correspondant à
+          une valeur propre simple si la valeur propre est répétée.
+        </p>
+        <p>
+          En somme, les valeurs propres et les fonctions propres sont
+          <md>
+            <mrow>\amp  \lambda_k = k^2 \amp  \amp  \text{ avec fonctions propres }  \amp  \amp \cos (k t)  \text{ et }   \sin (k t) \amp  \amp  \text{ pour tous les entiers }  k \geq 1 ,</mrow>
+            <mrow>\amp  \lambda_0 = 0 \amp  \amp  \text{ avec fonction propre }  \amp  \amp  x_0 = 1</mrow>
+          </md>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Orthogonalité des fonctions propres</title>
+    <p>
+      Une chose qui sera très utile dans la prochaine section est la propriété
+      d'<em>orthogonalité
+          <idx><h>orthogonalité</h></idx>
+      </em> des fonctions propres.
+      C'est analogue aux vecteurs propres d'une matrice.
+      Une matrice est <em>symétrique
+          <idx><h>symmetric matrix</h></idx>
+      </em> si <m>A = A^T</m>
+      (est égale à sa transposée).
+      <em>Les vecteurs propres de deux valeurs propres distinctes d'une matrice symétrique sont orthogonaux.</em>
+      L'opérateur différentiel que l'on considère agit plutôt comme une matrice symétrique.
+      Ainsi, on obtient le théorème suivant.
+    </p>
+    <theorem xml:id="bvp_orthogonaleigen">
+      <statement>
+        <p>
+          Soit <m>x_1(t)</m> et <m>x_2(t)</m> deux fonctions propres du problème <xref ref="bv_eq1"/>,
+          <xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/> pour deux valeurs propres distinctes <m>\lambda_1</m> et <m>\lambda_2</m>.
+          Alors, elles sont <em>orthogonales <idx><h>orthogonal</h><h>functions</h></idx>
+          </em> dans le sens que
+          <me>
+            \int_a^b x_1(t) x_2(t) \,dt = 0
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      La terminologie vient du fait que l'intégrale est un type de produit scalaire.
+      On précisera ce sujet dans la prochaine section.
+      Le théorème a une preuve très petite, élégante et éclairante qui est présentée ici.
+      D'abord, on a les deux équations suivantes :
+      <me>
+        x_1'' + \lambda_1 x_1 = 0 \qquad \text{ et }  \qquad x_2'' + \lambda_2 x_2 = 0
+      </me>.
+    </p>
+    <p>
+      On multiplie la première par <m>x_2</m> et la seconde par <m>x_1</m>,
+      et l'on substitue pour obtenir
+      <me>
+        (\lambda_1 - \lambda_2) x_1 x_2 = x_2'' x_1 - x_2 x_1''
+      </me>.
+    </p>
+    <p>
+      Maintenant, on intègre des deux côtés de l'équation:
+      <me>
+        \begin{split} (\lambda_1 - \lambda_2) \int_a^b x_1 x_2 \,dt \amp  = \int_a^b x_2'' x_1 - x_2 x_1'' \,dt \\ \amp  = \int_a^b \frac{d}{dt} \left( x_2' x_1 - x_2 x_1' \right) \,dt \\ \amp  = \Bigl[ x_2' x_1 - x_2 x_1' \Bigr]_{t=a}^b = 0 . \end{split}
+      </me>
+    </p>
+    <p>
+      La dernière égalité
+      tient en raison des conditions aux limites.
+      Par exemple,
+      si l'on considère <xref ref="bv_eq1"/>, on a <m>x_1(a) = x_1(b) = x_2(a) = x_2(b) = 0</m>,
+      et alors <m>x_2' x_1 - x_2 x_1'</m> est nul pour <m>a</m> et pour <m>b</m>.
+      Lorsque <m>\lambda_1 \not= \lambda_2</m>,
+      le théorème suit.
+    </p>
+    <exercise>
+      <title>facile</title>
+      <statement>
+        <p>
+          Terminez la preuve du théorème (vérifiez la dernière égalité
+          de la preuve) pour les cas <xref ref="bv_eq2"/> et <xref ref="bv_eq3"/>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      La fonction <m>\sin (n t)</m> est une fonction propre pour l'équation <m>x''+\lambda x = 0</m>,
+      <m>x(0) = 0</m>, <m>x(\pi) = 0</m>.
+      Donc, pour les entiers positifs <m>n</m> et <m>m</m>:
+      <me>
+        \int_{0}^\pi \sin (mt) \sin (nt) \,dt = 0 ,  \text{ lorsque }  m \not = n
+      </me>.
+    </p>
+    <p>
+      De manière similaire,
+      <me>
+        \int_{0}^\pi \cos (mt) \cos (nt) \,dt = 0 ,  \text{ lorsque }  m \not = n, \qquad \text{ et }  \qquad \int_{0}^\pi  \cos (nt) \,dt = 0
+      </me>.
+    </p>
+    <p>
+      Et finalement, on obtient aussi
+      <me>
+        \int_{-\pi}^\pi \sin (mt) \sin (nt) \,dt = 0 ,  \text{ lorsque }  m \not = n, \qquad \text{ et }  \qquad \int_{-\pi}^\pi  \sin (nt) \,dt = 0
+      </me>,
+      <me>
+        \int_{-\pi}^\pi \cos (mt) \cos (nt) \,dt = 0 ,  \text{ lorsque }  m \not = n, \qquad \text{ et }  \qquad \int_{-\pi}^\pi  \cos (nt) \,dt = 0
+      </me>,
+      et
+      <me>
+        \int_{-\pi}^\pi \cos (mt) \sin (nt) \,dt = 0 \qquad \text{ (même si \(m=n\)). }
+      </me>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Alternative de Fredholm</title>
+    <p>
+      On arrive maintenant à
+      un théorème très utile des équations différentielles.
+      Le théorème pourrait être plus général que ce qu'on présentera,
+      mais, pour les objectifs actuels, il sera suffisant.
+      On en donnera une version un peu plus générale plus tard.
+    </p>
+    <theorem xml:id="thm_fredholmsimple">
+      <title>Alternative de Fredholm<footnote>Nommée d'après le mathématicien suédois
+      <url href="https://en.wikipedia.org/wiki/Fredholm">Erik Ivar Fredholm</url>
+      (1866-1927).</footnote></title>
+      <statement>
+        <p>
+              <idx><h>Fredholm alternative</h><h>simple case</h></idx>
+          Exactement l'une des affirmations suivantes est vraie.
+          Soit
+          <men xml:id="simpfredhomeq">
+            x'' + \lambda x = 0,  x(a) = 0,  x(b) = 0
+          </men>
+          a une solution non nulle, soit
+          <men xml:id="simpfrednonhomeq">
+            x'' + \lambda x = f(t),  x(a) = 0,  x(b) = 0
+          </men>
+          a une solution unique pour toutes les fonctions <m>f</m> continues sur <m>[a,b]</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Le théorème est également vrai pour les autres types de conditions au bord que nous avons considérées.
+      Le théorème veut dire que si <m>\lambda</m> n'est pas une valeur propre,
+      l'équation non homogène <xref ref="simpfrednonhomeq"/> a une solution unique pour tous les côtés droits.
+      Autrement dit, si <m>\lambda</m> est une valeur propre,
+      alors <xref ref="simpfrednonhomeq"/> n'a pas besoin d'avoir une solution pour tous les <m>f</m>, et,
+      en plus, même s'il y a une solution,
+      la solution n'est pas unique.
+    </p>
+    <p>
+      Nous voulons également renforcer l'idée que les opérateurs différentiels linéaires ont beaucoup en commun avec les matrices.
+      Il n'est donc pas surprenant qu'il existe une version de dimension finie de l'alternative de Fredholm pour les matrices également.
+      On a <m>A</m> une matrice <m>n \times n</m>.
+      L'alternative de Fredholm dit que
+      <m>(A-\lambda I) \vec{x} = \vec{0}</m> a une solution non triviale,
+      ou que <m>(A-\lambda I) \vec{x} = \vec{b}</m> a une solution unique pour tout <m>\vec{b}</m>.
+    </p>
+    <p>
+      Beaucoup d'intuition de l'algèbre linéaire peut être appliquée aux opérateurs différentiels linéaires,
+      mais il faut bien sûr être prudent.
+      Par exemple, une différence que nous avons déjà
+      vue est qu'en général un opérateur différentiel aura une infinité
+      de valeurs propres, tandis qu'une matrice n'en a qu'un nombre fini.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Application</title>
+    <p>
+      Considérons une application physique.
+      On suppose avoir un élastique très tendu qui tourne rapidement ou une corde de densité
+      linéaire uniforme <m>\rho</m>,
+      par exemple, en <m>\unitfrac{kg}{m}</m>.
+      Mettons ce problème dans un plan <m>xy</m> avec <m>x</m> et <m>y</m> en mètres.
+      L'axe des <m>x</m> représente la position de la corde.
+      La corde tourne, et la vitesse angulaire est <m>\omega</m>,
+      mesurée en <m>\unitfrac{radians}{s}</m>.
+      Imaginez que l'entièreté
+      du plan <m>xy</m> tourne à
+      une vitesse angulaire <m>\omega</m>.
+      De cette manière, la corde reste dans le plan <m>xy</m>,
+      et <m>y</m> mesure sa déviation par rapport à
+      la position d'équilibre,
+      <m>y=0</m>, sur l'axe des <m>x</m>.
+      Ainsi, le graphe de <m>y</m> donne la forme de la corde.
+      On considère une corde idéale qui n'a pas de volume,
+      juste une courbe mathématique.
+      On suppose que la tension de la corde est une constante <m>T</m> en newtons.
+      En supposant que la déviation est petite,
+      nous pouvons utiliser la deuxième loi de Newton
+      (nous n'en faisons pas la démonstration)
+      pour obtenir l'équation suivante:
+      <me>
+        T y'' + \rho \omega^2 y = 0
+      </me>.
+    </p>
+    <p>
+      Pour vérifier les unités, notez que les unités de <m>y''</m> sont <m>\unitfrac{m}{m^2}</m>,
+      lorsqu'on dérive par rapport à <m>x</m>.
+    </p>
+    <p>
+      La corde est de longueur <m>L</m>
+      (en mètres)
+      et est fixée aux deux extrémités.
+      Alors, <m>y(0) = 0</m> et <m>y(L) = 0</m>.
+      Voir <xref ref="bvp_whirstringfig">la</xref>.
+    </p>
+    <figure xml:id="bvp_whirstringfig">
+      <caption>Corde tournante.</caption>
+      <image width="73%" source="bvp-whirstring"/>
+    </figure>
+    <p>
+      On réécrit l'équation:
+      <m>y'' + \frac{\rho \omega^2}{T} y = 0</m>.
+      La configuration est semblable à
+      l' <xref ref="bvp_eig1ex"></xref>,
+      sauf que la longueur de l'intervalle est <m>L</m> plutôt que <m>\pi</m>.
+      On cherche les valeurs propres de <m>y'' + \lambda y = 0, y(0) = 0, y(L) = 0</m>,
+      où <m>\lambda = \frac{\rho \omega^2}{T}</m>.
+      Comme précédemment,
+      il n'y a pas de valeur propre négative.
+      Avec <m>\lambda > 0</m>, la solution générale à
+      cette équation est <m>y = A \cos (  \sqrt{\lambda} \,x ) + B \sin ( \sqrt{\lambda} \,x )</m>.
+      La condition <m>y(0) = 0</m> implique que <m>A = 0</m> comme précédemment.
+      La condition <m>y(L) = 0</m> implique que <m>\sin ( \sqrt{\lambda} \, L) = 0</m>,
+      et ainsi <m>\sqrt{\lambda} \, L = k \pi</m> pour un certain entier <m>k > 0</m>, alors
+      <me>
+        \frac{\rho \omega^2}{T} = \lambda = \frac{k^2 \pi^2}{L^2}
+      </me>.
+    </p>
+    <p>
+      Qu'est-ce que cela dit sur la forme de la corde?
+      Cela dit que, pour tous les paramètres <m>\rho</m>,
+      <m>\omega</m>, <m>T</m> qui ne satisfont pas à
+      cette condition,
+      la corde demeure dans sa position d'équilibre, <m>y=0</m>.
+      Mais lorsque <m>\frac{\rho \omega^2}{T} = \frac{k^2 \pi^2}{L^2}</m>,
+      alors la corde
+      <q>sortira</q>
+      d'une distance <m>B</m>.
+      On ne peut pas calculer <m>B</m> avec les informations que l'on a.
+    </p>
+    <p>
+      On suppose que <m>\rho</m> et <m>T</m> sont fixes et l'on fait varier <m>\omega</m>.
+      Pour la plupart des valeurs de <m>\omega</m>, la corde est à
+      l'état d'équilibre.
+      Lorsque la vitesse angulaire <m>\omega</m> atteint une valeur <m>\omega = \frac{k \pi \sqrt{T}}{L\sqrt{\rho}}</m>,
+      alors la corde sort et a la forme d'une vague sinusoïdale croisant l'axe des <m>x</m> <m>k-1</m> fois entre les extrémités.
+      Par exemple, à <m>k=1</m>,
+      la corde ne croise pas l'axe des <m>x</m>,
+      et la forme ressemble à
+      <xref ref="bvp_whirstringfig">la</xref> plus haut.
+      D'un autre côté, lorsque <m>k=3</m>,
+      la corde croise l'axe des <m>x</m> deux fois.
+      On le voit dans <xref ref="bvp_whirstring2fig">la</xref>.
+      Lorsque <m>\omega</m> change encore, la corde retourne à
+      sa position d'équilibre.
+      Plus la vitesse angulaire est élevée, plus la corde croisera l'axe des <m>x</m> lorsqu'elle sortira.
+    </p>
+    <figure xml:id="bvp_whirstring2fig">
+      <caption>Corde tournante à la troisième valeur propre (<m>k=3</m>).</caption>
+      <image width="73%" source="bvp-whirstring2"/>
+    </figure>
+    <p>
+      Pour un autre exemple, si l'on a une corde à
+      sauter qui tourne
+      (alors <m>k=1</m> lorsqu'elle sort
+      <q>complètement</q>
+      )
+      et que l'on tire sur les extrémités pour augmenter la tension,
+      alors la vitesse augmente pour que la corde reste
+      <q>sortie</q>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <p>
+      Astuce pour les exercices suivants: Notez que lorsque <m>\lambda > 0</m>,
+      alors <m>\cos \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> et
+      <m>\sin \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> sont aussi des solutions de l'équation homogène.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Calculez toutes les valeurs propres et toutes les fonctions propres de <m>x'' + \lambda x = 0, ~ x(a) = 0, ~ x(b) = 0</m>
+          (supposez que <m>a \lt b</m>).
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez toutes les valeurs propres et toutes les fonctions propres de <m>x'' + \lambda x = 0, ~ x'(a) = 0, ~ x'(b) = 0</m>
+          (supposez que <m>a \lt b</m>).
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez toutes les valeurs propres et toutes les fonctions propres de <m>x'' + \lambda x = 0, ~ x'(a) = 0, ~ x(b) = 0</m>
+          (supposez que <m>a \lt b</m>).
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez toutes les valeurs propres et toutes les fonctions propres de <m>x'' + \lambda x = 0, ~ x(a) = x(b), ~ x'(a) = x'(b)</m>
+          (supposez que <m>a \lt b</m>).
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          On ne considérera pas le cas
+          <m>\lambda \lt 0</m> pour la valeur à l'extrêmité
+          du problème f <m>x'' + \lambda x = 0, ~ x(-\pi) = x(\pi), ~ x'(-\pi) = x'(\pi)</m>.
+          Terminez le calcul et montrez qu'il n'y a pas de valeur propre négative.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Considérez une corde, de longueur 2, de densité
+          linéaire de 0,1 et de tension 3, qui tourne.
+          Trouvez la plus petite vitesse angulaire permettant à la corde de sortir.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\omega = \pi \sqrt{\frac{15}{2}}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>x'' + \lambda x = 0</m> et <m>x(0)=1</m>,
+          <m>x(1) = 1</m>.
+          Trouvez tous les <m>\lambda</m> pour lesquels il y a plus d'une solution.
+          Trouvez aussi les solutions correspondantes
+          (seulement pour les valeurs propres).
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\lambda_k = 4 k^2 \pi^2</m> pour
+      <m>k = 1,2,3,\ldots</m> <m>x_k = \cos (2k\pi t) + B \sin (2k\pi t)</m>
+      (pour tout <m>B</m>)
+      }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>x'' + x = 0</m> et <m>x(0)=0</m>, <m>x'(\pi) = 1</m>.
+          Trouvez toute(s) les solution(s) si elles existent.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x(t) = - \sin(t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Considerez <m>x' + \lambda x = 0</m> et <m>x(0)=0</m>,
+          <m>x(1) = 0</m>.
+          Pourquoi il n'y a pas de valeurs propres?
+          Pourquoi toutes les équation de premier ordre avec deux conditions au bord comme ci-haut n'ont pas de valeurs propres?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> La solution générale est <m>x = C e^{-\lambda t}</m>.
+      Depuis que <m>x(0) = 0</m> alors <m>C=0</m>, et alors <m>x(t) = 0</m>.
+      Ainsi, la solution est toujours identiquement nulle.
+      Une condition est toujours suffisante pour garantir une solution unique pour une équation de premier ordre. }
+    </p>
+    <exercise>
+      <title>défi</title>
+      <statement>
+        <p>
+          Supposez que <m>x''' + \lambda x = 0</m> et <m>x(0)=0</m>,
+          <m>x'(0) = 0</m>, <m>x(1) = 0</m>.
+          Supposez que <m>\lambda > 0</m>.
+          Trouvez une équation à
+          laquelle toutes les valeurs propres satisferont.
+          Astuce : Notez que <m>-\sqrt[3]{\lambda}</m> est une racine de <m>r^3+\lambda = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{\sqrt{3}}{3} e^{\frac{-3}{2}\sqrt[3]{\lambda}} - \frac{\sqrt{3}}{3} \cos \bigl( \frac{\sqrt{3}\, \sqrt[3]{\lambda}}{2} \bigr) + \sin \bigl( \frac{\sqrt{3}\, \sqrt[3]{\lambda}}{2}\bigr) = 0</m> }
+    </p>
+  </subsection>
+</section>

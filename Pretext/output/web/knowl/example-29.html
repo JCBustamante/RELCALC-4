@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Trouvons la solution générale de l'équation suivante:</div>
+<div class="displaymath process-math">
+\begin{equation}
+y''' - 3 y'' - y' + 3y = 0\text{.}\tag{3.3.2}
+\end{equation}
+</div>
+</div> <div class="para logical">
+<div class="para">Essayons: <span class="process-math">\(y = e^{rx}\text{.}\)</span> On substitue dans l'équation et l'on obtient:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\underbrace{r^3 e^{rx}}_{y'''} - 3 \underbrace{r^2 e^{rx}}_{y''} - \underbrace{r e^{rx}}_{y'} + 3 \underbrace{e^{rx}}_{y} = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On divise par <span class="process-math">\(e^{rx}\text{.}\)</span> Alors:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r^3 - 3 r^2 - r + 3 = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">L'astuce est de trouver les racines. Il y a une formule pour les racines pour les polynômes de degré 3 ou 4, mais c'est très compliqué. De plus, il n'y a aucune formule pour les polynômes de degré supérieur. Cela ne veut pas dire que les racines n'existent pas. Il existe toujours <span class="process-math">\(n\)</span> racines pour un polynôme de degré <span class="process-math">\(n\text{.}\)</span> Elles peuvent être répétées  et elles peuvent être complexes. Les ordinateurs sont très bons pour trouver les racines approximativement pour un polynôme d'ordre raisonnable.</div> <div class="para">Un bon point de départ est de tracer le graphe du polynôme et de vérifier où il est nul. On pourrait aussi simplement le remplacer par des nombres. On commence par remplacer par les nombres <span class="process-math">\(r=-2, -1, 0, 1, 2, \ldots\text{,}\)</span> et l'on regarde si l'on obtient zéro. Par exemple, si on remplace par <span class="process-math">\(r=-2\)</span> dans le polynôme, on obtient <span class="process-math">\(-15\text{;}\)</span> si l'on remplace <span class="process-math">\(r=0\text{,}\)</span> on obtient 3. Ceci signifie qu'il y a une racine entre <span class="process-math">\(r=-2\)</span> et <span class="process-math">\(r=0\text{,}\)</span> parce que le signe a changé. Si l'on trouve une racine, <span class="process-math">\(r_1\text{,}\)</span> alors on sait que <span class="process-math">\((r-r_1)\)</span> est un facteur du polynôme. La division polynomiale peut alors être utilisée.</div> <div class="para">On pourrait commencer par <span class="process-math">\(r=0\text{,}\)</span> <span class="process-math">\(1\)</span> ou <span class="process-math">\(-1\text{,}\)</span> puisque ces nombres sont faciles à calculer. Dans notre cas, le polynôme a deux racines, <span class="process-math">\(r_1 = -1\)</span> et <span class="process-math">\(r_2 = 1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Il devrait avoir trois racines, et la dernière est plutôt facile à trouver. Le terme constant dans un polynôme monique<a href="" class="fn-knowl original" data-knowl="./knowl/fn-10-hidden.html" title="Footnote 3.3.1"><sup> 1 </sup></a> est tel que c'est un multiple de l'opposé de toutes les racines, parce que <span class="process-math">\(r^3 - 3 r^2 - r + 3 = (r-r_1)(r-r_2)(r-r_3)\text{.}\)</span> Alors,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3 = (-r_1)(-r_2)(-r_3) = (1)(-1)(-r_3) = r_3\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Vous devriez vérifier si <span class="process-math">\(r_3 = 3\)</span> est vraiment une racine. Ainsi, <span class="process-math">\(e^{-x}\text{,}\)</span> <span class="process-math">\(e^{x}\)</span> et <span class="process-math">\(e^{3x}\)</span> sont des solutions de <a href="" class="xref" data-knowl="./knowl/hol_cceq1.html" title="Equation 3.3.2">(3.3.2)</a>. Elles sont linéairement indépendantes (ce qui peut être vérifié facilement), et il y a trois racines, ce qui est le nombre exact recherché. Alors, la solution générale est:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hol_cceq1.html">
+\begin{equation*}
+y = C_1 e^{-x} + C_2 e^{x} + C_3 e^{3x}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Supposons les conditions initiales <span class="process-math">\(y(0) = 1\text{,}\)</span> <span class="process-math">\(y'(0) = 2\)</span> et <span class="process-math">\(y''(0) = 3\text{.}\)</span> Alors,</div>
+<div class="displaymath process-math">
+\begin{align*}
+1 = y(0) \amp  = C_1 + C_2 + C_3 ,\\
+2 = y'(0) \amp  = -C_1 + C_2 + 3C_3 ,\\
+3 = y''(0) \amp  = C_1 + C_2 + 9C_3 \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Il est possible de trouver la solution au moyen de techniques algébriques vues au secondaire, mais ce serait souffrant (très, très long!). La manière sensée de résoudre un système d'équations est d'utiliser des matrices algébriques. <a href="sec_matrix.html" class="internal" title="Section 4.2: Matrices et systèmes linéaires">Regardez 4.2</a> ou l' <a href="linalg_appendix.html" class="internal" title="Chapter 6: Linear algebra">Chapter 6</a>. Pour l'instant, notons que la solution est <span class="process-math">\(C_1 = -\nicefrac{1}{4}\text{,}\)</span> <span class="process-math">\(C_2 = 1\)</span> et <span class="process-math">\(C_3 = \nicefrac{1}{4}\text{.}\)</span> La solution particulière à l'EDO est donc:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sec_matrix.html ./knowl/linalg_appendix.html">
+\begin{equation*}
+y = \frac{-1}{4}\, e^{-x} + e^x + \frac{1}{4}\, e^{3x}\text{.}
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec_hol.html#example-29" class="internal">in-context</a></span>
+</body>
+</html>

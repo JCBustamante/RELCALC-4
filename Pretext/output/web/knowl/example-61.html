@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.11</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Prenons la fonction</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/gfs_smoothexfig.html">
+\begin{equation*}
+f(t) = \begin{cases} (t+1)\,t \amp  \text{ si }  \; {-1} \lt  t \leq 0 , \\ (1-t)\,t \amp  \text{ si }  \; 0 \lt  t \leq 1 \end{cases}
+\end{equation*}
+</div>
+<div class="para">et prolongeons-la à une fonction 2-périodique. Voir <a href="" class="xref" data-knowl="./knowl/gfs_smoothexfig.html" title="Figure 5.3.12">la 5.3.12</a>.</div>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.12<span class="period">.</span></span><span class="space"> </span>Fonction 2-périodique lisse.</figcaption></figure> <div class="para">Cette fonction est dérivable partout, mais elle n'a pas de dérivée seconde à chaque <span class="process-math">\(t\)</span> entier.</div> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/exercise-285-hidden.html" title="Checkpoint [STRUCT].12">
+          
+        </a></article> <div class="para logical">
+<div class="para">Voici les coefficients de la série de Fourier. Leur calcul implique plusieurs intégrations par parties et est laissé en exercice.</div>
+<div class="displaymath process-math">
+\begin{align*}
+a_0 \amp  = \int_{-1}^1 f(t) \, dt = \int_{-1}^0 (t+1)\,t \, dt + \int_0^1 (1-t)\,t \, dt = 0 ,\\
+a_n \amp  = \int_{-1}^1 f(t) \, \cos (n\pi t) \, dt = \int_{-1}^0 (t+1)\,t \, \cos (n \pi t) \, dt + \int_0^1 (1-t)\,t \, \cos (n \pi t) \, dt = 0,\\
+b_n \amp  = \int_{-1}^1 f(t) \, \sin (n\pi t) \, dt = \int_{-1}^0 (t+1)\,t \, \sin (n \pi t) \, dt + \int_0^1 (1-t)\,t \, \sin (n \pi t) \, dt\\
+\amp  = \frac{4 ( 1-{(-1)}^n)}{\pi^3 n^3} = \begin{cases} \frac{8}{\pi^3 n^3} \amp  \text{ si }  n \text{ est impair }  ,\\
+0 \amp  \text{ si }  n \text{ est pair }  . \end{cases}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Alors, la série est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{8}{\pi^3 n^3} \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Cette série converge très vite. Si vous calculez jusqu'à la troisième harmonique, c'est la fonction</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{8}{\pi^3} \sin (\pi t) + \frac{8}{27 \pi^3} \sin (3 \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Son graphe est presque impossible à distinguer de celui de <span class="process-math">\(f(t)\)</span> dans <a href="" class="xref" data-knowl="./knowl/gfs_smoothexfig.html" title="Figure 5.3.12">la 5.3.12</a>. En effet, le coefficient <span class="process-math">\(\frac{8}{27 \pi^3}\)</span> est déjà juste <span class="process-math">\(0.0096\)</span> (approximativement). La raison de ce comportement est le terme <span class="process-math">\(n^3\)</span> au dénominateur. Le coefficient <span class="process-math">\(b_n\text{,}\)</span> dans ce cas, va à zéro aussi vite que <span class="process-math">\(\nicefrac{1}{n^3}\)</span> va à zéro.</div></article><span class="incontext"><a href="moreonfourier_section.html#example-61" class="internal">in-context</a></span>
+</body>
+</html>

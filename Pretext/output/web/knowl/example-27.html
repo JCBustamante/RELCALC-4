@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+</h4>
+<div class="para">Montrons que <span class="process-math">\(e^x, e^{2x}, e^{3x}\)</span> sont linéairement indépendantes.</div> <div class="para">Nous allons considérer ici trois approches différentes pour le montrer (de nombreux manuels introduisent le wronskien pour ceci, mais il est difficile de voir pourquoi ça fonctionne, et ce n'est pas vraiment nécessaire ici).</div> <div class="para logical">
+<div class="para">Écrivons</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On utilise les règles de l'exponentielle et l'on écrit <span class="process-math">\(z = e^x\text{.}\)</span> Ainsi, <span class="process-math">\(z^2 = e^{2x}\)</span> et <span class="process-math">\(z^3 = e^{3x}\text{.}\)</span> Alors, nous avons</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 z + c_2 z^2 + c_3 z^3 = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Le terme de gauche est un polynôme de degré trois en <span class="process-math">\(z\text{.}\)</span> Ou bien il est identiquement nul, ou bien il possède au plus trois zéros. Puisque le résultat doit être identiquement nul, la seule possibilité est que <span class="process-math">\(c_1 = c_2 = c_3 = 0\text{,}\)</span> et les fonctions sont linéairement indépendantes.</div> <div class="para logical">
+<div class="para">Essayons une autre approche. Comme précédemment, écrivons</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Cette équation doit être valable pour tout <span class="process-math">\(x\text{.}\)</span> On divise par <span class="process-math">\(e^{3x}\)</span> pour obtenir</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 e^{-2x} + c_2 e^{-x} + c_3 = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Comme l'équation est vraie pour tout <span class="process-math">\(x\text{,}\)</span> laissons <span class="process-math">\(x \to \infty\text{.}\)</span> En prenant la limite, on voit que <span class="process-math">\(c_3 = 0\text{.}\)</span> Ainsi, l'équation devient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 e^x + c_2 e^{2x} = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Et l'on recommence en divisant par <span class="process-math">\(e^{2x}\text{,}\)</span> etc.</div> <div class="para logical">
+<div class="para">Regardons encore une autre approche. Écrivons de nouveau:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 e^x + c_2 e^{2x} + c_3 e^{3x} = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On peut évaluer l'équation et ses dérivées, avec une valeur de <span class="process-math">\(x\)</span> judicieusement choisie, pour obtenir trois équations pour <span class="process-math">\(c_1\text{,}\)</span> <span class="process-math">\(c_2\)</span> et <span class="process-math">\(c_3\text{.}\)</span> D'abord, divisons par <span class="process-math">\(e^{x}\)</span> pour simplifier.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 + c_2 e^{x} + c_3 e^{2x} = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Fixons <span class="process-math">\(x=0\)</span> pour obtenir <span class="process-math">\(c_1 + c_2 + c_3 = 0\text{.}\)</span> Dérivons des deux côtés:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_2 e^{x} + 2 c_3 e^{2x} = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Fixons <span class="process-math">\(x=0\)</span> pour obtenir <span class="process-math">\(c_2 + 2c_3 = 0\text{.}\)</span> Divisons par <span class="process-math">\(e^x\)</span> encore et dérivons pour obtenir <span class="process-math">\(2 c_3 e^{x} = 0\text{.}\)</span> Il est clair que <span class="process-math">\(c_3\)</span> est nul. Alors, <span class="process-math">\(c_2\)</span> doit être nul puisque <span class="process-math">\(c_2 = -2c_3\text{,}\)</span> et <span class="process-math">\(c_1\)</span> doit être nul puisque <span class="process-math">\(c_1 + c_2 + c_3 = 0\text{.}\)</span>
+</div> <div class="para">Il n'y a pas de meilleure approche, les trois sont parfaitement valides. L'important est de comprendre pourquoi les fonctions sont linéairement indépendantes.</div></article><span class="incontext"><a href="sec_hol.html#example-27" class="internal">in-context</a></span>
+</body>
+</html>

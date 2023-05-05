@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
+</h3>
+<div class="para">Voyons maintenant une application des équations linéaires qui est couramment rencontrée: la concentration de produits chimiques dans un plan d'eau.</div> <div class="para">\begin{mywrapfigsimp}{1.60in}{1.65in}</div> <div class="para">
+<div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/lin-tank.svg" role="img" class="contained"></div> \end{mywrapfigsimp} Un réservoir d'une capacité de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau. Une solution d'eau saline avec une concentration de 0,1 kilogrammes par litre entre dans le réservoir à un taux de 5 litres par minute. La solution dans le réservoir est bien brassée (c'est-à-dire qu'on peut supposer que la concentration est la même partout) et sort à un taux de 3 litres par minute. Combien de sel est contenu dans le réservoir lorsqu'il est plein?</div> <div class="para logical">
+<div class="para">Commençons par établir l'équation différentielle modélisant ce problème. Dénotons par <span class="process-math">\(x\)</span> la quantité de sel dans le réservoir, en kilogrammes, et par <span class="process-math">\(t\)</span> le temps en minutes. Si l'on considère une petite variation <span class="process-math">\(\Delta t\)</span> dans le temps, la variation en <span class="process-math">\(x\)</span> (dénotée <span class="process-math">\(\Delta x\)</span>) est approximativement :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta x \approx (\text{ taux entr\'ee }  \times \text{ concentration entr\'ee } ) \Delta t - (\text{ taux sortie }  \times \text{ concentration sortie } ) \Delta t\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On divise partout par <span class="process-math">\(\Delta t\)</span> et l'on prend la limite <span class="process-math">\(\Delta t \to 0\)</span> pour obtenir:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = (\text{ taux entr\'ee }  \times \text{ concentration entr\'ee } )  - (\text{ taux sortie }  \times \text{ concentration sortie } )\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Dans notre exemple:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{ taux entr\'ee }  \amp = 5 ,\\
+\text{ concentration entr\'ee }  \amp = 0,1 ,\\
+\text{ taux sortie }  \amp = 3 ,\\
+\text{ concentration sortie }  \amp = \frac{x}{\text{ volume } } = \frac{x}{60+(5-3)t} \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">L'équation modélisant le problème est donc:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} =  (5 \times 0,1)  -   \left(3 \frac{x}{60+2t}\right)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On réécrit ceci sous la forme <a href="" class="xref" data-knowl="./knowl/lineq_eq1.html" title="Equation 2.4.1">(2.4.1)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lineq_eq1.html">
+\begin{equation*}
+\frac{dx}{dt} +   \frac{3}{60+2t} x =   0.5\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Maintenant, on peut résoudre l'équation. Le facteur intégrant est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r(t) = \exp \left( \int \frac{3}{60+2t} dt  \right) =   \exp \left( \frac{3}{2} \ln (60+2t) \right) =   {(60+2t)}^{3/2}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On multiplie les deux côtés de l'équation par le facteur intégrant et l'on obtient:</div>
+<div class="displaymath process-math">
+\begin{align*}
+{(60+2t)}^{3/2} \frac{dx}{dt} + {(60+2t)}^{3/2} \frac{3}{60+2t} x \amp  =   0,5{(60+2t)}^{3/2}\\
+\frac{d}{dt}\left[{(60+2t)}^{3/2} x \right] \amp  = 0,5{(60+2t)}^{3/2}\\
+{(60+2t)}^{3/2} x \amp  = \int  0,5{(60+2t)}^{3/2} dt +C\\
+x  \amp  =   {(60+2t)}^{-3/2} \int  \frac{{(60+2t)}^{3/2}}{2}dt +C{(60+2t)}^{-3/2}\\
+x  \amp  =  {(60+2t)}^{-3/2}\frac{1}{10}{(60+2t)}^{5/2}  +C{(60+2t)}^{-3/2}\\
+x  \amp  = \frac{60+2t}{10}+C{(60+2t)}^{-3/2} \text{.}
+\end{align*}
+</div>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.4<span class="period">.</span></span><span class="space"> </span>Graphe de la solution <span class="process-math">\(x\)</span> kilogrammes de sel dans le réservoir au temps <span class="process-math">\(t\text{.}\)</span></figcaption></figure> <div class="para logical">
+<div class="para">On doit trouver la valeur de <span class="process-math">\(C\text{.}\)</span> On sait qu'à <span class="process-math">\(t=0\text{,}\)</span> <span class="process-math">\(x=10\text{.}\)</span> Donc,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+10 = x(0)   =   \frac{60}{10}+C{(60)}^{-3/2} =6 +C{(60)}^{-3/2}
+\end{equation*}
+</div>
+<div class="para">ou</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=4 ({60}^{3/2}) \approx 1859{,}03\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On cherche à savoir la valeur de <span class="process-math">\(x\)</span> lorsque le réservoir est plein. Ceci arrive lorsque <span class="process-math">\(60+2t = 100\text{,}\)</span> c'est-à-dire à <span class="process-math">\(t=20\text{.}\)</span> Donc:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{split} x(20) \amp  =   \frac{60+40}{10}+C{(60+40)}^{-3/2}  \\ \amp  \approx  10 +1859,03 {(100)}^{-3/2} \approx 11,86 . \end{split}
+\end{equation*}
+</div>
+</div> <div class="para">Voir <a href="" class="xref" data-knowl="./knowl/linear-salt-graph_fig.html" title="Figure 2.4.4">la 2.4.4</a> pour le graphe de <span class="process-math">\(x\)</span> en fonction de <span class="process-math">\(t\text{.}\)</span>
+</div> <div class="para">La concentration dans le réservoir plein est approximativement \unitfrac[0{,}1186]{kg}{litre}, alors que la concentration initiale est de <span class="process-math">\(\nicefrac{1}{6}\)</span> ou \unitfrac[0{,}167]{kg}{litre}.</div></article><span class="incontext"><a href="intfactor_section.html#example-17" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">Résolvons:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0,   \qquad y(1) = 2\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">D'abord, on laisse en exercice la vérification que <span class="process-math">\(M_y = N_x\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">La condition d'exactitude est vérifiée; pourtant, le champ de vecteurs <span class="process-math">\((M,N)\)</span> n'est pas conservatif, lorsque considéré sur tout le plan moins l'origine. Le problème est en fait à l'origine <span class="process-math">\((0,0)\text{,}\)</span> point où le champ de vecteurs n'est pas défini. Prenons, par exemple, une courbe <span class="process-math">\(\gamma\)</span> qui encercle l'origine, disons qu'elle part du point <span class="process-math">\((1,0)\)</span> et y retourne par un chemin dans le sens inverse des aiguilles d'une montre. Si une fonction potentielle <span class="process-math">\(F\)</span> existe, on obtiendrait alors:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = F(1,0) - F(1,0) = \int_\gamma F_x \, dx + F_y \, dy = \int_\gamma \frac{-y}{x^2+y^2} \, dx + \frac{x}{x^2+y^2} \, dy = 2\pi\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Bien entendu, c'est impossible (le calcul de l'intégrale de ligne est laissé en exercice; vous pouvez aussi consulter votre manuel de calcul à plusieurs variables). Ainsi, cette équation différentielle n'admet pas de fonction potentielle définie sur tout le plan moins <span class="process-math">\((0,0)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Ceci ne contredit pas le lemme de Poincaré. Notez que l'énoncé du théorème garantit seulement l'existence d'une fonction potentielle définie localement, c'est-à-dire dans un voisinage du point de départ. Dans notre exemple, puisque <span class="process-math">\(y(1) = 2\text{,}\)</span> le point de départ est <span class="process-math">\((1,2)\text{.}\)</span> En considérant le cas où <span class="process-math">\(x &gt; 0\)</span> et en intégrant <span class="process-math">\(M\)</span> par rapport à <span class="process-math">\(x\text{,}\)</span> ou <span class="process-math">\(N\)</span> par rapport à <span class="process-math">\(y\text{,}\)</span> on trouve:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(x,y) = \operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">La solution implicite est <span class="process-math">\(\operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr) = C\text{.}\)</span> En isolant <span class="process-math">\(y\text{,}\)</span> on obtient <span class="process-math">\(y = \tan(C) x\text{.}\)</span> Autrement dit, la solution est une droite. Poser <span class="process-math">\(y(1) = 2\)</span> nous donne <span class="process-math">\(\tan(C) = 2\text{,}\)</span> et donc <span class="process-math">\(y= 2x\)</span> est la solution désirée. Voir <a href="" class="xref" data-knowl="./knowl/exact_y2x.html" title="Figure 2.6.8">la 2.6.8</a>, en notant que la solution est seulement définie pour <span class="process-math">\(x &gt; 0\text{.}\)</span>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.6.8<span class="period">.</span></span><span class="space"> </span>Solution pour <span class="process-math">\(-\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0\text{,}\)</span> <span class="process-math">\(y(1) = 2\text{,}\)</span> avec le point initial indiqué.</figcaption></figure></article></body>
+</html>

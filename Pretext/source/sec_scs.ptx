@@ -1,0 +1,574 @@
+<section xml:id="sec_scs">
+  <title>Séries de sinus et de cosinus</title>
+  <subsection>
+    <title>Fonctions périodiques paires et impaires</title>
+    <p>
+      Vous avez peut-être remarqué
+      qu'une fonction impaire n'a pas de termes en cosinus dans la série de Fourier et qu'une fonction paire n'a pas de termes en sinus dans la série de Fourier.
+      Cette observation n'est pas une coïncidence.
+      Regardons les fonctions périodiques paires et impaires plus en détail.
+    </p>
+    <p>
+      Rappelons-nous qu'une fonction <m>f(t)</m> est <em>impaire</em>
+          <idx><h>odd function</h></idx>
+      si <m>f(-t) = -f(t)</m>.
+      Une fonction <m>f(t)</m> est <em>paire</em>
+          <idx><h>even function</h></idx>
+      si <m>f(-t) = f(t)</m>.
+      Par exemple, <m>\cos (n t)</m> est paire,
+      et <m>\sin (n t)</m> est impaire.
+      De même, la fonction <m>t^k</m> est paire si <m>k</m> est pair,
+      et impaire si <m>k</m> est impair.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Prenez deux fonctions <m>f(t)</m> et <m>g(t)</m>,
+          et définissez leur produit
+          <m>h(t) = f(t)g(t)</m>. \begin{tasks} \task Supposez que <m>f(t)</m> et <m>g(t)</m> sont impaires.
+          Est-ce que <m>h(t)</m> est impaire ou paire? \task Supposez que l'une est paire et que l'autre est impaire.
+          Est-ce que <m>h(t)</m> est impaire ou paire? \task Supposez que les deux sont paires.
+          Est-ce que <m>h(t)</m> est impaire ou paire? \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      D'une part, si <m>f(t)</m> et <m>g(t)</m> sont toutes les deux impaires,
+      alors <m>f(t)+g(t)</m> est impaire.
+      De même pour des fonctions paires.
+      D'autre part,
+      si <m>f(t)</m> est impaire et que <m>g(t)</m> est paire,
+      alors on ne peut rien dire sur la somme <m>f(t) + g(t)</m>.
+      En fait, une série de Fourier est la somme d'une fonction impaire
+      (les termes sinus)
+      et d'une fonction paire
+      (les termes cosinus).
+    </p>
+    <p>
+      Dans cette section,
+      on considère les fonctions périodiques impaires et paires.
+      On a défini précédemment l'extension <m>2L</m>-périodique de la fonction définie sur l'intervalle <m>[-L,L]</m>.
+      Parfois, on s'intéresse seulement aux fonctions dans l'intervalle <m>[0,L]</m>,
+      et ce serait pratique pour avoir une fonction impaire
+      (resp. paire).
+      Si la fonction est impaire (resp. paire),
+      tous les termes cosinus (resp. sinus) disparaissent.
+      Ce que nous allons faire est prendre l'extension impaire (resp. paire) de la fonction à
+      <m>[-L,L]</m> puis l'étendre périodiquement à
+      une fonction <m>2L</m>-périodique.
+    </p>
+    <p>
+      On prend une fonction <m>f(t)</m> définie sur <m>[0,L]</m>.
+      Sur <m>(-L,L]</m>, la fonction est définie.
+      <md>
+        <mrow>F_{\text{ impaire } }(t) \amp  \overset{\text{ d\'ef } }{=} \begin{cases} f(t) \amp  \text{ si }  \; 0 \leq t \leq L ,</mrow>
+        <mrow>-f(-t) \amp  \text{ si }  \; {-L} \lt  t \lt  0 , \end{cases}</mrow>
+        <mrow>F_{\text{ paire } }(t) \amp  \overset{\text{ d\'ef } }{=} \begin{cases} f(t) \amp  \text{ si }  \; 0 \leq t \leq L ,</mrow>
+        <mrow>f(-t) \amp  \text{ si }  \; {-L} \lt  t \lt  0 . \end{cases}</mrow>
+      </md>
+    </p>
+    <p>
+      On étend <m>F_{\text{ impaire } }(t)</m> et <m>F_{\text{ paire } }(t)</m> à
+      une <m>2L</m>-périodique.
+      Alors, <m>F_{\text{ impaire } }(t)</m> est appelée l'
+      <em>extension périodique impaire<idx><h>extension périodique impaire</h></idx>
+      </em> de <m>f(t)</m>,
+      et <m>F_{\text{ paire } }(t)</m> est appelée l'<em>extension périodique paire<idx><h>extension périodique paire</h></idx>
+      </em> de <m>f(t)</m>.
+      Pour l'extension impaire,
+      on suppose généralement que <m>f(0) = f(L) = 0</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>F_{\text{ impaire } }(t)</m> est impaire et que <m>F_{\text{ paire } }(t)</m> est paire.
+          Pour <m>F_{\text{ impaire } }</m>,
+          supposez que <m>f(0) = f(L) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <example>
+      <statement>
+        <p>
+          Prenez la fonction <m>f(t) = t\,(1-t)</m> définie sur <m>[0,1]</m>.
+          <xref ref="scs_oddevenextfig">La</xref>
+          montre les graphes des extensions périodiques impaires et paires de <m>f(t)</m>.
+        </p>
+        <figure xml:id="scs_oddevenextfig">
+          <caption>Extension 2-périodique impaire et paire de <m>f(t) =
+          t\ (1-t)</m>, <m>0 \leq t \leq 1</m>.</caption>
+          \diffyincludegraphics{width=6.24in}{width=9in}{scs-ext-odd-even}
+        </figure>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Séries sinus et cosinus</title>
+    <p>
+      Soit <m>f(t)</m> une fonction <m>2L</m>-périodique impaire.
+      On écrit la série de Fourier pour <m>f(t)</m>.
+      Tout d'abord, on calcule les coefficients <m>a_n</m>
+      (incluant <m>n=0</m>)
+      et l'on obtient
+      <me>
+        a_n = \frac{1}{L} \int_{-L}^L f(t) \cos \left( \frac{n \pi}{L} t \right) \, dt = 0
+      </me>.
+    </p>
+    <p>
+      Autrement dit,
+      il n'y a pas de terme cosinus dans la série de Fourier d'une fonction impaire.
+      L'intégrale est nulle,
+      car <m>f(t) \cos \left( {n \pi}{L} t \right)</m> est une fonction impaire
+      (le produit d'une fonction impaire et d'une fonction paire est impaire),
+      et l'intégrale d'une fonction impaire sur un intervalle symétrique est toujours égale à zéro.
+      L'intégrale d'une fonction paire sur un intervalle symétrique <m>[-L,L]</m> est le double de l'intégrale de la fonction sur l'intervalle <m>[0,L]</m>.
+      La fonction <m>f(t) \sin \left( \frac{n \pi}{L} t \right)</m> est le produit de deux fonctions impaires et est donc paire.
+      <me>
+        b_n = \frac{1}{L} \int_{-L}^L f(t) \sin \left( \frac{n \pi}{L} t \right) \, dt = \frac{2}{L} \int_{0}^L f(t) \sin \left( \frac{n \pi}{L} t \right) \, dt
+      </me>.
+    </p>
+    <p>
+      On écrit maintenant la série de Fourier de <m>f(t)</m> comme
+      <me>
+        \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t \right)
+      </me>.
+    </p>
+    <p>
+      De même si <m>f(t)</m> est une fonction <m>2L</m>-périodique paire.
+      Pour la même raison que ci-dessus,
+      on constate que <m>b_n = 0</m> et
+      <me>
+        a_n = \frac{2}{L} \int_{0}^L f(t) \cos \left( \frac{n \pi}{L} t \right) \, dt
+      </me>.
+    </p>
+    <p>
+      La formule fonctionne toujours pour <m>n=0</m>, auquel cas on obtient
+      <me>
+        a_0 = \frac{2}{L} \int_{0}^L f(t) \, dt
+      </me>.
+    </p>
+    <p>
+      La série de Fourier est alors
+      <me>
+        \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right)
+      </me>.
+    </p>
+    <p>
+      Une conséquence intéressante est que les coefficients de la série de Fourier d'une fonction impaire
+      (ou paire)
+      peuvent être calculés en intégrant simplement sur la moitié
+      de l'intervalle <m>[0,L]</m>.
+      Par conséquent,
+      on peut calculer la série de Fourier de l'extension impaire
+      (ou paire)
+      d'une fonction en calculant certaines intégrales sur l'intervalle où la fonction d'origine est définie.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Soit <m>f(t)</m> une fonction lisse par morceaux définie sur <m>[0,L]</m>.
+          Alors l'extension périodique impaire de <m>f(t)</m> a la série Fourier
+          <me>
+            \mybxbg{~~ F_{\text{ impaire } }(t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t \right) , ~~}
+          </me>
+          où
+          <me>
+            \mybxbg{~~ b_n = \frac{2}{L} \int_{0}^L f(t)\, \sin \left( \frac{n \pi}{L} t \right) \, dt . ~~}
+          </me>
+        </p>
+        <p>
+          L'extension périodique paire de <m>f (t)</m> a la série de Fourier
+          <me>
+            \mybxbg{~~ F_{\text{ paire } }(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right) , ~~}
+          </me>
+          où
+          <me>
+            \mybxbg{~~ a_n = \frac{2}{L} \int_{0}^L f(t)\, \cos \left( \frac{n \pi}{L} t \right) \, dt . ~~}
+          </me>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      On appelle la série <m>\sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t\right)</m> la <em>série sinus
+          <idx><h>série sinus</h></idx>
+      </em> de <m>f(t)</m>, et l'on appelle la série
+      <m>\frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right)</m> la <em>série cosinus
+          <idx><h>série cosinus</h></idx>
+      </em> de <m>f(t)</m>.
+      On ne se soucie pas souvent de ce qui se passe en dehors de <m>[0, L]</m>.
+      Dans ce cas,
+      on choisit la série qui correspond le mieux au problème.
+    </p>
+    <p>
+      Il n'est pas nécessaire de commencer par la série de Fourier complète pour obtenir les séries de sinus et de cosinus.
+      La série sinus est en réalité
+      le développement des fonctions propres de <m>f(t)</m> en utilisant les fonctions propres du problème des valeurs propres <m>x''+\lambda x = 0</m>,
+      <m>x(0) = 0</m>, <m>x(L) = L</m>.
+      La série cosinus est le développement des fonctions propres de <m>f(t)</m> en utilisant les fonctions propres du problème des valeurs propres <m>x''+\lambda x = 0</m>,
+      <m>x'(0) = 0</m>, <m>x'(L) = L</m>.
+      On aurait donc pu obtenir les mêmes formules en définissant le produit intérieur
+      <me>
+        \langle f(t), g(t) \rangle = \int_0^L f(t) g(t) \, dt
+      </me>
+      et en suivant la procédure <xref ref="ts_section">de</xref>.
+      Ce point de vue est utile,
+      car on utilise couramment une série spécifique qui est née de la question sous-jacente qui a conduit à
+      un certain problème de valeurs propres.
+      Si la valeur propre du problème n'est pas l'une des trois que nous avons abordées jusqu'à
+      présent,
+      on peut toujours faire un développement des fonctions propres en généralisant les résultats de ce chapitre
+      (voir les références pour en savoir plus).
+    </p>
+    <example>
+      <statement>
+        <p>
+          Trouvons la série de Fourier de l'extension périodique paire de la fonction
+          <m>f(t) = t^2</m> pour <m>0 \leq t \leq \pi</m>.
+        </p>
+        <p>
+          On veut écrire
+          <me>
+            f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t)
+          </me>,
+          où
+          <me>
+            a_0 = \frac{2}{\pi} \int_0^\pi t^2 \, dt = \frac{2 \pi^2}{3}
+          </me>
+          et
+          <me>
+            \begin{split} a_n \amp  = \frac{2}{\pi} \int_0^\pi t^2 \cos (n t) \, dt = \frac{2}{\pi} \left[ t^2 \frac{1}{n} \sin (nt) \right]_0^\pi - \frac{4}{n\pi} \int_0^\pi t \sin (n t) \, dt \\ \amp  = \frac{4}{n^2\pi} \Bigl[ t \cos (n t) \Bigr]_0^\pi + \frac{4}{n^2\pi} \int_0^\pi \cos (n t) \, dt = \frac{4{(-1)}^n}{n^2} . \end{split}
+          </me>
+        </p>
+        <p>
+          Notez qu'on a
+          <q>détecté</q>
+          la continuité de l'extension depuis les coefficients décroissants comme <m>\frac{1}{n^2}</m>.
+          Autrement dit,
+          l'extension périodique paire de <m>t^2</m> n'a pas de discontinuités de saut.
+          Elle a des coins,
+          car la dérivée, qui est une fonction impaire et une série sinus,
+          a des sauts.
+          Il existe une série de Fourier dont les coefficients sont seulement décroissants comme <m>\frac{1}{n}</m>.
+        </p>
+        <p>
+          Explicitement, les premiers termes de la série sont
+          <me>
+            \frac{\pi^2}{3} - 4 \cos (t) + \cos (2t) - \frac{4}{9} \cos (3t) + \cdots
+          </me>
+        </p>
+      </statement>
+    </example>
+    <exercise>
+      <statement>
+        <p>
+          \begin{tasks} \task Calculez la dérivée de l'extension périodique paire de <m>f (t)</m> ci-dessus et vérifiez s'il y a des discontinuités de saut.
+          Utilisez la définition réelle de <m>f (t)</m>,
+          pas sa série cosinus! \task Pourquoi est-ce que la dérivée de l'extension périodique paire de <m>f (t)</m> est l'extension périodique impaire de <m>f '(t)</m>? \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection>
+    <title>Application</title>
+    <p>
+      La série de Fourier est liée aux problèmes de valeurs limites qu'on a étudiés plus tôt.
+      Voyons cette connexion dans une application.
+    </p>
+    <p>
+      Considérons le problème de valeurs limites pour <m>0 \lt  t \lt  L</m>,
+      <me>
+        x''(t) + \lambda\, x(t) = f(t)
+      </me>,
+      pour les <em>conditions aux frontières de Dirichlet<idx><h>conditions aux frontières de Dirichlet</h></idx>
+      </em> <m>x(0) = 0</m>, <m>x(L) = 0</m>.
+      L'alternative de Fredholm ( <xref ref="thm_fredholmsimple"></xref>) dit que tant que <m>\lambda</m> n'est pas une valeur propre du problème homogène sous-jacent,
+      il existe une solution unique.
+      Les fonctions propres de ce problème de valeurs propres sont les fonctions <m>\sin \left( \frac{n \pi}{L} t \right)</m>.
+      Donc, pour trouver la solution,
+      on trouve d'abord la série sinus de Fourier pour <m>f (t)</m>.
+      On écrit <m>x</m> également sous forme de série sinus,
+      mais avec des coefficients inconnus.
+      On substitue la série à
+      <m>x</m> dans l'équation et on résout avec les coefficients inconnus.
+      Si l'on a la <em>condition à
+      la frontière Neumann<idx><h>condition à
+      la frontière Neumann</h></idx>
+      </em> <m>x'(0) = 0</m>, <m>x'(L) = 0</m>,
+      on suit la même procédure en utilisant la série cosinus.
+    </p>
+    <p>
+      Voyons comment cette méthode fonctionne avec des exemples.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Prenons le problème à
+          valeurs limites pour <m>0 \lt  t \lt  1</m>
+          <me>
+            x''(t) + 2 x(t) = f(t)
+          </me>,
+          où <m>f(t) = t</m> pour <m>0 \lt  t \lt  1</m>, et satisfaisant à
+          la condition aux frontières de Dirichlet <m>x(0) = 0</m>,
+          <m>x(1)=0</m>.
+          On écrit <m>f(t)</m> comme une série sinus :
+          <me>
+            f(t) = \sum_{n=1}^\infty c_n \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On calcule
+          <me>
+            c_n = 2 \int_0^1 t \sin (n \pi t) \,dt = \frac{2 \, {(-1)}^{n+1}}{n \pi}
+          </me>.
+        </p>
+        <p>
+          On écrit <m>x(t)</m> comme
+          <me>
+            x(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On insère et l'on obtient
+          <me>
+            \begin{split} x''(t) + 2 x(t) \amp  = \underbrace{ \sum_{n=1}^\infty - b_n n^2 \pi^2 \sin (n \pi t) }_{x''} \, + \, 2 \underbrace{ \sum_{n=1}^\infty b_n \sin (n \pi t) }_{x} \\ \amp  = \sum_{n=1}^\infty b_n (2 - n^2 \pi^2 ) \sin (n \pi t) \\ \amp  = f(t) = \sum_{n=1}^\infty  \frac{2\, {(-1)}^{n+1}}{n \pi} \sin (n \pi t) . \end{split}
+          </me>
+        </p>
+        <p>
+          Donc,
+          <me>
+            b_n (2 - n^2 \pi^2) = \frac{2\,{(-1)}^{n+1}}{n \pi}
+          </me>
+          ou
+          <me>
+            b_n = \frac{2\,{(-1)}^{n+1}}{n \pi (2 - n^2 \pi^2)}
+          </me>.
+        </p>
+        <p>
+          Puisque <m>2</m> n'est pas une valeur propre du problème,
+          on a que <m>2-n ^ 2 \ pi ^ 2</m> n'est pas nul pour tout <m>n</m> et qu'on peut résoudre pour <m>b_n</m>.
+          On a ainsi obtenu une série de Fourier pour la solution :
+          <me>
+            x(t) = \sum_{n=1}^\infty \frac{2\,{(-1)}^{n+1}}{n \pi \,(2 - n^2 \pi^2)} \sin (n \pi t)
+          </me>.
+        </p>
+        <p>
+          Regardons <xref ref="bnd-dirich-graph_fig">la</xref>
+          pour le graphe de la solution.
+          On note que,
+          puisque les fonctions propres satisfont aux conditions aux limites et que <m>x</m> s'écrit en fonction des conditions aux limites,
+          alors <m>x</m> satisfait aux conditions aux limites.
+        </p>
+        <figure xml:id="bnd-dirich-graph_fig">
+          <caption>Graphe de la solution de <m>x''+2x=t</m>, <m>x(0)=0</m>, <m>x(1)=0</m>.</caption>
+          \diffyincludegraphics{width=3in}{width=4.5in}{bnd-dirich-graph}
+        </figure>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          De même, on traite les conditions de Neumann.
+          On prend le problème de la valeur limite pour <m>0 \lt  t \lt  1</m>
+          <me>
+            x''(t) + 2 x(t) = f(t)
+          </me>,
+          où <m>f(t) = t</m> sur <m>0 \lt  t \lt  1</m>,
+          mais maintenant satisfaisant aux conditions aux limites de Neumann <m>x'(0) = 0</m>,
+          <m>x'(1)=0</m>.
+          On écrit <m>f(t)</m> comme une série cosinus :
+          <me>
+            f(t) = \frac{c_0}{2} + \sum_{n=1}^\infty c_n \cos (n \pi t)
+          </me>,
+          où
+          <me>
+            c_0 = 2 \int_0^1 t \,dt = 1
+          </me>
+          et
+          <me>
+            c_n = 2 \int_0^1 t \cos (n \pi t) \,dt = \frac{2\bigl({(-1)}^n-1\bigr)}{\pi^2 n^2} = \begin{cases} \frac{-4}{\pi^2 n^2} \amp  \text{ si }  n \text{ est impair }  , \\ 0 \amp  \text{ si }  n \text{ est pair } . \end{cases}
+          </me>
+        </p>
+        <p>
+          On écrit <m>x(t)</m> comme une série cosinus :
+          <me>
+            x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t)
+          </me>.
+        </p>
+        <p>
+          On insère et l'on obtient
+          <me>
+            \begin{split} x''(t) + 2 x(t) \amp  = \sum_{n=1}^\infty \Bigl[ - a_n n^2 \pi^2 \cos (n \pi t) \Bigr] + a_0 + 2 \sum_{n=1}^\infty \Bigl[ a_n \cos (n \pi t) \Bigr] \\ \amp  = a_0 + \sum_{n=1}^\infty a_n (2 - n^2 \pi^2 ) \cos (n \pi t) \\ \amp  = f(t) = \frac{1}{2} + \sum_{\substack{n=1\\n~\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos (n \pi t) . \end{split}
+          </me>
+        </p>
+        <p>
+          Donc, <m>a_0 = \frac{1}{2}</m>,
+          <m>a_n = 0</m> pour <m>n</m> pair (<m>n \geq 2</m>) et,
+          pour <m>n</m> impair, on a
+          <me>
+            a_n (2 - n^2 \pi^2) = \frac{-4}{\pi^2 n^2}
+          </me>,
+          ou
+          <me>
+            a_n = \frac{-4}{n^2 \pi^2 (2 - n^2 \pi^2)}
+          </me>.
+        </p>
+        <p>
+          La série de Fourier pour la solution <m>x(t)</m> est
+          <me>
+            x(t) = \frac{1}{4} + \sum_{\substack{n=1\\n~\text{ impair } } }^\infty \frac{-4}{n^2 \pi^2 (2 - n^2 \pi^2)} \cos (n \pi t)
+          </me>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Exercises</title>
+    <exercise>
+      <statement>
+        <p>
+          Prenez <m>f(t) = {(t-1)}^2</m> défini sur
+          <m>0 \leq t \leq 1</m>. \begin{tasks} \task Esquissez le graphique de l'extension périodique paire de <m>f</m>. \task Esquissez le graphique de l'extension périodique impaire de <m>f</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la série de Fourier des extensions périodiques paires impaires et paires de la fonction
+          <m>f(t) = {(t-1)}^2</m> pour <m>0 \leq t \leq 1</m>.
+          Pouvez-vous dire quelle extension est continue à
+          partir des coefficients de la série de Fourier?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la série de Fourier de l'extension périodique paire et impaire de la fonction
+          <m>f(t) = t</m> pour <m>0 \leq t \leq \pi</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la série de Fourier de l'extension périodique paire et impaire de la fonction
+          <m>f(t) = \sin t</m> pour <m>0 \leq t \leq \pi</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>2</title>
+      <statement>
+        <p>
+          Considerez
+          <me>
+            x''(t) + 4 x(t) = f(t)
+          </me>,
+          où <m>f(t) = 1</m> sur <m>0 \lt  t \lt  1</m>. \begin{tasks} \task Résolvez pour les conditions de Dirichlet
+          <m>x(0)=0, x(1) = 0</m>. \task Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Considerez
+          <me>
+            x''(t) + 9 x(t) = f(t)
+          </me>,
+          pour <m>f(t) = \sin (2\pi t)</m> on
+          <m>0 \lt  t \lt  1</m>. \begin{tasks} \task Résolvez pour les conditions de Dirichlet
+          <m>x(0)=0, x(1) = 0</m>. \task Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Considerez
+          <me>
+            x''(t) + 3 x(t) = f(t) ,  x(0) = 0,  x(1) = 0
+          </me>,
+          où <m>f(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)</m>. &#xc9;crivez la solution de <m>x(t)</m> comme une série de Fourier où les coefficients sont donnés en terme de <m>b_n</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>f(t) = t^2(2-t)</m> pour <m>0 \leq t \leq 2</m>.
+          Soit <m>F(t)</m> l'extension périodique impaire.
+          Calculez <m>F(1)</m>, <m>F(2)</m>,
+          <m>F(3)</m>, <m>F(-1)</m>,
+          <m>F(\nicefrac{9}{2})</m>, <m>F(101)</m>, <m>F(103)</m>.
+          Note: Ne <em>pas</em> calculer la série sinusoïdale.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>f(t) = \nicefrac{t}{3}</m> sur
+          <m>0 \leq t \lt 3</m>. \begin{tasks} \task Trouvez la série de Fourier de l'extension périodique paire. \task Trouvez la série de Fourier de l'extension périodique impaire. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
+      <m>\nicefrac{1}{2} + \sum\limits_{\substack{n=1\\n\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos\bigl(\frac{n\pi}{3} t \bigr)</m> b) <m>\sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{\pi n} \sin\bigl(\frac{n\pi}{3} t \bigr)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>f(t) = \cos(2t)</m> sur
+          <m>0 \leq t \lt \pi</m>. \begin{tasks} \task Trouvez la série de Fourier de l'extension périodique paire. \task Trouvez la série de Fourier de l'extension périodique impaire. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
+      <m>\cos(2t)</m> b) <m>\sum\limits_{\substack{n=1 \\n \text{ impair } } }^\infty \frac{-4n}{\pi n^2 - 4 \pi} \sin(n t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>f(t)</m> définie sur <m>0 \leq t \lt 1</m>.
+          Maintenant prenez la moyenne des deux extensions
+          <m>g(t) = \frac{F_{\text{ impaire } }(t)+ F_{\text{ paire } }(t)}{2}</m>. \begin{tasks}(2) \task Qu'est-ce que <m>g(t)</m> si
+          <m>0 \leq t \lt 1</m> (Justifiez!) \task Qu'est-ce que <m>g(t)</m> si
+          <m>-1 \lt t \lt 0</m> (Justifiez!) \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>f(t)</m> b) <m>0</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>f(t) = \sum_{n=1}^\infty \frac{1}{n^2} \sin(nt)</m>.
+          Résolvez <m>x''- x = f(t)</m> pour les conditions de Dirichlet
+          <m>x(0) = 0</m> et <m>x(\pi) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sum\limits_{n=1}^\infty \frac{-1}{n^2(1+n^2)} \sin(nt)</m> }
+    </p>
+    <exercise>
+      <title>défi</title>
+      <statement>
+        <p>
+          Soit <m>f(t) = t + \sum_{n=1}^\infty \frac{1}{2^n} \sin(nt)</m>.
+          Résolvez <m>x'' + \pi x = f(t)</m> pour les conditions de Dirichlet
+          <m>x(0) = 0</m> et <m>x(\pi) = 1</m>.
+          Astuce: notez que <m>\frac{t}{\pi}</m> satisfait aux conditions de Dirichlet données.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)</m> }
+    </p>
+  </subsection>
+</section>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">Trouvons les valeurs propres et les fonctions propres de</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x'' + \lambda x = 0,  x(0) = 0,  x(\pi) = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On doit considérer chacun des cas suivants séparément, <span class="process-math">\(\lambda &gt; 0\text{,}\)</span> <span class="process-math">\(\lambda = 0\text{,}\)</span> <span class="process-math">\(\lambda \lt  0\text{,}\)</span> puisque la solution générale est différente dans les trois cas. D'abord, on suppose que <span class="process-math">\(\lambda &gt; 0\text{.}\)</span> Alors, la solution générale à <span class="process-math">\(x''+\lambda x = 0\)</span> est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">La condition <span class="process-math">\(x(0) = 0\)</span> implique immédiatement que <span class="process-math">\(A = 0\text{.}\)</span> Ensuite,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = x(\pi) = B \sin ( \sqrt{\lambda}\, \pi )\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Si <span class="process-math">\(B\)</span> est nul, alors <span class="process-math">\(x\)</span> est une solution nulle. Alors, pour obtenir une solution non nulle, on doit avoir que <span class="process-math">\(\sin ( \sqrt{\lambda}\, \pi) = 0\text{.}\)</span> Donc, <span class="process-math">\(\sqrt{\lambda}\, \pi\)</span> doit être un entier multiple de <span class="process-math">\(\pi\text{.}\)</span> En d'autres mots, <span class="process-math">\(\sqrt{\lambda} = k\)</span> pour un entier positif <span class="process-math">\(k\text{.}\)</span> Ainsi, les valeurs propres positives sont <span class="process-math">\(k^2\)</span> pour tous les entiers <span class="process-math">\(k \geq 1\text{.}\)</span> Les fonctions propres correspondantes peuvent être vues comme <span class="process-math">\(x=\sin (k t)\text{.}\)</span> Tout comme les vecteurs propres, les multiples d'une fonction propre sont des fonctions propres.</div> <div class="para">On suppose que <span class="process-math">\(\lambda = 0\text{.}\)</span> Dans ce cas, l'équation est <span class="process-math">\(x'' = 0\text{,}\)</span> et sa solution générale est <span class="process-math">\(x = At + B\text{.}\)</span> La condition <span class="process-math">\(x(0) = 0\)</span> implique que <span class="process-math">\(B=0\text{,}\)</span> et <span class="process-math">\(x(\pi) = 0\)</span> implique que <span class="process-math">\(A = 0\text{,}\)</span> ce qui signifie que <span class="process-math">\(\lambda = 0\)</span> n'est <em class="emphasis">pas</em> une valeur propre.</div> <div class="para logical">
+<div class="para">Finalement, on suppose que <span class="process-math">\(\lambda \lt  0\text{.}\)</span> Dans ce cas, on a la solution générale<a href="" class="fn-knowl original" data-knowl="./knowl/fn-13-hidden.html" title="Footnote 5.1.2"><sup> 2 </sup></a>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t )\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Si <span class="process-math">\(x(0) = 0\text{,}\)</span> ça implique que <span class="process-math">\(A = 0\)</span> (on se rappelle que <span class="process-math">\(\cosh 0 = 1\)</span> et <span class="process-math">\(\sinh 0 = 0\)</span>). Alors, la solution devrait être <span class="process-math">\(x = B \sinh ( \sqrt{-\lambda}\, t )\)</span> et devrait satisfaire à <span class="process-math">\(x(\pi) = 0\text{,}\)</span> ce qui est possible uniquement si <span class="process-math">\(B\)</span> est nul. Pourquoi? Parce que <span class="process-math">\(\sinh \xi\)</span> est seulement zéro lorsque <span class="process-math">\(\xi=0\text{.}\)</span> On devrait calculer sinh pour voir ce fait. On peut aussi le voir de la définition de sinh. On obtient <span class="process-math">\(0 = \sinh \xi = \frac{e^\xi - e^{-\xi}}{2}\text{.}\)</span> Donc, <span class="process-math">\(e^\xi = e^{-\xi}\text{,}\)</span> ce qui implique que <span class="process-math">\(\xi = -\xi\text{,}\)</span> ce qui est seulement vrai si <span class="process-math">\(\xi=0\text{.}\)</span> Par conséquent, il n'y a pas de valeurs propres négatives.</div> <div class="para logical">
+<div class="para">En somme, les valeurs propres et les fonctions propres correspondantes sont</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda_k = k^2  \text{ avec fonction propre }   x_k = \sin (k t) \text{ pour tous les entiers }  k \geq 1\text{.}
+\end{equation*}
+</div>
+</div></article></body>
+</html>

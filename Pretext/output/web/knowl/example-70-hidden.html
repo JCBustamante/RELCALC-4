@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">Essayons la même équation que précédemment, mais pour des extrémités isolées. On résout le problème d'EDP suivant :</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp  u_t = 0.003 \, u_{xx} ,\\
+\amp  u_x(0,t) = u_x(1,t) = 0 ,\\
+\amp  u(x,0) = 50\,x\,(1-x) \qquad \text{ pour }  \; 0 \lt  x \lt  1 \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Pour ce problème, on doit trouver la série cosinus de <span class="process-math">\(u (x, 0)\text{.}\)</span> Pour 0 <span class="process-math">\(\lt x \lt 1\text{,}\)</span> on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+50\, x\,(1-x) = \frac{25}{3} + \sum_{\substack{n=2 \\ n \text{ pair } } }^\infty \left( \frac{-200}{\pi^2 n^2} \right) \cos (n \pi x)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Le calcul est laissé à vos soins. Par conséquent, la solution au problème d'EDP, tracée dans <a href="" class="xref" data-knowl="./knowl/heat_wireisolexfig.html" title="Figure 5.6.9">la 5.6.9</a>, est donnée par la série</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/heat_wireisolexfig.html">
+\begin{equation*}
+u(x,t) = \frac{25}{3} + \sum_{\substack{n=2 \\ n \text{ pair } } }^\infty \left( \frac{-200}{\pi^2 n^2} \right) \cos ( n \pi x) \, e^{-n^2 \pi^2 \, 0.003 \, t}\text{.}
+\end{equation*}
+</div>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.9<span class="period">.</span></span><span class="space"> </span>Tracé de la température du fil isolé à la position <span class="process-math">\(x\)</span> et au temps <span class="process-math">\(t\text{.}\)</span></figcaption></figure> <div class="para">On remarque dans le graphique qu'au fil du temps, la température s'équilibre à travers le fil. Finalement, tous les termes sauf la constante meurent, et l'on a une température uniforme <span class="process-math">\(\frac{25}{3} \approx 8.33\)</span> sur toute la longueur du fil.</div></article></body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">Résolvons</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y' + 2xy = e^{x-x^2}, \qquad y(0) = -1\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Notons d'abord que <span class="process-math">\(p(x) = 2x\)</span> et que <span class="process-math">\(f(x) = e^{x-x^2}\text{.}\)</span> Le facteur intégrant est <span class="process-math">\(r(x) = e^{\int p(x)\, dx} = e^{x^2}\text{.}\)</span> On multiplie chaque côté de l'équation par <span class="process-math">\(r(x)\)</span> pour obtenir:</div>
+<div class="displaymath process-math">
+\begin{align*}
+e^{x^2} y' + 2xe^{x^2}y \amp  = e^{x-x^2} e^{x^2} ,\\
+\frac{d}{dx} \left[ e^{x^2} y \right] \amp = e^x \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">On intègre:</div>
+<div class="displaymath process-math">
+\begin{align*}
+e^{x^2} y \amp = e^x +C ,\\
+y \amp = e^{x-x^2} + C e^{-x^2} \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Ensuite, on résout pour la condition initiale <span class="process-math">\(-1 = y(0) = 1 + C\text{,}\)</span> ce qui donne <span class="process-math">\(C=-2\text{.}\)</span> La solution est donc:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y = e^{x-x^2} - 2 e^{-x^2}\text{.}
+\end{equation*}
+</div>
+</div></article></body>
+</html>

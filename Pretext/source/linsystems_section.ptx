@@ -1,0 +1,376 @@
+<section xml:id="linsystems_section">
+  <title>Systèmes linéaires d'équations différentielles ordinaires</title>
+  <introduction>
+    <p>
+      Commen&#xe7;ons par parler des fonctions matricielles et vectorielles.
+      Ces fonctions sont des matrices ou des vecteurs où un élément dépend d'une variable.
+      Si <m>t</m> est la variable indépendante,
+      une <em>fonction vectorielle
+          <idx><h>fonction vectorielle</h></idx>
+      </em> <m>\vec{x}(t)</m> s'écrit
+      <me>
+        \vec{x}(t) = \begin{bmatrix} x_1(t) \\ x_2(t) \\ \vdots \\ x_n(t) \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      De la même fa&#xe7;on, une <em>fonction matricielle
+          <idx><h>fonction matricielle</h></idx>
+      </em> <m>A(t)</m> s'écrit
+      <me>
+        A(t) = \begin{bmatrix} a_{11}(t) \amp  a_{12}(t) \amp  \cdots \amp  a_{1n}(t) \\ a_{21}(t) \amp  a_{22}(t) \amp  \cdots \amp  a_{2n}(t) \\ \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\ a_{n1}(t) \amp  a_{n2}(t) \amp  \cdots \amp  a_{nn}(t) \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      La dérivée <m>A'(t)</m> ou
+      <m>\frac{dA}{dt}</m> est simplement la fonction matricielle où le
+      <m>ij^{\text{e} }</m> élément est <m>a_{ij}'(t)</m>.
+    </p>
+    <p>
+      Les règles pour dériver des fonctions matricielles sont semblables à
+      celles pour les fonctions normales.
+      Supposons les fonctions matricielles <m>A(t)</m> et <m>B(t)</m>,
+      un scalaire <m>c</m> et une matrice constante <m>C</m>.
+      Alors,
+      <md>
+        <mrow>\bigl(A(t)+B(t)\bigr)' \amp  = A'(t) + B'(t),</mrow>
+        <mrow>\bigl(A(t)B(t)\bigr)' \amp  = A'(t)B(t) + A(t)B'(t),</mrow>
+        <mrow>\bigl(cA(t)\bigr)' \amp  = cA'(t),</mrow>
+        <mrow>\bigl(CA(t)\bigr)' \amp  = CA'(t),</mrow>
+        <mrow>\bigl(A(t)\,C\bigr)' \amp  = A'(t)\,C </mrow>
+      </md>.
+    </p>
+    <p>
+      Remarquez l'ordre de multiplication dans les deux dernières expressions.
+    </p>
+    <p>
+      Un <em>système linéaire d'EDO du premier ordre<idx><h>système linéaire d'EDO du premier ordre</h></idx>
+      </em> est un système qui peut s'écrire sous forme d'équation vectorielle
+      <me>
+        {\vec{x}}'(t) = P(t)\vec{x}(t) + \vec{f}(t)
+      </me>,
+      où <m>P(t)</m> est une fonction matricielle et où <m>\vec{x}(t)</m> et
+      <m>\vec{f}(t)</m> sont des fonctions vectorielles.
+      On supprime souvent la dépendance en fonction de <m>t</m> pour simplement écrire <m>{\vec{x}}' = P\vec{x} + \vec{f}</m>.
+      Une solution du système est une fonction vectorielle <m>\vec{x}</m> qui satisfait à
+      l'équation vectorielle.
+    </p>
+    <p>
+      Par exemple, les équations
+      <md>
+        <mrow>x_1' \amp = 2t x_1 + e^t x_2 + t^2 ,</mrow>
+        <mrow>x_2' \amp = \frac{x_1}{t} -x_2 + e^t</mrow>
+      </md>
+      peuvent s'écrire
+      <me>
+        {\vec{x}}' = \begin{bmatrix} 2t \amp  e^t \\ \nicefrac{1}{t} \amp  -1 \end{bmatrix} \vec{x} + \begin{bmatrix} t^2 \\ e^t \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      On se concentrera principalement sur des équations qui ne sont pas que linéaires,
+      mais aussi à
+      <em>coefficients constants
+          <idx><h>coefficients constants</h></idx>
+      </em>.
+      En d'autres termes, la matrice <m>P</m> sera constante,
+      elle ne dépendra pas de <m>t</m>.
+    </p>
+    <p>
+      Lorsque <m>\vec{f} = \vec{0}</m>
+      (vecteur nul),
+      on dit que le système est <em>homogène
+          <idx><h>homogeneous system</h></idx>
+      </em>.
+      Le principe de superposition s'applique aux systèmes linéaires homogènes comme pour les équations homogènes simples.
+    </p>
+    <theorem>
+      <title>Superposition</title>
+      <statement>
+        <p>
+              <idx><h>superposition</h></idx>
+          Admettons que <m>{\vec{x}}' = P\vec{x}</m> est un système linéaire d'EDO homogène.
+          Supposons que <m>\vec{x}_1,\vec{x}_2,\ldots,\vec{x}_n</m> sont <m>n</m> solutions des équations et que <m>c_1,c_2,\ldots,c_n</m> sont des constantes.
+          Alors,
+          <men xml:id="syshom_eq1">
+            \vec{x} = c_1 \vec{x}_1 + c_2 \vec{x}_2 + \cdots + c_n \vec{x}_n
+          </men>
+          est également une solution.
+          De plus, dans le cas d'un système de <m>n</m> équations (<m>P</m> est de taille <m>n\times n</m>) et quand
+          <m>\vec{x}_1,\vec{x}_2,\ldots,\vec{x}_n</m> sont linéairement indépendantes,
+          chaque solution <m>\vec{x}</m> peut s'écrire comme <xref ref="syshom_eq1"/>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Le concept d'indépendance linéaire d'une fonction vectorielle est le même que pour les fonctions ordinaires.
+      Les fonctions vectorielles
+      <m>\vec{x}_1,\vec{x}_2,\ldots,\vec{x}_n</m> sont linéairement indépendantes <idx><h>linearly independent</h><h>for vector-valued functions</h></idx> lorsque
+      <me>
+        c_1 \vec{x}_1 + c_2 \vec{x}_2 + \cdots + c_n \vec{x}_n = \vec{0}
+      </me>
+      n'a pour solution que <m>c_1 = c_2 = \cdots = c_n = 0</m> pour chaque <m>t</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          <m>\vec{x}_1 = \Bigl[ \begin{matrix}t^2 \\ t \end{matrix} \Bigr]</m>,
+          <m>\vec{x}_2 = \Bigl[ \begin{matrix}0 \\ 1+t \end{matrix} \Bigr]</m> et
+          <m>\vec{x}_3 = \Bigl[ \begin{matrix}-t^2 \\ 1 \end{matrix} \Bigr]</m> sont linéairement dépendantes parce que
+          <m>\vec{x}_1 + \vec{x}_3 = \vec{x}_2</m> pour chaque <m>t</m>.
+          Alors, <m>c_1 = 1</m>, <m>c_2 = -1</m>,
+          <m>c_3 = 1</m> fonctionnera dans l'équation ci-dessus.
+        </p>
+        <p>
+          Cependant, si l'on modifie légèrement l'exemple pour avoir <m>\vec{x}_1 = \Bigl[ \begin{matrix}t^2 \\ t \end{matrix}  \Bigr]</m>,
+          <m>\vec{x}_2 = \Bigl[ \begin{matrix}0 \\ t \end{matrix}  \Bigr]</m> et <m>\vec{x}_3 = \Bigl[ \begin{matrix}-t^2 \\ 1 \end{matrix} \Bigr]</m>,
+          alors les fonctions seront linéairement indépendantes.
+          Commen&#xe7;ons par écrire l'équation
+          <m>c_1 \vec{x}_1 + c_2 \vec{x}_2 + c_3 \vec{x}_3 = \vec{0}</m> et notons qu'elle doit être valide pour chaque <m>t</m>.
+          On obtient
+          <me>
+            c_1 \vec{x}_1 + c_2 \vec{x}_2 + c_3 \vec{x}_3 = \begin{bmatrix} c_1 t^2 - c_3 t^2 \\ c_1 t + c_2 t + c_3 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          En d'autres termes,
+          <m>c_1 t^2 - c_3 t^2 = 0</m> et <m>c_1 t + c_2 t + c_3 = 0</m>.
+          Si <m>t = 0</m>, la seconde équation devient <m>c_3 = 0</m>.
+          La première équation devient
+          <m>c_1 t^2 = 0</m> pour chaque <m>t</m>, alors <m>c_1 = 0</m>.
+          La seconde équation est simplement
+          <m>c_2 t = 0</m>, et donc <m>c_2 = 0</m>.
+          Alors, <m>c_1 = c_2 = c_3 = 0</m> est la solution unique,
+          et <m>\vec{x}_1</m>,
+          <m>\vec{x}_2</m> et <m>\vec{x}_3</m> sont linéairement indépendantes.
+        </p>
+      </statement>
+    </example>
+    <p>
+      La combinaison linéaire
+      <m>c_1 \vec{x}_1 + c_2 \vec{x}_2 + \cdots + c_n \vec{x}_n</m> peut toujours s'écrire
+      <me>
+        X(t)\,\vec{c}
+      </me>,
+      où <m>X(t)</m> est la matrice avec des colonnes
+      <m>\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_n</m> et où <m>\vec{c}</m> est le vecteur colonne avec les éléments <m>c_1, c_2, \ldots, c_n</m>.
+      En supposant que <m>\vec{x}_1,\vec{x}_2,\ldots,\vec{x}_n</m> sont linéairement indépendantes,
+      la fonction matricielle <m>X(t)</m> est appelée
+      <em>matrice fondamentale
+          <idx><h>matrice fondamentale</h></idx>
+      </em> ou <em>solution matricielle fondamentale<idx><h>solution matricielle fondamentale</h></idx>
+      </em>.
+    </p>
+    <p>
+      Pour résoudre des systèmes linéaires du premier ordre non homogènes,
+      on applique la même technique que pour les équations linéaires non homogènes.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Admettons que <m>{\vec{x}}' = P\vec{x} + \vec{f}</m> est un système linéaire d'EDO et que
+          <m>\vec{x}_p</m> est une solution particulière.
+          Chaque solution peut alors s'écrire
+          <me>
+            \vec{x} = \vec{x}_c + \vec{x}_p
+          </me>,
+          où <m>\vec{x}_c</m> est une solution de l' équation homogène associée<idx><h>équation homogène associée</h></idx>
+          (<m>{\vec{x}}' = P\vec{x}</m>).
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      On procède de la même fa&#xe7;on pour les systèmes et les équations simples.
+      On trouve une solution particulière à
+      l'équation non homogène et ensuite la solution générale de l'équation homogène associée, puis on additionne les deux.
+    </p>
+    <p>
+      Supposons que la solution générale trouvée est <m>{\vec{x}}' = P\vec{x} + \vec{f}</m>.
+      Ensuite, supposons une condition initiale de la forme
+      <me>
+        \vec{x}(t_0) = \vec{b}
+      </me>
+      pour un temps fixe <m>t_0</m> et pour un vecteur constant <m>\vec{b}</m>.
+      Admettons que <m>X(t)</m> est une solution matricielle fondamentale de l'équation homogène associée (c'est-à-dire que les colonnes de <m>X(t)</m> sont les solutions).
+      La solution générale peut s'écrire
+      <me>
+        \vec{x}(t) = X(t)\,\vec{c} + \vec{x}_p(t)
+      </me>.
+    </p>
+    <p>
+      On cherche un vecteur <m>\vec{c}</m> tel que
+      <me>
+        \vec{b} = \vec{x}(t_0) = X(t_0)\,\vec{c} + \vec{x}_p(t_0)
+      </me>.
+    </p>
+    <p>
+      En d'autres termes,
+      on résout le système d'équations linéaires non homogène pour <m>\vec{c}</m> :
+      <me>
+        X(t_0)\,\vec{c} = \vec{b} - \vec{x}_p(t_0)
+      </me>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          À la <xref ref="sec_introtosys">section</xref>,
+          le système a été résolu,
+          <md>
+            <mrow>x_1' \amp  = x_1 ,</mrow>
+            <mrow>x_2' \amp  = x_1 - x_2 </mrow>
+          </md>,
+          pour des conditions initiales <m>x_1(0) = 1</m>, <m>x_2(0) = 2</m>.
+          Considérons ce problème avec la terminologie de cette section.
+        </p>
+        <p>
+          Le système est homogène,
+          alors <m>\vec{f}(t) = \vec{0}</m>.
+          Le système et les conditions initiales s'écrivent
+          <me>
+            {\vec{x}}' = \begin{bmatrix} 1 \amp  0 \\ 1 \amp  -1 \end{bmatrix} \vec{x} , \qquad \vec{x}(0) = \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          On a trouvé que la solution générale est
+          <m>x_1 = c_1 e^t</m> et <m>x_2 = \frac{c_1}{2}e^{t} + c_2e^{-t}</m>.
+          Si <m>c_1=1</m> et <m>c_2=0</m>,
+          la solution est <m>\left[ \begin{matrix}e^t \\ (1/2) e^t \end{matrix}  \right]</m>.
+          En prenant <m>c_1=0</m> et <m>c_2=1</m>,
+          on obtient <m>\left[ \begin{matrix}0 \\ e^{-t} \end{matrix}  \right]</m>.
+          Ces deux solutions sont linéairement indépendantes,
+          comme on le constate en prenant <m>t=0</m> et en remarquant que les vecteurs constants résultants sont linéairement indépendants.
+          En notation matricielle, une solution matricielle fondamentale est donc
+          <me>
+            X(t) = \begin{bmatrix} e^t \amp  0 \\ \frac{1}{2} e^t \amp  e^{-t} \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          Afin de résoudre le problème avec les valeurs initiales,
+          on résout pour <m>\vec{c}</m> dans l'équation
+          <me>
+            X(0)\,\vec{c} = \vec{b}
+          </me>
+          ou
+          <me>
+            \begin{bmatrix} 1 \amp  0 \\ \frac{1}{2} \amp  1 \end{bmatrix} \vec{c} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          Une opération élémentaire unique sur une ligne montre que <m>\vec{c} = \left[ \begin{matrix}1 \\ 3/2 \end{matrix}  \right]</m>.
+          La solution est
+          <me>
+            \vec{x}(t) = X(t)\,\vec{c} = \begin{bmatrix} e^t \amp  0 \\ \frac{1}{2} e^t \amp  e^{-t} \end{bmatrix} \begin{bmatrix} 1 \\ \frac{3}{2} \end{bmatrix} = \begin{bmatrix} e^t \\ \frac{1}{2} e^t + \frac{3}{2} e^{-t} \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          Cette nouvelle solution est conforme à celle obtenue à
+          la <xref ref="sec_introtosys">section</xref>.
+        </p>
+      </statement>
+    </example>
+  </introduction>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          &#xc9;crivez le système <m>x_1' = 2 x_1 - 3t x_2 + \sin t</m>,
+          <m>x_2' = e^t x_1 + 3 x_2 + \cos t</m> sous la forme <m>{\vec{x}}' = P(t) \vec{x} + \vec{f}(t)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          \begin{tasks} \task Vérifiez que le système
+          <m>{\vec{x}}' = \left[ \begin{matrix}1 \amp 3 \\ 3 \amp 1 \end{matrix} \right] \vec{x}</m> a les deux solutions <m>\left[ \begin{matrix}1 \\ 1 \end{matrix} \right] e^{4t}</m> et
+          <m>\left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{-2t}</m>. \task &#xc9;crivez la solution générale. \task &#xc9;crivez la solution générale sous la forme <m>x_1 = ?</m>,
+          <m>x_2 = ?</m> (i.e. écrivez la formule pour chaque élément de la solution). \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>\left[ \begin{matrix}1 \\ 1 \end{matrix} \right] e^{t}</m> et
+          <m>\left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{t}</m> sont linéairement indépendantes.
+          Conseil : Utilisez <m>t=0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>\left[ \begin{matrix}1 \\ 1 \\ 0 \end{matrix} \right] e^{t}</m> et <m>\left[ \begin{matrix}1 \\ -1 \\ 1 \end{matrix} \right] e^{t}</m> et
+          <m>\left[ \begin{matrix}1 \\ -1 \\ 1 \end{matrix} \right] e^{2t}</m> sont linéairement indépendantes.
+          Conseil : Vous devez faire preuve de plus d'imagination qu'à
+          l'exercice précédent.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>\left[ \begin{matrix}t \\ t^2 \end{matrix} \right]</m> et
+          <m>\left[ \begin{matrix}t^3 \\ t^4 \end{matrix} \right]</m> sont linéairement indépendants.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prenez le système <m>x_1' + x_2' = x_1</m> et
+          <m>x_1' - x_2' = x_2</m>. \begin{tasks} \task &#xc9;crivez-le sous la forme
+          <m>A {\vec{x}}' = B \vec{x}</m> pour des matrices <m>A</m> et <m>B</m>. \task Calculez <m>A^{-1}</m> et utilisez le résultat pour écrire le système sous la forme <m>{\vec{x}}' = P \vec{x}</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>\left[ \begin{matrix}e^{2t} \\ e^t \end{matrix} \right]</m> et
+          <m>\left[ \begin{matrix}e^{t} \\ e^{2t} \end{matrix} \right]</m> sont linéairement indépendants?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Yes. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>\left[ \begin{matrix}\cosh(t) \\ 1 \end{matrix} \right]</m>,
+          <m>\left[ \begin{matrix}e^{t} \\ 1 \end{matrix} \right]</m> et
+          <m>\left[ \begin{matrix}e^{-t} \\ 1 \end{matrix} \right]</m> sont linéairement indépendants?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> No.
+      <m>2 \left[ \begin{matrix}\cosh(t) \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{t} \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{-t} \\ 1 \end{matrix} \right] = \vec{0}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          &#xc9;crivez <m>x'=3x-y+e^t</m>,
+          <m>y'=tx</m> en notation matricielle.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\left[ \begin{matrix}x \\ y \end{matrix} \right] ' = \left[ \begin{matrix}3 \amp -1 \\ t \amp 0 \end{matrix} \right] \left[ \begin{matrix}x \\ y \end{matrix} \right] + \left[ \begin{matrix}e^{t} \\ 0 \end{matrix} \right]</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          \begin{tasks} \task &#xc9;crivez <m>x_1'=2tx_2</m>,
+          <m>x_2'=2tx_2</m> en notation matricielle. \task Résolvez et écrivez la solution en notation matricielle. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
+      <m>\vec{x}\,' = \left[ \begin{matrix}0 \amp 2t \\ 0 \amp 2t \end{matrix} \right] \vec{x}</m> b) <m>\vec{x} = \left[ \begin{matrix}C_2 e^{t^2} + C_1 \\ C_2 e^{t^2} \end{matrix} \right]</m> }
+    </p>
+  </subsection>
+</section>

@@ -1,0 +1,629 @@
+<section xml:id="ts_section">
+  <title>Séries trigonométriques</title>
+  <subsection>
+    <title>Fonctions périodiques et motivations</title>
+    <p>
+      Afin de motiver l'étude des séries de Fourier,
+      considérons le problème suivant:
+      <men xml:id="ts_deq">
+        x'' + \omega_0^2 x = f(t)
+      </men>
+      pour une certaine fonction périodique <m>f(t)</m>.
+      On a déjà résolu
+      <men xml:id="ts_deqcos">
+        x'' + \omega_0^2 x = F_0 \cos ( \omega t)
+      </men>.
+    </p>
+    <p>
+      Une manière de résoudre <xref ref="ts_deq"/> est de décomposer <m>f(t)</m> comme une somme de cosinus
+      (et de sinus)
+      et de résoudre plusieurs problèmes de la forme <xref ref="ts_deqcos"/>.
+      On utilise ensuite le principe de superposition pour additionner toutes les solutions obtenues pour obtenir la solution de <xref ref="ts_deq"/>.
+    </p>
+    <p>
+      Avant de procéder,
+      parlons un peu plus en détail des fonctions périodiques.
+      Une fonction est <em>périodique
+          <idx><h>périodique</h></idx>
+      </em> avec période <m>P</m> si <m>f(t) = f(t+P)</m> pour tout <m>t</m>.
+      On dit alors que <m>f(t)</m> est <m>P</m>-périodique.
+      On note qu'une fonction <m>P</m>-périodique est aussi <m>2P</m>-périodique,
+      <m>3P</m>-périodique et ainsi de suite.
+      Par exemple, <m>\cos (t)</m> et
+      <m>\sin (t)</m> sont <m>2\pi</m>-périodiques.
+      Les fonctions constantes sont des exemples extrêmes:
+      elles sont périodiques pour n'importe quelle période
+      (exercice).
+    </p>
+    <p>
+      Normalement,
+      on commence avec la fonction <m>f(t)</m> définie sur un certain intervalle <m>[-L,L]</m> et l'on veut
+      <em>prolonger périodiquement</em>
+          <idx><h>extend periodically</h></idx>
+          <idx><h>periodic extension</h></idx> <m>f(t)</m> pour qu'elle devienne une fonction <m>2L</m>-périodique.
+      On fait cette extension en définissant une nouvelle fonction <m>F(t)</m> telle que,
+      pour tout <m>t</m> dans <m>[-L,L]</m>, <m>F(t) = f(t)</m>.
+      Pour tout <m>t</m> dans <m>[L,3L]</m>,
+      on définit <m>F(t) = f(t-2L)</m>;
+      pour <m>t</m> dans <m>[-3L,-L]</m>,
+      <m>F(t) = f(t+2L)</m>, et ainsi de suite.
+      Pour faire ce travail, on a besoin de <m>f(-L) = f(L)</m>.
+      On pourrait aussi commencer avec <m>f</m> définie seulement sur un demi-intervalle ouvert <m>(-L,L]</m> et on définit <m>f(-L) = f(L)</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Définissons <m>f(t) = 1-t^2</m> sur <m>[-1,1]</m>.
+          Maintenant, on prolonge <m>f(t)</m> périodiquement pour obtenir une fonction 2-périodique.
+          Voir <xref ref="ts_perextofinvertedparabolafig">la</xref>.
+        </p>
+        <figure xml:id="ts_perextofinvertedparabolafig">
+          <caption>Prolongement 2-périodique de la fonction
+          <m>1-t^2</m>.</caption>
+          \diffyincludegraphics{width=3in}{width=4.5in}{ts-perextofinvertedparabola}
+        </figure>
+      </statement>
+    </example>
+    <p>
+      On doit faire attention à
+      bien distinguer <m>f(t)</m> de ses différents prolongements.
+      Une erreur commune est de supposer que la formule pour <m>f(t)</m> fonctionne toujours pour ses prolongements.
+      Il faut faire preuve de prudence,
+      particulièrement lorsque <m>f(t)</m> est périodique,
+      mais avec une période différente.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Définissez <m>f(t) = \cos t</m> sur <m>[\nicefrac{-\pi}{2},\nicefrac{\pi}{2}]</m>.
+          Prenez l'extension <m>\pi</m>-périodique et esquissez le graphe.
+          Comparez avec le graphe de <m>\cos t</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection>
+    <title>Produit scalaire et décomposition de vecteurs propres</title>
+    <p>
+      Comme on l'a remarqué précédemment,
+      lorsque <m>A</m> est une <em>matrice symétrique
+          <idx><h>matrice symétrique</h></idx>
+      </em>, c'est-à-dire lorsque <m>A^T = A</m>,
+      les vecteurs propres de <m>A</m> sont orthogonaux.
+      Ici, le mot <em>orthogonal</em><idx><h>orthogonal</h><h>vectors</h></idx> signifie que si <m>\vec{v}</m> et <m>\vec{w}</m> sont deux vecteurs propres de <m>A</m> pour des valeurs propres distinctes,
+      alors <m>\langle \vec{v} , \vec{w} \rangle = 0</m>.
+      Dans ce cas,
+      le produit scalaire <m>\langle \vec{v} , \vec{w} \rangle</m> est le
+      <em>produit scalaire à
+      dimensions finies<idx><h>produit scalaire à
+      dimensions finies</h></idx>
+      </em>, que l'on peut calculer comme <m>\vec{v}^T\vec{w}</m>.
+    </p>
+    <p>
+      Pour décomposer un vecteur <m>\vec{v}</m> en termes de vecteurs mutuellement orthogonaux
+      <m>\vec{w}_1</m> et <m>\vec{w}_2</m>, on écrit
+      <me>
+        \vec{v} = a_1 \vec{w}_1  + a_2 \vec{w}_2
+      </me>.
+    </p>
+    <p>
+      On trouve la formule pour <m>a_1</m> et <m>a_2</m>.
+      D'abord, on calcule
+      <me>
+        \langle \vec{v} , \vec{w_1} \rangle = \langle a_1 \vec{w}_1  + a_2 \vec{w}_2 , \vec{w_1} \rangle = a_1 \langle \vec{w}_1 , \vec{w_1} \rangle + a_2 \underbrace{\langle \vec{w}_2 , \vec{w_1} \rangle}_{=~0} = a_1 \langle \vec{w}_1 , \vec{w_1} \rangle
+      </me>.
+    </p>
+    <p>
+      Ensuite,
+      <me>
+        a_1 = \frac{\langle \vec{v} , \vec{w_1} \rangle}{ \langle \vec{w}_1 , \vec{w_1} \rangle}
+      </me>.
+    </p>
+    <p>
+      De fa&#xe7;on semblable,
+      <me>
+        a_2 = \frac{\langle \vec{v} , \vec{w_2} \rangle}{ \langle \vec{w}_2 , \vec{w_2} \rangle}
+      </me>.
+    </p>
+    <p>
+      (Vous avez possiblement vu cette formule dans un cours d'algèbre linéaire.)
+    </p>
+    <example>
+      <statement>
+        <p>
+          &#xc9;crivons <m>\vec{v} = \left[ \begin{matrix}2 \\ 3 \end{matrix} \right]</m> comme une combinaison linéaire de
+          <m>\vec{w_1} = \left[ \begin{matrix}1 \\ -1 \end{matrix} \right]</m> et de <m>\vec{w_2} = \left[ \begin{matrix}1 \\ 1 \end{matrix} \right]</m>.
+        </p>
+        <p>
+          D'abord, on note que <m>\vec{w}_1</m> et <m>\vec{w}_2</m> sont orthogonaux,
+          puisque <m>\langle \vec{w}_1 , \vec{w}_2 \rangle = 1(1) + (-1)1 = 0</m>.
+          Alors,
+          <md>
+            <mrow>\amp  a_1 = \frac{\langle \vec{v} , \vec{w_1} \rangle}{ \langle \vec{w}_1 , \vec{w_1} \rangle} = \frac{2(1) + 3(-1)}{1(1) + (-1)(-1)} = \frac{-1}{2} ,</mrow>
+            <mrow>\amp  a_2 = \frac{\langle \vec{v} , \vec{w_2} \rangle}{ \langle \vec{w}_2 , \vec{w_2} \rangle} = \frac{2 + 3}{1 + 1} = \frac{5}{2} </mrow>
+          </md>.
+        </p>
+        <p>
+          Ainsi,
+          <me>
+            \begin{bmatrix} 2 \\ 3 \end{bmatrix} = \frac{-1}{2} \begin{bmatrix} 1 \\ -1 \end{bmatrix} + \frac{5}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+          </me>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Séries trigonométriques</title>
+    <p>
+      Plutôt que de décomposer un vecteur en termes de vecteurs propres d'une matrice,
+      on va décomposer une fonction en termes de fonctions propres associées à
+      un problème de valeurs propres.
+      Le problème de valeurs propres qu'on utilise pour les séries de Fourier est
+      <me>
+        x'' + \lambda x = 0,  x(-\pi) = x(\pi),  x'(-\pi) = x'(\pi)
+      </me>.
+    </p>
+    <p>
+      Nous avons calculé les fonctions propres dans l'<xref ref="bvp-periodic_example">exemple</xref> : <m>1</m>,
+      <m>\cos (k t)</m> et <m>\sin (k t)</m>.
+      Ainsi, on veut trouver une représentation d'une fonction <m>2\pi</m>-périodique <m>f(t)</m> de la forme suivante:
+      <me>
+        \mybxbg{~~ f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t) . ~~}
+      </me>
+    </p>
+    <p>
+      Cette série s'appelle une <em>série de Fourier
+          <idx><h>série de Fourier</h></idx>
+      </em><fn>
+      Nommée d'après le mathématicien fran&#xe7;ais
+      <url href="https://en.wikipedia.org/wiki/Joseph_Fourier">Jean Baptiste Joseph Fourier</url>
+      (1768-1830).
+      </fn> ou <em>série trigonométrique<idx><h>série trigonométrique</h></idx>
+      </em> pour <m>f(t)</m>.
+      Par convention,
+      on écrit le coefficient de la fonction propre 1 comme <m>\frac{a_0}{2}</m>.
+      On peut y penser comme à
+      <m>1 = \cos (0t)</m>.
+    </p>
+    <p>
+      Comme pour les matrices, on veut trouver une <em>projection
+          <idx><h>projection</h></idx>
+      </em> de <m>f(t)</m> sur un sous-espace donné
+      par les fonctions propres.
+      Alors, on veut définir le <em>produit scalaire d'une fonction<idx><h>produit scalaire d'une fonction</h></idx>
+      </em>.
+      Par exemple, pour trouver <m>a_n</m>,
+      on veut calculer <m>\langle \, f(t), \, \cos (nt) \, \rangle</m>.
+      On définit le produit scalaire comme
+      <me>
+        \langle \, f(t), \, g(t) \, \rangle \overset{\text{ d\'ef } }{=} \int_{-\pi}^\pi f(t) \, g(t) \, dt
+      </me>.
+    </p>
+    <p>
+      Avec cette définition du produit scalaire,
+      on voit dans les sections précédentes que les fonctions propres <m>\cos (kt)</m>
+      (incluant la fonction propre constante)
+      et <m>\sin (kt)</m> sont <em>orthogonales<idx><h>orthogonal</h><h>functions</h></idx>
+      </em> dans le sens que
+      <md>
+        <mrow>\langle \, \cos (mt), \, \cos (nt) \, \rangle = 0 \amp  \qquad \text{ pour }  m \not= n ,</mrow>
+        <mrow>\langle \, \sin (mt), \, \sin (nt) \, \rangle = 0 \amp  \qquad \text{ pour }  m \not= n ,</mrow>
+        <mrow>\langle \, \sin (mt), \, \cos (nt) \, \rangle = 0 \amp  \qquad \text{ pour tout }  m \text{ et }  n </mrow>
+      </md>.
+    </p>
+    <p>
+      Pour <m>n=1,2,3,\ldots</m>, on a
+      <md>
+        <mrow>\langle \, \cos (nt), \, \cos (nt) \, \rangle \amp = \int_{-\pi}^\pi \cos(nt)\cos(nt) \, dt = \pi,</mrow>
+        <mrow>\langle \, \sin (nt), \, \sin (nt) \, \rangle \amp = \int_{-\pi}^\pi \sin(nt)\sin(nt) \, dt = \pi</mrow>
+      </md>,
+      par du calcul élémentaire.
+      Pour la constante, on obtient
+      <me>
+        \langle \, 1, \, 1 \, \rangle = \int_{-\pi}^\pi 1 \cdot 1 \, dt = 2\pi
+      </me>.
+    </p>
+    <p>
+      Les coefficients sont donnés par
+      <me>
+        \mybxbg{~~ \begin{aligned} \amp  a_n = \frac{\langle \, f(t), \, \cos (nt) \, \rangle}{\langle \, \cos (nt) \, , \, \cos (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \, dt , \\ \amp  b_n = \frac{\langle \, f(t), \, \sin (nt) \, \rangle}{\langle \, \sin (nt), \, \sin (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \, dt . \end{aligned} ~~}
+      </me>
+    </p>
+    <p>
+      On compare ces expressions avec les exemples à dimensions finies.
+      Pour <m>a_0</m>, on obtient une formule similaire :
+      <me>
+        \mybxbg{~~ a_0 = 2 \frac{\langle \, f(t), \, 1 \, \rangle}{\langle \, 1, \, 1 \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \, dt . ~~}
+      </me>
+    </p>
+    <p>
+      Regardons la formule utilisée pour les propriétés d'orthogonalité. Supposons donc que:
+      <me>
+        f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t)
+      </me>.
+    </p>
+    <p>
+      Alors, pour <m>m \geq 1</m>, on a
+      <me>
+        \begin{split} \langle \, f(t),\,\cos (mt) \, \rangle \amp  = \Bigl\langle \, \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t),\, \cos (mt) \, \Bigr\rangle \\ \amp  = \frac{a_0}{2} \langle \, 1, \, \cos (mt) \, \rangle + \sum_{n=1}^\infty a_n \langle \, \cos (nt), \, \cos (mt) \, \rangle + b_n \langle \, \sin (n t), \, \cos (mt) \, \rangle \\ \amp  = a_m \langle \, \cos (mt), \, \cos (mt) \, \rangle . \end{split}
+      </me>
+    </p>
+    <p>
+      Ainsi, <m>a_m = \frac{\langle \, f(t), \, \cos (mt) \, \rangle}{\langle \, \cos (mt), \, \cos (mt) \, \rangle}</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Faites les calculs pour <m>a_0</m> et pour <m>b_m</m>.
+        </p>
+      </statement>
+    </exercise>
+    <example>
+      <statement>
+        <p>
+          Prenons la fonction
+          <me>
+            f(t) = t
+          </me>
+          pour <m>t</m> dans <m>(-\pi,\pi]</m>.
+          Nous allons calculer la série de Fourier du prolongement périodique de <m>f(t)</m>.
+          Le terme <em>dents de scie
+              <idx><h>dents de scie</h></idx>
+          </em> est utilisé pour désigner les fonctions de cette forme.
+          Le graphe de <m>f(t)</m> se trouve à
+          <xref ref="ts_sawtoothfig">la</xref>.
+        </p>
+        <figure xml:id="ts_sawtoothfig">
+          <caption>Le graphe d'une fonction en dents de scie.</caption>
+          \diffyincludegraphics{width=3in}{width=4.5in}{ts-sawtooth}
+        </figure>
+        <p>
+          Calculons les coefficients.
+          On commence avec <m>a_0</m>:
+          <me>
+            a_0 = \frac{1}{\pi} \int_{-\pi}^\pi t \,dt = 0
+          </me>.
+        </p>
+        <p>
+          Nous nous servirons souvent du résultat suivant:
+          sur un intervalle de la forme <m>[-L,L]</m>,
+          l'intégrale d'une fonction impaire est nulle.
+          On rappelle qu'une <em>fonction impaire
+              <idx><h>fonction impaire</h></idx>
+          </em> est une fonction <m>\varphi(t)</m> telle que <m>\varphi(-t) = -\varphi(t)</m>.
+          Par exemple, les fonctions <m>t</m>, <m>\sin t</m> ou
+          (celle qui est importante présentement)
+          <m>t \cos (nt)</m> sont toutes des fonctions impaires.
+          Ainsi,
+          <me>
+            a_n = \frac{1}{\pi} \int_{-\pi}^\pi t \cos (nt) \,dt = 0
+          </me>.
+        </p>
+        <p>
+          Calculons maintenant <m>b_n</m>.
+          Deuxième résultat utile:
+          sur un intervalle de la forme <m>[-L,L]</m>,
+          l'intégrale d'une fonction paire est égale à
+          deux fois l'intégrale de cette même fonction sur <m>[0,L]</m>.
+          On rappelle qu'une <em>fonction paire
+              <idx><h>fonction paire</h></idx>
+          </em> est une fonction <m>\varphi(t)</m> telle que <m>\varphi(-t) = \varphi(t)</m>.
+          Par exemple, <m>t \sin (nt)</m> est paire, et donc:
+          <me>
+            \begin{split} b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi t \sin (nt) \,dt \\ \amp  = \frac{2}{\pi} \int_{0}^\pi t \sin (nt) \,dt \\ \amp  = \frac{2}{\pi} \left( \left[ \frac{-t \cos (nt)}{n} \right]_{t=0}^{\pi} + \frac{1}{n} \int_{0}^\pi \cos (nt) \,dt \right) \\ \amp  = \frac{2}{\pi} \left( \frac{-\pi \cos (n\pi)}{n} + 0 \right) \\ \amp  =  \frac{-2 \cos (n\pi)}{n} =  \frac{2 \,{(-1)}^{n+1}}{n} . \end{split}
+          </me>
+        </p>
+        <p>
+          On a utilisé ici le fait suivant :
+          <me>
+            \cos (n\pi) = {(-1)}^n = \begin{cases} 1 \amp  \text{ si }  n \text{ est pair }  , \\ -1 \amp  \text{ si }  n \text{ est impair }  . \end{cases}
+          </me>
+        </p>
+        <p>
+          La série est
+          <me>
+            \sum_{n=1}^\infty \frac{2 \,{(-1)}^{n+1}}{n} \, \sin (n t)
+          </me>.
+        </p>
+        <p>
+          &#xc9;crivons les trois premières harmoniques de la série pour <m>f(t)</m>:
+          <me>
+            2 \, \sin (t) - \sin (2t) +\frac{2}{3} \sin (3t) + \cdots
+          </me>
+        </p>
+        <p>
+          Le graphe des trois premiers termes de la série et celui des vingt premiers se trouvent à
+          <xref ref="ts_sawtoothfsfig">la</xref>.
+        </p>
+        <figure xml:id="ts_sawtoothfsfig">
+          <caption>Trois premières harmoniques (à gauche) et vingt premières (à droite) d'une fonction en dents de scie.</caption>
+          \diffyincludegraphics{width=6.24in}{width=9in}{ts-sawtooth-fs3-fs20}
+        </figure>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Prenons la fonction
+          <me>
+            f(t) = \begin{cases} 0 \amp  \text{ si }  \;{-\pi} \lt  t \leq 0 , \\ \pi \amp  \text{ si }  \;0 \lt  t \leq \pi . \end{cases}
+          </me>
+        </p>
+        <p>
+          [4]Prolongeons <m>f(t)</m> périodiquement et écrivons-la comme une série de Fourier.
+          Cette fonction ou une de ses variantes apparaissent dans plusieurs applications,
+          et on les appelle des <em>vagues carrées
+              <idx><h>vagues carrées</h></idx>
+          </em>.
+          Le graphe du prolongement de <m>f(t)</m> est montré à
+          <xref ref="ts_squarewavefig">la</xref>.
+        </p>
+        <figure xml:id="ts_squarewavefig">
+          <caption>Le graphe d'une vague carrée.</caption>
+          \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave}
+        </figure>
+        <p>
+          Maintenant, on calcule les coefficients.
+          On commence avec <m>a_0</m> :
+          <me>
+            a_0 = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \,dt = \frac{1}{\pi} \int_{0}^\pi \pi \,dt = \pi
+          </me>.
+        </p>
+        <p>
+          Ensuite,
+          <me>
+            a_n = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \,dt = \frac{1}{\pi} \int_{0}^\pi \pi \cos (nt) \,dt = 0
+          </me>.
+        </p>
+        <p>
+          Et finalement,
+          <me>
+            \begin{split} b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \,dt \\ \amp  = \frac{1}{\pi} \int_{0}^\pi \pi \sin (nt) \,dt \\ \amp  = \left[ \frac{- \cos (nt)}{n} \right]_{t=0}^\pi \\ \amp  = \frac{1 - \cos (\pi n)}{n} = \frac{1 - {(-1)}^n}{n} = \begin{cases} \frac{2}{n} \amp  \text{ si }  n \text{ est impair }  , \\ 0 \amp  \text{ si }  n \text{ est pair }  . \end{cases} \end{split}
+          </me>
+        </p>
+        <p>
+          La série de Fourier est
+          <me>
+            \frac{\pi}{2} +  \sum_{\substack{n=1\\n \text{ impair } } }^\infty \frac{2}{n} \sin (n t) = \frac{\pi}{2} + \sum_{k=1}^\infty \frac{2}{2k-1} \sin \bigl( (2k-1)\, t \bigr)
+          </me>.
+        </p>
+        <p>
+          Voici les trois premières harmoniques de la série pour <m>f(t)</m> :
+          <me>
+            \frac{\pi}{2} + 2 \, \sin (t) + \frac{2}{3}  \sin (3t) + \cdots
+          </me>
+        </p>
+        <p>
+          Le graphe des trois premières harmoniques de la série
+          (et aussi des vingt premières)
+          se trouve à
+          <xref ref="ts_squarewavefsfig">la</xref>.
+        </p>
+        <figure xml:id="ts_squarewavefsfig">
+          <caption>Trois premières harmoniques (à gauche) et vingt premières harmoniques (à droite) d'une vague carrée.</caption>
+          \diffyincludegraphics{width=6.24in}{width=9in}{ts-squarewave-fs3-fs20}
+        </figure>
+      </statement>
+    </example>
+    <p>
+      On a jusqu'ici évité
+      la question de la convergence.
+      Par exemple,
+      si <m>f(t)</m> est une vague carrée, l'égalité
+      <me>
+        f(t) = \frac{\pi}{2} + \sum_{k=1}^\infty \frac{2}{2k-1} \sin \bigl( (2k-1)\, t \bigr)
+      </me>
+      tient seulement pour les valeurs de <m>t</m> où <m>f(t)</m> est continue.
+      On n'obtient pas l'égalité
+      pour <m>t=-\pi,0,\pi</m> et pour toutes les autres discontinuités de <m>f(t)</m>.
+      Ce n'est pas difficile de voir que lorsque <m>t</m> est un entier muliple de <m>\pi</m>
+      (ce qui inclut la discontinuité),
+      alors
+      <me>
+        \frac{\pi}{2} + \sum_{k=1}^\infty \frac{2}{2k-1} \sin \bigl( (2k-1)\, t \bigr) = \frac{\pi}{2}
+      </me>.
+    </p>
+    <p>
+      Redéfinissons <m>f(t)</m> sur <m>[-\pi,\pi]</m> comme suit,
+      <me>
+        f(t) = \begin{cases} 0 \amp  \text{ si }  \; {-\pi} \lt  t \lt  0 , \\ \pi \amp  \text{ si }  \; 0 \lt  t \lt  \pi , \\ \nicefrac{\pi}{2} \amp  \text{ si }  \; t = -\pi, t = 0\text{ ou } t = \pi, \end{cases}
+      </me>
+      et prolongeons périodiquement.
+      Maintenant, la série est égale au prolongement de <m>f(t)</m> partout,
+      y compris aux points de discontinuité. Généralement,
+      on ne s'en fera pas avec le changement de valeur des fonctions à certains points
+      (en nombre fini).
+    </p>
+    <p>
+      On discutera davantage de la convergence dans la prochaine section.
+      Cependant, mentionnons brièvement un effet de la discontinuité ici.
+      On zoome dans le voisinage de la discontinuité
+      d'une vague carrée.
+      Ensuite, on trace le graphe des 100 premières harmoniques,
+      comme à
+      <xref ref="ts_squarewavegibbsfig">la</xref>.
+      Tandis que la série est une très bonne approximation loin des discontinuités, l'erreur
+      (le dépassement)
+      dans le voisinage de la discontinuité à
+      <m>t=\pi</m> ne semble pas devenir plus petite.
+      Ce comportement est connu sous le nom de
+      <em>phénomène de Gibbs<idx><h>phénomène de Gibbs</h></idx>
+      </em>.
+      La région où l'erreur est large ne diminue pas,
+      même lorsqu'on prend plus de termes dans la série.
+    </p>
+    <figure xml:id="ts_squarewavegibbsfig">
+      <caption>Phénomène de Gibbs en action.</caption>
+      \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave-gibbs}
+    </figure>
+    <p>
+      On peut penser à une fonction périodique comme à un
+      <q>signal</q>
+      obtenu par la superposition de plusieurs signaux de fréquence pure.
+      Par exemple, on peut penser à
+      la vague carrée comme un à
+      ton d'une certaine fréquence de base.
+      Cette fréquence est nommée la
+      <em>fréquence fondamentale<idx><h>fréquence fondamentale</h></idx>
+      </em>.
+      La vague carrée sera la superposition de plusieurs tons purs de fréquences qui sont des multiples de la fréquence fondamentale.
+      En musique, les plus hautes fréquences s'appellent les <em>harmoniques
+          <idx><h>harmoniques</h></idx>
+      </em>.
+      L'ensemble des fréquences apparaissant s'appelle le <em>spectre
+          <idx><h>spectre</h></idx>
+      </em> du signal.
+      Par contre, une onde sinusoïdale est un ton pur
+      (pas d'harmonique).
+      La manière la plus simple de créer un son en utilisant un ordinateur est avec des vagues carrées,
+      et le son est vraiment différent du ton pur.
+      Si vous avez déjà joué à
+      des jeux vidéo des années 1980,
+      vous avez entendu des sons de vagues carrées.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur
+          <m>[-\pi,\pi]</m> comme <m>\sin (5t) + \cos (3t)</m>.
+          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur
+          <m>[-\pi,\pi]</m> comme <m>\lvert t \rvert</m>.
+          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur
+          <m>[-\pi,\pi]</m> comme <m>\lvert t \rvert^3</m>.
+          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur <m>(-\pi,\pi]</m> comme
+          <me>
+            f(t) = \begin{cases} -1 \amp  \text{ si }  \; {-\pi} \lt  t \leq 0 , \\ 1 \amp  \text{ si }  \; 0 \lt  t \leq \pi . \end{cases}
+          </me>
+        </p>
+        <p>
+          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur <m>(-\pi,\pi]</m> comme <m>t^3</m>.
+          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur <m>[-\pi,\pi]</m> comme <m>t^2</m>.
+          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Il y a une autre forme de la série de Fourier qui utilise l'exponentielle complexe <m>e^{int}</m> pour
+      <m>n=\ldots,-2,-1,0,1,2,\ldots</m> plutôt que <m>\cos(nt)</m> et
+      <m>\sin(nt)</m> pour <m>n</m> positif.
+      Cette forme pourrait être plus facile à
+      travailler à certains moments.
+      Elle est certainement plus compacte dans son écriture et il y a seulement une formule pour les coefficients.
+      Par contre, les coefficients sont des nombres complexes.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          \begin{samepage} Soit
+          <me>
+            f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t)
+          </me>.
+        </p>
+        <p>
+          Utilisez la formule d'Euler
+          <m>e^{i\theta} = \cos (\theta) + i \sin (\theta)</m> pour montrer qu'il existe des nombres complexes <m>c_m</m> tels que
+          <me>
+            f(t) = \sum_{m=-\infty}^\infty c_m e^{imt}
+          </me>.
+        </p>
+        <p>
+          Notez que la somme s'étend maintenant sur tous les entiers,
+          y compris les nombres négatifs.
+          Ne vous inquiétez pas de la convergence dans ce calcul.
+          Astuce: Il peut être préférable de partir de la forme exponentielle complexe et d'écrire la série comme
+          <me>
+            c_0 + \sum_{m=1}^\infty \Bigl( c_m e^{imt} + c_{-m} e^{-imt}  \Bigr)
+          </me>.
+        </p>
+        <p>
+          \end{samepage}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur
+          <m>[-\pi,\pi]</m> comme <m>f(t) = \sin(t)</m>.
+          Prolongez périodiquement et calculez la série de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sin(t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur
+          <m>(-\pi,\pi]</m> comme <m>f(t) = \sin(\pi t)</m>.
+          Prolongez périodiquement et calculez la série de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sum\limits_{n=1}^\infty \frac{(\pi-n) \sin( \pi n+{\pi}^{2}) +(\pi+n)\sin(\pi n-{\pi}^{2}) }{\pi {n}^{2}-{\pi}^{3}} \sin(nt)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur
+          <m>(-\pi,\pi]</m> comme <m>f(t) = \sin^2(t)</m>.
+          Prolongez périodiquement et calculez la série de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{1}{2}-\frac{1}{2}\cos(2t)</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Supposez que <m>f(t)</m> est défini sur<m>(-\pi,\pi]</m> comme <m>f(t) = t^4</m>.
+          Prolongez périodiquement et calculez la série de Fourier.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{\pi^4}{5} + \sum\limits_{n=1}^\infty \frac{{(-1)}^{n} (8{\pi}^{2}{n}^{2}-48) }{{n}^{4}} \cos(nt)</m> }
+    </p>
+  </subsection>
+</section>

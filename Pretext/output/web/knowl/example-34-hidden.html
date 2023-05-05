@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">Il est parfois facile de trouver la solution en résolvant un système pour une variable puis pour la seconde. Prenons le système du premier ordre</div>
+<div class="displaymath process-math">
+\begin{align*}
+y_1' \amp  = y_1 ,\\
+y_2' \amp  = y_1 - y_2 \text{,}
+\end{align*}
+</div>
+<div class="para">où <span class="process-math">\(y_1\)</span> et <span class="process-math">\(y_2\)</span> sont les variables dépendantes et où <span class="process-math">\(x\)</span> est la variable indépendante. Considérons les conditions initiales <span class="process-math">\(y_1(0) = 1\)</span> et <span class="process-math">\(y_2(0) = 2\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">On remarque que <span class="process-math">\(y_1 = C_1 e^x\)</span> est la solution générale de la première équation. En substituant ensuite ce <span class="process-math">\(y_1\)</span> dans la seconde équation, on obtient <span class="process-math">\(y_2' = C_1e^x - y_2\text{,}\)</span> qui est une équation linéaire du premier ordre facilement résoluble pour <span class="process-math">\(y_2\text{.}\)</span> Avec la méthode du facteur intégrant, on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^x y_2 = \frac{C_1}{2}e^{2x} + C_2
+\end{equation*}
+</div>
+<div class="para">ou <span class="process-math">\(y_2 = \frac{C_1}{2}e^{x} + C_2e^{-x}\text{.}\)</span> La solution générale du système est donc :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_1 = C_1 e^x , \qquad y_2 = \frac{C_1}{2}e^{x} + C_2e^{-x}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">On résout le système pour <span class="process-math">\(C_1\)</span> et <span class="process-math">\(C_2\)</span> pour les conditions initiales. On substitue <span class="process-math">\(x=0\)</span> et l'on trouve que <span class="process-math">\(C_1=1\)</span> et <span class="process-math">\(C_2=\nicefrac{3}{2}\text{.}\)</span> Alors, la solution est <span class="process-math">\(y_1 = e^x\)</span> et <span class="process-math">\(y_2 = (\nicefrac{1}{2}) e^x + (\nicefrac{3}{2}) e^{-x}\text{.}\)</span>
+</div></article></body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Systèmes bidimensionnels et leurs champs vectoriels</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Équations différentielles pour le génie">
+<meta property="book:author" content="Jiri Lebl">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Équations différentielles pour le génie</span></a></h1>
+<p class="byline">Jiri Lebl</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="eigenmethod_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="sys_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="FS_chapter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\theversion}{6.2}
+\newcommand{\nicefrac}[2]{\frac{#1}{#2}}
+\renewcommand{\bibname}{Lectures additionnelles}
+\def\wrapfigure{\wrapfloat{figure}}
+\def\wraptable{\wrapfloat{table}}
+\def\caption{\wf}
+\def\endwrapfigure{\endwrapfloat}
+\def\endwraptable{\endwrapfloat}
+\def\pagetotal{\maxdimen}
+\def\parshape{\WF}
+\def\everypar{\WF}
+\def\noexpand{\clearpage}
+\def\expandafter{\noexpand}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\noexpand{\float}
+\def\csname{endwrap#2\endcsname \endwrapfloat}
+\def\expandafter{\noexpand}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\myindex}[1]{#1\index{#1}}
+\newcommand{\myquote}[1]{``#1''}
+\newcommand{\sectionnewpage}{\clearpage}
+\newcommand{\EPref}[1]{#1}
+\newcommand{\BDref}[1]{#1}
+\newcommand{\theanswer}{\textbf{\theexercise:}}
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+\def\exampleclaim{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\exampleclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endexampleclaim{
+\addvspace{\medskipamount}}
+\renewcommand{\theremark}{\thesection.\arabic{remark}}
+\def\remarkclaim{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\remarkclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endremarkclaim{
+\addvspace{\medskipamount}}
+\newcommand{\figurevref}[1]{\ref{#1}}
+\newcommand{\figureref}[1]{\ref{#1}}
+\newcommand{\tablevref}[1]{\ref{#1}}
+\newcommand{\tableref}[1]{\ref{#1}}
+\newcommand{\chapterref}[1]{\ref{#1}}
+\newcommand{\Chapterref}[1]{\ref{#1}}
+\newcommand{\appendixref}[1]{\ref{#1}}
+\newcommand{\Appendixref}[1]{\ref{#1}}
+\newcommand{\sectionref}[1]{\ref{#1}}
+\newcommand{\subsectionref}[1]{\ref{#1}}
+\newcommand{\subsectionvref}[1]{\ref{#1}}
+\newcommand{\exercisevref}[1]{\ref{#1}}
+\newcommand{\exerciseref}[1]{\ref{#1}}
+\newcommand{\examplevref}[1]{\ref{#1}}
+\newcommand{\exampleref}[1]{\ref{#1}}
+\newcommand{\thmvref}[1]{\ref{#1}}
+\newcommand{\thmref}[1]{\ref{#1}}
+\newcommand{\addfakecontentsline}[1]{\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\addextraspacetotoc}{}
+\newcommand{\diffyincludegraphics}[3]{\includegraphics[#1]{figures/#3}}
+\newcommand{\diffypdfversion}[1]{#1}
+\newcommand{\mybeginframe}{\begin{tcolorbox}[colback=white,colframe=lightgray,left=5pt,right=5pt]}
+\newcommand{\myendframe}{\end{tcolorbox}}
+\newcommand{\mybxbg}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,top=1.5pt,bottom=1.5pt]{#1}}
+\newcommand{\mybxsm}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]{#1}}
+\newcommand{\diffytableofcontents}{
+\microtypesetup{protrusion=false}
+\microtypesetup{protrusion=true}
+}
+\newcommand{\infinity}{\infty}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="intro_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="notes_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Notes à propos de ce manuel</span></a></div></li>
+<li>
+<div class="toc-item"><a href="introde_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction aux équations différentielles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="introde_section.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Solutions d'équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-3" class="internal"><span class="codenumber">1.2.3</span> <span class="title">En pratique</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection_fourfundamental" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Quatre équations fondamentales</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-5" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="classification_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Classification des équations différentielles</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="classification_section.html#subsection-6" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="fo_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Équations du premier ordre</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="integralsols_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Intégrales en tant que solutions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="integralsols_section.html#subsection-7" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="slopefields_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Champs de direction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-8" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Champs de direction</span></a></div></li>
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-9" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Existence et unicité</span></a></div></li>
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-10" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="separable_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Équations séparables</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="separable_section.html#subsection-11" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Équations séparables</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-12" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Solutions implicites</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-13" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exemples d'équations séparables</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-14" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="intfactor_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Équations linéaires et facteur intégrant</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="intfactor_section.html#subsection-15" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="auteq_section.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Équations autonomes</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="auteq_section.html#subsection-16" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="exact_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Équations exactes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="exact_section.html#subsection-17" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Résoudre des équations exactes</span></a></div></li>
+<li><div class="toc-item"><a href="exact_section.html#subsection-18" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ho_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Équations différentielles ordinaires d'ordre supérieur</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="solinear_section.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Équations différentielles du deuxième ordre</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="solinear_section.html#subsection-19" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_ccsol.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Équations différentielles d'ordre deux à coefficients constants</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-20" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Résoudre les équations à coefficients constants</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-21" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Nombres complexes et formule d'Euler</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-22" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Racines complexes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-23" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_hol.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Équations différentielles linéaires d'ordre supérieur</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_hol.html#subsection-24" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Indépendance linéaire</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hol.html#subsection-25" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Équations différentielles d'ordre supérieur à coefficients constants</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hol.html#subsection-26" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_mv.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Vibrations mécaniques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_mv.html#subsection-27" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Quelques exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsection-28" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Mouvement libre non amorti</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_mv.html#subsection-29" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Mouvement libre amorti</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-1" class="internal"><span class="codenumber">3.4.3.1</span> <span class="title">Suramortissement</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-2" class="internal"><span class="codenumber">3.4.3.2</span> <span class="title">Amortissement critique</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-3" class="internal"><span class="codenumber">3.4.3.3</span> <span class="title">Sous-amortissement</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_mv.html#subsection-30" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_nonhom.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Équations non homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-31" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Résoudre des équations non homogènes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-32" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coefficients indéterminés</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-33" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Variation des paramètres</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-34" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sys_chapter.html" class="internal"><span class="codenumber">4</span> <span class="title">Systèmes d'équations différentielles ordinaires</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_introtosys.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction aux systèmes d'équations différentielles ordinaires</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-35" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Systèmes différentiels</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-36" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Applications</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-37" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Passage au premier ordre</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-38" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Systèmes autonomes et champs de vecteurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-39" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Théorème de Picard</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-40" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_matrix.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Matrices et systèmes linéaires</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-41" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Matrices et vecteurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-42" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Multiplication de matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-43" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Déterminant</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-44" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Résolution de systèmes linéaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-45" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Calcul de l'inverse</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-46" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="linsystems_section.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Systèmes linéaires d'équations différentielles ordinaires</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="linsystems_section.html#subsection-47" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="eigenmethod_section.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Décomposition en valeurs propres</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-48" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Matrices de valeurs propres et de vecteurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-49" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Décomposition en valeurs propres avec des valeurs propres réelles distinctes</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-50" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Valeurs propres complexes</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-51" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="sec_twodimaut.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Systèmes bidimensionnels et leurs champs vectoriels</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec_twodimaut.html#subsection-52" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="FS_chapter.html" class="internal"><span class="codenumber">5</span> <span class="title">Séries de Fourier et équations différentielles partielles</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="bvp_section.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Équations avec conditions au bord</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="bvp_section.html#subsection-53" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Valeurs au bord</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-54" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Problèmes de valeurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-55" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Orthogonalité des fonctions propres</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-56" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Alternative de Fredholm</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-57" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Application</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-58" class="internal"><span class="codenumber">5.1.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ts_section.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Séries trigonométriques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="ts_section.html#subsection-59" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Fonctions périodiques et motivations</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-60" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Produit scalaire et décomposition de vecteurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-61" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Séries trigonométriques</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-62" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreonfourier_section.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Plus sur les séries de Fourier</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-63" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Fonctions <span class="process-math">\(2L\)</span>-périodiques</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-64" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Convergence</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-65" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Dérivation et intégration de séries de Fourier</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-66" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Taux de convergence et différentiabilité</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-67" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_scs.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Séries de sinus et de cosinus</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_scs.html#subsection-68" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Fonctions périodiques paires et impaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-69" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Séries sinus et cosinus</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-70" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Application</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-71" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="appoffourier_section.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Applications des séries de Fourier</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-72" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Oscillations périodiques forcées</span></a></div></li>
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-73" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Résonance</span></a></div></li>
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-74" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="heateq_section.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Équations différentielles partielles, séparation des variables et équation de la chaleur</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="heateq_section.html#subsection-75" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Chaleur sur un fil isolé</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-76" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Séparation des variables</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-77" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Extrémités isolées</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-78" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="we_section.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Équation d'onde unidimensionnelle</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="we_section.html#subsection-79" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="linalg_appendix.html" class="internal"><span class="codenumber">6</span> <span class="title">Linear algebra</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="vecsandmaps_section.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vectors, mappings, and matrices</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-80" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Vectors and operations on vectors</span></a></div></li>
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-81" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Linear mappings and matrices</span></a></div></li>
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-82" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="matalg_section.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Matrix algebra</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="matalg_section.html#subsection-83" class="internal"><span class="codenumber">6.2.1</span> <span class="title">One-by-one matrices</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-84" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Matrix addition and scalar multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-85" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Matrix multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-86" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Some rules of matrix algebra</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-87" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Inverse</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-88" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Diagonal matrices</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-89" class="internal"><span class="codenumber">6.2.7</span> <span class="title">Transpose</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-90" class="internal"><span class="codenumber">6.2.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="elim_section.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Elimination</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="elim_section.html#subsection-91" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Linear systems of equations</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-92" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Row echelon form and elementary operations</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-93" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Non-unique solutions and inconsistent systems</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-94" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Linear independence and rank</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-95" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Computing the inverse</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-96" class="internal"><span class="codenumber">6.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subspaces_section.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Subspaces, dimension, and the kernel</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-97" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Subspaces, basis, and dimension</span></a></div></li>
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-98" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Kernel</span></a></div></li>
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-99" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="innerproduct_section.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Inner product and projections</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-100" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Inner product and orthogonality</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-101" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Orthogonal projection</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-102" class="internal"><span class="codenumber">6.5.3</span> <span class="title">Orthogonal basis</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-103" class="internal"><span class="codenumber">6.5.4</span> <span class="title">The Gram–Schmidt process</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-104" class="internal"><span class="codenumber">6.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="det_section.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Determinant</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="det_section.html#subsection-105" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_twodimaut"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Systèmes bidimensionnels et leurs champs vectoriels</span>
+</h2>
+<section class="introduction" id="introduction-15"><div class="para" id="p-1046">Lectures supplémentaires dans \cite{EP} (partie de §6.2) et dans \cite{BD} (parties de §7.5 et §7.6).</div> <div class="para logical" id="p-1047">
+<div class="para">Prenons un moment pour discuter des systèmes linéaires homogènes à coefficients constants dans le plan. L'étude du cas simple suivant permet de déduire beaucoup de choses. Supposons que nous utilisons les coordonnées habituelles <span class="process-math">\((x,y)\)</span> pour le plan et que <span class="process-math">\(P = \left[ \begin{matrix}a \amp  b \\ c \amp  d \end{matrix}  \right]\)</span> est une matrice <span class="process-math">\(2 \times 2\text{.}\)</span> Examinons le système</div>
+<div class="displaymath process-math" id="pln_eq">
+\begin{equation}
+\begin{bmatrix} x \\ y \end{bmatrix} ' = P \begin{bmatrix} x \\ y \end{bmatrix} \qquad \text{ ou } \qquad \begin{bmatrix} x \\ y \end{bmatrix} ' = \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix}\text{.}\tag{4.5.1}
+\end{equation}
+</div>
+</div> <div class="para" id="p-1048">Le système est autonome (comparez avec la <a href="auteq_section.html" class="internal" title="Section 2.5: Équations autonomes">section 2.5</a>), et l'on peut donc tracer un champ vectoriel (voir la fin de la <a href="sec_introtosys.html" class="internal" title="Section 4.1: Introduction aux systèmes d'équations différentielles ordinaires">section 4.1</a>). On pourra déduire l'apparence du champ de vecteurs et comment les solutions se comportent après avoir trouvé les valeurs et les vecteurs propres de la matrice <span class="process-math">\(P\text{.}\)</span> Dans cette section, on suppose que <span class="process-math">\(P\)</span> a deux valeurs propres et deux vecteurs propres correspondants.</div> <div class="para" id="p-1049">
+<em class="emphasis">Cas n<span class="process-math">\(^o\)</span> 1.</em> Supposons que les valeurs propres de <span class="process-math">\(P\)</span> sont réelles et positives. On trouve les vecteurs propres correspondants et on les trace dans le plan. Par exemple, prenons la matrice <span class="process-math">\(\left[ \begin{matrix}1 \amp 1 \\ 0 \amp 2 \end{matrix} \right]\text{.}\)</span> Les valeurs propres sont 1 et 2, et les vecteurs propres correspondants sont <span class="process-math">\(\left[ \begin{matrix}1 \\ 0 \end{matrix} \right]\)</span> et <span class="process-math">\(\left[ \begin{matrix}1 \\ 1 \end{matrix} \right]\text{.}\)</span> Voir <a href="" class="xref" data-knowl="./knowl/pln_source-eigfig.html" title="Figure 4.5.1">la 4.5.1</a>.</div> <figure class="figure figure-like" id="pln_source-eigfig"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.5.1<span class="period">.</span></span><span class="space"> </span>Valeurs propres de <span class="process-math">\(P\text{.}\)</span></figcaption></figure> <div class="para logical" id="p-1050">
+<div class="para">Supposons que le point <span class="process-math">\((x,y)\)</span> est sur la ligne définie par un vecteur propre <span class="process-math">\(\vec{v}\)</span> pour une valeur propre <span class="process-math">\(\lambda\text{,}\)</span> c'est-à-dire que <span class="process-math">\(\left[ \begin{matrix}x \\ y \end{matrix}  \right] = \alpha \vec{v}\)</span> pour un scalaire <span class="process-math">\(\alpha\text{.}\)</span> Alors,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} x \\ y \end{bmatrix} ' = P \begin{bmatrix} x \\ y \end{bmatrix} = P ( \alpha \vec{v} ) = \alpha ( P \vec{v} ) = \alpha \lambda \vec{v}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1051">La dérivée est un multiple de <span class="process-math">\(\vec{v}\)</span> et pointe donc le long de la ligne définie par <span class="process-math">\(\vec{v}\text{.}\)</span> Comme <span class="process-math">\(\lambda &gt; 0\text{,}\)</span> la dérivée pointe dans la direction de <span class="process-math">\(\vec{v}\)</span> quand <span class="process-math">\(\alpha\)</span> est positif et dans la direction opposée quand <span class="process-math">\(\alpha\)</span> est négatif. Traçons les lignes définies par les vecteurs propres et des flèches sur ces lignes pour indiquer les directions. Voir <a href="" class="xref" data-knowl="./knowl/pln_source-eig-arrfig.html" title="Figure 4.5.2">la 4.5.2</a> ci-après.</div> <div class="para" id="p-1052">On ajoute le reste des flèches pour le champ vectoriel et l'on dessine aussi quelques solutions. Voir <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "pln_source-fullfig" missing or not unique]</code> ci-après. Le graphe ressemble à une source avec des flèches en provenance de l'origine. C'est pourquoi ce type de graphe se nomme un <em class="emphasis">nœud répulsif </em> ou parfois <em class="emphasis">nœud instable </em>.</div> <figure class="figure figure-like" id="pln_source-eig-arrfig">  <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.5.2<span class="period">.</span></span><span class="space"> </span>Valeurs propres de <span class="process-math">\(P\)</span> avec directions.</figcaption></figure> <div class="para" id="p-1053">
+<em class="emphasis">Cas n<span class="process-math">\(^o\)</span> 2.</em> Supposons que les deux valeurs propres sont négatives. Par exemple, prenons <span class="process-math">\(\left[ \begin{matrix}-1 \amp -1 \\ 0 \amp -2 \end{matrix} \right]\text{,}\)</span> la négation de la matrice du cas n<span class="process-math">\(^o\)</span> 1. Les valeurs propres sont <span class="process-math">\(-1\)</span> et <span class="process-math">\(-2\text{,}\)</span> et les vecteurs propres correspondants sont les mêmes, soit <span class="process-math">\(\left[ \begin{matrix}1 \\ 0 \end{matrix} \right]\)</span> et <span class="process-math">\(\left[ \begin{matrix}1 \\ 1 \end{matrix} \right]\text{.}\)</span> Le calcul et le graphe sont presque identiques. La seule différence, c'est que les valeurs propres sont négatives et que les flèches sont donc inversées. <a href="" class="xref" data-knowl="./knowl/pln_sink-fullfig.html" title="Figure 4.5.3">La 4.5.3</a> montre le résultat. Ce type de graphe se nomme un <em class="emphasis">nœud attractif </em> ou <em class="emphasis">nœud stable </em>.</div> <figure class="figure figure-like" id="pln_sink-fullfig">  <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.5.3<span class="period">.</span></span><span class="space"> </span>Exemple de nœud attractif avec ses vecteurs propres et ses solutions.</figcaption></figure> <div class="para" id="p-1054">
+<em class="emphasis">Cas n<span class="process-math">\(^o\)</span> 3.</em> Supposons une valeur propre positive et une négative. Par exemple, la matrice <span class="process-math">\(\left[ \begin{matrix}1 \amp 1 \\ 0 \amp -2 \end{matrix} \right]\text{.}\)</span> Les valeurs propres sont 1 et <span class="process-math">\(-2\text{,}\)</span> et les vecteurs propres correspondants sont <span class="process-math">\(\left[ \begin{matrix}1 \\ 0 \end{matrix} \right]\)</span> et <span class="process-math">\(\left[ \begin{matrix}1 \\ -3 \end{matrix} \right]\text{.}\)</span> On inverse les flèches sur une ligne (correspond à la valeur propre négative) et l'on obtient le graphe de <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "pln_saddle-fullfig" missing or not unique]</code>. Ce type de graphe se nomme un <em class="emphasis">point selle </em> ou <em class="emphasis">point col </em>.</div> <div class="para" id="p-1055">[0] Pour les trois prochains cas, on suppose que les valeurs propres sont complexes. Dans cette situation, les vecteurs propres sont également complexes, et l'on ne peut pas simplement les tracer dans le plan.</div> <div class="para logical" id="p-1056">
+<div class="para">[0] <em class="emphasis">Cas n<span class="process-math">\(^o\)</span> 4.</em> Supposons que les valeurs propres sont purement imaginaires, c'est-à-dire, supposons, que les valeurs propres sont <span class="process-math">\(\pm ib\text{.}\)</span> Par exemple, prenons <span class="process-math">\(P = \left[ \begin{matrix}0 \amp  1 \\ -4 \amp  0 \end{matrix}  \right]\text{.}\)</span> Les valeurs propres sont <span class="process-math">\(\pm 2i\text{,}\)</span> et les vecteurs propres sont <span class="process-math">\(\left[ \begin{matrix}1 \\ 2i \end{matrix}  \right]\)</span> et <span class="process-math">\(\left[ \begin{matrix}1 \\ -2i \end{matrix}  \right]\text{.}\)</span> Considérons la valeur propre <span class="process-math">\(2i\)</span> et son vecteur propre <span class="process-math">\(\left[ \begin{matrix}1 \\ 2i \end{matrix}  \right]\text{.}\)</span> Les parties réelles et imaginaires de <span class="process-math">\(\vec{v} e^{2it}\)</span> sont</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{Re} \begin{bmatrix} 1 \\ 2i \end{bmatrix} e^{2it} = \begin{bmatrix} \cos (2t) \\ -2 \sin (2t) \end{bmatrix} , \qquad \operatorname{Im} \begin{bmatrix} 1 \\ 2i \end{bmatrix} e^{2it} = \begin{bmatrix} \sin (2t) \\ 2 \cos (2t) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1057">Toutes leurs combinaisons linéaires donnent des solutions différentes qui dépendent des conditions initiales. Remarquez que la partie réelle est une équation paramétrique d'ellipse. On observe la même chose pour la partie imaginaire et pour chaque combinaison linéaire des deux. C'est ce qui se produit, en général, quand les valeurs propres sont purement imaginaires. Donc, dans ce cas, on obtient des <em class="emphasis">ellipses </em> comme solutions. Ce type de graphe est parfois nommé un <em class="emphasis">point centre </em>. Voir <a href="" class="xref" data-knowl="./knowl/pln_ellipsesfig.html" title="Figure 4.5.4">la 4.5.4</a>.</div> <figure class="figure figure-like" id="pln_ellipsesfig">  <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.5.4<span class="period">.</span></span><span class="space"> </span>Exemple de point centre.</figcaption></figure> <div class="para logical" id="p-1058">
+<div class="para">
+<em class="emphasis">Cas n<span class="process-math">\(^o\)</span> 5.</em> Supposons que les valeurs propres complexes ont une partie réelle positive, c'est-à-dire, supposons, que les valeurs propres sont <span class="process-math">\(a \pm ib\)</span> pour certains <span class="process-math">\(a &gt; 0\text{.}\)</span> Par exemple, prenons <span class="process-math">\(P = \left[ \begin{matrix}1 \amp  1 \\ -4 \amp  1 \end{matrix}  \right]\text{.}\)</span> Les valeurs propres sont <span class="process-math">\(1\pm 2i\text{,}\)</span> et les vecteurs propres sont <span class="process-math">\(\left[ \begin{matrix}1 \\ 2i \end{matrix}  \right]\)</span> et <span class="process-math">\(\left[ \begin{matrix}1 \\ -2i \end{matrix}  \right]\text{.}\)</span> On prend <span class="process-math">\(1 + 2i\)</span> et son vecteur propre <span class="process-math">\(\left[ \begin{matrix}1 \\ 2i \end{matrix}  \right]\)</span> pour calculer les parties imaginaires de <span class="process-math">\(\vec{v} e^{(1+2i)t}\)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{Re} \begin{bmatrix} 1 \\ 2i \end{bmatrix} e^{(1+2i)t} = e^t \begin{bmatrix} \cos (2t) \\ -2 \sin (2t) \end{bmatrix} , \qquad \operatorname{Im} \begin{bmatrix} 1 \\ 2i \end{bmatrix} e^{(1+2i)t} = e^t \begin{bmatrix} \sin (2t) \\ 2 \cos (2t) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1059">Remarquez <span class="process-math">\(e^t\)</span> devant les solutions. Les solutions prennent de l'ampleur tout en tournant autour de l'origine. On obtient alors un <em class="emphasis">foyer répulsif </em>. Voir <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "pln_spiral-sourcefig" missing or not unique]</code>.</div> <div class="para logical" id="p-1060">
+<div class="para">
+<em class="emphasis">Cas n<span class="process-math">\(^o\)</span> 6.</em> Finalement, supposons que les valeurs propres complexes ont une partie réelle négative, c'est-à-dire, supposons, que les valeurs propres sont <span class="process-math">\(-a \pm ib\)</span> pour certains <span class="process-math">\(a &gt; 0\text{.}\)</span> Par exemple, prenons <span class="process-math">\(P = \left[ \begin{matrix}-1 \amp  -1 \\ 4 \amp  -1 \end{matrix}  \right]\text{.}\)</span> Les valeurs propres sont <span class="process-math">\(-1\pm 2i\text{,}\)</span> et les vecteurs propres sont <span class="process-math">\(\left[ \begin{matrix}1 \\ -2i \end{matrix}  \right]\)</span> et <span class="process-math">\(\left[ \begin{matrix}1 \\ 2i \end{matrix}  \right]\text{.}\)</span> On prend <span class="process-math">\(-1 - 2i\)</span> et son vecteur propre <span class="process-math">\(\left[ \begin{matrix}1 \\ 2i \end{matrix}  \right]\)</span> pour calculer les parties imaginaires de <span class="process-math">\(\vec{v} e^{(-1-2i)t}\)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{Re} \begin{bmatrix} 1 \\ 2i \end{bmatrix} e^{(-1-2i)t} = e^{-t} \begin{bmatrix} \cos (2t) \\ 2 \sin (2t) \end{bmatrix} , \qquad \operatorname{Im} \begin{bmatrix} 1 \\ 2i \end{bmatrix} e^{(-1-2i)t} = e^{-t} \begin{bmatrix} -\sin (2t) \\ 2 \cos (2t) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1061">Remarquez <span class="process-math">\(e^{-t}\)</span> devant les solutions. Les solutions perdent de leur ampleur tout en tournant autour de l'origine. On obtient alors un <em class="emphasis">foyer attractif </em>. Voir <a href="" class="xref" data-knowl="./knowl/pln_spiral-sinkfig.html" title="Figure 4.5.5">la 4.5.5</a>.</div> <figure class="figure figure-like" id="pln_spiral-sinkfig"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.5.5<span class="period">.</span></span><span class="space"> </span>Exemple de foyer attractif.</figcaption></figure> <div class="para" id="p-1062">
+<a href="" class="xref" data-knowl="./knowl/pln_behtab.html" title="Table 4.5.6: Résumé du comportement des systèmes linéaires homogènes bidimensionnels">Le 4.5.6</a> résume le comportement de systèmes linéaires homogènes bidimensionnels pour une matrice non singulière. On rencontre parfois des systèmes où une des valeurs propres est nulle (la matrice est singulière), comme dans l' <a href="" class="xref" data-knowl="./knowl/sintro_closedbrine-example.html" title="Example 4.1.2">Example 4.1.2</a>, et où les graphes sont légèrement différents (plus simples, d'une certaine façon). Voir les exercices.</div> <figure class="table table-like" id="pln_behtab"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.5.6<span class="period">.</span></span><span class="space"> </span>Résumé du comportement des systèmes linéaires homogènes bidimensionnels</figcaption><div class="tabular-box natural-width"><table class="tabular"></table></div></figure></section><section class="subsection" id="subsection-52"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.1</span> <span class="title">Exercices</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-253"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-253"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-253"><article class="exercise exercise-like"><div class="para" id="p-1063">Prenez l'équation <span class="process-math">\(m x'' + c x' + kx = 0\)</span> avec <span class="process-math">\(m &gt; 0\text{,}\)</span> <span class="process-math">\(c \geq 0\)</span> et <span class="process-math">\(k &gt; 0\)</span> comme système masse-ressort. \begin{tasks} \task Transformez-la en système d'équations de premier ordre. \task Pour quels <span class="process-math">\(m,
+c\)</span> et <span class="process-math">\(k\)</span> obtenez-vous quel comportement? \task Pouvez-vous expliquer intuitivement pourquoi vous n'obtenez pas tous les types de comportements? \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-254"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-254"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-254"><article class="exercise exercise-like"><div class="para" id="p-1064">Que se passe-t-il si <span class="process-math">\(P = \left[ \begin{matrix}1 \amp 1 \\ 0 \amp 1 \end{matrix} \right]\text{?}\)</span> In Dans ce cas, la valeur propre se répète et il n'y a qu'un vecteur propre indépendant. Quel est le type de graphe?</div></article></div>
+<article class="exercise exercise-like" id="exercise-255"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-255"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-255"><article class="exercise exercise-like"><div class="para" id="p-1065">Que se passe-t-il si <span class="process-math">\(P = \left[ \begin{matrix}1 \amp 1 \\ 1 \amp 1 \end{matrix} \right]\text{?}\)</span> Est-ce que ça ressemble à un des graphes vus précédemment?</div></article></div>
+<article class="exercise exercise-like" id="exercise-256"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-256"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.10</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-256"><article class="exercise exercise-like"><div class="para" id="p-1066">Quels comportements sont possibles si la matrice <span class="process-math">\(P\)</span> est diagonale, c'est-à-dire <span class="process-math">\(P = \left[ \begin{matrix}a \amp 0 \\ 0 \amp b \end{matrix} \right]\text{?}\)</span> Supposez que les éléments <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span> sont non nuls.</div></article></div>
+<article class="exercise exercise-like" id="exercise-257"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-257"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.11</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-257"><article class="exercise exercise-like"><div class="para" id="p-1067">Prenez le système de l'<a href="" class="xref" data-knowl="./knowl/sintro_closedbrine-example.html" title="Example 4.1.2">exemple 4.1.2</a>, soit <span class="process-math">\(x_1'=\frac{r}{V}(x_2-x_1)\)</span> et <span class="process-math">\(x_2'=\frac{r}{V}(x_1-x_2)\text{.}\)</span> Comme on l'a précédemment mentionné, une des valeurs propres est nulle. Quelle est l'autre valeur propre, à quoi ressemble le graphe et que se passe-t-il quand <span class="process-math">\(t\)</span> tend vers l'infini</div></article></div>
+<article class="exercise exercise-like" id="exercise-258"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-258"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-258"><article class="exercise exercise-like"><div class="para" id="p-1068">Décrivez le comportement des systèmes suivants sans les résoudre : \begin{tasks}(2) \task <span class="process-math">\(x' = x + y\text{,}\)</span> <span class="process-math">\(y' = x-y\text{.}\)</span> \task <span class="process-math">\(x_1' = x_1 + x_2\text{,}\)</span> <span class="process-math">\(x_2' = 2 x_2\text{.}\)</span> \task <span class="process-math">\(x_1' = -2x_2\text{,}\)</span> <span class="process-math">\(x_2' = 2 x_1\text{.}\)</span> \task <span class="process-math">\(x' = x + 3y\text{,}\)</span> <span class="process-math">\(y' = -2x-4y\text{.}\)</span> \task <span class="process-math">\(x' = x - 4y\text{,}\)</span> <span class="process-math">\(y' = -4x+y\text{.}\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-1069">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) Deux valeurs propres: <span class="process-math">\(\pm \sqrt{2}\text{,}\)</span> donc le comportement est une selle. b) Deux valeurs propres: <span class="process-math">\(1\)</span> et <span class="process-math">\(2\text{,}\)</span> donc le comportement est une source. c) Deux valeurs propres: <span class="process-math">\(\pm 2i\text{,}\)</span> donc le comportement est un centre (ellipses). d) Deux valeurs propres: <span class="process-math">\(-1\)</span> et <span class="process-math">\(-2\text{,}\)</span> donc le comportement est un puits. e) Deux valeurs propres: <span class="process-math">\(5\)</span> et <span class="process-math">\(-3\text{,}\)</span> donc le comportement est une selle. }</div>
+<article class="exercise exercise-like" id="exercise-259"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-259"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.13</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-259"><article class="exercise exercise-like"><div class="para" id="p-1070">Supposez que <span class="process-math">\(\vec{x}\,' = A \vec{x}\)</span> où <span class="process-math">\(A\)</span> est une matrice <span class="process-math">\(2 \times 2\)</span> avec des valeurs propres <span class="process-math">\(2\pm i\text{.}\)</span> Décrivez le comportement.</div></article></div>
+<div class="para" id="p-1071">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   Spiral source. }</div>
+<article class="exercise exercise-like" id="exercise-260"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-260"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.14</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-260"><article class="exercise exercise-like"><div class="para" id="p-1072">Prenez <span class="process-math">\(\left[ \begin{matrix}x \\ y \end{matrix} \right] ' = \left[ \begin{matrix}0 \amp 1 \\ 0 \amp 0 \end{matrix} \right] \left[ \begin{matrix}x \\ y \end{matrix} \right]\text{.}\)</span> Tracez le champ de vecteur et décrivez le comportement. Correspond-il à un comportement préalablement observé?</div></article></div>
+<div class="para" id="p-1073">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   }</div>
+<div class="para" id="p-1074"><div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="external/images/0100vectorfield.png" class="contained"></div></div>
+<div class="para" id="p-1075">The solution does not move anywhere if <span class="process-math">\(y = 0\text{.}\)</span> When <span class="process-math">\(y\)</span> is positive, the solution moves (with constant speed) in the positive <span class="process-math">\(x\)</span> direction. When <span class="process-math">\(y\)</span> is negative, the solution moves (with constant speed) in the negative <span class="process-math">\(x\)</span> direction. It is not one of the behaviors we have seen.</div>
+<div class="para" id="p-1076">Note that the matrix has a double eigenvalue 0 and the general solution is <span class="process-math">\(x = C_1 t + C_2\)</span> and <span class="process-math">\(y = C_1\text{,}\)</span> which agrees with the description above. }</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="eigenmethod_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="FS_chapter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

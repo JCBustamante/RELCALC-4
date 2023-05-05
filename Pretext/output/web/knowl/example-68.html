@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.3</span><span class="period">.</span>
+</h4>
+<div class="para">Considérons un fil isolé de longueur 1 dont les extrémités sont noyées dans la glace (température 0). Soit <span class="process-math">\(k = 0.003\)</span> et soit la distribution de chaleur initiale <span class="process-math">\(u (x, 0) = 50 \, x \, (1-x)\text{.}\)</span> Regardons <a href="" class="xref" data-knowl="./knowl/heat_wireexinitfig.html" title="Figure 5.6.4">la 5.6.4</a>. On suppose qu'on veut trouver la fonction de température <span class="process-math">\(u (x, t)\text{.}\)</span> On suppose aussi qu'on veut trouver quand (à quel <span class="process-math">\(t\)</span>) la température maximale dans le fil est la moitié du maximum initial de <span class="process-math">\(12.5\text{.}\)</span>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.4<span class="period">.</span></span><span class="space"> </span>Distribution initiale de la température dans le fil.</figcaption></figure> <div class="para logical">
+<div class="para">On résout le problème d'EDP suivant:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp  u_t = 0.003 \, u_{xx} ,\\
+\amp  u(0,t) = u(1,t) = 0 ,\\
+\amp  u(x,0) = 50\,x\,(1-x) \qquad \text{ pour }  \; 0 \lt  x \lt  1 \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">On écrit <span class="process-math">\(f(x) = 50\,x\,(1-x)\)</span> pour <span class="process-math">\(0 \lt  x \lt  1\)</span> comme une série de sinus. Alors, <span class="process-math">\(f(x) = \sum_{n=1}^\infty b_n \sin (n \pi x)\text{,}\)</span> où</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_n = 2 \int_0^1 50\,x\,(1-x) \sin (n \pi x) \,dx = \frac{200}{{\pi }^{3}{n}^{3}}-\frac{200\,{\left( -1\right) }^{n}}{{\pi }^{3}{n}^{3}} = \begin{cases} 0 \amp  \text{ si }  n \text{ est pair }  , \\ \frac{400}{\pi^3 n^3} \amp  \text{ si }  n \text{ est impair }  . \end{cases}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">La solution <span class="process-math">\(u(x,t)\text{,}\)</span> dans le graphique de <a href="" class="xref" data-knowl="./knowl/heat_wireexfig.html" title="Figure 5.6.5">la 5.6.5</a> pour <span class="process-math">\(0 \leq t \leq 100\text{,}\)</span> est donnée par la série:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/heat_wireexfig.html">
+\begin{equation*}
+u(x,t) = \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{400}{\pi^3 n^3} \sin (n \pi x ) \, e^{-n^2 \pi^2 \, 0.003 \, t}\text{.}
+\end{equation*}
+</div>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.5<span class="period">.</span></span><span class="space"> </span>Graphique de la température dans le fil au point <span class="process-math">\(x\)</span> et au temps <span class="process-math">\(t\text{.}\)</span></figcaption></figure> <div class="para logical">
+<div class="para">Enfin, on répond à la question de la température maximale. Il est relativement facile de voir que la température maximale à tout moment fixe est toujours <span class="process-math">\(x = 0.5\)</span> au milieu du fil. Le graphique de <span class="process-math">\(u (x, t)\)</span> confirme cette intuition. Si l'on branche <span class="process-math">\(x = 0.5\text{,}\)</span> on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(0.5,t) = \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{400}{\pi^3 n^3} \sin (n \pi\, 0.5 ) \, e^{-n^2 \pi^2 \, 0.003 \, t}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Pour <span class="process-math">\(n=3\)</span> et plus grand (on se rappelle que <span class="process-math">\(n\)</span> est seulement impair), les termes de la série sont insignifiants par rapport au premier terme. Le premier terme de la série est déjà une très bonne approximation de la fonction. Par conséquent,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(0.5,t) \approx \frac{400}{\pi^3} \, e^{-\pi^2 \, 0.003 \, t}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">L'approximation s'améliore à mesure que <span class="process-math">\(t\)</span> grandit et que les autres termes se dégradent de plus en plus rapidement. On trace la fonction <span class="process-math">\(u (0.5, t)\text{,}\)</span> c'est-à-dire la température au milieu du fil au temps <span class="process-math">\(t\text{,}\)</span> à <a href="" class="xref" data-knowl="./knowl/heat_wireexmaxfig.html" title="Figure 5.6.6">la 5.6.6</a>. La figure représente aussi l'approximation pour le premier terme.</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.6<span class="period">.</span></span><span class="space"> </span>Température au milieu du fil (courbe du bas) et approximation de cette température en n'utilisant que le premier terme de la série (courbe du haut).</figcaption></figure> <div class="para">Après <span class="process-math">\(t = 5\)</span> environ, il serait difficile de faire la différence entre le premier terme de la série pour <span class="process-math">\(u (x, t)\)</span> et la vraie solution <span class="process-math">\(u (x, t)\text{.}\)</span> Ce comportement est une caractéristique générale de la résolution de l'équation de la chaleur. Si vous avez de l'intérêt pour le comportement pour des <span class="process-math">\(t\)</span> assez grands, seuls le premier ou les deux premiers termes peuvent être nécessaires.</div> <div class="para logical">
+<div class="para">Revenons à la question qui cherche à savoir quand est-ce que la température maximale est égale à la moitié de la température maximale initiale. Autrement dit, quand la température au milieu est <span class="process-math">\(\nicefrac{12.5}{2} = 6.25\text{.}\)</span> On remarque sur le graphique que si l'on utilise l'approximation par le premier terme, on sera assez proche. On résout</div>
+<div class="displaymath process-math">
+\begin{equation*}
+6.25 = \frac{400}{\pi^3} \, e^{-\pi^2 \, 0.003 \, t}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Alors,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t = \frac{\ln \frac{6.25\,\pi^3}{400}}{-\pi^2 0.003} \approx 24.5\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Ainsi, la température maximale tombe de moitié environ à <span class="process-math">\(t=24.5\text{.}\)</span>
+</div></article><span class="incontext"><a href="heateq_section.html#example-68" class="internal">in-context</a></span>
+</body>
+</html>
