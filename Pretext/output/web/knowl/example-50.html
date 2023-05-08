@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Calculons les valeurs propres et les fonctions propres de</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x'' + \lambda x = 0,  x'(0) = 0,  x'(\pi) = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Encore une fois, on doit considérer séparément les trois cas suivants: <span class="process-math">\(\lambda &gt; 0\text{,}\)</span> <span class="process-math">\(\lambda = 0\text{,}\)</span> <span class="process-math">\(\lambda \lt  0\text{.}\)</span> D'abord, on suppose que <span class="process-math">\(\lambda &gt; 0\text{.}\)</span> La solution générale est alors <span class="process-math">\(x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t)\text{.}\)</span> Sa dérivée est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x' = -A\sqrt{\lambda}\, \sin ( \sqrt{\lambda}\, t) + B\sqrt{\lambda}\, \cos (\sqrt{\lambda}\, t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">La condition <span class="process-math">\(x'(0) = 0\)</span> implique immédiatement que <span class="process-math">\(B = 0\text{.}\)</span> Ensuite,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = x'(\pi) = -A\sqrt{\lambda}\, \sin ( \sqrt{\lambda}\, \pi)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Encore une fois, <span class="process-math">\(A\)</span> ne peut pas être nul si <span class="process-math">\(\lambda\)</span> est une valeur propre, et <span class="process-math">\(\sin ( \sqrt{\lambda}\, \pi)\)</span> est identiquement nul lorsque <span class="process-math">\(\sqrt{\lambda} = k\text{,}\)</span> où <span class="process-math">\(k\)</span> est un nombre entier positif. Donc, les valeurs propres positives sont encore <span class="process-math">\(k^2\)</span> pour tous les entiers <span class="process-math">\(k \geq 1\text{,}\)</span> et les fonctions propres correspondantes peuvent être prises comme <span class="process-math">\(x=\cos (k t)\text{.}\)</span>
+</div> <div class="para">Maintenant, on suppose que <span class="process-math">\(\lambda = 0\text{.}\)</span> Dans ce cas, l'équation est <span class="process-math">\(x'' = 0\text{,}\)</span> et la solution générale est <span class="process-math">\(x = At + B\)</span> so <span class="process-math">\(x' = A\text{.}\)</span> La condition <span class="process-math">\(x'(0) = 0\)</span> implique que <span class="process-math">\(A=0\text{.}\)</span> La condition <span class="process-math">\(x'(\pi) = 0\)</span> implique aussi que <span class="process-math">\(A=0\text{.}\)</span> Ainsi, <span class="process-math">\(B\)</span> pourrait être n'importe quoi (choisissons 1). Alors, <span class="process-math">\(\lambda = 0\)</span> est une valeur propre, et <span class="process-math">\(x=1\)</span> est la fonction propre correspondante.</div> <div class="para logical">
+<div class="para">Finalement, soit <span class="process-math">\(\lambda \lt  0\text{.}\)</span> Dans ce cas, la solution générale est <span class="process-math">\(x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t)\)</span> et</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x' = A\sqrt{-\lambda}\, \sinh ( \sqrt{-\lambda}\, t) + B\sqrt{-\lambda}\, \cosh ( \sqrt{-\lambda}\, t )\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">On a déjà vu (avec les rôles de <span class="process-math">\(A\)</span> et de <span class="process-math">\(B\)</span> inversés) que, pour que cette expression soit nulle à <span class="process-math">\(t=0\)</span> et <span class="process-math">\(t=\pi\text{,}\)</span> on doit avoir <span class="process-math">\(A=B=0\text{.}\)</span> Ainsi, il n'y a pas de valeur propre négative.</div> <div class="para logical">
+<div class="para">En somme, les valeurs propres positives et leurs fonctions propres correspondantes sont</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda_k = k^2  \text{ avec fonction propre }   x_k = \cos (k t) \text{ pour tous les entiers }  k \geq 1\text{,}
+\end{equation*}
+</div>
+<div class="para">et, de plus, il y a une autre valeur propre:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda_0 = 0 \qquad \text{ avec une fonction propre }  \qquad x_0 = 1\text{.}
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="bvp_section.html#example-50" class="internal">in-context</a></span>
+</body>
+</html>

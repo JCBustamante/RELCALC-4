@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">Prenons le problème à valeurs limites pour <span class="process-math">\(0 \lt  t \lt  1\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x''(t) + 2 x(t) = f(t)\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(f(t) = t\)</span> pour <span class="process-math">\(0 \lt  t \lt  1\text{,}\)</span> et satisfaisant à la condition aux frontières de Dirichlet <span class="process-math">\(x(0) = 0\text{,}\)</span> <span class="process-math">\(x(1)=0\text{.}\)</span> On écrit <span class="process-math">\(f(t)\)</span> comme une série sinus :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(t) = \sum_{n=1}^\infty c_n \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On calcule</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_n = 2 \int_0^1 t \sin (n \pi t) \,dt = \frac{2 \, {(-1)}^{n+1}}{n \pi}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On écrit <span class="process-math">\(x(t)\)</span> comme</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On insère et l'on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{split} x''(t) + 2 x(t) \amp  = \underbrace{ \sum_{n=1}^\infty - b_n n^2 \pi^2 \sin (n \pi t) }_{x''} \, + \, 2 \underbrace{ \sum_{n=1}^\infty b_n \sin (n \pi t) }_{x} \\ \amp  = \sum_{n=1}^\infty b_n (2 - n^2 \pi^2 ) \sin (n \pi t) \\ \amp  = f(t) = \sum_{n=1}^\infty  \frac{2\, {(-1)}^{n+1}}{n \pi} \sin (n \pi t) . \end{split}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Donc,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_n (2 - n^2 \pi^2) = \frac{2\,{(-1)}^{n+1}}{n \pi}
+\end{equation*}
+</div>
+<div class="para">ou</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_n = \frac{2\,{(-1)}^{n+1}}{n \pi (2 - n^2 \pi^2)}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Puisque <span class="process-math">\(2\)</span> n'est pas une valeur propre du problème, on a que <span class="process-math">\(2-n ^ 2 \ pi ^ 2\)</span> n'est pas nul pour tout <span class="process-math">\(n\)</span> et qu'on peut résoudre pour <span class="process-math">\(b_n\text{.}\)</span> On a ainsi obtenu une série de Fourier pour la solution :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = \sum_{n=1}^\infty \frac{2\,{(-1)}^{n+1}}{n \pi \,(2 - n^2 \pi^2)} \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Regardons <a href="" class="xref" data-knowl="./knowl/bnd-dirich-graph_fig.html" title="Figure 5.4.9">la 5.4.9</a> pour le graphe de la solution. On note que, puisque les fonctions propres satisfont aux conditions aux limites et que <span class="process-math">\(x\)</span> s'écrit en fonction des conditions aux limites, alors <span class="process-math">\(x\)</span> satisfait aux conditions aux limites.</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.4.9<span class="period">.</span></span><span class="space"> </span>Graphe de la solution de <span class="process-math">\(x''+2x=t\text{,}\)</span> <span class="process-math">\(x(0)=0\text{,}\)</span> <span class="process-math">\(x(1)=0\text{.}\)</span></figcaption></figure></article></body>
+</html>

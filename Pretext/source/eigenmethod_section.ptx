@@ -1,0 +1,597 @@
+<section xml:id="eigenmethod_section">
+  <title>Décomposition en valeurs propres</title>
+  <introduction>
+    <p>
+      PLACEHOLDER
+    </p>
+    <p>
+      Lectures supplémentaires dans \cite{EP} (&#xa7;5.2) et dans \cite{BD}
+      (parties de &#xa7;7.3, &#xa7;7.5, et &#xa7;7.6).
+    </p>
+    <p>
+      Cette section est consacrée à
+      la résolution de systèmes d'EDO linéaires homogènes à
+      coefficients constants par la décomposition en valeurs propres.
+      Supposons un système
+      <me>
+        {\vec{x}}' = P\vec{x}
+      </me>,
+      où <m>P</m> est une matrice carrée constante.
+      On désire adapter la méthode pour l'équation à
+      coefficients constants grâce à
+      la fonction <m>e^{\lambda t}</m>.
+      Cependant, <m>\vec{x}</m> est un vecteur.
+      Alors, on essaie <m>\vec{x} = \vec{v} e^{\lambda t}</m>,
+      où <m>\vec{v}</m> est un vecteur constant arbitraire.
+      On insère ce <m>\vec{x}</m> dans l'équation pour obtenir
+      <me>
+        \underbrace{\lambda \vec{v} e^{\lambda t}}_{{\vec{x}}'} = \underbrace{P\vec{v} e^{\lambda t}}_{P\vec{x}}
+      </me>.
+    </p>
+    <p>
+      On divise par <m>e^{\lambda t}</m> et l'on remarque qu'on cherche un scalaire <m>\lambda</m> et un vecteur <m>\vec{v}</m> qui satisfont à l'équation
+      <me>
+        \lambda \vec{v} = P\vec{v}
+      </me>.
+    </p>
+    <p>
+      Quelques notions supplémentaires d'algèbre sont nécessaires pour résoudre cette équation.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Matrices de valeurs propres et de vecteurs propres</title>
+    <p>
+      Prenons <m>A</m>, une matrice carrée constante.
+      Supposons qu'il y a un scalaire <m>\lambda</m> et un vecteur non nul <m>\vec{v}</m> tels que
+      <me>
+        A \vec{v} = \lambda \vec{v}
+      </me>.
+    </p>
+    <p>
+      On nomme <m>\lambda</m> une <em>valeur propre
+          <idx><h>valeur propre</h></idx>
+      </em> de <m>A</m>, et <m>\vec{v}</m> un
+      <em>vecteur propre correspondant<idx><h>vecteur propre correspondant</h></idx>
+      </em>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          La matrice <m>\left[ \begin{matrix}2 \amp  1 \\ 0 \amp  1 \end{matrix}  \right]</m> a une valeur propre
+          <m>\lambda = 2</m> et un vecteur propre correspondant <m>\left[ \begin{matrix}1 \\ 0 \end{matrix}  \right]</m> tels que
+          <me>
+            \begin{bmatrix} 2 \amp  1 \\ 0 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix} = 2 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Voyons comment calculer les valeurs propres pour n'importe quelle matrice.
+      On réécrit les équations pour une valeur propre de la fa&#xe7;on suivante :
+      <me>
+        (A - \lambda I)\vec{v} = \vec{0}
+      </me>.
+    </p>
+    <p>
+      Cette équation a une solution non nulle <m>\vec{v}</m> seulement si
+      <m>A - \lambda I</m> n'est pas inversible.
+      Si elle était inversible,
+      on pourrait écrire <m>{(A - \lambda I)}^{-1}(A - \lambda I)\vec{v} = {(A-\lambda I)}^{-1}\vec{0}</m>,
+      ce qui implique que <m>\vec{v} = \vec{0}</m>.
+      Par conséquent,
+      <m>A</m> possède la valeur propre <m>\lambda</m> si et seulement si <m>\lambda</m> résout l'équation
+      <me>
+        \det (A-\lambda I) = 0
+      </me>.
+    </p>
+    <p>
+      Donc, on pourra trouver un vecteur de <m>A</m> sans trouver de vecteur propre correspondant.
+      On devra trouver un vecteur propre plus tard,
+      lorsqu'on connaîtra <m>\lambda</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Trouvons toutes les valeurs propres de <m>\left[ \begin{matrix}2 \amp 1 \amp 1 \\ 1 \amp 2 \amp 0 \\ 0 \amp 0 \amp 2 \end{matrix} \right]</m>.
+        </p>
+        <p>
+          On écrit
+          <md>
+            \det \left( \begin{bmatrix}2 \amp  1 \amp  1 \\ 1 \amp  2 \amp  0 \\ 0 \amp  0 \amp  2 \end{bmatrix} - \lambda \begin{bmatrix}1 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix} \right) = \det \left( \begin{bmatrix}2-\lambda \amp  1 \amp  1 \\ 1 \amp  2-\lambda \amp  0 \\ 0 \amp  0 \amp  2-\lambda \end{bmatrix} \right) \\ = (2-\lambda) \bigl({(2-\lambda)}^2 - 1\bigr) = -(\lambda -1)(\lambda -2)(\lambda-3) .
+          </md>
+        </p>
+        <p>
+          Alors, les valeurs propres sont <m>\lambda = 1</m>,
+          <m>\lambda = 2</m> et <m>\lambda = 3</m>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Dans le cas d'une matrice <m>n \times n</m>,
+      le polynôme obtenu en calculant <m>\det(A - \lambda I)</m> est de degré
+      <m>n</m>, et donc, en général,
+      on a <m>n</m> valeurs propres.
+      Quelques-unes peuvent se répéter;
+      d'autres peuvent être complexes.
+    </p>
+    <p>
+      Afin de trouver un vecteur propre correspondant à
+      une valeur propre <m>\lambda</m>, on écrit
+      <me>
+        (A-\lambda I) \vec{v} = \vec{0}
+      </me>
+      et l'on résout pour un vecteur non nul <m>\vec{v}</m>.
+      Si <m>\lambda</m> est une valeur propre,
+      il y aura au moins une variable libre et,
+      pour chaque valeur propre distincte <m>\lambda</m>,
+      il y a toujours un vecteur propre.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Trouvons un vecteur propre de
+          <m>\left[ \begin{matrix}2 \amp 1 \amp 1 \\ 1 \amp 2 \amp 0 \\ 0 \amp 0 \amp 2 \end{matrix} \right]</m> qui correspond à
+          la valeur propre <m>\lambda = 3</m>.
+        </p>
+        <p>
+          On écrit
+          <me>
+            (A-\lambda I) \vec{v} = \left( \begin{bmatrix} 2 \amp  1 \amp  1 \\ 1 \amp  2 \amp  0 \\ 0 \amp  0 \amp  2 \end{bmatrix} - 3 \begin{bmatrix} 1 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix} \right) \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix} = \begin{bmatrix} -1 \amp  1 \amp  1 \\ 1 \amp  -1 \amp  0 \\ 0 \amp  0 \amp  -1 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix} = \vec{0}
+          </me>.
+        </p>
+        <p>
+          Ce système d'équations linéaires est simple à résoudre.
+          On écrit la matrice augmentée
+          <me>
+            \left[ \begin{array}{ccc|c} -1 \amp  1 \amp  1 \amp  0 \\ 1 \amp  -1 \amp  0 \amp  0 \\ 0 \amp  0 \amp  -1 \amp  0 \end{array} \right]
+          </me>
+          et l'on effectue des opérations sur les lignes (exercice : lesquelles?) jusqu'à obtenir
+          <me>
+            \left[ \begin{array}{ccc|c} 1 \amp  -1 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right]
+          </me>.
+        </p>
+        <p>
+          Les éléments de <m>\vec{v}</m> doivent satisfaire aux équations <m>v_1 - v_2 = 0</m> et <m>v_3 = 0</m>,
+          et <m>v_2</m> est une variable libre.
+          La valeur de <m>v_2</m> peut être arbitraire
+          (mais non nulle),
+          <m>v_1 = v_2</m> et, évidemment, <m>v_3 = 0</m>.
+          Par exemple, si l'on choisit <m>v_2 = 1</m>,
+          alors <m>\vec{v} = \left[ \begin{matrix}1 \\ 1 \\ 0 \end{matrix}  \right]</m>.
+          Vérifions que <m>\vec{v}</m> est vraiment un vecteur propre qui correspond à <m>\lambda = 3</m> :
+          <me>
+            \begin{bmatrix} 2 \amp  1 \amp  1 \\ 1 \amp  2 \amp  0 \\ 0 \amp  0 \amp  2 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 3 \\ 3 \\ 0 \end{bmatrix} = 3 \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          Tout fonctionne.
+        </p>
+      </statement>
+    </example>
+    <exercise>
+      <title>facile</title>
+      <statement>
+        <p>
+          Est-ce que les vecteurs propres sont uniques?
+          Pouvez-vous trouver un vecteur propre différent pour
+          <m>\lambda = 3</m> dans l'exemple précédent?
+          Quels sont les liens entre les deux vecteurs propres?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Dans le cas d'une matrice <m>2 \times 2</m>,
+          vous n'avez pas besoin d'effectuer des opérations sur les lignes pour calculer le vecteur propre.
+          Vous pouvez le lire dans <m>A-\lambda I</m>
+          (si vous avez calculé correctement les valeurs propres).
+          Comprenez-vous pourquoi?
+          Expliquez.
+          Essayez avec la matrice <m>\left[ \begin{matrix}2 \amp 1 \\ 1 \amp 2 \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection>
+    <title>Décomposition en valeurs propres avec des valeurs propres réelles distinctes</title>
+    <p>
+      Supposons le système d'équations
+      <me>
+        {\vec{x}}' = P\vec{x}
+      </me>.
+    </p>
+    <p>
+      On trouve les valeurs propres <m>\lambda_1</m>, <m>\lambda_2</m>,
+      <ellipsis/>, <m>\lambda_n</m> de la matrice <m>P</m> et les vecteurs propres correspondants <m>\vec{v}_1</m>,
+      <m>\vec{v}_2</m>,
+      <ellipsis/>, <m>\vec{v}_n</m>.
+      Les fonctions <m>\vec{v}_1 e^{\lambda_1 t}</m>,
+      <m>\vec{v}_2 e^{\lambda_2 t}</m>, <ellipsis/>,
+      <m>\vec{v}_n e^{\lambda_n t}</m> sont des solutions du système d'équations,
+      et donc <m>\vec{x} = c_1 \vec{v}_1 e^{\lambda_1 t} + c_2 \vec{v}_2 e^{\lambda_2 t} + \cdots + c_n \vec{v}_n e^{\lambda_n t}</m> est une solution.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Prenons <m>{\vec{x}}' = P\vec{x}</m>.
+          Si <m>P</m> est une matrice constante de dimension
+          <m>n \times n</m> avec <m>n</m> valeurs propres réelles distinctes <m>\lambda_1</m>,
+          <m>\lambda_2</m>, <ellipsis/>,
+          <m>\lambda_n</m>,
+          alors <m>n</m> vecteurs propres linéairement indépendants correspondants <m>\vec{v}_1</m>,
+          <m>\vec{v}_2</m>, <ellipsis/>, <m>\vec{v}_n</m> existent,
+          et la solution générale de <m>{\vec{x}}' = P\vec{x}</m> peut s'écrire
+          <me>
+            \mybxbg{~~ \vec{x} = c_1 \vec{v}_1 e^{\lambda_1 t} + c_2 \vec{v}_2 e^{\lambda_2 t} + \cdots + c_n \vec{v}_n e^{\lambda_n t} . ~~}
+          </me>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      La solution matricielle fondamentale correspondante est
+      <me>
+        X(t) = \bigl[\, \vec{v}_1 e^{\lambda_1 t}  \vec{v}_2 e^{\lambda_2 t} \cdots  \vec{v}_n e^{\lambda_n t} \,\bigr]
+      </me>,
+      c'est-à-dire que <m>X(t)</m> est la matrice où la
+      <m>j^{\text{e} }</m> colonne est <m>\vec{v}_j e^{\lambda_j t}</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Prenons le système
+          <me>
+            {\vec{x}}' = \begin{bmatrix} 2 \amp  1 \amp  1 \\ 1 \amp  2 \amp  0 \\ 0 \amp  0 \amp  2 \end{bmatrix} \vec{x}
+          </me>.
+        </p>
+        <p>
+          Trouvons la solution générale.
+        </p>
+        <p>
+          On a trouvé préalablement que les valeurs propres sont <m>1,2</m> et <m>3</m>.
+          On a aussi trouvé le vecteur propre
+          <m>\left[ \begin{matrix}1 \\ 1 \\ 0 \end{matrix}  \right]</m> pour la valeur propre 3.
+          De la même fa&#xe7;on, on trouve le vecteur propre
+          <m>\left[ \begin{matrix}1 \\ -1 \\ 0 \end{matrix}  \right]</m> pour la valeur propre 1 et
+          <m>\left[ \begin{matrix}0 \\ 1 \\ -1 \end{matrix}  \right]</m> pour la valeur propre 2
+          (exercice : vérifiez).
+          La solution générale est donc
+          <me>
+            \vec{x} = c_1 \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix} e^t + c_2 \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix} e^{2t} + c_3 \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} e^{3t} = \begin{bmatrix} c_1 e^t+c_3 e^{3t} \\ -c_1 e^t + c_2 e^{2t} + c_3 e^{3t} \\ - c_2 e^{2t} \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          Sous forme de solution matricielle fondamentale :
+          <me>
+            \vec{x} = X(t)\, \vec{c} = \begin{bmatrix} e^t \amp  0 \amp  e^{3t} \\ -e^t \amp  e^{2t} \amp  e^{3t} \\ 0 \amp  -e^{2t} \amp  0 \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \\ c_3 \end{bmatrix}
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que ce <m>\vec{x}</m> résout vraiment le système.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Note : si l'on écrit une seule équation linéaire homogène à
+      coefficients constants d'ordre <m>n</m> comme un système du premier ordre
+      (comme dans la <xref ref="sec_introtosys">section</xref>),
+      alors l'équation de valeurs propres
+      <me>
+        \det(P - \lambda I) = 0
+      </me>
+      est essentiellement la même que l'équation caractéristique des <xref ref="sec_ccsol">sections</xref>
+      <xref ref="sec_hol">et</xref>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Valeurs propres complexes</title>
+    <p>
+      Une matrice peut avoir des valeurs propres complexes même si tous les éléments sont réels.
+      Prenons, par exemple,
+      <me>
+        {\vec{x}}' = \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \vec{x}
+      </me>.
+    </p>
+    <p>
+      Si l'on calcule les valeurs propres de la matrice <m>P = \left[ \begin{matrix}1 \amp  1 \\ -1 \amp  1 \end{matrix} \right]</m>,
+      <me>
+        \det(P - \lambda I) = \det\left( \begin{bmatrix} 1-\lambda \amp  1 \\ -1 \amp  1-\lambda \end{bmatrix} \right) = {(1-\lambda)}^2 + 1 = \lambda^2 - 2 \lambda + 2 = 0
+      </me>.
+    </p>
+    <p>
+      On obtient <m>\lambda = 1 \pm i</m>.
+      Les vecteurs propres correspondants sont eux aussi complexes.
+      Commen&#xe7;ons avec <m>\lambda = 1-i</m>.
+      <md>
+        <mrow>\bigl(P-(1-i) I\bigr) \vec{v} \amp  = \vec{0} , \begin{bmatrix} i \amp  1</mrow>
+        <mrow>-1 \amp  i \end{bmatrix} \vec{v} = \vec{0}</mrow>
+      </md>.
+    </p>
+    <p>
+      Les équations <m>i v_1 + v_2 = 0</m> et
+      <m>-v_1 + iv_2 = 0</m> sont des multiples l'une de l'autre.
+      Nous pouvons donc ne considérer que l'une d'entre elles.
+      En prenant <m>v_2 = 1</m>, par exemple,
+      on obtient un vecteur propre <m>\vec{v} = \left[ \begin{matrix}i \\ 1 \end{matrix} \right]</m>.
+      De la même fa&#xe7;on, on trouve que
+      <m>\left[ \begin{matrix}-i \\ 1 \end{matrix} \right]</m> est un vecteur propre correspondant à
+      la valeur propre <m>1+i</m>.
+    </p>
+    <p>
+      La solution peut s'écrire
+      <me>
+        \vec{x} = c_1 \begin{bmatrix} i \\ 1 \end{bmatrix} e^{(1-i)t} + c_2 \begin{bmatrix} -i \\ 1 \end{bmatrix} e^{(1+i)t} = \begin{bmatrix} c_1 i e^{(1-i)t} - c_2 i e^{(1+i)t} \\ c_1 e^{(1-i)t} + c_2 e^{(1+i)t} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      On doit ensuite chercher les valeurs complexes <m>c_1</m> et <m>c_2</m> pour résoudre toutes conditions initiales.
+      Il n'y aura peut-être pas de solution réelle.
+      Après avoir résolu pour <m>c_1</m> et <m>c_2</m>,
+      on pourrait utiliser la formule d'Euler comme précédemment,
+      mais avec une approche différente.
+      On appliquera tout d'abord la formule dans le but d'obtenir des solutions réelles indépendantes.
+    </p>
+    <p>
+      Il n'est pas nécessaire de chercher un second vecteur propre
+      (ni une seconde valeur propre).
+      Toutes les valeurs propres complexes viennent par paires
+      (parce que la matrice <m>P</m> est réelle).
+    </p>
+    <p>
+      D'abord, un petit détour.
+      On peut calculer la partie réelle d'un nombre complexe <m>z</m> grâce à
+      <m>\frac{z + \bar{z}}{2}</m>,
+      où la barre au-dessus du <m>z</m> signifie que <m>\overline{a+ib} = a -ib</m>.
+      On nomme cette opération le
+      <em>conjugué complexe
+          <idx><h>conjugué complexe</h></idx>
+      </em>.
+      Si <m>a</m> est un nombre réel, alors <m>\bar{a} = a</m>.
+      De la même fa&#xe7;on,
+      on met une barre au-dessus des vecteurs et des matrices en prenant le conjugué
+      complexe de chaque élément.
+      Supposons que la matrice <m>P</m> est réelle.
+      Alors, <m>\overline{P} = P</m>,
+      et donc <m>\overline{P\vec{x}} = \overline{P} \, \overline{\vec{x}} = P \overline{\vec{x}}</m>.
+      Aussi, le conjugué complexe de 0 est 0, alors
+      <me>
+        \vec{0} = \overline{\vec{0}} = \overline{(P-\lambda I)\vec{v}} = (P-\bar{\lambda} I)\overline{\vec{v}}
+      </me>.
+    </p>
+    <p>
+      En d'autres termes, si <m>\lambda = a+ib</m> est une valeur propre,
+      <m>\bar{\lambda} = a-ib</m> en sera une aussi.
+      De plus, si <m>\vec{v}</m> est un vecteur propre qui correspond à
+      la valeur propre <m>\lambda</m>,
+      alors <m>\overline{\vec{v}}</m> est un vecteur propre qui correspond à
+      la valeur propre <m>\bar{\lambda}</m>.
+    </p>
+    <p>
+      Supposons que <m>a + ib</m> est une valeur propre complexe de <m>P</m> et que <m>\vec{v}</m> est un vecteur propre correspondant.
+      Alors,
+      <me>
+        \vec{x}_1 = \vec{v} e^{(a+ib)t}
+      </me>
+      est une solution (à
+      valeurs complexes) de <m>{\vec{x}}' = P \vec{x}</m>.
+      La formule d'Euler montre que <m>\overline{e^{a+ib}} = e^{a-ib}</m>, alors
+      <me>
+        \vec{x}_2 = \overline{\vec{x}_1} = \overline{\vec{v}} e^{(a-ib)t}
+      </me>
+      est également une solution.
+      Comme <m>\vec{x}_1</m> et <m>\vec{x}_2</m> sont des solutions,
+      la fonction
+      <me>
+        \vec{x}_3 = \operatorname{Re} \vec{x}_1 = \operatorname{Re} \vec{v} e^{(a+ib)t} = \frac{\vec{x}_1 + \overline{\vec{x}_1}}{2} = \frac{\vec{x}_1 + \vec{x}_2}{2} = \frac{1}{2} \vec{x}_1 + \frac{1}{2}\vec{x}_2
+      </me>
+      est également une solution,
+      et <m>\vec{x}_3</m> est réelle.
+      Par le même principe que <m>\operatorname{Im} z = \frac{z-\bar{z}}{2i}</m> est la partie imaginaire,
+      on trouve que
+      <me>
+        \vec{x}_4 = \operatorname{Im} \vec{x}_1 = \frac{\vec{x}_1 - \overline{\vec{x}_1}}{2i} = \frac{\vec{x}_1 - \vec{x}_2}{2i}
+      </me>
+      est aussi une solution à
+      valeurs réelles.
+      Donc, <m>\vec{x}_3</m> et <m>\vec{x}_4</m> sont linéairement indépendantes.
+      On utilise la formule d'Euler pour séparer les parties réelles et imaginaires.
+    </p>
+    <p>
+      Dans le cas du problème précédent,
+      <me>
+        \vec{x}_1 = \begin{bmatrix} i \\ 1 \end{bmatrix} e^{(1-i)t} = \begin{bmatrix} i \\ 1 \end{bmatrix} \left( e^t \cos t - i e^t \sin t \right) = \begin{bmatrix} i e^t \cos t + e^t \sin t \\ e^t \cos t - i e^t \sin t \end{bmatrix} = \begin{bmatrix} e^t \sin t \\ e^t \cos t \end{bmatrix} + i \begin{bmatrix} e^t \cos t \\ - e^t \sin t \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Alors,
+      <me>
+        \operatorname{Re} \vec{x}_1 = \begin{bmatrix} e^t \sin t \\ e^t \cos t \end{bmatrix} \qquad \text{ et }  \qquad \operatorname{Im} \vec{x}_1 = \begin{bmatrix} e^t \cos t \\ - e^t \sin t \end{bmatrix}
+      </me>
+      sont les deux solutions linéairement indépendantes à
+      valeurs réelles recherchées.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que ces solutions existent.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      La solution générale est
+      <me>
+        \vec{x} = c_1 \begin{bmatrix} e^t \sin t \\ e^t \cos t \end{bmatrix} + c_2 \begin{bmatrix} e^t \cos t \\ -e^t \sin t \end{bmatrix} = \begin{bmatrix} c_1 e^t \sin t + c_2 e^t \cos t \\ c_1 e^t \cos t - c_2 e^t \sin t \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Cette solution est à
+      valeurs réelles pour <m>c_1</m> et <m>c_2</m> réelles.
+      On peut maintenant résoudre pour toutes conditions initiales.
+    </p>
+    <p>
+      Résumons sous forme de théorème.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Prenons <m>P</m> comme matrice constante à
+          valeurs réelles.
+          Si <m>P</m> a une valeur propre complexe <m>a+ib</m> et un vecteur propre <m>\vec{v}</m> correspondant,
+          alors <m>P</m> a également une valeur propre complexe <m>a-ib</m> avec un vecteur propre <m>\overline{\vec{v}}</m> correspondant.
+          De plus, <m>{\vec{x}}' = P\vec{x}</m> a deux solutions linéairement indépendantes à
+          valeurs réelles,
+          <me>
+            \vec{x}_1 = \operatorname{Re} \vec{v} e^{(a+ib)t} \qquad \text{ et } \qquad \vec{x}_2 = \operatorname{Im} \vec{v} e^{(a+ib)t}
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Chaque paire de valeurs propres complexes <m>a+ib</m> et <m>a-ib</m> donne deux solutions linéairement indépendantes à
+      valeurs réelles.
+      On passe ensuite à la valeur propre suivante,
+      qui est soit réelle, soit une autre paire de valeurs propres complexes.
+      Si l'on a <m>n</m> valeurs propres distinctes (réelles ou complexes),
+      alors on arrive à
+      <m>n</m> solutions linéairement indépendantes.
+      Si l'on n'a que deux équations (<m>n=2</m>) comme dans l'exemple précédent,
+      le travail est terminé
+      après avoir trouvé
+      deux solutions, et la solution générale est
+      <me>
+        \vec{x} = c_1 \vec{x}_1 + c_2 \vec{x}_2 = c_1 \bigl( \operatorname{Re} \vec{v} e^{(a+ib)t} \bigr) + c_2 \bigl( \operatorname{Im} \vec{v} e^{(a+ib)t} \bigr)
+      </me>.
+    </p>
+    <p>
+      On peut alors trouver une solution générale à
+      valeurs réelles à
+      un système homogène où la matrice a des valeurs propres distinctes.
+      En présence de valeurs propres répétées,
+      les choses se compliquent
+      (nous ne verrons pas cette situation ici;
+      consultez les références pour en savoir plus).
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercices</title>
+    <exercise>
+      <title>facile</title>
+      <statement>
+        <p>
+          Soit <m>A</m>,une matrice <m>3 \times 3</m> avec une valeur propre de 3 et un vecteur propre correspondant <m>\vec{v} = \left[ \begin{matrix}1 \\ -1 \\ 3 \end{matrix} \right]</m>.
+          Trouvez <m>A \vec{v}</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          \begin{tasks} \task Trouvez la solution générale de <m>x_1' = 2 x_1</m>,
+          <m>x_2' = 3 x_2</m> avec la méthode des valeurs propres (écrivez d'abord le système sous la forme
+          <m>{\vec{x}}' = A \vec{x}</m>). \task Résolvez le système en calculant séparément chaque équation et vérifiez que vous obtenez la même solution générale. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution générale de <m>x_1' = 3 x_1 + x_2</m>,
+          <m>x_2' = 2 x_1 + 4 x_2</m> avec la méthode des valeurs propres.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution générale de <m>x_1' = x_1 -2 x_2</m>,
+          <m>x_2' = 2 x_1 + x_2</m> avec la méthode des valeurs propres.
+          N'utilisez pas d'exponentielles complexes dans votre solution.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          \begin{tasks} \task Calculez les valeurs propres et les vecteurs propres de
+          <m>A = \left[ \begin{matrix}9 \amp -2 \amp -6 \\ -8 \amp 3 \amp 6 \\ 10 \amp -2 \amp -6 \end{matrix} \right]</m>. \task Trouvez la solution générale de <m>{\vec{x}}' = A \vec{x}</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Calculez les valeurs propres et les vecteurs propres de <m>\left[ \begin{matrix}-2 \amp -1 \amp -1 \\ 3 \amp 2 \amp 1 \\ -3 \amp -1 \amp 0 \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prenez des nombres <m>a,b,c,d,e,f</m>.
+          Trouvez les valeurs propres de <m>\left[ \begin{matrix}a \amp b \amp c \\ 0 \amp d \amp e \\ 0 \amp 0 \amp f \end{matrix} \right]</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          \begin{tasks} \task Calculez les valeurs propres et les vecteurs propres de
+          <m>A= \left[ \begin{matrix}1 \amp 0 \amp 3 \\ -1 \amp 0 \amp 1 \\ 2 \amp 0 \amp 2 \end{matrix} \right]</m>. \task Résolvez le système <m>\vec{x}\,' = A \vec{x}</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) }Eigenvalues:
+      <m>4,0,-1</m> Eigenvectors:
+      <m>\left[ \begin{matrix}1 \\ 0 \\ 1 \end{matrix} \right]</m>,
+      <m>\left[ \begin{matrix}0 \\ 1 \\ 0 \end{matrix} \right]</m>,
+      <m>\left[ \begin{matrix}3 \\ 5 \\ -2 \end{matrix} \right]</m>
+    </p>
+    <p>
+      b) <m>\vec{x} = C_1 \left[ \begin{matrix}1 \\ 0 \\ 1 \end{matrix} \right] e^{4t} + C_2 \left[ \begin{matrix}0 \\ 1 \\ 0 \end{matrix} \right] + C_3 \left[ \begin{matrix}3 \\ 5 \\ -2 \end{matrix} \right] e^{-t}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          \begin{tasks} \task Calculez les valeurs propres et les vecteurs propres de
+          <m>A=\left[ \begin{matrix}1 \amp 1 \\ -1 \amp 0 \end{matrix} \right]</m>. \task Résolvez le système <m>\vec{x}\,' = A\vec{x}</m>. \end{tasks}
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) }Eigenvalues:
+      <m>\frac{1+\sqrt{3}i}{2}, \frac{1-\sqrt{3}i}{2}</m>, Eigenvectors:
+      <m>\left[ \begin{matrix}-2 \\ 1-\sqrt{3}i \end{matrix} \right]</m>,
+      <m>\left[ \begin{matrix}-2 \\ 1+\sqrt{3}i \end{matrix} \right]</m>
+    </p>
+    <p>
+      b) <m>\vec{x} = C_1 e^{t/2} \left[ \begin{matrix}-2\cos\bigl(\frac{\sqrt{3}t}{2}\bigr) \\ \cos\bigl(\frac{\sqrt{3}t}{2}\bigr) + \sqrt{3}\sin\bigl(\frac{\sqrt{3}t}{2}\bigr) \end{matrix} \right] + C_2 e^{t/2} \left[ \begin{matrix}- 2\sin\bigl(\frac{\sqrt{3}t}{2}\bigr) \\ \sin\bigl(\frac{\sqrt{3}t}{2}\bigr) -\sqrt{3}\cos\bigl(\frac{\sqrt{3}t}{2}\bigr) \end{matrix} \right]</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <m>x_1' = x_2</m>,
+          <m>x_2' = x_1</m> avec la méthode des valeurs propres.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\vec{x} = C_1 \left[ \begin{matrix}1 \\ 1 \end{matrix} \right] e^{t} + C_2 \left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{-t}</m> }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <m>x_1' = x_2</m>,
+          <m>x_2' = -x_1</m> avec la méthode des valeurs propres.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\vec{x} = C_1 \left[ \begin{matrix}\cos(t) \\ -\sin(t) \end{matrix} \right] + C_2 \left[ \begin{matrix}\sin(t) \\ \cos(t) \end{matrix} \right]</m> }
+    </p>
+  </subsection>
+</section>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Soit</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/gfs_sawcontfig.html">
+\begin{equation*}
+f(t) = \lvert t \rvert \text{ pour }   {-1} \lt  t \leq 1\text{,}
+\end{equation*}
+</div>
+<div class="para">prolongée périodiquement. Le graphe est donné par <a href="" class="xref" data-knowl="./knowl/gfs_sawcontfig.html" title="Figure 5.3.2">la 5.3.2</a>. Calculons la série de Fourier de <span class="process-math">\(f(t)\text{.}\)</span>
+</div>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span>Prolongement périodique de la fonction <span class="process-math">\(f(t)\text{.}\)</span></figcaption></figure> <div class="para logical">
+<div class="para">On veut écrire <span class="process-math">\(f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t) + b_n \sin (n \pi t)\text{.}\)</span> Pour <span class="process-math">\(n \geq 1\text{,}\)</span> on note que <span class="process-math">\(\lvert t \rvert \cos (n \pi t)\)</span> est paire et aussi que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{split} a_n \amp  = \int_{-1}^1 f(t) \cos (n \pi t) \, dt \\ \amp  = 2 \int_{0}^1 t \cos (n \pi t) \, dt \\ \amp  = 2 \left[ \frac{t}{n \pi} \sin (n \pi t) \right]_{t=0}^1 - 2 \int_{0}^1 \frac{1}{n \pi} \sin (n \pi t) \, dt \\ \amp  =  0 + \frac{1}{n^2 \pi^2} \Bigl[ \cos (n \pi t) \Bigr]_{t=0}^1 =  \frac{2 \bigl( {(-1)}^n -1 \bigr) }{n^2 \pi^2} = \begin{cases} 0 \amp  \text{ si }  n \text{ est pair }  , \\ \frac{-4 }{n^2 \pi^2} \amp  \text{ si }  n \text{ est impair }   . \end{cases} \end{split}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Ensuite, on trouve <span class="process-math">\(a_0\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_0 = \int_{-1}^1 \lvert t \rvert \, dt = 1\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On devrait être en mesure de trouver cette intégrale en pensant à l'intégrale comme à l'aire sous la courbe du graphe sans pour autant faire les calculs. Finalement, on trouve <span class="process-math">\(b_n\text{.}\)</span> Ici, on remarque que <span class="process-math">\(\lvert t \rvert \sin (n \pi t)\)</span> est impaire, et par conséquent:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_n = \int_{-1}^1 f(t) \sin (n \pi t) \, dt = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Ainsi, la série est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{-4}{n^2 \pi^2} \cos (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Écrivons explicitement les premiers termes de la série jusqu'à la troisième harmonique :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2} - \frac{4}{\pi^2} \cos (\pi t) - \frac{4}{9 \pi^2} \cos (3 \pi t) - \cdots
+\end{equation*}
+</div>
+</div> <div class="para">Voir <a href="" class="xref" data-knowl="./knowl/gfs_sawcontfsfig.html" title="Figure 5.3.3">la 5.3.3</a>. On devrait remarquer à quel point le graphe est proche de la vraie fonction. On devrait aussi remarquer qu'il n'y a pas de “phénomène de Gibbs” puisqu'il n'y a pas de discontinuité.</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span>La série de Fourier <span class="process-math">\(f(t)\)</span> jusqu'à la troisième harmonique (à gauche) et jusqu'à la vingtième harmonique (à droite).</figcaption></figure></article><span class="incontext"><a href="moreonfourier_section.html#example-56" class="internal">in-context</a></span>
+</body>
+</html>

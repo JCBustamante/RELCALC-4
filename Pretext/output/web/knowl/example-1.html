@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4>
+<div class="para">Supposons qu'il y a 100 bactéries au temps 0 et 200 bactéries 10 secondes plus tard. Combien aura-t-on de bactéries à une minute (60 secondes) du début?</div> <div class="para logical">
+<div class="para">D'abord, nous devons résoudre l'équation différentielle. Nous affirmons que la fonction suivante est une solution:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t) = C e^{kt}\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(C\)</span> est une constante. Vérifions ceci:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = C k e^{kt} = k P\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Il s'agit donc bel et bien d'une solution.</div> <div class="para logical">
+<div class="para">Ensuite? On ne connaît pas la valeur de <span class="process-math">\(C\text{,}\)</span> ni de <span class="process-math">\(k\text{.}\)</span> Mais on sait ceci: <span class="process-math">\(P(0) = 100\)</span> et <span class="process-math">\(P(10) = 200\text{.}\)</span> Substituons ces valeurs dans l'expression et regardons ce que nous obtenons:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp  100 = P(0) = C e^{k0} = C ,\\
+\amp  200 = P(10) = 100 \, e^{k10} \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Par conséquent, <span class="process-math">\(2 = e^{10k}\)</span> ou <span class="process-math">\(\frac{\ln 2}{10} = k \approx 0{,}069\text{.}\)</span> Donc:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0{,}069 t}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">À une minute, <span class="process-math">\(t=60\text{,}\)</span> la population est <span class="process-math">\(P(60) = 6400\text{.}\)</span> Voir <a href="" class="xref" data-knowl="./knowl/intro_plotbactfig.html" title="Figure 1.2.4">la 1.2.4</a>.</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.4<span class="period">.</span></span><span class="space"> </span>Croissance de bactéries en 60 secondes.</figcaption></figure> <div class="para">Parlons maintenant de l'interprétation de ces résultats. Doit-on penser qu'il y aura exactement 6400 bactéries à 60 secondes? Bien sûr que non. Nous avons fait des hypothèses simplificatrices qui ne seront pas exactement vraies, mais approximativement vraies. Si nos hypothèses sont raisonnables, il y aura environ 6400 bactéries. De plus, <span class="process-math">\(P\)</span> devrait être un nombre entier, puisqu'il compte une quantité de bactéries. Pourtant, notre modèle admet des nombres comme <span class="process-math">\(P(61) \approx 6859{,}35\text{.}\)</span>
+</div></article><span class="incontext"><a href="introde_section.html#example-1" class="internal">in-context</a></span>
+</body>
+</html>

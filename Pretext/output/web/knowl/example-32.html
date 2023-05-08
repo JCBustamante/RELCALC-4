@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
+</h4>
+<div class="para">Supposons que <span class="process-math">\(m=\unit[2]{kg}\)</span> et <span class="process-math">\(k=\unitfrac[8]{N}{m}\text{.}\)</span> Un système masse-ressort se trouve sur un camion qui se déplace à \unitfrac[1]{m}{s}. Le camion a un accident et s'arrête. La masse a été tenue en place à 0{,}5 m de sa position de repos. Pendant l'accident, la masse se déplace. Alors, elle bouge vers l'avant à \unitfrac[1]{m}{s}, pendant que le ressort reste fixé. La masse commence donc à osciller. Quelle est la fréquence de l'oscillation résultante? Quelle est l'amplitude? Les unités sont des  mètres-kilogrammes-secondes.</div> <div class="para logical">
+<div class="para">La configuration signifie que la masse était à un demi-mètre dans la direction positive pendant l'accident et que la masse se déplaçait vers l'avant par rapport à la paroi sur laquelle le ressort était monté, (dans la direction positive) à \unitfrac[1]{m}{s}. Alors, l'équation avec les conditions initiales est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2 x'' + 8 x = 0 , \qquad x(0) = 0.5, \qquad x'(0) = 1\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">On calcule directement <span class="process-math">\(\omega_0 = \sqrt{\nicefrac{k}{m}} = \sqrt{4} = 2\text{.}\)</span> La fréquence angulaire est 2. La fréquence usuelle en hertz (cycles par seconde) est <span class="process-math">\(\nicefrac{2}{2\pi} = \nicefrac{1}{\pi} \approx 0.318\text{.}\)</span>
+</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>Oscillation simple non amortie.</figcaption></figure> <div class="para logical">
+<div class="para">La solution générale est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = A \cos (2t) + B \sin (2t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">La condition <span class="process-math">\(x(0) = 0.5\)</span> implique que <span class="process-math">\(A = 0.5\text{.}\)</span> Alors, <span class="process-math">\(x'(t) = - 2(0.5) \sin (2t) + 2B \cos (2t)\text{.}\)</span> Puisque <span class="process-math">\(x'(0) = 1\text{,}\)</span> on obtient <span class="process-math">\(B = 0.5\text{.}\)</span> Ainsi, l'amplitude est <span class="process-math">\(C = \sqrt{A^2+B^2} = \sqrt{0.25+0.25} = \sqrt{0.5} \approx 0.707\text{.}\)</span> La solution est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = 0.5 \cos (2t) + 0.5 \sin (2t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Le graphe de <span class="process-math">\(x(t)\)</span> est illustré à <a href="" class="xref" data-knowl="./knowl/mv_undampedfig.html" title="Figure 3.4.4">la 3.4.4</a>.</div></article><span class="incontext"><a href="sec_mv.html#example-32" class="internal">in-context</a></span>
+</body>
+</html>

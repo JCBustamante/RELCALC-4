@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Classification des équations différentielles</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Équations différentielles pour le génie">
+<meta property="book:author" content="Jiri Lebl">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Équations différentielles pour le génie</span></a></h1>
+<p class="byline">Jiri Lebl</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="introde_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\theversion}{6.2}
+\newcommand{\nicefrac}[2]{\frac{#1}{#2}}
+\renewcommand{\bibname}{Lectures additionnelles}
+\def\wrapfigure{\wrapfloat{figure}}
+\def\wraptable{\wrapfloat{table}}
+\def\caption{\wf}
+\def\endwrapfigure{\endwrapfloat}
+\def\endwraptable{\endwrapfloat}
+\def\pagetotal{\maxdimen}
+\def\parshape{\WF}
+\def\everypar{\WF}
+\def\noexpand{\clearpage}
+\def\expandafter{\noexpand}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\noexpand{\float}
+\def\csname{endwrap#2\endcsname \endwrapfloat}
+\def\expandafter{\noexpand}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\myindex}[1]{#1\index{#1}}
+\newcommand{\myquote}[1]{``#1''}
+\newcommand{\sectionnewpage}{\clearpage}
+\newcommand{\EPref}[1]{#1}
+\newcommand{\BDref}[1]{#1}
+\newcommand{\theanswer}{\textbf{\theexercise:}}
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+\def\exampleclaim{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\exampleclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endexampleclaim{
+\addvspace{\medskipamount}}
+\renewcommand{\theremark}{\thesection.\arabic{remark}}
+\def\remarkclaim{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\remarkclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endremarkclaim{
+\addvspace{\medskipamount}}
+\newcommand{\figurevref}[1]{\ref{#1}}
+\newcommand{\figureref}[1]{\ref{#1}}
+\newcommand{\tablevref}[1]{\ref{#1}}
+\newcommand{\tableref}[1]{\ref{#1}}
+\newcommand{\chapterref}[1]{\ref{#1}}
+\newcommand{\Chapterref}[1]{\ref{#1}}
+\newcommand{\appendixref}[1]{\ref{#1}}
+\newcommand{\Appendixref}[1]{\ref{#1}}
+\newcommand{\sectionref}[1]{\ref{#1}}
+\newcommand{\subsectionref}[1]{\ref{#1}}
+\newcommand{\subsectionvref}[1]{\ref{#1}}
+\newcommand{\exercisevref}[1]{\ref{#1}}
+\newcommand{\exerciseref}[1]{\ref{#1}}
+\newcommand{\examplevref}[1]{\ref{#1}}
+\newcommand{\exampleref}[1]{\ref{#1}}
+\newcommand{\thmvref}[1]{\ref{#1}}
+\newcommand{\thmref}[1]{\ref{#1}}
+\newcommand{\addfakecontentsline}[1]{\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\addextraspacetotoc}{}
+\newcommand{\diffyincludegraphics}[3]{\includegraphics[#1]{figures/#3}}
+\newcommand{\diffypdfversion}[1]{#1}
+\newcommand{\mybeginframe}{\begin{tcolorbox}[colback=white,colframe=lightgray,left=5pt,right=5pt]}
+\newcommand{\myendframe}{\end{tcolorbox}}
+\newcommand{\mybxbg}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,top=1.5pt,bottom=1.5pt]{#1}}
+\newcommand{\mybxsm}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]{#1}}
+\newcommand{\diffytableofcontents}{
+\microtypesetup{protrusion=false}
+\microtypesetup{protrusion=true}
+}
+\newcommand{\infinity}{\infty}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="intro_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="notes_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Notes à propos de ce manuel</span></a></div></li>
+<li>
+<div class="toc-item"><a href="introde_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction aux équations différentielles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="introde_section.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Solutions d'équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-3" class="internal"><span class="codenumber">1.2.3</span> <span class="title">En pratique</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection_fourfundamental" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Quatre équations fondamentales</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-5" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="classification_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Classification des équations différentielles</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="classification_section.html#subsection-6" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="classification_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Classification des équations différentielles</span>
+</h2>
+<section class="introduction" id="introduction-1"><div class="para logical" id="p-70">
+<div class="para">Il y a plusieurs types d'équations différentielles, et on les classifie en différentes catégories selon leurs propriétés. Parlons brièvement d'une classification de base. D'abord, la distinction entre EDO et EDP:</div>
+<ul class="disc">
+<li id="li-1"><div class="para" id="p-71">Dans les <em class="emphasis">équations différentielles ordinaires</em>,  ou EDO, les dérivées sont prises par rapport à une seule variable. Autrement dit, il y a une seule variable indépendante.</div></li>
+<li id="li-2"><div class="para" id="p-72">Dans les <em class="emphasis">équations aux dérivées partielles</em>,  ou EDP, les dérivées sont prises par rapport à plusieurs variables. Autrement dit, il y a plusieurs variables indépendantes.</div></li>
+</ul>
+</div> <div class="para logical" id="p-73">
+<div class="para">Voici quelques exemples d'équations différentielles ordinaires:</div>
+<div class="displaymath process-math" id="md-2">
+\begin{align*}
+\amp  \frac{d y}{dt} = ky  \amp  \amp  \text{(croissance exponentielle\knownindex{\lt h&gt;exponential growth\lt /h&gt;})}\\
+\amp  \frac{d y}{dt} = k(A-y)  \amp  \amp  \text{(\myindex{loi de refroidissement de Newton})}\\
+\amp  m \frac{d^2 x}{dt^2} + c \frac{dx}{dt} + kx = f(t) . \amp  \amp \text{(vibrations m\'ecaniques\knownindex{\lt h&gt;mechanical vibrations\lt /h&gt;})}
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-74">
+<div class="para">Voici quelques exemples d'équations aux dérivées partielles:</div>
+<div class="displaymath process-math" id="md-3">
+\begin{align*}
+\amp  \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0 \amp  \amp \text{(\'equation du transport\knownindex{\lt h&gt;\'Equation du transport\lt /h&gt;})}\\
+\amp  \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}  \amp  \amp \text{(\'equation de la chaleur ou de la diffusion\knownindex{\lt h&gt;\'Equation de la chaleur/diffusion\lt /h&gt;})}\\
+\amp  \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} . \amp  \amp \text{(\'equation de l'onde en 2 dimensions\knownindex{\lt h&gt;\'Equation de l'onde en deux dimensions\lt /h&gt;})}
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-75">
+<div class="para">Lorsque la situation est soumise à plusieurs équations en même temps, on a un <em class="emphasis">système d'équations différentielles</em>. Par exemple:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y' = x , \qquad x' = y
+\end{equation*}
+</div>
+<div class="para">est un système simple d'équations différentielles ordinaires. Les équations de Maxwell en électromagnétisme forment elles aussi un système d'équations aux dérivées partielles:</div>
+<div class="displaymath process-math" id="md-4">
+\begin{align*}
+\amp  \nabla \cdot \vec{D} = \rho \amp  \amp  \nabla \cdot \vec{B} = 0\\
+\amp  \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} \amp \amp  \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} \text{.}
+\end{align*}
+</div>
+</div> <div class="para" id="p-76">Les opérateurs de divergence <span class="process-math">\(\nabla \cdot\)</span> et de rotationnel <span class="process-math">\(\nabla \times\)</span> s'écrivent en termes de dérivées partielles des fonctions en termes des variables <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> et <span class="process-math">\(z\)</span> .</div> <div class="para logical" id="p-77">
+<div class="para">Le prochain élément d'information est l'<em class="emphasis">ordre </em> de l'équation (ou du système). L'ordre est tout simplement l'ordre de la plus grande dérivée apparaissant dans l'équation. Si la plus grande dérivée est la dérivée première, c'est une équation du premier ordre. Si la dérivée la plus grande est la dérivée seconde, alors c'est une équation du deuxième ordre. Par exemple, la loi de refroidissement de Newton est une équation du premier ordre, alors que l'équation des vibrations mécaniques est une équation du deuxième ordre. L'équation décrivant les vibrations transversales dans une poutre,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a^4 \frac{\partial^4 y}{\partial x^4} + \frac{\partial^2 y}{\partial t^2} = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">est une équation aux dérivées partielles d'ordre quatre. En effet, une des dérivées dans l'équation est la quatrième dérivée. Le fait que la dérivée en <span class="process-math">\(t\)</span> soit seulement d'ordre deux n'affecte pas l'ordre de l'équation.</div>
+</div> <div class="para" id="p-78">Dans le premier chapitre, nous commencerons par les équations différentielles ordinaires du premier ordre, c'est-à-dire les équations de la forme <span class="process-math">\(\frac{dy}{dx} = f(x,y)\text{.}\)</span> En général, les équations de petit ordre sont plus simples à résoudre et à étudier.</div> <div class="para logical" id="p-79">
+<div class="para">Dans la classification des équations, on s'intéresse aussi à comment les variables dépendantes apparaissent dans l'équation (ou le système). En particulier, on l'appelle une <em class="emphasis">équation linéaire</em>  si la variable dépendante (ou les variables dépendantes) et ses dérivées apparaissent linéairement, c'est-à-dire qu'elles ne sont pas multipliées ensemble et qu'aucune autre fonction des variables dépendantes n'apparaît dans l'équation. Sinon, il s'agit d'une équation <em class="emphasis">non linéaire</em>.  Une EDO est linéaire si elle peut être exprimée de la manière suivante:</div>
+<div class="displaymath process-math" id="classification_eqlingen">
+\begin{equation}
+a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = b(x) *\text{.}\tag{1.3.1}
+\end{equation}
+</div>
+</div> <div class="para logical" id="p-80">
+<div class="para">Les fonctions <span class="process-math">\(a_0\text{,}\)</span> <span class="process-math">\(a_1\text{,}\)</span> …, <span class="process-math">\(a_n\)</span> s'appellent les <em class="emphasis">coefficients </em>. L'équation peut dépendre arbitrairement de la variable indépendante. Ainsi, l'équation suivante est linéaire:</div>
+<div class="displaymath process-math" id="classification_eqlinex">
+\begin{equation}
+e^x \frac{d^2 y}{dx^2} + \sin(x) \frac{d y}{dx} +  x^2 y = \frac{1}{x}\text{,}\tag{1.3.2}
+\end{equation}
+</div>
+<div class="para">et ce, malgré la présence de <span class="process-math">\(e^x\)</span> et de <span class="process-math">\(\sin(x)\text{,}\)</span> puisque <span class="process-math">\(y\)</span> et ses dérivées apparaissent de manière linéaire dans l'équation.</div>
+</div> <div class="para" id="p-81">Tous les exemples mentionnés au début de la section sont linéaires. Ce n'est peut-être pas évident dans le cas des équations de Maxwell; pour s'en convaincre, on peut écrire la divergence et le rotationnel en termes des dérivées partielles.</div> <div class="para logical" id="p-82">
+<div class="para">Considérons maintenant quelques équations non linéaires. Par exemple, l'équation de Burger, </div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial y}{\partial t} +  \frac{\partial y}{\partial x} = \nu \frac{\partial^2 y}{\partial x^2}\text{,}
+\end{equation*}
+</div>
+<div class="para">est une EDP du second ordre, qui est non linéaire, puisque <span class="process-math">\(y\)</span> et <span class="process-math">\(\frac{\partial y}{\partial x}\)</span> sont multipliés ensemble. L'équation suivante:</div>
+<div class="displaymath process-math" id="classification_eqnonlinode">
+\begin{equation}
+\frac{dx}{dt} = x^2\text{,}\tag{1.3.3}
+\end{equation}
+</div>
+<div class="para">est une EDO non linéaire du premier ordre, puisque la variable dépendante <span class="process-math">\(x\)</span> est au carré.</div>
+</div> <div class="para logical" id="p-83">
+<div class="para">Une équation qui est linéaire est de plus appelée <em class="emphasis">homogène </em> si tous les termes dépendent de la variable dépendante. Autrement dit, il n'y a aucun terme qui dépend uniquement de la variable indépendante. Sinon, l'équation est dite <em class="emphasis">non homogène </em>. Par exemple, l'équation de la croissance exponentielle, l'équation de l'onde et l'équation du transport sont homogènes. L'équation des vibrations mécaniques est non homogène à moins que <span class="process-math">\(f(t)\)</span> soit la fonction nulle. De manière analogue, la loi de refroidissement de Newton est non homogène sauf si la température ambiante <span class="process-math">\(A\)</span> est nulle. Une EDO linéaire homogène peut être écrite sous la forme suivante:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-84">Comparez à <a href="" class="xref" data-knowl="./knowl/classification_eqlingen.html" title="Equation 1.3.1">(1.3.1)</a> et observez l'absence de fonction <span class="process-math">\(b(x)\text{.}\)</span>
+</div> <div class="para logical" id="p-85">
+<div class="para">Lorsque les coefficients d'une équation linéaire sont en fait des constantes, on dit alors que l'équation est à <em class="emphasis">coefficients constants</em>.  Les coefficients sont les fonctions multipliées par la variable dépendante ou par une de ses dérivées, et non la fonction <span class="process-math">\(b(x)\)</span> qui apparaît seule. Une EDO non homogène à coefficients constants a la forme suivante:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1} \frac{dy}{dx} + a_{0} y = b(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(a_0, a_1, \ldots, a_n\)</span> sont toutes des constantes, mais où <span class="process-math">\(b\)</span> peut dépendre de la variable indépendante <span class="process-math">\(x\text{.}\)</span> L'équation des vibrations mécaniques que nous avons vue plus haut est une EDO non homogène du second ordre à coefficients constants.</div>
+</div> <div class="para" id="p-86">La même nomenclature s'applique aux EDP. Par conséquent, les équations du transport, de la chaleur/diffusion et de l'onde sont toutes des EDP linéaires à coefficients constants.</div> <div class="para" id="p-87">Pour terminer, une équation est dite <em class="emphasis">autonome </em> si l'équation ne dépend pas de la variable indépendante. Pour des EDO autonomes, on pensera souvent à la variable indépendante comme à la variable du temps. Être une équation autonome signifie que l'équation ne varie pas dans le temps. Par exemple, la loi de refroidissement de Newton est autonome, ainsi que l'équation <a href="" class="xref" data-knowl="./knowl/classification_eqnonlinode.html" title="Equation 1.3.3">(1.3.3)</a>. Par contre, les équations de vibrations mécaniques ou <a href="" class="xref" data-knowl="./knowl/classification_eqlinex.html" title="Equation 1.3.2">(1.3.2)</a> ne sont pas autonomes.</div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Exercices</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-21"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-21"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-21"><article class="exercise exercise-like"><div class="para" id="p-88">Classifiez les équations suivantes. S'agit-il d'une EDO ou d'une EDP? Est-ce une équation ou un système? Quel est l'ordre? Est-ce linéaire ou non-linéaire et si c'est linéaire, est-ce homogène? à coefficients constants? Si c'est une EDO, est-elle autonome? \begin{tasks}(2) \task <span class="process-math">\(\displaystyle \sin(t) \frac{d^2 x}{dt^2} + \cos(t) x = t^2\)</span> \task <span class="process-math">\(\displaystyle \frac{\partial u}{\partial x} + 3 \frac{\partial u}{\partial y} = xy\)</span> \task <span class="process-math">\(\displaystyle y''+3y+5x=0, x''+x-y=0\)</span> \task <span class="process-math">\(\displaystyle \frac{\partial^2 u}{\partial t^2} + u\frac{\partial^2 u}{\partial s^2} = 0\)</span> \task <span class="process-math">\(\displaystyle x''+tx^2=t\)</span> \task <span class="process-math">\(\displaystyle \frac{d^4 x}{dt^4} = 0\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-22"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-22"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-22"><article class="exercise exercise-like"><div class="para" id="p-89">Si <span class="process-math">\(\vec{u} = (u_1,u_2,u_3)\)</span> est un vecteur, sa divergence est: <span class="process-math">\(\nabla \cdot \vec{u} = \frac{\partial u_1}{\partial x} + \frac{\partial u_2}{\partial y} + \frac{\partial u_3}{\partial z}\)</span> et son rotationnel est: <span class="process-math">\(\nabla \times \vec{u} = \Bigl( \frac{\partial u_3}{\partial y} - \frac{\partial u_2}{\partial z} , ~ \frac{\partial u_1}{\partial z} - \frac{\partial u_3}{\partial x} , ~ \frac{\partial u_2}{\partial x} - \frac{\partial u_1}{\partial y} \Bigr)\text{.}\)</span> Observez que le rotationnel d'un vecteur est lui-même un vecteur. écrivez les équations de Maxwell en termes de dérivées partielles et classifiez le système.</div></article></div>
+<article class="exercise exercise-like" id="exercise-23"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-23"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-23"><article class="exercise exercise-like"><div class="para" id="p-90">Supposons que <span class="process-math">\(F\)</span> est une fonction linéaire, c'est-à-dire que <span class="process-math">\(F(x,y) = ax+by\)</span> pour des constantes <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{.}\)</span> Classifiez les équations de la forme <span class="process-math">\(F(y',y) = 0\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-24"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-24"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-24"><article class="exercise exercise-like"><div class="para" id="p-91">Trouvez un exemple explicite d'un système de deux EDO satisfaisant aux critères suivants: d'ordre trois, non autonome, non homogène, dont les coefficients sont non constants, et tel que toutes les dérivées possibles apparaissent dans le système au moins une fois.</div></article></div>
+<article class="exercise exercise-like" id="exercise-25"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-25"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-25"><article class="exercise exercise-like"><div class="para" id="p-92">Classifiez les équations suivantes. S'agit-il d'une EDO ou d'une EDP? Est-ce une équation ou un système? Quel est l'ordre? Est-ce linéaire ou non-linéaire et si c'est linéaire, est-ce homogène? À coefficients constants? Si c'est une EDO, est-elle autonome? \begin{tasks}(2) \task <span class="process-math">\(\displaystyle \frac{\partial^2 v}{\partial x^2} + 3 \frac{\partial^2 v}{\partial y^2} = \sin(x)\)</span> \task <span class="process-math">\(\displaystyle \frac{d x}{dt} + \cos(t) x = t^2+t+1\)</span> \task <span class="process-math">\(\displaystyle \frac{d^7 F}{dx^7} = 3F(x)\)</span> \task <span class="process-math">\(\displaystyle y''+8y'=1\)</span> \task <span class="process-math">\(\displaystyle x''+tyx'=0, y''+txy = 0\)</span> \task <span class="process-math">\(\displaystyle \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial s^2} + u^2\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-93">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   }a) EDP , équation, deuxième ordre, linéaire, non homogène, coefficients constants.</div>
+<div class="para" id="p-94">b) EDO , équation, premier ordre, linéaire, non homogène, coefficients non constants, non autonome.</div>
+<div class="para" id="p-95">c) EDO , équation, ordre sept, linéaire, homogène, coefficients constants, autonome.</div>
+<div class="para" id="p-96">d) EDO , équation, deuxième ordre, linéaire, non homogène, coefficients constants, autonome.</div>
+<div class="para" id="p-97">e) EDO , système, deuxième ordre, non linéaire.</div>
+<div class="para" id="p-98">f) EDP , équation, deuxième ordre, non linéaire. }</div>
+<article class="exercise exercise-like" id="exercise-26"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-26"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-26"><article class="exercise exercise-like"><div class="para" id="p-99">Écrivez la forme générale de l'équation différentielle ordinaire d'ordre <em class="emphasis">zero</em> et linéaire. Trouvez sa solution générale.</div></article></div>
+<div class="para" id="p-100">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   équation: <span class="process-math">\(a(x) y = b(x)\text{,}\)</span> solution: <span class="process-math">\(y = \frac{b(x)}{a(x)}\text{.}\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-27"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-27"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-27"><article class="exercise exercise-like"><div class="para" id="p-101">Pour quelles valeurs de <span class="process-math">\(k\)</span> l'équation <span class="process-math">\(\frac{dx}{dt}+x^k = t^{k+2}\)</span> est-elle linéaire? Indice: il y a deux valeurs possibles.</div></article></div>
+<div class="para" id="p-102">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   <span class="process-math">\(k=0\)</span> ou <span class="process-math">\(k=1\)</span> }</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="introde_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

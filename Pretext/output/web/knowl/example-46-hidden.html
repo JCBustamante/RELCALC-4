@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">Prenons le système</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\vec{x}}' = \begin{bmatrix} 2 \amp  1 \amp  1 \\ 1 \amp  2 \amp  0 \\ 0 \amp  0 \amp  2 \end{bmatrix} \vec{x}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Trouvons la solution générale.</div> <div class="para logical">
+<div class="para">On a trouvé préalablement que les valeurs propres sont <span class="process-math">\(1,2\)</span> et <span class="process-math">\(3\text{.}\)</span> On a aussi trouvé le vecteur propre <span class="process-math">\(\left[ \begin{matrix}1 \\ 1 \\ 0 \end{matrix}  \right]\)</span> pour la valeur propre 3. De la même façon, on trouve le vecteur propre <span class="process-math">\(\left[ \begin{matrix}1 \\ -1 \\ 0 \end{matrix}  \right]\)</span> pour la valeur propre 1 et <span class="process-math">\(\left[ \begin{matrix}0 \\ 1 \\ -1 \end{matrix}  \right]\)</span> pour la valeur propre 2 (exercice : vérifiez). La solution générale est donc</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x} = c_1 \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix} e^t + c_2 \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix} e^{2t} + c_3 \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} e^{3t} = \begin{bmatrix} c_1 e^t+c_3 e^{3t} \\ -c_1 e^t + c_2 e^{2t} + c_3 e^{3t} \\ - c_2 e^{2t} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Sous forme de solution matricielle fondamentale :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x} = X(t)\, \vec{c} = \begin{bmatrix} e^t \amp  0 \amp  e^{3t} \\ -e^t \amp  e^{2t} \amp  e^{3t} \\ 0 \amp  -e^{2t} \amp  0 \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \\ c_3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div></article></body>
+</html>

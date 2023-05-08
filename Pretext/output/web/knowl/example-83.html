@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.5.7</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Consider the vectors <span class="process-math">\((1,2,-1)\text{,}\)</span> and <span class="process-math">\((0,5,-2)\)</span> and call <span class="process-math">\(S\)</span> the span of the two vectors. Let us find an orthogonal basis of <span class="process-math">\(S\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\vec{w}_1 \amp  = (1,2,-1) ,\\
+\vec{w}_2 \amp  = (0,5,-2) - \operatorname{proj}_{(1,2,-1)}\bigl((0,2,-2)\bigr)\\
+\amp  = (0,1,-1) - \frac{\langle (0,5,-2), (1,2,-1) \rangle}{ \langle (1,2,-1), (1,2,-1) \rangle } (1,2,-1) = (0,5,-2) - 2 (1,2,-1) = (-2,1,0) \text{.}
+\end{align*}
+</div>
+</div> <div class="para">So <span class="process-math">\((1,2,-1)\)</span> and <span class="process-math">\((-2,1,0)\)</span> span <span class="process-math">\(S\)</span> and are orthogonal. Let us check: <span class="process-math">\((1,2,-1) \cdot (-2,1,0) = 0\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Suppose we wish to find an orthonormal basis, not just an orthogonal one. Well, we simply make the vectors into unit vectors by dividing them by their magnitude. The two vectors making up the orthonormal basis of <span class="process-math">\(S\)</span> are:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\sqrt{6}} (1,2,-1) = \left( \frac{1}{\sqrt{6}}, \frac{2}{\sqrt{6}}, \frac{-1}{\sqrt{6}} \right) , \qquad \frac{1}{\sqrt{5}} (-2,1,0) = \left( \frac{-2}{\sqrt{5}}, \frac{1}{\sqrt{5}}, 0 \right)\text{.}
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="innerproduct_section.html#example-83" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Équations autonomes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Équations différentielles pour le génie">
+<meta property="book:author" content="Jiri Lebl">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Équations différentielles pour le génie</span></a></h1>
+<p class="byline">Jiri Lebl</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="intfactor_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="fo_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="exact_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\theversion}{6.2}
+\newcommand{\nicefrac}[2]{\frac{#1}{#2}}
+\renewcommand{\bibname}{Lectures additionnelles}
+\def\wrapfigure{\wrapfloat{figure}}
+\def\wraptable{\wrapfloat{table}}
+\def\caption{\wf}
+\def\endwrapfigure{\endwrapfloat}
+\def\endwraptable{\endwrapfloat}
+\def\pagetotal{\maxdimen}
+\def\parshape{\WF}
+\def\everypar{\WF}
+\def\noexpand{\clearpage}
+\def\expandafter{\noexpand}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\noexpand{\float}
+\def\csname{endwrap#2\endcsname \endwrapfloat}
+\def\expandafter{\noexpand}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\myindex}[1]{#1\index{#1}}
+\newcommand{\myquote}[1]{``#1''}
+\newcommand{\sectionnewpage}{\clearpage}
+\newcommand{\EPref}[1]{#1}
+\newcommand{\BDref}[1]{#1}
+\newcommand{\theanswer}{\textbf{\theexercise:}}
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+\def\exampleclaim{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\exampleclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endexampleclaim{
+\addvspace{\medskipamount}}
+\renewcommand{\theremark}{\thesection.\arabic{remark}}
+\def\remarkclaim{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\remarkclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endremarkclaim{
+\addvspace{\medskipamount}}
+\newcommand{\figurevref}[1]{\ref{#1}}
+\newcommand{\figureref}[1]{\ref{#1}}
+\newcommand{\tablevref}[1]{\ref{#1}}
+\newcommand{\tableref}[1]{\ref{#1}}
+\newcommand{\chapterref}[1]{\ref{#1}}
+\newcommand{\Chapterref}[1]{\ref{#1}}
+\newcommand{\appendixref}[1]{\ref{#1}}
+\newcommand{\Appendixref}[1]{\ref{#1}}
+\newcommand{\sectionref}[1]{\ref{#1}}
+\newcommand{\subsectionref}[1]{\ref{#1}}
+\newcommand{\subsectionvref}[1]{\ref{#1}}
+\newcommand{\exercisevref}[1]{\ref{#1}}
+\newcommand{\exerciseref}[1]{\ref{#1}}
+\newcommand{\examplevref}[1]{\ref{#1}}
+\newcommand{\exampleref}[1]{\ref{#1}}
+\newcommand{\thmvref}[1]{\ref{#1}}
+\newcommand{\thmref}[1]{\ref{#1}}
+\newcommand{\addfakecontentsline}[1]{\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\addextraspacetotoc}{}
+\newcommand{\diffyincludegraphics}[3]{\includegraphics[#1]{figures/#3}}
+\newcommand{\diffypdfversion}[1]{#1}
+\newcommand{\mybeginframe}{\begin{tcolorbox}[colback=white,colframe=lightgray,left=5pt,right=5pt]}
+\newcommand{\myendframe}{\end{tcolorbox}}
+\newcommand{\mybxbg}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,top=1.5pt,bottom=1.5pt]{#1}}
+\newcommand{\mybxsm}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]{#1}}
+\newcommand{\diffytableofcontents}{
+\microtypesetup{protrusion=false}
+\microtypesetup{protrusion=true}
+}
+\newcommand{\infinity}{\infty}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="intro_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="notes_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Notes à propos de ce manuel</span></a></div></li>
+<li>
+<div class="toc-item"><a href="introde_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction aux équations différentielles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="introde_section.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Solutions d'équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-3" class="internal"><span class="codenumber">1.2.3</span> <span class="title">En pratique</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection_fourfundamental" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Quatre équations fondamentales</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-5" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="classification_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Classification des équations différentielles</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="classification_section.html#subsection-6" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="fo_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Équations du premier ordre</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="integralsols_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Intégrales en tant que solutions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="integralsols_section.html#subsection-7" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="slopefields_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Champs de direction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-8" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Champs de direction</span></a></div></li>
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-9" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Existence et unicité</span></a></div></li>
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-10" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="separable_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Équations séparables</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="separable_section.html#subsection-11" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Équations séparables</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-12" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Solutions implicites</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-13" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exemples d'équations séparables</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-14" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="intfactor_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Équations linéaires et facteur intégrant</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="intfactor_section.html#subsection-15" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="auteq_section.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Équations autonomes</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="auteq_section.html#subsection-16" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="exact_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Équations exactes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="exact_section.html#subsection-17" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Résoudre des équations exactes</span></a></div></li>
+<li><div class="toc-item"><a href="exact_section.html#subsection-18" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ho_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Équations différentielles ordinaires d'ordre supérieur</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="solinear_section.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Équations différentielles du deuxième ordre</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="solinear_section.html#subsection-19" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_ccsol.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Équations différentielles d'ordre deux à coefficients constants</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-20" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Résoudre les équations à coefficients constants</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-21" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Nombres complexes et formule d'Euler</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-22" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Racines complexes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-23" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_hol.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Équations différentielles linéaires d'ordre supérieur</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_hol.html#subsection-24" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Indépendance linéaire</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hol.html#subsection-25" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Équations différentielles d'ordre supérieur à coefficients constants</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hol.html#subsection-26" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_mv.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Vibrations mécaniques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_mv.html#subsection-27" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Quelques exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsection-28" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Mouvement libre non amorti</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_mv.html#subsection-29" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Mouvement libre amorti</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-1" class="internal"><span class="codenumber">3.4.3.1</span> <span class="title">Suramortissement</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-2" class="internal"><span class="codenumber">3.4.3.2</span> <span class="title">Amortissement critique</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-3" class="internal"><span class="codenumber">3.4.3.3</span> <span class="title">Sous-amortissement</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_mv.html#subsection-30" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_nonhom.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Équations non homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-31" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Résoudre des équations non homogènes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-32" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coefficients indéterminés</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-33" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Variation des paramètres</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-34" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sys_chapter.html" class="internal"><span class="codenumber">4</span> <span class="title">Systèmes d'équations différentielles ordinaires</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_introtosys.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction aux systèmes d'équations différentielles ordinaires</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-35" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Systèmes différentiels</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-36" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Applications</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-37" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Passage au premier ordre</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-38" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Systèmes autonomes et champs de vecteurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-39" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Théorème de Picard</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-40" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_matrix.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Matrices et systèmes linéaires</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-41" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Matrices et vecteurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-42" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Multiplication de matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-43" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Déterminant</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-44" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Résolution de systèmes linéaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-45" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Calcul de l'inverse</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-46" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="linsystems_section.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Systèmes linéaires d'équations différentielles ordinaires</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="linsystems_section.html#subsection-47" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="eigenmethod_section.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Décomposition en valeurs propres</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-48" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Matrices de valeurs propres et de vecteurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-49" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Décomposition en valeurs propres avec des valeurs propres réelles distinctes</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-50" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Valeurs propres complexes</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-51" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_twodimaut.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Systèmes bidimensionnels et leurs champs vectoriels</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec_twodimaut.html#subsection-52" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="FS_chapter.html" class="internal"><span class="codenumber">5</span> <span class="title">Séries de Fourier et équations différentielles partielles</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="bvp_section.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Équations avec conditions au bord</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="bvp_section.html#subsection-53" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Valeurs au bord</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-54" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Problèmes de valeurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-55" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Orthogonalité des fonctions propres</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-56" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Alternative de Fredholm</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-57" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Application</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-58" class="internal"><span class="codenumber">5.1.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ts_section.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Séries trigonométriques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="ts_section.html#subsection-59" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Fonctions périodiques et motivations</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-60" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Produit scalaire et décomposition de vecteurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-61" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Séries trigonométriques</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-62" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreonfourier_section.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Plus sur les séries de Fourier</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-63" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Fonctions <span class="process-math">\(2L\)</span>-périodiques</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-64" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Convergence</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-65" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Dérivation et intégration de séries de Fourier</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-66" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Taux de convergence et différentiabilité</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-67" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_scs.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Séries de sinus et de cosinus</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_scs.html#subsection-68" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Fonctions périodiques paires et impaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-69" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Séries sinus et cosinus</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-70" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Application</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-71" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="appoffourier_section.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Applications des séries de Fourier</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-72" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Oscillations périodiques forcées</span></a></div></li>
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-73" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Résonance</span></a></div></li>
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-74" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="heateq_section.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Équations différentielles partielles, séparation des variables et équation de la chaleur</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="heateq_section.html#subsection-75" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Chaleur sur un fil isolé</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-76" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Séparation des variables</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-77" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Extrémités isolées</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-78" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="we_section.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Équation d'onde unidimensionnelle</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="we_section.html#subsection-79" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="linalg_appendix.html" class="internal"><span class="codenumber">6</span> <span class="title">Linear algebra</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="vecsandmaps_section.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vectors, mappings, and matrices</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-80" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Vectors and operations on vectors</span></a></div></li>
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-81" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Linear mappings and matrices</span></a></div></li>
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-82" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="matalg_section.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Matrix algebra</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="matalg_section.html#subsection-83" class="internal"><span class="codenumber">6.2.1</span> <span class="title">One-by-one matrices</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-84" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Matrix addition and scalar multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-85" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Matrix multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-86" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Some rules of matrix algebra</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-87" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Inverse</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-88" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Diagonal matrices</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-89" class="internal"><span class="codenumber">6.2.7</span> <span class="title">Transpose</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-90" class="internal"><span class="codenumber">6.2.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="elim_section.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Elimination</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="elim_section.html#subsection-91" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Linear systems of equations</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-92" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Row echelon form and elementary operations</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-93" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Non-unique solutions and inconsistent systems</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-94" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Linear independence and rank</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-95" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Computing the inverse</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-96" class="internal"><span class="codenumber">6.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subspaces_section.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Subspaces, dimension, and the kernel</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-97" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Subspaces, basis, and dimension</span></a></div></li>
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-98" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Kernel</span></a></div></li>
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-99" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="innerproduct_section.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Inner product and projections</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-100" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Inner product and orthogonality</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-101" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Orthogonal projection</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-102" class="internal"><span class="codenumber">6.5.3</span> <span class="title">Orthogonal basis</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-103" class="internal"><span class="codenumber">6.5.4</span> <span class="title">The Gram–Schmidt process</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-104" class="internal"><span class="codenumber">6.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="det_section.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Determinant</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="det_section.html#subsection-105" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="auteq_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Équations autonomes</span>
+</h2>
+<section class="introduction" id="introduction-6"><div class="para logical" id="p-345">
+<div class="para">Considérons une équation différentielle comme suit:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = f(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">où la dérivée dépend uniquement de <span class="process-math">\(x\text{,}\)</span> la variable dépendante, et non de <span class="process-math">\(t\text{,}\)</span> la variable indépendante. De telles équations sont dites <em class="emphasis">autonomes </em>. On dit autonome parce que, si l'on pense à la variable indépendante comme étant le temps, la valeur de la dérivée à un point est la même à tout moment.</div>
+</div> <div class="para logical" id="p-346">
+<div class="para">Reprenons, par exemple, le problème du café qui tiédit ( <a href="" class="xref" data-knowl="./knowl/sep_coffeeexample.html" title="Example 2.3.4">Example 2.3.4</a>). La loi de refroidissement de Newton est une équation autonome:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sep_coffeeexample.html ./knowl/x2_2_coffeefig.html">
+\begin{equation*}
+\frac{dx}{dt} = k (A-x)
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(x\)</span> est la température, <span class="process-math">\(t\)</span> est le temps, <span class="process-math">\(k\)</span> est une constante positive, et <span class="process-math">\(A\)</span> est la température ambiante. Voir <a href="" class="xref" data-knowl="./knowl/x2_2_coffeefig.html" title="Figure 2.5.1">la 2.5.1</a> pour un exemple avec <span class="process-math">\(k=0{,}3\)</span> et <span class="process-math">\(A=5\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-347">On remarque que l'équation admet la solution constante <span class="process-math">\(x=A\)</span> (dans la figure, <span class="process-math">\(x=5\)</span>). On appelle ces solutions constantes des <em class="emphasis">solutions d'équilibre</em>.  Les points sur l'axe des <span class="process-math">\(x\)</span> où <span class="process-math">\(f(x) = 0\)</span> sont des <em class="emphasis">points critiques </em>. Par exemple, le point <span class="process-math">\(x=A\)</span> est un point critique. Notons que chaque point critique correspond à une solution d'équilibre.</div> <div class="para" id="p-348">Le graphe nous indique que la solution <span class="process-math">\(x=A\)</span> est stable, c'est-à-dire que de petits changements dans <span class="process-math">\(x\)</span> ne mènent pas à des changements importants dans les solutions lorsque <span class="process-math">\(t\)</span> augmente. Si l'on modifie légèrement la condition initiale, alors <span class="process-math">\(x(t) \to A\)</span> lorsque <span class="process-math">\(t \to \infty\text{.}\)</span> Le point critique est alors appelé <em class="emphasis">stable</em>.  Dans l'exemple du refroidissement, toutes les solutions tendent vers <span class="process-math">\(A\)</span> lorsque <span class="process-math">\(t \to \infty\text{.}\)</span> Mais ce n'est pas toujours le cas. Lorsqu'un point critique n'est pas stable, on l'appelle alors <em class="emphasis">instable</em>. </div> <figure class="figure figure-like" id="x2_2_coffeefig">  <span class="process-math">\(x' = 0.1\,x\,(5-x)\)</span><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.1<span class="period">.</span></span><span class="space"> </span>Le champ de directions de <span class="process-math">\(x' = 0.3\ (5-x)\)</span> et quelques solutions.</figcaption></figure> <div class="para logical" id="p-349">
+<div class="para">Considérons maintenant <em class="emphasis">l'équation logistique</em>:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = kx(M-x)\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(k\)</span> et <span class="process-math">\(M\)</span> sont des constantes positives. Cette équation sert communément à modéliser une population si l'on connaît la population limite <span class="process-math">\(M\text{,}\)</span> c'est-à-dire la capacité maximale du système. Les prédictions issues d'une équation logistique sont moins catastrophiques que pour <span class="process-math">\(x'=kx\text{.}\)</span> Bien que <span class="process-math">\(x\)</span> ne puisse pas être négatif, en pratique, puisqu'il s'agit d'une population, la solution mathématique admet des valeurs négatives.</div>
+</div> <div class="para" id="p-350">
+<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "x2_2_logisticfig" missing or not unique]</code> illustre l'exemple <span class="process-math">\(x' = 0.1 x(5-x)\text{.}\)</span> Il y a deux points critiques, <span class="process-math">\(x=0\)</span> et <span class="process-math">\(x=5\text{.}\)</span> Celui à <span class="process-math">\(x=5\)</span> est stable, alors que celui à <span class="process-math">\(x=0\)</span> est instable.</div> <div class="para logical" id="p-351">
+<div class="para">On peut analyser le comportement à long terme des solutions sans devoir les déterminer exactement. Le champ de directions de <span class="process-math">\(x' = 0.1 x(5-x)\)</span> nous montre que:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{t\to \infty} x(t) =   \begin{cases} 5 \amp  \text{ si }  \; x(0) &gt; 0 , \\ 0 \amp  \text{ si }  \; x(0) = 0 , \\ \text{ n'existe pas ou }  {-\infty} \amp  \text{ si }  \; x(0) \lt  0 . \end{cases}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-352">Quant au cas où <span class="process-math">\(x(0) \lt  0\text{,}\)</span> il ne suffit pas de simplement observer le champ de directions. Il se pourrait que la solution n'existe pas pour tout <span class="process-math">\(t\)</span> positif. Rappelons l'exemple de <span class="process-math">\(x' = x^2\)</span> où les solutions existent seulement sur un intervalle fini. Un tel scénario est possible ici. Dans les faits, on trouverait ici que la solution n'existe pas pour toutes les valeurs réelles — et tend vers <span class="process-math">\(-\infinity\)</span> dans un temps fini — mais, pour le voir, il faudrait résoudre l'équation.</div> <div class="para logical" id="p-353">
+<div class="para">Si l'on s'intéresse seulement au comportement à long terme de la solution, on n'a pas besoin de résoudre l'équation logistique exactement. Il suffirait de dessiner le champ de directions. En fait, on peut simplifier le travail encore plus, en traçant ce qu'on appelle le <em class="emphasis">diagramme de phase </em> ou <em class="emphasis">portrait de phase </em> de l'équation autonome. Voici comment on fait dans un cas comme celui-ci, où il y a une seule variable dépendante <span class="process-math">\(x\text{.}\)</span>
+</div>
+<ul class="disc">
+<li id="li-5"><div class="para" id="p-354">Nous traçons l'axe des <span class="process-math">\(x\text{,}\)</span> nous y marquons tous les points critiques de l'équation et nous traçons des flèches dans les intervalles déterminés par ces points critiques.</div></li>
+<li id="li-6"><div class="para" id="p-355">Étant donné que <span class="process-math">\(x\)</span> est la variable dépendante, nous tracerons l'axe des <span class="process-math">\(x\)</span> verticalement, pour reproduire sa position dans le champ de directions.</div></li>
+<li id="li-7"><div class="para" id="p-356">Si <span class="process-math">\(f(x) &gt; 0\text{,}\)</span> la flèche pointe vers le haut.</div></li>
+<li id="li-8"><div class="para" id="p-357">Si <span class="process-math">\(f(x) \lt 0\text{,}\)</span> la flèche pointe vers le bas.</div></li>
+<li id="li-9"><div class="para" id="p-358">Pour trouver le bon signe dans un intervalle donné, il suffit d'évaluer <span class="process-math">\(f(x)\)</span> à une valeur <span class="process-math">\(x\)</span> quelconque appartenant à l'intervalle. En effet, lorsque <span class="process-math">\(f(x)\)</span> est continue (ce qui est le cas dans la plupart des applications), le signe est constant dans chaque intervalle.</div></li>
+</ul>
+</div> <div class="para logical" id="p-359">
+<div class="para">Dans notre exemple:</div>
+<ul class="disc">
+<li id="li-10"><div class="para" id="p-360">Pour <span class="process-math">\(x &gt; 5\)</span> : <span class="process-math">\(f(6) = -0{,}6 \lt 0\text{,}\)</span> donc <span class="process-math">\(f(x) \lt 0\text{,}\)</span> et la flèche au-dessus de <span class="process-math">\(x=5\)</span> pointe vers le bas.</div></li>
+<li id="li-11"><div class="para" id="p-361">Pour <span class="process-math">\(0 \lt x \lt 5\text{:}\)</span> <span class="process-math">\(f(1) = 0{,}4 &gt; 0\text{,}\)</span> donc <span class="process-math">\(f(x) &gt; 0\text{,}\)</span> et la flèche dans cet intervalle pointe vers le haut.</div></li>
+<li id="li-12"><div class="para" id="p-362">Pour <span class="process-math">\(x \lt 0\text{:}\)</span> <span class="process-math">\(f(-1) = -0{,}6 \lt 0\text{,}\)</span> donc <span class="process-math">\(f(x) \lt 0\text{,}\)</span> et la flèche dans cet intervalle pointe vers le bas.</div></li>
+</ul>
+</div> <div class="para" id="p-363"><div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/2-2-l-phasedia.svg" role="img" class="contained"></div></div> <div class="para" id="p-364">[0] Grâce à un diagramme de phase, on peut facilement tracer une approximation des solutions, car le signe de <span class="process-math">\(f(x)\)</span> nous dit le signe de la dérivée, et donc si la valeur augmente ou diminue. De gauche à droite (dans le sens où augmente la variable indépendante), le graphe de la solution monte là où la flèche pointe vers le haut et descend là où la flèche pointe vers le bas.</div> <article class="exercise exercise-like" id="exercise-101"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-101">
+        
+      </a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-101"><article class="exercise exercise-like"></article></div> <div class="para" id="p-366">[0] À l'aide du diagramme de phase, on peut classifier les points critiques comme stables ou instables<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>.</div> <div class="para" id="p-367"><div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/2-2-ph-class.svg" role="img" class="contained"></div></div> <div class="para" id="p-368">Puisqu'un modèle mathématique est généralement une version approximative de la réalité, la présence de points critiques instables peut donner du fil à retordre.</div> <div class="para logical" id="p-369">
+<div class="para">Considérons une équation logistique avec un terme pour la récolte.  Supposons que des extraterrestres adorent déguster des êtres humains. Ils entretiennent une planète où ils gardent des humains et les récoltent à un taux de <span class="process-math">\(h\)</span> millions d'humains par année. Dénotons par <span class="process-math">\(x\)</span> le nombre d'humains en millions sur la planète et par <span class="process-math">\(t\)</span> le temps en années. Soit <span class="process-math">\(M\)</span> la capacité totale en humains sur la planète en l'absence de récolte. Le nombre <span class="process-math">\(k &gt; 0\)</span> est une constante représentant le taux de reproduction des humains. Notre équation devient:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = kx(M-x) - h\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-370">
+<div class="para">On développe le côté droit et on le met égal à zéro afin de trouver les points critiques:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+kx(M-x) - h = -kx^2+kMx - h  = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-371">
+<div class="para">En résolvant pour les points critiques, qu'on dénotera par <span class="process-math">\(A\)</span> et <span class="process-math">\(B\text{,}\)</span> on obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \frac{kM + \sqrt{{(kM)}^2 - 4hk}}{2k}, \qquad B = \frac{kM - \sqrt{{(kM)}^2 - 4hk}}{2k}\text{.}
+\end{equation*}
+</div>
+</div> <article class="exercise exercise-like" id="exercise-102"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-102">
+        
+      </a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-102"><article class="exercise exercise-like"></article></div> <div class="para" id="p-373">Par exemple, posons <span class="process-math">\(M=8\)</span> et <span class="process-math">\(k=0.1\text{.}\)</span> Si <span class="process-math">\(h=1\text{,}\)</span> alors <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> sont distincts et positifs. Le champ de directions est illustré à <a href="" class="xref" data-knowl="./knowl/x2_2_harv1.html" title="Figure 2.5.2">la 2.5.2</a>. Tant que la population initiale est au-dessus de <span class="process-math">\(B\text{,}\)</span> approximativement 1,55 million, la population n'atteindra pas l'extinction. En fait, elle tendra vers <span class="process-math">\(A \approx 6{,}45\)</span> millions. Si une catastrophe faisait chuter la population en dessous de <span class="process-math">\(B\text{,}\)</span> les humains disparaîtraient.</div> <figure class="figure figure-like" id="x2_2_harv1">  <span class="process-math">\(x' = 0{,}1\,x\,(8-x)-1.6\text{.}\)</span><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.2<span class="period">.</span></span><span class="space"> </span>Le champ de directions et quelques solutions pour <span class="process-math">\(x' = 0{,}1\ x\ (8-x)-1\text{.}\)</span></figcaption></figure> <div class="para" id="p-374">Si <span class="process-math">\(h = 1{,}6\text{,}\)</span> alors <span class="process-math">\(A=B=4\text{.}\)</span> Il y a un unique point critique, et il est instable. Si la population initiale est au-dessus de 4 millions, elle tendra vers 4 millions. Mais en dessous de cette valeur, elle tendra vera l'extinction. Et si l'état d'équilibre est légèrement perturbé, on risque encore l'extinction. Voir <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "x2_2_harvc" missing or not unique]</code>.</div> <div class="para" id="p-375">Enfin, si la récolte est de 2 millions par année, il n'y a aucun point critique. La population tendra vers zéro, quelle que soit sa quantité initiale. Voir <a href="" class="xref" data-knowl="./knowl/x2_2_harv2.html" title="Figure 2.5.3">la 2.5.3</a>.</div> <figure class="figure figure-like" id="x2_2_harv2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.3<span class="period">.</span></span><span class="space"> </span>Le champ de directions et quelques solutions pour <span class="process-math">\(x' = 0{,}1\ x\ (8-x)-2\text{.}\)</span></figcaption></figure></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.1</span> <span class="title">Exercices</span>
+</h3>
+<div class="para" id="p-376">\begin{samepage}</div>
+<article class="exercise exercise-like" id="exercise-103"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-103"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-103"><article class="exercise exercise-like"><div class="para" id="p-377">Considérons <span class="process-math">\(x' = x^2\text{.}\)</span> \begin{tasks} \task Tracez le diagramme de phase, trouvez les points critiques et déterminez leur stabilité. \task Tracez quelques solutions représentatives de l'équation. \task Trouvez <span class="process-math">\(\displaystyle \lim_{t\to \infty} x(t)\)</span> pour la solution avec condition initiale <span class="process-math">\(x(0) = -1\text{.}\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-378">\end{samepage}</div>
+<article class="exercise exercise-like" id="exercise-104"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-104"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-104"><article class="exercise exercise-like"><div class="para" id="p-379">Considérons <span class="process-math">\(x' = \sin x\text{.}\)</span> \begin{tasks} \task Tracez le diagramme de phase pour <span class="process-math">\(-4\pi \leq x \leq 4\pi\text{.}\)</span> Sur cet intervalle, trouvez les points critiques et déterminez leur stabilité. \task Tracez quelques solutions représentatives de l'équation. \task Trouvez <span class="process-math">\(\displaystyle \lim_{t\to \infty} x(t)\)</span> pour la solution avec condition initiale <span class="process-math">\(x(0) = 1\text{.}\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-105"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-105"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-105"><article class="exercise exercise-like"><div class="para" id="p-380">Supposons que <span class="process-math">\(f(x)\)</span> est positif pour <span class="process-math">\(0 \lt x \lt 1\text{,}\)</span> zéro pour <span class="process-math">\(x=0\)</span> et <span class="process-math">\(x=1\text{,}\)</span> et négatif pour les autres valeurs de <span class="process-math">\(x\text{.}\)</span> \begin{tasks} \task Tracez le diagramme de phase pour <span class="process-math">\(x' = f(x)\text{,}\)</span> trouvez les points critiques et déterminez leur stabilité. \task Tracez quelques solutions représentatives de l'équation. \task Trouvez <span class="process-math">\(\displaystyle \lim_{t\to \infty} x(t)\)</span> pour la solution avec condition initiale <span class="process-math">\(x(0) = 0.5\text{.}\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-106"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-106"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-106"><article class="exercise exercise-like"><div class="para" id="p-381">Commençons avec l'équation logistique <span class="process-math">\(\frac{dx}{dt} = kx(M-x)\text{.}\)</span> Nous allons modifier la récolte comme suit. La quantité cultivée sera proportionnelle à la population. Autrement dit, on récolte <span class="process-math">\(hx\)</span> par unité de temps pour un <span class="process-math">\(h &gt; 0\)</span> donné. (C'est analogue à l'exemple vu plus haut mais avec un terme <span class="process-math">\(hx\)</span> au lieu de <span class="process-math">\(h\text{.}\)</span>) \begin{tasks} \task Trouvez l'équation différentielle modélisant cette situation. \task Montrez que si <span class="process-math">\(kM &gt; h\text{,}\)</span> alors c'est toujours une équation logistique. \task Qu'arrive-t-il lorsque <span class="process-math">\(kM \lt h\text{?}\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-107"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-107"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-107"><article class="exercise exercise-like"><div class="para" id="p-382">Une maladie contagieuse se répand dans une population. Soit <span class="process-math">\(x\)</span> le nombre de personnes infectées, et <span class="process-math">\(S\)</span> la constante donnant le nombre de personnes susceptibles d'être infectées. Le taux d'infection <span class="process-math">\(\frac{dx}{dt}\)</span> est propostionnelle au nombre de personnes infectées, <span class="process-math">\(x\text{,}\)</span> multiplié par le nombre de personnes non-infectées mas susceptibles de l'être, <span class="process-math">\(S-x\text{.}\)</span> \begin{tasks} \task Trouvez l'équation différentielle modélisant cette situation. \task En supposant que <span class="process-math">\(x(0) &gt; 0\text{,}\)</span> c'est-à-dire que certaine spersonnes sont déjà infectées au <span class="process-math">\(t=0\text{,}\)</span> trouvez <span class="process-math">\(\displaystyle \lim_{t\to\infty} x(t)\text{.}\)</span> \task Est-ce que la solution en b) correspond à votre intuition? Pourquoi ou pourquoi pas? \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-108"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-108"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-108"><article class="exercise exercise-like"><div class="para" id="p-383">Soit <span class="process-math">\(x'=(x-1)(x-2)x^2\text{.}\)</span> \begin{tasks} \task Esquissez le diagramme de phase et calculez les points critiques. \task Classifiez les points critiques. \task Si <span class="process-math">\(x(0)=0{,}5\text{,}\)</span> calculez <span class="process-math">\(\displaystyle \lim_{t\to\infty} x(t)\text{.}\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-384">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) 0, 1, 2 sont des points critiques. b) <span class="process-math">\(x=0\)</span> est instable (semistable), <span class="process-math">\(x=1\)</span> est stable, et <span class="process-math">\(x=2\)</span> est instable. c) 1 }</div>
+<article class="exercise exercise-like" id="exercise-109"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-109"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.10</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-109"><article class="exercise exercise-like"><div class="para" id="p-385">Soit <span class="process-math">\(x'=e^{-x}\text{.}\)</span> \begin{tasks}(2) \task Calculez et classifiez les points critiques. \task Calculez <span class="process-math">\(\displaystyle \lim_{t\to\infty} x(t)\)</span> étant donnée une condition initiale arbitraire. \end{tasks}</div></article></div>
+<div class="para" id="p-386">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) Il n'y a pas de points critiques. b) <span class="process-math">\(\infty\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-110"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-110"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.11</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-110"><article class="exercise exercise-like"><div class="para" id="p-387">Supposons qu'une population de poissons dans un lac satisfait à l'équation <span class="process-math">\(\frac{dx}{dt} = kx(M-x)\text{.}\)</span> Maintenant supposons que des poissons sont ajoutés à un taux constant de <span class="process-math">\(A\)</span> poissons par unité de temps. \begin{tasks}(2) \task Trouvez l'équations différentielle pour <span class="process-math">\(x\text{.}\)</span> \task Quelle est la nouvelle population limite? \end{tasks}</div></article></div>
+<div class="para" id="p-388">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) <span class="process-math">\(\frac{dx}{dt} = kx(M-x)+A\)</span> b) <span class="process-math">\(\frac{kM + \sqrt{{(kM)}^2 + 4Ak}}{2k}\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-111"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-111"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-111"><article class="exercise exercise-like"><div class="para" id="p-389">Supposons que <span class="process-math">\(\frac{dx}{dt} = (x-\alpha)(x-\beta)\text{,}\)</span> où <span class="process-math">\(\alpha \lt \beta\)</span> sont deux nombres. \begin{tasks} \task Calculez et classifiez les points critiques. \end{tasks} Pour b), c), d), calculez <span class="process-math">\(\displaystyle \lim_{t\to\infty} x(t)\)</span> en vous basant sur le diagramme de phase. \begin{tasks}[resume](3) \task <span class="process-math">\(x(0) \lt \alpha\text{,}\)</span> \task <span class="process-math">\(\alpha \lt x(0) \lt \beta\text{,}\)</span> \task <span class="process-math">\(\beta \lt x(0)\text{.}\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-390">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) <span class="process-math">\(\alpha\)</span> est un point critique stable, <span class="process-math">\(\beta\)</span> est un point critique instable. b) <span class="process-math">\(\alpha\text{,}\)</span> c) <span class="process-math">\(\alpha\text{,}\)</span> d) <span class="process-math">\(\infty\)</span> ou n'existe pas . }</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">Parfois, on dira d'un point critique instable qu'il est <em class="emphasis">semistable</em>,  si une des deux flèches pointe vers le point critique.</div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="intfactor_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="exact_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

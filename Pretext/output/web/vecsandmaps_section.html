@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Vectors, mappings, and matrices</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Équations différentielles pour le génie">
+<meta property="book:author" content="Jiri Lebl">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Équations différentielles pour le génie</span></a></h1>
+<p class="byline">Jiri Lebl</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="linalg_appendix.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="linalg_appendix.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="matalg_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\theversion}{6.2}
+\newcommand{\nicefrac}[2]{\frac{#1}{#2}}
+\renewcommand{\bibname}{Lectures additionnelles}
+\def\wrapfigure{\wrapfloat{figure}}
+\def\wraptable{\wrapfloat{table}}
+\def\caption{\wf}
+\def\endwrapfigure{\endwrapfloat}
+\def\endwraptable{\endwrapfloat}
+\def\pagetotal{\maxdimen}
+\def\parshape{\WF}
+\def\everypar{\WF}
+\def\noexpand{\clearpage}
+\def\expandafter{\noexpand}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\noexpand{\float}
+\def\csname{endwrap#2\endcsname \endwrapfloat}
+\def\expandafter{\noexpand}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\myindex}[1]{#1\index{#1}}
+\newcommand{\myquote}[1]{``#1''}
+\newcommand{\sectionnewpage}{\clearpage}
+\newcommand{\EPref}[1]{#1}
+\newcommand{\BDref}[1]{#1}
+\newcommand{\theanswer}{\textbf{\theexercise:}}
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+\def\exampleclaim{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\exampleclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endexampleclaim{
+\addvspace{\medskipamount}}
+\renewcommand{\theremark}{\thesection.\arabic{remark}}
+\def\remarkclaim{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\remarkclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endremarkclaim{
+\addvspace{\medskipamount}}
+\newcommand{\figurevref}[1]{\ref{#1}}
+\newcommand{\figureref}[1]{\ref{#1}}
+\newcommand{\tablevref}[1]{\ref{#1}}
+\newcommand{\tableref}[1]{\ref{#1}}
+\newcommand{\chapterref}[1]{\ref{#1}}
+\newcommand{\Chapterref}[1]{\ref{#1}}
+\newcommand{\appendixref}[1]{\ref{#1}}
+\newcommand{\Appendixref}[1]{\ref{#1}}
+\newcommand{\sectionref}[1]{\ref{#1}}
+\newcommand{\subsectionref}[1]{\ref{#1}}
+\newcommand{\subsectionvref}[1]{\ref{#1}}
+\newcommand{\exercisevref}[1]{\ref{#1}}
+\newcommand{\exerciseref}[1]{\ref{#1}}
+\newcommand{\examplevref}[1]{\ref{#1}}
+\newcommand{\exampleref}[1]{\ref{#1}}
+\newcommand{\thmvref}[1]{\ref{#1}}
+\newcommand{\thmref}[1]{\ref{#1}}
+\newcommand{\addfakecontentsline}[1]{\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\addextraspacetotoc}{}
+\newcommand{\diffyincludegraphics}[3]{\includegraphics[#1]{figures/#3}}
+\newcommand{\diffypdfversion}[1]{#1}
+\newcommand{\mybeginframe}{\begin{tcolorbox}[colback=white,colframe=lightgray,left=5pt,right=5pt]}
+\newcommand{\myendframe}{\end{tcolorbox}}
+\newcommand{\mybxbg}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,top=1.5pt,bottom=1.5pt]{#1}}
+\newcommand{\mybxsm}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]{#1}}
+\newcommand{\diffytableofcontents}{
+\microtypesetup{protrusion=false}
+\microtypesetup{protrusion=true}
+}
+\newcommand{\infinity}{\infty}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="intro_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="notes_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Notes à propos de ce manuel</span></a></div></li>
+<li>
+<div class="toc-item"><a href="introde_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction aux équations différentielles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="introde_section.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Solutions d'équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-3" class="internal"><span class="codenumber">1.2.3</span> <span class="title">En pratique</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection_fourfundamental" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Quatre équations fondamentales</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-5" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="classification_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Classification des équations différentielles</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="classification_section.html#subsection-6" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="fo_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Équations du premier ordre</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="integralsols_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Intégrales en tant que solutions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="integralsols_section.html#subsection-7" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="slopefields_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Champs de direction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-8" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Champs de direction</span></a></div></li>
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-9" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Existence et unicité</span></a></div></li>
+<li><div class="toc-item"><a href="slopefields_section.html#subsection-10" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="separable_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Équations séparables</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="separable_section.html#subsection-11" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Équations séparables</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-12" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Solutions implicites</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-13" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exemples d'équations séparables</span></a></div></li>
+<li><div class="toc-item"><a href="separable_section.html#subsection-14" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="intfactor_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Équations linéaires et facteur intégrant</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="intfactor_section.html#subsection-15" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="auteq_section.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Équations autonomes</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="auteq_section.html#subsection-16" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="exact_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Équations exactes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="exact_section.html#subsection-17" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Résoudre des équations exactes</span></a></div></li>
+<li><div class="toc-item"><a href="exact_section.html#subsection-18" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ho_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Équations différentielles ordinaires d'ordre supérieur</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="solinear_section.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Équations différentielles du deuxième ordre</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="solinear_section.html#subsection-19" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_ccsol.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Équations différentielles d'ordre deux à coefficients constants</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-20" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Résoudre les équations à coefficients constants</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-21" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Nombres complexes et formule d'Euler</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-22" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Racines complexes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_ccsol.html#subsection-23" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_hol.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Équations différentielles linéaires d'ordre supérieur</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_hol.html#subsection-24" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Indépendance linéaire</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hol.html#subsection-25" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Équations différentielles d'ordre supérieur à coefficients constants</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hol.html#subsection-26" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_mv.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Vibrations mécaniques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_mv.html#subsection-27" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Quelques exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsection-28" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Mouvement libre non amorti</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_mv.html#subsection-29" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Mouvement libre amorti</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-1" class="internal"><span class="codenumber">3.4.3.1</span> <span class="title">Suramortissement</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-2" class="internal"><span class="codenumber">3.4.3.2</span> <span class="title">Amortissement critique</span></a></div></li>
+<li><div class="toc-item"><a href="sec_mv.html#subsubsection-3" class="internal"><span class="codenumber">3.4.3.3</span> <span class="title">Sous-amortissement</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_mv.html#subsection-30" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_nonhom.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Équations non homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-31" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Résoudre des équations non homogènes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-32" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coefficients indéterminés</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-33" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Variation des paramètres</span></a></div></li>
+<li><div class="toc-item"><a href="sec_nonhom.html#subsection-34" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sys_chapter.html" class="internal"><span class="codenumber">4</span> <span class="title">Systèmes d'équations différentielles ordinaires</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_introtosys.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction aux systèmes d'équations différentielles ordinaires</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-35" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Systèmes différentiels</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-36" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Applications</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-37" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Passage au premier ordre</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-38" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Systèmes autonomes et champs de vecteurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-39" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Théorème de Picard</span></a></div></li>
+<li><div class="toc-item"><a href="sec_introtosys.html#subsection-40" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_matrix.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Matrices et systèmes linéaires</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-41" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Matrices et vecteurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-42" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Multiplication de matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-43" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Déterminant</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-44" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Résolution de systèmes linéaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-45" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Calcul de l'inverse</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix.html#subsection-46" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="linsystems_section.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Systèmes linéaires d'équations différentielles ordinaires</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="linsystems_section.html#subsection-47" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="eigenmethod_section.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Décomposition en valeurs propres</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-48" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Matrices de valeurs propres et de vecteurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-49" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Décomposition en valeurs propres avec des valeurs propres réelles distinctes</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-50" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Valeurs propres complexes</span></a></div></li>
+<li><div class="toc-item"><a href="eigenmethod_section.html#subsection-51" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_twodimaut.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Systèmes bidimensionnels et leurs champs vectoriels</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec_twodimaut.html#subsection-52" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="FS_chapter.html" class="internal"><span class="codenumber">5</span> <span class="title">Séries de Fourier et équations différentielles partielles</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="bvp_section.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Équations avec conditions au bord</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="bvp_section.html#subsection-53" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Valeurs au bord</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-54" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Problèmes de valeurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-55" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Orthogonalité des fonctions propres</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-56" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Alternative de Fredholm</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-57" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Application</span></a></div></li>
+<li><div class="toc-item"><a href="bvp_section.html#subsection-58" class="internal"><span class="codenumber">5.1.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ts_section.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Séries trigonométriques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="ts_section.html#subsection-59" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Fonctions périodiques et motivations</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-60" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Produit scalaire et décomposition de vecteurs propres</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-61" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Séries trigonométriques</span></a></div></li>
+<li><div class="toc-item"><a href="ts_section.html#subsection-62" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreonfourier_section.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Plus sur les séries de Fourier</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-63" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Fonctions <span class="process-math">\(2L\)</span>-périodiques</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-64" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Convergence</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-65" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Dérivation et intégration de séries de Fourier</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-66" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Taux de convergence et différentiabilité</span></a></div></li>
+<li><div class="toc-item"><a href="moreonfourier_section.html#subsection-67" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_scs.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Séries de sinus et de cosinus</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_scs.html#subsection-68" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Fonctions périodiques paires et impaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-69" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Séries sinus et cosinus</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-70" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Application</span></a></div></li>
+<li><div class="toc-item"><a href="sec_scs.html#subsection-71" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="appoffourier_section.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Applications des séries de Fourier</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-72" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Oscillations périodiques forcées</span></a></div></li>
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-73" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Résonance</span></a></div></li>
+<li><div class="toc-item"><a href="appoffourier_section.html#subsection-74" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="heateq_section.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Équations différentielles partielles, séparation des variables et équation de la chaleur</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="heateq_section.html#subsection-75" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Chaleur sur un fil isolé</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-76" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Séparation des variables</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-77" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Extrémités isolées</span></a></div></li>
+<li><div class="toc-item"><a href="heateq_section.html#subsection-78" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="we_section.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Équation d'onde unidimensionnelle</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="we_section.html#subsection-79" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="linalg_appendix.html" class="internal"><span class="codenumber">6</span> <span class="title">Linear algebra</span></a></div>
+<ul class="structural">
+<li class="active">
+<div class="toc-item"><a href="vecsandmaps_section.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vectors, mappings, and matrices</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-80" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Vectors and operations on vectors</span></a></div></li>
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-81" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Linear mappings and matrices</span></a></div></li>
+<li><div class="toc-item"><a href="vecsandmaps_section.html#subsection-82" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="matalg_section.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Matrix algebra</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="matalg_section.html#subsection-83" class="internal"><span class="codenumber">6.2.1</span> <span class="title">One-by-one matrices</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-84" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Matrix addition and scalar multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-85" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Matrix multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-86" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Some rules of matrix algebra</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-87" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Inverse</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-88" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Diagonal matrices</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-89" class="internal"><span class="codenumber">6.2.7</span> <span class="title">Transpose</span></a></div></li>
+<li><div class="toc-item"><a href="matalg_section.html#subsection-90" class="internal"><span class="codenumber">6.2.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="elim_section.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Elimination</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="elim_section.html#subsection-91" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Linear systems of equations</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-92" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Row echelon form and elementary operations</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-93" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Non-unique solutions and inconsistent systems</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-94" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Linear independence and rank</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-95" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Computing the inverse</span></a></div></li>
+<li><div class="toc-item"><a href="elim_section.html#subsection-96" class="internal"><span class="codenumber">6.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subspaces_section.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Subspaces, dimension, and the kernel</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-97" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Subspaces, basis, and dimension</span></a></div></li>
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-98" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Kernel</span></a></div></li>
+<li><div class="toc-item"><a href="subspaces_section.html#subsection-99" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="innerproduct_section.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Inner product and projections</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-100" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Inner product and orthogonality</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-101" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Orthogonal projection</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-102" class="internal"><span class="codenumber">6.5.3</span> <span class="title">Orthogonal basis</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-103" class="internal"><span class="codenumber">6.5.4</span> <span class="title">The Gram–Schmidt process</span></a></div></li>
+<li><div class="toc-item"><a href="innerproduct_section.html#subsection-104" class="internal"><span class="codenumber">6.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="det_section.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Determinant</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="det_section.html#subsection-105" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="vecsandmaps_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Vectors, mappings, and matrices</span>
+</h2>
+<section class="introduction" id="introduction-18"><div class="para" id="p-1534">In real life, there is most often more than one variable. We wish to organize dealing with multiple variables in a consistent manner, and in particular organize dealing with linear equations and linear mappings, as those both rather useful and rather easy to handle. Mathematicians joke that “to an engineer every problem is linear, and everything is a matrix.” And well, they (the engineers) are not wrong. Quite often, solving an engineering problem is figuring out the right finite-dimensional linear problem to solve, which is then solved with some matrix manipulation. Most importantly, linear problems are the ones that we know how to solve, and we have many tools to solve them. For engineers, mathematicians, physicists, and anybody in a technical field it is absolutely vital to learn linear algebra.</div> <div class="para logical" id="p-1535">
+<div class="para">As motivation, suppose we wish to solve</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned} \amp  x-y = 2 , \\ \amp  2x+y = 4 , \end{aligned}
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> that is, find numbers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that the two equations are satisfied. Let us perhaps start by adding the equations together to find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x+2x-y+y = 2+4, \qquad \text{ or }  \qquad 3x = 6\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1536">In other words, <span class="process-math">\(x=2\text{.}\)</span> Once we have that, we plug in <span class="process-math">\(x=2\)</span> into the first equation to find <span class="process-math">\(2-y=2\text{,}\)</span> so <span class="process-math">\(y=0\text{.}\)</span> OK , that was easy. What is all this fuss about linear equations. Well, try doing this if you have 5000 unknowns<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 1 </sup></a>. Also, we may have such equations not of just numbers, but of functions and derivatives of functions in differential equations. Clearly we need a more systematic way of doing things. A nice consequence of making things systematic and simpler to write down is that it becomes easier to have computers do the work for us. Computers are rather stupid, they do not think, but are very good at doing lots of repetitive tasks precisely, as long as we figure out a systematic way for them to perform the tasks.</div></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.1</span> <span class="title">Vectors and operations on vectors</span>
+</h3>
+<div class="para logical" id="p-1537">
+<div class="para">Consider <span class="process-math">\(n\)</span> real numbers as an <span class="process-math">\(n\)</span>-tuple:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x_1,x_2,\ldots,x_n)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1538">The set of such <span class="process-math">\(n\)</span>-tuples is the so-called <em class="emphasis"><span class="process-math">\(n\)</span>-dimensional space</em>,  often denoted by <span class="process-math">\({\mathbb R}^n\text{.}\)</span> Sometimes we call this the <span class="process-math">\(n\)</span>-dimensional <em class="emphasis">euclidean space </em><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 2 </sup></a>. In two dimensions, <span class="process-math">\({\mathbb R}^2\)</span> is called the <em class="emphasis">cartesian plane </em><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 4 </sup></a>. Each such <span class="process-math">\(n\)</span>-tuple represents a point in the <span class="process-math">\(n\)</span>-dimensional space. For example, the point <span class="process-math">\((1,2)\)</span> in the plane <span class="process-math">\({\mathbb R}^2\)</span> is one unit to the right and two units up from the origin.</div>
+<div class="para" id="p-1539">When we do algebra with these <span class="process-math">\(n\)</span>-tuples of numbers we call them <em class="emphasis">vectors</em>  <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 6 </sup></a>. Mathematicians are keen on separating what is a vector and what is a point of the space or in the plane, and it turns out to be an important distinction, however, for the purposes of linear algebra we can think of everything being represented by a vector. A way to think of a vector, which is especially useful in calculus and differential equations, is an arrow. It is an object that has a <em class="emphasis">direction </em> and a <em class="emphasis">magnitude</em>. For example, the vector <span class="process-math">\((1,2)\)</span> is the arrow from the origin to the point <span class="process-math">\((1,2)\)</span> in the plane. The magnitude is the length of the arrow. <a href="" class="xref" data-knowl="./knowl/linalg-vecarrow_fig.html" title="Figure 6.1.1">See 6.1.1</a>. If we think of vectors as arrows, the arrow doesn't always have to start at the origin. If we do move it around, however, it should always keep the same direction and the same magnitude.</div>
+<figure class="figure figure-like" id="linalg-vecarrow_fig"><div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/linalg-vecarrow.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.1<span class="period">.</span></span><span class="space"> </span>The vector <span class="process-math">\((1,2)\)</span> drawn as an arrow from the origin to the point <span class="process-math">\((1,2)\text{.}\)</span></figcaption></figure><div class="para logical" id="p-1540">
+<div class="para">As vectors are arrows, when we want to give a name to a vector, we draw a little arrow above it:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1541">Another popular notation is <span class="process-math">\(\mathbf{x}\text{,}\)</span> although we will use the little arrows. It may be easy to write a bold letter in a book, but it is not so easy to write it by hand on paper or on the board. Mathematicians often don't even write the arrows. A mathematician would write <span class="process-math">\(x\)</span> and just remember that <span class="process-math">\(x\)</span> is a vector and not a number. Just like you remember that Bob is your uncle, and you don't have to keep repeating “Uncle Bob” and you can just say “Bob.” In this book, however, we will call Bob “Uncle Bob” and write vectors with the little arrows.</div>
+<div class="para logical" id="p-1542">
+<div class="para">The <em class="emphasis">magnitude </em> can be computed using Pythagorean theorem. The vector <span class="process-math">\((1,2)\)</span> drawn in the figure has magnitude <span class="process-math">\(\sqrt{1^2+2^2} = \sqrt{5}\text{.}\)</span> The magnitude is denoted by <span class="process-math">\(\lVert \vec{x} \rVert\text{,}\)</span> and, in any number of dimensions, it can be computed in the same way:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lVert \vec{x} \rVert = \lVert (x_1,x_2,\ldots,x_n) \rVert = \sqrt{x_1^2+x_2^2+\cdots+x_n^2}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1543">
+<div class="para">For reasons that will become clear in the next section, we often write vectors as so-called <em class="emphasis">column vectors</em>: </div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x} = \begin{bmatrix} x_{1} \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1544">
+<div class="para">Don't worry. It is just a different way of writing the same thing, and it will be useful later. For example, the vector <span class="process-math">\((1,2)\)</span> can be written as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 1 \\ 2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1545">The fact that we write arrows above vectors allows us to write several vectors <span class="process-math">\(\vec{x}_1\text{,}\)</span> <span class="process-math">\(\vec{x}_2\text{,}\)</span> etc., without confusing these with the components of some other vector <span class="process-math">\(\vec{x}\text{.}\)</span>
+</div>
+<div class="para" id="p-1546">So where is the <em class="emphasis">algebra</em> from <em class="emphasis">linear algebra</em>? Well, arrows can be added, subtracted, and multiplied by numbers. First we consider <em class="emphasis">addition</em>.  If we have two arrows, we simply move along one, and then along the other. <a href="" class="xref" data-knowl="./knowl/linalg-vecadd_fig.html" title="Figure 6.1.2">See 6.1.2</a>.</div>
+<figure class="figure figure-like" id="linalg-vecadd_fig"><div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/linalg-vecadd.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.2<span class="period">.</span></span><span class="space"> </span>Adding the vectors <span class="process-math">\((1,2)\text{,}\)</span> drawn dotted, and <span class="process-math">\((2,-3)\text{,}\)</span> drawn dashed.  The result, <span class="process-math">\((3,-1)\text{,}\)</span> is drawn as a solid arrow.</figcaption></figure><div class="para logical" id="p-1547">
+<div class="para">It is rather easy to see what it does to the numbers that represent the vectors. Suppose we want to add <span class="process-math">\((1,2)\)</span> to <span class="process-math">\((2,-3)\)</span> as in the figure. So we travel along <span class="process-math">\((1,2)\)</span> and then we travel along <span class="process-math">\((2,-3)\text{.}\)</span> What we did was travel one unit right, two units up, and then we travelled two units right, and three units down (the negative three). That means that we ended up at <span class="process-math">\(\bigl(1+2,2+(-3)\bigr) = (3,-1)\text{.}\)</span> And that's how addition always works:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} x_{1} \\ x_2 \\ \vdots \\ x_n \end{bmatrix} + \begin{bmatrix} y_{1} \\ y_2 \\ \vdots \\ y_n \end{bmatrix} = \begin{bmatrix} x_1 + y_{1} \\ x_2+ y_2 \\ \vdots \\ x_n + y_n \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1548">
+<em class="emphasis">Subtracting</em>  is similar. What <span class="process-math">\(\vec{x}- \vec{y}\)</span> means visually is that we first travel along <span class="process-math">\(\vec{x}\text{,}\)</span> and then we travel backwards along <span class="process-math">\(\vec{y}\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/linalg-vecsub_fig.html" title="Figure 6.1.3">See 6.1.3</a>. It is like adding <span class="process-math">\(\vec{x}+ (- \vec{y})\)</span> where <span class="process-math">\(-\vec{y}\)</span> is the arrow we obtain by erasing the arrow head from one side and drawing it on the other side, that is, we reverse the direction. In terms of the numbers, we simply go backwards in both directions, so we negate both numbers. For example, if <span class="process-math">\(\vec{y}\)</span> is <span class="process-math">\((-2,1)\text{,}\)</span> then <span class="process-math">\(-\vec{y}\)</span> is <span class="process-math">\((2,-1)\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="linalg-vecsub_fig"><div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/linalg-vecsub.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.3<span class="period">.</span></span><span class="space"> </span>Subtraction, the vector <span class="process-math">\((1,2)\text{,}\)</span> drawn dotted, minus <span class="process-math">\((-2,1)\text{,}\)</span> drawn dashed.  The result, <span class="process-math">\((3,1)\text{,}\)</span> is drawn as a solid arrow.</figcaption></figure><div class="para logical" id="p-1549">
+<div class="para">Another intuitive thing to do to a vector is to <em class="emphasis">scale</em>  it. We represent this by multiplication of a number with a vector. Because of this, when we wish to distinguish between vectors and numbers, we call the numbers <em class="emphasis">scalars</em>.  For example, suppose we want to travel three times further. If the vector is <span class="process-math">\((1,2)\text{,}\)</span> travelling 3 times further means going 3 units to the right and 6 units up, so we get the vector <span class="process-math">\((3,6)\text{.}\)</span> We just multiply each number in the vector by 3. If <span class="process-math">\(\alpha\)</span> is a number, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha \begin{bmatrix} x_{1} \\ x_2 \\ \vdots \\ x_n \end{bmatrix} = \begin{bmatrix} \alpha x_{1} \\ \alpha x_2 \\ \vdots \\ \alpha x_n \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1550">Scaling (by a positive number) multiplies the magnitude and leaves direction untouched. The magnitude of <span class="process-math">\((1,2)\)</span> is <span class="process-math">\(\sqrt{5}\text{.}\)</span> The magnitude of 3 times <span class="process-math">\((1,2)\text{,}\)</span> that is, <span class="process-math">\((3,6)\text{,}\)</span> is <span class="process-math">\(3\sqrt{5}\text{.}\)</span>
+</div>
+<div class="para" id="p-1551">When the scalar is negative, then when we multiply a vector by it, the vector is not only scaled, but it also switches direction. So multiplying <span class="process-math">\((1,2)\)</span> by <span class="process-math">\(-3\)</span> means we should go 3 times further but in the opposite direction, so 3 units to the left and 6 units down, or in other words, <span class="process-math">\((-3,-6)\text{.}\)</span> As we mentioned above, <span class="process-math">\(-\vec{y}\)</span> is a reverse of <span class="process-math">\(\vec{y}\text{,}\)</span> and this is the same as <span class="process-math">\((-1)\vec{y}\text{.}\)</span>
+</div>
+<div class="para" id="p-1552">
+<a href="" class="xref" data-knowl="./knowl/linalg-vecscale_fig.html" title="Figure 6.1.4">In 6.1.4</a>, you can see a couple of examples of what scaling a vector means visually.</div>
+<figure class="figure figure-like" id="linalg-vecscale_fig"><div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/linalg-vecscale.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.4<span class="period">.</span></span><span class="space"> </span>A vector <span class="process-math">\(\vec{x}\text{,}\)</span> the vector <span class="process-math">\(2\vec{x}\)</span> (same direction, double the magnitude), and the vector <span class="process-math">\(-1.5\vec{x}\)</span> (opposite direction, 1.5 times the magnitude).</figcaption></figure><div class="para logical" id="p-1553">
+<div class="para">We put all of these operations together to work out more complicated expressions. Let us compute a small example:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3 \begin{bmatrix} 1 \\ 2 \end{bmatrix} + 2 \begin{bmatrix} -4 \\ -1 \end{bmatrix} - 3 \begin{bmatrix} -2 \\ 2 \end{bmatrix} = \begin{bmatrix} 3(1)+2(-4)-3(-2) \\ 3(2)+2(-1)-3(2) \end{bmatrix} = \begin{bmatrix} 1 \\ -2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1554">As we said a vector is a direction and a magnitude. Magnitude is easy to represent, it is just a number. The <em class="emphasis">direction </em> is usually given by a vector with magnitude one. We call such a vector a <em class="emphasis">unit vector </em>. That is, <span class="process-math">\(\vec{u}\)</span> is a unit vector when <span class="process-math">\(\lVert \vec{u} \rVert = 1\text{.}\)</span> For example, the vectors <span class="process-math">\((1,0)\text{,}\)</span> <span class="process-math">\((\nicefrac{1}{\sqrt{2}},\nicefrac{1}{\sqrt{2}})\text{,}\)</span> and <span class="process-math">\((0,-1)\)</span> are all unit vectors.</div>
+<div class="para" id="p-1555">To represent the direction of a vector <span class="process-math">\(\vec{x}\text{,}\)</span> we need to find the unit vector in the same direction. To do so, we simply rescale <span class="process-math">\(\vec{x}\)</span> by the reciprocal of the magnitude, that is <span class="process-math">\(\frac{1}{\lVert \vec{x} \rVert} \vec{x}\text{,}\)</span> or more concisely <span class="process-math">\(\frac{\vec{x}}{\lVert \vec{x} \rVert}\text{.}\)</span>
+</div>
+<div class="para logical" id="p-1556">
+<div class="para">For example, the unit vector in the direction of <span class="process-math">\((1,2)\)</span> is the vector</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\sqrt{1^2+2^2}} (1,2) = \left( \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}} \right)\text{.}
+\end{equation*}
+</div>
+</div></section><section class="subsection" id="subsection-81"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.2</span> <span class="title">Linear mappings and matrices</span>
+</h3>
+<div class="para logical" id="p-1557">
+<div class="para">A <em class="emphasis">vector-valued function </em> <span class="process-math">\(F\)</span> is a rule that takes a vector <span class="process-math">\(\vec{x}\)</span> and returns another vector <span class="process-math">\(\vec{y}\text{.}\)</span> For example, <span class="process-math">\(F\)</span> could be a scaling that doubles the size of vectors:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(\vec{x}) = 2 \vec{x}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1558">
+<div class="para">For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F \left( \begin{bmatrix} 1 \\ 3 \end{bmatrix} \right) = 2 \begin{bmatrix} 1 \\ 3 \end{bmatrix} = \begin{bmatrix} 2 \\ 6 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1559">
+<div class="para">If <span class="process-math">\(F\)</span> is a mapping that takes vectors in <span class="process-math">\({\mathbb R}^2\)</span> to <span class="process-math">\({\mathbb R}^2\)</span> (such as the above), we write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F \colon {\mathbb R}^2 \to {\mathbb R}^2\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1560">The words <em class="emphasis">function</em> and <em class="emphasis">mapping</em> are used rather interchangeably, although more often than not, <em class="emphasis">mapping</em> is used when talking about a vector-valued function, and the word <em class="emphasis">function</em> is often used when the function is scalar-valued.</div>
+<div class="para logical" id="p-1561">
+<div class="para">A beginning student of mathematics (and many a seasoned mathematician), that sees an expression such as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(3x+8y)
+\end{equation*}
+</div>
+<div class="para">yearns to write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3f(x)+8f(y)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1562">After all, who hasn't wanted to write <span class="process-math">\(\sqrt{x+y} = \sqrt{x} + \sqrt{y}\)</span> or something like that at some point in their mathematical lives. Wouldn't life be simple if we could do that? Of course we can't always do that (for example, not with the square roots!) It turns out there are many functions where we can do exactly the above. Such functions are called <em class="emphasis">linear</em>.</div>
+<div class="para logical" id="p-1563">
+<div class="para">A mapping <span class="process-math">\(F \colon {\mathbb R}^n \to {\mathbb R}^m\)</span> is called <em class="emphasis">linear</em>  if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(\vec{x}+\vec{y}) = F(\vec{x})+F(\vec{y})\text{,}
+\end{equation*}
+</div>
+<div class="para">for any vectors <span class="process-math">\(\vec{x}\)</span> and <span class="process-math">\(\vec{y}\text{,}\)</span> and also</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(\alpha \vec{x}) = \alpha F(\vec{x})\text{,}
+\end{equation*}
+</div>
+<div class="para">for any scalar <span class="process-math">\(\alpha\text{.}\)</span> The <span class="process-math">\(F\)</span> we defined above that doubles the size of all vectors is linear. Let us check:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(\vec{x}+\vec{y}) = 2(\vec{x}+\vec{y}) = 2\vec{x}+2\vec{y} = F(\vec{x})+F(\vec{y})\text{,}
+\end{equation*}
+</div>
+<div class="para">and also</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(\alpha \vec{x}) = 2 \alpha \vec{x} = \alpha 2 \vec{x} = \alpha F(\vec{x})\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1564">We also call a linear function a <em class="emphasis">linear transformation</em>.  If you want to be really fancy and impress your friends, you can call it a <em class="emphasis">linear operator</em>. </div>
+<div class="para logical" id="p-1565">
+<div class="para">When a mapping is linear we often do not write the parentheses. We write simply</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F \vec{x}
+\end{equation*}
+</div>
+<div class="para">instead of <span class="process-math">\(F(\vec{x})\text{.}\)</span> We do this because linearity means that the mapping <span class="process-math">\(F\)</span> behaves like multiplying <span class="process-math">\(\vec{x}\)</span> by “something.” That something is a matrix.</div>
+</div>
+<div class="para logical" id="p-1566">
+<div class="para">A <em class="emphasis">matrix </em> is an <span class="process-math">\(m \times n\)</span> array of numbers (<span class="process-math">\(m\)</span> rows and <span class="process-math">\(n\)</span> columns). A <span class="process-math">\(3 \times 5\)</span> matrix is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \amp  a_{14} \amp  a_{15} \\ a_{21} \amp  a_{22} \amp  a_{23} \amp  a_{24} \amp  a_{25} \\ a_{31} \amp  a_{32} \amp  a_{33} \amp  a_{34} \amp  a_{35} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1567">The numbers <span class="process-math">\(a_{ij}\)</span> are called <em class="emphasis">elements</em>  or <em class="emphasis">entries</em>. </div>
+<div class="para" id="p-1568">A column vector is simply an <span class="process-math">\(m \times 1\)</span> matrix. Similarly to a column vector there is also a <em class="emphasis">row vector </em>, which is a <span class="process-math">\(1 \times n\)</span> matrix. If we have an <span class="process-math">\(n \times n\)</span> matrix, then we say that it is a <em class="emphasis">square matrix </em>.</div>
+<div class="para logical" id="p-1569">
+<div class="para">Now how does a matrix <span class="process-math">\(A\)</span> relate to a linear mapping? Well a matrix tells you where certain special vectors go. Let's give a name to those certain vectors. The <em class="emphasis">standard basis vectors </em> of <span class="process-math">\({\mathbb R}^n\)</span> are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \\ \vdots \\ 0 \end{bmatrix} , \qquad \vec{e}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} , \qquad \vec{e}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix} , \qquad \cdots , \qquad \vec{e}_n = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1570">
+<div class="para">For example, in <span class="process-math">\({\mathbb R}^3\)</span> these vectors are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} , \qquad \vec{e}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} , \qquad \vec{e}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1571">You may recall from calculus of several variables that these are sometimes called <span class="process-math">\(\vec{\imath}\text{,}\)</span> <span class="process-math">\(\vec{\jmath}\text{,}\)</span> <span class="process-math">\(\vec{k}\text{.}\)</span>
+</div>
+<div class="para logical" id="p-1572">
+<div class="para">The reason these are called a <em class="emphasis">basis </em> is that every other vector can be written as a <em class="emphasis">linear combination </em> of them. For example, in <span class="process-math">\({\mathbb R}^3\)</span> the vector <span class="process-math">\((4,5,6)\)</span> can be written as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+4 \vec{e}_1 + 5 \vec{e}_2 + 6 \vec{e}_3 = 4 \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} + 5 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} + 6 \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1573">
+<div class="para">So how does a matrix represent a linear mapping? Well, the columns of the matrix are the vectors where <span class="process-math">\(A\)</span> as a linear mapping takes <span class="process-math">\(\vec{e}_1\text{,}\)</span> <span class="process-math">\(\vec{e}_2\text{,}\)</span> etc. For example, consider</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1574">
+<div class="para">As a linear mapping <span class="process-math">\(M \colon {\mathbb R}^2 \to {\mathbb R}^2\)</span> takes <span class="process-math">\(\vec{e}_1 = \left[ \begin{matrix}1 \\ 0 \end{matrix}  \right]\)</span> to <span class="process-math">\(\left[ \begin{matrix}1 \\ 3 \end{matrix}  \right]\)</span> and <span class="process-math">\(\vec{e}_2 = \left[ \begin{matrix}0 \\ 1 \end{matrix}  \right]\)</span> to <span class="process-math">\(\left[ \begin{matrix}2 \\ 4 \end{matrix}  \right]\text{.}\)</span> In other words,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M \vec{e}_1 = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}, \qquad \text{ and } \qquad M \vec{e}_2 = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ 4 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1575">
+<div class="para">More generally, if we have an <span class="process-math">\(n \times m\)</span> matrix <span class="process-math">\(A\text{,}\)</span> that is we have <span class="process-math">\(n\)</span> rows and <span class="process-math">\(m\)</span> columns, then the mapping <span class="process-math">\(A \colon {\mathbb R}^m \to {\mathbb R}^n\)</span> takes <span class="process-math">\(\vec{e}_j\)</span> to the <span class="process-math">\(j^{\text{ th } }\)</span> column of <span class="process-math">\(A\text{.}\)</span> For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \amp  a_{14} \amp  a_{15} \\ a_{21} \amp  a_{22} \amp  a_{23} \amp  a_{24} \amp  a_{25} \\ a_{31} \amp  a_{32} \amp  a_{33} \amp  a_{34} \amp  a_{35} \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">represents a mapping from <span class="process-math">\({\mathbb R}^5\)</span> to <span class="process-math">\({\mathbb R}^3\)</span> that does</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \vec{e}_1 = \begin{bmatrix} a_{11} \\ a_{21} \\ a_{31} \end{bmatrix} , \qquad A \vec{e}_2 = \begin{bmatrix} a_{12} \\ a_{22} \\ a_{32} \end{bmatrix} , \qquad A \vec{e}_3 = \begin{bmatrix} a_{13} \\ a_{23} \\ a_{33} \end{bmatrix} , \qquad A \vec{e}_4 = \begin{bmatrix} a_{14} \\ a_{24} \\ a_{34} \end{bmatrix} , \qquad A \vec{e}_5 = \begin{bmatrix} a_{15} \\ a_{25} \\ a_{35} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1576">
+<div class="para">But what if I have another vector <span class="process-math">\(\vec{x}\text{?}\)</span> Where does it go? Well we use linearity. First write the vector as a linear combination of the standard basis vectors:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix} = x_1 \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} + x_3 \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \\ 0 \end{bmatrix} + x_5 \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \\ 1 \end{bmatrix} = x_1 \vec{e}_1 + x_2 \vec{e}_2 + x_3 \vec{e}_3 + x_4 \vec{e}_4 + x_5 \vec{e}_5\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1577">
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \vec{x} = A ( x_1 \vec{e}_1 + x_2 \vec{e}_2 + x_3 \vec{e}_3 + x_4 \vec{e}_4 + x_5 \vec{e}_5 ) = x_1 A\vec{e}_1 + x_2 A\vec{e}_2 + x_3 A\vec{e}_3 + x_4 A\vec{e}_4 + x_5 A\vec{e}_5\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1578">If we know where <span class="process-math">\(A\)</span> takes all the basis vectors, we know where it takes all vectors.</div>
+<div class="para logical" id="p-1579">
+<div class="para">As an example, suppose <span class="process-math">\(M\)</span> is the <span class="process-math">\(2 \times 2\)</span> matrix from above, and suppose we wish to find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M \begin{bmatrix} -2 \\ 0.1 \end{bmatrix} = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix} \begin{bmatrix} -2 \\ 0.1 \end{bmatrix} = -2 \begin{bmatrix} 1 \\ 3 \end{bmatrix} + 0.1 \begin{bmatrix} 2 \\ 4 \end{bmatrix} = \begin{bmatrix} -1.8 \\ -5.6 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1580">Every linear mapping from <span class="process-math">\({\mathbb R}^m\)</span> to <span class="process-math">\({\mathbb R}^n\)</span> can be represented by an <span class="process-math">\(n \times m\)</span> matrix. You just figure out where it takes the standard basis vectors. Conversely, every <span class="process-math">\(n \times m\)</span> matrix represents a linear mapping. Hence, we may think of matrices being linear mappings, and linear mappings being matrices.</div>
+<div class="para logical" id="p-1581">
+<div class="para">Or can we? In this book we study mostly linear differential operators, and linear differential operators are linear mappings, although they are not acting on <span class="process-math">\({\mathbb R}^n\text{,}\)</span> but on an infinite-dimensional space of functions:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L f = g
+\end{equation*}
+</div>
+<div class="para">for a function <span class="process-math">\(f\)</span> we get a function <span class="process-math">\(g\text{,}\)</span> and <span class="process-math">\(L\)</span> is linear in the sense that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L ( f + h) = Lf + Lh, \qquad \text{ and }  \qquad L (\alpha f) = \alpha Lf\text{.}
+\end{equation*}
+</div>
+<div class="para">for any number (scalars) <span class="process-math">\(\alpha\)</span> and all functions <span class="process-math">\(f\)</span> and <span class="process-math">\(h\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="p-1582">So the answer is not really. But if we consider vectors in finite-dimensional spaces <span class="process-math">\({\mathbb R}^n\)</span> then yes, every linear mapping is a matrix. We have mentioned at the beginning of this section, that we can “make everything a vector.” That's not strictly true, but it is true approximately. Those “infinite-dimensional” spaces of functions can be approximated by a finite-dimensional space, and then linear operators are just matrices. So approximately, this is true. And as far as actual computations that we can do on a computer, we can work only with finitely many dimensions anyway. If you ask a computer or your calculator to plot a function, it samples the function at finitely many points and then connects the dots<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-23" id="fn-23"><sup> 7 </sup></a>. It does not actually give you infinitely many values. So the way that you have been using the computer or your calculator so far has already been a certain approximation of the space of functions by a finite-dimensional space.</div>
+<div class="para logical" id="p-1583">
+<div class="para">To end the section, we notice how <span class="process-math">\(A \vec{x}\)</span> can be written more succintly. Suppose</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix} \qquad \text{ and }  \qquad \vec{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1584">
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \vec{x} = \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} a_{11} x_1 + a_{12} x_2 + a_{13} x_3 \\ a_{21} x_1 + a_{22} x_2 + a_{23} x_3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-1585">
+<div class="para">For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix} \begin{bmatrix} 2 \\ -1 \end{bmatrix} = \begin{bmatrix} 1 \cdot 2 + 2 \cdot (-1) \\ 3 \cdot 2 + 4 \cdot (-1) \end{bmatrix} = \begin{bmatrix} 0 \\ 2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1586">In other words, you take a row of the matrix, you multiply them by the entries in your vector, you add things up, and that's the corresponding entry in the resulting vector.</div></section><section class="subsection" id="subsection-82"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.3</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-356"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-356"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-356"><article class="exercise exercise-like"><div class="para" id="p-1587">On a piece of graph paper draw the vectors: \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}2 \\ 5 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}-2 \\ -4 \end{bmatrix}\)</span> \task <span class="process-math">\((3,-4)\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-357"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-357"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-357"><article class="exercise exercise-like"><div class="para" id="p-1588">On a piece of graph paper draw the vector <span class="process-math">\((1,2)\)</span> starting at (based at) the given point: \begin{tasks}(3) \task based at <span class="process-math">\((0,0)\)</span> \task based at <span class="process-math">\((1,2)\)</span> \task based at <span class="process-math">\((0,-1)\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-358"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-358"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-358"><article class="exercise exercise-like"><div class="para" id="p-1589">On a piece of graph paper draw the following operations. Draw and label the vectors involved in the operations as well as the result: \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}1 \\ -4 \end{bmatrix} + \begin{bmatrix}2 \\ 3 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}-3 \\ 2 \end{bmatrix} - \begin{bmatrix}1 \\ 3 \end{bmatrix}\)</span> \task <span class="process-math">\(3\begin{bmatrix}2 \\ 1 \end{bmatrix}\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-359"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-359"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-359"><article class="exercise exercise-like"><div class="para" id="p-1590">Compute the magnitude of \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}7 \\ 2 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}-2 \\ 3 \\ 1 \end{bmatrix}\)</span> \task <span class="process-math">\((1,3,-4)\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-360"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-360"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-360"><article class="exercise exercise-like"><div class="para" id="p-1591">Compute \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}2 \\ 3 \end{bmatrix} + \begin{bmatrix}7 \\ -8 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}-2 \\ 3 \end{bmatrix} - \begin{bmatrix}6 \\ -4 \end{bmatrix}\)</span> \task <span class="process-math">\(-\begin{bmatrix}-3 \\ 2 \end{bmatrix}\)</span> \task <span class="process-math">\(4\begin{bmatrix}-1 \\ 5 \end{bmatrix}\)</span> \task <span class="process-math">\(5\begin{bmatrix}1 \\ 0 \end{bmatrix} + 9 \begin{bmatrix}0 \\ 1 \end{bmatrix}\)</span> \task <span class="process-math">\(3\begin{bmatrix}1 \\ -8 \end{bmatrix} - 2 \begin{bmatrix}3 \\ -1 \end{bmatrix}\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-361"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-361"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.10</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-361"><article class="exercise exercise-like"><div class="para" id="p-1592">Find the unit vector in the direction of the given vector \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}1 \\ -3 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}2 \\ 1 \\ -1 \end{bmatrix}\)</span> \task <span class="process-math">\((3,1,-2)\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-362"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-362"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.11</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-362"><article class="exercise exercise-like"><div class="para" id="p-1593">If <span class="process-math">\(\vec{x} = (1,2)\)</span> and <span class="process-math">\(\vec{y}\)</span> are added together, we find <span class="process-math">\(\vec{x}+\vec{y} = (0,2)\text{.}\)</span> What is <span class="process-math">\(\vec{y}\text{?}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-363"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-363"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-363"><article class="exercise exercise-like"><div class="para" id="p-1594">Write <span class="process-math">\((1,2,3)\)</span> as a linear combination of the standard basis vectors <span class="process-math">\(\vec{e}_1\text{,}\)</span> <span class="process-math">\(\vec{e}_2\text{,}\)</span> and <span class="process-math">\(\vec{e}_3\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-364"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-364"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.13</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-364"><article class="exercise exercise-like"><div class="para" id="p-1595">If the magnitude of <span class="process-math">\(\vec{x}\)</span> is 4, what is the magnitude of \begin{tasks}(6) \task <span class="process-math">\(0\vec{x}\)</span> \task <span class="process-math">\(3\vec{x}\)</span> \task <span class="process-math">\(-\vec{x}\)</span> \task <span class="process-math">\(-4\vec{x}\)</span> \task <span class="process-math">\(\vec{x}+\vec{x}\)</span> \task <span class="process-math">\(\vec{x}-\vec{x}\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-365"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-365"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.14</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-365"><article class="exercise exercise-like"><div class="para" id="p-1596">Suppose a linear mapping <span class="process-math">\(F \colon {\mathbb R}^2 \to {\mathbb R}^2\)</span> takes <span class="process-math">\((1,0)\)</span> to <span class="process-math">\((2,-1)\)</span> and it takes <span class="process-math">\((0,1)\)</span> to <span class="process-math">\((3,3)\text{.}\)</span> Where does it take \begin{tasks}(3) \task <span class="process-math">\((1,1)\)</span> \task <span class="process-math">\((2,0)\)</span> \task <span class="process-math">\((2,-1)\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-366"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-366"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.15</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-366"><article class="exercise exercise-like"><div class="para" id="p-1597">Suppose a linear mapping <span class="process-math">\(F \colon {\mathbb R}^3 \to {\mathbb R}^2\)</span> takes <span class="process-math">\((1,0,0)\)</span> to <span class="process-math">\((2,1)\)</span> and it takes <span class="process-math">\((0,1,0)\)</span> to <span class="process-math">\((3,4)\)</span> and it takes <span class="process-math">\((0,0,1)\)</span> to <span class="process-math">\((5,6)\text{.}\)</span> Write down the matrix representing the mapping <span class="process-math">\(F\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-367"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-367"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.16</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-367"><article class="exercise exercise-like"><div class="para" id="p-1598">Suppose that a mapping <span class="process-math">\(F \colon {\mathbb R}^2 \to \mathbb{R}^2\)</span> takes <span class="process-math">\((1,0)\)</span> to <span class="process-math">\((1,2)\text{,}\)</span> <span class="process-math">\((0,1)\)</span> to <span class="process-math">\((3,4)\text{,}\)</span> and it takes <span class="process-math">\((1,1)\)</span> to <span class="process-math">\((0,-1)\text{.}\)</span> Explain why <span class="process-math">\(F\)</span> is not linear.</div></article></div>
+<article class="exercise exercise-like" id="exercise-368"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-368"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">challenging.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-368"><article class="exercise exercise-like"><div class="para" id="p-1599">Let <span class="process-math">\({\mathbb R}^3\)</span> represent the space of quadratic polynomials in <span class="process-math">\(t\text{:}\)</span> a point <span class="process-math">\((a_0,a_1,a_2)\)</span> in <span class="process-math">\({\mathbb R}^3\)</span> represents the polynomial <span class="process-math">\(a_0 + a_1 t + a_2 t^2\text{.}\)</span> Consider the derivative <span class="process-math">\(\frac{d}{dt}\)</span> as a mapping of <span class="process-math">\({\mathbb R}^3\)</span> to <span class="process-math">\({\mathbb R}^3\text{,}\)</span> and note that <span class="process-math">\(\frac{d}{dt}\)</span> is linear. Write down <span class="process-math">\(\frac{d}{dt}\)</span> as a <span class="process-math">\(3 \times 3\)</span> matrix.</div></article></div>
+<article class="exercise exercise-like" id="exercise-369"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-369"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.18</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-369"><article class="exercise exercise-like"><div class="para" id="p-1600">Compute the magnitude of \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}1 \\ 3 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}2 \\ 3 \\ -1 \end{bmatrix}\)</span> \task <span class="process-math">\((-2,1,-2)\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-1601">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) <span class="process-math">\(\sqrt{10}\)</span> b) <span class="process-math">\(\sqrt{14}\)</span> c) <span class="process-math">\(3\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-370"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-370"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.19</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-370"><article class="exercise exercise-like"><div class="para" id="p-1602">Find the unit vector in the direction of the given vector \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}-1 \\ 1 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}1 \\ -1 \\ 2 \end{bmatrix}\)</span> \task <span class="process-math">\((2,-5,2)\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-1603">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a)  <span class="process-math">\(\begin{bmatrix}\frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}\)</span> b) <span class="process-math">\(\begin{bmatrix}\frac{1}{\sqrt{6}} \\ \frac{-1}{\sqrt{6}} \\ \frac{2}{\sqrt{6}} \end{bmatrix}\)</span> c) <span class="process-math">\(\left( \frac{2}{\sqrt{33}},\frac{-5}{\sqrt{33}},\frac{2}{\sqrt{33}} \right)\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-371"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-371"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">2.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-371"><article class="exercise exercise-like"><div class="para" id="p-1604">Compute \begin{tasks}(3) \task <span class="process-math">\(\begin{bmatrix}3 \\ 1 \end{bmatrix} + \begin{bmatrix}6 \\ -3 \end{bmatrix}\)</span> \task <span class="process-math">\(\begin{bmatrix}-1 \\ 2 \end{bmatrix} - \begin{bmatrix}2 \\ -1 \end{bmatrix}\)</span> \task <span class="process-math">\(-\begin{bmatrix}-5 \\ 3 \end{bmatrix}\)</span> \task <span class="process-math">\(2\begin{bmatrix}-2 \\ 4 \end{bmatrix}\)</span> \task <span class="process-math">\(3\begin{bmatrix}1 \\ 0 \end{bmatrix} + 7 \begin{bmatrix}0 \\ 1 \end{bmatrix}\)</span> \task <span class="process-math">\(2\begin{bmatrix}2 \\ -3 \end{bmatrix} - 6 \begin{bmatrix}2 \\ -1 \end{bmatrix}\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-1605">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) <span class="process-math">\(\begin{bmatrix}9 \\ -2 \end{bmatrix}\)</span> b) <span class="process-math">\(\begin{bmatrix}-3 \\ 3 \end{bmatrix}\)</span> c) <span class="process-math">\(\begin{bmatrix}5 \\ -3 \end{bmatrix}\)</span> d) <span class="process-math">\(\begin{bmatrix}-4 \\ 8 \end{bmatrix}\)</span> e) <span class="process-math">\(\begin{bmatrix}3 \\ 7 \end{bmatrix}\)</span> f) <span class="process-math">\(\begin{bmatrix}-8 \\ 3 \end{bmatrix}\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-372"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-372"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.21</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-372"><article class="exercise exercise-like"><div class="para" id="p-1606">If the magnitude of <span class="process-math">\(\vec{x}\)</span> is 5, what is the magnitude of \begin{tasks}(3) \task <span class="process-math">\(4\vec{x}\)</span> \task <span class="process-math">\(-2\vec{x}\)</span> \task <span class="process-math">\(-4\vec{x}\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-1607">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) <span class="process-math">\(20\)</span> b) <span class="process-math">\(10\)</span> c) <span class="process-math">\(20\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-373"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-373"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.22</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-373"><article class="exercise exercise-like"><div class="para" id="p-1608">Suppose a linear mapping <span class="process-math">\(F \colon {\mathbb R}^2 \to {\mathbb R}^2\)</span> takes <span class="process-math">\((1,0)\)</span> to <span class="process-math">\((1,-1)\)</span> and it takes <span class="process-math">\((0,1)\)</span> to <span class="process-math">\((2,0)\text{.}\)</span> Where does it take \begin{tasks}(3) \task <span class="process-math">\((1,1)\)</span> \task <span class="process-math">\((0,2)\)</span> \task <span class="process-math">\((1,-1)\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-1609">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) <span class="process-math">\((3,-1)\)</span> b) <span class="process-math">\((4,0)\)</span> c) <span class="process-math">\((-1,-1)\)</span> }</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">One of the downsides of making everything look like a linear problem is that the number of variables tends to become huge.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">Named after the ancient Greek mathematician <a class="external" href="https://en.wikipedia.org/wiki/Euclid" target="_blank">Euclid of Alexandria</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 3 </sup></a> (around 300 BC), possibly the most famous of mathematicians; even small towns often have Euclid Street or Euclid Avenue.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Euclid</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">Named after the French mathematician <a class="external" href="https://en.wikipedia.org/wiki/Descartes" target="_blank">René Descartes</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 5 </sup></a> (1596–1650). It is \myquote{cartesian} as his name in Latin is Renatus Cartesius.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Descartes</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn">A common notation to distinguish vectors from points is to write <span class="process-math">\((1,2)\)</span> for the point and <span class="process-math">\(\langle 1,2 \rangle\)</span> for the vector. We write both as <span class="process-math">\((1,2)\text{.}\)</span>
+</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="fn">If you have ever used Matlab, you may have noticed that to plot a function, we take a vector of inputs, ask Matlab to compute the corresponding vector of values of the function, and then we ask it to plot the result.</div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="linalg_appendix.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="matalg_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

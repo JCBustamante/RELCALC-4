@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para logical">
+<div class="para">À la <a href="sec_introtosys.html" class="internal" title="Section 4.1: Introduction aux systèmes d'équations différentielles ordinaires">section 4.1</a>, le système a été résolu,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sec_introtosys.html">
+\begin{align*}
+x_1' \amp  = x_1 ,\\
+x_2' \amp  = x_1 - x_2 \text{,}
+\end{align*}
+</div>
+<div class="para">pour des conditions initiales <span class="process-math">\(x_1(0) = 1\text{,}\)</span> <span class="process-math">\(x_2(0) = 2\text{.}\)</span> Considérons ce problème avec la terminologie de cette section.</div>
+</div> <div class="para logical">
+<div class="para">Le système est homogène, alors <span class="process-math">\(\vec{f}(t) = \vec{0}\text{.}\)</span> Le système et les conditions initiales s'écrivent</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\vec{x}}' = \begin{bmatrix} 1 \amp  0 \\ 1 \amp  -1 \end{bmatrix} \vec{x} , \qquad \vec{x}(0) = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On a trouvé que la solution générale est <span class="process-math">\(x_1 = c_1 e^t\)</span> et <span class="process-math">\(x_2 = \frac{c_1}{2}e^{t} + c_2e^{-t}\text{.}\)</span> Si <span class="process-math">\(c_1=1\)</span> et <span class="process-math">\(c_2=0\text{,}\)</span> la solution est <span class="process-math">\(\left[ \begin{matrix}e^t \\ (1/2) e^t \end{matrix}  \right]\text{.}\)</span> En prenant <span class="process-math">\(c_1=0\)</span> et <span class="process-math">\(c_2=1\text{,}\)</span> on obtient <span class="process-math">\(\left[ \begin{matrix}0 \\ e^{-t} \end{matrix}  \right]\text{.}\)</span> Ces deux solutions sont linéairement indépendantes, comme on le constate en prenant <span class="process-math">\(t=0\)</span> et en remarquant que les vecteurs constants résultants sont linéairement indépendants. En notation matricielle, une solution matricielle fondamentale est donc</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X(t) = \begin{bmatrix} e^t \amp  0 \\ \frac{1}{2} e^t \amp  e^{-t} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Afin de résoudre le problème avec les valeurs initiales, on résout pour <span class="process-math">\(\vec{c}\)</span> dans l'équation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X(0)\,\vec{c} = \vec{b}
+\end{equation*}
+</div>
+<div class="para">ou</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 1 \amp  0 \\ \frac{1}{2} \amp  1 \end{bmatrix} \vec{c} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Une opération élémentaire unique sur une ligne montre que <span class="process-math">\(\vec{c} = \left[ \begin{matrix}1 \\ 3/2 \end{matrix}  \right]\text{.}\)</span> La solution est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}(t) = X(t)\,\vec{c} = \begin{bmatrix} e^t \amp  0 \\ \frac{1}{2} e^t \amp  e^{-t} \end{bmatrix} \begin{bmatrix} 1 \\ \frac{3}{2} \end{bmatrix} = \begin{bmatrix} e^t \\ \frac{1}{2} e^t + \frac{3}{2} e^{-t} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Cette nouvelle solution est conforme à celle obtenue à la <a href="sec_introtosys.html" class="internal" title="Section 4.1: Introduction aux systèmes d'équations différentielles ordinaires">section 4.1</a>.</div></article></body>
+</html>

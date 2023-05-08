@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para">Trouvons la série de Fourier de l'extension périodique paire de la fonction <span class="process-math">\(f(t) = t^2\)</span> pour <span class="process-math">\(0 \leq t \leq \pi\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">On veut écrire</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t)\text{,}
+\end{equation*}
+</div>
+<div class="para">où</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_0 = \frac{2}{\pi} \int_0^\pi t^2 \, dt = \frac{2 \pi^2}{3}
+\end{equation*}
+</div>
+<div class="para">et</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{split} a_n \amp  = \frac{2}{\pi} \int_0^\pi t^2 \cos (n t) \, dt = \frac{2}{\pi} \left[ t^2 \frac{1}{n} \sin (nt) \right]_0^\pi - \frac{4}{n\pi} \int_0^\pi t \sin (n t) \, dt \\ \amp  = \frac{4}{n^2\pi} \Bigl[ t \cos (n t) \Bigr]_0^\pi + \frac{4}{n^2\pi} \int_0^\pi \cos (n t) \, dt = \frac{4{(-1)}^n}{n^2} . \end{split}
+\end{equation*}
+</div>
+</div> <div class="para">Notez qu'on a “détecté” la continuité de l'extension depuis les coefficients décroissants comme <span class="process-math">\(\frac{1}{n^2}\text{.}\)</span> Autrement dit, l'extension périodique paire de <span class="process-math">\(t^2\)</span> n'a pas de discontinuités de saut. Elle a des coins, car la dérivée, qui est une fonction impaire et une série sinus, a des sauts. Il existe une série de Fourier dont les coefficients sont seulement décroissants comme <span class="process-math">\(\frac{1}{n}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Explicitement, les premiers termes de la série sont</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\pi^2}{3} - 4 \cos (t) + \cos (2t) - \frac{4}{9} \cos (3t) + \cdots
+\end{equation*}
+</div>
+</div></article></body>
+</html>

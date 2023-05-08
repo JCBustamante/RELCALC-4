@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span>
+</h4>
+<div class="para">Supposons que <span class="process-math">\(k=2\)</span> et <span class="process-math">\(m=1\text{.}\)</span> Les unités sont de nouveau les unités mks  (mètres-kilogrammes-secondes). Il y a un <em class="emphasis">jetpack</em> attaché à la masse, qui tire avec une force de 1 newton pendant 1 seconde, puis s'éteint pendant 1 seconde, et ainsi de suite. On veut trouver la solution périodique constante.</div> <div class="para logical">
+<div class="para">L'équation est donc</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x'' + 2 x = F(t)\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(F(t)\)</span> est la fonction intermédiaire</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(t) = \begin{cases} 0 \amp  \text{ si }  \; {-1} \lt  t \lt  0 , \\ 1 \amp  \text{ si }  \; 0 \lt  t \lt  1 , \end{cases}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">étendue périodiquement. On écrit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(t) = \frac{c_0}{2} + \sum_{n=1}^\infty c_n \cos (n \pi t) + d_n \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On calcule</div>
+<div class="displaymath process-math">
+\begin{align*}
+c_n \amp  = \int_{-1}^1 F(t) \cos (n \pi t) \, dt = \int_{0}^1 \cos (n \pi t) \, dt = 0 \qquad \text{ pour }  \; n \geq 1,\\
+c_0 \amp  = \int_{-1}^1 F(t) \, dt = \int_{0}^1 \, dt = 1 ,\\
+d_n \amp  = \int_{-1}^1 F(t) \sin (n \pi t) \, dt\\
+\amp  = \int_{0}^1 \sin (n \pi t) \, dt\\
+\amp  = \left[ \frac{-\cos (n \pi t)}{n \pi} \right]_{t=0}^1\\
+\amp  = \frac{1-{(-1)}^n}{\pi n} = \begin{cases} \frac{2}{\pi n} \amp  \text{ si }  n \text{ est impair }  ,\\
+0 \amp  \text{ si }  n \text{ est pair }  . \end{cases}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Alors,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{2}{\pi n} \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On veut essayer</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t) + b_n \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On remplace <span class="process-math">\(x\)</span> dans l'équation différentielle <span class="process-math">\(x''+2x = F(t)\text{.}\)</span> Il est clair que <span class="process-math">\(a_n = 0\)</span> pour <span class="process-math">\(n \geq 1\text{,}\)</span> car il n'y a pas de termes correspondants dans la série pour <span class="process-math">\(F(t)\text{.}\)</span> De manière similaire, <span class="process-math">\(b_n = 0\)</span> pour <span class="process-math">\(n\)</span> pair. Ainsi, on essaie</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = \frac{a_0}{2} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty b_n \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">On remplace dans l'équation différentielle et l'on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{split} x'' + 2 x \amp  = \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \Bigl[ - b_n n^2 \pi^2 \sin (n \pi t) \Bigr] + a_0 + 2 \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \Bigl[ b_n \sin (n \pi t) \Bigr] \\ \amp  = a_0 + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty b_n (2 - n^2 \pi^2 ) \sin (n \pi t) \\ \amp  = F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{2}{\pi n} \sin (n \pi t) . \end{split}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Alors, <span class="process-math">\(a_0 = \frac{1}{2}\text{,}\)</span> <span class="process-math">\(b_n = 0\)</span> pour un <span class="process-math">\(n\)</span> pair, et, pour un <span class="process-math">\(n\)</span> impair, on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_n = \frac{2}{\pi n (2 - n^2 \pi^2 )}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">La solution périodique constante a la série de Fourier</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{sp}(t) = \frac{1}{4} + \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{2}{\pi n (2 - n^2 \pi^2 )} \sin (n \pi t)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">On sait que c'est la solution périodique constante, car elle ne contient aucun terme de la solution complémentaire et elle est périodique avec la même période que <span class="process-math">\(F (t)\)</span> elle-même. Regardons <a href="" class="xref" data-knowl="./knowl/afs_steadyexfig.html" title="Figure 5.5.2">la 5.5.2</a> pour le graphe de cette solution.</div> <figure class="figure figure-like"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.5.2<span class="period">.</span></span><span class="space"> </span>Graphe de la fonction périodique constante  <span class="process-math">\(x_{sp}\)</span> de l' <a href="" class="xref" data-knowl="./knowl/afs_steadyex.html" title="Example 5.5.1">Example 5.5.1</a>.</figcaption></figure></article><span class="incontext"><a href="appoffourier_section.html#afs_steadyex" class="internal">in-context</a></span>
+</body>
+</html>

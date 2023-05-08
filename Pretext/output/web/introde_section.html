@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction aux équations différentielles</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Équations différentielles pour le génie">
+<meta property="book:author" content="Jiri Lebl">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Équations différentielles pour le génie</span></a></h1>
+<p class="byline">Jiri Lebl</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="notes_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="classification_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\theversion}{6.2}
+\newcommand{\nicefrac}[2]{\frac{#1}{#2}}
+\renewcommand{\bibname}{Lectures additionnelles}
+\def\wrapfigure{\wrapfloat{figure}}
+\def\wraptable{\wrapfloat{table}}
+\def\caption{\wf}
+\def\endwrapfigure{\endwrapfloat}
+\def\endwraptable{\endwrapfloat}
+\def\pagetotal{\maxdimen}
+\def\parshape{\WF}
+\def\everypar{\WF}
+\def\noexpand{\clearpage}
+\def\expandafter{\noexpand}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\csname{endwrap#1\endcsname \endwrapfigure}
+\def\noexpand{\float}
+\def\csname{endwrap#2\endcsname \endwrapfloat}
+\def\expandafter{\noexpand}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\myindex}[1]{#1\index{#1}}
+\newcommand{\myquote}[1]{``#1''}
+\newcommand{\sectionnewpage}{\clearpage}
+\newcommand{\EPref}[1]{#1}
+\newcommand{\BDref}[1]{#1}
+\newcommand{\theanswer}{\textbf{\theexercise:}}
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+\def\exampleclaim{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\exampleclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Exemple
+\thesection.\arabic{example} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endexampleclaim{
+\addvspace{\medskipamount}}
+\renewcommand{\theremark}{\thesection.\arabic{remark}}
+\def\remarkclaim{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark}~:}\hspace{0.5em}\ignorespaces}
+\newcommand{\remarkclaimname}[1]{
+\addvspace{\medskipamount}\mathbf{
+Remarque
+\thesection.\arabic{remark} { (#1)}~:}\hspace{0.5em}\ignorespaces}
+\def\endremarkclaim{
+\addvspace{\medskipamount}}
+\newcommand{\figurevref}[1]{\ref{#1}}
+\newcommand{\figureref}[1]{\ref{#1}}
+\newcommand{\tablevref}[1]{\ref{#1}}
+\newcommand{\tableref}[1]{\ref{#1}}
+\newcommand{\chapterref}[1]{\ref{#1}}
+\newcommand{\Chapterref}[1]{\ref{#1}}
+\newcommand{\appendixref}[1]{\ref{#1}}
+\newcommand{\Appendixref}[1]{\ref{#1}}
+\newcommand{\sectionref}[1]{\ref{#1}}
+\newcommand{\subsectionref}[1]{\ref{#1}}
+\newcommand{\subsectionvref}[1]{\ref{#1}}
+\newcommand{\exercisevref}[1]{\ref{#1}}
+\newcommand{\exerciseref}[1]{\ref{#1}}
+\newcommand{\examplevref}[1]{\ref{#1}}
+\newcommand{\exampleref}[1]{\ref{#1}}
+\newcommand{\thmvref}[1]{\ref{#1}}
+\newcommand{\thmref}[1]{\ref{#1}}
+\newcommand{\addfakecontentsline}[1]{\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\addextraspacetotoc}{}
+\newcommand{\diffyincludegraphics}[3]{\includegraphics[#1]{figures/#3}}
+\newcommand{\diffypdfversion}[1]{#1}
+\newcommand{\mybeginframe}{\begin{tcolorbox}[colback=white,colframe=lightgray,left=5pt,right=5pt]}
+\newcommand{\myendframe}{\end{tcolorbox}}
+\newcommand{\mybxbg}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,top=1.5pt,bottom=1.5pt]{#1}}
+\newcommand{\mybxsm}[1]{\tcboxmath[colback=white,colframe=black,boxrule=0.5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]{#1}}
+\newcommand{\diffytableofcontents}{
+\microtypesetup{protrusion=false}
+\microtypesetup{protrusion=true}
+}
+\newcommand{\infinity}{\infty}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="intro_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="notes_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Notes à propos de ce manuel</span></a></div></li>
+<li class="active">
+<div class="toc-item"><a href="introde_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction aux équations différentielles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="introde_section.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Solutions d'équations différentielles</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-3" class="internal"><span class="codenumber">1.2.3</span> <span class="title">En pratique</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection_fourfundamental" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Quatre équations fondamentales</span></a></div></li>
+<li><div class="toc-item"><a href="introde_section.html#subsection-5" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="classification_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Classification des équations différentielles</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="classification_section.html#subsection-6" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="introde_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Introduction aux équations différentielles</span>
+</h2>
+<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Équations différentielles</span>
+</h3>
+<div class="para" id="p-6">Les lois de la physique sont généralement exprimées sous forme d'équations différentielles. Ainsi, toute discipline de science ou de génie utilise les équations différentielles, à un niveau plus ou moins sophistiqué. Comprendre les équations différentielles est essentiel à la compréhension de presque tout ce que vous apprendrez dans vos cours de science ou de génie. On peut penser aux mathématiques comme au langage de la science, et les équations différentielles forment une partie importante de ce langage.</div>
+<div class="para logical" id="p-7">
+<div class="para">Vous avez déjà vu plusieurs équations différentielles, peut-être sans savoir que c'en était. Et vous avez même résolu des équations différentielles dans vos cours de calcul. Voyons un exemple que vous n'avez peut-être pas vu:</div>
+<div class="displaymath process-math" id="eq1">
+\begin{equation}
+\frac{dx}{dt} + x = 2 \cos t\text{.}\tag{1.2.1}
+\end{equation}
+</div>
+</div>
+<div class="para" id="p-8">Ici, <span class="process-math">\(x\)</span> est la <em class="emphasis">variable dépendante</em>, et <span class="process-math">\(t\)</span> est la <em class="emphasis">variable indépendante</em>. L'équation <a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equation 1.2.1">(1.2.1)</a> est un exemple de base d'une <em class="emphasis">équation différentielle</em>. Plus précisément, c'est un exemple d'<em class="emphasis">équation différentielle du premier ordre</em>, puisqu'elle n'implique que la première dérivée de la variable dépendante <span class="process-math">\(x\text{.}\)</span> Cette équation vient de la loi de refroidissement de Newton, lorsque la température ambiante oscille en fonction du temps.</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Solutions d'équations différentielles</span>
+</h3>
+<div class="para logical" id="p-9">
+<div class="para">Quand on résout une équation différentielle comme <a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equation 1.2.1">(1.2.1)</a>, l'inconnue est une variable <span class="process-math">\(x\text{,}\)</span> qui elle-même dépend d'une variable <span class="process-math">\(t\text{,}\)</span> c'est-à-dire qu'on veut trouver un <span class="process-math">\(x\text{,}\)</span> dépendant de <span class="process-math">\(t\text{,}\)</span> tel que, lorsqu'on substitue <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(t\)</span> et <span class="process-math">\(\frac{dx}{dt}\)</span> dans l'équation <a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equation 1.2.1">(1.2.1)</a>, le côté gauche est égal au côté droit, et donc l'égalité est satisfaite. C'est le même principe que pour une équation ordinaire (algébrique) impliquant <span class="process-math">\(x\)</span> et <span class="process-math">\(t\text{.}\)</span> Nous affirmons que l'expression suivante est une <em class="emphasis">solution </em>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq1.html ./knowl/eq1.html">
+\begin{equation*}
+x = x(t) = \cos t + \sin t\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-10">
+<div class="para">Comment le vérifier? Il suffit de substituer <span class="process-math">\(x\)</span> dans l'équation <a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equation 1.2.1">(1.2.1)</a> et de vérifier que l'égalité est bel et bien établie. Nous devons d'abord calculer <span class="process-math">\(\frac{dx}{dt}\text{.}\)</span> On trouve que <span class="process-math">\(\frac{dx}{dt} = -\sin t + \cos t\text{.}\)</span> Maintenant, calculons le côté gauche de <a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equation 1.2.1">(1.2.1)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq1.html ./knowl/eq1.html">
+\begin{equation*}
+\frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t)}_{\frac{dx}{dt}} + \underbrace{(\cos t + \sin t)}_{x} = 2\cos t\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-11">
+<div class="para">C'est bien ce que nous voulons: nous obtenons exactement le côté droit de l'équation. Mais ce n'est pas tout. Nous affirmons que <span class="process-math">\(x = \cos t + \sin t + e^{-t}\)</span> est aussi une solution. Vérifions:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = -\sin t + \cos t - e^{-t}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-12">
+<div class="para">On remplace ceci dans <a href="" class="xref" data-knowl="./knowl/eq1.html" title="Equation 1.2.1">(1.2.1)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq1.html">
+\begin{equation*}
+\frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t - e^{-t})}_{\frac{dx}{dt}} + \underbrace{(\cos t + \sin t + e^{-t})}_{x} = 2\cos t\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-13">Il s'agit bien d'une solution.</div>
+<div class="para logical" id="p-14">
+<div class="para">Ainsi, plusieurs solutions sont possibles. Pour cette équation en particulier, toutes les solutions peuvent s'écrire sous la forme</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/intro_plotsfig.html">
+\begin{equation*}
+x = \cos t + \sin t + C e^{-t}
+\end{equation*}
+</div>
+<div class="para">pour une constante <span class="process-math">\(C\text{.}\)</span> Différentes constantes <span class="process-math">\(C\)</span> donneront des solutions différentes, donc il y a vraiment un nombre infini de solutions possibles. Voir <a href="" class="xref" data-knowl="./knowl/intro_plotsfig.html" title="Figure 1.2.1">la 1.2.1</a> pour le graphe de quelques solutions. Nous verrons un peu plus tard comment trouver ces solutions de manière générale.</div>
+</div>
+<figure class="figure figure-like" id="intro_plotsfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/intro-plots-alt.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-15">La résolution d'une équation différentielle peut être très ardue. Il n'y a pas une méthode générale pour les résoudre toutes. La plupart du temps, nous verrons comment obtenir des formules exactes pour résoudre certaines équations différentielles, mais parfois nous n'obtiendrons que des solutions approximatives. De plus, nous passerons un peu de temps à comprendre certaines équations, sans les résoudre.</div>
+<div class="para" id="p-16">La majeure partie de ce manuel est dédiée aux <em class="emphasis">équations différentielles ordinaires</em>, ou EDO,  c'est-à-dire aux équations ayant une seule variable indépendante, où les dérivées se prennent en termes de cette unique variable. Lorsqu'il y a plusieurs variables indépendantes, on obtient des <em class="emphasis">équations aux dérivées partielles</em>, ou EDP. </div>
+<div class="para" id="p-17">Même pour les EDO, qui sont très bien comprises, il ne s'agit pas simplement de tourner une manivelle pour obtenir une réponse. C'est important de comprendre comment de telles solutions sont trouvées. Même si, dans la vraie vie, vous laisserez la plupart des calculs à des ordinateurs, vous devez comprendre ce qu'ils font. Il est parfois nécessaire de simplifier ou de transformer votre équation pour que la machine la comprenne et la résolve. Il vous faudra peut-être même ajouter ou modifier des hypothèses dans votre modèle pour ce faire.</div>
+<div class="para" id="p-18">Pour réussir en génie ou en science, vous aurez à résoudre des problèmes dans votre travail que vous n'aurez jamais vus auparavant, d'où l'importance d'apprendre des techniques de résolution de problèmes, afin d'appliquer ces techniques aux nouveaux problèmes.</div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">En pratique</span>
+</h3>
+<figure class="figure figure-like" id="figure-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-19">Comment utilise-t-on les équations différentielles en science et en génie? On commence avec une <em class="emphasis">situation-problème </em> qu'on veut comprendre. À l'aide d'hypothèses supplémentaires pour simplifier le problème, on crée un <em class="emphasis">modèle mathématique</em>. Autrement dit, on traduit la situation en équations différentielles. Ensuite, on utilise les mathématiques afin d'obtenir une <em class="emphasis">solution mathématique</em>. Mais ce n'est pas fini. Il faut encore interpréter les résultats: qu'est-ce que la solution mathématique nous dit à propos de la situation-problème de départ?</div>
+<div class="para" id="p-20">Pour ce qui est de formuler le modèle mathématique, et d'interpréter les résultats, vous ferez cela surtout dans vos cours de génie et de science. Dans ce cours-ci, nous nous concentrerons principalement sur l'analyse mathématique. Parfois, nous travaillerons avec des exemples réalistes simples afin de développer notre intuition et de motiver les concepts que nous verrons.</div>
+<div class="para logical" id="p-21">
+<div class="para">Considérons ici un exemple. Une des équations les plus fondamentales est le <em class="emphasis">modèle de croissance exponentielle</em>. Dénotons une population de bactéries par la variable <span class="process-math">\(P\)</span> (plus précisément, <span class="process-math">\(P\)</span> dénote la quantité de population). On suppose que l'environnement contient suffisamment de nutriments et d'espace. Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnelle à la population — une population plus nombreuse croîtra plus rapidement. Dénotons le temps (en secondes, disons) par la variable <span class="process-math">\(t\text{.}\)</span> 0Notre modèle est alors:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = kP\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(k &gt; 0\)</span> est une constante.</div>
+</div>
+<article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><div class="para" id="p-22">Supposons qu'il y a 100 bactéries au temps 0 et 200 bactéries 10 secondes plus tard. Combien aura-t-on de bactéries à une minute (60 secondes) du début?</div> <div class="para logical" id="p-23">
+<div class="para">D'abord, nous devons résoudre l'équation différentielle. Nous affirmons que la fonction suivante est une solution:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t) = C e^{kt}\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(C\)</span> est une constante. Vérifions ceci:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = C k e^{kt} = k P\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-24">Il s'agit donc bel et bien d'une solution.</div> <div class="para logical" id="p-25">
+<div class="para">Ensuite? On ne connaît pas la valeur de <span class="process-math">\(C\text{,}\)</span> ni de <span class="process-math">\(k\text{.}\)</span> Mais on sait ceci: <span class="process-math">\(P(0) = 100\)</span> et <span class="process-math">\(P(10) = 200\text{.}\)</span> Substituons ces valeurs dans l'expression et regardons ce que nous obtenons:</div>
+<div class="displaymath process-math" id="md-1">
+\begin{align*}
+\amp  100 = P(0) = C e^{k0} = C ,\\
+\amp  200 = P(10) = 100 \, e^{k10} \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-26">
+<div class="para">Par conséquent, <span class="process-math">\(2 = e^{10k}\)</span> ou <span class="process-math">\(\frac{\ln 2}{10} = k \approx 0{,}069\text{.}\)</span> Donc:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0{,}069 t}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-27">À une minute, <span class="process-math">\(t=60\text{,}\)</span> la population est <span class="process-math">\(P(60) = 6400\text{.}\)</span> Voir <a href="" class="xref" data-knowl="./knowl/intro_plotbactfig.html" title="Figure 1.2.4">la 1.2.4</a>.</div> <figure class="figure figure-like" id="intro_plotbactfig"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.4<span class="period">.</span></span><span class="space"> </span>Croissance de bactéries en 60 secondes.</figcaption></figure> <div class="para" id="p-28">Parlons maintenant de l'interprétation de ces résultats. Doit-on penser qu'il y aura exactement 6400 bactéries à 60 secondes? Bien sûr que non. Nous avons fait des hypothèses simplificatrices qui ne seront pas exactement vraies, mais approximativement vraies. Si nos hypothèses sont raisonnables, il y aura environ 6400 bactéries. De plus, <span class="process-math">\(P\)</span> devrait être un nombre entier, puisqu'il compte une quantité de bactéries. Pourtant, notre modèle admet des nombres comme <span class="process-math">\(P(61) \approx 6859{,}35\text{.}\)</span>
+</div></article></div>
+<div class="para logical" id="p-29">
+<div class="para">Habituellement, la constante <span class="process-math">\(k\)</span> dans <span class="process-math">\(P' = kP\)</span> est connue, et l'on cherche à résoudre l'équation différentielle pour différentes <em class="emphasis">conditions initiales </em>. Qu'est-ce que ça veut dire? Prenons <span class="process-math">\(k=1\)</span> pour simplifier les choses. Supposons que nous voulons résoudre l'équation <span class="process-math">\(\frac{dP}{dt} = P\)</span> avec la condition <span class="process-math">\(P(0) = 1000\)</span> (la condition initiale). Alors, la solution est (exercice):</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t) = 1000 \, e^t\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-30">On appelle <span class="process-math">\(P(t) = C e^t\)</span> <em class="emphasis">la solution générale</em>, puisque toute solution de l'équation peut s'écrire sous cette forme pour un certain choix de la constante <span class="process-math">\(C\text{.}\)</span> La condition initiale sert à déterminer <span class="process-math">\(C\text{,}\)</span> afin de trouver la <em class="emphasis">solution particulière</em>.</div></section><section class="subsection" id="subsection_fourfundamental"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Quatre équations fondamentales</span>
+</h3>
+<div class="para" id="p-31">Quelques équations apparaissent fréquemment, et nous pouvons trouver utile de tout simplement apprendre par cœur leur solution (nous les verrons aussi de manière plus formelle dans les chapitres suivants). Appelons-les nos quatre équations fondamentales.  Leurs solutions sont assez simples à deviner en nous rappelant les propriétés des exponentielles, de sinus et de cosinus. Elles sont aussi plutôt simples à vérifier, ce qu'on devrait toujours faire. Comme ça, inutile de se demander si l'on s'est rappelé correctement de la solution.</div>
+<div class="para logical" id="p-32">
+<div class="para">Voici notre première équation fondamentale:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = k y\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(k &gt; 0\)</span> est une constante. Ici, <span class="process-math">\(y\)</span> est la variable dépendante et <span class="process-math">\(x\text{,}\)</span> la variable indépendante. La solution générale de cette équation est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x) = C e^{kx}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-33">Nous avons vu ceci dans l'exemple précédent de la croissance exponentielle, même si les noms de variables ont changé.</div>
+<div class="para logical" id="p-34">
+<div class="para">La deuxième équation s'obtient en modifiant légèrement la première:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = -k y\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(k &gt; 0\)</span> est une constante. La solution générale de cette équation est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x) = C e^{-kx}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><div class="para" id="p-35">Vérifiez que <span class="process-math">\(y\)</span> est bien une solution à cette équation.</div></article></div>
+<div class="para logical" id="p-36">
+<div class="para">Notre troisième équation fondamentale est une <em class="emphasis">équation différentielle du second ordre</em>:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^2y}{{dx}^2} = -k^2 y\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(k &gt; 0\)</span> est une constante. La solution générale de cette équation est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x) = C_1 \cos(kx) + C_2 \sin(kx)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-37">Puisque l'équation est du second ordre, la solution contient deux constantes.</div>
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><div class="para" id="p-38">Vérifiez que <span class="process-math">\(y\)</span> est bien une solution à cette équation.</div></article></div>
+<div class="para logical" id="p-39">
+<div class="para">Enfin, considérons l'équation suivante, elle aussi du second ordre:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^2y}{{dx}^2} = k^2 y\text{,}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(k &gt; 0\)</span> est une constante. La solution générale de cette équation est:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x) = C_1 e^{kx} + C_2 e^{-kx}
+\end{equation*}
+</div>
+<div class="para">ou</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x) = D_1 \cosh(kx) + D_2 \sinh(kx)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-40">
+<div class="para">Les fonctions <span class="process-math">\(\cosh\)</span> et <span class="process-math">\(\sinh\)</span> se définissent comme suit:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cosh x = \frac{e^{x} + e^{-x}}{2} , \qquad \sinh x = \frac{e^{x} - e^{-x}}{2}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-41">Elles s'appellent respectivement <em class="emphasis">cosinus hyperbolique </em> et <em class="emphasis">sinus hyperbolique </em>. Elles sont parfois plus simples à utiliser que les fonctions exponentielles. Elles ont de jolies propriétés, telles que <span class="process-math">\(\cosh 0 = 1\text{,}\)</span> <span class="process-math">\(\sinh 0 = 0\text{,}\)</span> <span class="process-math">\(\frac{d}{dx} \cosh x = \sinh x\)</span> (non il n'y a pas de signe moins, ce n'est pas une coquille) et <span class="process-math">\(\frac{d}{dx} \sinh x = \cosh x\text{.}\)</span>
+</div>
+<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><div class="para" id="p-42">Vérifiez que les deux expressions sont des solutions à cette équation.</div></article></div>
+<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><div class="para logical" id="p-43">
+<div class="para">Pour les équations d'ordre supérieur, les solutions comportent plus de constantes pour lesquelles on doit résoudre afin d'obtenir une solution particulière. L'équation <span class="process-math">\(\frac{d^2y}{dx^2} = 0\)</span> a pour solution générale <span class="process-math">\(y = C_1 x + C_2\text{;}\)</span> il suffit d'intégrer deux fois, sans oublier les constantes d'intégration. Considérons les conditions initiales <span class="process-math">\(y(0) = 2\)</span> et <span class="process-math">\(y'(0) = 3\text{.}\)</span> On substitue ces valeurs dans la solution et l'on obtient:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2 = y(0) = C_1 \cdot 0 + C_2 = C_2, \qquad 3 = y'(0) = C_1\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-44">Ainsi, <span class="process-math">\(y = 3x + 2\)</span> est la solution particulière recherchée.</div></article></div>
+<div class="para logical" id="p-45">
+<div class="para">Fait intéressant à propos de <span class="process-math">\(\cosh\text{:}\)</span> le graphe de <span class="process-math">\(\cosh\)</span> est précisément la forme d'une chaînette pendante (pas d'une parabole, contrairement à ce qu'on pourrait croire). Cette forme s'appelle une <em class="emphasis">caténaire </em>. De plus, le graphe de <span class="process-math">\(\cosh\)</span> offre la forme idéale pour une arche supportant son propre poids; une telle arche de forme parabolique risquerait de s'écrouler. Un exemple célèbre est la {Gateway Arch} de la ville américaine de Saint-Louis, dont la formule est inscrite dans la structure:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y = -127.7 \; \textrm{ft}  \cdot \cosh\left( x /127.7  \; \textrm{ft}  \right) + 757.7 \;\textrm{ft}\text{.}
+\end{equation*}
+</div>
+</div></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Exercices</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><div class="para" id="p-46">Montrez que <span class="process-math">\(x = e^{4t}\)</span> est une solution de <span class="process-math">\(x'''-12 x'' + 48 x' - 64 x = 0\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-5"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><div class="para" id="p-47">Montrez que <span class="process-math">\(x = e^{t}\)</span> n'est pas une solution de <span class="process-math">\(x'''-12 x'' + 48 x' - 64 x = 0\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-6"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><div class="para" id="p-48">Est-ce que <span class="process-math">\(y = \sin t\)</span> est une solution de <span class="process-math">\({\left( \frac{dy}{dt} \right)}^2 = 1 - y^2\text{?}\)</span> Justifiez votre réponse.</div></article></div>
+<article class="exercise exercise-like" id="exercise-7"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-7"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><div class="para" id="p-49">Considérons <span class="process-math">\(y'' + 2y' - 8y = 0\text{.}\)</span> Essayez une solution de la forme <span class="process-math">\(y = e^{rx}\)</span> pour une constante (à déterminer) <span class="process-math">\(r\text{.}\)</span> Existe-il une valeur de <span class="process-math">\(r\)</span> qui donne une solution? Si oui, trouvez toutes les valeurs possibles de <span class="process-math">\(r\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-8"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-8"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><div class="para" id="p-50">Vérifiez que <span class="process-math">\(x = C e^{-2t}\)</span> est une solution de <span class="process-math">\(x' = -2x\text{.}\)</span> Trouvez <span class="process-math">\(C\)</span> satisfaisant à la condition initiale <span class="process-math">\(x(0) = 100\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-9"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-9"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><div class="para" id="p-51">Vérifiez que <span class="process-math">\(x = C_1 e^{-t} + C_2 e^{2t}\)</span> est une solution de <span class="process-math">\(x'' - x' -2 x = 0\text{.}\)</span> Trouvez <span class="process-math">\(C_1\)</span> et <span class="process-math">\(C_2\)</span> satisfaisant aux conditions initiales <span class="process-math">\(x(0) = 10\)</span> et <span class="process-math">\(x'(0) = 0\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-10"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-10"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.15</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-10"><article class="exercise exercise-like"><div class="para" id="p-52">Trouvez une solution <span class="process-math">\({(x')}^2 + x^2 = 4\)</span> en utilisant ce que vous avez appris à propos des dérivées dans vos cours de calcul.</div></article></div>
+<article class="exercise exercise-like" id="exercise-11"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-11"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.16</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-11"><article class="exercise exercise-like"><div class="para" id="p-53">Résolvez \begin{tasks}(2) \task <span class="process-math">\(\dfrac{dA}{dt} = -10 A, A(0)=5\)</span> \task <span class="process-math">\(\dfrac{dH}{dx} = 3 H, H(0)=1\)</span> \task <span class="process-math">\(\dfrac{d^2y}{dx^2} = 4 y, y(0)=0, y'(0)=1\)</span> \task <span class="process-math">\(\dfrac{d^2x}{dy^2} = -9 x, x(0)=1, x'(0)=0\)</span> \end{tasks}</div></article></div>
+<article class="exercise exercise-like" id="exercise-12"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-12"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.17</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-12"><article class="exercise exercise-like"><div class="para" id="p-54">Existe-t-il une solution de <span class="process-math">\(y' = y\text{,}\)</span> telle que <span class="process-math">\(y(0) = y(1)\text{?}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-13"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-13"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.18</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-13"><article class="exercise exercise-like"><div class="para" id="p-55">La population de la ville X était 100 000 il y a 20 ans, et 120 000 il y a 10 ans. Si l'on suppose une croissance continue, on peut utiliser le modèle de croissance exponentielle (comme pour une population de bactéries). À combien estimez-vous la population actuelle maintenant?</div></article></div>
+<article class="exercise exercise-like" id="exercise-14"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-14"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.19</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-14"><article class="exercise exercise-like"><div class="para" id="p-56">Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million <span class="process-math">\($\text{,}\)</span> et qu'il a une augmentation salariale de <span class="process-math">\(10\%\)</span> chaque année (donc modèle de croissance exponentielle, comme les bactéries). Dénotons par <span class="process-math">\(s\)</span> le salaire en millions de dollars, et <span class="process-math">\(t\)</span> le temps en années. \begin{tasks}(2) \task Trouvez <span class="process-math">\(s(0)\)</span> et <span class="process-math">\(s(1)\text{.}\)</span> \task Après combien d'années approximativement le salaire sera-t-il de 10 millions? \task Après combien d'années approximativement le salaire sera-t-il de 20 millions? \task Après combien d'années approximativement le salaire sera-t-il de 30 millions? \end{tasks}</div></article></div>
+<div class="para" id="p-57"><em class="emphasis">Note: Les exercices dont les numéros sont 101 et plus ont des réponses à la fin du manuel.</em></div>
+<article class="exercise exercise-like" id="exercise-15"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-15"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.20</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like"><div class="para" id="p-58">Montrez que <span class="process-math">\(x = e^{-2t}\)</span> est une solution de <span class="process-math">\(x'' + 4x' + 4x = 0\text{.}\)</span>
+</div></article></div>
+<div class="para" id="p-59">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   Calculer <span class="process-math">\(x' = -2e^{-2t}\)</span> et <span class="process-math">\(x'' = 4e^{-2t}\text{.}\)</span> Alors, <span class="process-math">\((4e^{-2t}) + 4 (-2e^{-2t}) + 4 (e^{-2t}) = 0\text{.}\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-16"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-16"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.21</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-16"><article class="exercise exercise-like"><div class="para" id="p-60">Est-ce que <span class="process-math">\(y = x^2\)</span> est une solution de <span class="process-math">\(x^2y'' - 2y = 0\text{?}\)</span> Justifiez votre réponse.</div></article></div>
+<div class="para" id="p-61">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   Oui. }</div>
+<article class="exercise exercise-like" id="exercise-17"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-17"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.22</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like"><div class="para" id="p-62">Soit <span class="process-math">\(xy'' - y' = 0\text{.}\)</span> Essayez une solution de la forme <span class="process-math">\(y = x^r\text{.}\)</span> Existe-t-il une valeur de <span class="process-math">\(r\)</span> qui donne une solution? Si oui, trouvez toutes les valeurs possibles de <span class="process-math">\(r\text{.}\)</span>
+</div></article></div>
+<div class="para" id="p-63">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   <span class="process-math">\(y=x^r\)</span> est une solution pour <span class="process-math">\(r=0\)</span> et <span class="process-math">\(r=2\text{.}\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-18"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-18"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.23</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-18"><article class="exercise exercise-like"><div class="para" id="p-64">Vérifiez que <span class="process-math">\(x=C_1e^t+C_2\)</span> est une solution de <span class="process-math">\(x''-x' = 0\text{.}\)</span> Trouvez <span class="process-math">\(C_1\)</span> et <span class="process-math">\(C_2\)</span> telles que <span class="process-math">\(x(0) = 10\)</span> et <span class="process-math">\(x'(0) = 100\text{.}\)</span>
+</div></article></div>
+<div class="para" id="p-65">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   <span class="process-math">\(C_1 = 100\text{,}\)</span> <span class="process-math">\(C_2 = -90\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-19"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-19"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.24</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-19"><article class="exercise exercise-like"><div class="para" id="p-66">Résolvez <span class="process-math">\(\frac{d\varphi}{ds} = 8 \varphi\)</span> et <span class="process-math">\(\varphi(0) = -9\text{.}\)</span>
+</div></article></div>
+<div class="para" id="p-67">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   <span class="process-math">\(\varphi = -9 e^{8s}\)</span> }</div>
+<article class="exercise exercise-like" id="exercise-20"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-20"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.25</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><div class="para" id="p-68">Résolvez \begin{tasks}(2) \task <span class="process-math">\(\dfrac{dx}{dt} = -4x,
+x(0)=9\)</span> \task <span class="process-math">\(\dfrac{d^2x}{dt^2} = -4x,
+x(0)=1, x'(0)=2\)</span> \task <span class="process-math">\(\dfrac{dp}{dq} = 3 p, p(0)=4\)</span> \task <span class="process-math">\(\dfrac{d^2T}{dx^2} = 4 T, T(0)=0, T'(0)=6\)</span> \end{tasks}</div></article></div>
+<div class="para" id="p-69">\setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer   a) <span class="process-math">\(x=9e^{-4t}\)</span> b) <span class="process-math">\(x=\cos(2t)+\sin(2t)\)</span> c) <span class="process-math">\(p=4e^{3q}\)</span> d) <span class="process-math">\(T=3\sinh(2x)\)</span> }</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="notes_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="classification_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
