@@ -1,7 +1,6 @@
 *.aux
 *.log
 *.toc
-*.pdf
 *.out
 *.ilg
 *.ind
@@ -9,6 +8,6 @@
 *.fdb_latexmk
 *.idx
 *.synctex.gz
-*.pdf
+diffyqs.pdf
 *.html
 /Pretext/output/*

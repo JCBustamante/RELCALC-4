@@ -4,7 +4,9 @@
 <macros>
 \newcommand{\theversion}{6.2}
 \newcommand{\nicefrac}[2]{\frac{#1}{#2}}
-\renewcommand{\bibname}{Lectures additionnelles}
+<!--
+  \renewcommand{\bibname}{Lectures additionnelles}
+-->
 \def\wrapfigure{\wrapfloat{figure}}
 \def\wraptable{\wrapfloat{table}}
 \def\caption{\wf}
