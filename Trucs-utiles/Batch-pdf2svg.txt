@@ -1,0 +1,1 @@
+for sfile in *.pdf do dfile=`basename $sfile ".pdf"`.svg if [ $sfile -nt -$dfile ] then echo Converting $sfile to $dfile /usr/bin/pdf2svg $sfile $dfile #uncomment next line to autoremove pdf files # rm $sfile fi done 
