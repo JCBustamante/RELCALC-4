@@ -106,7 +106,7 @@
     <title>Multiplication de matrices</title>
     <p>
       Voyons maintenant la multiplication de matrices.
-      Commen&#xe7;ons par définir le <em>produit scalaire
+      Commençaons par définir le <em>produit scalaire
           <idx><h>produit scalaire</h></idx>
       </em> (ou <em>produit intérieur
           <idx><h>produit intérieur</h></idx>
@@ -345,7 +345,7 @@
           <idx><h>cofactor</h></idx>
       </em> de la matrice les nombres <m>{(-1)}^{i+j}\det(A_{ij})</m> et
       <em>expansion par cofacteurs<idx><h>expansion par cofacteurs</h></idx>
-      </em> cette fa&#xe7;on de calculer le déterminant.
+      </em> cette façaon de calculer le déterminant.
       On obtient toujours le même nombre,
       peu importe la ligne choisie.
       On peut aussi calculer le déterminant par expansion le long d'une colonne
@@ -426,7 +426,7 @@
     <p>
       Les matrices peuvent entre autres servir à
       résoudre des systèmes d'équations linéaires.
-      La fa&#xe7;on la plus simple de le démontrer est à l'aide d'un exemple.
+      La façaon la plus simple de le démontrer est à l'aide d'un exemple.
       Supposons le système linéaire d'équations suivant :
       <md>
         <mrow>2 x_1 +      2 x_2 +      2 x_3 \amp  = 2 ,</mrow>

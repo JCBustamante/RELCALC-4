@@ -2,7 +2,7 @@
   <title>Systèmes linéaires d'équations différentielles ordinaires</title>
   <introduction>
     <p>
-      Commen&#xe7;ons par parler des fonctions matricielles et vectorielles.
+      Commençaons par parler des fonctions matricielles et vectorielles.
       Ces fonctions sont des matrices ou des vecteurs où un élément dépend d'une variable.
       Si <m>t</m> est la variable indépendante,
       une <em>fonction vectorielle
@@ -13,7 +13,7 @@
       </me>.
     </p>
     <p>
-      De la même fa&#xe7;on, une <em>fonction matricielle
+      De la même façaon, une <em>fonction matricielle
           <idx><h>fonction matricielle</h></idx>
       </em> <m>A(t)</m> s'écrit
       <me>
@@ -123,7 +123,7 @@
           Cependant, si l'on modifie légèrement l'exemple pour avoir <m>\vec{x}_1 = \Bigl[ \begin{matrix}t^2 \\ t \end{matrix}  \Bigr]</m>,
           <m>\vec{x}_2 = \Bigl[ \begin{matrix}0 \\ t \end{matrix}  \Bigr]</m> et <m>\vec{x}_3 = \Bigl[ \begin{matrix}-t^2 \\ 1 \end{matrix} \Bigr]</m>,
           alors les fonctions seront linéairement indépendantes.
-          Commen&#xe7;ons par écrire l'équation
+          Commençaons par écrire l'équation
           <m>c_1 \vec{x}_1 + c_2 \vec{x}_2 + c_3 \vec{x}_3 = \vec{0}</m> et notons qu'elle doit être valide pour chaque <m>t</m>.
           On obtient
           <me>
@@ -178,7 +178,7 @@
       </statement>
     </theorem>
     <p>
-      On procède de la même fa&#xe7;on pour les systèmes et les équations simples.
+      On procède de la même façaon pour les systèmes et les équations simples.
       On trouve une solution particulière à
       l'équation non homogène et ensuite la solution générale de l'équation homogène associée, puis on additionne les deux.
     </p>

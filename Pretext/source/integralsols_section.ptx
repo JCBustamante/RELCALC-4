@@ -15,7 +15,7 @@
       Il n'y a pas de méthode générale simple pour trouver la solution à
       toute équation du premier ordre.
       Nous verrons quelques cas où c'est possible.
-      Commen&#xe7;ons par supposer que <m>f</m> est une fonction de <m>x</m>,
+      Commençaons par supposer que <m>f</m> est une fonction de <m>x</m>,
       seulement, c'est-à-dire:
       <men xml:id="ias_inteq">
         y' = f(x)
@@ -170,7 +170,7 @@
     <p>
       On dirait qu'on fait tout simplement des manipulations algébriques avec <m>dx</m> et <m>dy</m>,
       qu'on traite comme des nombres.
-      Et c'est vrai que &#xe7;a marche.
+      Et c'est vrai que çaa marche.
       Mais attention!
       Lorsqu'on verra des équations aux dérivées partielles,
       ce type de raisonnement ne fonctionnera plus.

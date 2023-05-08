@@ -54,7 +54,7 @@
       La dérivée est un multiple de <m>\vec{v}</m> et pointe donc le long de la ligne définie par <m>\vec{v}</m>.
       Comme <m>\lambda > 0</m>,
       la dérivée pointe dans la direction de <m>\vec{v}</m> quand <m>\alpha</m> est positif et dans la direction opposée quand <m>\alpha</m> est négatif.
-      Tra&#xe7;ons les lignes définies par les vecteurs propres et des flèches sur ces lignes pour indiquer les directions.
+      Traçaons les lignes définies par les vecteurs propres et des flèches sur ces lignes pour indiquer les directions.
       Voir <xref ref="pln_source-eig-arrfig">la</xref> ci-après.
     </p>
     <p>
@@ -220,7 +220,7 @@
       (la matrice est singulière),
       comme dans l' <xref ref="sintro_closedbrine-example"></xref>,
       et où les graphes sont légèrement différents
-      (plus simples, d'une certaine fa&#xe7;on).
+      (plus simples, d'une certaine façaon).
       Voir les exercices.
     </p>
     <table xml:id="pln_behtab">
@@ -268,7 +268,7 @@
       <statement>
         <p>
           Que se passe-t-il si <m>P = \left[ \begin{matrix}1 \amp 1 \\ 1 \amp 1 \end{matrix} \right]</m>?
-          Est-ce que &#xe7;a ressemble à
+          Est-ce que çaa ressemble à
           un des graphes vus précédemment?
         </p>
       </statement>

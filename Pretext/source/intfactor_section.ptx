@@ -119,7 +119,7 @@
     <p>
       Notons que nous pouvons prendre la primitive de notre choix pour <m>e^{\int p(x) dx}</m>.
       On peut ajouter une constante d'intégration,
-      mais &#xe7;a ne changera pas la réponse à la fin.
+      mais çaa ne changera pas la réponse à la fin.
     </p>
     <exercise>
       <statement>
@@ -204,7 +204,7 @@
           Combien de sel est contenu dans le réservoir lorsqu'il est plein?
         </p>
         <p>
-          Commen&#xe7;ons par établir l'équation différentielle modélisant ce problème.
+          Commençaons par établir l'équation différentielle modélisant ce problème.
           Dénotons par <m>x</m> la quantité
           de sel dans le réservoir,
           en kilogrammes, et par <m>t</m> le temps en minutes.

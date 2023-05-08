@@ -6,7 +6,7 @@
 \newcommand{\nicefrac}[2]{\frac{#1}{#2}}
 <!--
   \renewcommand{\bibname}{Lectures additionnelles}
--->
+
 \def\wrapfigure{\wrapfloat{figure}}
 \def\wraptable{\wrapfloat{table}}
 \def\caption{\wf}
@@ -80,6 +80,7 @@ Remarque
 \microtypesetup{protrusion=false}
 \microtypesetup{protrusion=true}
 }
+-->
 \newcommand{\infinity}{\infty}
 </macros>
 <latex-image-preamble>

@@ -23,7 +23,7 @@
       pour une certaine constante <m>a > 0</m>.
       L'intuition est semblable à
       l'équation de la chaleur,
-      en rempla&#xe7;ant la vitesse par l'accélération : l'accélération en un point spécifique est proportionnelle à
+      en remplaçaant la vitesse par l'accélération : l'accélération en un point spécifique est proportionnelle à
       la seconde dérivée de la forme de la corde.
       En d'autres termes, quand la corde est concave,
       <m>u_{xx}</m> est négatif,
@@ -86,7 +86,7 @@
       on peut utiliser la séparation des variables pour trouver de nombreux éléments appartenant à
       la solution résolvant toutes les conditions homogènes.
       On peut ensuite les utiliser pour construire une solution satisfaisant la condition non homogène restante.
-      Commen&#xe7;ons avec <xref ref="wave_weq"/>.
+      Commençaons avec <xref ref="wave_weq"/>.
       On essaie une solution de la forme <m>w(x,t) = X(x) T(t)</m>.
       On remplace dans l'équation d'onde et l'on obtient
       <me>
@@ -183,7 +183,7 @@
       </statement>
     </exercise>
     <p>
-      On résout <xref ref="wave_zeq"/> de fa&#xe7;on sembable.
+      On résout <xref ref="wave_zeq"/> de façaon sembable.
       On essaie encore <m>z(x,y) = X(x)T(t)</m>.
       La procédure fonctionne exactement de la même manière qu'avant.
       On obtient
@@ -309,7 +309,7 @@
           l'équation de la chaleur,
           la solution ne devient pas plus
           <q>lisse</q>. On verra la raison de ce comportement dans la section suivante,
-          où l'on décrira la solution de l'équation d'onde d'une autre fa&#xe7;on.
+          où l'on décrira la solution de l'équation d'onde d'une autre façaon.
         </p>
         <figure xml:id="wave_pluckedexfig">
           <caption>Forme de la corde pincée pour <m>0 \lt  t \lt  3</m>.</caption>
@@ -410,7 +410,7 @@
       on voit que, pour tout <m>x</m> fixe,
       on obtient une série de Fourier presque arbitraire pour <m>t</m>, à
       l'exception du terme constant.
-      Nous pouvons essentiellement obtenir le son de notre choix en pin&#xe7;ant la corde de la bonne manière.
+      Nous pouvons essentiellement obtenir le son de notre choix en pinçaant la corde de la bonne manière.
       Bien sûr, on envisage une corde idéale sans rigidité
       et sans la résistance de l'air.
       Ces variables ont clairement un impact sur le son également.
@@ -459,7 +459,7 @@
           Supposez que la longueur de la corde est égale à 1 et que <m>a = 1</m>.
           Quand l'instrument de musique frappe le sol,
           la corde est en position de repos et donc <m>y (x, 0) = 0</m>.
-          Cependant, la corde se dépla&#xe7;ait à
+          Cependant, la corde se déplaçaait à
           une certaine vitesse à
           l'impact (<m>t = 0</m>), c'est-à-dire <m>y_t (x, 0) = -1</m>.
           Trouvez la solution <m>y (x, t)</m> pour la forme de la corde au temps <m>t</m>.

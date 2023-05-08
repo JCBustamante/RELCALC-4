@@ -67,7 +67,7 @@
     </example>
     <p>
       Voyons comment calculer les valeurs propres pour n'importe quelle matrice.
-      On réécrit les équations pour une valeur propre de la fa&#xe7;on suivante :
+      On réécrit les équations pour une valeur propre de la façaon suivante :
       <me>
         (A - \lambda I)\vec{v} = \vec{0}
       </me>.
@@ -251,7 +251,7 @@
           On a trouvé préalablement que les valeurs propres sont <m>1,2</m> et <m>3</m>.
           On a aussi trouvé le vecteur propre
           <m>\left[ \begin{matrix}1 \\ 1 \\ 0 \end{matrix}  \right]</m> pour la valeur propre 3.
-          De la même fa&#xe7;on, on trouve le vecteur propre
+          De la même façaon, on trouve le vecteur propre
           <m>\left[ \begin{matrix}1 \\ -1 \\ 0 \end{matrix}  \right]</m> pour la valeur propre 1 et
           <m>\left[ \begin{matrix}0 \\ 1 \\ -1 \end{matrix}  \right]</m> pour la valeur propre 2
           (exercice : vérifiez).
@@ -305,7 +305,7 @@
     <p>
       On obtient <m>\lambda = 1 \pm i</m>.
       Les vecteurs propres correspondants sont eux aussi complexes.
-      Commen&#xe7;ons avec <m>\lambda = 1-i</m>.
+      Commençaons avec <m>\lambda = 1-i</m>.
       <md>
         <mrow>\bigl(P-(1-i) I\bigr) \vec{v} \amp  = \vec{0} , \begin{bmatrix} i \amp  1</mrow>
         <mrow>-1 \amp  i \end{bmatrix} \vec{v} = \vec{0}</mrow>
@@ -317,7 +317,7 @@
       Nous pouvons donc ne considérer que l'une d'entre elles.
       En prenant <m>v_2 = 1</m>, par exemple,
       on obtient un vecteur propre <m>\vec{v} = \left[ \begin{matrix}i \\ 1 \end{matrix} \right]</m>.
-      De la même fa&#xe7;on, on trouve que
+      De la même façaon, on trouve que
       <m>\left[ \begin{matrix}-i \\ 1 \end{matrix} \right]</m> est un vecteur propre correspondant à
       la valeur propre <m>1+i</m>.
     </p>
@@ -351,7 +351,7 @@
           <idx><h>conjugué complexe</h></idx>
       </em>.
       Si <m>a</m> est un nombre réel, alors <m>\bar{a} = a</m>.
-      De la même fa&#xe7;on,
+      De la même façaon,
       on met une barre au-dessus des vecteurs et des matrices en prenant le conjugué
       complexe de chaque élément.
       Supposons que la matrice <m>P</m> est réelle.

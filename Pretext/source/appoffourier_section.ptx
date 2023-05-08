@@ -11,7 +11,7 @@
       où nous avons une masse <m>m</m> sur un ressort ayant une constante de ressort <m>k</m>,
       avec un amortissement <m>c</m>,
       et une force <m>F(t)</m> est appliquée à la masse.
-      Supposons que la fonction de for&#xe7;age <m>F (t)</m> est <m>2L</m>-périodique pour un certain <m>L > 0</m>.
+      Supposons que la fonction de forçaage <m>F (t)</m> est <m>2L</m>-périodique pour un certain <m>L > 0</m>.
       Nous avons vu ce problème dans <xref ref="ho_chapter">le</xref>
       avec <m>F (t) = F_0 \cos (\omega t)</m>.
       L'équation qui régit cette configuration particulière est
@@ -163,7 +163,7 @@
   <subsection>
     <title>Résonance</title>
     <p>
-      Tout comme lorsque la fonction de for&#xe7;age était un simple cosinus,
+      Tout comme lorsque la fonction de forçaage était un simple cosinus,
       on peut rencontrer de la résonance.
       On suppose que <m>c = 0</m> et on discute seulement de la résonance pure.
       Soit <m>F (t)</m> <m>2L</m>-périodique, et considérons

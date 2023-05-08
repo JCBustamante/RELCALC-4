@@ -116,7 +116,7 @@
       on n'a pas besoin de résoudre l'équation logistique exactement.
       Il suffirait de dessiner le champ de directions.
       En fait, on peut simplifier le travail encore plus,
-      en tra&#xe7;ant ce qu'on appelle le <em>diagramme de phase
+      en traçaant ce qu'on appelle le <em>diagramme de phase
           <idx><h>diagramme de phase</h></idx>
       </em> ou <em>portrait de phase
           <idx><h>portrait de phase</h></idx>
@@ -126,8 +126,8 @@
       <ul>
         <li>
           <p>
-            Nous tra&#xe7;ons l'axe des <m>x</m>,
-            nous y marquons tous les points critiques de l'équation et nous tra&#xe7;ons des flèches dans les intervalles déterminés par ces points critiques.
+            Nous traçaons l'axe des <m>x</m>,
+            nous y marquons tous les points critiques de l'équation et nous traçaons des flèches dans les intervalles déterminés par ces points critiques.
           </p>
         </li>
         <li>
@@ -346,7 +346,7 @@
     <exercise>
       <statement>
         <p>
-          Commen&#xe7;ons avec l'équation logistique <m>\frac{dx}{dt} = kx(M-x)</m>.
+          Commençaons avec l'équation logistique <m>\frac{dx}{dt} = kx(M-x)</m>.
           Nous allons modifier la récolte comme suit.
           La quantité cultivée sera proportionnelle à la population.
           Autrement dit, on récolte <m>hx</m> par unité

@@ -224,7 +224,7 @@
       On va y penser comme à
       la limite d'une équation dont les racines sont distinctes mais très proches.
       Notons que la fonction <m>\frac{e^{r_2 x} - e^{r_1 x}}{r_2 - r_1}</m> est une solution lorsque les racines <m>r_1,r_2</m> sont distinctes.
-      Quand on prend la limite lorsque <m>r_1</m> tend vers <m>r_2</m>, &#xe7;a revient à
+      Quand on prend la limite lorsque <m>r_1</m> tend vers <m>r_2</m>, çaa revient à
       la dérivée de <m>e^{rx}</m> par rapport à
       la variable <m>r</m>.
       La limite est donc la valeur de cette dérivée, <m>x e^{rx}</m>,
@@ -294,7 +294,7 @@
     <p>
       [2] On peut également définir l'exponentielle
       <m>e^{a+ib}</m> d'un nombre complexe. À cette fin,
-      on utilise la série de Taylor de <m>e^x</m> en rempla&#xe7;ant la variable <m>x</m> dans la série par un nombre complexe.
+      on utilise la série de Taylor de <m>e^x</m> en remplaçaant la variable <m>x</m> dans la série par un nombre complexe.
       Puisque les propriétés de l'exponentielle peuvent être prouvées en considérant sa série de Taylor,
       ces propriétés sont toujours vraies pour les exponentielles complexes.
       Par exemple, une propriété

@@ -194,7 +194,7 @@
           </me>.
         </p>
         <p>
-          Si <m>x(0) = 0</m>, &#xe7;a implique que <m>A = 0</m>
+          Si <m>x(0) = 0</m>, çaa implique que <m>A = 0</m>
           (on se rappelle que <m>\cosh 0 = 1</m> et <m>\sinh 0 = 0</m>).
           Alors, la solution devrait être
           <m>x = B \sinh ( \sqrt{-\lambda}\, t )</m> et devrait satisfaire à

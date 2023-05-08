@@ -200,7 +200,7 @@
     <p>
       Dans cette section,
       nous allons seulement considérer les mouvements libres ou non forcés puisque nous ne savons pas encore comment résoudre des équations non homogènes.
-      Commen&#xe7;ons avec le mouvement non forcé
+      Commençaons avec le mouvement non forcé
           <idx><h>non forcé</h></idx>
       où <m>c=0</m>.
       L'équation est:
@@ -277,7 +277,7 @@
       de temps comme la fréquence mesure habituellement.
       Puisqu'un cycle mesure <m>2 \pi</m> radians,
       la fréquence usuelle est donnée par <m>\frac{\omega_0}{2\pi}</m>.
-      Il s'agit simplement de savoir où nous pla&#xe7;ons la constante <m>2\pi</m>,
+      Il s'agit simplement de savoir où nous plaçaons la constante <m>2\pi</m>,
       et c'est une question de goût.
     </p>
     <p>
@@ -304,7 +304,7 @@
         </p>
         <p>
           La configuration signifie que la masse était à
-          un demi-mètre dans la direction positive pendant l'accident et que la masse se dépla&#xe7;ait vers l'avant par rapport à
+          un demi-mètre dans la direction positive pendant l'accident et que la masse se déplaçaait vers l'avant par rapport à
           la paroi sur laquelle le ressort était monté,
           (dans la direction positive)
           à \unitfrac[1]{m}{s}. Alors,
