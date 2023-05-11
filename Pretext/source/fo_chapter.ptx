@@ -1,5 +1,5 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="fo_chapter">
-  <title>&#xc9;quations du premier ordre</title>
+  <title>Équations du premier ordre</title>
   <xi:include  href="integralsols_section.ptx"/>
   texte81822c2cfdb1434cfbe50c952f863443c6cc962END
   <xi:include  href="slopefields_section.ptx"/>

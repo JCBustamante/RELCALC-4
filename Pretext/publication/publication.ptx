@@ -28,13 +28,18 @@
   <!-- Set where external assets and generated assets will be   -->
   <!-- stored or created.  Directories are relative to the main -->
   <!-- source PreTeXt file                                      -->
-  <source>
+  <source  webwork-problems="../generated/webwork/webwork-representations.xml">
     <directories external="../assets" generated="../generated-assets" />
-    <!-- Set which marked elements are included in this version: -->
-    <!-- See
-    https://pretextbook.org/doc/guide/html/publication-file-source.html#publication-file-source-version -->
-    <!-- <version include="videos labs"/> -->
+    <version include = "webwork"/>
   </source>
+
+  <webwork
+        server="https://webwork-dev.dmat.usherbrooke.ca"
+        course="pretext"
+        coursepassword="anonyme"
+        user="anonyme"
+        userpassword="anonyme"
+        />
 
   <numbering>
     <!-- the divisions element describes the numbering of divisions.  -->
@@ -114,6 +119,9 @@
     <!-- Set the base URL of where the online version is hosted to have links in other formats -->
     <!-- <baseurl href="changetomywebsite.org"/> -->
     <!-- Control behavior of online WeBWorK, per type: -->
+    
+
+    <!--   
     <webwork
       inline="dynamic"
       divisional="static"
@@ -121,6 +129,7 @@
       worksheet="static"
       project="dynamic"
     />
+    -->
     <!-- Magic IDs identify HTML pages to analytics services   -->
     <!-- Presence implies relevant Javascript will be added    -->
     <!-- StatCounter requires both values to be set            -->

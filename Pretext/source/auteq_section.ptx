@@ -1,5 +1,5 @@
 <section xml:id="auteq_section">
-  <title>&#xc9;quations autonomes</title>
+  <title>Équations autonomes</title>
   <introduction>
     <p>
       Considérons une équation différentielle comme suit:
@@ -132,7 +132,7 @@
         </li>
         <li>
           <p>
-            &#xc9;tant donné que <m>x</m> est la variable dépendante,
+            Étant donné que <m>x</m> est la variable dépendante,
             nous tracerons l'axe des <m>x</m> verticalement,
             pour reproduire sa position dans le champ de directions.
           </p>

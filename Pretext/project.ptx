@@ -12,7 +12,10 @@
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/web</output-dir>
+      <stringparam key="server" value="(https://webwork-dev.dmat.usherbrooke.ca,pretext,anonyme,anonyme,anonyme)"/>
+      <stringparam key="debug.skip-knowls" value="yes"/>
     </target>
+    
     <target name="print" pdf-method="xelatex">
       <format>pdf</format>
       <source>source/main.ptx</source>
@@ -33,6 +36,7 @@
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/subset</output-dir>
+      <stringparam key="server" value="(https://webwork-dev.dmat.usherbrooke.ca,pretext,anonyme,anonyme,anonyme)"/>
       <stringparam key="debug.skip-knowls" value="yes"/>
     </target>
   </targets>

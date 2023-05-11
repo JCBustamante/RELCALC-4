@@ -1,5 +1,5 @@
 <section xml:id="bvp_section">
-  <title>&#xc9;quations avec conditions au bord</title>
+  <title>Équations avec conditions au bord</title>
   <subsection>
     <title>Valeurs au bord</title>
     <p>
@@ -48,7 +48,7 @@
           (qui s'ajoute à
           <m>x=0</m>)
           satisfaisant aux conditions limites.
-          Il y a plus. &#xc9;crivons la solution générale de l'équation différentielle,
+          Il y a plus. Écrivons la solution générale de l'équation différentielle,
           qui est <m>x= A \cos t + B \sin t</m>.
           La condition <m>x(0) = 0</m> implique que <m>A=0</m>.
           La contrainte <m>x(\pi) = 0</m> ne donne pas plus d'information lorsque
