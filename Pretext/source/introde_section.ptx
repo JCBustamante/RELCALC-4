@@ -1,7 +1,7 @@
 <section xml:id="introde_section">
   <title>Introduction aux équations différentielles</title>
   <subsection>
-    <title>&#xc9;quations différentielles</title>
+    <title>Équations différentielles</title>
     <p>
       Les lois de la physique sont généralement exprimées sous forme d'équations différentielles.
       Ainsi, toute discipline de science ou de génie utilise les équations différentielles, à
@@ -95,7 +95,7 @@
       pour une constante <m>C</m>.
       Différentes constantes <m>C</m> donneront des solutions différentes,
       donc il y a vraiment un nombre infini de solutions possibles.
-      Voir <xref ref="intro_plotsfig">la</xref>
+      Voir <xref ref="intro_plotsfig">la figure</xref>
       pour le graphe de quelques solutions.
       Nous verrons un peu plus tard comment trouver ces solutions de manière générale.
     </p>
@@ -106,9 +106,10 @@
       \diffyincludegraphics{width=3in}{width=4.5in}{intro-plots-alt}
     </figure>
     -->
-    <figure width="60%" xml:id="intro_plotsfig">
-    <image source  = "intro-plots-alt"/>
-
+    <figure xml:id="intro_plotsfig">
+    <caption>Quelques courbes solution de l'<xref ref="eq1">équation</xref>.
+    </caption>
+    <image width = "80%" source  = "intro-plots-alt"/>
     </figure>
 
 
@@ -252,12 +253,21 @@
         <p>
           À une minute,
           <m>t=60</m>, la population est <m>P(60) = 6400</m>.
-          Voir <xref ref="intro_plotbactfig">la</xref>.
+          Voir <xref ref="intro_plotbactfig">la figure</xref>.
         </p>
+        <!--
         <figure xml:id="intro_plotbactfig">
           <caption>Croissance de bactéries en 60 secondes.</caption>
           \diffyincludegraphics{width=3in}{width=4.5in}{intro-plotbact}
         </figure>
+        -->
+
+        <figure width="60%" xml:id="intro_plotbactfig">
+          <caption>Croissance de la population de bactéries en fonction du temps.</caption>
+          <image source  = "intro-plotbact"/>
+        </figure>
+
+
         <p>
           Parlons maintenant de l'interprétation de ces résultats.
           Doit-on penser qu'il y aura exactement 6400 bactéries à 60 secondes?
@@ -454,6 +464,43 @@
       </me>.
     </p>
   </subsection>
+
+<fact xml:id="fact-test">
+  <statement>
+    <p>Le fait est que <m>2+2 \ne 5</m>
+      
+    </p>
+  </statement>
+</fact>
+
+
+  <exercise xml:id = "Derivees-Partielles-05" component = "webwork">
+      <webwork source ="RELCALC3-pretext/Chap_Fonc-Multi-Variables/Derivees-Partielles-05.pg"/>
+  </exercise>
+
+
+
+
+
+ <exercises>
+   <exercisegroup>
+     <title>Les exos</title>
+
+     <exercise>
+       <statement>
+         <p>
+           Montrez que <m>x = e^{4t}</m> est une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
+         </p>
+       </statement>
+     </exercise>
+
+
+
+   </exercisegroup>
+ </exercises>
+
+
+
   <subsection>
     <title>Exercices</title>
     <exercise>

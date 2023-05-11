@@ -9,7 +9,7 @@
       <ul>
         <li>
           <p>
-            Dans les <em>équations différentielles ordinaires</em><idx><h>&#xc9;quations différentielles ordinaires</h></idx>,
+            Dans les <em>équations différentielles ordinaires</em><idx><h>Équations différentielles ordinaires</h></idx>,
               <idx><h>EDO</h></idx>
             ou EDO, les dérivées sont prises par rapport à une seule variable.
             Autrement dit, il y a une seule variable indépendante.
@@ -17,7 +17,7 @@
         </li>
         <li>
           <p>
-            Dans les <em>équations aux dérivées partielles</em><idx><h>&#xc9;quations aux dérivées partielles</h></idx>,
+            Dans les <em>équations aux dérivées partielles</em><idx><h>Équations aux dérivées partielles</h></idx>,
               <idx><h>EDP</h></idx>
             ou EDP, les dérivées sont prises par rapport à plusieurs variables.
             Autrement dit, il y a plusieurs variables indépendantes.
@@ -293,7 +293,7 @@
     <exercise>
       <statement>
         <p>
-          &#xc9;crivez la forme générale de l'équation différentielle ordinaire d'ordre
+          Écrivez la forme générale de l'équation différentielle ordinaire d'ordre
           <em>zero</em> et linéaire.
           Trouvez sa solution générale.
         </p>

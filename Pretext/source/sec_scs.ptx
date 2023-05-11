@@ -490,7 +490,7 @@
           <me>
             x''(t) + 3 x(t) = f(t) ,  x(0) = 0,  x(1) = 0
           </me>,
-          où <m>f(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)</m>. &#xc9;crivez la solution de <m>x(t)</m> comme une série de Fourier où les coefficients sont donnés en terme de <m>b_n</m>.
+          où <m>f(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)</m>. Écrivez la solution de <m>x(t)</m> comme une série de Fourier où les coefficients sont donnés en terme de <m>b_n</m>.
         </p>
       </statement>
     </exercise>

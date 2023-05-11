@@ -283,7 +283,7 @@
       Alors, <m>\det(A) = 1+1 = 2</m>.
       Voyez comment le carré (unitaire) avec les sommets <m>(0,0)</m>,
       <m>(1,0)</m>,
-      <m>(0,1)</m> et <m>(1,1)</m> se transforme. &#xc9;videmment,
+      <m>(0,1)</m> et <m>(1,1)</m> se transforme. Évidemment,
       <m>(0,0)</m> demeure à <m>(0,0)</m>.
       <me>
         \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} , \qquad \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \qquad \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}
@@ -441,7 +441,7 @@
       Ces opérations sont toujours suffisantes pour trouver une solution.
     </p>
     <p>
-      &#xc9;crire le système sous forme d'équation matricielle rend l'analyse plus simple.
+      Écrire le système sous forme d'équation matricielle rend l'analyse plus simple.
       Le système précédent peut s'écrire
       <me>
         \begin{bmatrix} 2 \amp  2 \amp  2 \\ 1 \amp  1 \amp  3 \\ 1 \amp  4 \amp  1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 2 \\ 5 \\ 10 \end{bmatrix}

@@ -32,7 +32,7 @@
       Par la loi de Hooke,
           <idx><h>loi de Hooke</h></idx>
       la force exercée sur le ressort est proportionnelle à
-      la compression du ressort. &#xc9;galement,
+      la compression du ressort. Également,
       il y a la force exercée par la friction <m>kx</m>,
       dans la direction négative,
       qui est proportionnelle à
@@ -245,7 +245,7 @@
     <p>
       Tandis que c'est généralement plus facile d'utiliser les premières formes avec <m>A</m> et <m>B</m> pour résoudre pour les conditions initiales,
       la deuxième forme est beaucoup plus naturelle.
-      Les constantes <m>C</m> et <m>\gamma</m> ont des interprétations physiques intéressantes. &#xc9;crivez la solution comme
+      Les constantes <m>C</m> et <m>\gamma</m> ont des interprétations physiques intéressantes. Écrivez la solution comme
       <me>
         x(t) = C \cos ( \omega_0 t - \gamma )
       </me>.
@@ -596,7 +596,7 @@
         <p>
           Considérez le système masse-ressort tel que <m>m=2</m>,
           la constante du ressort <m>k=3</m>,
-          et la constante d'amortissement <m>c=1</m>. \begin{tasks} \task &#xc9;crivez le système et trouvez la solution générale de celui-ci. \task Est-ce que le système est en état de sous-amortissement,
+          et la constante d'amortissement <m>c=1</m>. \begin{tasks} \task Écrivez le système et trouvez la solution générale de celui-ci. \task Est-ce que le système est en état de sous-amortissement,
           sur-amortissement ou d'amortissement critique? \task Si le système n'est pas en amortissment critique,
           trouve un <m>c</m> qui amène le système dans un état d'amortissement critique. \end{tasks}
         </p>
@@ -683,7 +683,7 @@
           un inducteur ayant une inductance de 50 millihenries (0.05 henries),
           et une capacité
           de 5 farads,
-          avec un voltage constant. \begin{tasks} \task &#xc9;crivez l'EDO pour le <m>I</m> courant. \task Trouvez la solution générale. \task Résolvez pour
+          avec un voltage constant. \begin{tasks} \task Écrivez l'EDO pour le <m>I</m> courant. \task Trouvez la solution générale. \task Résolvez pour
           <m>I(0) = 10</m> et <m>I'(0) = 0</m>. \end{tasks}
         </p>
       </statement>

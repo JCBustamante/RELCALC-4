@@ -154,7 +154,7 @@
       </me>.
     </p>
     <p>
-      &#xc9;crivons cette équation dans la notation de Leibniz:
+      Écrivons cette équation dans la notation de Leibniz:
           <idx><h>notation de Leibniz</h></idx>
       <me>
         \frac{dy}{dx} = f(y)
@@ -232,7 +232,7 @@
         </p>
         <p>
           Notons d'abord que <m>y=0</m> est une solution.
-          Nous supposerons dorénavant que <m>y \not= 0</m>. &#xc9;crivons
+          Nous supposerons dorénavant que <m>y \not= 0</m>. Écrivons
           <me>
             \frac{dx}{dy} = \frac{1}{y^2}
           </me>.
@@ -451,7 +451,7 @@
     <exercise>
       <statement>
         <p>
-          Une balle tombe avec une accélération constante de <m>9,8</m> mètres par seconde au carré. &#xc9;crivez l'équation différentielle pour la hauteur <m>h</m> en mètres.
+          Une balle tombe avec une accélération constante de <m>9,8</m> mètres par seconde au carré. Écrivez l'équation différentielle pour la hauteur <m>h</m> en mètres.
           Ensuite, en supposant que <m>h(0) = 100</m> mètres,
           calculez le temps qu'il faudra à
           la balle pour toucher au sol.

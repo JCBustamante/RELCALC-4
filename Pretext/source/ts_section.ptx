@@ -131,7 +131,7 @@
     <example>
       <statement>
         <p>
-          &#xc9;crivons <m>\vec{v} = \left[ \begin{matrix}2 \\ 3 \end{matrix} \right]</m> comme une combinaison linéaire de
+          Écrivons <m>\vec{v} = \left[ \begin{matrix}2 \\ 3 \end{matrix} \right]</m> comme une combinaison linéaire de
           <m>\vec{w_1} = \left[ \begin{matrix}1 \\ -1 \end{matrix} \right]</m> et de <m>\vec{w_2} = \left[ \begin{matrix}1 \\ 1 \end{matrix} \right]</m>.
         </p>
         <p>
@@ -326,7 +326,7 @@
           </me>.
         </p>
         <p>
-          &#xc9;crivons les trois premières harmoniques de la série pour <m>f(t)</m>:
+          Écrivons les trois premières harmoniques de la série pour <m>f(t)</m>:
           <me>
             2 \, \sin (t) - \sin (2t) +\frac{2}{3} \sin (3t) + \cdots
           </me>

@@ -1,5 +1,5 @@
 <section xml:id="sec_ccsol">
-  <title>&#xc9;quations différentielles d'ordre deux à coefficients constants</title>
+  <title>Équations différentielles d'ordre deux à coefficients constants</title>
   <subsection>
     <title>Résoudre les équations à coefficients constants</title>
     <p>
@@ -425,7 +425,7 @@
     <theorem>
       <statement>
         <p>
-          &#xc9;tant donné l'équation suivante,
+          Étant donné l'équation suivante,
           <me>
             ay'' + by' + cy = 0
           </me>,
@@ -557,7 +557,7 @@
     <exercise>
       <statement>
         <p>
-          Revisitons l'équation de Cauchy<ndash/>Euler <idx><h>&#xc9;quation de Cauchy<ndash/>Euler</h></idx>
+          Revisitons l'équation de Cauchy<ndash/>Euler <idx><h>Équation de Cauchy<ndash/>Euler</h></idx>
           (<xref ref="sol_eulerex">exercice</xref>).
           Supposons maintenant que <m>{(b-a)}^2-4ac \lt 0</m>.
           Trouvez la formule de la solution générale <m>a x^2 y'' + b x y' + c y = 0</m>.

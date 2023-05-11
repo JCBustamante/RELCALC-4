@@ -1,5 +1,5 @@
 <section xml:id="separable_section">
-  <title>&#xc9;quations séparables</title>
+  <title>Équations séparables</title>
   <introduction>
     <p>
       Lorsqu'une équation différentielle s'écrit sous la forme <m>y' = f(x)</m>,
@@ -20,7 +20,7 @@
     </p>
   </introduction>
   <subsection>
-    <title>&#xc9;quations séparables</title>
+    <title>Équations séparables</title>
     <p>
       On dit qu'une équation différentielle est <em>séparable
           <idx><h>séparable</h></idx>
@@ -29,7 +29,7 @@
         y' = f(x)g(y)
       </me>,
       où <m>f(x)</m>,
-      <m>g(y)</m> peuvent être des fonctions quelconques. &#xc9;crivons cette équation à
+      <m>g(y)</m> peuvent être des fonctions quelconques. Écrivons cette équation à
       l'aide de la notation de Leibniz:
           <idx><h>notation de Leibniz</h></idx>
       <me>
@@ -63,7 +63,7 @@
         <p>
           On observe que <m>y=0</m> est une solution.
           Nous gardons cette solution en mémoire et supposons maintenant que <m>y \not =0</m>,
-          ce qui nous permettra de diviser par <m>y</m>. &#xc9;crivons l'équation comme suit:
+          ce qui nous permettra de diviser par <m>y</m>. Écrivons l'équation comme suit:
           <m>\frac{dy}{dx} = xy</m>.
           On intègre de chaque côté:
           <me>
@@ -183,7 +183,7 @@
       on retrouve l'équation différentielle de départ (vérifiez-le).
     </p>
     <p>
-      &#xc9;tant donné une solution implicite,
+      Étant donné une solution implicite,
       trouver des valeurs de <m>y</m> explicitement peut être difficile.
       Il est possible qu'une valeur de <m>x</m> donne plusieurs valeurs possibles de <m>y</m> et qu'il faille alors choisir.
       Parfois, il est plus simple de penser à

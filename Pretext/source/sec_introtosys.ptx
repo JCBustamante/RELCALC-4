@@ -209,7 +209,7 @@
           totale de sel est constante.
           Donc, <m>x_1+x_2</m> est constant et égal à <m>A+B</m>.
           Si <m>A</m> est plus grande que <m>B</m>,
-          il y aura plus de sel qui sort du premier réservoir qu'il y en entre. &#xc9;ventuellement,
+          il y aura plus de sel qui sort du premier réservoir qu'il y en entre. Éventuellement,
           après une longue période, la quantité
           de sel dans chaque réservoir sera égale.
           Donc, la solution de <m>x_1</m> et <m>x_2</m> tend vers <m>\frac{A+B}{2}</m>.
@@ -221,7 +221,7 @@
     <example xml:id="sintro_carts-example">
       <statement>
         <p>
-          &#xc9;tudions un exemple du second ordre.
+          Étudions un exemple du second ordre.
           Reprenons le montage avec une masse et un ressort, mais,
           cette fois-ci, considérons deux masses.
         </p>
@@ -537,14 +537,14 @@
     <exercise>
       <statement>
         <p>
-          &#xc9;crivez <m>ay'' + by' + cy = f(x)</m> sous forme de système d'EDO de premier ordre.
+          Écrivez <m>ay'' + by' + cy = f(x)</m> sous forme de système d'EDO de premier ordre.
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          &#xc9;crivez <m>x'' + y^2 y' - x^3 = \sin(t)</m>,
+          Écrivez <m>x'' + y^2 y' - x^3 = \sin(t)</m>,
           <m>y'' + {(x'+y')}^2 -x = 0</m> sous forme de système d'EDO de premier ordre.
         </p>
       </statement>
@@ -598,7 +598,7 @@
     <exercise>
       <statement>
         <p>
-          &#xc9;crivez <m>x''' = x+t</m> sous forme de système du premier ordre.
+          Écrivez <m>x''' = x+t</m> sous forme de système du premier ordre.
         </p>
       </statement>
     </exercise>
@@ -609,7 +609,7 @@
     <exercise>
       <statement>
         <p>
-          &#xc9;crivez <m>y_1'' + y_1 + y_2 = t</m>,
+          Écrivez <m>y_1'' + y_1 + y_2 = t</m>,
           <m>y_2'' + y_1 - y_2 = t^2</m> sous forme de système du premier ordre.
         </p>
       </statement>

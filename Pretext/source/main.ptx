@@ -95,6 +95,8 @@ Remarque
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
 \usepackage{pgfplots}
 </latex-image-preamble>
+<rename element="inlineexercise">Exo</rename>
+<rename element="fact">Formule</rename>
   </docinfo>
   <book>
     <title>Équations différentielles pour le génie</title>

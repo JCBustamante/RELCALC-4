@@ -1,5 +1,5 @@
 <section xml:id="intfactor_section">
-  <title>&#xc9;quations linéaires et facteur intégrant</title>
+  <title>Équations linéaires et facteur intégrant</title>
   <introduction>
     <p>
       Les <em>équations linéaires<idx><h>équation linéaire</h></idx>
@@ -144,7 +144,7 @@
       </me>.
     </p>
     <p>
-      &#xc9;crivons la solution sous forme d'intégrale définie:
+      Écrivons la solution sous forme d'intégrale définie:
       <men xml:id="lei_defsol">
         \mybxbg{ ~~ y(x) = e^{-\int_{x_0}^x p(s)\, ds} \left( \int_{x_0}^x e^{\int_{x_0}^t p(s)\, ds} f(t) \,dt + y_0 \right). ~~ }
       </men>
@@ -163,7 +163,7 @@
     <exercise>
       <statement>
         <p>
-          &#xc9;crivez la solution du problème suivant sous forme d'intégrale définie.
+          Écrivez la solution du problème suivant sous forme d'intégrale définie.
           Vous ne pourrez pas trouver une solution analytique à cette équation.
           <me>
             y' + y = e^{x^2-x}, \qquad y(0) = 10

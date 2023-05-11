@@ -1,5 +1,5 @@
 <section xml:id="solinear_section">
-  <title>&#xc9;quations différentielles du deuxième ordre</title>
+  <title>Équations différentielles du deuxième ordre</title>
   <introduction>
     <p>
       Nous abordons maintenant l'<em>équation différentielle linéaire du deuxième ordre<idx><h>équation différentielle linéaire du deuxième ordre</h></idx>
@@ -384,19 +384,19 @@
       </statement>
     </exercise>
     <exercise>
-      <title>\myindex{&#xc9;quation de Chebyshev d'ordre 1}</title>
+      <title>\myindex{Équation de Chebyshev d'ordre 1}</title>
       <statement>
         <p>
-          Prenez <m>(1-x^2)y''-xy' + y = 0</m>. \begin{tasks} \task Montrez que <m>y=x</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task &#xc9;crivez la solution générale. \end{tasks}
+          Prenez <m>(1-x^2)y''-xy' + y = 0</m>. \begin{tasks} \task Montrez que <m>y=x</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task Écrivez la solution générale. \end{tasks}
         </p>
       </statement>
     </exercise>
     <exercise>
-      <title>\myindex{&#xc9;quation d'Hermite d'ordre 2}</title>
+      <title>\myindex{Équation d'Hermite d'ordre 2}</title>
       <statement>
         <p>
           Prenons <m>y''-2xy' + 4y = 0</m>. \begin{tasks} \task Montrez que
-          <m>y=1-2x^2</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task &#xc9;crivez la solution générale. \end{tasks}
+          <m>y=1-2x^2</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task Écrivez la solution générale. \end{tasks}
         </p>
       </statement>
     </exercise>
@@ -449,7 +449,7 @@
     <exercise>
       <statement>
         <p>
-          &#xc9;crivez une équation
+          Écrivez une équation
           (en utilisant votre imagination)
           telle qu'elle a les solutions <m>e^x</m> et <m>e^{2x}</m>.
           Astuce: Essayez une équation de la forme

@@ -1,5 +1,5 @@
 <section xml:id="heateq_section">
-  <title>&#xc9;quations différentielles partielles, séparation des variables et équation de la chaleur</title>
+  <title>Équations différentielles partielles, séparation des variables et équation de la chaleur</title>
   <introduction>
     <p>
       PLACEHOLDER
@@ -284,7 +284,7 @@
       </me>.
     </p>
     <p>
-      On note que <m>u_n(x,0) = \sin \left( \frac{n \pi}{L} x \right)</m>. &#xc9;crivons <m>f(x)</m> comme une série sinusoïdale :
+      On note que <m>u_n(x,0) = \sin \left( \frac{n \pi}{L} x \right)</m>. Écrivons <m>f(x)</m> comme une série sinusoïdale :
       <me>
         f(x) = \sum_{n=1}^\infty b_n \sin \left(\frac{n \pi}{L}  x \right)
       </me>.
