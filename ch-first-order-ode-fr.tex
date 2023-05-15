@@ -10,7 +10,7 @@
 %\sectionnotes{1 lecture (or less)\EPref{, \S1.2 in \cite{EP}}\BDref{,
 %covered in \S1.2 and \S2.1 in \cite{BD}}}
 
-Une équation différentielle du premier ordre est une équation pouvant s'écrire de la forme suivante:
+Une équation différentielle du premier ordre est une équation pouvant s'écrire sous la forme suivante:
 \begin{equation*}
 	\frac{dy}{dx} = f(x,y)
 \end{equation*}
@@ -20,7 +20,7 @@ ou
 \end{equation*}
 Il n'y a pas de méthode générale simple pour trouver la solution  à toute équation du premier ordre.
 Nous verrons quelques cas où c'est possible.
-Commençons par supposer que $f$ est une fonction de $x$, seulement, c'est-à-dire:
+Commençons par supposer que $f$ est une fonction de $x$ seulement, c'est-à-dire:
 \begin{equation} \label{ias:inteq}
 	y' = f(x) .
 \end{equation}
@@ -46,8 +46,8 @@ $\int f(x) \,dx + C$ comme suit, grâce au théorème fondamental du calcul:
 \begin{equation*}
 	\int_{x_0}^x f(t) \,dt + C .
 \end{equation*}
-C'est ce qui nous permet de dire  \emph{ \myindex{intégrer}} quand, en réalité,
-on veut dire  \emph{trouver la \myindex{primitive}}.
+C'est ce qui nous permet de dire \emph{\myindex{intégrer}} quand, en réalité,
+nous voulons dire \emph{trouver la \myindex{primitive}}.
 
 L'intégration est tout simplement un moyen parmi d'autres pour calculer une primitive
 (moyen qui fonctionne toujours, comme on le verra dans les exemples suivants).
@@ -62,7 +62,7 @@ et \emph{gardez toujours en tête} comment réécrire l'intégrale indéfinie co
 	$y' = 3x^2$.  C'est \emph{précisément} notre équation.
 \end{example}
 
-Normalement, on a aussi une {\em condition initiale}, de la forme $y(x_0) = y_0$, où $x_0,y_0$ sont des nombre réels (habituellement, $x_0=0$, mais ce n'est pas toujours le cas).
+Normalement, on a aussi une {\em condition initiale}, de la forme $y(x_0) = y_0$, où $x_0,y_0$ sont des nombres réels (habituellement, $x_0=0$, mais ce n'est pas toujours le cas).
 Dans ce cas, la solution s'écrit très bien sous forme intégrale.
 Supposons que le problème à résoudre est $y' = f(x)$, $y(x_0) = y_0$. Alors, la solution est:
 %
@@ -70,7 +70,7 @@ Supposons que le problème à résoudre est $y' = f(x)$, $y(x_0) = y_0$. Alors, 
 	y(x) = \int_{x_0}^x f(s) \,ds + y_0 .
 \end{equation}
 Vérifions.  Par le théorème fondamental du calcul, la dérivée de l'intégrale précédente est $f(x)$,
-et donc $y(x)$ est bel et bien est une solution à l'équation différentielle.
+et donc $y(x)$ est bel et bien une solution à l'équation différentielle.
 Maintenant, vérifions qu'elle satisfait aussi à la condition initiale:
 \begin{equation*}
 	y(x_0) = \int_{x_0}^{x_0} f(x)\,dx + y_0 = y_0.
@@ -99,7 +99,7 @@ C'est une fonction comme une autre.  Il n'est pas toujours possible ni nécessai
 		y(x) = \int_0^x e^{-s^2} \,ds + 1 .
 	\end{equation*}
 	Or, il n'y a pas de formule plus explicite pour la primitive de $e^{-x^2}$
-	(on ne peut pas, par exemple, faire un changement de variables...).
+	(on ne peut pas, par exemple, faire un changement de variables).
 	Et la solution sous forme intégrale est très correcte, telle quelle.
 	Elle joue un rôle important, d'ailleurs, en statistique.
 \end{example}
@@ -146,7 +146,7 @@ On peut ensuite tenter de résoudre pour $y$.  Voyons quelques exemples de ceci.
 	\end{equation*}
 	Puisque $e^{-kD}$ est une constante positive arbitraire, on peut la remplacer par une constante arbitraire $C$;
 	ici, $C$ peut aussi prendre la valeur 0 (incorporant ainsi la solution $y=0$) ou des valeurs négatives,
-	ce qui nous permet de nous débarasser de la valeur absolue.  On obtient alors la solution générale devinée plus tôt, $y = Ce^{kx}$.
+	ce qui nous permet de nous débarrasser de la valeur absolue.  On obtient alors la solution générale devinée plus tôt, $y = Ce^{kx}$.
 \end{example}
 
 \begin{example}
@@ -215,7 +215,7 @@ Vous avez probablement vu de tels problèmes dans vos cours de calcul.
 	\begin{equation*}
 		x(t) = 2 e^{t/2} - 2 .
 	\end{equation*}
-	Il nous suffit de substituer $t=2$ et $t=10$ pour obtenir la distance parcourue après 2 et 10 secondes.
+	Il nous suffit de substituer $t=2$ et $t=10$ pour obtenir la distance parcourue après 2 et 10 secondes :
 	\begin{equation*}
 		x(2) = 2e^{2/2} - 2 \approx 3{,}44 \text{ mètres} ,
 		\qquad
@@ -391,7 +391,7 @@ L'équation $y' = f(x , y)$ donne une formule pour la pente de la tangente à un
 Autrement dit, si $y(x)$ est une solution, alors son graphe passe par le point $(x , y)$,
 et la pente de la tangente au graphe à ce point est donnée par $f(x , y)$.
 La solution exacte au point $(x , y)$ est approximée par une droite de pente $f(x , y)$,
-alors on place un petit segment de droite ayant cette pente, à ce point.
+alors on place à ce point un petit segment de droite ayant cette pente.
 %
 %And this is the slope a solution $y(x)$ would have
 %at $x$ if its value was $y$.  In other words, $f(x,y)$ is the slope
@@ -412,7 +412,7 @@ Pour visualiser le comportement des solutions, on trace de tels segments de droi
 Typiquement, on se donne un grillage de points, suffisamment fin pour qu'on voie le comportement des solutions,
 mais pas trop, sinon on ne voit plus les segments individuels.
 On appelle une telle figure le \emph{\myindex{champ de directions}} pour l'équation.
-La~\figureref{1.3:fig1} montre le champ de directions pour l'équation  $y' = xy$ .
+La~\figureref{1.3:fig1} montre le champ de directions pour l'équation  $y' = xy$.
 Habituellement, on laissera à un ordinateur le soin de tracer une telle figure.
 
 Supposons que nous nous faisons donner une condition initiale, $y(x_0) = y_0$.
@@ -504,7 +504,7 @@ C'est donc pertinent de saisir les conditions dans lesquelles une solution uniqu
 	Remarquons que $y=0$ est une solution.  Et en voici une autre:
 	\begin{equation*}
 		y(x) =	\begin{cases}
-				x^2 & \text{si } \; x \geq 0,\\
+				x^2 & \text{si } \; x \geq 0 \\
 				-x^2 & \text{si } \; x < 0.
 				\end{cases}
 	\end{equation*}
@@ -512,7 +512,7 @@ C'est donc pertinent de saisir les conditions dans lesquelles une solution uniqu
 
 Si l'on se fie au champ de directions, il peut être difficile de se rendre compte que la solution n'est pas unique.
 Que faire?  Heureusement, on a le théorème de Picard$\!$\footnote{
-\href{https://fr.wikipedia.org/wiki/Charles_\%C3\%89mile_Picard}{Charles \'Emile Picard},
+\href{https://fr.wikipedia.org/wiki/Émile_Picard}{Charles \'Emile Picard},
 mathématicien français
 (1856-1941).}.
 
@@ -535,7 +535,7 @@ puisque la solution ne sera possiblement pas définie pour toutes les valeurs r�
 \begin{example}
 	Résolvons:
 	\begin{equation*}
-		y' = y^2, \qquad y(0) = A,
+		y' = y^2, \qquad y(0) = A
 	\end{equation*}
 	où $A$ est une constante quelconque.
 
@@ -792,9 +792,9 @@ Si l'on réussit à trouver des primitives de chaque côté, on pourra alors pos
 	\end{equation*}
 \end{example}
 
-Regardons de plus près cette méthode.  On pourrait s'inquiéter du fait que les deux intégrales apparaissant dans l'expression soient en termes de variables différentes.  Ça peut sembler erroné... Alors, nous allons revoir la méthode de séparation des variables de manière plus rigoureuse.
+Regardons de plus près cette méthode.  On pourrait s'inquiéter du fait que les deux intégrales apparaissant dans l'expression sont en termes de variables différentes.  Ça peut sembler erroné... Alors, nous allons revoir la méthode de séparation des variables de manière plus rigoureuse.
 
-Supposons donc qu'on a:
+Supposons donc que nous avons :
 \begin{equation*}
 	\frac{dy}{dx} = f(x)g(y) .
 \end{equation*}
@@ -931,7 +931,7 @@ sont parfois appelées des \emph{solutions singulières\index{solutions singuli�
 	Maintenant, trouvons la valeur de $t$ donnant une température de 60 degrés.
 	On résout l'équation suivante,
 	\begin{equation*}
-		60 = 22 + 67 e^{-0{,}0616t}
+		60 = 22 + 67 e^{-0{,}0616t},
 	\end{equation*}
 	pour obtenir
 	$t = - \frac{\ln \frac{60-22}{67}}{0{,}0616} \approx 9{,}21$ minutes.
@@ -954,8 +954,8 @@ sont parfois appelées des \emph{solutions singulières\index{solutions singuli�
 	Notons d'abord que $y=0$ est une solution (singulière).
 	Supposons donc pour la suite que $y \not= 0$.  On sépare les variables et l'on intègre:
 	\begin{align*}
-		\frac{-3}{y^2} y' & = x  \displaybreak[0]\\
-			\frac{3}{y}   & = \frac{x^2}{2} + C  \displaybreak[0]\\
+		\frac{-3}{y^2} y' & = x  \displaybreak[0], \\
+			\frac{3}{y}   & = \frac{x^2}{2} + C,  \displaybreak[0]\\
 						y & = \frac{3}{\nicefrac{x^2}{2} + C} = \frac{6}{x^2 + 2C}.
 	\end{align*}
 	La solution générale est donc
@@ -1119,7 +1119,7 @@ Donc, si l'on multiplie \eqref{lineq:eq1} par $r(x)$, on obtient:
 Maintenant, on intègre les deux côtés.
 C'est possible puisque le côté droit ne dépend pas de $y$ et que le côté gauche est la dérivée d'une fonction.
 Ensuite, on résout pour  $y$.
-La fonction $r(x)$ s'appelle le \emph{\myindex{facteur intégrant}} et la méthode s'appelle la
+La fonction $r(x)$ s'appelle le \emph{\myindex{facteur intégrant}}, et la méthode s'appelle la
 \emph{\myindex{méthode du facteur intégrant}}.
 
 Comment trouver $r(x)$?  On cherche une fonction qui, lorsqu'on la dérive, donne  de nouveau la fonction, multipliée par $p(x)$.
@@ -1219,7 +1219,7 @@ Cette formule peut maintenant être lue par une application de calcul numérique
 	\noindent
 	\inputpdft{lin-tank}
 	\end{mywrapfigsimp}
-	Un réservoir d'une capacité de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau.  Une solution d'eau saline avec une concentration de 0,1 kilogrammes par litre entre dans le réservoir à un taux de 5 litres par minute. La solution dans le réservoir est bien brassée (c'est-à-dire qu'on peut supposer que la concentration est la même partout) et sort à un taux de 3 litres par minute.  Combien de sel est contenu dans le réservoir lorsqu'il est plein?
+	Un réservoir d'une capacité de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau.  Une solution d'eau saline avec une concentration de 0,1 kilogramme par litre entre dans le réservoir à un taux de 5 litres par minute. La solution dans le réservoir est bien brassée (c'est-à-dire qu'on peut supposer que la concentration est la même partout) et sort à un taux de 3 litres par minute.  Combien de sel est contenu dans le réservoir lorsqu'il est plein?
 
 	Commençons par établir l'équation différentielle modélisant ce problème.  Dénotons par $x$ la quantité de sel dans le réservoir, en kilogrammes,  et par $t$ le temps en minutes.  Si l'on considère une petite variation $\Delta t$ dans le temps, la variation en $x$ (dénotée $\Delta x$) est approximativement :
 	\begin{equation*}
@@ -1246,7 +1246,7 @@ Cette formule peut maintenant être lue par une application de calcul numérique
 	\end{equation*}
 	On réécrit ceci sous la forme \eqref{lineq:eq1}:
 	\begin{equation*}
-		\frac{dx}{dt} + 	\frac{3}{60+2t} x = 	0.5 .
+		\frac{dx}{dt} + 	\frac{3}{60+2t} x = 	0,5 .
 	\end{equation*}
 
 	Maintenant, on peut résoudre l'équation.  Le facteur intégrant est:
@@ -1259,14 +1259,14 @@ Cette formule peut maintenant être lue par une application de calcul numérique
 	On multiplie les deux côtés de l'équation par le facteur intégrant et l'on obtient:
 	\begin{align*}
 	{(60+2t)}^{3/2} \frac{dx}{dt} + {(60+2t)}^{3/2} \frac{3}{60+2t} x
-		& = 	0,5{(60+2t)}^{3/2} \\
+		& = 	0,5{(60+2t)}^{3/2}, \\
 	\frac{d}{dt}\left[{(60+2t)}^{3/2} x \right]
-		& = 0,5{(60+2t)}^{3/2} \\
+		& = 0,5{(60+2t)}^{3/2}, \\
 	{(60+2t)}^{3/2} x
-		& = \int  0,5{(60+2t)}^{3/2} dt +C \\
+		& = \int  0,5{(60+2t)}^{3/2} dt +C, \\
 	 x	& = 	{(60+2t)}^{-3/2} \int  \frac{{(60+2t)}^{3/2}}{2}dt
-					+C{(60+2t)}^{-3/2} \\
-	 x	& =	{(60+2t)}^{-3/2}\frac{1}{10}{(60+2t)}^{5/2}	+C{(60+2t)}^{-3/2} \\
+					+C{(60+2t)}^{-3/2}, \\
+	 x	& =	{(60+2t)}^{-3/2}\frac{1}{10}{(60+2t)}^{5/2}	+C{(60+2t)}^{-3/2}, \\
 	 x	& = \frac{60+2t}{10}+C{(60+2t)}^{-3/2} .
 	\end{align*}
 
@@ -1438,9 +1438,9 @@ On dit \og{}autonome\fg{} parce que, si l'on pense à la variable indépendante 
 Reprenons, par exemple, le problème du café qui tiédit (\exampleref{sep:coffeeexample}).
 \myindex{La loi de refroidissement de Newton} est une équation autonome:
 \begin{equation*}
-	\frac{dx}{dt} = k (A-x)
+	\frac{dx}{dt} = k (A-x),
 \end{equation*}
-où $x$ est la température, $t$ est le temps, $k$ est une constante positive,
+où $x$ est la température, $t$ est le temps, $k$ est une constante positive
 et $A$ est la température ambiante.
  Voir la \figureref{2.2:coffeefig} pour un exemple avec $k=0{,}3$ et $A=5$.
 
@@ -1495,8 +1495,8 @@ On peut analyser le comportement à long terme des solutions sans devoir les dé
 Le champ de directions de $x' = 0.1 x(5-x)$ nous montre que:
 \begin{equation*}
 	\lim_{t\to \infty} x(t) = 	\begin{cases}
-								5 & \text{si } \; x(0) > 0 , \\
-								0 & \text{si } \; x(0) = 0 , \\
+								5 & \text{si } \; x(0) > 0  \\
+								0 & \text{si } \; x(0) = 0  \\
 								\text{n'existe pas ou } {-\infty} & \text{si } \; x(0) < 0 . \\
 								\end{cases}
 \end{equation*}
@@ -1504,7 +1504,7 @@ Quant au cas où $x(0) < 0$, il ne suffit pas de simplement observer le champ de
 Il se pourrait que la solution n'existe pas pour tout $t$ positif.
 Rappelons l'exemple de $x' = x^2$ où les solutions existent seulement sur un intervalle fini.
 Un tel scénario est possible ici.  Dans les faits, on trouverait ici que la solution n'existe
-pas pour toutes les valeurs réelles -- et tend vers $-\infinity$ dans un temps fini --  mais, pour le voir, il faudrait résoudre l'équation.
+pas pour toutes les valeurs réelles -- et qu'elle tend vers $-\infinity$ dans un temps fini --  mais, pour le voir, il faudrait résoudre l'équation.
 
 Si l'on s'intéresse seulement au comportement à long terme de la solution, on n'a pas besoin de résoudre l'équation logistique exactement.
 Il suffirait de dessiner le champ de directions.
@@ -1514,7 +1514,7 @@ en traçant ce qu'on appelle le \emph{\myindex{diagramme de phase}} ou
 Voici comment on fait dans un cas comme celui-ci, où il y a une seule variable dépendante $x$.
 \begin{itemize}
 	\item Nous traçons l'axe des $x$, nous y marquons tous les points critiques de l'équation et nous traçons des flèches dans les intervalles déterminés par ces points critiques.
-	\item Étant donné que $x$ est la variable dépendante, nous tracerons l'axe des $x$ verticalement,
+	\item Étant donné que $x$ est la variable dépendante, nous traçons l'axe des $x$ verticalement,
 		pour reproduire sa position dans le champ de directions.
 	\item Si $f(x) > 0$, la flèche pointe vers le haut.
 	\item Si $f(x) < 0$, la flèche pointe vers le bas.
@@ -1524,9 +1524,9 @@ Voici comment on fait dans un cas comme celui-ci, où il y a une seule variable 
 
 Dans notre exemple:
 \begin{itemize}
-	\item Pour $x > 5$ : $f(6) = -0{,}6 < 0$, donc $f(x) < 0$, et la flèche au-dessus de $x=5$ pointe vers le bas.
-	\item Pour $0 < x < 5$: $f(1) = 0{,}4 > 0$, donc $f(x) > 0$, et la flèche dans cet intervalle pointe vers le haut.
-	\item Pour $x <0$: $f(-1) = -0{,}6 < 0$, donc $f(x) < 0$, et la flèche dans cet intervalle pointe vers le bas.
+	\item Pour $x > 5$ : $f(6) = -0.6 < 0$, donc $f(x) < 0$, et la flèche au-dessus de $x=5$ pointe vers le bas.
+	\item Pour $0 < x < 5$: $f(1) = 0.4 > 0$, donc $f(x) > 0$, et la flèche dans cet intervalle pointe vers le haut.
+	\item Pour $x <0$: $f(-1) = -0.6 < 0$, donc $f(x) < 0$, et la flèche dans cet intervalle pointe vers le bas.
 \end{itemize}
 
 \begin{center}
@@ -1534,7 +1534,7 @@ Dans notre exemple:
 \end{center}
 
 \pagebreak[0]
-Grâce à un diagramme de phase, on peut facilement tracer une approximation des solutions, car le signe de $f(x)$ nous dit le signe de la dérivée, et donc si la valeur augmente ou diminue.
+Grâce à un diagramme de phase, nous pouvons facilement tracer une approximation des solutions, car le signe de $f(x)$ nous dit le signe de la dérivée, et donc si la valeur augmente ou diminue.
 De gauche à droite (dans le sens où augmente la variable indépendante),
 le graphe de la solution monte là où la flèche pointe vers le haut et descend là où la flèche pointe vers le bas.
 
@@ -1544,7 +1544,7 @@ Vérifiez votre réponse en comparant avec les graphes plus haut.
 \end{exercise}
 
 \pagebreak[0]
-À l'aide du diagramme de phase, on peut classifier les points critiques comme stables ou instables\footnote{Parfois, on dira d'un point critique instable qu'il est \emph{semistable}\index{point critique semi-stable}, si une des deux flèches pointe vers le point critique.}.
+À l'aide du diagramme de phase, on peut classifier les points critiques comme stables ou instables\footnote{Parfois, on dira d'un point critique instable qu'il est \emph{semi-stable}\index{point critique semi-stable}, si une des deux flèches pointe vers le point critique.}.
 
 \begin{center}
 \inputpdft{2-2-ph-class}
@@ -1592,18 +1592,18 @@ les humains disparaîtraient.
  \capstart
  \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h1}
  \caption{Le champ de directions et quelques solutions pour
- $x' = 0{,}1\,x\,(8-x)-1$.\label{2.2:harv1}}
+ $x' = 0.1\,x\,(8-x)-1$.\label{2.2:harv1}}
 }
 \quad
 \parbox[t]{3.0in}{
  \capstart
  \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-hc}
  \caption{Le champ de directions et quelques solutions pour
- $x' = 0{,}1\,x\,(8-x)-1.6$.\label{2.2:harvc}}
+ $x' = 0.1\,x\,(8-x)-1.6$.\label{2.2:harvc}}
 }
 \end{myfig}
 
-Si $h = 1{,}6$, alors $A=B=4$.  Il y a un unique point critique, et il est instable.
+Si $h = 1.6$, alors $A=B=4$.  Il y a un unique point critique, et il est instable.
 Si la population initiale est au-dessus de 4 millions, elle tendra vers 4 millions.
 Mais en dessous de cette valeur, elle tendra vera l'extinction.
 Et si l'état d'équilibre est légèrement perturbé, on risque encore l'extinction. Voir la \figureref{2.2:harvc}.
@@ -1614,7 +1614,7 @@ La population tendra vers zéro, quelle que soit sa quantité initiale.  Voir la
 \begin{myfig}
 	\capstart \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h2}
 	\caption{Le champ de directions et quelques solutions pour
-	$x' = 0{,}1\,x\,(8-x)-2$.\label{2.2:harv2}}
+	$x' = 0.1\,x\,(8-x)-2$.\label{2.2:harv2}}
 \end{myfig}
 
 %$dx/dt = 0.1*x*(8-x)-1$, $t: [0,20], x: [-5,10]$,
@@ -1742,8 +1742,6 @@ b) $\frac{kM + \sqrt{{(kM)}^2 + 4Ak}}{2k}$
 }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%% JP ICI 20230227
 \sectionnewpage
 \section{Équations exactes}
 \label{exact:section}
@@ -1759,7 +1757,7 @@ appelée une \emph{\myindex{fonction potentielle}}.
 Intuitivement, on peut penser à l'énergie potentielle ou alors au potentiel électrique.
 
 Pour expliquer comment résoudre une équation exacte, on va remonter à la source du problème.
-Supposons donc qu'on a une fonction potentielle $F(x , y)$, et voyons comment émerge l'équation exacte associée.
+Supposons donc que nous avons une fonction potentielle $F(x , y)$ et voyons comment émerge l'équation exacte associée.
 
 Pour fixer les idées, considérons l'exemple suivant:
 \begin{equation*}
@@ -1815,7 +1813,7 @@ Ainsi, le champ de vecteurs $\vec{v}$ est \emph{\myindex{conservatif}},
 ce qui implique des conséquences fondamentales pour le travail en présence d'une force.
 En effet, soit $\gamma$ une trajectoire dans le plan (une courbe paramétrée) débutant au point $(x_1,y_1)$
 et finissant au point $(x_2,y_2)$.
-Si l'on pense à $\vec{v}$ comme à un champ de forces, alors le travail effectué par cette force
+Si l'on pense à $\vec{v}$ comme à un champ de force, alors le travail effectué par cette force
 le long de la trajectoire $\gamma$ est:
 \begin{equation*}
 	\int_\gamma \vec{v}(\vec{r}) \cdot d\vec{r}
@@ -1882,7 +1880,7 @@ Voyons la démarche dans un exemple.
 
 Lorsqu'on sait que l'équation différentielle est exacte, la démarche est donc:
 \begin{enumerate}[(i)]
-	\item Intégrer $F_x = M$ par rapport à $x$ por obtenir $F(x, y) = \text{quelque chose} + A(y)$.
+	\item Intégrer $F_x = M$ par rapport à $x$ pour obtenir $F(x, y) = \text{quelque chose} + A(y)$.
 	\item Dériver cette expression pour $F$ par rapport à $y$ et mettre le résultat égal à
 			$N$, afin de déterminer $A(y)$ en intégrant.
 \end{enumerate}
@@ -1949,7 +1947,7 @@ Les deux expressions ne sont pas égales, et donc l'équation différentielle n'
 		M_y = 1 = N_x .
 	\end{equation*}
 	L'équation différentielle est donc exacte, et nous procédons avec la démarche.
-	On intègre $M$ par rapport à $x$, et l'on trouve:
+	On intègre $M$ par rapport à $x$ et l'on trouve:
 	\begin{equation*}
 		F(x,y) = x^2+xy + A(y) .
 	\end{equation*}

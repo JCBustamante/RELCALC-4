@@ -411,10 +411,10 @@ Parfois, nous travaillerons avec des exemples réalistes simples afin de dévelo
 Considérons ici un exemple.  Une des équations les plus fondamentales est le \emph{\myindex{modèle de croissance exponentielle}}.
 Dénotons une population de bactéries par la variable $P$ (plus précisément, $P$ dénote la quantité de population).
 On suppose que l'environnement contient suffisamment de nutriments et d'espace.
-Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnelle à la population --
+Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnel à la population --
 une population plus nombreuse croîtra plus rapidement.
 Dénotons le temps (en secondes, disons) par la variable $t$.
-0Notre modèle est alors:
+Notre modèle est alors:
 \begin{equation*}
 	\frac{dP}{dt} = kP,
 \end{equation*}
@@ -503,7 +503,7 @@ Appelons-les nos \myindex{quatre équations fondamentales}.
 Leurs solutions sont assez simples à deviner
 en nous rappelant les propriétés des exponentielles, de sinus et de cosinus.
 Elles sont aussi plutôt simples à vérifier, ce qu'on devrait toujours faire.
-Comme ça, inutile de se demander si l'on s'est rappelé correctement de la solution.
+Comme ça, inutile de se demander si l'on s'est souvenu correctement de la solution.
 
 \medskip
 
@@ -512,7 +512,7 @@ Voici notre première équation fondamentale:
 	\frac{dy}{dx} = k y,
 \end{equation*}
 où $k > 0$ est une constante.
-Ici, $y$ est la variable dépendante et $x$, la variable indépendante.
+Ici, $y$ est la variable dépendante et $x$ la variable indépendante.
 La solution générale de cette équation est:
 \begin{equation*}
 	y(x) = C e^{kx} .
@@ -571,7 +571,7 @@ Elles s'appellent respectivement \emph{\myindex{cosinus hyperbolique}}
 et \emph{\myindex{sinus hyperbolique}}.
 Elles sont parfois plus simples à utiliser que les fonctions exponentielles.  Elles ont de jolies propriétés, telles que
 $\cosh 0 = 1$, $\sinh 0 = 0$, $\frac{d}{dx} \cosh x = \sinh x$
-(non il n'y a pas de signe moins, ce n'est pas une coquille)
+(non, il n'y a pas de signe « moins », ce n'est pas une coquille)
 et $\frac{d}{dx} \sinh x = \cosh x$.
 
 \begin{exercise}
@@ -762,16 +762,16 @@ Parlons brièvement d'une classification de base.  D'abord, la distinction entre
 
 Voici quelques exemples d'équations différentielles ordinaires:
 \begin{align*}
-	& \frac{d y}{dt} = ky  & & \text{(croissance exponentielle\index{exponential growth})} \\
-	& \frac{d y}{dt} = k(A-y)  & & \text{(\myindex{loi de refroidissement de Newton})} \\
+	& \frac{d y}{dt} = ky,  & & \text{(croissance exponentielle\index{exponential growth})} \\
+	& \frac{d y}{dt} = k(A-y),  & & \text{(\myindex{loi de refroidissement de Newton})} \\
 	& m \frac{d^2 x}{dt^2} + c \frac{dx}{dt} + kx = f(t) . & &
 \text{(vibrations mécaniques\index{mechanical vibrations})}
 \end{align*}
 Voici quelques exemples d'équations aux dérivées partielles:
 \begin{align*}
-	& \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0 & &
+	& \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0, & &
 		\text{(équation du transport\index{Équation du transport})} \\
-	& \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}  & &
+	& \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2},  & &
 		\text{(équation de la chaleur ou de la diffusion\index{Équation de la chaleur/diffusion})} \\
 	& \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} . & &
 		\text{(équation de l'onde en 2 dimensions\index{Équation de l'onde en deux dimensions})}
@@ -786,12 +786,12 @@ Par exemple:
 est un système simple d'équations différentielles ordinaires.
 Les \myindex{équations de Maxwell} en électromagnétisme forment elles aussi un système d'équations aux dérivées partielles:
 \begin{align*}
-	& \nabla \cdot \vec{D} = \rho & & \nabla \cdot \vec{B} = 0  \\
-	& \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} &
+	& \nabla \cdot \vec{D} = \rho, & & \nabla \cdot \vec{B} = 0,  \\
+	& \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}, &
 	& \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} .
 \end{align*}
 Les opérateurs de divergence $\nabla \cdot$ et de rotationnel $\nabla \times$
-s'écrivent en termes de dérivées partielles des fonctions en termes des variables $x$, $y$ et $z$ .
+s'écrivent en termes de dérivées partielles des fonctions en termes des variables $x$, $y$ et $z$.
 
 \medskip
 
@@ -843,7 +843,7 @@ Ce n'est peut-être pas évident dans le cas des équations de Maxwell;
 pour s'en convaincre, on peut écrire la divergence et le rotationnel en termes des dérivées partielles.
 
 Considérons maintenant quelques équations non linéaires.
-Par exemple, l'équation de \myindex{Burger},
+Par exemple, l'équation de \myindex{Burgers},
 \begin{equation*}
 	\frac{\partial y}{\partial t} +  \frac{\partial y}{\partial x}
 	= \nu \frac{\partial^2 y}{\partial x^2},
