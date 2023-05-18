@@ -23,18 +23,18 @@ Le terme \emph{linéaire\index{linear equation}} signifie que l'équation ne con
 
 Dans le cas particulier où $f(x) = 0$,
 \begin{equation} \label{sol:eqlinhom}
-	y'' + p(x)y' + q(x)y = 0 .
+	y'' + p(x)y' + q(x)y = 0 ,
 \end{equation}
-l'équation est dite \emph{homogène\index{homogeneous linear equation}}. 
+et l'équation est dite \emph{homogène\index{homogeneous linear equation}}. 
 On a déjà vu quelques équations linéaires homogènes du deuxième ordre.
 \begin{align*}
-	\qquad y'' + k^2 y & = 0. &
+	\qquad y'' + k^2 y & = 0 &
 	& \text{Les deux solutions sont:} & y_1 &= \cos (kx), & y_2 &= \sin(kx) . \\
-	\qquad y'' - k^2 y & = 0. &
+	\qquad y'' - k^2 y & = 0 &
 	& \text{Les deux solutions sont:} &y_1 &= e^{kx}, & y_2 &= e^{-kx} . 
 \end{align*}
 
-Si l'on connaît deux solutions de l'équation linéaire homogène, on connait beaucoup plus que celles-ci.
+Si l'on connaît deux solutions de l'équation linéaire homogène, on connaît beaucoup plus que celles-ci.
 
 \begin{theorem}[Superposition]\index{superposition}
 	Supposons que $y_1$ et $y_2$ sont deux solutions de l'équation homogène~\eqref{sol:eqlinhom}.  
@@ -133,7 +133,7 @@ Avec les conditions initiales données, le recours aux fonctions $\cosh(x)$ et $
 
 Les conditions initiales pour une équation différentielle ordinaire comprennent deux équations. Le bon sens suggère que si l'on a deux constantes arbitraires et deux équations, alors on devrait être capable de résoudre l'équation pour les constantes et de trouver une solution à l'équation différentielle satisfaisant aux conditions initiales. 
 
-\emph{Question:} Supposons qu'on a trouvé deux solutions distinctes $y_1$ et $y_2$ à l'équation homogène~\eqref{sol:eqlinhom}.  Est-ce que toutes les solutions peuvent s'écrire sous la forme suivante:
+\emph{Question:} Supposons que nous avons trouvé deux solutions distinctes $y_1$ et $y_2$ à l'équation homogène~\eqref{sol:eqlinhom}.  Est-ce que toutes les solutions peuvent s'écrire sous la forme suivante:
 \begin{equation*}
 	y = C_1 y_1 + C_2 y_2\,?
 \end{equation*}
@@ -172,7 +172,7 @@ Alors, $y = C_1 x^2 + C_2 \nicefrac{1}{x}$ est la solution générale à l'équa
 \medskip
 
 Si l'on a une solution à une équation linéaire homogène du deuxième ordre, on peut en trouver une autre à l'aide de la méthode de  \emph{\myindex{réduction d'ordre}}.  
-L'idée est qu'étant donné une solution $y_1$ à l'équation
+L'idée est que, étant donné une solution $y_1$ à l'équation
 $y'' + p(x) y' + q(x) y = 0$, on essaie une deuxième solution de la forme $y_2(x) = y_1(x) v(x)$.
 On a seulement besoin de trouver $v$.  On met $y_2$ dans l'équation:
 \begin{align*}
@@ -200,7 +200,7 @@ Ainsi:
 	y_2 = y_1 v = \frac{-C}{\phantom-2x}.
 \end{equation*}
 %
-Tous les $C$ fonctionnent, et, en choisissant $C=-2$, 
+Tous les $C$ fonctionnent et en choisissant $C=-2$, 
 on obtient $y_2 = \nicefrac{1}{x}$.  Ainsi, la solution générale est:
 \begin{equation*}
 	y = C_1 x + C_2\nicefrac{1}{x}.
@@ -518,7 +518,7 @@ Par contre, il est important de savoir que  $(0,1) \times (0, 1) = (-1, 0)$, aut
 \begin{equation*}
 	i^2=-1.
 \end{equation*}
-Généralement, on écrit  $(a, b)$ tel que $a+ib$, et l'on traite $i$ comme une variable.  
+Généralement, on écrit  $(a, b)$ tel que $a+ib$ et l'on traite $i$ comme une variable.  
 Quand $b$ est égal à zéro, alors $(a,0)$ est simplement le nombre $a$.
 On fait de l'arithmétique avec les nombres complexes simplement comme si c'était des polynômes. 
 Lorsqu'on a $i^2$, on peut simplement le remplacer par  $-1$.
@@ -651,7 +651,7 @@ Les valeurs sont réelles lorsque $x$ est réel. Ce n'est pas difficile de voir 
 	Trouvons la solution générale de $y'' + k^2 y = 0$, pour une constante  $k > 0$.
 	
 	L'équation caractéristique est  $r^2 + k^2 = 0$.  
-	Donc, les racines sont $r = \pm ik$, et, par le théorème, on a la solution générale  suivante:
+	Donc, les racines sont $r = \pm ik$ et par le théorème, on a la solution générale  suivante:
 	\begin{equation*}
 		y = C_1 \cos (kx) + C_2 \sin (kx) .
 	\end{equation*}
@@ -901,7 +901,7 @@ Si les fonctions ne sont pas linéairement indépendantes, elles sont  \emph{\my
 	\end{equation*}
 	On peut évaluer l'équation et ses dérivées, avec une valeur de $x$ judicieusement choisie, pour obtenir trois équations pour 
 	$c_1$, $c_2$ et $c_3$.
-	D'abord, divisons par $e^{x}$ pour simplifier.
+	D'abord, divisons par $e^{x}$ pour simplifier :
 	\begin{equation*}
 		c_1 + c_2 e^{x} + c_3 e^{2x} = 0.
 	\end{equation*}
@@ -953,7 +953,7 @@ L'exemple suivant le montre bien.
 	Un bon point de départ est de tracer le graphe du polynôme et de vérifier où il est nul.
 	On pourrait aussi simplement le remplacer par des nombres. 
 	On commence par remplacer par les nombres  $r=-2, -1, 0, 1, 2, \ldots$, et l'on regarde si l'on obtient zéro. 
-	Par exemple, si on remplace par $r=-2$ dans le polynôme, on obtient $-15$; si l'on remplace $r=0$, on obtient 3.
+	Par exemple, si l'on remplace par $r=-2$ dans le polynôme, on obtient $-15$; si l'on remplace $r=0$, on obtient 3.
 	Ceci signifie qu'il y a une racine entre $r=-2$ et $r=0$,
 	parce que le signe a changé.
 	Si l'on trouve une racine, $r_1$, alors on sait que $(r-r_1)$ est un facteur du polynôme. La division polynomiale peut alors être utilisée. 
@@ -1011,7 +1011,7 @@ On prend une combinaison linéaire de ces solutions et l'on trouve la solution g
 	\begin{equation*}
 		r^4 - 3r^3 + 3r^2 -r = 0 .
 	\end{equation*}
-	Par un examen attentif on note que  $r^4 - 3r^3 + 3r^2 -r = r{(r-1)}^3$.  
+	Par un examen attentif, on note que  $r^4 - 3r^3 + 3r^2 -r = r{(r-1)}^3$.  
 	Ainsi, les racines données avec la 
 	\myindex{multiplicité} sont $r = 0, 1, 1, 1$.  
 	Alors, la solution générale est: 
@@ -1203,7 +1203,7 @@ Soit $x$ le déplacement de la masse  ($x=0$ est la position au repos), avec
 $x$ s'éloignant du mur.  
 Par la \myindex{loi de Hooke}, la force exercée sur le ressort est proportionnelle à la compression du ressort.
 Également, il y a  la force exercée par la friction $kx$, dans la direction négative, qui est proportionnelle à la vitesse de la masse.
-Par la \myindex{deuxième loi de Newton}, nous savons que la force est égale au produit de la masse et de l'accélération, et, par conséquent, $mx'' = F(t)-cx'-kx$ ou
+Par la \myindex{deuxième loi de Newton}, nous savons que la force est égale au produit de la masse et de l'accélération et que, par conséquent, $mx'' = F(t)-cx'-kx$ ou
 \begin{equation*}
 mx'' + cx' + kx = F(t) .
 \end{equation*}
@@ -1211,8 +1211,8 @@ Il s'agit d'une équation linéaire du deuxième ordre à coefficients constants
 %
 \begin{enumerate}[(i)]
 \item  est \emph{forcé\index{forced motion}}, si $F \not\equiv 0$ (si $F$ est différent de zéro),
-\item n'est pas \emph{ forcé \index{unforced motion}} ou \emph{libre\index{free
-motion}}, si $F \equiv 0$ (si $F$ est nul),
+\item n'est \emph{pas forcé\index{unforced motion}} (ou \emph{libre\index{free
+motion}}), si $F \equiv 0$ (si $F$ est nul),
 \item est \emph{amorti\index{damped motion}}, si $c > 0$, et
 \item n'est pas \emph{amorti\index{undamped motion}}, si $c = 0$.
 \end{enumerate}
@@ -1268,7 +1268,7 @@ $-0.5 < \theta < 0.5$ (en radians), les graphes de  $\sin \theta$ et de $\theta$
 \caption{Graphes de  $\sin \theta$ et de $\theta$ (en radians).\label{mv:sinthetafig}}
 \end{mywrapfig}
 
-Donc, quand le balancement est petit,  $\theta$ est petit, et nous pouvons modéliser le comportement par une équation linéaire simple.  
+Donc, quand le balancement est petit,  $\theta$ est petit, et nous pouvons modéliser le comportement par une équation linéaire simple :
 \begin{equation*}
 	\theta'' + \frac{g}{L} \theta = 0 .
 \end{equation*}
@@ -1304,14 +1304,14 @@ Par une identité trigonométrique :
 pour deux constantes différentes $C$ et $\gamma$.
 Il n'est pas difficile de calculer 
 $C= \sqrt{A^2 + B^2}$ et $\tan \gamma = \nicefrac{B}{A}$.  
-Ainsi, soit $C$ et $\gamma$ deux constantes arbitraires et écrivons 
+Ainsi, soit $C$ et $\gamma$ deux constantes arbitraires, et écrivons 
 $x(t) = C \cos ( \omega_0 t - \gamma )$.
 
 \begin{exercise}
 Justifiez l'identité  
 	$A \cos (\omega_0 t) + B \sin (\omega_0 t) = C \cos ( \omega_0 t - \gamma )$ 
 	et vérifiez l'équation pour $C$ et $\gamma$.  
-	Astuce: Commencez avec  
+	Astuce: commencez avec  
 	$\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)$ 
 	et multipliez par $C$.  Alors, que devraient être $\alpha$ et $\beta$?
 \end{exercise}
@@ -1338,7 +1338,7 @@ Les unités de $\omega_0$ sont des radians par unité de temps, ce ne sont pas d
 Il s'agit simplement de savoir où nous plaçons la constante $2\pi$, 
 et c'est une question de goût.
 
-La \emph{\myindex{période}} du mouvement est l'inverse de la fréquence  (en cycles par unité de temps, et alors i$\frac{2\pi}{\omega_0}$.  C'est le temps qu'il faut pour terminer un cycle complet.
+La \emph{\myindex{période}} du mouvement est l'inverse de la fréquence  (en cycles par unité de temps), et alors i$\frac{2\pi}{\omega_0}$. C'est le temps qu'il faut pour terminer un cycle complet.
 
 
 \begin{example}
@@ -1427,7 +1427,7 @@ En utilisant la formule quadratique, nous obtenons les racines
 \begin{equation*}
 	r = -p \pm \sqrt{p^2 - \omega_0^2} .
 \end{equation*}
-La forme de la solution dépend du type de racine que l'on obtient (réelles ou complexes). 
+La forme de la solution dépend du type de racines que l'on obtient (réelles ou complexes). 
 On obtient des racines réelles si et seulement si le nombre suivant n'est pas négatif (donc plus grand ou égal à zéro): 
 \begin{equation*}
 	p^2 - \omega_0^2 = {\left( \frac{c}{2m} \right)}^2 - \frac{k}{m}
@@ -1475,7 +1475,7 @@ le graphe de quelques solutions, avec des conditions initiales différentes.
 Il n'y a aucune oscillation. En effet, le graphe croise l'axe des 
 $x$ au plus une fois.  Pour comprendre pourquoi, résolvons 
 $0 = C_1 e^{r_1 t} + C_2 e^{r_2 t}$.
-Donc, $C_1 e^{r_1 t} = - C_2 e^{r_2 t}$, et, en utilisant les lois des exposants, on obtient  
+Donc, $C_1 e^{r_1 t} = - C_2 e^{r_2 t}$ et, en utilisant les lois des exposants, on obtient  
 \begin{equation*}
 	\frac{-C_1}{C_2} = e^{(r_2-r_1) t} .
 \end{equation*}
@@ -1520,7 +1520,7 @@ On ne s'attardera donc pas sur l'amortissement critique.
 % make sure the MBX below is synced!
 %
 Lorsque $c^2 - 4km < 0$, le système est \emph{\myindex{sous-amorti}}. 
-Dans ce cas, les racines sont complexes. 
+Dans ce cas, les racines sont complexes : 
 \begin{align*}
 	r & = -p \pm \sqrt{p^2 - \omega_0^2} \\
 	  & = -p \pm \sqrt{-1}\sqrt{\omega_0^2 - p^2} \\
@@ -1782,7 +1782,7 @@ La solution particulière voulue est donc:
 	et satisfait aux conditions initiales données.  
 \end{exercise}
 
-Note: Une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec  $y_c$ et de seulement ajouter la solution particulière $y_p$ par la suite.
+Note: une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec  $y_c$ et de seulement ajouter la solution particulière $y_p$ par la suite.
  \emph{Ça ne fonctionnera pas}.  Vous devez d'abord calculer $y = y_c + y_p$ et
 \emph{seulement ensuite} résoudre pour les constantes en utilisant les conditions initiales. 
 
@@ -1825,7 +1825,7 @@ on essaie $y = A e^{3x}$ et l'on tente de résoudre pour $A$.
 
 \medskip
 
-Lorsque le membre de droite est un multiple d'un sinus, d'un cosinus, d'une exponentielle ou d'un polynôme, on peut utiliser la règle du produit pour dériver et arriver à une expression à essayer. On a besoin de deviner une forme pour $y_p$ telle que $Ly_p$ est de la même forme, et a tous les termes nécessaires pour le membre de droite. Par exemple: 
+Lorsque le membre de droite est un multiple d'un sinus, d'un cosinus, d'une exponentielle ou d'un polynôme, on peut utiliser la règle du produit pour dériver et arriver à une expression à essayer. On a besoin de deviner une forme pour $y_p$ telle que $Ly_p$ est de la même forme et a tous les termes nécessaires pour le membre de droite. Par exemple: 
 \begin{equation*}
 	Ly = (1+3x^2)\,e^{-x}\cos (\pi x) .
 \end{equation*}
@@ -1906,8 +1906,7 @@ Toutes les nouvelles dérivées de $\tan x$ sont complètement différentes et n
 	2 \sec^2 x \, \tan x, \quad
 	4 \sec^2 x \, \tan^2 x + 2 \sec^4 x, \\
 	8 \sec^2 x \, \tan^3 x + 16 \sec^4 x \, \tan x, \quad
-	16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x \quad
-	\ldots
+	16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x \ldots
 \end{multline*}
 
 Cette équation fait appel à une méthode différente: la méthode de la
@@ -1951,7 +1950,7 @@ Alors:
 \end{equation*}
 On a $(u_1 y_1 + u_2 y_2) = y$, et alors
 \begin{equation*}
-	y'' = (u_1' y_1' + u_2' y_2') - y 
+	y'' = (u_1' y_1' + u_2' y_2') - y ,
 \end{equation*}
 et ainsi 
 \begin{equation*}
