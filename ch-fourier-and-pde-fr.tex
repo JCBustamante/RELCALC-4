@@ -21,7 +21,7 @@ On regarde la \subsectionref{subsection:fourfundamental}, ou l'\exampleref {exam
 C'est naturel (mais faux) de croire qu'exiger deux solutions garantit l'unicité. 
 
 \begin{example}
-On prend $\lambda = 1$,
+Prenons $\lambda = 1$,
 $a=0$, $b=\pi$.  Ceci donne: 
 \begin{equation*}
 x'' + x = 0, \quad x(0) = 0, \quad x(\pi) = 0.
@@ -63,8 +63,8 @@ et
 \begin{equation} \label{bv:eq3}
 x'' + \lambda x = 0, \quad x(a) = x(b), \quad x'(a) = x'(b) .
 \end{equation}
-Un nombre $\lambda$ est appelé une
-\emph{valeur propre \index{eigenvalue of a boundary value problem}}
+Un nombre $\lambda$ est appelé une 
+\emph{valeur propre\index{eigenvalue of a boundary value problem}}
 de \eqref{bv:eq1}
 (resp.\ \eqref{bv:eq2} ou \eqref{bv:eq3}) si et seulement si il existe une solution non nulle (non identiquement nulle) à \eqref{bv:eq1}
 (resp.\ \eqref{bv:eq2} ou \eqref{bv:eq3})
@@ -154,14 +154,14 @@ Donc, les valeurs propres positives sont encore
 $k^2$ pour tous les entiers $k \geq 1$, et les fonctions propres correspondantes peuvent être prises comme  $x=\cos (k t)$.
 
 Maintenant, on suppose que  $\lambda = 0$.  Dans ce cas, l'équation est $x'' = 0$,
-et la solution générale est $x = At + B$ so $x' = A$.  La condition 
+et la solution générale est $x = At + B$, donc $x' = A$.  La condition 
 $x'(0) = 0$ implique que 
 $A=0$.  La condition $x'(\pi) = 0$ implique aussi que  $A=0$.
 Ainsi, $B$ pourrait être n'importe quoi (choisissons 1). Alors, $\lambda = 0$
 est une valeur propre, et $x=1$ est la fonction propre correspondante. 
 
 Finalement, soit $\lambda < 0$.  Dans ce cas, la solution générale est 
-$x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t)$
+$x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t)$,
 et
 \begin{equation*}
 x' = A\sqrt{-\lambda}\, \sinh ( \sqrt{-\lambda}\, t)
@@ -176,7 +176,7 @@ En somme, les valeurs propres positives et leurs fonctions propres correspondant
 \end{equation*}
 et, de plus, il y a une autre valeur propre: 
 \begin{equation*}
-\lambda_0 = 0 \qquad \text{avec une fonction propre} \qquad x_0 = 1.
+\lambda_0 = 0 \qquad \text{avec fonction propre} \qquad x_0 = 1.
 \end{equation*}
 \end{example}
 
@@ -371,7 +371,7 @@ On arrive maintenant à un théorème très utile des équations différentielle
 
 \begin{theorem}[Alternative de Fredholm\footnote{%
 Nommée d'après le mathématicien suédois
-\href{https://en.wikipedia.org/wiki/Fredholm}{Erik Ivar Fredholm}
+\href{https://fr.wikipedia.org/wiki/Ivar_Fredholm}{Erik Ivar Fredholm}
 (1866-1927).}]\index{Fredholm alternative!simple case}
 \label{thm:fredholmsimple}
 Exactement l'une des affirmations suivantes est vraie.
@@ -389,12 +389,12 @@ a une solution unique pour toutes les fonctions $f$ continues sur $[a,b]$.
 Le théorème est également vrai pour les autres types de
 conditions au bord que nous avons considérées.
 Le théorème veut dire que si  $\lambda$ n'est pas une valeur propre, l'équation non homogène  \eqref{simpfrednonhomeq} a une solution unique pour tous les côtés droits. Autrement dit, si $\lambda$ est une valeur propre, alors  
-\eqref{simpfrednonhomeq} n'a pas besoin d'avoir une solution pour tous les $f$,
+\eqref{simpfrednonhomeq} n'a pas besoin d'avoir une solution pour tous les $f$
 et, en plus, même s'il y a une solution, la solution n'est pas unique.
 
 Nous voulons également renforcer l'idée que les opérateurs différentiels linéaires ont beaucoup en commun avec les matrices. Il n'est donc pas surprenant qu'il existe une version de dimension finie de l'alternative de Fredholm pour les matrices  également.  On a $A$ une matrice $n \times n$. L'alternative de Fredholm dit que $(A-\lambda I) \vec{x} = \vec{0}$ a une solution non triviale, ou que $(A-\lambda I) \vec{x} = \vec{b}$ a une solution unique pour tout $\vec{b}$.
 
-Beaucoup d'intuition de l'algèbre linéaire peut être appliquée aux opérateurs différentiels linéaires, mais il faut bien sûr être prudent. Par exemple, une différence que nous avons déjà vue est qu'en général un opérateur différentiel
+Beaucoup d'intuition de l'algèbre linéaire peut être appliquée aux opérateurs différentiels linéaires, mais il faut bien sûr faire preuve de prudence. Par exemple, une différence que nous avons déjà vue est que, en général, un opérateur différentiel
 aura une infinité de valeurs propres, tandis qu'une matrice n'en a qu'un nombre fini.
 
 
@@ -440,11 +440,11 @@ $\sqrt{\lambda} \, L = k \pi$  pour un certain entier $k > 0$, alors
 \end{equation*}
 
 Qu'est-ce que cela dit sur la forme de la corde? Cela dit que, pour tous les paramètres $\rho$, $\omega$, $T$ qui ne satisfont pas à cette condition, la corde demeure dans sa position d'équilibre, $y=0$.  Mais lorsque 
-$\frac{\rho \omega^2}{T} = \frac{k^2 \pi^2}{L^2}$, alors la corde \myquote{sortira} d'une distance $B$. On ne peut pas calculer $B$ avec les informations que l'on a. 
+$\frac{\rho \omega^2}{T} = \frac{k^2 \pi^2}{L^2}$, alors la corde « sortira » d'une distance $B$. On ne peut pas calculer $B$ avec les informations que l'on a. 
 
 On suppose que  $\rho$ et $T$ sont fixes et l'on fait varier $\omega$.
 Pour la plupart des valeurs de $\omega$, la corde est à l'état d'équilibre. Lorsque la vitesse angulaire  $\omega$ atteint une valeur $\omega = \frac{k \pi \sqrt{T}}{L\sqrt{\rho}}$, alors la corde sort et a la forme d'une vague sinusoïdale croisant l'axe des 
-$x$ $k-1$ fois entre les extrémités. Par exemple, à $k=1$, la corde ne croise pas l'axe des $x$, et la forme ressemble à la \figurevref{bvp:whirstringfig} plus haut.
+$x$ $k-1$ fois entre les extrémités. Par exemple, à $k=1$, la corde ne croise pas l'axe des $x$, et la forme ressemble à la \figurevref{bvp:whirstringfig} plus haut.  % TODO reference anglaise 
 D'un autre côté, lorsque  $k=3$, la corde croise l'axe des $x$ deux fois. On le voit dans la  \figurevref{bvp:whirstring2fig}.
 Lorsque $\omega$ change encore, la corde retourne à sa position d'équilibre. Plus la vitesse angulaire est élevée, plus la corde croisera l'axe des  $x$ lorsqu'elle sortira.
 
@@ -454,7 +454,7 @@ Lorsque $\omega$ change encore, la corde retourne à sa position d'équilibre. P
 \caption{Corde tournante à la troisième valeur propre ($k=3$).\label{bvp:whirstring2fig}}
 \end{myfig}
 
-Pour un autre exemple, si l'on a une corde à sauter qui tourne (alors $k=1$ lorsqu'elle sort \myquote{complètement}) et que l'on tire sur les extrémités pour augmenter la tension, alors la vitesse augmente pour que la corde reste \myquote{sortie}.
+Pour un autre exemple, si l'on a une corde à sauter qui tourne (alors $k=1$ lorsqu'elle sort « complètement ») et que l'on tire sur les extrémités pour augmenter la tension, alors la vitesse augmente pour que la corde reste « sortie ».
  
 
 \subsection{Exercices}
@@ -830,7 +830,7 @@ On a utilisé ici le fait suivant :
 \begin{equation*}
 \cos (n\pi) = {(-1)}^n =
 \begin{cases}
-1 & \text{si } n \text{ est pair} , \\
+1 & \text{si } n \text{ est pair} \\
 -1 & \text{si } n \text{ est impair} .
 \end{cases}
 \end{equation*}
@@ -854,7 +854,7 @@ Le graphe des trois premiers termes de la série et celui des vingt premiers se 
 \capstart
 %original files ts-sawtooth-fs3 ts-sawtooth-fs20
 \diffyincludegraphics{width=6.24in}{width=9in}{ts-sawtooth-fs3-fs20}
-\caption{Trois premières harmoniques (à gauche) et vingt premières (à droite) d'une fonction en dents de scie.\label{ts:sawtoothfsfig}}
+\caption{Trois premières harmoniques (à gauche) et vingt premières harmoniques (à droite) d'une fonction en dents de scie.\label{ts:sawtoothfsfig}}
 \end{myfig}
 \end{example}
 
@@ -863,7 +863,7 @@ Prenons la fonction
 \begin{equation*}
 f(t) =
 \begin{cases}
-0 & \text{si } \;{-\pi} < t \leq 0 , \\
+0 & \text{si } \;{-\pi} < t \leq 0 \\
 \pi & \text{si } \;\phantom{-}0 < t \leq \pi .
 \end{cases}
 \end{equation*}
@@ -897,7 +897,7 @@ b_n & = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \,dt \\
 = \frac{1 - {(-1)}^n}{n}
 =
 \begin{cases}
-\frac{2}{n} & \text{si } n \text{ est impair} , \\
+\frac{2}{n} & \text{si } n \text{ est impair} \\
 0 & \text{si } n \text{ est pair} .
 \end{cases}
 \end{split}
@@ -939,7 +939,7 @@ f(t) =
 \frac{2}{2k-1} 
 \sin \bigl( (2k-1)\, t \bigr) 
 \end{equation*}
-tient seulement pour les valeurs de $t$ où $f(t)$ est continue. On n'obtient pas l'égalité pour $t=-\pi,0,\pi$ et pour toutes les autres discontinuités de $f(t)$. Ce n'est pas difficile de voir que lorsque $t$ est un entier muliple de 
+tient seulement pour les valeurs de $t$ où $f(t)$ est continue. On n'obtient pas l'égalité pour $t=-\pi,0,\pi$ et pour toutes les autres discontinuités de $f(t)$. Ce n'est pas difficile de voir que lorsque $t$ est un entier multiple de 
 $\pi$ (ce qui inclut la discontinuité), alors
 \begin{equation*}
 \frac{\pi}{2} + \sum_{k=1}^\infty
@@ -950,14 +950,14 @@ Redéfinissons $f(t)$ sur $[-\pi,\pi]$ comme suit,
 \begin{equation*}
 f(t) =
 \begin{cases}
-0 & \text{si } \; {-\pi} < t < 0 , \\
-\pi & \text{si } \; \phantom{-}0 < t < \pi , \\
+0 & \text{si } \; {-\pi} < t < 0 \\
+\pi & \text{si } \; \phantom{-}0 < t < \pi \\
 \nicefrac{\pi}{2} & \text{si } \; \phantom{-}t = -\pi, 
 t = 0\text{ ou }
 t = \pi,
 \end{cases}
 \end{equation*}
-et prolongeons périodiquement.  Maintenant, la série est égale au prolongement de $f(t)$ partout, y compris aux points de discontinuité. Généralement, on ne s'en fera pas avec le changement de valeur des fonctions à certains points (en nombre fini). 
+et prolongeons périodiquement.  Maintenant, la série est égale au prolongement de $f(t)$ partout, y compris aux points de discontinuité. Généralement, on ne s'en fera pas avec le changement de valeurs des fonctions à certains points (en nombre fini). 
 
 On discutera davantage de la convergence dans la prochaine section. Cependant, mentionnons brièvement un effet de la discontinuité ici. On zoome dans le voisinage de la discontinuité d'une vague carrée. Ensuite, on trace le graphe des 100 premières harmoniques, comme à 
 la~\figureref{ts:squarewavegibbsfig}.  Tandis que la
@@ -971,7 +971,7 @@ La région où l'erreur est large ne diminue pas, même lorsqu'on prend plus de 
 \caption{Phénomène de Gibbs en action.\label{ts:squarewavegibbsfig}}
 \end{myfig}
 
-On peut penser à une fonction périodique comme à un \myquote{signal} obtenu par la superposition de plusieurs signaux de fréquence pure. Par exemple, on peut penser à la vague carrée comme un à ton d'une certaine fréquence de base. Cette fréquence est nommée la 
+On peut penser à une fonction périodique comme à un « signal » obtenu par la superposition de plusieurs signaux de fréquence pure. Par exemple, on peut penser à la vague carrée comme un à ton d'une certaine fréquence de base. Cette fréquence est nommée la 
 \emph{\myindex{fréquence fondamentale}}.
 La vague carrée sera la superposition de plusieurs tons purs de fréquences qui sont des multiples de la fréquence fondamentale. En musique, les plus hautes fréquences s'appellent les \emph{\myindex{harmoniques}}.
 L'ensemble des fréquences apparaissant s'appelle le 
@@ -1125,7 +1125,7 @@ g(s) =
 \sum_{n=1}^\infty a_n \cos (n s)
 + b_n \sin (n s) .
 \end{equation*}
-On calcule $a_n$ et $b_n$ comme avant.  Ensuite, on écrit les intégrales en changeant les variables de $s$ à $t$ tel que $ds = \frac{\pi}{L} \, dt$.
+On calcule $a_n$ et $b_n$ comme précédemment.  Ensuite, on écrit les intégrales en changeant les variables de $s$ à $t$ tel que $ds = \frac{\pi}{L} \, dt$.
 \begin{equation*}
 \mybxbg{~~
 \begin{aligned}
@@ -1157,7 +1157,7 @@ f(t) \, \sin \left( \frac{n \pi}{L} t \right) \, dt .
 ~~}
 \end{equation*}
 
-Les demi-périodes de $\pi$ ou 1 sont les plus communes parce qu'elles ont une formule simple. On remarque qu'on n'a pas fait de nouvelles mathématiques, on change simplement les variables. Si l'on comprend les séries de Fourier pour les fonctions  $2\pi$-périodiques, on comprend les unités différentes dans le temps. Tout ce qu'on fait, c'est bouger quelques constantes, mais toutes les mathématiques sont pareilles.
+Les demi-périodes de $\pi$ ou 1 sont les plus communes parce qu'elles ont une formule simple. On remarque qu'on n'a pas fait de nouvelles mathématiques; on change simplement les variables. Si l'on comprend les séries de Fourier pour les fonctions  $2\pi$-périodiques, on comprend les unités différentes dans le temps. Tout ce qu'on fait, c'est bouger quelques constantes, mais toutes les mathématiques sont pareilles.
 
 \begin{example}
 Soit
@@ -1188,7 +1188,7 @@ a_n & = \int_{-1}^1 f(t) \cos (n \pi t) \, dt \\
  =  \frac{2 \bigl( {(-1)}^n -1 \bigr) }{n^2 \pi^2}
 =
 \begin{cases}
-0 & \text{si } n \text{ est pair} , \\
+0 & \text{si } n \text{ est pair} \\
 \frac{-4 }{n^2 \pi^2} & \text{si } n \text{ est impair}  .
 \end{cases}
 \end{split}
@@ -1199,7 +1199,7 @@ a_0 = \int_{-1}^1 \lvert t \rvert \, dt
 =
 1 .
 \end{equation*}
-On devrait être en mesure de trouver cette intégrale en pensant à l'intégrale comme à l'aire sous la courbe du graphe sans pour autant faire les calculs. Finalement, on trouve $b_n$.  Ici, on remarque que
+On devrait être en mesure de trouver cette intégrale en pensant à l'intégrale comme à l'aire sous la courbe du graphe, sans pour autant faire les calculs. Finalement, on trouve $b_n$.  Ici, on remarque que
 $\lvert t \rvert \sin (n \pi t)$ est impaire, et par conséquent: 
 \begin{equation*}
 b_n = \int_{-1}^1 f(t) \sin (n \pi t) \, dt = 0 .
@@ -1219,7 +1219,7 @@ Ainsi, la série est
 - \cdots
 \end{equation*}
 Voir la \figureref{gfs:sawcontfsfig}.  On devrait remarquer à quel point le graphe est proche de la vraie fonction. On devrait aussi remarquer qu'il n'y a pas de 
-\myquote{phénomène de Gibbs} puisqu'il n'y a pas de discontinuité.
+« phénomène de Gibbs » puisqu'il n'y a pas de discontinuité.
 
 \begin{myfig}
 \capstart
@@ -1234,24 +1234,24 @@ et jusqu'à la vingtième harmonique (à droite).\label{gfs:sawcontfsfig}}
 
 On aura besoin de la limite d'un côté de la fonction. On utilisera la notation suivante :
 \begin{equation*}
-f(c-) = \lim_{t \uparrow c} f(t),
+f(c-) = \lim_{t \uparrow c} f(t)
 \qquad \text{et} \qquad
 f(c+) = \lim_{t \downarrow c} f(t).
 \end{equation*}
 Si l'on a pas l'habitude de cette notation, 
 $\lim_{t \uparrow c} f(t)$ signifie qu'on prend la limite de $f(t)$
-lorsque $t$ tend vers $c$ par le bas (c'est-à-dire $t < c$) et
+lorsque $t$ tend vers $c$ par le bas (c'est-à-dire $t < c$), et
 $\lim_{t \downarrow c} f(t)$ signifie qu'on prend la limite de $f(t)$
 lorsque $t$ tend vers $c$ par le haut (c'est-à-dire $t > c$).
 Par exemple, pour la vague carrée, 
 \begin{equation} \label{gfs:sqwaveeq}
 f(t) =
 \begin{cases}
-0 & \text{si } \; {-\pi} < t \leq 0 , \\
-\pi & \text{si } \; \phantom{-}0 < t \leq \pi ,
+0 & \text{si } \; {-\pi} < t \leq 0 \\
+\pi & \text{si } \; \phantom{-}0 < t \leq \pi,
 \end{cases}
 \end{equation}
-sur $f(0-) = 0$ et $f(0+) = \pi$.
+on a $f(0-) = 0$ et $f(0+) = \pi$.
 
 Soit $f(t)$ une fonction définie sur l'intervalle $[a,b]$. On suppose trouver un nombre de points fini
 $a=t_0$, $t_1$, $t_2$, \ldots, $t_k=b$ dans l'intervalle, tel que  $f(t)$ est continue sur les intervalles
@@ -1269,16 +1269,16 @@ $f(t_k-)$
 existent et sont finis.
 Ensuite, on dit que $f(t)$ est \emph{\myindex{continue par morceaux}}.
 
-De plus, si $f(t)$ est différentiable partout sauf sur un nombre de points finis et que $f'(t)$ est continue par morceaux, alors
+De plus, si $f(t)$ est différentiable partout sauf sur un nombre de points fini et que $f'(t)$ est continue par morceaux, alors
 $f(t)$ est \emph{\myindex{lisse par morceaux}}.
 
 \begin{example}
 La vague carrée \eqref{gfs:sqwaveeq}
-est lisse par morceaux sur  $[-\pi,\pi]$ ou tout autre intervalle. Dans un tel cas, on dit simplement que la fonction est lisse par morceaux.  
+est lisse par morceaux sur  $[-\pi,\pi]$ et sur tout autre intervalle. Dans un tel cas, on dit simplement que la fonction est lisse par morceaux.  
 \end{example}
 
 \begin{example}
-La fonction $f(t) = \lvert t \lvert$
+La fonction $f(t) = \lvert t \rvert$
 est lisse par morceaux.
 \end{example}
 
@@ -1318,7 +1318,7 @@ Autrement,
 S'il arrive qu'on ait
 $f(t) = \frac{f(t-)+f(t+)}{2}$ à toutes les discontinuités, la série de Fourier converge à  $f(t)$ partout. On peut toujours simplement redéfinir $f(t)$ en changeant la valeur à chaque discontinuité de manière appropriée. Alors, on peut écrire un  signe d'égalité entre $f(t)$ et la série sans avoir peur. On a mentionné  brièvement ce fait à la fin de la section précédente. 
 
-Le théorème ne dit pas la vitesse à laquelle la série converge. Retournons en arrière à la dernière section, à la discussion sur le phénomène de Gibbs : plus on se rapproche de la discontinuité, plus on a besoin de termes pour obtenir une approximation acceptable de la fonction.
+Le théorème ne dit pas la vitesse à laquelle la série converge. Retournons en arrière à la dernière section, à la discussion sur le phénomène de Gibbs : plus nous nous rapprochons de la discontinuité, plus nous avons besoin de termes pour obtenir une approximation acceptable de la fonction.
 
 \subsection{Dérivation et intégration de séries de Fourier}
 
@@ -1333,7 +1333,7 @@ f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t
 + b_n \sin \left( \frac{n \pi}{L} t \right)
 \end{equation*}
 est une fonction continue lisse par morceaux et que la dérivée $f'(t)$ est  lisse
-par morceaux. Alors, la dérivée peut être obtenue en différentiant terme par terme.
+par morceaux. Alors, la dérivée peut être obtenue en différentiant terme par terme :
 
 \begin{equation*}
 f'(t) = \sum_{n=1}^\infty \frac{-a_n n \pi}{L} 
@@ -1362,7 +1362,7 @@ F(t) = \frac{a_0 t}{2} + C + \sum_{n=1}^\infty
 où $F'(t) = f(t)$ et $C$ est une constante arbitraire. 
 \end{theorem}
 
-On note que la série pour $F(t)$ n'est plus une série de Fourier, car elle contient le terme $\frac{a_0 t}{2}$. La primitive d'une fonction périodique n'a plus besoin d'être périodique, et on ne devrait pas s'attendre à une série de Fourier.
+On note que la série pour $F(t)$ n'est plus une série de Fourier, car elle contient le terme $\frac{a_0 t}{2}$. La primitive d'une fonction périodique n'a plus besoin d'être périodique, et l'on ne devrait pas s'attendre à une série de Fourier.
 
 \subsection{Taux de convergence et différentiabilité}
 
@@ -1373,7 +1373,7 @@ Prenons la fonction
 \begin{equation*}
 f(t) =
 \begin{cases}
-(t+1)\,t & \text{si } \; {-1} < t \leq 0 , \\
+(t+1)\,t & \text{si } \; {-1} < t \leq 0 \\
 (1-t)\,t & \text{si } \; \phantom{-}0 < t \leq 1
 \end{cases}
 \end{equation*}
@@ -1402,7 +1402,7 @@ f(t) \, dt =
 \int_{-1}^0
 (t+1)\,t \, dt +
 \int_0^1
-(1-t)\,t \, dt = 0 , \\
+(1-t)\,t \, dt = 0 \\
 a_n & = 
 \int_{-1}^1
 f(t) \, \cos (n\pi t) \, dt = 
@@ -1411,7 +1411,7 @@ f(t) \, \cos (n\pi t) \, dt =
 \, \cos (n \pi t) \, dt +
 \int_0^1
 (1-t)\,t
-\, \cos (n \pi t) \, dt = 0, \\
+\, \cos (n \pi t) \, dt = 0 \\
 b_n & = 
 \int_{-1}^1
 f(t) \, \sin (n\pi t) \, dt = 
@@ -1425,8 +1425,8 @@ f(t) \, \sin (n\pi t) \, dt =
 \frac{4 ( 1-{(-1)}^n)}{\pi^3 n^3} 
 =
 \begin{cases}
-\frac{8}{\pi^3 n^3} & \text{si } n \text{ est impair} , \\
-0 & \text{si } n \text{ est pair} .
+\frac{8}{\pi^3 n^3} & \text{si } n \text{ est impair} \\
+0 & \text{si } n \text{ est pair}
 \end{cases}
 \end{align*}
 Alors, la série est 
@@ -1443,7 +1443,7 @@ Cette série converge très vite. Si vous calculez jusqu'à la troisième harmon
 Son graphe est presque impossible à distinguer de celui de $f(t)$ dans la 
 \figureref{gfs:smoothexfig}.
 En effet, le coefficient
-$\frac{8}{27 \pi^3}$ est déjà juste $0.0096$ (approximativement).
+$\frac{8}{27 \pi^3}$ est déjà juste $0,0096$ (approximativement).
 La raison de ce comportement est le terme $n^3$ au dénominateur.
 Le coefficient $b_n$, dans ce cas, va à zéro aussi vite que
 $\nicefrac{1}{n^3}$ va à zéro.
@@ -1477,7 +1477,7 @@ Il y a des coins, mais pas de sauts.
 Si l'on dérive à nouveau (là où l'on peut), on constate que la fonction
 $f''(t)$ n'est pas continue (elle a des sauts).
 \begin{equation*}
-f''(t) = \sum_{n=1}^\infty \frac{-1}{n} \sin (n t) .
+f''(t) = \sum_{n=1}^\infty \frac{-1}{n} \sin (n t)
 \end{equation*}
 Cette fonction est semblable aux dents de scie. Si l'on essayait de dériver 
 la série à nouveau, on obtiendrait
@@ -1815,18 +1815,18 @@ On prend une fonction $f(t)$ définie sur $[0,L]$.  Sur $(-L,L]$, la fonction es
 \begin{align*}
 F_{\text{impaire}}(t) & \overset{\text{déf}}{=}
 \begin{cases}
-f(t) & \text{si } \; \phantom{-}0 \leq t \leq L , \\
--f(-t) & \text{si } \; {-L} < t < 0 ,
+f(t) & \text{si } \; \phantom{-}0 \leq t \leq L \\
+-f(-t) & \text{si } \; {-L} < t < 0 
 \end{cases}
 \\
 F_{\text{paire}}(t) & \overset{\text{déf}}{=}
 \begin{cases}
-f(t) & \text{si } \; \phantom{-}0 \leq t \leq L , \\
-f(-t) & \text{si } \; {-L} < t < 0 .
+f(t) & \text{si } \; \phantom{-}0 \leq t \leq L  \\
+f(-t) & \text{si } \; {-L} < t < 0 
 \end{cases}
 \end{align*}
-On étend $F_{\text{impaire}}(t)$ et $F_{\text{paire}}(t)$ à une $2L$-périodique.
-Alors, $F_{\text{impaire}}(t)$ est appelée l' \emph{\myindex{extension périodique impaire}} de $f(t)$, et $F_{\text{paire}}(t)$ est appelée l'\emph{\myindex{extension périodique paire}} de $f(t)$.  % TODO enelver espace apres l' 
+On étend $F_{\text{impaire}}(t)$ et $F_{\text{paire}}(t)$ à une fonction $2L$-périodique.
+Alors, $F_{\text{impaire}}(t)$ est appelée l'\emph{\myindex{extension périodique impaire}} de $f(t)$, et $F_{\text{paire}}(t)$ est appelée l'\emph{\myindex{extension périodique paire}} de $f(t)$.  % TODO enelver espace apres l' 
 Pour l'extension impaire, on suppose généralement que $f(0) = f(L) = 0$.
 
 \begin{exercise}
@@ -1835,7 +1835,7 @@ Pour $F_{\text{impaire}}$, supposez que $f(0) = f(L) = 0$.
 \end{exercise}
 
 \begin{example}
-Prenez la fonction $f(t) = t\,(1-t)$ définie sur $[0,1]$. 
+Prenons la fonction $f(t) = t\,(1-t)$ définie sur $[0,1]$. 
 La \figurevref{scs:oddevenextfig} montre les graphes des extensions périodiques impaires et paires de $f(t)$.  % TODO regler langue de reference (on the facing page)
 
 \begin{myfig}
@@ -1855,7 +1855,7 @@ a_n = \frac{1}{L} \int_{-L}^L f(t) \cos \left( \frac{n \pi}{L} t \right)
 \, dt = 0 .
 \end{equation*}
 Autrement dit, il n'y a pas de terme cosinus dans la série de Fourier d'une fonction impaire.
-L'intégrale est nulle, car $f(t) \cos \left( {n \pi}{L} t \right)$ est une fonction impaire (le produit d'une fonction impaire et d'une fonction paire est impaire), et l'intégrale d'une fonction impaire sur un intervalle symétrique est toujours égale à zéro. 
+L'intégrale est nulle, car $f(t) \cos \left( {n \pi}{L} t \right)$ est une fonction impaire (le produit d'une fonction impaire et d'une fonction paire est impair), et l'intégrale d'une fonction impaire sur un intervalle symétrique est toujours égale à zéro. 
 L'intégrale d'une fonction paire sur un intervalle symétrique $[-L,L]$ est le double de l'intégrale de la fonction sur l'intervalle $[0,L]$.
 La fonction $f(t) \sin \left( \frac{n \pi}{L} t \right)$ est le produit de deux fonctions impaires et est donc paire.
 \begin{equation*}
@@ -1889,7 +1889,7 @@ Une conséquence intéressante est que les coefficients de la série de Fourier 
 
 \begin{theorem}
 Soit $f(t)$ une fonction lisse par morceaux définie sur $[0,L]$.
-Alors l'extension périodique impaire de $f(t)$ a la série Fourier
+Alors, l'extension périodique impaire de $f(t)$ a la série Fourier
 \begin{equation*}
 \mybxbg{~~
 F_{\text{impaire}}(t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t
@@ -1920,14 +1920,14 @@ a_n =
 \end{theorem}
 
 On appelle la série $\sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t\right)$ 
-la \emph{\myindex{série sinus}} de  $f(t)$, et l'on appelle la série
+la \emph{\myindex{série sinus}} de  $f(t)$ et l'on appelle la série
 $\frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right)$ la \emph{\myindex{série cosinus}} de $f(t)$.
 On ne se soucie pas souvent de ce qui se passe en dehors de $[0, L]$. Dans ce cas,
 on choisit la série qui correspond le mieux au problème.
 
 Il n'est pas nécessaire de commencer par la série de Fourier complète pour obtenir
-les séries de sinus et de cosinus. La série sinus est en réalité le développement des fonctions propres de $f(t)$ en utilisant les fonctions propres du problème des valeurs propres $x''+\lambda x = 0$, $x(0) = 0$, $x(L) = L$.
-La série cosinus est le développement des fonctions propres de $f(t)$ en utilisant les fonctions propres du problème des valeurs propres $x''+\lambda x = 0$, $x'(0) = 0$, $x'(L) = L$.
+les séries de sinus et de cosinus. La série sinus est en réalité le développement des fonctions propres de $f(t)$ en utilisant les fonctions propres du problème de valeurs propres $x''+\lambda x = 0$, $x(0) = 0$, $x(L) = L$.
+La série cosinus est le développement des fonctions propres de $f(t)$ en utilisant les fonctions propres du problème de valeurs propres $x''+\lambda x = 0$, $x'(0) = 0$, $x'(L) = L$.
 On aurait donc pu obtenir les mêmes formules en définissant le produit intérieur
 \begin{equation*}
 \langle f(t), g(t) \rangle = \int_0^L f(t) g(t) \, dt
@@ -1972,7 +1972,7 @@ a_n & = \frac{2}{\pi}
 \frac{4{(-1)}^n}{n^2} .
 \end{split}
 \end{equation*}
-Notez qu'on a \myquote{détecté} la continuité de l'extension depuis les coefficients décroissants comme $\frac{1}{n^2}$.  % TODO : myquote guillemets francais
+Notez qu'on a « détecté » la continuité de l'extension depuis les coefficients décroissants comme $\frac{1}{n^2}$.  % TODO : myquote guillemets francais
 Autrement dit, l'extension périodique paire de $t^2 $ n'a pas de discontinuités de saut. Elle a des coins, car la dérivée, qui est une fonction impaire et une série sinus, a des sauts.
 Il existe une série de Fourier dont les coefficients sont seulement décroissants comme $\frac{1}{n}$.
 
@@ -1995,18 +1995,18 @@ Explicitement, les premiers termes de la série sont
 La série de Fourier est liée aux problèmes de valeurs limites
 qu'on a étudiés plus tôt. Voyons cette connexion dans une application.
 
-Considérons le problème de valeurs limites pour $0 < t < L$,
+Considérons le problème à valeurs limites pour $0 < t < L$,
 \begin{equation*}
 x''(t) + \lambda\, x(t) = f(t) ,
 \end{equation*}
 pour les \emph{\myindex{conditions aux frontières de Dirichlet}} $x(0) = 0$, $x(L) = 0$.
-L'alternative de Fredholm (\thmvref{thm:fredholmsimple}) dit que tant que $\lambda$ n'est pas une valeur propre du problème homogène sous-jacent, il existe une solution unique.
+L'alternative de Fredholm (\thmvref{thm:fredholmsimple}) dit que tant que $\lambda$ n'est pas une valeur propre du problème homogène sous-jacent, il existe une solution unique.  % TODO ref anglaise
 Les fonctions propres de ce problème de valeurs propres sont les fonctions
 $\sin \left( \frac{n \pi}{L} t \right)$.
 Donc, pour trouver la solution, on trouve d'abord la série sinus de Fourier pour $ f (t) $.
 On écrit $x$ également sous forme de série sinus, mais avec des coefficients inconnus.
-On substitue la série à $x$ dans l'équation et on résout avec les coefficients inconnus.
-Si l'on a la \emph{\myindex{condition à la frontière Neumann}} $x'(0) = 0$, $x'(L) = 0$, on suit la même procédure en utilisant la série cosinus.
+On substitue la série à $x$ dans l'équation et l'on résout avec les coefficients inconnus.
+Si l'on a la \emph{\myindex{condition aux frontières Neumann}} $x'(0) = 0$, $x'(L) = 0$, on suit la même procédure en utilisant la série cosinus.
 
 Voyons comment cette méthode fonctionne avec des exemples.
 
@@ -2083,12 +2083,12 @@ satisfait aux conditions aux limites.
 \end{example}
 
 \begin{example}
-De même, on traite les conditions de Neumann.
-On prend le problème de la valeur limite pour $0 < t < 1$
+De même, traitons les conditions de Neumann.
+Prenons le problème à valeurs limites pour $0 < t < 1$
 \begin{equation*}
 x''(t) + 2 x(t) = f(t) ,
 \end{equation*}
-où $f(t) = t$ sur $0 < t < 1$, mais maintenant satisfaisant aux conditions aux limites de Neumann
+où $f(t) = t$ pour $0 < t < 1$, mais maintenant satisfaisant aux conditions aux limites de Neumann
 $x'(0) = 0$, $x'(1)=0$.
 On écrit $f(t)$ comme une série cosinus :
 \begin{equation*}
@@ -2103,7 +2103,7 @@ et
 c_n = 2 \int_0^1 t \cos (n \pi t) \,dt =
 \frac{2\bigl({(-1)}^n-1\bigr)}{\pi^2 n^2} = 
 \begin{cases}
-\frac{-4}{\pi^2 n^2} & \text{si } n \text{ est impair} , \\
+\frac{-4}{\pi^2 n^2} & \text{si } n \text{ est impair} \\
 0 & \text{si } n \text{ est pair}.
 \end{cases}
 \end{equation*}
@@ -2137,7 +2137,7 @@ $n$ impair, on a
 \begin{equation*}
 a_n (2 - n^2 \pi^2)
 =
-\frac{-4}{\pi^2 n^2} ,
+\frac{-4}{\pi^2 n^2}
 \end{equation*}
 ou
 \begin{equation*}
@@ -2373,8 +2373,8 @@ où $F(t)$ est la fonction intermédiaire
 \begin{equation*}
 F(t) =
 \begin{cases}
-0 & \text{si } \; {-1} < t < 0 , \\
-1 & \text{si } \; \phantom{-}0 < t < 1 ,
+0 & \text{si } \; {-1} < t < 0 \\
+1 & \text{si } \; \phantom{-}0 < t < 1 
 \end{cases}
 \end{equation*}
 étendue périodiquement.
@@ -2400,7 +2400,7 @@ d_n & = \int_{-1}^1 F(t) \sin (n \pi t) \, dt
 \\
 & = \frac{1-{(-1)}^n}{\pi n} =
 \begin{cases}
-\frac{2}{\pi n} & \text{si } n \text{ est impair} , \\
+\frac{2}{\pi n} & \text{si } n \text{ est impair} \\
 0 & \text{si } n \text{ est pair} .
 \end{cases}
 \end{align*}
@@ -2447,7 +2447,7 @@ F(t) = \frac{1}{2} + \sum_{\substack{n=1 \\ n \text{ impair}}}^\infty
 \frac{2}{\pi n} \sin (n \pi t) .
 \end{split}
 \end{equation*}
-Alors, $a_0 = \frac{1}{2}$, $b_n = 0$ pour un $n$ pair, et, pour un $n$ impair, on obtient 
+Alors, $a_0 = \frac{1}{2}$, $b_n = 0$ pour un $n$ pair et pour un $n$ impair, on obtient 
 \begin{equation*}
 b_n = 
 \frac{2}{\pi n (2 - n^2 \pi^2 )} .
@@ -2477,7 +2477,7 @@ Soit $ F (t) $ $ 2L $-périodique, et considérons
 \begin{equation*}
 m x''(t) + k x (t) = F(t) .
 \end{equation*}
-Lorsqu'on développe $ F (t) $, on constate que certains de ses termes coïncident avec la solution complémentaire à $ mx '' + kx = 0 $; on ne peut pas utiliser ces termes lorsqu'on devine. Comme précédemment, ils disparaissent quand on les insère dans le terme de gauche et on obtient une équation contradictoire (telle que $ 0 = 1 $). On suppose que
+Lorsqu'on développe $ F (t) $, on constate que certains de ses termes coïncident avec la solution complémentaire à $ mx '' + kx = 0 $; on ne peut pas utiliser ces termes lorsqu'on devine. Comme précédemment, ils disparaissent quand on les insère dans le terme de gauche, et on obtient une équation contradictoire (telle que $ 0 = 1 $). On suppose que
 \begin{equation*}
 x_c = A \cos (\omega_0 t) + B \sin (\omega_0 t), 
 \end{equation*}
@@ -2493,7 +2493,7 @@ a_n \cos \left( \frac{n \pi}{L} t \right) +
 b_n \sin \left( \frac{n \pi}{L} t \right) .
 \end{equation*}
 En d'autres mots, on multiplie le terme par $ t $. À partir de là, on
-procède comme avant.
+procède comme précédemment.
 
 Bien sûr, la solution n'est pas une série de Fourier (ce n'est même pas
 périodique), car elle contient les termes multipliés par $ t $. De plus, les
@@ -2503,10 +2503,10 @@ b_N \sin \left( \frac{N \pi}{L} t \right) \right)$ dominent éventuellement et m
 
 On note qu'il peut maintenant y avoir une infinité de fréquences de résonance à atteindre.
 Autrement dit, lorsqu'on change la fréquence de $ F $ (on change $ L $),  différents termes de la série de Fourier de $ F $ peuvent interférer avec la solution complémentaire et provoquer une résonance.
-Cependant, il faut noter que, puisque tout est une approximation et en particulier $c$ n'est jamais réellement zéro, mais quelque chose très proche de zéro, seule la première fréquence de résonance compte dans la vraie vie.
+Cependant, il faut noter que, puisque tout est une approximation et que, en particulier, $c$ n'est jamais réellement zéro, mais quelque chose très proche de zéro, seule la première fréquence de résonance compte dans la vraie vie.
 
 \begin{example}
-On veut résoudre l'équation
+Nous voulons résoudre l'équation
 \begin{equation} \label{afs:eq-resonance}
 2 x'' + 18 \pi^2 x = F(t) ,
 \end{equation}
@@ -2514,7 +2514,7 @@ où
 \begin{equation*}
 F(t) =
 \begin{cases}
--1 & \text{si } \; {-1} < t < 0 , \\
+-1 & \text{si } \; {-1} < t < 0 \\
 1 & \text{si } \; \phantom{-}0 < t < 1
 \end{cases}
 \end{equation*}
@@ -2538,7 +2538,7 @@ x(t) = c_1 \cos  (3\pi t) + c_2 \sin (3\pi t) + x_p (t)
 pour une solution particulière $x_p$.
 
 Si l'on essaie un $ x_p $ donné pour une série de Fourier avec $ \ sin (n \pi t) $ comme d'habitude,
-l'équation complémentaire, $2x'' + 18 \pi ^2x = 0$, \myquote{mange} la troisième harmonique.  % TODO myquote guillemets francais
+l'équation complémentaire, $2x'' + 18 \pi ^2x = 0$, « mange » la troisième harmonique.  % TODO myquote guillemets francais
 Autrement dit, le terme avec $\sin(3 \pi t)$ est déjà dans la solution complémentaire.
 Par conséquent, on retire ce terme et on le multiplie par $t$. On ajoute également un terme cosinus pour que tout soit correct.
 Ainsi, on essaie
@@ -2569,7 +2569,7 @@ x_p''(t) =
 (-n^2 \pi^2 b_n ) \,
 \sin (n \pi t) . 
 \end{multline*}
-On remplace maintenant du côté gauche de l'équation différentielle.
+On remplace maintenant du côté gauche de l'équation différentielle :
 \begin{align*}
 2x_p'' + 18\pi^2 x_p 
 = & 
@@ -2583,7 +2583,7 @@ On remplace maintenant du côté gauche de l'équation différentielle.
 \phantom{\, + 12 b_3 \pi \cos (3 \pi t)} ~
 {} + 18 \pi^2 b_3 t \sin (3 \pi t)
 \\
-& {} + \sum_{\substack{n=1 \\ n~\text{impaire} \\ n\not= 3}}^\infty
+& {} + \sum_{\substack{n=1 \\ n~\text{impair} \\ n\not= 3}}^\infty
 (-2n^2 \pi^2 b_n + 18\pi^2 b_n) \,
 \sin (n \pi t) . 
 \end{align*}
@@ -2601,7 +2601,7 @@ On simplifie :
 \sin (n \pi t) . 
 \end{equation*}
 Cette série doit être égale à la série pour $F(t)$.
-On résout pour $a_3$ et pour $b_n$.
+On résout pour $a_3$ et pour $b_n$ :
 \begin{align*}
 & a_3 = \frac{4/(3\pi)}{-12\pi} = \frac{-1}{9\pi^2} , \\
 & b_3 = 0 , \\
@@ -2712,15 +2712,15 @@ $x =
 \label{heateq:section}
 
 \sectionnotes{2 lectures\EPref{, \S9.5 dans \cite{EP}}\BDref{,
-\S10.5 dans \cite{BD}}}
+\S10.5 dans \cite{BD}}.}
 
-Rappelons qu'une \emph{\myindex{équation différentielle partielle}} ou
-\emph{\myindex{EDP}} est une équation contenant les dérivées partielles
+Rappelons qu'une \emph{\myindex{équation différentielle partielle}}, ou
+\emph{\myindex{EDP}}, est une équation contenant les dérivées partielles
 par rapport à \emph{plusieurs} variables indépendantes. La résolution des EDP
 est la principale application des séries de Fourier à laquelle on s'intéressera.
 
 Une EDP est dite \emph{linéaire\index{linear PDE}} si la variable dépendante et sa dérivée apparaissent au moins à la première puissance et n'apparaissent dans aucune des fonctions. Avec l'EDP, on spécifie généralement quelques
-\emph{conditions aux frontières\index{boundary conditions for a PDE}}, où la valeur de la solution ou de ses dérivés est donnée par la limite d'une région, et/ou certaines 
+\emph{conditions aux frontières\index{boundary conditions for a PDE}}, où la valeur de la solution ou de ses dérivées est donnée par la limite d'une région et/ou certaines 
 \emph{conditions initiales\index{initial conditions for a PDE}}, où la valeur de la solution ou de ses dérivées est donnée à un certain temps initial.
 Parfois, de telles conditions sont mélangées, et l'on y fait référence simplement comme
 \emph{conditions au bord\index{side conditions for a PDE}}.
@@ -2735,7 +2735,7 @@ Nous allons étudier ici l'\emph{\myindex{équation de la chaleur}}, qui est un 
 
 Commençons par l'équation de la chaleur.
 Considérons un fil (ou une fine tige métallique) de longueur $ L $
-qui est isolé sauf au point de terminaison.  Soit $ x $ la position le long du fil, et soit $ t $ le temps.  Regardons la \figurevref{heat:wirefig}.
+qui est isolé sauf au point de terminaison.  Soit $ x $ la position le long du fil et soit $ t $ le temps.  Regardons la \figurevref{heat:wirefig}.
 
 \begin{myfig}
 \capstart
@@ -2753,7 +2753,7 @@ k \frac{\partial^2 u}{\partial x^2} ,
 \end{equation*}
 où $k > 0$ est la constante (de \emph{\myindex{conductivité thermale}} du matériel).
 Ainsi, le changement de chaleur en un point spécifique est proportionnel à la seconde
-dérivée de la chaleur le long du fil.  C'est logique, puisqu'en effet si,
+dérivée de la chaleur le long du fil.  C'est logique puisque, en effet, si,
 à un $ t $ fixe, le graphe de la répartition de la chaleur a un maximum (le graphe est concave vers le bas), alors la chaleur s'échappe du maximum (et vice versa).
 
 On utilise généralement une notation plus pratique pour les dérivées partielles.
@@ -2775,9 +2775,9 @@ Si les extrémités sont également isolées, alors les conditions sont
 u_x(0,t) = 0 \qquad \text{et} \qquad u_x(L,t) = 0.
 \end{equation*}
 Voyons pourquoi c'est ainsi.
-Si $ u_x $ est positif à un certain moment $ x_0 $, alors, à un certain moment, $u$ est plus petit à gauche de $x_0$ et plus grand à droite de $ x_0 $.
+Si $ u_x $ est positive à un certain moment $ x_0 $, alors, à un certain moment, $u$ est plus petite à gauche de $x_0$ et plus grande à droite de $ x_0 $.
 La chaleur passe d'une température élevée à une température basse, c'est-à-dire vers la gauche.
-Par contre,  si $ u_x $ est négatif, la chaleur circule de nouveau du feu vif au feu doux, c'est-à-dire à droite.  Donc,  quand $ u_x $ est nul,  c'est un point où la chaleur n'est pas conduite.  En d'autres termes, $ u_x (0, t) = 0 $ signifie qu'aucune chaleur ne circule dans le fil ou hors du fil au point $ x = 0 $.
+Par contre,  si $ u_x $ est négative, la chaleur circule de nouveau du feu vif au feu doux, c'est-à-dire vers la droite.  Donc,  quand $ u_x $ est nulle,  c'est un point où la chaleur n'est pas conduite.  En d'autres termes, $ u_x (0, t) = 0 $ signifie qu'aucune chaleur ne circule dans le fil ou hors du fil au point $ x = 0 $.
 
 On a deux conditions le long de l'axe $ x $, car il y a deux dérivées dans la direction $ x $.
 On dit que ces conditions secondaires sont \emph{homogènes \index{homogeneous side conditions}} (c'est-à-dire que $u$ ou sa dérivée est nulle).
@@ -2810,7 +2810,7 @@ Pour l'équation de la chaleur, on essaie de trouver des solutions de la forme
 \begin{equation*}
 u(x , t) = X(x)T(t).
 \end{equation*}
-Espérer que la solution souhaitée soit de cette forme est trop espérer. Ce qui est parfaitement raisonnable de demander, cependant, c'est de trouver assez de \myquote{blocs de construction} de solutions de la forme $u(x,t) = X(x)T(t)$,
+Espérer que la solution souhaitée soit de cette forme est trop espérer. Ce qui est parfaitement raisonnable de demander, cependant, c'est de trouver assez de « blocs de construction » de solutions de la forme $u(x,t) = X(x)T(t)$,
 en utilisant cette procédure de sorte que la solution souhaitée à l'EDP soit en quelque sorte construite à partir de ces blocs de construction par l'utilisation de la superposition. 
 
 Essayons de résoudre l'équation de la chaleur
@@ -2820,10 +2820,10 @@ u(0 , t) = 0, \quad
 u(L , t) = 0 \quad \text{et} \quad
  u(x,0) = f(x).
 \end{equation*}
-On suppose que $u(x,t) = X(x)T(t)$.  On essaie de faire en sorte que cette hypothèse satisfasse à l'équation différentielle, $ u_t = k u_ {xx} $, et les conditions homogènes,
+On suppose que $u(x,t) = X(x)T(t)$.  On essaie de faire en sorte que cette hypothèse satisfasse à l'équation différentielle, $ u_t = k u_ {xx} $, et aux conditions homogènes,
 $ u (0, t) = 0 $ et $ u (L, t) = 0 $.  Ensuite,  comme la superposition préserve l'équation différentielle et les conditions homogènes secondaires,  on essaie de
-construire une solution à partir de ces éléments de base pour résoudre les
-conditions initiales non homogènes $ u (x, 0) = f (x) $.
+construire une solution à partir de ces éléments de base pour résoudre la
+condition initiale non homogène, $ u (x, 0) = f (x) $.
 
 D'abord, on remplace $u(x, t) = X(x)T(t)$ dans l'équation de la chaleur et l'on obtient
 \begin{equation*}
@@ -2852,7 +2852,7 @@ recherche des solutions non triviales $ X $ du problème de valeurs propres
 $X'' + \lambda X = 0$, $X(0) = 0$, $X(L) = 0$.  
 On a déjà constaté que les seules valeurs propres sont $\lambda_n = \frac{n^2 \pi^2}{L^2}$,  pour les entiers 
 $n \geq 1$,
-où les valeurs propres sont $\sin \left(\frac{n \pi}{L} x\right)$. Par conséquent, choisissons les solutions
+où les fonctions propres sont $\sin \left(\frac{n \pi}{L} x\right)$. Par conséquent, choisissons les solutions
 \begin{equation*}
 X_n (x) = \sin \left(\frac{n \pi}{L} x \right) .
 \end{equation*}
@@ -2879,7 +2879,7 @@ On note que $u_n(x,0) = \sin \left( \frac{n \pi}{L} x \right)$.  Écrivons $f(x)
 f(x) = \sum_{n=1}^\infty b_n \sin \left(\frac{n \pi}{L}  x \right) .
 \end{equation*}
 Autrement dit,  on trouve la série de Fourier de l'extension périodique impaire de $ f (x) $.
-On a utilisé la série sinus, car elle correspond au problème des valeurs propres pour
+On a utilisé la série sinus, car elle correspond au problème de valeurs propres pour
 $ X (x) $ ci-dessus.
 Enfin,  on utilise la superposition pour écrire la solution comme
 \begin{equation*}
@@ -2940,7 +2940,7 @@ b_n = 2 \int_0^1 50\,x\,(1-x) \sin (n \pi x) \,dx
 \frac{200}{{\pi }^{3}{n}^{3}}-\frac{200\,{\left( -1\right) }^{n}}{{\pi }^{3}{n}^{3}}
 =
 \begin{cases}
-0 & \text{si } n \text{ est pair} , \\
+0 & \text{si } n \text{ est pair} \\
 \frac{400}{\pi^3 n^3} & \text{si } n \text{ est impair} .
 \end{cases}
 \end{equation*}
@@ -2996,7 +2996,7 @@ Ce comportement est une caractéristique générale de la résolution de l'équa
 Si vous avez de l'intérêt pour le comportement pour des $ t $ assez grands, seuls le
 premier ou les deux premiers termes peuvent être nécessaires.
 
-Revenons à la question qui cherche à savoir quand est-ce que la température maximale est égale à la moitié de la température maximale initiale. Autrement dit, quand la température au milieu est $\nicefrac{12.5}{2} = 6.25$.  On remarque sur le graphique que si l'on utilise l'approximation par le premier terme, on sera assez proche.  On résout 
+Revenons à la question qui cherche à savoir quand la température maximale est égale à la moitié de la température maximale initiale. Autrement dit, quand la température au milieu est $\nicefrac{12.5}{2} = 6.25$.  On remarque sur le graphique que si l'on utilise l'approximation par le premier terme, on sera assez proche.  On résout 
 \begin{equation*}
 6.25 =
 \frac{400}{\pi^3}
@@ -3013,11 +3013,11 @@ Ainsi, la température maximale tombe de moitié environ à $t=24.5$.
 
 On mentionne un comportement intéressant de la solution à l'équation de la chaleur.
 L'équation de la chaleur est
-\myquote{lisse} en dehors de la fonction $ f (x) $ au fur et à mesure que $ t $ grandit.  Pour un $ t $ fixe,
+« lisse » en dehors de la fonction $ f (x) $ au fur et à mesure que $ t $ grandit.  Pour un $ t $ fixe,
 la solution est une série de Fourier à coefficients
 $b_n e^{\frac{-n^2 \pi^2}{L^2} k t}$.  Si $t > 0$, ces coefficients
 deviennent nuls plus vite que tout $ \ frac {1} {n ^ p} $ pour toute puissance $ p $.  En d'autres mots, la série de Fourier a une infinité de dérivées partout.
-Ainsi,  même si la fonction $ f (x) $ fait des sauts et des coins  alors, pour un $t > 0$ fixe, la solution $ u (x, t) $ en fonction de $ x $ est aussi lisse que possible.
+Ainsi,  même si la fonction $ f (x) $ fait des sauts et des coins,  alors, pour un $t > 0$ fixe, la solution $ u (x, t) $ en fonction de $ x $ est aussi lisse que possible.
 
 \begin{example}
 Lorsque la condition initiale est déjà une série sinusoïdale, alors on n'a pas besoin
@@ -3037,7 +3037,7 @@ u(x,t) =
 
 \subsection{Extrémités isolées}
 
-Supposons maintenant que les extrémités du fil soient isolées. Dans ce cas, on résout
+Supposons maintenant que les extrémités du fil sont isolées. Dans ce cas, on résout
 l'équation
 \begin{equation*}
 u_t = k u_{xx} \qquad \text{avec} \qquad
@@ -3045,7 +3045,7 @@ u_x(0,t) = 0, \quad
 u_x(L,t) = 0 \quad \text{et} \quad
 u(x,0) = f(x).
 \end{equation*}
-Encore une fois, on essaie une solution de la forme $ u (x, t) = X (x) T (t) $.  On utilise la même procédure qu'avant pour remplacer dans l'équation de la chaleur et l'on arrive aux deux équations suivantes :
+Encore une fois, on essaie une solution de la forme $ u (x, t) = X (x) T (t) $.  On utilise la même procédure que précédemment pour remplacer dans l'équation de la chaleur et l'on arrive aux deux équations suivantes :
 \begin{align*}
 X''(x) + \lambda X(x) &= 0 , \\
 T'(t) + \lambda k T(t) &= 0 .
@@ -3148,7 +3148,7 @@ u(x,t)
 au temps $ t $. \label{heat:wireisolexfig}}
 \end{myfig}
 
-On remarque dans le graphique qu'au fil du temps,  la température s'équilibre à travers le fil.  Finalement,  tous les
+On remarque dans le graphique que, au fil du temps,  la température s'équilibre à travers le fil.  Finalement,  tous les
 termes sauf la constante
 meurent,  et l'on a une température uniforme $\frac{25}{3} \approx 8.33$ sur toute la longueur du fil.
 \end{example}
@@ -3367,7 +3367,7 @@ a) $0$,
 %\S10.7 dans \cite{BD}}}
 %
 Imaginez avoir une corde de guitare tendue de longueur $ L $.  On considère les vibrations dans une seule direction.  
-Soit $ x $  la position le long de la corde,  soit $ t $ le temps,  et soit $ y $ le déplacement de la corde depuis la position de repos.
+Soit $ x $  la position le long de la corde,  soit $ t $ le temps et soit $ y $ le déplacement de la corde depuis la position de repos.
 Regardons la \figurevref{we:vibstrfig}.
 
 \begin{myfig}
@@ -3388,7 +3388,7 @@ pour une certaine constante $a > 0$.
 L'intuition est semblable à l'équation de la chaleur, en remplaçant la vitesse par
 l'accélération : l'accélération en un point spécifique est proportionnelle à la seconde
 dérivée de la forme de la corde.  En d'autres termes, quand la corde est
-concave, $u_{xx}$ est négatif, et la corde veut accélérer vers le bas, donc $u_{tt}$ devrait être négatif, et vice versa.
+concave, $u_{xx}$ est négative, et la corde veut accélérer vers le bas, donc $u_{tt}$ devrait être négative, et vice versa.
 L'équation d'onde est un exemple d'EDP hyperbolique.
 
 Supposons que les extrémités de la corde sont fixées comme sur une guitare :
@@ -3409,7 +3409,7 @@ g(x) .
 L'équation est linéaire,  donc la superposition fonctionne exactement comme pour l'équation de la chaleur.  Encore une fois, on utilise la séparation des variables pour trouver
 suffisamment de solutions élémentaires afin d'obtenir la solution générale.  Il y a
 un changement cependant.  Il sera plus facile de résoudre deux problèmes distincts
-et d'ajouter leurs solutions.
+et d'additionner leurs solutions.
 
 
 Les deux problèmes que nous allons résoudre sont
@@ -3432,8 +3432,8 @@ z_t(x,0) = 0 & \qquad \text{pour } \; 0 < x < L .
 \end{equation}
 
 Le principe de superposition implique que 
-$y = w + z$ résout l'équation d'onde, et aussi que
-$y(x,0) = w(x,0) + z(x,0) = f(x)$ et
+$y = w + z$ résout l'équation d'onde et aussi que
+$y(x,0) = w(x,0) + z(x,0) = f(x)$ et que
 $y_t(x,0) = w_t(x,0) + z_t(x,0) = g(x)$.  Par conséquent,  $y$ est une solution à 
 
 \begin{equation} \label{wave:yeq}
@@ -3450,7 +3450,7 @@ conditions homogènes telles que
 $y(0,t) = y(L,t) = 0$, $y(x,0) = 0$ ou $y_t(x,0) = 0$.  Par conséquent,
 on peut utiliser la séparation des variables pour trouver de nombreux éléments appartenant à la
 solution résolvant toutes les conditions homogènes.  On peut  ensuite les utiliser pour
-construire une solution satisfaisant la condition non homogène restante.
+construire une solution satisfaisant à la condition non homogène restante.
 Commençons avec  \eqref{wave:weq}.
 On essaie une solution de la forme $w(x,t) = X(x) T(t)$.  On remplace dans l'équation d'onde et l'on obtient 
 \begin{equation*}
@@ -3471,7 +3471,7 @@ On résout pour obtenir deux équations différentielles ordinaires :
 X''(x) + \lambda X(x) &= 0 , \\
 T''(t) + \lambda a^2 T(t) &= 0 .
 \end{align*}
-Les conditions $0 = w(0,t) = X(0) T(t)$ impliquent que $X(0) = 0$, et
+La condition $0 = w(0,t) = X(0) T(t)$ implique que $X(0) = 0$, et
 $w(L,t) = 0$ implique que $X(L) = 0$.  Par conséquent,  les seules solutions non triviales
  pour la première équation sont 
 $\lambda = \lambda_n = \frac{n^2 \pi^2}{L^2}$ et elles sont
@@ -3527,13 +3527,12 @@ b_n
 \end{equation*}
 
 \begin{exercise}
-Vérifiez que $w(x,0) = 0$ et
-$w_t(x,0) = g(x)$.
+Vérifiez que $w(x,0) = 0$ et $w_t(x,0) = g(x)$.
 \end{exercise}
 
 On résout \eqref{wave:zeq} de façon sembable.  On essaie encore
 $z(x,y) = X(x)T(t)$.  
-La procédure fonctionne exactement de la même manière qu'avant.
+La procédure fonctionne exactement de la même manière que précédemment.
 On obtient
 \begin{align*}
 X''(x) + \lambda X(x) &= 0 , \\
@@ -3544,7 +3543,7 @@ $\lambda = \lambda_n = \frac{n^2 \pi^2}{L^2}$, et
 \begin{equation*}
 X_n(x) = \sin \left( \frac{n \pi}{L} x \right) .
 \end{equation*}
-Cette fois,  la condition sur $T$ est $T'(0) = 0$.  Ainsi, on obtient que $B = 0$, et l'on prend
+Cette fois,  la condition sur $T$ est $T'(0) = 0$.  Ainsi, on obtient que $B = 0$ et l'on prend
 \begin{equation*}
 T_n(t) = \cos \left( \frac{n \pi a}{L} t \right).
 \end{equation*}
@@ -3555,7 +3554,7 @@ z_n(x,t) =
 \cos \left( \frac{n \pi a}{L} t \right) .
 \end{equation*}
 Comme $z_n(x,0) = \sin \left( \frac{n \pi}{L} x \right)$,
-on étend $f(x)$ en termes de ses sinus:
+on étend $f(x)$ en termes de ces sinus:
 \begin{equation*}
 f(x) =
 \sum_{n=1}^\infty c_n \sin \left( \frac{n \pi}{L} x \right) .
@@ -3575,7 +3574,7 @@ c_n
 
 \begin{exercise}
 Remplissez les détails de la dérivée de la solution de \eqref{wave:zeq}.
-Vérifiez que la solution satisfait toutes les conditions secondaires.
+Vérifiez que la solution satisfait à toutes les conditions secondaires.
 \end{exercise}
 
 En réunissant ces deux solutions,  on obtient le théorème  suivant. 
@@ -3636,7 +3635,7 @@ Elle a une forme initiale donnée dans la \figurevref{wave:pluckedstrfig}.
 C'est
 \begin{equation*}
 f(x) = \begin{cases}
-0.1\, x & \text{si } \; 0 \leq x \leq 1 , \\
+0.1\, x & \text{si } \; 0 \leq x \leq 1 \\
 0.1\, (2-x) & \text{si } \; 1 < x \leq 2 .
 \end{cases}
 \end{equation*}
@@ -3667,8 +3666,7 @@ f(x) = \sum_{n=1}^\infty
 \end{equation*}
 On note que
 $\sin \left( \frac{n \pi}{2} \right)$
-est la séquence $1, 0, -1, 0, 1, 0, -1, \ldots$
-pour $n = 1,2,3,4,\ldots$  Ainsi,
+est la séquence $1, 0, -1, 0, 1, 0, -1, \ldots\,$ pour $n = 1,2,3,4,\ldots\,$  Ainsi,
 \begin{equation*}
 f(x) = 
 \frac{0.8}{\pi^2}
@@ -3717,7 +3715,7 @@ y(x,t) & =
 
 Regardons la 
 \figureref{wave:pluckedexfig} pour un graphique où
-$0 < t < 3$.  On remarque que, contrairement à l'équation de la chaleur,  la solution ne devient pas plus \myquote{lisse}. On verra la raison de ce comportement dans la
+$0 < t < 3$.  On remarque que, contrairement à l'équation de la chaleur,  la solution ne devient pas plus « lisse ». On verra la raison de ce comportement dans la
 section suivante, où l'on décrira la solution de l'équation d'onde d'une autre
 façon.  % TODO : section suivante ?
 
@@ -3782,7 +3780,7 @@ Si la forme de $ f (x) $ ou la vitesse initiale ont beaucoup de points anguleux,
 l'onde sonore aura beaucoup de points anguleux.  Ceci est dû au fait que les coefficients de Fourier
 de forme initiale descendent à zéro (quand $n \to \infty$) au même rythme que les coefficients de Fourier
 de l'onde dans le temps (pour un certain $ x $ fixe).  Donc,  si nous utilisons un objet pointu pour
-pincer la corde,  on obtient un son plus net avec une fréquence plus élevée, tandis que si nous utilisons notre pouce, nous obtenons un son plus doux.  De même, si l'on s'approche du pont,  on obtient un un son plus net.
+pincer la corde,  nous obtenons un son plus net avec une fréquence plus élevée, tandis que si nous utilisons notre pouce, nous obtenons un son plus doux.  De même, si l'on s'approche du pont,  on obtient un son plus net.
 
 En fait,  si l'on regarde la formule de la solution,  on voit que, pour tout
 $ x $ fixe, on obtient une série de Fourier presque arbitraire pour $ t $,  à l'exception du 
