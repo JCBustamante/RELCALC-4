@@ -1,53 +1,36 @@
 <references>
-  <title>Bibliography</title>
+  <title>Bibliographie</title>
   <biblio type="raw" xml:id="BM">
-    Paul W.\ Berg et James L.\ McGregor,
-    \emph{\href{https://books.google.com/books?id=EfJQAAAAMAAJ}{Elementary
-    Partial Differential Equations}},
-    Holden-Day,
-    San Francisco, CA\@,
-    1966.
+    Paul W. Berg et James L. McGregor,
+    <url href="https://books.google.com/books?id=EfJQAAAAMAAJ"> <em>Elementary Partial Differential Equations</em></url>,
+    Holden-Day, San Francisco, CA, 1966.
   </biblio>
   <biblio type="raw" xml:id="BD">
-    William E.\ Boyce et
-    Richard C.\ DiPrima,
-    \emph{\href{https://books.google.com/books?id=nYWcQgAACAAJ}{Elementary
-    Differential Equations and Boundary Value Problems}},
-    11e edition,
-    John Wiley &amp; Sons Inc.,
-    New York, NY\@, 2017.
+    William E. Boyce et Richard C. DiPrima,
+    <url href="https://books.google.com/books?id=nYWcQgAACAAJ"> <em>Elementary Differential Equations and Boundary Value Problems</em></url>,
+    11e édition,
+    John Wiley &amp; Sons Inc., New York, NY, 2017.
   </biblio>
   <biblio type="raw" xml:id="EP">
-    C.H.\ Edwards et D.E.\ Penney,
-    \emph{\href{https://books.google.com/books?id=wuWvoAEACAAJ}{Differential
-    Equations and Boundary Value Problems: Computing and Modeling}},
-    5e edition,
-    Pearson,
-    2014.
+    C.H. Edwards et D.E. Penney,
+    <url href="https://books.google.com/books?id=wuWvoAEACAAJ"> <em>Differential Equations and Boundary Value Problems: Computing and Modeling</em></url>,
+    5e édition,
+    Pearson, 2014.
   </biblio>
   <biblio type="raw" xml:id="F">
-    Stanley J.\ Farlow,
-    \emph{\href{https://books.google.com/books?id=_ozWAAAAMAAJ}{An Introduction
-    to Differential Equations and Their Applications}},
-    McGraw-Hill, Inc.,
-    Princeton, NJ\@,
-    1994.  (Aussi publi\'e par Dover Publications, 2006.)
+    Stanley J. Farlow,
+    <url href="https://books.google.com/books?id=_ozWAAAAMAAJ"> <em>An Introduction to Differential Equations and Their Applications</em></url>,
+    McGraw-Hill, Inc., Princeton, NJ, 1994.
+    Aussi publié par Dover Publications, 2006.
   </biblio>
   <biblio type="raw" xml:id="I">
-    E.L.\ Ince,
-    \emph{\href{https://books.google.com/books?id=uYz-pqUD75gC}{Ordinary
-    Differential Equations}},
-    Dover Publications, Inc.,
-    New York, NY\@,
-    1956.
+    E.L. Ince,
+    <url href="https://books.google.com/books?id=uYz-pqUD75gC"> <em>Ordinary Differential Equations</em></url>,
+    Dover Publications, Inc., New York, NY, 1956.
   </biblio>
   <biblio type="raw" xml:id="T">
-    William F.\ Trench,
-    \emph{Elementary Differential Equations with Boundary Value
-    Problems}. Books and Monographs. Book 9.  2013.
-    \url{https://digitalcommons.trinity.edu/mono/9}
-    \end{thebibliography}
-    \printanswers
-    \diffyindex
+    William F. Trench,
+    <url href="https://digitalcommons.trinity.edu/mono/9"> <em>Elementary Differential Equations with Boundary Value Problems</em></url>,
+    Books and Monographs, Book 9, 2013.
   </biblio>
 </references>

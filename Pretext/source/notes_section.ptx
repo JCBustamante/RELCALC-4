@@ -1,39 +1,32 @@
 <section xml:id="notes_section">
   <title>Notes à propos de ce manuel</title>
   <p>
-    Ceci est une traduction d'un manuel libre écrit par Jiri Lebl.
+    Ceci est une traduction d'un manuel libre écrit par Jiří Lebl.
     Il s'agit d'un premier cours d'équations différentielles pour les personnes étudiant en génie.
   </p>
   <p>
     Originalement,
-    ce manuel constituait des notes pour un cours enseigné à l'
-    <url href="https://www.math.uiuc.edu/">Université
-    de l'Illinois à Urbana-Champaign (UIUC)</url>,
+    ce manuel constituait des notes pour un cours enseigné à l'<url href="https://www.math.uiuc.edu/">Université de l'Illinois à Urbana-Champaign (UIUC)</url>,
     en 2008-2009.
-    Ensuite, l'auteur les a utilisées à l'
-    <url href="https://www.math.ucsd.edu/">Université
-    de Californie à San Diego (UCSD)</url>
-    et à l'
-    <url href="https://math.okstate.edu/">Université
-    de l'État d'Oklahoma (OSU)</url>.
+    Ensuite, l'auteur les a utilisées à l'<url href="https://www.math.ucsd.edu/">Université de Californie à San Diego (UCSD)</url>
+    et à l'<url href="https://math.okstate.edu/">Université de l'État d'Oklahoma (OSU)</url>.
   </p>
   <p>
     Normalement,
     ces cours sont enseignés avec le livre de Edwards, Penney et Calvis,
-    <em>Differential Equations and Boundary Value Problems: Computing and Modeling</em><nbsp/>\cite{EP}, ou avec celui de Boyce et DiPrima,
-    <em>Elementary Differential Equations and Boundary Value Problems</em><nbsp/>\cite{BD}, et ce manuel-ci se veut un remplacement de ces ressources.
+    <em>Differential Equations and Boundary Value Problems: Computing and Modeling</em><nbsp/><xref ref="EP"/>, ou avec celui de Boyce et DiPrima,
+    <em>Elementary Differential Equations and Boundary Value Problems</em><nbsp/><xref ref="BD"/>, et ce manuel-ci se veut un remplacement de ces ressources.
   </p>
   <p>
-    L'adaptation en françaais a été écrite pour les cours de GCH217 et MAT217, donnés à
-    l'Université de Sherbrooke.
+    L'adaptation en français a été écrite pour les cours de GCH217 et MAT217, donnés à l'Université de Sherbrooke.
   </p>
   <p>
     Voici d'autres références : E. L.<nbsp/>Ince,
-    <em>Ordinary Differential Equations</em><nbsp/>\cite{I}, classique (et économique); Stanley Farlow,
-    <em>An Introduction to Differential Equations and Their Applications</em><nbsp/>\cite{F}; Berg et McGregor,
-    <em>Elementary Partial Differential Equations</em><nbsp/>\cite{BM}, maintenant disponible dans Dover;
+    <em>Ordinary Differential Equations</em><nbsp/><xref ref="I"/>, classique (et économique); Stanley Farlow,
+    <em>An Introduction to Differential Equations and Their Applications</em><nbsp/><xref ref="F"/>; Berg et McGregor,
+    <em>Elementary Partial Differential Equations</em><nbsp/><xref ref="BM"/>, maintenant disponible dans Dover;
     et William Trench,
-    <em>Elementary Differential Equations with Boundary Value Problems</em><nbsp/>\cite{T}, une ressource libre.
+    <em>Elementary Differential Equations with Boundary Value Problems</em><nbsp/><xref ref="T"/>, une ressource libre.
     Voir le chapitre Lectures additionnelles à la fin de ce manuel.
   </p>
 </section>

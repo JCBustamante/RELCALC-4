@@ -5,7 +5,7 @@
       Il y a plusieurs types d'équations différentielles,
       et on les classifie en différentes catégories selon leurs propriétés.
       Parlons brièvement d'une classification de base.
-      D'abord, la distinction entre EDO et EDP:
+      D'abord, la distinction entre EDO et EDP :
       <ul>
         <li>
           <p>
@@ -26,18 +26,19 @@
       </ul>
     </p>
     <p>
-      Voici quelques exemples d'équations différentielles ordinaires:
+      <!-- TODO trucs bizarres -->
+      Voici quelques exemples d'équations différentielles ordinaires :
       <md>
-        <mrow>\amp  \frac{d y}{dt} = ky  \amp  \amp  \text{(croissance exponentielle\knownindex{\lt h>exponential growth\lt /h>})}</mrow>
-        <mrow>\amp  \frac{d y}{dt} = k(A-y)  \amp  \amp  \text{(\myindex{loi de refroidissement de Newton})}</mrow>
+        <mrow>\amp  \frac{d y}{dt} = ky,  \amp  \amp  \text{(croissance exponentielle\knownindex{\lt h>exponential growth\lt /h>})}</mrow>
+        <mrow>\amp  \frac{d y}{dt} = k(A-y),  \amp  \amp  \text{(\myindex{loi de refroidissement de Newton})}</mrow>
         <mrow>\amp  m \frac{d^2 x}{dt^2} + c \frac{dx}{dt} + kx = f(t) . \amp  \amp \text{(vibrations m\'ecaniques\knownindex{\lt h>mechanical vibrations\lt /h>})}</mrow>
       </md>
     </p>
     <p>
-      Voici quelques exemples d'équations aux dérivées partielles:
+      Voici quelques exemples d'équations aux dérivées partielles :
       <md>
-        <mrow>\amp  \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0 \amp  \amp \text{(\'equation du transport\knownindex{\lt h>\'Equation du transport\lt /h>})}</mrow>
-        <mrow>\amp  \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}  \amp  \amp \text{(\'equation de la chaleur ou de la diffusion\knownindex{\lt h>\'Equation de la chaleur/diffusion\lt /h>})}</mrow>
+        <mrow>\amp  \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0, \amp  \amp \text{(\'equation du transport\knownindex{\lt h>\'Equation du transport\lt /h>})}</mrow>
+        <mrow>\amp  \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2},  \amp  \amp \text{(\'equation de la chaleur ou de la diffusion\knownindex{\lt h>\'Equation de la chaleur/diffusion\lt /h>})}</mrow>
         <mrow>\amp  \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} . \amp  \amp \text{(\'equation de l'onde en 2 dimensions\knownindex{\lt h>\'Equation de l'onde en deux dimensions\lt /h>})}</mrow>
       </md>
     </p>
@@ -46,21 +47,21 @@
       plusieurs équations en même temps,
       on a un <em>système d'équations différentielles<idx><h>système d'équations différentielles</h></idx>
       </em>.
-      Par exemple:
+      Par exemple :
       <me>
         y' = x , \qquad x' = y
       </me>
       est un système simple d'équations différentielles ordinaires.
-      Les équations de Maxwell<idx><h>équations de Maxwell</h></idx> en électromagnétisme forment elles aussi un système d'équations aux dérivées partielles:
+      Les équations de Maxwell<idx><h>équations de Maxwell</h></idx> en électromagnétisme forment elles aussi un système d'équations aux dérivées partielles :
       <md>
-        <mrow>\amp  \nabla \cdot \vec{D} = \rho \amp  \amp  \nabla \cdot \vec{B} = 0</mrow>
-        <mrow>\amp  \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} \amp \amp  \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} </mrow>
+        <mrow>\amp  \nabla \cdot \vec{D} = \rho, \amp  \amp  \nabla \cdot \vec{B} = 0,</mrow>
+        <mrow>\amp  \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}, \amp \amp  \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} </mrow>
       </md>.
     </p>
     <p>
       Les opérateurs de divergence <m>\nabla \cdot</m> et de rotationnel
       <m>\nabla \times</m> s'écrivent en termes de dérivées partielles des fonctions en termes des variables <m>x</m>,
-      <m>y</m> et <m>z</m> .
+      <m>y</m> et <m>z</m>.
     </p>
     <p>
       Le prochain élément d'information est l'<em>ordre
@@ -106,7 +107,7 @@
       Sinon, il s'agit d'une équation
       <em>non linéaire</em>.
           <idx><h>nonlinear equation</h></idx>
-      Une EDO est linéaire si elle peut être exprimée de la manière suivante:
+      Une EDO est linéaire si elle peut être exprimée de la manière suivante :
       <men xml:id="classification_eqlingen">
         a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = b(x) *
       </men>.
@@ -117,7 +118,7 @@
           <idx><h>coefficients</h></idx>
       </em>.
       L'équation peut dépendre arbitrairement de la variable indépendante.
-      Ainsi, l'équation suivante est linéaire:
+      Ainsi, l'équation suivante est linéaire :
       <men xml:id="classification_eqlinex">
         e^x \frac{d^2 y}{dx^2} + \sin(x) \frac{d y}{dx} +  x^2 y = \frac{1}{x}
       </men>,
@@ -132,14 +133,14 @@
     </p>
     <p>
       Considérons maintenant quelques équations non linéaires.
-      Par exemple, l'équation de Burger,
-          <idx><h>Burger</h></idx>
+      Par exemple, l'équation de Burgers,
+          <idx><h>Burgers</h></idx>
       <me>
         \frac{\partial y}{\partial t} +  \frac{\partial y}{\partial x} = \nu \frac{\partial^2 y}{\partial x^2}
       </me>,
       est une EDP du second ordre, qui est non linéaire,
-      puisque <m>y</m> et <m>\frac{\partial y}{\partial x}</m> sont multipliés ensemble.
-      L'équation suivante:
+      puisque <m>y</m> et <m>\frac{\partial y}{\partial x}</m> sont multipliées ensemble.
+      L'équation suivante :
       <men xml:id="classification_eqnonlinode">
         \frac{dx}{dt} = x^2
       </men>,
@@ -161,7 +162,7 @@
       moins que <m>f(t)</m> soit la fonction nulle.
       De manière analogue,
       la loi de refroidissement de Newton est non homogène sauf si la température ambiante <m>A</m> est nulle.
-      Une EDO linéaire homogène peut être écrite sous la forme suivante:
+      Une EDO linéaire homogène peut être écrite sous la forme suivante :
       <me>
         a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = 0
       </me>.
@@ -177,7 +178,7 @@
       Les coefficients sont les fonctions multipliées par la variable dépendante ou par une de ses dérivées,
       et non la fonction <m>b(x)</m> qui apparaît seule.
       Une EDO non homogène à
-      coefficients constants a la forme suivante:
+      coefficients constants a la forme suivante :
       <me>
         a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1} \frac{dy}{dx} + a_{0} y = b(x)
       </me>,
@@ -204,6 +205,8 @@
       Par contre, les équations de vibrations mécaniques ou <xref ref="classification_eqlinex"/> ne sont pas autonomes.
     </p>
   </introduction>
+
+  <!-- TODO exos -->
   <subsection>
     <title>Exercices</title>
     <exercise>
@@ -225,8 +228,8 @@
     <exercise>
       <statement>
         <p>
-          Si <m>\vec{u} = (u_1,u_2,u_3)</m> est un vecteur, sa divergence est:
-          <m>\nabla \cdot \vec{u} = \frac{\partial u_1}{\partial x} + \frac{\partial u_2}{\partial y} + \frac{\partial u_3}{\partial z}</m> et son rotationnel est:
+          Si <m>\vec{u} = (u_1,u_2,u_3)</m> est un vecteur, sa divergence est :
+          <m>\nabla \cdot \vec{u} = \frac{\partial u_1}{\partial x} + \frac{\partial u_2}{\partial y} + \frac{\partial u_3}{\partial z}</m> et son rotationnel est :
           <m>\nabla \times \vec{u} = \Bigl( \frac{\partial u_3}{\partial y} - \frac{\partial u_2}{\partial z} , ~ \frac{\partial u_1}{\partial z} - \frac{\partial u_3}{\partial x} , ~ \frac{\partial u_2}{\partial x} - \frac{\partial u_1}{\partial y} \Bigr)</m>.
           Observez que le rotationnel d'un vecteur est lui-même un vecteur. écrivez les équations de Maxwell en termes de dérivées partielles et classifiez le système.
         </p>
@@ -244,7 +247,7 @@
     <exercise>
       <statement>
         <p>
-          Trouvez un exemple explicite d'un système de deux EDO satisfaisant aux critères suivants:
+          Trouvez un exemple explicite d'un système de deux EDO satisfaisant aux critères suivants :
           d'ordre trois, non autonome,
           non homogène, dont les coefficients sont non constants,
           et tel que toutes les dérivées possibles apparaissent dans le système au moins une fois.
@@ -300,8 +303,8 @@
       </statement>
     </exercise>
     <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> équation:
-      <m>a(x) y = b(x)</m>, solution:
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> équation :
+      <m>a(x) y = b(x)</m>, solution :
       <m>y = \frac{b(x)}{a(x)}</m>. }
     </p>
     <exercise>
@@ -309,7 +312,7 @@
         <p>
           Pour quelles valeurs de <m>k</m> l'équation
           <m>\frac{dx}{dt}+x^k = t^{k+2}</m> est-elle linéaire?
-          Indice: il y a deux valeurs possibles.
+          Indice : il y a deux valeurs possibles.
         </p>
       </statement>
     </exercise>

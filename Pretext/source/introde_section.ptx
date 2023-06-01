@@ -14,7 +14,7 @@
       Vous avez déjà vu plusieurs équations différentielles,
       peut-être sans savoir que c'en était.
       Et vous avez même résolu des équations différentielles dans vos cours de calcul.
-      Voyons un exemple que vous n'avez peut-être pas vu:
+      Voyons un exemple que vous n'avez peut-être pas vu :
       <men xml:id="eq1">
         \frac{dx}{dt} + x = 2 \cos t
       </men>.
@@ -48,7 +48,7 @@
       C'est le même principe que pour une équation ordinaire (algébrique) impliquant <m>x</m> et <m>t</m>.
       Nous affirmons que l'expression suivante est une <em>solution
           <idx><h>solution</h></idx>
-      </em>:
+      </em> :
       <me>
         x = x(t) = \cos t + \sin t
       </me>.
@@ -60,24 +60,24 @@
       Nous devons d'abord calculer <m>\frac{dx}{dt}</m>.
       On trouve que <m>\frac{dx}{dt} = -\sin t + \cos t</m>.
       Maintenant, calculons le côté
-      gauche de <xref ref="eq1"/>:
+      gauche de <xref ref="eq1"/> :
       <me>
         \frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t)}_{\frac{dx}{dt}} + \underbrace{(\cos t + \sin t)}_{x} = 2\cos t
       </me>.
     </p>
     <p>
-      C'est bien ce que nous voulons:
+      C'est bien ce que nous voulons :
       nous obtenons exactement le côté
       droit de l'équation.
       Mais ce n'est pas tout.
       Nous affirmons que <m>x = \cos t + \sin t + e^{-t}</m> est aussi une solution.
-      Vérifions:
+      Vérifions :
       <me>
         \frac{dx}{dt} = -\sin t + \cos t - e^{-t}
       </me>.
     </p>
     <p>
-      On remplace ceci dans <xref ref="eq1"/>:
+      On remplace ceci dans <xref ref="eq1"/> :
       <me>
         \frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t - e^{-t})}_{\frac{dx}{dt}} + \underbrace{(\cos t + \sin t + e^{-t})}_{x} = 2\cos t
       </me>.
@@ -179,7 +179,7 @@
       <em>solution mathématique<idx><h>solution mathématique</h></idx>
       </em>.
       Mais ce n'est pas fini.
-      Il faut encore interpréter les résultats:
+      Il faut encore interpréter les résultats :
       qu'est-ce que la solution mathématique nous dit à
       propos de la situation-problème de départ?
     </p>
@@ -200,11 +200,10 @@
       (plus précisément,
       <m>P</m> dénote la quantité de population).
       On suppose que l'environnement contient suffisamment de nutriments et d'espace.
-      Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnelle à
+      Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnel à
       la population <mdash/> une population plus nombreuse croîtra plus rapidement.
-      Dénotons le temps
-      (en secondes, disons)
-      par la variable <m>t</m>. 0Notre modèle est alors:
+      Dénotons le temps (en secondes, disons)
+      par la variable <m>t</m>. Notre modèle est alors :
       <me>
         \frac{dP}{dt} = kP
       </me>,
@@ -219,12 +218,12 @@
         </p>
         <p>
           D'abord, nous devons résoudre l'équation différentielle.
-          Nous affirmons que la fonction suivante est une solution:
+          Nous affirmons que la fonction suivante est une solution :
           <me>
             P(t) = C e^{kt}
           </me>,
           où <m>C</m> est une constante.
-          Vérifions ceci:
+          Vérifions ceci :
           <me>
             \frac{dP}{dt} = C k e^{kt} = k P
           </me>.
@@ -235,8 +234,8 @@
         <p>
           Ensuite?
           On ne connaît pas la valeur de <m>C</m>, ni de <m>k</m>.
-          Mais on sait ceci: <m>P(0) = 100</m> et <m>P(10) = 200</m>.
-          Substituons ces valeurs dans l'expression et regardons ce que nous obtenons:
+          Mais on sait ceci : <m>P(0) = 100</m> et <m>P(10) = 200</m>.
+          Substituons ces valeurs dans l'expression et regardons ce que nous obtenons :
           <md>
             <mrow>\amp  100 = P(0) = C e^{k0} = C ,</mrow>
             <mrow>\amp  200 = P(10) = 100 \, e^{k10} </mrow>
@@ -245,7 +244,7 @@
         <p>
           Par conséquent,
           <m>2 = e^{10k}</m> ou <m>\frac{\ln 2}{10} = k \approx 0{,}069</m>.
-          Donc:
+          Donc :
           <me>
             P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0{,}069 t}
           </me>.
@@ -294,7 +293,7 @@
       Supposons que nous voulons résoudre l'équation
       <m>\frac{dP}{dt} = P</m> avec la condition <m>P(0) = 1000</m>
       (la condition initiale).
-      Alors, la solution est (exercice):
+      Alors, la solution est (exercice) :
       <me>
         P(t) = 1000 \, e^t
       </me>.
@@ -325,14 +324,14 @@
       correctement de la solution.
     </p>
     <p>
-      Voici notre première équation fondamentale:
+      Voici notre première équation fondamentale :
       <me>
         \frac{dy}{dx} = k y
       </me>,
       où <m>k > 0</m> est une constante.
-      Ici, <m>y</m> est la variable dépendante et <m>x</m>,
+      Ici, <m>y</m> est la variable dépendante, et <m>x</m>
       la variable indépendante.
-      La solution générale de cette équation est:
+      La solution générale de cette équation est :
       <me>
         y(x) = C e^{kx}
       </me>.
@@ -342,12 +341,12 @@
       même si les noms de variables ont changé.
     </p>
     <p>
-      La deuxième équation s'obtient en modifiant légèrement la première:
+      La deuxième équation s'obtient en modifiant légèrement la première :
       <me>
         \frac{dy}{dx} = -k y
       </me>,
       où <m>k > 0</m> est une constante.
-      La solution générale de cette équation est:
+      La solution générale de cette équation est :
       <me>
         y(x) = C e^{-kx}
       </me>.
@@ -362,12 +361,12 @@
     <p>
       Notre troisième équation fondamentale est une
       <em>équation différentielle du second ordre<idx><h>équation différentielle du second ordre</h></idx>
-      </em>:
+      </em> :
       <me>
         \frac{d^2y}{{dx}^2} = -k^2 y
       </me>,
       où <m>k > 0</m> est une constante.
-      La solution générale de cette équation est:
+      La solution générale de cette équation est :
       <me>
         y(x) = C_1 \cos(kx) + C_2 \sin(kx)
       </me>.
@@ -385,12 +384,12 @@
     </exercise>
     <p>
       Enfin, considérons l'équation suivante,
-      elle aussi du second ordre:
+      elle aussi du second ordre :
       <me>
         \frac{d^2y}{{dx}^2} = k^2 y
       </me>,
       où <m>k > 0</m> est une constante.
-      La solution générale de cette équation est:
+      La solution générale de cette équation est :
       <me>
         y(x) = C_1 e^{kx} + C_2 e^{-kx}
       </me>
@@ -400,7 +399,7 @@
       </me>.
     </p>
     <p>
-      Les fonctions <m>\cosh</m> et <m>\sinh</m> se définissent comme suit:
+      Les fonctions <m>\cosh</m> et <m>\sinh</m> se définissent comme suit :
       <me>
         \cosh x = \frac{e^{x} + e^{-x}}{2} , \qquad \sinh x = \frac{e^{x} - e^{-x}}{2}
       </me>.
@@ -416,7 +415,7 @@
       utiliser que les fonctions exponentielles.
       Elles ont de jolies propriétés, telles que <m>\cosh 0 = 1</m>,
       <m>\sinh 0 = 0</m>, <m>\frac{d}{dx} \cosh x = \sinh x</m>
-      (non il n'y a pas de signe moins,
+      (non, il n'y a pas de signe moins,
       ce n'est pas une coquille)
       et <m>\frac{d}{dx} \sinh x = \cosh x</m>.
     </p>
@@ -436,7 +435,7 @@
           il suffit d'intégrer deux fois,
           sans oublier les constantes d'intégration.
           Considérons les conditions initiales <m>y(0) = 2</m> et <m>y'(0) = 3</m>.
-          On substitue ces valeurs dans la solution et l'on obtient:
+          On substitue ces valeurs dans la solution et l'on obtient :
           <me>
             2 = y(0) = C_1 \cdot 0 + C_2 = C_2, \qquad 3 = y'(0) = C_1
           </me>.
@@ -448,7 +447,7 @@
     </example>
     <p>
       Fait intéressant à
-      propos de <m>\cosh</m>:
+      propos de <m>\cosh</m> :
       le graphe de <m>\cosh</m> est précisément la forme d'une chaînette pendante
       (pas d'une parabole, contrairement à
       ce qu'on pourrait croire).
@@ -458,22 +457,22 @@
       De plus, le graphe de <m>\cosh</m> offre la forme idéale pour une arche supportant son propre poids;
       une telle arche de forme parabolique risquerait de s'écrouler.
       Un exemple célèbre est la {Gateway Arch} de la ville américaine de Saint-Louis,
-      dont la formule est inscrite dans la structure:
+      dont la formule est inscrite dans la structure :
       <me>
         y = -127.7 \; \textrm{ft}  \cdot \cosh\left( x /127.7  \; \textrm{ft}  \right) + 757.7 \;\textrm{ft}
       </me>.
     </p>
   </subsection>
 
-<fact xml:id="fact-test">
+<!-- <fact xml:id="fact-test">
   <statement>
     <p>Le fait est que <m>2+2 \ne 5</m>
       
     </p>
   </statement>
-</fact>
+</fact> -->
 
-
+<!-- TODO exos -->
   <exercise xml:id = "Derivees-Partielles-05" component = "webwork">
       <webwork source ="RELCALC3-pretext/Chap_Fonc-Multi-Variables/Derivees-Partielles-05.pg"/>
   </exercise>
@@ -603,7 +602,7 @@
       </statement>
     </exercise>
     <p>
-      <em>Note: Les exercices dont les numéros sont 101 et plus ont des réponses à
+      <em>Note : Les exercices dont les numéros sont 101 et plus ont des réponses à
       la fin du manuel.</em>
     </p>
     <exercise>
