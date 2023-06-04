@@ -23,17 +23,18 @@
       et la pente de la tangente au graphe à
       ce point est donnée par <m>f(x , y)</m>.
       La solution exacte au point <m>(x , y)</m> est approximée par une droite de pente <m>f(x , y)</m>,
-      alors on place un petit segment de droite ayant cette pente, à ce point.
+      alors on place à ce point un petit segment de droite ayant cette pente.
       Par exemple, si <m>f(x , y) = xy</m>,
       alors, au point <m>(2 , 1,5)</m>,
       on trace une petite ligne de pente <m>xy = 2 \times 1,5 = 3</m>.
       Si <m>y(x)</m> est une solution et que <m>y(2) = 1,5</m>,
       l'équation différentielle impose la condition <m>y'(2) = 3</m>.
-      Voir <xref ref="x1_3_fig0">la</xref>.
+      Voir la <xref ref="x1_3_fig0">figure</xref>.
     </p>
     <figure xml:id="x1_3_fig0">
-      <caption>La  tangente au point <m>(2 , 1,5)</m>, dont la pente est <m>y'=xy</m>.</caption>
-      \diffyincludegraphics{width=3in}{width=4.5in}{1-3-xysl-one}
+      <caption>La tangente au point <m>(2 , 1,5)</m>, dont la pente est <m>y'=xy</m>.</caption>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1-3-xysl-one} -->
+      <image width="100%" source="1-3-xysl-one"/>
     </figure>
     <p>
       Pour visualiser le comportement des solutions,
@@ -47,7 +48,7 @@
       On appelle une telle figure le <em>champ de directions
           <idx><h>champ de directions</h></idx>
       </em> pour l'équation.
-      <xref ref="x1_3_fig1">La</xref> montre le champ de directions pour l'équation <m>y' = xy</m> . Habituellement,
+      La <xref ref="x1_3_fig1">figure</xref> montre le champ de directions pour l'équation <m>y' = xy</m>. Habituellement,
       on laissera à
       un ordinateur le soin de tracer une telle figure.
     </p>
@@ -56,8 +57,7 @@
       <m>y(x_0) = y_0</m>.
       Une solution, c'est-à-dire le graphe d'une solution,
       est une courbe tangente aux segments de droite qu'on a dessinés.
-      Quelques exemples de solutions sont donnés à
-      <xref ref="x1_3_fig2">la</xref>.
+      Quelques exemples de solutions sont donnés à la <xref ref="x1_3_fig2">figure</xref>.
       On peut tracer grosso modo une solution dans le champ de directions,
       juste en regardant les directions.
       Il suffit de tracer une courbe qui passe par la condition initiale et qui est à
@@ -65,22 +65,31 @@
     </p>
     <figure xml:id="x1_3_fig1">
       <caption>Champ de directions pour <m>y' = xy</m>.</caption>
-      \diffyincludegraphics{width=3.0in}{width=4.5in}{1-3-xysl}
-      <nbsp/><nbsp/>
-      \diffyincludegraphics{width=3.0in}{width=4.5in}{1-3-xysl-sol}
-      \caption{Champ de directions pour <m>y' = xy</m>, avec les graphes de solutions satisfaisant à <m>y(0) = 0,2</m>, <m>y(0) = 0</m> et <m>y(0) = -0,2</m>.}
+      <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{1-3-xysl} -->
+      <image width="100%" source="1-3-xysl"/>
+      
+      <!-- <nbsp/><nbsp/> -->
+      <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{1-3-xysl-sol} -->
+      
+      <!-- \caption{Champ de directions pour <m>y' = xy</m>, avec les graphes de solutions satisfaisant à <m>y(0) = 0,2</m>, <m>y(0) = 0</m> et <m>y(0) = -0,2</m>.} -->
     </figure>
+
+    <figure xml:id="x1_3_fig2">
+      <caption>Champ de directions pour <m>y' = xy</m>, avec les graphes de solutions satisfaisant à <m>y(0) = 0,2</m>, <m>y(0) = 0</m> et <m>y(0) = -0,2</m>.</caption>
+      <image width="100%" source="1-3-xysl-sol"/>
+    </figure>
+
     <p>
       L'observation du champ de directions suffit pour avoir beaucoup d'information sur le comportement des solutions.
-      Par exemple, <xref ref="x1_3_fig2">la</xref>
+      Par exemple, la <xref ref="x1_3_fig2">figure</xref>
       nous montre le comportement des solutions selon que <m>y(0) > 0</m>,
       <m>y(0) = 0</m> ou <m>y(0) \lt 0</m>.
       Un petit changement dans la condition initiale peut entraîner des différences appréciables dans le comportement des solutions.
       Et l'on peut le voir juste en regardant le champ de directions et en imaginant ce que font les solutions.
     </p>
     <p>
-      Le comportement est tout autre avec l'équation <m>y' = -y</m>.
-      <xref ref="x1_3_fig3">La</xref> montre le champ de directions de cette équation,
+      Le comportement est tout autre avec l'équation <m>y' = -y</m>. La
+      <xref ref="x1_3_fig3">figure</xref> montre le champ de directions de cette équation,
       ainsi que quelques solutions.
       Lorsqu'on se déplace de gauche à
       droite (dans la direction où <m>x</m> augmente),
@@ -91,7 +100,8 @@
     </p>
     <figure xml:id="x1_3_fig3">
       <caption>Champ de directions pour <m>y' = -y</m>, avec le graphe de quelques solutions.</caption>
-      \diffyincludegraphics{width=3in}{width=4.5in}{1-3-mysl-sol}
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1-3-mysl-sol} -->
+      <image width="100%" source="1-3-mysl-sol"/>
     </figure>
   </subsection>
   <subsection>
@@ -136,7 +146,7 @@
     <example>
       <statement>
         <p>
-          Essayons de résoudre l'équation suivante:
+          Essayons de résoudre l'équation suivante :
           <me>
             y' = \frac{1}{x},  \qquad  y(0) = 0
           </me>.
@@ -145,33 +155,38 @@
           En intégrant,
           on trouve la solution générale <m>y = \ln \, \lvert x \rvert + C</m>.
           Mais cette solution n'est pas définie en <m>x=0</m>.
-          Voir <xref ref="x1_3_xinvfig">la</xref>.
+          Voir la <xref ref="x1_3_xinvfig">figure</xref>.
           On aurait pu écrire l'équation comme
           <m>x y' = 1</m> et l'on pourrait croire que la solution devrait être jolie.
         </p>
         <figure xml:id="x1_3_xinvfig">
           <caption>Champ de directions pour <m>y' = \nicefrac{1}{x}</m>.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{1-3-xinv-sol}
-          <nbsp/><nbsp/>
-          \diffyincludegraphics{width=3in}{width=4.5in}{1-3-sqrt-sol}
-          \caption{Champ de directions pour <m>y' = 2 \sqrt{\lvert y \rvert}</m>, avec deux solutions satisfaisant à <m>y(0) = 0</m>. }
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1-3-xinv-sol} -->
+          <image width="100%" source="1-3-xinv-sol"/>
+        </figure>
+        <figure xml:id="x1_3_sqrtfig">
+          <!-- <nbsp/><nbsp/>
+          \diffyincludegraphics{width=3in}{width=4.5in}{1-3-sqrt-sol} -->
+          <caption>Champ de directions pour <m>y' = 2 \sqrt{\lvert y \rvert}</m>, avec deux solutions satisfaisant à <m>y(0) = 0</m>.</caption>
+          <!-- \caption{Champ de directions pour <m>y' = 2 \sqrt{\lvert y \rvert}</m>, avec deux solutions satisfaisant à <m>y(0) = 0</m>. } -->
+          <image width="100%" source="1-3-sqrt-sol"/>
         </figure>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          Résolvons:
+          Résolvons :
           <me>
             y' = 2 \sqrt{\lvert y \rvert}, \qquad y(0) = 0
           </me>.
         </p>
         <p>
-          Voir <xref ref="x1_3_sqrtfig">la</xref>.
+          Voir la <xref ref="x1_3_sqrtfig">figure</xref>.
           Remarquons que <m>y=0</m> est une solution.
-          Et en voici une autre:
+          Et en voici une autre :
           <me>
-            y(x) =  \begin{cases} x^2 \amp  \text{ si }  \; x \geq 0,\\ -x^2 \amp  \text{ si }  \; x \lt  0. \end{cases}
+            y(x) =  \begin{cases} x^2 \amp  \text{ si }  \; x \geq 0 \\ -x^2 \amp  \text{ si }  \; x \lt  0. \end{cases}
           </me>
         </p>
       </statement>
@@ -181,7 +196,7 @@
       il peut être difficile de se rendre compte que la solution n'est pas unique.
       Que faire?
       Heureusement, on a le théorème de Picard<m>\!</m><fn>
-      <url href="https://fr.wikipedia.org/wiki/Charles_%C3%89mile_Picard">Charles Émile Picard</url>,
+      <url href="https://fr.wikipedia.org/wiki/Émile_Picard">Charles Émile Picard</url>,
       mathématicien françaais (1856-1941).
       </fn>.
     </p>
@@ -194,7 +209,7 @@
           Si <m>f(x , y)</m> est une fonction continue en <m>(x , y)</m> et que <m>\frac{\partial f}{\partial y}</m> existe dans un voisinage d'un point <m>(x_0 , y_0)</m>, alors il existe une solution à l'équation différentielle
           <me>
             y' = f(x,y), \qquad y(x_0) = y_0
-          </me>,
+          </me>
         </p>
         <p>
           (possiblement dans un petit intervalle de valeurs de <m>x</m>) et,
@@ -214,7 +229,7 @@
     <example>
       <statement>
         <p>
-          Résolvons:
+          Résolvons :
           <me>
             y' = y^2, \qquad y(0) = A
           </me>,
@@ -250,6 +265,8 @@
       nous considérerons principalement des équations dont la solution existe et est unique pour toutes les valeurs de la variable indépendante.
     </p>
   </subsection>
+
+  <!-- TODO -->
   <subsection>
     <title>Exercices</title>
     <exercise>
@@ -293,9 +310,6 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \begin{samepage}
-    </p>
     <exercise>
       <statement>
         <p>
@@ -306,9 +320,6 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \end{samepage}
-    </p>
     <exercise>
       <title>défi</title>
       <statement>
@@ -337,7 +348,7 @@
           Dites ce que vous savez à
           propos de son champ de directions,
           et dessinez un exemple, si vous avez l'information suivante à
-          propos de <m>f(x,y)</m>: \begin{tasks}(2) \task <m>f</m> ne dépend pas de <m>y</m>. \task <m>f</m> ne dépend pas de <m>x</m>. \task
+          propos de <m>f(x,y)</m> : \begin{tasks}(2) \task <m>f</m> ne dépend pas de <m>y</m>. \task <m>f</m> ne dépend pas de <m>x</m>. \task
           <m>f(t,t) = 0</m> pour toute valeur <m>t</m>. \task <m>f(x,0) = 0</m> et
           <m>f(x,1) = 1</m> pour tout <m>x</m>. \end{tasks}
         </p>
@@ -421,9 +432,6 @@
     <p>
       \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Non puisque la seule solution possible n'est pas définie au point <m>(x,y) = (1,0)</m>. }
     </p>
-    <p>
-      \begin{samepage}
-    </p>
     <exercise>
       <statement>
         <p>
@@ -436,7 +444,7 @@
       </statement>
     </exercise>
     <p>
-      \end{samepage} \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>y'=\cos y</m>,
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>y'=\cos y</m>,
       b) <m>y' = y\cos(x)</m>, c) <m>y'=\sin x</m>. }
     </p>
     <exercise>

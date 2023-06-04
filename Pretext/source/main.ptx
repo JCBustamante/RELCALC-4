@@ -108,8 +108,8 @@ Remarque
       </titlepage>
     </frontmatter>
     <xi:include href="./intro_chapter.ptx"/>
-    <!--
     <xi:include href="./fo_chapter.ptx"/>
+    <!--
     <xi:include href="./ho_chapter.ptx"/>
     <xi:include href="./sys_chapter.ptx"/>
     <xi:include href="./FS_chapter.ptx"/>

@@ -2,7 +2,7 @@
   <title>Intégrales en tant que solutions</title>
   <introduction>
     <p>
-      Une équation différentielle du premier ordre est une équation pouvant s'écrire de la forme suivante:
+      Une équation différentielle du premier ordre est une équation pouvant s'écrire sous la forme suivante :
       <me>
         \frac{dy}{dx} = f(x,y)
       </me>
@@ -15,14 +15,14 @@
       Il n'y a pas de méthode générale simple pour trouver la solution à
       toute équation du premier ordre.
       Nous verrons quelques cas où c'est possible.
-      Commençaons par supposer que <m>f</m> est une fonction de <m>x</m>,
-      seulement, c'est-à-dire:
+      Commençons par supposer que <m>f</m> est une fonction de <m>x</m>
+      seulement, c'est-à-dire :
       <men xml:id="ias_inteq">
         y' = f(x)
       </men>.
     </p>
     <p>
-      On peut alors intégrer des deux côtés pour trouver une solution:
+      On peut alors intégrer des deux côtés pour trouver une solution :
       <me>
         \int y'(x) \,dx = \int f(x) \,dx + C
       </me>,
@@ -49,7 +49,7 @@
       (les intégrales avec des bornes)
       qui sont les vraies intégrales.
       Mais c'est pratique de parler d'intégrale indéfinie puisqu'on peut toujours écrire l'intégrale indéfinie <m>\int f(x) \,dx + C</m> comme suit,
-      grâce au théorème fondamental du calcul:
+      grâce au théorème fondamental du calcul :
       <me>
         \int_{x_0}^x f(t) \,dt + C
       </me>.
@@ -57,7 +57,7 @@
     <p>
       C'est ce qui nous permet de dire <em>intégrer
           <idx><h>intégrer</h></idx>
-      </em> quand, en réalité, on veut dire
+      </em> quand, en réalité, nous voulons dire
       <em>trouver la primitive
           <idx><h>primitive</h></idx>
       </em>.
@@ -87,14 +87,14 @@
     <p>
       Normalement, on a aussi une <em>condition initiale</em>,
       de la forme <m>y(x_0) = y_0</m>,
-      où <m>x_0,y_0</m> sont des nombre réels
+      où <m>x_0,y_0</m> sont des nombres réels
       (habituellement, <m>x_0=0</m>,
       mais ce n'est pas toujours le cas).
       Dans ce cas,
       la solution s'écrit très bien sous forme intégrale.
       Supposons que le problème à
       résoudre est <m>y' = f(x)</m>, <m>y(x_0) = y_0</m>.
-      Alors, la solution est:
+      Alors, la solution est :
       <men xml:id="int_eqdef">
         y(x) = \int_{x_0}^x f(s) \,ds + y_0
       </men>.
@@ -103,10 +103,10 @@
       Vérifions.
       Par le théorème fondamental du calcul,
       la dérivée de l'intégrale précédente est <m>f(x)</m>,
-      et donc <m>y(x)</m> est bel et bien est une solution à
+      et donc <m>y(x)</m> est bel et bien une solution à
       l'équation différentielle.
       Maintenant, vérifions qu'elle satisfait aussi à
-      la condition initiale:
+      la condition initiale :
       <me>
         y(x_0) = \int_{x_0}^{x_0} f(x)\,dx + y_0 = y_0
       </me>.
@@ -131,7 +131,7 @@
           </me>.
         </p>
         <p>
-          Par la solution précédente, la solution doit être:
+          Par la solution précédente, la solution doit être :
           <me>
             y(x) = \int_0^x e^{-s^2} \,ds + 1
           </me>.
@@ -139,7 +139,7 @@
         <p>
           Or, il n'y a pas de formule plus explicite pour la primitive de <m>e^{-x^2}</m>
           (on ne peut pas, par exemple,
-          faire un changement de variables...).
+          faire un changement de variables).
           Et la solution sous forme intégrale est très correcte,
           telle quelle.
           Elle joue un rôle important, d'ailleurs, en statistique.
@@ -148,13 +148,13 @@
     </example>
     <p>
       La méthode de l'intégrale sert aussi à
-      résoudre des équations de la forme suivante:
+      résoudre des équations de la forme suivante :
       <me>
         y' = f(y)
       </me>.
     </p>
     <p>
-      Écrivons cette équation dans la notation de Leibniz:
+      Écrivons cette équation dans la notation de Leibniz :
           <idx><h>notation de Leibniz</h></idx>
       <me>
         \frac{dy}{dx} = f(y)
@@ -162,7 +162,7 @@
     </p>
     <p>
       Le théorème de la fonction inverse, en calcul,
-      nous permet d'échanger les rôles de <m>x</m> et de <m>y</m> pour écrire l'équation sous la forme suivante:
+      nous permet d'échanger les rôles de <m>x</m> et de <m>y</m> pour écrire l'équation sous la forme suivante :
       <me>
         \frac{dx}{dy} = \frac{1}{f(y)}
       </me>.
@@ -177,7 +177,7 @@
     </p>
     <p>
       Dans le cas présent,
-      on peut intégrer l'équation précédente des deux côtés pour obtenir:
+      on peut intégrer l'équation précédente des deux côtés pour obtenir :
       <me>
         x(y) = \int \frac{1}{f(y)} \,dy + C
       </me>.
@@ -197,7 +197,7 @@
         <p>
           Observons d'abord que <m>y=0</m> est une solution.
           Supposons donc dorénavant que <m>y\not= 0</m>.
-          On peut alors écrire:
+          On peut alors écrire :
           <me>
             \frac{dx}{dy} = \frac{1}{ky}
           </me>.
@@ -209,7 +209,7 @@
           </me>,
           où <m>D</m> est une constante arbitraire.
           Maintenant, on résout pour <m>y</m> ou,
-          plus précisément, pour <m>\lvert y \rvert</m>:
+          plus précisément, pour <m>\lvert y \rvert</m> :
           <me>
             \lvert y \rvert = e^{kx-kD} =  e^{-kD} e^{k x}
           </me>.
@@ -220,7 +220,7 @@
           ici, <m>C</m> peut aussi prendre la valeur 0
           (incorporant ainsi la solution <m>y=0</m>)
           ou des valeurs négatives,
-          ce qui nous permet de nous débarasser de la valeur absolue.
+          ce qui nous permet de nous débarrasser de la valeur absolue.
           On obtient alors la solution générale devinée plus tôt, <m>y = Ce^{kx}</m>.
         </p>
       </statement>
@@ -244,7 +244,7 @@
           </me>.
         </p>
         <p>
-          On résout pour <m>y</m>:
+          On résout pour <m>y</m> :
           <me>
             y = \frac{1}{C-x}
           </me>.
@@ -301,7 +301,7 @@
         </p>
         <p>
           Dénotons par <m>x</m> la distance parcourue par la voiture.
-          L'équation à résoudre est:
+          L'équation à résoudre est :
           <me>
             x' = e^{t/2}
           </me>.
@@ -316,7 +316,7 @@
           Il nous reste à déterminer <m>C</m>.
           On sait qu'à <m>t=0</m>, <m>x=0</m>.
           Autrement dit, <m>x(0) = 0</m>.
-          Donc:
+          Donc :
           <me>
             0 = x(0) = 2e^{0/2} + C = 2 + C
           </me>.
@@ -328,7 +328,7 @@
           </me>.
         </p>
         <p>
-          Il nous suffit de substituer <m>t=2</m> et <m>t=10</m> pour obtenir la distance parcourue après 2 et 10 secondes.
+          Il nous suffit de substituer <m>t=2</m> et <m>t=10</m> pour obtenir la distance parcourue après 2 et 10 secondes :
           <me>
             x(2) = 2e^{2/2} - 2 \approx 3{,}44 \text{ m\`etres }  , \qquad x(10) = 2e^{10/2} - 2 \approx 294 \text{ m\`etres }
           </me>.
@@ -349,7 +349,7 @@
           Dénotons par <m>x</m> la distance parcourue,
           alors <m>x'</m> est la vitesse,
           et <m>x''</m>, l'accélération.
-          Ceci nous donne l'équation différentielle avec conditions initiales suivante:
+          Ceci nous donne l'équation différentielle avec conditions initiales suivante :
           <me>
             x'' = t^2 , \qquad x(0) = 1 , \qquad x'(0) = 10
           </me>.
@@ -375,6 +375,8 @@
       </statement>
     </exercise>
   </introduction>
+  
+  <!-- TODO -->
   <subsection>
     <title>Exercices</title>
     <exercise>
@@ -514,7 +516,7 @@
         <p>
           Résolvez <m>y' = y^n</m>,
           <m>y(0) = 1</m>, où <m>n</m> est un entier positif.
-          Indice: il y a plusieurs cas à considérer.
+          Indice : il y a plusieurs cas à considérer.
         </p>
       </statement>
     </exercise>
