@@ -3,7 +3,7 @@
   <introduction>
     <p>
       Nous abordons maintenant l'<em>équation différentielle linéaire du deuxième ordre<idx><h>équation différentielle linéaire du deuxième ordre</h></idx>
-      </em>:
+      </em> :
       <me>
         A(x) y'' + B(x)y' + C(x)y = F(x)
       </me>.
@@ -24,18 +24,18 @@
       Dans le cas particulier où <m>f(x) = 0</m>,
       <men xml:id="sol_eqlinhom">
         y'' + p(x)y' + q(x)y = 0
-      </men>.
-      l'équation est dite <em>homogène<idx><h>homogeneous linear equation</h></idx>
+      </men>
+      et l'équation est dite <em>homogène<idx><h>homogeneous linear equation</h></idx>
       </em>.
       On a déjà vu quelques équations linéaires homogènes du deuxième ordre.
       <md>
-        <mrow>\qquad y'' + k^2 y \amp  = 0. \amp \amp  \text{ Les deux solutions sont: }  \amp  y_1 \amp = \cos (kx), \amp  y_2 \amp = \sin(kx) .</mrow>
-        <mrow>\qquad y'' - k^2 y \amp  = 0. \amp \amp  \text{ Les deux solutions sont: }  \amp y_1 \amp = e^{kx}, \amp  y_2 \amp = e^{-kx} </mrow>
+        <mrow>\qquad y'' + k^2 y \amp  = 0 \amp \amp  \text{ Les deux solutions sont : }  \amp  y_1 \amp = \cos (kx), \amp  y_2 \amp = \sin(kx) .</mrow>
+        <mrow>\qquad y'' - k^2 y \amp  = 0 \amp \amp  \text{ Les deux solutions sont : }  \amp y_1 \amp = e^{kx}, \amp  y_2 \amp = e^{-kx} </mrow>
       </md>.
     </p>
     <p>
       Si l'on connaît deux solutions de l'équation linéaire homogène,
-      on connait beaucoup plus que celles-ci.
+      on connaît beaucoup plus que celles-ci.
     </p>
     <theorem>
       <title>Superposition</title>
@@ -61,7 +61,7 @@
       puisque la preuve permet de mieux comprendre le fonctionnement des équations linéaires.
     </p>
     <p>
-      <em>Preuve:</em> Soit <m>y = C_1 y_1 + C_2 y_2</m>.
+      <em>Preuve :</em> Soit <m>y = C_1 y_1 + C_2 y_2</m>.
     </p>
     <p>
       Alors,
@@ -79,13 +79,13 @@
       </em> est un objet prenant pour entrée des fonctions et redonnant en sortie des fonctions (çaa ressemble à
       la fonction qui, elle,
       prend pour entrée des nombres et donne en sortie des nombres).
-      Définissons <m>L</m> tel que:
+      Définissons <m>L</m> tel que :
       <me>
         Ly = y'' + py' + qy
       </me>.
     </p>
     <p>
-      L'équation différentielle est alors: <m>Ly=0</m>.
+      L'équation différentielle est alors : <m>Ly=0</m>.
       Dire qu'un opérateur
       (ou une équation)
       <m>L</m> est <em>linéaire</em>
@@ -100,7 +100,7 @@
       Le principe de superposition nous dit entre autres que <m>y_1 = \cosh (kx)</m> et
       <m>y_2 = \sinh (kx)</m> sont aussi des solutions de l'équation <m>y'' - k^2y = 0</m>.
       Pour nous en convaincre,
-      rappelons d'abord la définition de ces deux fonctions:
+      rappelons d'abord la définition de ces deux fonctions :
       <md>
         <mrow>\cosh x \amp  = \frac{e^x  + e^{-x}}{2},</mrow>
         <mrow>\sinh x  \amp  = \frac{e^x - e^{-x}}{2}</mrow>
@@ -109,7 +109,7 @@
     <p>
       Donc, ce sont des solutions par superposition puisqu'elles sont des combinaisons linéaires des solutions <m>e^x</m> et <m>e^{-x}</m>.
       Les fonctions <m>\sinh</m> et <m>\cosh</m> sont parfois plus simples à utiliser.
-      Rappelons quelques-unes de leurs propriétés:
+      Rappelons quelques-unes de leurs propriétés :
       <md>
         <mrow>\amp  \cosh 0  = 1 , \amp    \amp  \sinh 0 = 0 ,</mrow>
         <mrow>\amp  \frac{d}{dx} \Bigl[ \cosh x \Bigr] = \sinh x , \amp   \amp  \frac{d}{dx} \Bigl[ \sinh x \Bigr] = \cosh x ,</mrow>
@@ -139,7 +139,7 @@
           </me>,
           admet exactement une solution <m>y(x)</m>,
           définie sur le même intervalle <m>I</m>,
-          et satisfaisant aux conditions initiales:
+          et satisfaisant aux conditions initiales :
           <me>
             y(a) = b_0 , \qquad y'(a) = b_1
           </me>.
@@ -161,7 +161,7 @@
       L'équation <m>y'' - k^2 y = 0</m>,
       avec les conditions initiales
       <m>y(0) = b_0</m> et <m>y'(0) = b_1</m>,
-      admet la solution suivante:
+      admet la solution suivante :
       <me>
         y(x) = b_0 \cosh (kx) + \frac{b_1}{k} \sinh (kx)
       </me>.
@@ -178,10 +178,10 @@
       l'équation différentielle satisfaisant aux conditions initiales.
     </p>
     <p>
-      <em>Question:</em> Supposons qu'on a trouvé
+      <em>Question :</em> Supposons que nous avons trouvé
       deux solutions distinctes <m>y_1</m> et <m>y_2</m> à
       l'équation homogène<nbsp/><xref ref="sol_eqlinhom"/>.
-      Est-ce que toutes les solutions peuvent s'écrire sous la forme suivante:
+      Est-ce que toutes les solutions peuvent s'écrire sous la forme suivante :
       <me>
         y = C_1 y_1 + C_2 y_2\,?
       </me>
@@ -220,7 +220,7 @@
       Mais, alors,
       <m>\sin x = 0</m> pour tout <m>x</m>, ce qui est absurde.
       Par conséquent,
-      <m>y_1</m> et <m>y_2</m> sont linéairement indépendantes, et
+      <m>y_1</m> et <m>y_2</m> sont linéairement indépendantes et
       <me>
         y = C_1 \cos x + C_2 \sin x
       </me>
@@ -228,7 +228,7 @@
     </p>
     <p>
       C'est plutôt simple de vérifier que deux fonctions sont linéairement indépendantes.
-      Regardons un autre exemple: <m>y''-2x^{-2}y = 0</m>.
+      Regardons un autre exemple : <m>y''-2x^{-2}y = 0</m>.
       Alors, <m>y_1 = x^2</m> et <m>y_2 = \nicefrac{1}{x}</m> sont des solutions.
       Pour vérifier si elles sont linéairement indépendantes,
       supposons que l'une est un multiple de l'autre : <m>y_1 = A y_2</m>.
@@ -245,12 +245,12 @@
       l'aide de la méthode de <em>réduction d'ordre
           <idx><h>réduction d'ordre</h></idx>
       </em>.
-      L'idée est qu'étant donné
+      L'idée est que, étant donné
       une solution <m>y_1</m> à
       l'équation <m>y'' + p(x) y' + q(x) y = 0</m>,
       on essaie une deuxième solution de la forme <m>y_2(x) = y_1(x) v(x)</m>.
       On a seulement besoin de trouver <m>v</m>.
-      On met <m>y_2</m> dans l'équation:
+      On met <m>y_2</m> dans l'équation :
       <md>
         <mrow>0 =  y_2'' + p(x) y_2' + q(x) y_2 \amp  =  y_1'' v + 2 y_1' v' + y_1 v'' + p(x) ( y_1' v + y_1 v' ) + q(z) y_1 v</mrow>
         <mrow>\amp  = y_1 v'' + (2 y_1' + p(x) y_1) v' + \cancelto{0}{\bigl( y_1'' + p(x) y_1' + q(x) y_1 \bigr)} v </mrow>
@@ -259,7 +259,7 @@
     <p>
       En d'autres mots, <m>y_1 v'' + (2 y_1' + p(x) y_1) v' = 0</m>.
       En posant <m>w = v'</m>, on a réduit le problème à
-      une équation linéaire du premier ordre:
+      une équation linéaire du premier ordre :
       <me>
         y_1 w' + (2 y_1' + p(x) y_1) w = 0
       </me>.
@@ -273,22 +273,22 @@
       L'équation pour <m>w</m> est alors <m>xw' + 3 w = 0</m>.
       On calcule <m>w = Cx^{-3}</m> et,
       en intégrant, on trouve <m>v = \frac{-C}{2x^2}</m>.
-      Ainsi:
+      Ainsi :
       <me>
         y_2 = y_1 v = \frac{-C}{-2x}
       </me>.
     </p>
     <p>
-      Tous les <m>C</m> fonctionnent, et,
+      Tous les <m>C</m> fonctionnent et,
       en choisissant <m>C=-2</m>, on obtient <m>y_2 = \nicefrac{1}{x}</m>.
-      Ainsi, la solution générale est:
+      Ainsi, la solution générale est :
       <me>
         y = C_1 x + C_2\nicefrac{1}{x}
       </me>.
     </p>
     <p>
       Comme on a une formule pour la solution d'une équation linéaire du premier ordre,
-      on peut écrire la formule pour <m>y_2</m>:
+      on peut écrire la formule pour <m>y_2</m> :
       <me>
         y_2(x) = y_1(x) \int \frac{e^{-\int p(x)\,dx}}{{\bigl(y_1(x)\bigr)}^2} \,dx
       </me>.
@@ -296,7 +296,7 @@
     <p>
       Toutefois, c'est beaucoup plus facile de se rappeler qu'on doit simplement essayer
       <m>y_2(x) = y_1(x) v(x)</m> et trouver <m>v(x)</m> comme on l'a fait plus haut.
-      Ainsi, la méthode fonctionne pour les équations de plus grand ordre aussi:
+      Ainsi, la méthode fonctionne pour les équations de plus grand ordre aussi :
       il faut réduire l'ordre pour chacune des solutions trouvées.
       Il est donc plus facile de se rappeler comment faire plutôt que de se rappeler une formule spécifique.
     </p>
@@ -340,7 +340,7 @@
       </statement>
     </exercise>
     <p>
-      [2] Les équations de la forme <m>a x^2 y'' + b x y' + c y = 0</m> s'appellent les
+      Les équations de la forme <m>a x^2 y'' + b x y' + c y = 0</m> s'appellent les
       <em>équations d'Euler
           <idx><h>Euler's equation</h></idx>
       </em> ou les <em>équations de Cauchy<ndash/>Euler<idx><h>Cauchy<ndash/>Euler equation</h></idx>
@@ -351,8 +351,8 @@
     <exercise xml:id="sol_eulerex">
       <statement>
         <p>
-          [2] Supposons que <m>{(b-a)}^2-4ac > 0</m>. \begin{tasks} \task Trouvez la formule pour la solution générale de <m>a x^2 y'' + b x y' + c y = 0</m>.
-          Astuce: Essayez <m>y=x^r</m> et résolvez pour <m>r</m>. \task Que se passe-t-il lorsque
+          Supposons que <m>{(b-a)}^2-4ac > 0</m>. \begin{tasks} \task Trouvez la formule pour la solution générale de <m>a x^2 y'' + b x y' + c y = 0</m>.
+          Astuce : Essayez <m>y=x^r</m> et résolvez pour <m>r</m>. \task Que se passe-t-il lorsque
           <m>{(b-a)}^2-4ac = 0</m> ou <m>{(b-a)}^2-4ac \lt 0</m>? \end{tasks}
         </p>
       </statement>
@@ -363,10 +363,10 @@
     <exercise xml:id="sol_eulerexln">
       <statement>
         <p>
-          Considérons la même équation que l' <xref ref="sol_eulerex"></xref>.
+          Considérons la même équation que l'<xref ref="sol_eulerex"></xref>.
           Supposons <m>{(b-a)}^2-4ac = 0</m>.
           Trouvez la formule pour la solution générale de <m>a x^2 y'' + b x y' + c y = 0</m>.
-          Astuce: Essayez <m>y=x^r \ln x</m> pour la deuxième solution.
+          Astuce : Essayez <m>y=x^r \ln x</m> pour la deuxième solution.
         </p>
       </statement>
     </exercise>
@@ -439,7 +439,7 @@
       <statement>
         <p>
           Trouvez la solution générale de <m>x y'' + y' = 0</m>.
-          Astuce: C'est une équation différentielle du premier ordre pour <m>y'</m>.
+          Astuce : C'est une équation différentielle du premier ordre pour <m>y'</m>.
         </p>
       </statement>
     </exercise>
@@ -452,7 +452,7 @@
           Écrivez une équation
           (en utilisant votre imagination)
           telle qu'elle a les solutions <m>e^x</m> et <m>e^{2x}</m>.
-          Astuce: Essayez une équation de la forme
+          Astuce : Essayez une équation de la forme
           <m>y''+Ay'+By = 0</m> pour des constances <m>A</m> et <m>B</m>,
           mettez dans chacune <m>e^x</m> et <m>e^{2x}</m> et résolvez pour <m>A</m> et <m>B</m>.
         </p>

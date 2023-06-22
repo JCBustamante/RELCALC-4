@@ -312,7 +312,7 @@
           Donc, Alex peut commencer à boire son café
           environ 9 minutes après l'avoir préparé
           (correspondant à peu près au temps requis pour faire ce calcul).
-          Voir la <xref ref="sintro_coffeefig">figure</xref>.
+          Voir la <xref ref="sintro_coffeefig"></xref>.
         </p>
         <figure xml:id="sintro_coffeefig">
           <caption>Graphes de la fonction de température du café <m>T(t)</m>.
