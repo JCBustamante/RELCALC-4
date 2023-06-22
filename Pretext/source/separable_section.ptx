@@ -3,12 +3,12 @@
   <introduction>
     <p>
       Lorsqu'une équation différentielle s'écrit sous la forme <m>y' = f(x)</m>,
-      il suffit d'intégrer pour en obtenir la solution:
+      il suffit d'intégrer pour en obtenir la solution :
       <m>y = \int f(x) \,dx + C</m>.
       Malheureusement,
       cette technique ne fonctionne pas dans le cas général,
       c'est-à-dire <m>y' = f(x , y)</m>,
-      car si l'on intègre des deux côtés, on obtient:
+      car si l'on intègre des deux côtés, on obtient :
       <me>
         y = \int f(x,y) \,dx + C
       </me>.
@@ -24,26 +24,26 @@
     <p>
       On dit qu'une équation différentielle est <em>séparable
           <idx><h>séparable</h></idx>
-      </em> si elle peut être écrite sous la forme suivante:
+      </em> si elle peut être écrite sous la forme suivante :
       <me>
         y' = f(x)g(y)
       </me>,
       où <m>f(x)</m>,
       <m>g(y)</m> peuvent être des fonctions quelconques. Écrivons cette équation à
-      l'aide de la notation de Leibniz:
+      l'aide de la notation de Leibniz :
           <idx><h>notation de Leibniz</h></idx>
       <me>
         \frac{dy}{dx} = f(x)g(y)
       </me>.
     </p>
     <p>
-      On peut alors réécrire l'équation comme suit:
+      On peut alors réécrire l'équation comme suit :
       <me>
         \frac{dy}{g(y)} = f(x) \,dx
       </me>.
     </p>
     <p>
-      Les deux côtés de l'équation sont des expressions qu'on peut intégrer:
+      Les deux côtés de l'équation sont des expressions qu'on peut intégrer :
       <me>
         \int \frac{dy}{g(y)} = \int f(x) \,dx + C
       </me>.
@@ -55,7 +55,7 @@
     <example xml:id="example_yprimeisxy">
       <statement>
         <p>
-          Prenons l'équation suivante:
+          Prenons l'équation suivante :
           <me>
             y' = xy
           </me>.
@@ -63,15 +63,15 @@
         <p>
           On observe que <m>y=0</m> est une solution.
           Nous gardons cette solution en mémoire et supposons maintenant que <m>y \not =0</m>,
-          ce qui nous permettra de diviser par <m>y</m>. Écrivons l'équation comme suit:
+          ce qui nous permettra de diviser par <m>y</m>. Écrivons l'équation comme suit :
           <m>\frac{dy}{dx} = xy</m>.
-          On intègre de chaque côté:
+          On intègre de chaque côté :
           <me>
             \int \frac{dy}{y} = \int x\,dx + C
           </me>.
         </p>
         <p>
-          On calcule les primitives de chaque côté et l'on obtient:
+          On calcule les primitives de chaque côté et l'on obtient :
           <me>
             \ln \, \lvert y\rvert = \frac{x^2}{2} + C
           </me>
@@ -82,13 +82,13 @@
           où <m>D > 0</m> est une constante.
           Puisque <m>y=0</m> est aussi une solution et que, de plus,
           on a la valeur absolue de <m>y</m>,
-          dans l'expression, on peut écrire:
+          dans l'expression, on peut écrire :
           <me>
             y = D e^{\frac{x^2}{2}}
           </me>,
           où <m>D</m> est une constante quelconque,
           pouvant être 0 ou négative.
-          Vérifions que c'est une solution:
+          Vérifions que c'est une solution :
           <me>
             y' = D x e^{\frac{x^2}{2}} = x \left( D e^{\frac{x^2}{2}} \right) = xy
           </me>.
@@ -97,11 +97,11 @@
     </example>
     <p>
       Regardons de plus près cette méthode.
-      On pourrait s'inquiéter du fait que les deux intégrales apparaissant dans l'expression soient en termes de variables différentes. Ça peut sembler erroné... Alors,
+      On pourrait s'inquiéter du fait que les deux intégrales apparaissant dans l'expression sont en termes de variables différentes. Ça peut sembler erroné... Alors,
       nous allons revoir la méthode de séparation des variables de manière plus rigoureuse.
     </p>
     <p>
-      Supposons donc qu'on a:
+      Supposons donc que nous avons :
       <me>
         \frac{dy}{dx} = f(x)g(y)
       </me>.
@@ -109,19 +109,19 @@
     <p>
       Observons que <m>y = y(x)</m> est une fonction de <m>x</m> et que
       <m>\frac{dy}{dx}</m> l'est également.
-      On peut donc réécrire l'équation comme suit:
+      On peut donc réécrire l'équation comme suit :
       <me>
         \frac{1}{g(y)}\,\frac{dy}{dx} = f(x)
       </me>.
     </p>
     <p>
-      Maintenant, intégrons les deux côtés par rapport à <m>x</m>:
+      Maintenant, intégrons les deux côtés par rapport à <m>x</m> :
       <me>
         \int \frac{1}{g(y)}\,\frac{dy}{dx} \,dx = \int f(x) \,dx + C
       </me>.
     </p>
     <p>
-      On fait un changement de variables dans l'intégrale de gauche:
+      On fait un changement de variables dans l'intégrale de gauche :
       <me>
         \int \frac{1}{g(y)}\,dy = \int f(x) \,dx + C
       </me>.
@@ -138,26 +138,26 @@
       avec la méthode des équations séparables,
       même si les deux intégrales sont résolubles.
       Considérons, par exemple,
-      l'équation séparable suivante:
+      l'équation séparable suivante :
       <me>
         y' = \frac{xy}{y^2+1}
       </me>.
     </p>
     <p>
-      On sépare les variables:
+      On sépare les variables :
       <me>
         \frac{y^2+1}{y}\,dy = \left(y+\frac{1}{y}\right)\,dy = x\,dx
       </me>.
     </p>
     <p>
-      On intègre:
+      On intègre :
       <me>
         \frac{y^2}{2} + \ln \, \lvert y \rvert = \frac{x^2}{2} + C
       </me>.
     </p>
     <p>
       Puis, on réécrit pour rendre la solution plus jolie (ici,
-      <m>D = 2C</m>):
+      <m>D = 2C</m>) :
       <me>
         y^2 + 2 \ln \, \lvert y\rvert = x^2 + D
       </me>.
@@ -173,7 +173,7 @@
       l'équation différentielle.
       Il suffit de dériver chaque côté par rapport à
       <m>x</m>, en se souvenant que <m>y</m> est une fonction de <m>x</m>,
-      et l'on obtient:
+      et l'on obtient :
       <me>
         y'\left(2y + \frac{2}{y}\right) = 2x
       </me>.
@@ -233,14 +233,14 @@
           Résolvons <m>x^2y' = 1 - x^2+y^2 - x^2y^2</m>, <m>y(1) = 0</m>.
         </p>
         <p>
-          On factorise le côté droit:
+          On factorise le côté droit :
           <me>
             x^2y' = (1 - x^2)(1+y^2)
           </me>.
         </p>
         <p>
           On sépare les variables,
-          on intègre et l'on résout pour <m>y</m>:
+          on intègre et l'on résout pour <m>y</m> :
           <md>
             <mrow>\frac{y'}{1+y^2} \amp  = \frac{1 - x^2}{x^2} ,</mrow>
             <mrow>\frac{y'}{1+y^2} \amp  = \frac{1}{x^2} - 1 ,</mrow>
@@ -278,15 +278,15 @@
           La loi de refroidissement de Newton<idx><h>loi de refroidissement de Newton</h></idx> affirme que le taux de changement de la température du café est proportionnel à
           la différence entre la température du café
           et la température ambiante.
-          Autrement dit:
+          Autrement dit :
           <me>
             \frac{dT}{dt} = k(A-T)
           </me>,
           où <m>k</m> est une constante.
-          Dans notre exemple: <m>A=22</m>,
+          Dans notre exemple : <m>A=22</m>,
           <m>T(0) = 89</m>, <m>T(1) = 85</m>.
           On sépare les variables et l'on intègre (ici,
-          <m>C</m> et <m>D</m> sont des constantes arbitraires):
+          <m>C</m> et <m>D</m> sont des constantes arbitraires) :
           <md>
             <mrow>\frac{1}{T-A} \, \frac{dT}{dt} \amp  = -k ,</mrow>
             <mrow>\ln (T-A)  \amp = -kt + C , \qquad \text{ (notons que }  T-A > 0 \text{)}</mrow>
@@ -297,7 +297,7 @@
         <p>
           En substituant la valeur de <m>A</m>,
           on a <m>T = 22 + D\, e^{-kt}</m>.
-          On substitue la condition initiale:
+          On substitue la condition initiale :
           <m>89 = T(0) = 22 + D</m>, et donc <m>D = 67</m>.
           Ainsi, <m>T = 22 + 67\, e^{-kt}</m>.
           La deuxième condition donne que <m>85 = T(1) = 22 + 67\, e^{-k}</m>.
@@ -306,13 +306,13 @@
           Maintenant, trouvons la valeur de <m>t</m> donnant une température de 60 degrés.
           On résout l'équation suivante,
           <me>
-            60 = 22 + 67 e^{-0{,}0616t}
+            60 = 22 + 67 e^{-0{,}0616t},
           </me>
           pour obtenir <m>t = - \frac{\ln \frac{60-22}{67}}{0{,}0616} \approx 9{,}21</m> minutes.
           Donc, Alex peut commencer à boire son café
           environ 9 minutes après l'avoir préparé
           (correspondant à peu près au temps requis pour faire ce calcul).
-          Voir <xref ref="sintro_coffeefig">la</xref>.
+          Voir la <xref ref="sintro_coffeefig">figure</xref>.
         </p>
         <figure xml:id="sintro_coffeefig">
           <caption>Graphes de la fonction de température du café <m>T(t)</m>.
@@ -321,7 +321,8 @@
           Observez que la température atteint la valeur 85 à <m>t=1</m>, et 60 à
           <m>t \approx 9{,}21</m>.  À droite, le graphe montre la température pour une plus longue durée,
           avec une droite horizontale à la valeur de la température ambiante, soit 22.</caption>
-          \diffyincludegraphics{width=6.24in}{width=9in}{coffeefig-1-2}
+          <!-- \diffyincludegraphics{width=6.24in}{width=9in}{coffeefig-1-2} -->
+          <image width="100%" source="coffeefig-1-2"/>
         </figure>
       </statement>
     </example>
@@ -335,10 +336,10 @@
           Notons d'abord que <m>y=0</m> est une solution
           (singulière).
           Supposons donc pour la suite que <m>y \not= 0</m>.
-          On sépare les variables et l'on intègre:
+          On sépare les variables et l'on intègre :
           <md>
-            <mrow>\frac{-3}{y^2} y' \amp  = x  \displaybreak[0]</mrow>
-            <mrow>\frac{3}{y}   \amp  = \frac{x^2}{2} + C  \displaybreak[0]</mrow>
+            <mrow>\frac{-3}{y^2} y' \amp  = x</mrow>,
+            <mrow>\frac{3}{y}   \amp  = \frac{x^2}{2} + C</mrow>,
             <mrow>y \amp  = \frac{3}{\nicefrac{x^2}{2} + C} = \frac{6}{x^2 + 2C}</mrow>
           </md>.
         </p>
@@ -385,7 +386,7 @@
       <statement>
         <p>
           Résolvez <m>\dfrac{dy}{dx} = xy+x+y+1</m>.
-          Indice: factorisez le côté droit.
+          Indice : factorisez le côté droit.
         </p>
       </statement>
     </exercise>
@@ -504,7 +505,7 @@
       <statement>
         <p>
           Reprenez l' <xref ref="sep_coffeeexample"></xref>
-          avec les mêmes valeurs: 89 degrés à
+          avec les mêmes valeurs : 89 degrés à
           <m>t=0</m>, 85 degrés à
           <m>t=1</m>, et une température ambiante de 22 degrés.
           Supposons que ces températures ont été
@@ -512,7 +513,7 @@
           on ne connaît qu'un intervalle de temps pour que la température du café
           atteigne exactement 60 degrés.
           Trouvez cet intervalle de temps.
-          Indice: quel type d'erreur rend le temps de refroidissement plus long?
+          Indice : quel type d'erreur rend le temps de refroidissement plus long?
           Plus court?
         </p>
       </statement>
@@ -523,7 +524,7 @@
     <exercise>
       <statement>
         <p>
-          Une population de lapins <m>x</m> sur une île est modelisée par l'équation suivante:
+          Une population de lapins <m>x</m> sur une île est modelisée par l'équation suivante :
           <m>x' = x- \bigl(\nicefrac{1}{1000} \bigr) x^2</m>,
           où la variable indépendante <m>t</m> est le temps,
           mesuré

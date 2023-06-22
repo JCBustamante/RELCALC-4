@@ -2,7 +2,7 @@
   <title>Équations autonomes</title>
   <introduction>
     <p>
-      Considérons une équation différentielle comme suit:
+      Considérons une équation différentielle comme suit :
       <me>
         \frac{dx}{dt} = f(x)
       </me>,
@@ -19,15 +19,16 @@
     </p>
     <p>
       Reprenons, par exemple, le problème du café
-      qui tiédit ( <xref ref="sep_coffeeexample"></xref>).
-      La loi de refroidissement de Newton<idx><h>La loi de refroidissement de Newton</h></idx> est une équation autonome:
+      qui tiédit (<xref ref="sep_coffeeexample"></xref>).  
+      <!-- TODO example exemple -->
+      La loi de refroidissement de Newton<idx><h>La loi de refroidissement de Newton</h></idx> est une équation autonome :
       <me>
-        \frac{dx}{dt} = k (A-x)
+        \frac{dx}{dt} = k (A-x),
       </me>
       où <m>x</m> est la température, <m>t</m> est le temps,
-      <m>k</m> est une constante positive,
+      <m>k</m> est une constante positive
       et <m>A</m> est la température ambiante.
-      Voir <xref ref="x2_2_coffeefig">la</xref>
+      Voir la <xref ref="x2_2_coffeefig"></xref>
       pour un exemple avec <m>k=0{,}3</m> et <m>A=5</m>.
     </p>
     <p>
@@ -62,15 +63,17 @@
     <figure xml:id="x2_2_coffeefig">
       <caption>Le champ de directions de
       <m>x' = 0.3\ (5-x)</m> et quelques solutions.</caption>
-      \diffyincludegraphics{width=2.93in}{width=4.5in}{2-2-coffee}
-      <nbsp/><nbsp/>
-      \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic}
-      \caption{Le champ de directions de
-      <m>x' = 0.1\,x\,(5-x)</m> et quelques solutions.}
+      <!-- \diffyincludegraphics{width=2.93in}{width=4.5in}{2-2-coffee} -->
+      <image width="100%" source="2-2-coffee"/>
+    </figure>
+    <figure xml:id="x2_2_logisticfig">
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic} -->
+      <image width="100%" source="2-2-logistic"/>
+      <caption>Le champ de directions de <m>x' = 0.1\,x\,(5-x)</m> et quelques solutions.</caption>
     </figure>
     <p>
       Considérons maintenant <em>l'équation logistique<idx><h>l'équation logistique</h></idx>
-      </em>:
+      </em> :
       <me>
         \frac{dx}{dt} = kx(M-x)
       </me>,
@@ -85,7 +88,7 @@
       la solution mathématique admet des valeurs négatives.
     </p>
     <p>
-      <xref ref="x2_2_logisticfig">La</xref>
+      La <xref ref="x2_2_logisticfig"></xref>
       illustre l'exemple <m>x' = 0.1 x(5-x)</m>.
       Il y a deux points critiques, <m>x=0</m> et <m>x=5</m>.
       Celui à <m>x=5</m> est stable, alors que celui à
@@ -94,9 +97,9 @@
     <p>
       On peut analyser le comportement à
       long terme des solutions sans devoir les déterminer exactement.
-      Le champ de directions de <m>x' = 0.1 x(5-x)</m> nous montre que:
+      Le champ de directions de <m>x' = 0.1 x(5-x)</m> nous montre que :
       <me>
-        \lim_{t\to \infty} x(t) =   \begin{cases} 5 \amp  \text{ si }  \; x(0) > 0 , \\ 0 \amp  \text{ si }  \; x(0) = 0 , \\ \text{ n'existe pas ou }  {-\infty} \amp  \text{ si }  \; x(0) \lt  0 . \end{cases}
+        \lim_{t\to \infty} x(t) =   \begin{cases} 5 \amp  \text{ si }  \; x(0) > 0 \\ 0 \amp  \text{ si }  \; x(0) = 0 \\ \text{ n'existe pas ou }  {-\infty} \amp  \text{ si }  \; x(0) \lt  0 . \end{cases}
       </me>
     </p>
     <p>
@@ -106,7 +109,7 @@
       Rappelons l'exemple de <m>x' = x^2</m> où les solutions existent seulement sur un intervalle fini.
       Un tel scénario est possible ici.
       Dans les faits,
-      on trouverait ici que la solution n'existe pas pour toutes les valeurs réelles <mdash/> et tend vers
+      on trouverait ici que la solution n'existe pas pour toutes les valeurs réelles <mdash/> et qu'elle tend vers
       <m>-\infinity</m> dans un temps fini <mdash/> mais,
       pour le voir, il faudrait résoudre l'équation.
     </p>
@@ -126,14 +129,14 @@
       <ul>
         <li>
           <p>
-            Nous traçaons l'axe des <m>x</m>,
-            nous y marquons tous les points critiques de l'équation et nous traçaons des flèches dans les intervalles déterminés par ces points critiques.
+            Nous traçons l'axe des <m>x</m>,
+            nous y marquons tous les points critiques de l'équation et nous traçons des flèches dans les intervalles déterminés par ces points critiques.
           </p>
         </li>
         <li>
           <p>
             Étant donné que <m>x</m> est la variable dépendante,
-            nous tracerons l'axe des <m>x</m> verticalement,
+            nous traçons l'axe des <m>x</m> verticalement,
             pour reproduire sa position dans le champ de directions.
           </p>
         </li>
@@ -159,7 +162,7 @@
       </ul>
     </p>
     <p>
-      Dans notre exemple:
+      Dans notre exemple :
       <ul>
         <li>
           <p>
@@ -169,14 +172,14 @@
         </li>
         <li>
           <p>
-            Pour <m>0 \lt x \lt 5</m>:
+            Pour <m>0 \lt x \lt 5</m> :
             <m>f(1) = 0{,}4 > 0</m>, donc <m>f(x) > 0</m>,
             et la flèche dans cet intervalle pointe vers le haut.
           </p>
         </li>
         <li>
           <p>
-            Pour <m>x \lt 0</m>:
+            Pour <m>x \lt 0</m> :
             <m>f(-1) = -0{,}6 \lt 0</m>, donc <m>f(x) \lt 0</m>,
             et la flèche dans cet intervalle pointe vers le bas.
           </p>
@@ -187,8 +190,8 @@
       <image width="73%" source="2-2-l-phasedia"/>
     </p>
     <p>
-      [0] Grâce à un diagramme de phase,
-      on peut facilement tracer une approximation des solutions,
+      Grâce à un diagramme de phase,
+      nous pouvons facilement tracer une approximation des solutions,
       car le signe de <m>f(x)</m> nous dit le signe de la dérivée, et donc si la valeur augmente ou diminue.
       De gauche à droite
       (dans le sens où augmente la variable indépendante),
@@ -205,9 +208,9 @@
       </statement>
     </exercise>
     <p>
-      [0] À l'aide du diagramme de phase,
-      on peut classifier les points critiques comme stables ou instables<fn>
-      Parfois, on dira d'un point critique instable qu'il est <em>semistable</em>,
+      À l'aide du diagramme de phase,
+      nous pouvons classifier les points critiques comme stables ou instables<fn>
+      Parfois, on dira d'un point critique instable qu'il est <em>semi-stable</em>,
           <idx><h>point critique semi-stable</h></idx>
       si une des deux flèches pointe vers le point critique.
       </fn>.
@@ -228,7 +231,7 @@
       Soit <m>M</m> la capacité
       totale en humains sur la planète en l'absence de récolte.
       Le nombre <m>k > 0</m> est une constante représentant le taux de reproduction des humains.
-      Notre équation devient:
+      Notre équation devient :
       <me>
         \frac{dx}{dt} = kx(M-x) - h
       </me>.
@@ -236,7 +239,7 @@
     <p>
       On développe le côté
       droit et on le met égal à
-      zéro afin de trouver les points critiques:
+      zéro afin de trouver les points critiques :
       <me>
         kx(M-x) - h = -kx^2+kMx - h  = 0
       </me>.
@@ -252,11 +255,11 @@
       <statement>
         <p>
           Tracez le diagramme de phase pour quelques cas.
-          Notez que les cas possibles sont:
+          Notez que les cas possibles sont :
           <m>A > B</m>, ou <m>A=B</m>,
           ou alors <m>A</m> et <m>B</m> sont deux nombres complexes
           (et donc aucune solution réelle).
-          Indice: fixez des valeurs simples pour <m>k</m> et <m>M</m> et, ensuite,
+          Indice : fixez des valeurs simples pour <m>k</m> et <m>M</m> et, ensuite,
           faites varier <m>h</m>, pour obtenir différents cas.
         </p>
       </statement>
@@ -265,8 +268,8 @@
       Par exemple, posons <m>M=8</m> et <m>k=0.1</m>.
       Si <m>h=1</m>,
       alors <m>A</m> et <m>B</m> sont distincts et positifs.
-      Le champ de directions est illustré à
-      <xref ref="x2_2_harv1">la</xref>.
+      Le champ de directions est illustré à la
+      <xref ref="x2_2_harv1"></xref>.
       Tant que la population initiale est au-dessus de <m>B</m>,
       approximativement 1,55 million,
       la population n'atteindra pas l'extinction.
@@ -277,11 +280,14 @@
     <figure xml:id="x2_2_harv1">
       <caption>Le champ de directions et quelques solutions pour
       <m>x' = 0{,}1\ x\ (8-x)-1</m>.</caption>
-      \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h1}
-      <nbsp/><nbsp/>
-      \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-hc}
-      \caption{Le champ de directions et quelques solutions pour
-      <m>x' = 0{,}1\,x\,(8-x)-1.6</m>. }
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h1} -->
+      <image width="100%" source="2-2-logistic-h1"/>
+    </figure>
+    <figure xml:id="x2_2_harvc">  
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-hc} -->
+      <image width="100%" source="2-2-logistic-hc"/>
+      <caption>Le champ de directions et quelques solutions pour
+      <m>x' = 0{,}1\,x\,(8-x)-1.6</m>.</caption>
     </figure>
     <p>
       Si <m>h = 1{,}6</m>, alors <m>A=B=4</m>.
@@ -291,25 +297,23 @@
       Mais en dessous de cette valeur,
       elle tendra vera l'extinction.
       Et si l'état d'équilibre est légèrement perturbé, on risque encore l'extinction.
-      Voir <xref ref="x2_2_harvc">la</xref>.
+      Voir la <xref ref="x2_2_harvc"></xref>.
     </p>
     <p>
       Enfin, si la récolte est de 2 millions par année, il n'y a aucun point critique.
       La population tendra vers zéro,
       quelle que soit sa quantité initiale.
-      Voir <xref ref="x2_2_harv2">la</xref>.
+      Voir la <xref ref="x2_2_harv2"></xref>.
     </p>
     <figure xml:id="x2_2_harv2">
       <caption>Le champ de directions et quelques solutions pour
       <m>x' = 0{,}1\ x\ (8-x)-2</m>.</caption>
-      \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h2}
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h2} -->
+      <image width="100%" source="2-2-logistic-h2"/>
     </figure>
   </introduction>
   <subsection>
     <title>Exercices</title>
-    <p>
-      \begin{samepage}
-    </p>
     <exercise>
       <statement>
         <p>
@@ -319,9 +323,6 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \end{samepage}
-    </p>
     <exercise>
       <statement>
         <p>
@@ -383,7 +384,7 @@
       </statement>
     </exercise>
     <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) 0, 1, 2 sont des points critiques. b) <m>x=0</m> est instable (semistable),
+      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) 0, 1, 2 sont des points critiques. b) <m>x=0</m> est instable (semi-stable),
       <m>x=1</m> est stable, et <m>x=2</m> est instable. c) 1 }
     </p>
     <exercise>

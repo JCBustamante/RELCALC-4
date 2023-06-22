@@ -19,19 +19,19 @@
       Pour expliquer comment résoudre une équation exacte,
       on va remonter à
       la source du problème.
-      Supposons donc qu'on a une fonction potentielle <m>F(x , y)</m>,
+      Supposons donc que nous avons a une fonction potentielle <m>F(x , y)</m>
       et voyons comment émerge l'équation exacte associée.
     </p>
     <p>
-      Pour fixer les idées, considérons l'exemple suivant:
+      Pour fixer les idées, considérons l'exemple suivant :
       <me>
         F(x,y) = x^2+y^2
       </me>.
     </p>
     <figure xml:id="exact_circlesfig">
       <caption>Solutions pour <m>F(x,y) = x^2+y^2 = C</m> pour quelques valeurs de <m>C</m>.</caption>
-      {3.25in}
-      \diffyincludegraphics{width=3in}{width=4.5in}{circlesfig}
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{circlesfig} -->
+      <image width="100%" source="circlesfig"/>
     </figure>
     <p>
       Les lieux d'énergie constante,
@@ -39,11 +39,11 @@
       où <m>C</m> est une constante.
       Dans notre exemple,
       ce sont les cercles d'équation <m>x^2+y^2=C</m>.
-      Voir <xref ref="exact_circlesfig">la</xref>.
+      Voir la <xref ref="exact_circlesfig"></xref>.
     </p>
     <p>
       Prenons la <em>dérivée totale<idx><h>dérivée totale</h></idx>
-      </em> de <m>F</m>:
+      </em> de <m>F</m> :
       <me>
         dF = \frac{\partial F}{\partial x} dx + \frac{\partial F}{\partial y} dy
       </me>.
@@ -51,7 +51,7 @@
     <p>
       Pour la suite, nous utiliserons la notation simplifiée
       <m>F_x = \frac{\partial F}{\partial x}</m> et <m>F_y = \frac{\partial F}{\partial y}</m>.
-      Dans notre exemple:
+      Dans notre exemple :
       <me>
         dF = 2x \, dx + 2y \, dy
       </me>.
@@ -60,7 +60,7 @@
       En prenant la dérivée totale de chaque côté
       de l'équation <m>F(x,y) = C</m>,
       on obtient une équation différentielle, <m>dF = 0</m>.
-      Cette équation s'écrit de la manière suivante:
+      Cette équation s'écrit de la manière suivante :
       <men xml:id="eq_exact">
         M \, dx + N \, dy = 0 \qquad \text{ ou }  \qquad  M + N \, \frac{dy}{dx} = 0
       </men>,
@@ -81,7 +81,7 @@
     </p>
     <p>
       Parfois, on voudra écrire <m>y</m> comme une fonction de <m>x</m>.
-      Dans notre exemple:
+      Dans notre exemple :
       <me>
         y = \pm \sqrt{C^2-x^2}
       </me>.
@@ -96,7 +96,7 @@
           <idx><h>champ de vecteurs</h></idx>
       </em>, puisque <m>M</m> et <m>N</m> sont des fonctions de <m>(x,y)</m>.
       Dans le cas d'une équation exacte,
-      on a une fonction potentielle <m>F(x,y)</m> telle que:
+      on a une fonction potentielle <m>F(x,y)</m> telle que :
       <me>
         \vec{v} = \left( \frac{\partial F}{\partial x} ,\frac{\partial F}{\partial y} \right)
       </me>.
@@ -109,8 +109,8 @@
       (une courbe paramétrée)
       débutant au point <m>(x_1,y_1)</m> et finissant au point <m>(x_2,y_2)</m>.
       Si l'on pense à <m>\vec{v}</m> comme à
-      un champ de forces, alors le travail effectué
-      par cette force le long de la trajectoire <m>\gamma</m> est:
+      un champ de force, alors le travail effectué
+      par cette force le long de la trajectoire <m>\gamma</m> est :
       <me>
         \int_\gamma \vec{v}(\vec{r}) \cdot d\vec{r} = \int_\gamma M \, dx + N \, dy = F(x_2,y_2) - F(x_1,y_1)
       </me>.
@@ -128,7 +128,7 @@
       lorsque la trajectoire suit une courbe <m>F(x,y) = C</m>.
     </p>
     <p>
-      En résumé: une équation différentielle exacte correspond à
+      En résumé : une équation différentielle exacte correspond à
       un champ de vecteurs conservatif,
       et la solution d'une telle équation est une fonction potentielle de ce champ de vecteurs.
     </p>
@@ -136,7 +136,7 @@
   <subsection>
     <title>Résoudre des équations exactes</title>
     <p>
-      Vous vous demandez peut-être:
+      Vous vous demandez peut-être :
       où avons-nous résolu une équation différentielle?
       C'est que, dans les applications,
       on connaît <m>M</m> et <m>N</m>,
@@ -153,7 +153,7 @@
       une constante près.
       Une fois trouvée <m>F</m>,
       la solution implicite à
-      l'équation différentielle sera:
+      l'équation différentielle sera :
       <me>
         F\bigl(x,y(x)\bigr) = C
       </me>.
@@ -174,17 +174,17 @@
           Donc, si <m>F</m> existe,
           on a nécessairement que <m>F_x (x,y) = 2x</m>.
           On intègre par rapport à
-          <m>x</m> et l'on obtient:
+          <m>x</m> et l'on obtient :
           <men xml:id="eq_exact_fint">
             F(x,y) = x^2 + A(y)
           </men>,
           où <m>A(y)</m> est une fonction arbitraire.
-          La fonction <m>A</m> est la <em>constante d'intégration</em>:
+          La fonction <m>A</m> est la <em>constante d'intégration</em> :
           elle est seulement constante par rapport à
           <m>x</m>, mais elle peut dépendre de <m>y</m>.
           Ensuite, on dérive <xref ref="eq_exact_fint"/> par rapport à
           <m>y</m> et l'on met le résultat égal à
-          <m>N</m>, autrement dit <m>F_y</m>:
+          <m>N</m>, autrement dit <m>F_y</m> :
           <me>
             2y = F_y (x,y) = A'(y)
           </me>.
@@ -195,7 +195,7 @@
           (voir l'exercice).
           Nous avons donc trouvé <m>F(x,y) = x^2+y^2</m>.
           Il ne reste qu'à résoudre pour <m>y</m>,
-          en fonction de <m>x</m>, dans l'équation suivante:
+          en fonction de <m>x</m>, dans l'équation suivante :
           <me>
             F\bigl(x,y(x)\bigr) = C
           </me>,
@@ -218,12 +218,12 @@
     </exercise>
     <p>
       Lorsqu'on sait que l'équation différentielle est exacte,
-      la démarche est donc:
+      la démarche est donc :
       <ol label="i">
         <li>
           <p>
             Intégrer <m>F_x = M</m> par rapport à
-            <m>x</m> por obtenir <m>F(x, y) = \text{ quelque chose } + A(y)</m>.
+            <m>x</m> pour obtenir <m>F(x, y) = \text{ quelque chose } + A(y)</m>.
           </p>
         </li>
         <li>
@@ -250,13 +250,13 @@
           On applique la démarche.
           Si l'on suppose qu'une fonction potentielle <m>F</m> existe pour l'équation,
           alors <m>F_x (x,y) = 2x+y</m>.
-          On intègre:
+          On intègre :
           <me>
             F(x,y) = x^2 + xy + A(y)
           </me>,
           où <m>A(y)</m> est une fonction quelconque.
           On dérive par rapport à
-          <m>y</m> et l'on met le résultat égal à <m>N</m>:
+          <m>y</m> et l'on met le résultat égal à <m>N</m> :
           <me>
             N = xy = F_y (x,y) = x+A'(y)
           </me>.
@@ -264,7 +264,7 @@
         <p>
           On a obtenu une équation impossible à résoudre.
           En effet, on ne peut pas écrire <m>xy</m> comme <m>x</m> plus une fonction de <m>y</m>.
-          Conclusion: l'équation différentielle n'admet pas de fonction potentielle et elle n'est donc pas exacte.
+          Conclusion : l'équation différentielle n'admet pas de fonction potentielle et elle n'est donc pas exacte.
         </p>
       </statement>
     </example>
@@ -273,7 +273,7 @@
       En fait, oui.
       Supposons en effet que <m>M = F_x</m> et que <m>N = F_y</m>.
       Si les dérivées secondes sont continues,
-      on a forcément que les dérivées mixtes s'interchangent:
+      on a forcément que les dérivées mixtes s'interchangent :
       <me>
         \frac{\partial M}{\partial y} =   \frac{\partial^2 F}{\partial y \partial x} =  \frac{\partial^2 F}{\partial x \partial y} =   \frac{\partial N}{\partial x}
       </me>.
@@ -284,7 +284,7 @@
       des calculs d'intégrales. À l'inverse,
       on a le lemme de Poincaré<fn>
       Nommé ainsi en l'honneur de
-      <url href="https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9">Jules Henri Poincaré</url>
+      <url href="https://fr.wikipedia.org/wiki/Henri_Poincar%C3%A9">Jules Henri Poincaré</url>
       (1854-1912).
       </fn>.
     </p>
@@ -306,7 +306,7 @@
       mais possiblement définie seulement dans une petite région contenant le point initial.
     </p>
     <p>
-      Retournons à notre exemple précédent:
+      Retournons à notre exemple précédent :
       <m>M = 2x + y</m> et <m>N = xy</m>.
       On note que <m>M_y = 1</m> et que <m>N_x = y</m>.
       Les deux expressions ne sont pas égales,
@@ -321,12 +321,12 @@
           </me>.
         </p>
         <p>
-          D'abord, on écrit l'équation sous la forme suivante:
+          D'abord, on écrit l'équation sous la forme suivante :
           <me>
             (2x+y) + (x-1)\frac{dy}{dx} = 0
           </me>,
           donc <m>M = 2x+y</m> et <m>N = x-1</m>.
-          Alors:
+          Alors :
           <me>
             M_y = 1 = N_x
           </me>.
@@ -335,14 +335,14 @@
           L'équation différentielle est donc exacte,
           et nous procédons avec la démarche.
           On intègre <m>M</m> par rapport à
-          <m>x</m>, et l'on trouve:
+          <m>x</m> et l'on trouve :
           <me>
             F(x,y) = x^2+xy + A(y)
           </me>.
         </p>
         <p>
           On dérive par rapport à
-          <m>y</m> et l'on met le résultat égal à <m>N</m>:
+          <m>y</m> et l'on met le résultat égal à <m>N</m> :
           <me>
             x-1 = x + A'(y)
           </me>.
@@ -351,18 +351,18 @@
           Donc, <m>A'(y) = -1</m>, et l'on peut prendre <m>A(y) = -y</m>.
           Ceci donne <m>F(x, y) = x^2+xy-y</m>.
           Nous obtenons ainsi la solution générale à
-          l'équation, sous forme implicite:
+          l'équation, sous forme implicite :
           <me>
             x^2+xy-y = C
           </me>.
         </p>
         <p>
-          On calcule maintenant la valeur de <m>C</m>:
+          On calcule maintenant la valeur de <m>C</m> :
           puisque <m>y(0)=1</m>, on a que <m>F(0,1) = C</m>.
           Donc, <m>0^2+0\times 1 - 1 = C</m>, et <m>C=-1</m>.
           En dernier lieu, on isole le <m>y</m> dans l'expression
           (puisque c'est possible)
-          pour obtenir une solution explicite:
+          pour obtenir une solution explicite :
           <me>
             y = \frac{-x^2-1}{x-1}
           </me>.
@@ -372,7 +372,7 @@
     <example>
       <statement>
         <p>
-          Résolvons:
+          Résolvons :
           <me>
             -\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0,   \qquad y(1) = 2
           </me>.
@@ -390,7 +390,7 @@
           point où le champ de vecteurs n'est pas défini.
           Prenons, par exemple, une courbe <m>\gamma</m> qui encercle l'origine,
           disons qu'elle part du point <m>(1,0)</m> et y retourne par un chemin dans le sens inverse des aiguilles d'une montre.
-          Si une fonction potentielle <m>F</m> existe, on obtiendrait alors:
+          Si une fonction potentielle <m>F</m> existe, on obtiendrait alors :
           <me>
             0 = F(1,0) - F(1,0) = \int_\gamma F_x \, dx + F_y \, dy = \int_\gamma \frac{-y}{x^2+y^2} \, dx + \frac{x}{x^2+y^2} \, dy = 2\pi
           </me>.
@@ -409,7 +409,7 @@
           Dans notre exemple, puisque <m>y(1) = 2</m>,
           le point de départ est <m>(1,2)</m>.
           En considérant le cas où <m>x > 0</m> et en intégrant <m>M</m> par rapport à
-          <m>x</m>, ou <m>N</m> par rapport à <m>y</m>, on trouve:
+          <m>x</m>, ou <m>N</m> par rapport à <m>y</m>, on trouve :
           <me>
             F(x,y) = \operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr)
           </me>.
@@ -420,21 +420,22 @@
           Autrement dit, la solution est une droite.
           Poser <m>y(1) = 2</m> nous donne <m>\tan(C) = 2</m>,
           et donc <m>y= 2x</m> est la solution désirée.
-          Voir <xref ref="exact_y2x">la</xref>,
+          Voir la <xref ref="exact_y2x"></xref>,
           en notant que la solution est seulement définie pour <m>x > 0</m>.
         </p>
         <figure xml:id="exact_y2x">
           <caption>Solution pour
           <m>-\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0</m>, <m>y(1) = 2</m>,
           avec le point initial indiqué.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{exact-y2x}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{exact-y2x} -->
+          <image width="100%" source="exact-y2x"/>
         </figure>
       </statement>
     </example>
     <example xml:id="exact_exampleabove">
       <statement>
         <p>
-          Résolvons:
+          Résolvons :
           <me>
             x^2+y^2 + 2y(x+1) \frac{dy}{dx} = 0
           </me>.
@@ -443,7 +444,7 @@
           On vérifie d'abord que l'équation est exacte
           (exercice).
           On pose <m>M= x^2+y^2</m> et <m>N=2y(x+1)</m>.
-          On suit la démarche:
+          On suit la démarche :
           <me>
             F(x, y) = \frac{1}{3}x^3 + xy^2 + A(y)
           </me>,
@@ -456,7 +457,7 @@
           Par conséquent, <m>A'(y) = 2y</m> ou <m>A(y) = y^2</m>,
           et <m>F(x,y) = \frac{1}{3}x^3 + xy^2 + y^2</m>.
           Maintenant, on tente d'isoler le <m>y</m> dans l'expression <m>F(x,y) = C</m>.
-          On peut mettre <m>y^2</m> en évidence et ensuite prendre la racine carrée:
+          On peut mettre <m>y^2</m> en évidence et ensuite prendre la racine carrée :
           <me>
             y^2 = \frac{C-(\nicefrac{1}{3})x^3}{x+1},\qquad \text{ donc }  \qquad   y = \pm \sqrt{\frac{C-(\nicefrac{1}{3})x^3}{x+1}}
           </me>.
@@ -487,7 +488,7 @@
     <exercise>
       <statement>
         <p>
-          Supposons qu'on a une équation différentielle de la forme suivante:
+          Supposons qu'on a une équation différentielle de la forme suivante :
           <m>f(x) + g(y) \frac{dy}{dx} = 0</m>. \begin{tasks} \task Montrez que l'équation est exacte. \task Trouvez une expression pour le potentiel en fonction de <m>f</m> et <m>g</m>. \end{tasks}
         </p>
       </statement>
@@ -495,7 +496,7 @@
     <exercise>
       <statement>
         <p>
-          Supposons qu'on a l'équation suivante:
+          Supposons qu'on a l'équation suivante :
           <m>f(x) \, dx - dy = 0</m>. \begin{tasks} \task L'équation est-elle exacte? \task Exprimez la solution générale à
           l'aide d'une intégrale définie. \end{tasks}
         </p>
@@ -515,9 +516,6 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \begin{samepage}
-    </p>
     <exercise>
       <statement>
         <p>
@@ -529,19 +527,16 @@
           (au moins localement)
           une fonction appelée la <em>conjuguée harmonique<idx><h>conjuguée harmonique</h></idx>
           </em>, <m>v(x,y)</m>, telle que <m>v_x = -u_y</m> et
-          <m>v_y = u_x</m>. \end{tasks} Montrez que les <m>u</m> suivantes sont harmoniques et trouvez leur conjuguée harmonique <m>v</m>: \begin{tasks}[resume](3) \task <m>u = 2xy</m> \task
+          <m>v_y = u_x</m>. \end{tasks} Montrez que les <m>u</m> suivantes sont harmoniques et trouvez leur conjuguée harmonique <m>v</m> : \begin{tasks}[resume](3) \task <m>u = 2xy</m> \task
           <m>u = e^x \cos y</m> \task <m>u = x^3-3xy^2</m> \end{tasks}
         </p>
       </statement>
     </exercise>
-    <p>
-      \end{samepage}
-    </p>
     <exercise>
       <statement>
         <p>
           Résolvez les équations exactes suivantes,
-          en laissant la solution sous forme implicite: \begin{tasks}(2) \task
+          en laissant la solution sous forme implicite : \begin{tasks}(2) \task
           <m>\cos(x)+ye^{xy} + xe^{xy} y' = 0</m> \task <m>(2x+y)\, dx + (x-4y) \, dy = 0</m> \task
           <m>e^x + e^y \frac{dy}{dx} = 0</m> \task <m>(3x^2+3y)\,dx + (3y^2+3x)\, dy = 0</m> \end{tasks}
         </p>
@@ -558,7 +553,7 @@
           \begin{tasks} \task Montrez que toute équation séparable
           <m>y' = f(x)g(y)</m> peut être écrite sous forme exacte,
           et vérifiez qu'elle est bien exacte. \task Utilisez ceci pour écrire <m>y' = xy</m> comme une équation exacte,
-          résolvez l'équation et vérifiez que la solution obtenue est la même que dans l' <xref ref="example_yprimeisxy"></xref>. \end{tasks}
+          résolvez l'équation et vérifiez que la solution obtenue est la même que dans l'<xref ref="example_yprimeisxy"></xref>. \end{tasks}
         </p>
       </statement>
     </exercise>

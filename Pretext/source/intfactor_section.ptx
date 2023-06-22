@@ -29,7 +29,7 @@
       c'est qu'il y a une méthode générale pour résoudre les équations linéaires du premier ordre.
     </p>
     <p>
-      L'idée: réécrire le côté
+      L'idée : réécrire le côté
       gauche de <xref ref="lineq_eq1"/> comme une dérivée du produit de <m>y</m> avec une fonction à déterminer.
       Ainsi, nous cherchons une fonction <m>r(x)</m> telle que :
       <me>
@@ -39,7 +39,7 @@
     <p>
       Ceci est le côté gauche de <xref ref="lineq_eq1"/> multiplié par <m>r(x)</m>.
       Donc, si l'on multiplie <xref ref="lineq_eq1"/> par <m>r(x)</m>,
-      on obtient:
+      on obtient :
       <me>
         \frac{d}{dx}\Bigl[ r(x) y \Bigr] = r(x)f(x)
       </me>.
@@ -53,7 +53,7 @@
       La fonction <m>r(x)</m> s'appelle le
       <em>facteur intégrant
           <idx><h>facteur intégrant</h></idx>
-      </em> et la méthode s'appelle la
+      </em>, et la méthode s'appelle la
       <em>méthode du facteur intégrant<idx><h>méthode du facteur intégrant</h></idx>
       </em>.
     </p>
@@ -62,13 +62,13 @@
       On cherche une fonction qui, lorsqu'on la dérive,
       donne de nouveau la fonction,
       multipliée par <m>p(x)</m>.
-      Les fonctions exponentielles ont précisément cette propriété. On pose donc:
+      Les fonctions exponentielles ont précisément cette propriété. On pose donc :
       <me>
         r(x) = e^{\int p(x) \,dx}
       </me>.
     </p>
     <p>
-      On substitue cette valeur dans l'équation différentielle pour obtenir ce qui suit:
+      On substitue cette valeur dans l'équation différentielle pour obtenir ce qui suit :
       <md>
         <mrow>y' + p(x) y  \amp = f(x) ,</mrow>
         <mrow>e^{\int p(x) \,dx} y' + e^{\int p(x) \,dx} p(x) y    \amp  = e^{\int p(x) \,dx} f(x) ,</mrow>
@@ -93,14 +93,14 @@
           Notons d'abord que <m>p(x) = 2x</m> et que <m>f(x) = e^{x-x^2}</m>.
           Le facteur intégrant est <m>r(x) = e^{\int p(x)\, dx} = e^{x^2}</m>.
           On multiplie chaque côté
-          de l'équation par <m>r(x)</m> pour obtenir:
+          de l'équation par <m>r(x)</m> pour obtenir :
           <md>
             <mrow>e^{x^2} y' + 2xe^{x^2}y \amp  = e^{x-x^2} e^{x^2} ,</mrow>
             <mrow>\frac{d}{dx} \left[ e^{x^2} y \right] \amp = e^x </mrow>
           </md>.
         </p>
         <p>
-          On intègre:
+          On intègre :
           <md>
             <mrow>e^{x^2} y \amp = e^x +C ,</mrow>
             <mrow>y \amp = e^{x-x^2} + C e^{-x^2} </mrow>
@@ -109,7 +109,7 @@
         <p>
           Ensuite, on résout pour la condition initiale
           <m>-1 = y(0) = 1 + C</m>, ce qui donne <m>C=-2</m>.
-          La solution est donc:
+          La solution est donc :
           <me>
             y = e^{x-x^2} - 2 e^{-x^2}
           </me>.
@@ -119,17 +119,17 @@
     <p>
       Notons que nous pouvons prendre la primitive de notre choix pour <m>e^{\int p(x) dx}</m>.
       On peut ajouter une constante d'intégration,
-      mais çaa ne changera pas la réponse à la fin.
+      mais ça ne changera pas la réponse à la fin.
     </p>
     <exercise>
       <statement>
         <p>
-          Essayez-le<em>:</em> ajoutez une constante d'intégration au facteur intégrant dans l'exemple et vérifiez que vous obtenez la même solution qu'ici.
+          Essayez-le : ajoutez une constante d'intégration au facteur intégrant dans l'exemple et vérifiez que vous obtenez la même solution qu'ici.
         </p>
       </statement>
     </exercise>
     <p>
-      Conseil: plutôt que d'apprendre par cœur la formule,
+      Conseil : plutôt que d'apprendre par cœur la formule,
       retenez plutôt la méthode pour l'obtenir.
       C'est plus simple,
       et il suffit alors de répéter la méthode pour résoudre le problème.
@@ -138,13 +138,13 @@
       Puisqu'on ne peut pas toujours trouver une solution analytique,
       il peut être utile de savoir comment écrire la solution sous forme d'intégrale définie,
       car une intégrale définie peut être traitée par un logiciel de calcul.
-      Soit l'équation suivante:
+      Soit l'équation suivante :
       <me>
         y' + p(x) y = f(x) , \qquad y(x_0) = y_0
       </me>.
     </p>
     <p>
-      Écrivons la solution sous forme d'intégrale définie:
+      Écrivons la solution sous forme d'intégrale définie :
       <men xml:id="lei_defsol">
         \mybxbg{ ~~ y(x) = e^{-\int_{x_0}^x p(s)\, ds} \left( \int_{x_0}^x e^{\int_{x_0}^t p(s)\, ds} f(t) \,dt + y_0 \right). ~~ }
       </men>
@@ -182,29 +182,28 @@
         la formule <xref ref="lei_defsol"/> implique que si <m>p(x)</m> et <m>f(x)</m> sont continues sur un intervalle <m>(a , b)</m>,
         alors la solution <m>y(x)</m> existe et est différentiable sur <m>(a , b)</m>.
         Comparez à l'exemple non linéaire vu précédemment,
-        <m>y'=y^2</m>, ainsi qu'<xref ref="slope_picardthm">au</xref>.
+        <m>y'=y^2</m>, ainsi qu'au <xref ref="slope_picardthm">théorème</xref>.
       </p>
     </remark>
     <example>
       <statement>
         <p>
-          Voyons maintenant une application des équations linéaires qui est couramment rencontrée:
+          Voyons maintenant une application des équations linéaires qui est couramment rencontrée :
           la concentration de produits chimiques dans un plan d'eau.
         </p>
         <p>
-          \begin{mywrapfigsimp}{1.60in}{1.65in}
-        </p>
-        <p>
-          <image width="73%" source="lin-tank"/> \end{mywrapfigsimp} Un réservoir d'une capacité
+          <image width="73%" source="lin-tank"/> 
+          <!-- TODO on ne voit pas le texte sur l'image -->
+          Un réservoir d'une capacité
           de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau.
-          Une solution d'eau saline avec une concentration de 0,1 kilogrammes par litre entre dans le réservoir à
+          Une solution d'eau saline avec une concentration de 0,1 kilogramme par litre entre dans le réservoir à
           un taux de 5 litres par minute.
           La solution dans le réservoir est bien brassée (c'est-à-dire qu'on peut supposer que la concentration est la même partout) et sort à
           un taux de 3 litres par minute.
           Combien de sel est contenu dans le réservoir lorsqu'il est plein?
         </p>
         <p>
-          Commençaons par établir l'équation différentielle modélisant ce problème.
+          Commençons par établir l'équation différentielle modélisant ce problème.
           Dénotons par <m>x</m> la quantité
           de sel dans le réservoir,
           en kilogrammes, et par <m>t</m> le temps en minutes.
@@ -212,58 +211,59 @@
           la variation en <m>x</m> (dénotée
           <m>\Delta x</m>) est approximativement :
           <me>
-            \Delta x \approx (\text{ taux entr\'ee }  \times \text{ concentration entr\'ee } ) \Delta t - (\text{ taux sortie }  \times \text{ concentration sortie } ) \Delta t
+            \Delta x \approx (\text{ taux entrée }  \times \text{ concentration entrée } ) \Delta t - (\text{ taux sortie }  \times \text{ concentration sortie } ) \Delta t
           </me>.
         </p>
         <p>
-          On divise partout par <m>\Delta t</m> et l'on prend la limite <m>\Delta t \to 0</m> pour obtenir:
+          On divise partout par <m>\Delta t</m> et l'on prend la limite <m>\Delta t \to 0</m> pour obtenir :
           <me>
-            \frac{dx}{dt} = (\text{ taux entr\'ee }  \times \text{ concentration entr\'ee } )  - (\text{ taux sortie }  \times \text{ concentration sortie } )
+            \frac{dx}{dt} = (\text{ taux entrée }  \times \text{ concentration entrée } )  - (\text{ taux sortie }  \times \text{ concentration sortie } )
           </me>.
         </p>
         <p>
-          Dans notre exemple:
+          Dans notre exemple :
           <md>
-            <mrow>\text{ taux entr\'ee }  \amp = 5 ,</mrow>
-            <mrow>\text{ concentration entr\'ee }  \amp = 0,1 ,</mrow>
+            <mrow>\text{ taux entrée }  \amp = 5 ,</mrow>
+            <mrow>\text{ concentration entrée }  \amp = 0{,}1 ,</mrow>
             <mrow>\text{ taux sortie }  \amp = 3 ,</mrow>
             <mrow>\text{ concentration sortie }  \amp = \frac{x}{\text{ volume } } = \frac{x}{60+(5-3)t} </mrow>
           </md>.
         </p>
         <p>
-          L'équation modélisant le problème est donc:
+          L'équation modélisant le problème est donc :
           <me>
             \frac{dx}{dt} =  (5 \times 0,1)  -   \left(3 \frac{x}{60+2t}\right)
           </me>.
         </p>
         <p>
-          On réécrit ceci sous la forme <xref ref="lineq_eq1"/>:
+          On réécrit ceci sous la forme <xref ref="lineq_eq1"/> :
           <me>
-            \frac{dx}{dt} +   \frac{3}{60+2t} x =   0.5
+            \frac{dx}{dt} +   \frac{3}{60+2t} x =   0,5
           </me>.
         </p>
         <p>
           Maintenant, on peut résoudre l'équation.
-          Le facteur intégrant est:
+          Le facteur intégrant est :
           <me>
             r(t) = \exp \left( \int \frac{3}{60+2t} dt  \right) =   \exp \left( \frac{3}{2} \ln (60+2t) \right) =   {(60+2t)}^{3/2}
           </me>.
         </p>
         <p>
-          On multiplie les deux côtés de l'équation par le facteur intégrant et l'on obtient:
+          On multiplie les deux côtés de l'équation par le facteur intégrant et l'on obtient :
           <md>
-            <mrow>{(60+2t)}^{3/2} \frac{dx}{dt} + {(60+2t)}^{3/2} \frac{3}{60+2t} x \amp  =   0,5{(60+2t)}^{3/2}</mrow>
-            <mrow>\frac{d}{dt}\left[{(60+2t)}^{3/2} x \right] \amp  = 0,5{(60+2t)}^{3/2}</mrow>
-            <mrow>{(60+2t)}^{3/2} x \amp  = \int  0,5{(60+2t)}^{3/2} dt +C</mrow>
-            <mrow>x  \amp  =   {(60+2t)}^{-3/2} \int  \frac{{(60+2t)}^{3/2}}{2}dt +C{(60+2t)}^{-3/2}</mrow>
-            <mrow>x  \amp  =  {(60+2t)}^{-3/2}\frac{1}{10}{(60+2t)}^{5/2}  +C{(60+2t)}^{-3/2}</mrow>
+            <mrow>{(60+2t)}^{3/2} \frac{dx}{dt} + {(60+2t)}^{3/2} \frac{3}{60+2t} x \amp  =   0,5{(60+2t)}^{3/2},</mrow>
+            <mrow>\frac{d}{dt}\left[{(60+2t)}^{3/2} x \right] \amp  = 0,5{(60+2t)}^{3/2},</mrow>
+            <mrow>{(60+2t)}^{3/2} x \amp  = \int  0,5{(60+2t)}^{3/2} dt +C,</mrow>
+            <mrow>x  \amp  =   {(60+2t)}^{-3/2} \int  \frac{{(60+2t)}^{3/2}}{2}dt +C{(60+2t)}^{-3/2},</mrow>
+            <mrow>x  \amp  =  {(60+2t)}^{-3/2}\frac{1}{10}{(60+2t)}^{5/2}  +C{(60+2t)}^{-3/2},</mrow>
             <mrow>x  \amp  = \frac{60+2t}{10}+C{(60+2t)}^{-3/2} </mrow>
           </md>.
         </p>
         <figure xml:id="linear-salt-graph_fig">
           <caption>Graphe de la solution <m>x</m> kilogrammes de sel dans le réservoir au temps <m>t</m>.</caption>
-          {3.25in}
-          \diffyincludegraphics{width=3in}{width=4.5in}{linear-salt-graph}
+          <!-- {3.25in} -->
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{linear-salt-graph} -->
+          <image width="100%" source="linear-salt-graph"/>
         </figure>
         <p>
           On doit trouver la valeur de <m>C</m>.
@@ -281,18 +281,23 @@
           On cherche à savoir la valeur de <m>x</m> lorsque le réservoir est plein.
           Ceci arrive lorsque <m>60+2t = 100</m>,
           c'est-à-dire à <m>t=20</m>.
-          Donc:
+          Donc :
           <me>
-            \begin{split} x(20) \amp  =   \frac{60+40}{10}+C{(60+40)}^{-3/2}  \\ \amp  \approx  10 +1859,03 {(100)}^{-3/2} \approx 11,86 . \end{split}
+            x(20) = \frac{60+40}{10}+C{(60+40)}^{-3/2} \approx  10 +1859,03 {(100)}^{-3/2} \approx 11{,}86 .
           </me>
         </p>
         <p>
-          Voir <xref ref="linear-salt-graph_fig">la</xref>
+          Voir la <xref ref="linear-salt-graph_fig">figure</xref>
           pour le graphe de <m>x</m> en fonction de <m>t</m>.
         </p>
         <p>
-          La concentration dans le réservoir plein est approximativement \unitfrac[0{,}1186]{kg}{litre}, alors que la concentration initiale est de
-          <m>\nicefrac{1}{6}</m> ou \unitfrac[0{,}167]{kg}{litre}.
+          La concentration dans le réservoir plein est approximativement
+          <!-- \unitfrac[0{,}1186]{kg}{litre} -->
+          0,1186 kg/L,
+          alors que la concentration initiale est de
+          <m>\nicefrac{1}{6}</m> ou 
+          <!-- \unitfrac[0{,}167]{kg}{litre} -->
+          0,167 kg/L.
         </p>
       </statement>
     </example>
@@ -356,6 +361,7 @@
           On suppose que l'eau est bien brassée par le ruisseau. \begin{tasks} \task Trouvez la concentration de la matière dangereuse dans chacun des lacs,
           en fonction du temps. \task À quel moment est-ce que la concentration dans le premier lac tombe en-dessous de \unit[0.001]{kg} par litre? \task À quel moment est-ce que la concentration dans le deuxième sera maximale? \end{tasks}
         </p>
+        <!-- TODO begin tasks -->
       </statement>
     </exercise>
     <exercise>
@@ -374,6 +380,7 @@
           long terme de la solution?
           Pourquoi ou pourquoi pas? \end{tasks}
         </p>
+        <!-- TODO begin tasks -->
       </statement>
     </exercise>
     <exercise>
@@ -429,10 +436,19 @@
       <statement>
         <p>
           Un réservoir d'eau est vidé à
-          un taux de \unitfrac[3]L{min}. Au départ,
-          le réservoir contient \unit[10]L d'eau propre.
+          un taux de
+          <!-- \unitfrac[3]L{min} -->
+          3 L/min. Au départ,
+          le réservoir contient 10 L
+          <!-- \unit[10]L -->
+          d'eau propre.
           De l'eau contenant une matière dangereuse se déverse dans le réservoir à
-          un taux de \unitfrac[2]L{min}, ave une concentration de \unitfrac[<m>20t</m>]{g}L au temps <m>t</m>.
+          un taux de 2 L/min
+          <!-- \unitfrac[2]L{min} -->
+          , ave une concentration de
+          <m>20t</m> g/L
+          <!-- \unitfrac[<m>20t</m>]{g}L  -->
+          au temps <m>t</m>.
           Au moment où le réservoir est à moitié
           vide, combien de grammes de matière dangereuse sont contenus dans le réservoir? (On suppose que c'est bien brassé.)
         </p>
@@ -440,6 +456,7 @@
     </exercise>
     <p>
       \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>250</m> grammes }
+      <!-- TODO ??? -->
     </p>
     <exercise>
       <statement>
@@ -454,6 +471,7 @@
     </exercise>
     <p>
       \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>P(5) = 1000 e^{2 \times 5 - 0{,}05 \times {5}^2} = 1000 e^{8{,}75} \approx 6{,}31 \times {10}^6</m> }
+      <!-- TODO ??? -->
     </p>
     <exercise>
       <statement>
@@ -474,7 +492,10 @@
     </exercise>
     <p>
       \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>Ah' = d - kh</m>,
-      où <m>k</m> est une constante mesurée en <m>\unit{m^2}{s}</m>. }
+      où <m>k</m> est une constante mesurée en <m>m^2 s</m>
+      <!-- <m>\unit{m^2}{s}</m> -->
+      . 
+      }
     </p>
   </subsection>
 </section>
