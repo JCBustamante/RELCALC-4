@@ -20,9 +20,9 @@
         <mrow>y_2'' \amp  = f_2(y_1',y_2',y_1,y_2,x)</mrow>
       </md>
       pour des fonctions <m>f_1</m> et <m>f_2</m>.
-      On appelle çaa un <em>système d'équations différentielles<idx><h>système d'équations différentielles</h></idx>
+      On appelle ça un <em>système d'équations différentielles<idx><h>système d'équations différentielles</h></idx>
       </em>.
-      De façaon plus précise,
+      De façon plus précise,
       l'équation précédente est un
       <em>système d'EDO du second ordre<idx><h>système d'EDO du second ordre</h></idx>
       </em> étant donné
@@ -108,9 +108,9 @@
       et il faudra résoudre toutes les variables en même temps.
       Même si l'on ne peut pas toujours résoudre le système pour une variable et ensuite pour la suivante,
       on essaiera de tirer profit au maximum de cette technique.
-      D'une certaine façaon,
+      D'une certaine façon,
       on résoudra plusieurs équations simples et l'on regroupera les solutions.
-      Ne nous préoccupons pas encore de la façaon de résoudre les systèmes d'équations.
+      Ne nous préoccupons pas encore de la façon de résoudre les systèmes d'équations.
     </p>
     <p>
       Considérons principalement les
@@ -120,7 +120,7 @@
       <em>système linéaire du premier ordre<idx><h>système linéaire du premier ordre</h></idx>
       </em>, car les variables dépendantes ou leurs dérivées n'apparaissent pas dans des fonctions non linéaires ou à
       des puissances supérieures à
-      un (<m>x</m>, <m>y</m>, <m>x'</m> et <m>y'</m> constantes,
+      1 (<m>x</m>, <m>y</m>, <m>x'</m> et <m>y'</m> constantes,
       et les fonctions de <m>t</m> peuvent être présentes,
       mais pas <m>xy</m> ni <m>{(y')}^2</m> ni <m>x^3</m>).
       Voici un exemple plus complexe de système linéaire :
@@ -154,7 +154,7 @@
           et le second, <m>x_2</m> grammes.
           La solution est parfaitement mélangée et s'écoule d'un réservoir à l'autre à
           la vitesse de <m>r</m> litres par seconde.
-          Voir <xref ref="sintro_closedbrine">la</xref>.
+          Voir la <xref ref="sintro_closedbrine"></xref>.
         </p>
         <p>
           Le taux de variation de <m>x_1</m>,
@@ -170,7 +170,7 @@
           </me>.
         </p>
         <p>
-          De la même façaon,
+          De la même façon,
           on trouve le taux de variation de <m>x_2'</m> quand les rôles de <m>x_1</m> et <m>x_2</m> sont inversés.
           En résumé, le système d'EDO de ce problème est
           <md>
@@ -188,7 +188,7 @@
         </p>
         <p>
           On ne sait pas encore comment trouver toutes les solutions,
-          mais on peut au moins en trouver certaines de façaon intuitive.
+          mais on peut au moins en trouver certaines de façon intuitive.
           Supposons que nous savons que les réservoirs contiennent la même quantité
           de sel au départ.
           On a donc la condition initiale <m>x_1(0)=x_2(0) = C</m>.
@@ -225,11 +225,11 @@
           Reprenons le montage avec une masse et un ressort, mais,
           cette fois-ci, considérons deux masses.
         </p>
-        <p>
-          \begin{mywrapfigsimp}{2.0in}{2.3in}
+        <p>        
+          <image width="73%" source="cartsfig"/>
         </p>
         <p>
-          <image width="73%" source="cartsfig"/> \end{mywrapfigsimp} On a un ressort avec une constante <m>k</m> et deux masses <m>m_1</m> et <m>m_2</m>.
+          On a un ressort avec une constante <m>k</m> et deux masses <m>m_1</m> et <m>m_2</m>.
           Imaginez les masses comme des chariots qui se déplacent sans friction le long d'une voie linéaire.
           La variable <m>x_1</m> représente le déplacement du premier chariot,
           et <m>x_2</m>, le déplacement du second.
@@ -265,10 +265,10 @@
   <subsection>
     <title>Passage au premier ordre</title>
     <p>
-      Avant de parler de la façaon de traiter des systèmes différentiels,
+      Avant de parler de la façon de traiter des systèmes différentiels,
       notons que, dans un certain sens,
       nous pouvons ne considérer que les systèmes du premier ordre.
-      Prenons une équation différentielle de <m>n^{\text{e} }</m> ordre :
+      Prenons une équation différentielle de <m>n^{\text{ième}}</m> ordre :
       <me>
         y^{(n)} = F(y^{(n-1)},\ldots,y',y,x)
       </me>.
@@ -435,14 +435,14 @@
       On s'intéresse principalement à
       leur direction et à
       leur taille relative.
-      Voir <xref ref="sintro-vectorfield_fig">la</xref>.
+      Voir la <xref ref="sintro-vectorfield_fig"></xref>.
     </p>
     <p>
       On peut dessiner une trajectoire de la solution dans le plan.
       Supposons que <m>x = f(t)</m> et que <m>y=g(t)</m> est la solution.
       Nous choisissons un intervalle de <m>t</m>
       (disons <m>0 \leq t \leq 2</m> pour l'exemple)
-      et nous traçaons trace tous les points
+      et nous traçons tous les points
       <m>\bigl(f(t),g(t)\bigr)</m> pour la plage <m>t</m> sélectionnée.
       L'image obtenue est appelée <em>portrait de phase
           <idx><h>portrait de phase</h></idx>
@@ -454,7 +454,7 @@
       </em> ou <em>courbe de solution
           <idx><h>courbe de solution</h></idx>
       </em>.
-      <xref ref="sintro-vectorfield-sol_fig">La</xref>
+      La <xref ref="sintro-vectorfield-sol_fig"></xref>
       donne un exemple de tracé. Sur le graphe,
       la solution commence au point <m>(1,0)</m> et se déplace le long du champ vectoriel sur une distance de deux unités de <m>t</m>.
       Ce système a été
@@ -466,11 +466,14 @@
     </p>
     <figure xml:id="sintro-vectorfield_fig">
       <caption>Portrait de phase pour <m>x' = 2y-x</m>, <m>y' = x</m>.</caption>
-      \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield}
-      <nbsp/><nbsp/>
-      \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield-sol}
-      \caption{Portrait de phase pour <m>x' = 2y-x</m>, <m>y' = x</m>, avec la trajectoire de la solution commençaant au point <m>(1,0)</m>
-      pour <m>0 \leq t \leq 2</m>. }
+      <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield} -->
+      <image source="sintro-vectorfield"/>
+    </figure>
+    <figure width="%" xml:id="sintro-vectorfield-sol_fig">
+      <caption>Portrait de phase pour <m>x' = 2y-x</m>, <m>y' = x</m>, avec la trajectoire de la solution commençant au point <m>(1,0)</m>
+      pour <m>0 \leq t \leq 2</m>.</caption>
+      <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield-sol} -->
+      <image source="sintro-vectorfield-sol"/>
     </figure>
     <p>
       Observez la similitude avec les diagrammes pour les systèmes autonomes à une dimension.
@@ -552,7 +555,7 @@
     <exercise>
       <statement>
         <p>
-          Supposons que deux masses sur des chariots se déplaçaant sur une surface sans friction soient aux positions <m>x_1</m> et <m>x_2</m> comme dans l' <xref ref="sintro_carts-example"></xref>.
+          Supposons que deux masses sur des chariots se déplaçant sur une surface sans friction soient aux positions <m>x_1</m> et <m>x_2</m> comme dans l'<xref ref="sintro_carts-example"></xref>.
           Supposons qu'une fusée applique une force <m>F</m> de direction positive sur le chariot <m>x_1</m>.
           Configurez le système d'équations différentielles.
         </p>
@@ -639,7 +642,7 @@
         <p>
           Supposons que des réservoirs soient disposés comme dans l' <xref ref="sintro_closedbrine-example"></xref>,
           mais cette fois, de l'eau propre s'écoule à
-          un débit de <m>s</m> litres par seconde vers le réservoir 1 et une solution saline s'écoule dans le réservoir 2 et dans les égouts avec un même débit de <m>s</m> litres par seconde. \begin{tasks} \task Dessinez le schéma. \task Configurez le système d'équations différentielles. \task De façaon intuitive,
+          un débit de <m>s</m> litres par seconde vers le réservoir 1 et une solution saline s'écoule dans le réservoir 2 et dans les égouts avec un même débit de <m>s</m> litres par seconde. \begin{tasks} \task Dessinez le schéma. \task Configurez le système d'équations différentielles. \task De façon intuitive,
           qu'arrive-t-il lorsque <m>t</m> tend vers l'infini?
           Expliquez. \end{tasks}
         </p>

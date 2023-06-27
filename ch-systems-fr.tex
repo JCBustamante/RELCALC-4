@@ -71,7 +71,7 @@ $y_2 = (\nicefrac{1}{2}) e^x + (\nicefrac{3}{2}) e^{-x}$.
 
 En général, on ne peut pas résoudre chaque variable séparément comme dans l'exemple précédent, et il faudra résoudre toutes les variables en même temps. Même si l'on ne peut pas toujours résoudre le système pour une variable et ensuite pour la suivante, on essaiera de tirer profit au maximum de cette technique. D'une certaine façon, on résoudra plusieurs équations simples et l'on regroupera les solutions. Ne nous préoccupons pas encore de la façon de résoudre les systèmes d'équations.
 
-Considérons principalement les \emph{\myindex{systèmes linéaires}}. L'exemple précédent est un \emph{\myindex{système linéaire du premier ordre}}, car les variables dépendantes ou leurs dérivées n'apparaissent pas dans des fonctions non linéaires ou à des puissances supérieures à un ($x$, $y$, $x'$ et $y'$ constantes, et les fonctions de $t$
+Considérons principalement les \emph{\myindex{systèmes linéaires}}. L'exemple précédent est un \emph{\myindex{système linéaire du premier ordre}}, car les variables dépendantes ou leurs dérivées n'apparaissent pas dans des fonctions non linéaires ou à des puissances supérieures à 1 ($x$, $y$, $x'$ et $y'$ constantes, et les fonctions de $t$
 peuvent être présentes, mais pas $xy$ ni ${(y')}^2$ ni $x^3$). Voici un exemple plus complexe de système linéaire :
 \begin{align*}
 y_1'' &= e^t y_1' + t^2 y_1 + 5 y_2 + \sin(t), \\
@@ -138,7 +138,7 @@ Encore une fois, on ne peut le résoudre pour les variables $x_1$ et $x_2$ sépa
 
 \subsection{Passage au premier ordre}
 
-Avant de parler de la façon de traiter des systèmes différentiels, notons que, dans un certain sens, nous pouvons ne considérer que les systèmes du premier ordre. Prenons une équation différentielle de $n^{\text{e}}$ ordre :
+Avant de parler de la façon de traiter des systèmes différentiels, notons que, dans un certain sens, nous pouvons ne considérer que les systèmes du premier ordre. Prenons une équation différentielle de $n^{\text{ième}}$ ordre :
 \begin{equation*}
 y^{(n)} = F(y^{(n-1)},\ldots,y',y,x) .
 \end{equation*}
@@ -233,7 +233,7 @@ qui pointe directement vers le haut.
 Lorsqu'on trace les vecteurs, on réduit leur taille afin de pouvoir en placer plusieurs sur le même champ de vecteurs. On s'intéresse principalement à leur direction et à leur taille relative. Voir la
 \figureref{sintro-vectorfield:fig}.
 
-On peut dessiner une trajectoire de la solution dans le plan. Supposons que $x = f(t)$ et que $y=g(t)$ est la solution. Nous choisissons un intervalle de $t$ (disons $0 \leq t \leq 2$ pour l'exemple) et nous traçons trace tous les points
+On peut dessiner une trajectoire de la solution dans le plan. Supposons que $x = f(t)$ et que $y=g(t)$ est la solution. Nous choisissons un intervalle de $t$ (disons $0 \leq t \leq 2$ pour l'exemple) et nous traçons tous les points
 $\bigl(f(t),g(t)\bigr)$ pour la plage $t$ sélectionnée. L'image obtenue est appelée \emph{\myindex{portrait de phase}}
 (ou \emph{\myindex{portrait de phase du plan}}).
 La courbe particulière obtenue est appelée \emph{\myindex{trajectoire}} ou \emph{\myindex{courbe de solution}}.
@@ -394,7 +394,7 @@ $x_2' = \frac{r}{V} x_1- \frac{r-s}{V}x_2$.
 \sectionnewpage
 \section{Matrices et systèmes linéaires} \label{sec:matrix}
 
-\sectionnotes{Lecture supplémentaire dans l' 
+\sectionnotes{Lecture supplémentaire dans l'
 %\EPref{première partie de \S5.1 dans \cite{EP}}\BDref{,
 %\S7.2 et \S7.3 dans \cite{BD}}, voir aussi 
 \appendixref{linalg:appendix}.}
@@ -493,12 +493,12 @@ b_3
 \end{equation*}
 Le principe est le même pour les vecteurs plus grands (ou plus petits).
 
-Définissons ensuite le \emph{\myindex{produit des matrices}}. Désignons par $\operatorname{ligne}_i(A)$ la $i^{\text{e}}$ ligne
+Définissons ensuite le \emph{\myindex{produit des matrices}}. Désignons par $\operatorname{ligne}_i(A)$ la $i^{\text{ième}}$ ligne
 de $A$ et par
-$\operatorname{colonne}_j(A)$ la $j^{\text{e}}$ colonne de $A$.
-Pour une matrice $A$ de dimension $m \times n$ et pour une matrice $B$ de dimension $n \times p$,
-$AB$ désigne le produit. La matrice $AB$ est de dimension $m \times p$,
-et le $ij^{\text{e}}$ élément est le produit scalaire
+$\operatorname{colonne}_j(A)$ la $j^{\text{ième}}$ colonne de $A$.
+Pour une matrice $A$ de dimensions $m \times n$ et pour une matrice $B$ de dimensions $n \times p$,
+$AB$ désigne le produit. La matrice $AB$ est de dimensions $m \times p$,
+et le $ij^{\text{ième}}$ élément est le produit scalaire
 \begin{equation*}
 \operatorname{ligne}_i(A) \cdot
 \operatorname{colonne}_j(B) .
@@ -569,7 +569,7 @@ $A = B = \left[ \begin{smallmatrix} 0 & 1 \\ 0 & 0 \end{smallmatrix}
 \right]$.
 \end{enumerate}
 
-Afin que les deux derniers points soient vrais, on doit \myquote{diviser} par une matrice. C'est ici qu'entre en jeu l'\emph{\myindex{inversion de matrice}}. Supposons que $A$ et $B$ sont des matrices $n \times n$ telles que
+Afin que les deux derniers points soient vrais, on doit « diviser » par une matrice. C'est ici qu'entre en jeu l'\emph{\myindex{inversion de matrices}}. Supposons que $A$ et $B$ sont des matrices $n \times n$ telles que
 \begin{equation*}
 AB = I = BA ,
 \end{equation*}
@@ -601,7 +601,7 @@ ad-bc .
 
 Avant de passer aux matrices plus grandes, examinons ce que signifie le déterminant. Considérons une matrice $n \times n$
 comme une projection d'un espace euclidien de dimension $n$ sur lui-même, désigné par ${\mathbb{R}}^n$, où $\vec{x}$ est envoyé à $A \vec{x}$.
-Une matrice $A$ de dimension $2 \times 2$ est donc une projection du plan sur lui-même. Le déterminant de 
+Une matrice $A$ de dimensions $2 \times 2$ est donc une projection du plan sur lui-même. Le déterminant de 
 $A$ est le facteur par lequel l'aire des objets change. Si l'on prend le carré unitaire (un carré de 1 x 1) dans le plan, alors la matrice
 $A$ transforme le carré en parallélogramme avec une aire égale à $\lvert\det(A)\rvert$. Le signe
 du $\det(A)$ désigne le changement d'orientation (négatif si les axes s'inversent). Par exemple, prenons
@@ -671,8 +671,8 @@ transforme le carré unitaire en parallélogramme.
 
 \medskip
 
-Regardons maintenant le déterminant de matrices plus grandes. On définit $A_{ij}$ comme la matrice $A$ avec la $i^{\text{e}}$ ligne et la $j^{\text{e}}$ colonne effacées. Pour calculer le déterminant d'une matrice, il faut choisir une ligne, disons la
-$i^{\text{e}}$ ligne, et calculer :
+Regardons maintenant le déterminant de matrices plus grandes. On définit $A_{ij}$ comme la matrice $A$ avec la $i^{\text{ième}}$ ligne et la $j^{\text{ième}}$ colonne effacées. Pour calculer le déterminant d'une matrice, il faut choisir une ligne, disons la
+$i^{\text{ième}}$ ligne, et calculer :
 \begin{equation*}
 \mybxbg{~~
 \det (A) =
@@ -774,7 +774,7 @@ Cette propriété est l'une des plus utiles et elle est fréquemment utilisée p
 Ni $\det(A)$ ni $\det(B)$ ne peuvent être nuls. Reformulons ce principe en théorème étant donné qu'il sera très important dans le cadre de ce cours.
 
 \begin{theorem}
-Une matrice $A$ de dimension $n \times n$ est inversible si et seulement si $\det (A) \not= 0$.
+Une matrice $A$ de dimensions $n \times n$ est inversible si et seulement si $\det (A) \not= 0$.
 \end{theorem}
 
 En réalité, $\det(A^{-1}) \det(A) = 1$ signifie que $\det(A^{-1}) =
@@ -986,7 +986,7 @@ $\vec{x}$ à $A \vec{x} = \vec{b}$ existe pour chaque $\vec{b}$ (il n'y a pas de
 Si l'on multiplie les deux côtés par $A^{-1}$, on obtient $\vec{x} =
 A^{-1} \vec{b}$. Le calcul de l'inverse est utile afin de résoudre l'équation pour plusieurs $\vec{b}$ différents.
 
-Il y a une formule pour l'inverse d'une matrice $2 \times 2$, et le calcul de l'inverse de matrices plus larges n'est pas plus compliqué. Même si l'occasion de calculer l'inverse de matrices plus larges que $2 \times 2$ à la main ne se présente pas souvent, voyons comment le faire. Trouver l'inverse de $A$ consiste en fait à résoudre un ensemble d'équations linéaires. Si l'on peut résoudre $A \vec{x}_k = \vec{e}_k$, où $\vec{e}_k$ est le vecteur avec des 0 partout à l'exception d'un 1 à la $k^{\text{e}}$ position, alors l'inverse est la matrice avec les colonnes $\vec{x}_k$ pour $k=1,2,\ldots,n$
+Il y a une formule pour l'inverse d'une matrice $2 \times 2$, et le calcul de l'inverse de matrices plus larges n'est pas plus compliqué. Même si l'occasion de calculer l'inverse de matrices plus larges que $2 \times 2$ à la main ne se présente pas souvent, voyons comment le faire. Trouver l'inverse de $A$ consiste en fait à résoudre un ensemble d'équations linéaires. Si l'on peut résoudre $A \vec{x}_k = \vec{e}_k$, où $\vec{e}_k$ est le vecteur avec des 0 partout à l'exception d'un 1 à la $k^{\text{ième}}$ position, alors l'inverse est la matrice avec les colonnes $\vec{x}_k$ pour $k=1,2,\ldots,n$
 (exercice: pourquoi?). Par conséquent, afin de trouver l'inverse, on écrit une matrice augmentée $n
 \times 2n$ plus grande $[ \,A ~|~ I\, ]$, où $I$ est la matrice identité. On procède alors à la réduction par ligne. La forme échelonnée réduite de $[ \,A ~|~ I\, ]$ 
 sera de la forme $[ \,I ~|~ A^{-1}\, ]$ si et seulement si
@@ -1206,7 +1206,7 @@ a_{21}(t) & a_{22}(t) & \cdots & a_{2n}(t) \\
 a_{n1}(t) & a_{n2}(t) & \cdots & a_{nn}(t)
 \end{bmatrix} .
 \end{equation*}
-La dérivée $A'(t)$ ou $\frac{dA}{dt}$ est simplement la fonction matricielle où le $ij^{\text{e}}$ élément est $a_{ij}'(t)$.
+La dérivée $A'(t)$ ou $\frac{dA}{dt}$ est simplement la fonction matricielle où le $ij^{\text{ième}}$ élément est $a_{ij}'(t)$.
 
 Les règles pour dériver des fonctions matricielles sont semblables à celles pour les fonctions normales. Supposons les fonctions matricielles $A(t)$ et $B(t)$, un scalaire $c$ et une matrice constante $C$. Alors,
 \begin{align*}
@@ -1332,8 +1332,7 @@ ${\vec{x}}' = P\vec{x} + \vec{f}$ est un système linéaire d'EDO et que $\vec{x
 \begin{equation*}
 \vec{x} = \vec{x}_c + \vec{x}_p ,
 \end{equation*}
-où $\vec{x}_c$ est une solution de l'
-\myindex{équation homogène associée}
+où $\vec{x}_c$ est une solution de l'\myindex{équation homogène associée}
 (${\vec{x}}' = P\vec{x}$).
 \end{theorem}
 
@@ -1617,7 +1616,7 @@ C_2 e^{t^2}
 \section{Décomposition en valeurs propres}
 \label{eigenmethod:section}
 
-\sectionnotes{Lectures supplémentaires \EPref{dans \cite{EP} (\S5.2) et dans }\BDref{\cite{BD} (parties de \S7.3, \S7.5, et \S7.6).}}
+\sectionnotes{lectures supplémentaires \EPref{dans \cite{EP} (\S5.2) et dans }\BDref{\cite{BD} (parties de \S7.3, \S7.5 et \S7.6).}}
 
 Cette section est consacrée à la résolution de systèmes d'EDO linéaires homogènes à coefficients constants par la décomposition en valeurs propres. Supposons un système
 \begin{equation*}
@@ -1872,7 +1871,7 @@ $
 est une solution.
 
 \begin{theorem}
-Prenons ${\vec{x}}' = P\vec{x}$. Si $P$ est une matrice constante de dimension $n \times n$ avec $n$ valeurs propres réelles distinctes $\lambda_1$, $\lambda_2$, \ldots, $\lambda_n$,
+Prenons ${\vec{x}}' = P\vec{x}$. Si $P$ est une matrice constante de dimensions $n \times n$ avec $n$ valeurs propres réelles distinctes $\lambda_1$, $\lambda_2$, \ldots, $\lambda_n$,
 alors $n$ vecteurs propres linéairement indépendants correspondants
 $\vec{v}_1$, $\vec{v}_2$, \ldots, $\vec{v}_n$ existent, et la solution générale de
 ${\vec{x}}' = P\vec{x}$
@@ -1892,7 +1891,7 @@ X(t) = \bigl[\, \vec{v}_1 e^{\lambda_1 t} \quad \vec{v}_2 e^{\lambda_2 t}
 \quad \cdots \quad \vec{v}_n e^{\lambda_n t} \,\bigr],
 \end{equation*}
 c'est-à-dire que $X(t)$
-est la matrice où la $j^{\text{e}}$ colonne est
+est la matrice où la $j^{\text{ième}}$ colonne est
 $\vec{v}_j e^{\lambda_j t}$.
 
 \begin{example}
@@ -2366,7 +2365,7 @@ C_2 \left[ \begin{smallmatrix}
 \section{Systèmes bidimensionnels et leurs champs vectoriels}
 \label{sec:twodimaut}
 
-\sectionnotes{Lectures supplémentaires dans \EPref{\cite{EP} (partie de \S6.2) et dans }\BDref{\cite{BD} (parties de \S7.5 et \S7.6).}}
+\sectionnotes{lectures supplémentaires dans \EPref{\cite{EP} (partie de \S6.2) et dans }\BDref{\cite{BD} (parties de \S7.5 et \S7.6).}}
 
 Prenons un moment pour discuter des systèmes linéaires homogènes à coefficients constants dans le plan. L'étude du cas simple suivant permet de déduire beaucoup de choses. Supposons que nous utilisons les coordonnées habituelles $(x,y)$ pour le plan et que
 $P = \left[ \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \right]$ 
@@ -2390,7 +2389,7 @@ Dans cette section, on suppose que $P$ a deux valeurs propres et deux vecteurs p
 
 \medskip
 
-\emph{Cas n$^o$ 1.} Supposons que les valeurs propres de $P$ sont réelles et positives. On trouve les vecteurs propres correspondants et on les trace dans le plan. Par exemple, prenons la matrice $\left[ \begin{smallmatrix} 1 & 1 \\ 0 & 2 \end{smallmatrix}
+\emph{Cas n$^\text{o}$1.} Supposons que les valeurs propres de $P$ sont réelles et positives. On trouve les vecteurs propres correspondants et on les trace dans le plan. Par exemple, prenons la matrice $\left[ \begin{smallmatrix} 1 & 1 \\ 0 & 2 \end{smallmatrix}
 \right]$.
 Les valeurs propres sont 1 et 2, et les vecteurs propres correspondants sont
 $\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right]$ et
@@ -2418,11 +2417,12 @@ P ( \alpha \vec{v} ) = \alpha ( P \vec{v} )
 = \alpha \lambda \vec{v} .
 \end{equation*}
 La dérivée est un multiple de $\vec{v}$ et pointe donc le long de la ligne définie par $\vec{v}$. Comme $\lambda > 0$, la dérivée pointe dans la direction de $\vec{v}$ quand $\alpha$ est positif et dans la direction opposée quand $\alpha$ est négatif. Traçons les lignes définies par les vecteurs propres et des flèches sur ces lignes pour indiquer les directions.
-Voir la \figurevref{pln:source-eig-arrfig} ci-après.
+Voir la \figurevref{pln:source-eig-arrfig} ci-après. 
+% TODO ref anglais
 
 On ajoute le reste des flèches pour le champ vectoriel et l'on dessine aussi quelques solutions. Voir la
 \figurevref{pln:source-fullfig} ci-après.
-Le graphe ressemble à une source avec des flèches en provenance de l'origine. C'est pourquoi ce type de graphe se nomme un \emph{\myindex{nœud répulsif}} ou parfois \emph{\myindex{nœud instable}}.
+Le graphe ressemble à une source avec des flèches en provenance de l'origine. C'est pourquoi ce type de graphe se nomme un \emph{\myindex{nœud répulsif}} ou parfois \emph{\myindex{nœud instable}}. % TODO ref anglais
 
 \begin{myfig}
 \parbox[t]{3.0in}{
@@ -2441,8 +2441,8 @@ Le graphe ressemble à une source avec des flèches en provenance de l'origine. 
 
 \medskip
 
-\emph{Cas n$^o$ 2.} Supposons que les deux valeurs propres sont négatives. Par exemple, prenons
-$\left[ \begin{smallmatrix} -1 & -1 \\ 0 & -2 \end{smallmatrix} \right]$, la négation de la matrice du cas n$^o$ 1.
+\emph{Cas n$^\text{o}$2.} Supposons que les deux valeurs propres sont négatives. Par exemple, prenons
+$\left[ \begin{smallmatrix} -1 & -1 \\ 0 & -2 \end{smallmatrix} \right]$, la négation de la matrice du cas n$^\text{o}$1.
 Les valeurs propres sont $-1$ et $-2$, et les vecteurs propres correspondants sont les mêmes, soit
 $\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right]$ et
 $\left[ \begin{smallmatrix} 1 \\ 1 \end{smallmatrix} \right]$. Le calcul et le graphe sont presque identiques. La seule différence, c'est que les valeurs propres sont négatives et que les flèches sont donc inversées. La \figurevref{pln:sink-fullfig} montre le résultat. Ce type de graphe se nomme un \emph{\myindex{nœud attractif}} ou \emph{\myindex{nœud stable}}.
@@ -2465,7 +2465,7 @@ $\left[ \begin{smallmatrix} 1 \\ 1 \end{smallmatrix} \right]$. Le calcul et le g
 
 \medskip
 
-\emph{Cas n$^o$ 3.} Supposons une valeur propre positive et une négative. Par exemple, la matrice
+\emph{Cas n$^\text{o}$3.} Supposons une valeur propre positive et une négative. Par exemple, la matrice
 $\left[ \begin{smallmatrix} 1 & 1 \\ 0 & -2 \end{smallmatrix} \right]$.
 Les valeurs propres sont 1 et $-2$, et les vecteurs propres correspondants sont
 $\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right]$ et
@@ -2479,7 +2479,7 @@ Pour les trois prochains cas, on suppose que les valeurs propres sont complexes.
 \medskip
 
 \pagebreak[0]
-\emph{Cas n$^o$ 4.} Supposons que les valeurs propres sont purement imaginaires, c'est-à-dire, supposons, que les valeurs propres sont $\pm ib$. Par exemple, prenons $P = 
+\emph{Cas n$^\text{o}$4.} Supposons que les valeurs propres sont purement imaginaires, c'est-à-dire, supposons, que les valeurs propres sont $\pm ib$. Par exemple, prenons $P = 
 \left[ \begin{smallmatrix} 0 & 1 \\ -4 & 0 \end{smallmatrix} \right]$.
 Les valeurs propres sont $\pm 2i$, et les vecteurs propres sont
 $\left[ \begin{smallmatrix} 1 \\ 2i \end{smallmatrix} \right]$ et
@@ -2513,7 +2513,7 @@ Toutes leurs combinaisons linéaires donnent des solutions différentes qui dép
 
 \medskip
 
-\emph{Cas n$^o$ 5.} Supposons que les valeurs propres complexes ont une partie réelle positive, c'est-à-dire, supposons, que les valeurs propres sont $a \pm ib$ pour certains $a > 0$.
+\emph{Cas n$^\text{o}$5.} Supposons que les valeurs propres complexes ont une partie réelle positive, c'est-à-dire, supposons, que les valeurs propres sont $a \pm ib$ pour certains $a > 0$.
 Par exemple, prenons $P = 
 \left[ \begin{smallmatrix} 1 & 1 \\ -4 & 1 \end{smallmatrix} \right]$.
 Les valeurs propres sont $1\pm 2i$, et les vecteurs propres sont
@@ -2537,7 +2537,7 @@ Remarquez $e^t$ devant les solutions. Les solutions prennent de l'ampleur tout e
 
 \medskip
 
-\emph{Cas n$^o$ 6.} Finalement, supposons que les valeurs propres complexes ont une partie réelle négative, c'est-à-dire, supposons, que les valeurs propres sont $-a \pm ib$ pour certains $a > 0$.
+\emph{Cas n$^\text{o}$6.} Finalement, supposons que les valeurs propres complexes ont une partie réelle négative, c'est-à-dire, supposons, que les valeurs propres sont $-a \pm ib$ pour certains $a > 0$.
 Par exemple, prenons $P = 
 \left[ \begin{smallmatrix} -1 & -1 \\ 4 & -1 \end{smallmatrix} \right]$.
 Les valeurs propres sont $-1\pm 2i$, et les vecteurs propres sont

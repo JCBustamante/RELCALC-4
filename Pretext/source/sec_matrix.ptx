@@ -2,10 +2,7 @@
   <title>Matrices et systèmes linéaires</title>
   <introduction>
     <p>
-      PLACEHOLDER
-    </p>
-    <p>
-      Lecture supplémentaire dans l' <xref ref="linalg_appendix"></xref>.
+      Note : lecture supplémentaire dans l'<xref ref="linalg_appendix"></xref>.
     </p>
   </introduction>
   <subsection>
@@ -131,13 +128,13 @@
           <idx><h>produit des matrices</h></idx>
       </em>.
       Désignons par <m>\operatorname{ligne}_i(A)</m> la
-      <m>i^{\text{e} }</m> ligne de <m>A</m> et par
-      <m>\operatorname{colonne}_j(A)</m> la <m>j^{\text{e} }</m> colonne de <m>A</m>.
-      Pour une matrice <m>A</m> de dimension
-      <m>m \times n</m> et pour une matrice <m>B</m> de dimension <m>n \times p</m>,
+      <m>i^{\text{ième} }</m> ligne de <m>A</m> et par
+      <m>\operatorname{colonne}_j(A)</m> la <m>j^{\text{ième} }</m> colonne de <m>A</m>.
+      Pour une matrice <m>A</m> de dimensions
+      <m>m \times n</m> et pour une matrice <m>B</m> de dimensions <m>n \times p</m>,
       <m>AB</m> désigne le produit.
-      La matrice <m>AB</m> est de dimension <m>m \times p</m>,
-      et le <m>ij^{\text{e} }</m> élément est le produit scalaire
+      La matrice <m>AB</m> est de dimensions <m>m \times p</m>,
+      et le <m>ij^{\text{ième} }</m> élément est le produit scalaire
       <me>
         \operatorname{ligne}_i(A) \cdot \operatorname{colonne}_j(B)
       </me>.
@@ -214,11 +211,10 @@
       </ol>
     </p>
     <p>
-      Afin que les deux derniers points soient vrais, on doit
-      <q>diviser</q>
+      Afin que les deux derniers points soient vrais, on doit <q>diviser</q>
       par une matrice.
-      C'est ici qu'entre en jeu l'<em>inversion de matrice
-          <idx><h>inversion de matrice</h></idx>
+      C'est ici qu'entre en jeu l'<em>inversion de matrices
+          <idx><h>inversion de matrices</h></idx>
       </em>.
       Supposons que <m>A</m> et <m>B</m> sont des matrices <m>n \times n</m> telles que
       <me>
@@ -264,7 +260,7 @@
       désigné
       par <m>{\mathbb{R}}^n</m>,
       où <m>\vec{x}</m> est envoyé à <m>A \vec{x}</m>.
-      Une matrice <m>A</m> de dimension
+      Une matrice <m>A</m> de dimensions
       <m>2 \times 2</m> est donc une projection du plan sur lui-même.
       Le déterminant de <m>A</m> est le facteur par lequel l'aire des objets change.
       Si l'on prend le carré unitaire
@@ -316,19 +312,19 @@
     </p>
     <p>
       Regardons maintenant le déterminant de matrices plus grandes.
-      On définit <m>A_{ij}</m> comme la matrice <m>A</m> avec la <m>i^{\text{e} }</m> ligne et la
-      <m>j^{\text{e} }</m> colonne effacées.
+      On définit <m>A_{ij}</m> comme la matrice <m>A</m> avec la <m>i^{\text{ième} }</m> ligne et la
+      <m>j^{\text{ième} }</m> colonne effacées.
       Pour calculer le déterminant d'une matrice,
       il faut choisir une ligne,
-      disons la <m>i^{\text{e} }</m> ligne, et calculer :
+      disons la <m>i^{\text{ième} }</m> ligne, et calculer :
       <me>
-        \mybxbg{~~ \det (A) = \sum_{j=1}^n {(-1)}^{i+j} a_{ij} \det (A_{ij}) . ~~}
+        \det (A) = \sum_{j=1}^n {(-1)}^{i+j} a_{ij} \det (A_{ij}) .
       </me>
     </p>
     <p>
       Pour la première ligne, on obtient
       <me>
-        \det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + a_{13} \det (A_{13}) - \cdots \begin{cases} + a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est impair, }  \\ - a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est pair. } \end{cases}
+        \det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + a_{13} \det (A_{13}) - \cdots \begin{cases} + a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est impair}  \\ - a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est pair. } \end{cases}
       </me>
     </p>
     <p>
@@ -399,7 +395,7 @@
     <theorem>
       <statement>
         <p>
-          Une matrice <m>A</m> de dimension
+          Une matrice <m>A</m> de dimensions
           <m>n \times n</m> est inversible si et seulement si <m>\det (A) \not= 0</m>.
         </p>
       </statement>
@@ -651,7 +647,7 @@
       Si l'on peut résoudre <m>A \vec{x}_k = \vec{e}_k</m>,
       où <m>\vec{e}_k</m> est le vecteur avec des 0 partout à
       l'exception d'un 1 à
-      la <m>k^{\text{e} }</m> position,
+      la <m>k^{\text{ième} }</m> position,
       alors l'inverse est la matrice avec les colonnes
       <m>\vec{x}_k</m> pour <m>k=1,2,\ldots,n</m>
       (exercice: pourquoi?).

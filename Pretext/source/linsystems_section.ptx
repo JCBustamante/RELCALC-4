@@ -172,7 +172,7 @@
           <me>
             \vec{x} = \vec{x}_c + \vec{x}_p
           </me>,
-          où <m>\vec{x}_c</m> est une solution de l' équation homogène associée<idx><h>équation homogène associée</h></idx>
+          où <m>\vec{x}_c</m> est une solution de l'équation homogène associée<idx><h>équation homogène associée</h></idx>
           (<m>{\vec{x}}' = P\vec{x}</m>).
         </p>
       </statement>
@@ -211,7 +211,7 @@
     <example>
       <statement>
         <p>
-          À la <xref ref="sec_introtosys">section</xref>,
+          À la <xref ref="sec_introtosys"></xref>,
           le système a été résolu,
           <md>
             <mrow>x_1' \amp  = x_1 ,</mrow>
@@ -262,7 +262,7 @@
         </p>
         <p>
           Cette nouvelle solution est conforme à celle obtenue à
-          la <xref ref="sec_introtosys">section</xref>.
+          la <xref ref="sec_introtosys"></xref>.
         </p>
       </statement>
     </example>

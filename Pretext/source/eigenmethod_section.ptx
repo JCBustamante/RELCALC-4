@@ -2,11 +2,7 @@
   <title>Décomposition en valeurs propres</title>
   <introduction>
     <p>
-      PLACEHOLDER
-    </p>
-    <p>
-      Lectures supplémentaires dans \cite{EP} (&#xa7;5.2) et dans \cite{BD}
-      (parties de &#xa7;7.3, &#xa7;7.5, et &#xa7;7.6).
+      Note : lectures supplémentaires dans <xref ref="EP"></xref> (&#xa7;5.2) et dans <xref ref="BD"></xref> (parties de &#xa7;7.3, &#xa7;7.5 et &#xa7;7.6).
     </p>
     <p>
       Cette section est consacrée à
@@ -215,7 +211,7 @@
       <statement>
         <p>
           Prenons <m>{\vec{x}}' = P\vec{x}</m>.
-          Si <m>P</m> est une matrice constante de dimension
+          Si <m>P</m> est une matrice constante de dimensions
           <m>n \times n</m> avec <m>n</m> valeurs propres réelles distinctes <m>\lambda_1</m>,
           <m>\lambda_2</m>, <ellipsis/>,
           <m>\lambda_n</m>,
@@ -223,7 +219,7 @@
           <m>\vec{v}_2</m>, <ellipsis/>, <m>\vec{v}_n</m> existent,
           et la solution générale de <m>{\vec{x}}' = P\vec{x}</m> peut s'écrire
           <me>
-            \mybxbg{~~ \vec{x} = c_1 \vec{v}_1 e^{\lambda_1 t} + c_2 \vec{v}_2 e^{\lambda_2 t} + \cdots + c_n \vec{v}_n e^{\lambda_n t} . ~~}
+            \vec{x} = c_1 \vec{v}_1 e^{\lambda_1 t} + c_2 \vec{v}_2 e^{\lambda_2 t} + \cdots + c_n \vec{v}_n e^{\lambda_n t} .
           </me>
         </p>
       </statement>
@@ -234,7 +230,7 @@
         X(t) = \bigl[\, \vec{v}_1 e^{\lambda_1 t}  \vec{v}_2 e^{\lambda_2 t} \cdots  \vec{v}_n e^{\lambda_n t} \,\bigr]
       </me>,
       c'est-à-dire que <m>X(t)</m> est la matrice où la
-      <m>j^{\text{e} }</m> colonne est <m>\vec{v}_j e^{\lambda_j t}</m>.
+      <m>j^{\text{ième} }</m> colonne est <m>\vec{v}_j e^{\lambda_j t}</m>.
     </p>
     <example>
       <statement>
@@ -278,13 +274,13 @@
     <p>
       Note : si l'on écrit une seule équation linéaire homogène à
       coefficients constants d'ordre <m>n</m> comme un système du premier ordre
-      (comme dans la <xref ref="sec_introtosys">section</xref>),
+      (comme dans la <xref ref="sec_introtosys"></xref>),
       alors l'équation de valeurs propres
       <me>
         \det(P - \lambda I) = 0
       </me>
-      est essentiellement la même que l'équation caractéristique des <xref ref="sec_ccsol">sections</xref>
-      <xref ref="sec_hol">et</xref>.
+      est essentiellement la même que l'équation caractéristique des sections <xref ref="sec_ccsol" text="global"></xref> et
+      <xref ref="sec_hol" text="global"></xref>.
     </p>
   </subsection>
   <subsection>
