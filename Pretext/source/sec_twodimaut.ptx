@@ -224,7 +224,7 @@
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{pln-spiral-sink} -->
     </figure>
     <p>
-      Le <xref ref="pln_behtab"></xref> résume le comportement de systèmes linéaires homogènes bidimensionnels pour une matrice non singulière.
+      La <xref ref="pln_behtab"></xref> résume le comportement de systèmes linéaires homogènes bidimensionnels pour une matrice non singulière.
       On rencontre parfois des systèmes où une des valeurs propres est nulle
       (la matrice est singulière),
       comme dans l'<xref ref="sintro_closedbrine-example"></xref>,
