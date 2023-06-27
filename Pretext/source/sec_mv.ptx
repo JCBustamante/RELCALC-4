@@ -9,10 +9,10 @@
   <subsection>
     <title>Quelques exemples</title>
     <p>
-      \begin{mywrapfigsimp}{2.0in}{2.3in}
+      <image width="73%" source="massfigforce"/>
     </p>
     <p>
-      <image width="73%" source="massfigforce"/> \end{mywrapfigsimp} Le premier exemple est une masse sur un ressort.
+    Le premier exemple est une masse sur un ressort.
       Supposons que nous avons une masse <m>m > 0</m>
       (en kg)
       connectée à
@@ -39,8 +39,8 @@
       la vitesse de la masse.
       Par la deuxième loi de Newton,
           <idx><h>deuxième loi de Newton</h></idx>
-      nous savons que la force est égale au produit de la masse et de l'accélération,
-      et, par conséquent, <m>mx'' = F(t)-cx'-kx</m> ou
+      nous savons que la force est égale au produit de la masse et de l'accélération
+      et que, par conséquent, <m>mx'' = F(t)-cx'-kx</m> ou
       <me>
         mx'' + cx' + kx = F(t)
       </me>.
@@ -59,11 +59,11 @@
         </li>
         <li>
           <p>
-            n'est pas <em>forcé
+            n'est <em>pas forcé
               <idx><h>unforced motion</h></idx>
-            </em> ou <em>libre
+            </em> (ou <em>libre
               <idx><h>free motion</h></idx>
-            </em>, si <m>F \equiv 0</m> (si <m>F</m> est nul),
+            </em>), si <m>F \equiv 0</m> (si <m>F</m> est nul),
           </p>
         </li>
         <li>
@@ -92,10 +92,10 @@
       Regardons deux autres exemples.
     </p>
     <p>
-      \begin{mywrapfigsimp}[5]{1.35in}{1.65in}
+      <image width="73%" source="mv-rlc"/>
     </p>
-    <p>
-      <image width="73%" source="mv-rlc"/> \end{mywrapfigsimp} Voici un exemple pour le génie électrique.
+    <p> 
+      Voici un exemple pour le génie électrique.
       Considérons l'image du circuit RLC.
           <idx><h>circuit RLC</h></idx>
       Il y a un ressort avec une résistance de <m>R</m> ohms,
@@ -130,21 +130,21 @@
       il s'agit d'un mouvement qui n'est pas forcé.
     </p>
     <p>
-      \begin{mywrapfigsimp}[10]{1.8in}{2.16in}
+      <image width="73%" source="mv-pend-deriv"/>
     </p>
     <p>
-      <image width="73%" source="mv-pend-deriv"/> \end{mywrapfigsimp} Notre prochain exemple se comporte approximativement comme un système masse-ressort.
+      Notre prochain exemple se comporte approximativement comme un système masse-ressort.
       Supposons que la masse <m>m</m> pend sur un fil de longueur <m>L</m>.
       On cherche une équation pour l'angle
       (en radians).
       Soit <m>g</m> la force gravitationnelle.
-      La physique élémentaire dit que l'équation est:
+      La physique élémentaire dit que l'équation est :
       <me>
         \theta'' + \frac{g}{L} \sin \theta = 0
       </me>.
     </p>
     <p>
-      Dérivons cette équation en utilisant la deuxième loi de Newton:
+      Dérivons cette équation en utilisant la deuxième loi de Newton :
           <idx><h>deuxième loi de Newton</h></idx>
       la force est égale au produit de la masse et de l'accélération.
       L'accélération est
@@ -159,19 +159,20 @@
       Maintenant, approximons.
       Pour un petit <m>\theta</m>,
       nous avons l'approximation <m>\sin \theta \approx \theta</m>.
-      On le voit dans <xref ref="mv_sinthetafig">la</xref>:
+      On le voit dans la <xref ref="mv_sinthetafig"></xref> :
       sur l'intervalle <m>-0.5 \lt \theta \lt 0.5</m>
       (en radians),
       les graphes de <m>\sin \theta</m> et de <m>\theta</m> sont presque les mêmes.
     </p>
     <figure xml:id="mv_sinthetafig">
       <caption>Graphes de  <m>\sin \theta</m> et de <m>\theta</m> (en radians).</caption>
-      {3.25in}
-      \diffyincludegraphics{width=3in}{width=4.5in}{mv-sintheta}
+      <!-- {3.25in} -->
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-sintheta} -->
+      <image source="mv-sintheta"/>
     </figure>
     <p>
       Donc, quand le balancement est petit, <m>\theta</m> est petit,
-      et nous pouvons modéliser le comportement par une équation linéaire simple.
+      et nous pouvons modéliser le comportement par une équation linéaire simple :
       <me>
         \theta'' + \frac{g}{L} \theta = 0
       </me>.
@@ -203,14 +204,14 @@
       Commençaons avec le mouvement non forcé
           <idx><h>non forcé</h></idx>
       où <m>c=0</m>.
-      L'équation est:
+      L'équation est :
       <me>
         mx'' + kx = 0
       </me>.
     </p>
     <p>
       Divisons par <m>m</m> et laissons
-      <m>\omega_0 = \sqrt{\nicefrac{k}{m}}</m> pour réécrire l'équation comme suit:
+      <m>\omega_0 = \sqrt{\nicefrac{k}{m}}</m> pour réécrire l'équation comme suit :
       <me>
         x'' + \omega_0^2 x = 0
       </me>.
@@ -230,14 +231,14 @@
       pour deux constantes différentes <m>C</m> et <m>\gamma</m>.
       Il n'est pas difficile de calculer
       <m>C= \sqrt{A^2 + B^2}</m> et <m>\tan \gamma = \nicefrac{B}{A}</m>.
-      Ainsi, soit <m>C</m> et <m>\gamma</m> deux constantes arbitraires et écrivons <m>x(t) = C \cos ( \omega_0 t - \gamma )</m>.
+      Ainsi, soit <m>C</m> et <m>\gamma</m> deux constantes arbitraires, et écrivons <m>x(t) = C \cos ( \omega_0 t - \gamma )</m>.
     </p>
     <exercise>
       <statement>
         <p>
           Justifiez l'identité
           <m>A \cos (\omega_0 t) + B \sin (\omega_0 t) = C \cos ( \omega_0 t - \gamma )</m> et vérifiez l'équation pour <m>C</m> et <m>\gamma</m>.
-          Astuce: Commencez avec <m>\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)</m> et multipliez par <m>C</m>.
+          Astuce : commencez avec <m>\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)</m> et multipliez par <m>C</m>.
           Alors, que devraient être <m>\alpha</m> et <m>\beta</m>?
         </p>
       </statement>
@@ -284,18 +285,18 @@
       La <em>période
           <idx><h>période</h></idx>
       </em> du mouvement est l'inverse de la fréquence (en cycles par unité
-      de temps, et alors i<m>\frac{2\pi}{\omega_0}</m>.
+      de temps). Elle est donc donnée par <m>\frac{2\pi}{\omega_0}</m>.
       C'est le temps qu'il faut pour terminer un cycle complet.
     </p>
     <example>
       <statement>
         <p>
-          Supposons que <m>m=\unit[2]{kg}</m> et <m>k=\unitfrac[8]{N}{m}</m>.
-          Un système masse-ressort se trouve sur un camion qui se déplace à \unitfrac[1]{m}{s}. Le camion a un accident et s'arrête.
+          Supposons que <m>m=2</m> kg et <m>k=8</m> N/m.
+          Un système masse-ressort se trouve sur un camion qui se déplace à 1 m/s. Le camion a un accident et s'arrête.
           La masse a été
-          tenue en place à 0{,}5 m de sa position de repos.
+          tenue en place à 0.5 m de sa position de repos.
           Pendant l'accident, la masse se déplace.
-          Alors, elle bouge vers l'avant à \unitfrac[1]{m}{s}, pendant que le ressort reste fixé. La masse commence donc à osciller.
+          Alors, elle bouge vers l'avant à 1 m/s, pendant que le ressort reste fixé. La masse commence donc à osciller.
           Quelle est la fréquence de l'oscillation résultante?
           Quelle est l'amplitude?
           Les unités sont des
@@ -307,8 +308,8 @@
           un demi-mètre dans la direction positive pendant l'accident et que la masse se déplaçaait vers l'avant par rapport à
           la paroi sur laquelle le ressort était monté,
           (dans la direction positive)
-          à \unitfrac[1]{m}{s}. Alors,
-          l'équation avec les conditions initiales est:
+          à 1 m/s. Alors,
+          l'équation avec les conditions initiales est :
           <me>
             2 x'' + 8 x = 0 , \qquad x(0) = 0.5, \qquad x'(0) = 1
           </me>.
@@ -322,11 +323,12 @@
         </p>
         <figure xml:id="mv_undampedfig">
           <caption>Oscillation simple non amortie.</caption>
-          {3.25in}
-          \diffyincludegraphics{width=3in}{width=4.5in}{mv-undamped}
+          <!-- {3.25in} -->
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-undamped} -->
+          <image source="mv-undamped"/>
         </figure>
         <p>
-          La solution générale est:
+          La solution générale est :
           <me>
             x(t) = A \cos (2t) + B \sin (2t)
           </me>.
@@ -336,14 +338,13 @@
           Alors, <m>x'(t) = - 2(0.5) \sin (2t) + 2B \cos (2t)</m>.
           Puisque <m>x'(0) = 1</m>, on obtient <m>B = 0.5</m>.
           Ainsi, l'amplitude est <m>C = \sqrt{A^2+B^2} = \sqrt{0.25+0.25} = \sqrt{0.5} \approx 0.707</m>.
-          La solution est:
+          La solution est :
           <me>
             x(t) = 0.5 \cos (2t) + 0.5 \sin (2t)
           </me>.
         </p>
         <p>
-          Le graphe de <m>x(t)</m> est illustré à
-          <xref ref="mv_undampedfig">la</xref>.
+          Le graphe de <m>x(t)</m> est illustré à la <xref ref="mv_undampedfig"></xref>.
         </p>
       </statement>
     </example>
@@ -370,7 +371,7 @@
       et alors <m>\gamma = \nicefrac{\pi}{4}</m> ou approximativement 0.785.
     </p>
     <p>
-      Note: Plusieurs calculatrices et logiciels proposent non seulement la fonction <c>atan</c>
+      Note : plusieurs calculatrices et logiciels proposent non seulement la fonction <c>atan</c>
           <idx><h>atan</h></idx>
       pour arc tangente, mais aussi ce qui est appelé
       <c>atan2</c>.
@@ -389,7 +390,7 @@
         <me>
           m x'' + c x' + kx = 0
         </me>
-        et se réécrit comme suit:
+        et se réécrit comme suit :
         <me>
           x'' + 2p x' + \omega_0^2 x = 0
         </me>,
@@ -411,8 +412,8 @@
         </me>.
       </p>
       <p>
-        La forme de la solution dépend du type de racine que l'on obtient (réelles ou complexes).
-        On obtient des racines réelles si et seulement si le nombre suivant n'est pas négatif (donc plus grand ou égal à zéro):
+        La forme de la solution dépend du type de racines que l'on obtient (réelles ou complexes).
+        On obtient des racines réelles si et seulement si le nombre suivant n'est pas négatif (donc plus grand ou égal à zéro) :
         <me>
           p^2 - \omega_0^2 = {\left( \frac{c}{2m} \right)}^2 - \frac{k}{m} = \frac{c^2 - 4km}{4m^2}
         </me>.
@@ -426,8 +427,9 @@
       <title>Suramortissement</title>
       <figure xml:id="mv_overdampedfig">
         <caption>Mouvement suramorti, avec quelques conditions initiales différentes.</caption>
-        {3.25in}
-        \diffyincludegraphics{width=3in}{width=4.5in}{mv-overdamped}
+        <!-- {3.25in} -->
+        <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-overdamped} -->
+        <image source="mv-overdamped"/>
       </figure>
       <p>
         Lorsque <m>c^2 - 4km > 0</m>,
@@ -436,7 +438,7 @@
         </em>.
         Dans ce cas,
         il y a deux racines réelles <m>r_1</m> et <m>r_2</m>.
-        Les deux racines sont négatives:
+        Les deux racines sont négatives :
         puisque <m>\sqrt{p^2 - \omega_0^2}</m> est toujours plus petite que <m>p</m>,
         alors <m>-p \pm \sqrt{p^2 - \omega_0^2}</m> est négative dans tous les cas.
       </p>
@@ -449,8 +451,8 @@
       <p>
         Puisque <m>r_1, r_2</m> sont négatives,
         <m>x(t) \to 0</m> lorsque <m>t \to \infty</m>.
-        Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini.
-        <xref ref="mv_overdampedfig">La</xref>
+        Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini. 
+        La <xref ref="mv_overdampedfig"></xref>
         montre le graphe de quelques solutions,
         avec des conditions initiales différentes.
       </p>
@@ -459,7 +461,7 @@
         En effet, le graphe croise l'axe des <m>x</m> au plus une fois.
         Pour comprendre pourquoi,
         résolvons <m>0 = C_1 e^{r_1 t} + C_2 e^{r_2 t}</m>.
-        Donc, <m>C_1 e^{r_1 t} = - C_2 e^{r_2 t}</m>,
+        Donc, <m>C_1 e^{r_1 t} = - C_2 e^{r_2 t}</m>
         et, en utilisant les lois des exposants, on obtient
         <me>
           \frac{-C_1}{C_2} = e^{(r_2-r_1) t}
@@ -506,7 +508,7 @@
         celui d'un système avec amortissement ordinaire.
         Après tout,
         le premier est en quelque sorte un cas limite du second.
-        Mais ces équations sont après tout des approximations:
+        Mais ces équations sont après tout des approximations :
         dans le vrai monde,
         on est toujours un peu sous-amorti ou un peu trop amorti.
         On ne s'attardera donc pas sur l'amortissement critique.
@@ -516,15 +518,16 @@
       <title>Sous-amortissement</title>
       <figure xml:id="mv_underdampedfig">
         <caption>Système sous-amorti avec ses courbes enveloppes.</caption>
-        {3.25in}
-        \diffyincludegraphics{width=3in}{width=4.5in}{mv-underdamped}
+        <!-- {3.25in} -->
+        <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-underdamped} -->
+        <image source="mv-underdamped"/>
       </figure>
       <p>
         Lorsque <m>c^2 - 4km \lt  0</m>,
         le système est <em>sous-amorti
             <idx><h>sous-amorti</h></idx>
         </em>.
-        Dans ce cas, les racines sont complexes.
+        Dans ce cas, les racines sont complexes :
         <md>
           <mrow>r \amp  = -p \pm \sqrt{p^2 - \omega_0^2}</mrow>
           <mrow>\amp  = -p \pm \sqrt{-1}\sqrt{\omega_0^2 - p^2}</mrow>
@@ -542,7 +545,7 @@
       </p>
       <p>
         Le graphe d'un exemple est illustré
-        dans <xref ref="mv_underdampedfig">la</xref>.
+        dans la <xref ref="mv_underdampedfig"></xref>.
         Notez que nous avons encore
         <m>x(t) \to 0</m> lorsque <m>t \to \infty</m>.
       </p>
@@ -568,7 +571,7 @@
         On n'appelle pas <m>\omega_1</m> une fréquence puisque la solution n'est pas réellement périodique.
         </fn> angulaire devient plus petite lorsque l'amortissement <m>c</m>,
         et donc <m>p</m>, devient plus grand.
-        Cela a du sens:
+        Cela a du sens :
         lorsque l'amortissement change légèrement, on ne s'attend pas à
         ce que le comportement de la solution change beaucoup.
         Lorsque <m>c</m> augmente, alors, à
@@ -608,7 +611,7 @@
     <exercise>
       <statement>
         <p>
-          Faites l' <xref ref="mv_ex1"></xref> pour <m>m=3</m>,
+          Faites l'<xref ref="mv_ex1"></xref> pour <m>m=3</m>,
           <m>k=12</m> et <m>c=12</m>.
         </p>
       </statement>
@@ -618,30 +621,30 @@
         <p>
           Utilisant les unités mètres-kilogrammes-secondes,
               <idx><h>mks units</h></idx>
-          supposez que vous avez un ressort de constante \unitfrac[4]N{m}. Vous voulez l'utiliser pour peser des objets.
+          supposez que vous avez un ressort de constante 4 N/m. Vous voulez l'utiliser pour peser des objets.
           Supposez qu'il n'y a pas de friction.
-          Attachez la masse au ressort et mettez-la en mouvement. \begin{tasks} \task Vous trouvez que la fréquence est \unit[0.8]{Hz}
+          Attachez la masse au ressort et mettez-la en mouvement. \begin{tasks} \task Vous trouvez que la fréquence est 0.8 Hz
           (cycles per seconde).
-          Quelle est la masse? \task Trouvez la formule pour une masse <m>m</m> et donnez la fréquence <m>\omega</m> en \unit{Hz}. \end{tasks}
+          Quelle est la masse? \task Trouvez la formule pour une masse <m>m</m> et donnez la fréquence <m>\omega</m> en Hz. \end{tasks}
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          On reprend l' <xref ref="mv_exwt1"></xref>
+          On reprend l'<xref ref="mv_exwt1"></xref>
           en tenant compte de la friction.
           De plus, supposez que vous ne connaissaez pas la constante du ressort,
-          mais que vous avez deux poids de références \unit[1]{kg} et \unit[2]{kg} pour calibrer votre système.
+          mais que vous avez deux poids de références 1 kg et 2 kg pour calibrer votre système.
           Vous les mettez, chacun leur tour,
           en mouvement sur votre ressort et vous mesurez la fréquence.
-          Pour la masse de \unit[1]{kg} vous mesurez \unit[1.1]{Hz}, pour la masse de \unit[2]{kg} vous mesurez \unit[0.8]{Hz}. \begin{tasks} \task Trouvez <m>k</m>
+          Pour la masse de 1 kg vous mesurez 1.1 Hz, pour la masse de 2 kg vous mesurez 0.8 Hz. \begin{tasks} \task Trouvez <m>k</m>
           (la constante du ressort)
           et <m>c</m>
           (la constante d'amortissement). \task Trouvez la formule pour la masse en terme de fréquence en Hz.
           <em>Notez qu'il pourrait avoir plus qu'une masse possible pour une fréquence donnée.</em>
           \task Pour un objet inconnu,
-          vous mesurez \unit[0.2]{Hz}, quelle est la masse de cet objet?
+          vous mesurez 0.2 Hz, quelle est la masse de cet objet?
           Supposez que la masse de l'objet inconnue est supérieure un kilogramme. \end{tasks}
         </p>
       </statement>
@@ -649,13 +652,13 @@
     <exercise>
       <statement>
         <p>
-          On veut mesurer la friction d'une masse de \unit[0.1]{kg} en la glissant sur une surface lisse
+          On veut mesurer la friction d'une masse de 0.1 kg en la glissant sur une surface lisse
           (on veut trouver <m>c</m>).
-          Vous avez un ressort de constante <m>k=\unitfrac[5]{N}{m}</m>.
+          Vous avez un ressort de constante <m>k=5</m> N/m.
           Vous prenez le ressort,
           vous attachez une masse et vous l'accrochez au mur.
           Ensuite, vous tirez sur le ressort et vous lâchez la masse.
-          Vous trouvez que la masse oscille avec une fréquence de \unit[1]{Hz}. Quelle est la friction?
+          Vous trouvez que la masse oscille avec une fréquence de 1 Hz. Quelle est la friction?
         </p>
       </statement>
     </exercise>
@@ -696,27 +699,27 @@
       <title>2</title>
       <statement>
         <p>
-          Un wagon de \unit[5000]{kg} frappe un pare-chocs
+          Un wagon de 5000 kg frappe un pare-chocs
           (un ressort)
-          à \unitfrac[1]{m}{s}, et le ressort comprime de \unit[0.1]{m}. Supposez qu'il n'y a pas d'amortissement.
+          à 1 m/s, et le ressort comprime de 0.1 m. Supposez qu'il n'y a pas d'amortissement.
         </p>
         <p>
-          \begin{tasks} \task Trouvez <m>k</m>. \task Quelle est la compression du ressort lorsqu'un wagon de \unit[10000]{kg} le frappe à
-          la même vitesse? \task Supposons que le ressort brise lorsqu'il comprime de plus de\unit[0.3]{m}. Quelle serait la masse maximale permise au wagon pour qu'il puisse le frapper à \unitfrac[1]{m}{s}? \task Quel est la masse maximale du wagon pouvant frapper le ressort sans briser à
-          une vitesse de \unitfrac[2]{m}{s}? \end{tasks}
+          \begin{tasks} \task Trouvez <m>k</m>. \task Quelle est la compression du ressort lorsqu'un wagon de 10000 kg le frappe à
+          la même vitesse? \task Supposons que le ressort brise lorsqu'il comprime de plus de 0.3 m. Quelle serait la masse maximale permise au wagon pour qu'il puisse le frapper à 1 m/s? \task Quel est la masse maximale du wagon pouvant frapper le ressort sans briser à
+          une vitesse de 2 m/s? \end{tasks}
         </p>
       </statement>
     </exercise>
     <p>
       \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>k=500000</m> b)
-      <m>\frac{1}{5\sqrt{2}} \approx 0.141</m> c) \unit[45000]{kg} d) \unit[11250]{kg} }
+      <m>\frac{1}{5\sqrt{2}} \approx 0.141</m> c) 45000 kg d) 11250 kg }
     </p>
     <exercise>
       <statement>
         <p>
-          Une masse de <m>m</m> \unit{kg} est attaché à
-          un ressort de constante <m>k=\unitfrac[3]{N}{m}</m>,
-          et <m>c=\unitfrac[2]{Ns}{m}</m>.
+          Une masse de <m>m</m> kg est attaché à
+          un ressort de constante <m>k=3</m> N/m,
+          et <m>c=2</m> Ns/m.
           Trouvez la masse <m>m_0</m> pour laquelle il y a un amortissement critique.
           Si <m>m \lt m_0</m>, est-ce que le système oscille ou non,
           et est-ce qu'il s'agit d'un sur-amortissement ou d'un sous-amortissement?

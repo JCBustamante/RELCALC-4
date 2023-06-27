@@ -3,7 +3,7 @@
   <subsection>
     <title>Résoudre les équations à coefficients constants</title>
     <p>
-      Considérons le problème suivant:
+      Considérons le problème suivant :
       <me>
         y''-6y'+8y = 0, \qquad y(0) = - 2, \qquad y'(0) = 6
       </me>.
@@ -26,13 +26,13 @@
       On va donc essayer<fn>
       Essayer une certaine solution avec des paramètres à
       résoudre est une technique centrale en équations différentielles.
-      Il y a même un nom pour ce type d'essai:
+      Il y a même un nom pour ce type d'essai :
       <em>\myindex{ansatz}</em>,
       qui est un terme allemand voulant dire hypothèse de départ quant à
       la forme de la solution.
       </fn> une solution de la forme <m>y = e^{rx}</m>.
       Alors, <m>y' = r e^{rx}</m> et <m>y'' = r^2 e^{rx}</m>.
-      Substituons ces expressions dans l'équation pour obtenir:
+      Substituons ces expressions dans l'équation pour obtenir :
       <md>
         <mrow>y''-6y'+8y \amp  = 0 ,</mrow>
         <mrow>\underbrace{r^2 e^{rx}}_{y''} -6 \underbrace{r e^{rx}}_{y'}+8 \underbrace{e^{rx}}_{y} \amp  = 0 ,</mrow>
@@ -52,7 +52,7 @@
       Sinon, on pourrait écrire
       <m>e^{4x} = C e^{2x}</m> pour une certaine constante <m>C</m>,
       impliquant que <m>e^{2x} = C</m> pour tout <m>x</m>, ce qui est impossible.
-      Ainsi, on peut écrire la solution générale comme suit:
+      Ainsi, on peut écrire la solution générale comme suit :
       <me>
         y = C_1 e^{2x} + C_2 e^{4x}
       </me>.
@@ -61,7 +61,7 @@
       On doit résoudre pour <m>C_1</m> et pour <m>C_2</m>.
       Pour appliquer les conditions initiales,
       on trouve d'abord <m>y' = 2 C_1 e^{2x} + 4 C_2 e^{4x}</m>.
-      On substitue <m>x=0</m> dans <m>y</m> et <m>y'</m>, puis on résout:
+      On substitue <m>x=0</m> dans <m>y</m> et <m>y'</m>, puis on résout :
       <md>
         <mrow>-2 \amp  = y(0) = C_1 + C_2 ,</mrow>
         <mrow>6 \amp  = y'(0) = 2 C_1 + 4 C_2 </mrow>
@@ -75,32 +75,32 @@
       en soustrayant les deux équations,
       on obtient que <m>5 = C_2</m>.
       Alors, <m>C_1 = -7</m> puisque <m>-2 = C_1 + 5</m>.
-      La solution recherchée est donc:
+      La solution recherchée est donc :
       <me>
         y = -7 e^{2x} + 5 e^{4x}
       </me>.
     </p>
     <p>
       Généralisons l'exemple à une méthode.
-      Supposons que nous avons l'équation suivante:
+      Supposons que nous avons l'équation suivante :
       <men xml:id="ccsol_eq">
         a y'' + b y' + c y = 0
       </men>,
       où <m>a, b, c</m> sont constantes.
-      Essayons une solution <m>y = e^{rx}</m> pour obtenir:
+      Essayons une solution <m>y = e^{rx}</m> pour obtenir :
       <me>
         a r^2 e^{rx} +  b r e^{rx} +  c e^{rx} = 0
       </me>.
     </p>
     <p>
       Divisons par <m>e^{rx}</m> pour obtenir l'<em>équation caractéristique<idx><h>équation caractéristique</h></idx>
-      </em> de cette équation différentielle:
+      </em> de cette équation différentielle :
       <me>
         a r^2 + b r +  c = 0
       </me>.
     </p>
     <p>
-      Résolvons pour <m>r</m> en utilisant la formule quadratique:
+      Résolvons pour <m>r</m> en utilisant la formule quadratique :
           <idx><h>formule quadratique</h></idx>
       <me>
         r_1, r_2 = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
@@ -120,7 +120,7 @@
               <p>
                 Si <m>r_1</m> et <m>r_2</m> sont distinctes et réelles
                 (quand <m>b^2 - 4ac > 0</m>),
-                alors <xref ref="ccsol_eq"/> admet la solution générale suivante:
+                alors <xref ref="ccsol_eq"/> admet la solution générale suivante :
                 <me>
                   y = C_1 e^{r_1 x} + C_2 e^{r_2 x}
                 </me>.
@@ -130,7 +130,7 @@
               <p>
                 Si <m>r_1 = r_2</m>
                 (quand <m>b^2 - 4ac = 0</m>),
-                alors <xref ref="ccsol_eq"/> admet la solution générale suivante:
+                alors <xref ref="ccsol_eq"/> admet la solution générale suivante :
                 <me>
                   y = (C_1 + C_2 x)\, e^{r_1 x}
                 </me>.
@@ -143,7 +143,7 @@
     <example xml:id="example_expsecondorder">
       <statement>
         <p>
-          Résolvons l'équation suivante:
+          Résolvons l'équation suivante :
           <me>
             y'' - k^2 y = 0
           </me>.
@@ -153,7 +153,7 @@
           <m>r^2 - k^2 = 0</m> ou <m>(r-k)(r+k) = 0</m>.
           Par conséquent,
           <m>e^{-k x}</m> et <m>e^{kx}</m> sont deux solutions linéairement indépendantes,
-          et la solution générale est:
+          et la solution générale est :
           <me>
             y = C_1 e^{kx} + C_2e^{-kx}
           </me>.
@@ -164,7 +164,7 @@
             <mrow>\cosh s \amp  = \frac{e^s+e^{-s}}{2},</mrow>
             <mrow>\sinh s \amp  = \frac{e^s-e^{-s}}{2}</mrow>
           </md>,
-          on peut écrire la solution générale comme suit:
+          on peut écrire la solution générale comme suit :
           <me>
             y = D_1 \cosh(kx) + D_2 \sinh(kx)
           </me>.
@@ -174,7 +174,7 @@
     <example>
       <statement>
       <p>
-        Trouvons la solution générale de l'équation différentielle suivante:
+        Trouvons la solution générale de l'équation différentielle suivante :
         <me>
           y'' -8 y' + 16 y = 0
         </me>.
@@ -182,7 +182,7 @@
       <p>
         L'équation caractéristique est <m>r^2 - 8 r + 16 = {(r-4)}^2 = 0</m>.
         L'équation a une racine double <m>r_1 = r_2 = 4</m>.
-        La solution générale est ainsi:
+        La solution générale est ainsi :
         <me>
           y = (C_1 + C_2 x)\, e^{4 x} = C_1 e^{4x} + C_2 x e^{4x}
         </me>.
@@ -202,7 +202,7 @@
         le travail de résolution,
         puisque les deux fonctions sont linéairement indépendantes.
         On calcule <m>y' = e^{4x} + 4xe^{4x}</m> et <m>y'' = 8 e^{4x} + 16xe^{4x}</m>.
-        On substitue ces expressions dans l'équation différentielle:
+        On substitue ces expressions dans l'équation différentielle :
         <me>
           y'' - 8 y' + 16 y = 8 e^{4x} + 16xe^{4x} - 8(e^{4x} + 4xe^{4x}) + 16 xe^{4x} =   0
         </me>.
@@ -248,7 +248,7 @@
       Un nombre complexe est simplement une paire de nombres réels <m>(a,b)</m>.
       On peut voir les nombres complexes comme des points du plan.
       Ainsi, on additionne les nombres complexes directement : <m>(a, b)+(c, d)=(a+c, b+d)</m>.
-      On définit la multiplication <idx><h>multiplication of complex numbers</h></idx> comme suit:
+      On définit la multiplication <idx><h>multiplication of complex numbers</h></idx> comme suit :
       <me>
         (a, b) \times (c, d) \overset{\text{ d\'ef } }{=} (ac-bd, ad+bc)
       </me>.
@@ -256,19 +256,18 @@
     <p>
       On définit ainsi la multiplication afin que toutes les propriétés standards de l'arithmétique fonctionnent.
       Par contre, il est important de savoir que <m>(0,1) \times (0, 1) = (-1, 0)</m>,
-      autrement dit:
+      autrement dit :
       <me>
         i^2=-1
       </me>.
     </p>
     <p>
-      Généralement, on écrit <m>(a, b)</m> tel que <m>a+ib</m>,
-      et l'on traite <m>i</m> comme une variable.
+      Généralement, on écrit <m>(a, b)</m> tel que <m>a+ib</m> et l'on traite <m>i</m> comme une variable.
       Quand <m>b</m> est égal à
       zéro, alors <m>(a,0)</m> est simplement le nombre <m>a</m>.
       On fait de l'arithmétique avec les nombres complexes simplement comme si c'était des polynômes.
       Lorsqu'on a <m>i^2</m>, on peut simplement le remplacer par <m>-1</m>.
-      Par exemple:
+      Par exemple :
       <me>
         (2+3i)(4i) - 5i = (2\times 4)i + (3 \times 4) i^2 - 5i = 8i + 12 (-1) - 5i = -12 + 3i
       </me>.
@@ -299,7 +298,7 @@
       ces propriétés sont toujours vraies pour les exponentielles complexes.
       Par exemple, une propriété
       très importante est <m>e^{x+y} = e^x e^y</m>.
-      Ceci signifie que:
+      Ceci signifie que :
       <me>
         e^{a+ib} = e^a e^{ib}
       </me>.
@@ -315,11 +314,9 @@
       <title>La formule d'Euler</title>
       <statement>
         <me>
-          \mybxbg{~~
           e^{i \theta} = \cos \theta + i \sin \theta
           \qquad \text{ et }  \qquad
           e^{- i \theta} = \cos \theta - i \sin \theta .
-          ~~}
         </me>
       </statement>
     </theorem>
@@ -340,7 +337,7 @@
     <exercise>
       <statement>
         <p>
-          Considérez l'égalité suivante:
+          Considérez l'égalité suivante :
           <m>e^{i(2\theta)} = {\bigl(e^{i \theta} \bigr)}^2</m>.
           Utilisez la formule d'Euler de chaque côté pour déduire :
           <me>
@@ -372,7 +369,7 @@
       En utilisant la formule quadratique,
       on obtient les racines <m>\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</m>.
       Ces racines sont complexes si <m>b^2 - 4ac \lt  0</m>.
-      Dans ce cas, les racines sont:
+      Dans ce cas, les racines sont :
       <me>
         r_1, r_2 = \frac{-b}{2a} \pm i\frac{\sqrt{4ac - b^2}}{2a}
       </me>.
@@ -380,7 +377,7 @@
     <p>
       On a toujours un nombre pair de racines de la forme <m>\alpha \pm i \beta</m>.
       Dans ce cas,
-      on peut écrire la solution de la manière suivante:
+      on peut écrire la solution de la manière suivante :
       <me>
         y = C_1 e^{(\alpha+i\beta)x} + C_2 e^{(\alpha-i\beta)x}
       </me>.
@@ -396,7 +393,7 @@
     </p>
     <p>
       On peut utiliser la formule d'Euler.
-      Soit:
+      Soit :
       <me>
         y_1 = e^{(\alpha+i\beta)x} \qquad \text{ et }  \qquad y_2 = e^{(\alpha-i\beta)x}
       </me>.
@@ -410,7 +407,7 @@
     </p>
     <p>
       Les combinaisons linéaires des solutions sont aussi des solutions.
-      Ainsi, les fonctions suivantes sont aussi des solutions:
+      Ainsi, les fonctions suivantes sont aussi des solutions :
       <md>
         <mrow>y_3 \amp  = \frac{y_1 + y_2}{2} = e^{\alpha x} \cos (\beta x),</mrow>
         <mrow>y_4 \amp  = \frac{y_1 - y_2}{2i} = e^{\alpha x} \sin (\beta x) </mrow>
@@ -431,7 +428,7 @@
           </me>,
           supposons que l'équation caractéristique admet des racines complexes <m>\alpha \pm i \beta</m>
           (quand <m>b^2 - 4ac \lt  0</m>).
-          Alors, la solution générale est:
+          Alors, la solution générale est :
           <me>
             y = C_1 e^{\alpha x} \cos (\beta x) + C_2 e^{\alpha x} \sin (\beta x)
           </me>.
@@ -446,8 +443,8 @@
         </p>
         <p>
           L'équation caractéristique est <m>r^2 + k^2 = 0</m>.
-          Donc, les racines sont <m>r = \pm ik</m>, et,
-          par le théorème, on a la solution générale suivante:
+          Donc, les racines sont <m>r = \pm ik</m> et,
+          par le théorème, on a la solution générale suivante :
           <me>
             y = C_1 \cos (kx) + C_2 \sin (kx)
           </me>.
@@ -464,7 +461,7 @@
           L'équation caractéristique est <m>r^2 - 6 r + 13 = 0</m>.
           En complétant le carré, on obtient <m>{(r-3)}^2 + 2^2 = 0</m>,
           et les racines sont <m>r = 3 \pm 2i</m>.
-          Par le théorème, on a la solution générale suivante:
+          Par le théorème, on a la solution générale suivante :
           <me>
             y = C_1 e^{3x} \cos (2x) + C_2 e^{3x} \sin (2x)
           </me>.
@@ -478,14 +475,14 @@
         </p>
         <p>
           Ainsi, <m>C_1 = 0</m> et <m>y = C_2 e^{3x} \sin (2x)</m>.
-          On dérive:
+          On dérive :
           <me>
             y' = 3C_2 e^{3x} \sin (2x) + 2C_2 e^{3x} \cos (2x)
           </me>.
         </p>
         <p>
           On met <m>x=0</m> de nouveau dans les conditions initiales et l'on obtient <m>10 = y'(0) = 2C_2</m> ou <m>C_2 = 5</m>.
-          La solution recherchée est donc:
+          La solution recherchée est donc :
           <me>
             y = 5 e^{3x} \sin (2x)
           </me>.

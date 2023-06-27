@@ -10,7 +10,7 @@
       celles pour les forces de vibration mécanique.
     </p>
     <p>
-      Considérons, par exemple:
+      Considérons, par exemple :
       <men xml:id="eq3_5_nh">
         y'' + 5y'+ 6y = 2x+1
       </men>.
@@ -21,7 +21,7 @@
       Premièrement,
       on trouve la solution générale <m>y_c</m> à
       l'<em>équation homogène associée<idx><h>équation homogène associée</h></idx>
-      </em>:
+      </em> :
       <men xml:id="eq3_5_h">
         y'' + 5y'+ 6y = 0
       </men>.
@@ -33,7 +33,7 @@
       <em>solution particulière<idx><h>solution particulière</h></idx>
       </em> <m>y_p</m> à <xref ref="eq3_5_nh"/>, d'une manière quelconque.
       La solution générale à
-      <xref ref="eq3_5_nh"/> est alors:
+      <xref ref="eq3_5_nh"/> est alors :
       <me>
         y = y_c + y_p
       </me>.
@@ -57,7 +57,7 @@
     </p>
     <p>
       Quand on utilise la notation des opérateurs linéaires,
-      le calcul devient plus simple:
+      le calcul devient plus simple :
       <me>
         Lw = L(y_p - \tilde{y}_p) =  Ly_p - L\tilde{y}_p = (2x+1)-(2x+1) = 0
       </me>.
@@ -79,7 +79,7 @@
           (pas nécessairement à
           coefficients constants).
           Soit <m>y_c</m> une solution complémentaire et soit <m>y_p</m> une solution particulière à <m>Ly=f(x)</m>.
-          Alors, la solution générale de <m>Ly=f(x)</m> est:
+          Alors, la solution générale de <m>Ly=f(x)</m> est :
           <me>
             y = y_c + y_p
           </me>.
@@ -105,14 +105,14 @@
       L'astuce est,
       d'une manière quelconque ou par un choix judicieux,
       de deviner une solution particulière à
-      l'équation<nbsp/><xref ref="eq3_5_nh"/>.
-      On note que <m>2x+1</m> est un polynôme et que le membre de gauche de l'équation sera un polynôme si l'on pose que <m>y</m> est un polynôme de même degré. Essayons:
+      l'équation <nbsp/> <xref ref="eq3_5_nh"/>.
+      On note que <m>2x+1</m> est un polynôme et que le membre de gauche de l'équation sera un polynôme si l'on pose que <m>y</m> est un polynôme de même degré. Essayons :
       <me>
         y_p = Ax + B
       </me>.
     </p>
     <p>
-      On remplace <m>y_p</m> dans le membre de gauche et l'on obtient:
+      On remplace <m>y_p</m> dans le membre de gauche et l'on obtient :
       <md>
         <mrow>y_p'' + 5y_p'+ 6y_p \amp  = (Ax+B)'' + 5(Ax+B)' + 6(Ax+B)</mrow>
         <mrow>\amp  = 0 + 5A + 6Ax + 6B = 6Ax+ (5A+6B) </mrow>
@@ -123,13 +123,13 @@
       Donc, <m>A = \nicefrac{1}{3}</m> et <m>B = \nicefrac{-1}{9}</m>.
       Par conséquent,
       <m>y_p = \frac{1}{3}\, x - \frac{1}{9} = \frac{3x-1}{9}</m>.
-      En résolvant le problème complémentaire (exercice!), on obtient:
+      En résolvant le problème complémentaire (exercice!), on obtient :
       <me>
         y_c = C_1 e^{-2x} + C_2 e^{-3x}
       </me>.
     </p>
     <p>
-      Ainsi, la solution générale à<nbsp/><xref ref="eq3_5_nh"/> est:
+      Ainsi, la solution générale à <nbsp/> <xref ref="eq3_5_nh"/> est :
       <me>
         y = C_1 e^{-2x} + C_2 e^{-3x} + \frac{3x-1}{9}
       </me>.
@@ -138,7 +138,7 @@
       Supposons maintenant que certaines conditions initiales sont imposées.
       Par exemple, <m>y(0) = 0</m> et <m>y'(0) = \nicefrac{1}{3}</m>.
       D'abord, on trouve que <m>y' = - 2C_1 e^{-2x} - 3C_2 e^{-3x} + \nicefrac{1}{3}</m>.
-      Ensuite:
+      Ensuite :
       <me>
         0   = y(0)  = C_1 + C_2 -\frac{1}{9} , \qquad \frac{1}{3} = y'(0) = - 2C_1 - 3C_2 + \frac{1}{3}
       </me>.
@@ -146,7 +146,7 @@
     <p>
       En résolvant l'équation,
       on obtient <m>C_1 = \nicefrac{1}{3}</m> et <m>C_2 = \nicefrac{-2}{9}</m>.
-      La solution particulière voulue est donc:
+      La solution particulière voulue est donc :
       <me>
         y(x) = \frac{1}{3} e^{-2x} - \frac{2}{9} e^{-3x} + \frac{3x-1}{9} = \frac{3 e^{-2x} - 2 e^{-3x} + 3x-1}{9}
       </me>.
@@ -159,7 +159,7 @@
       </statement>
     </exercise>
     <p>
-      Note: Une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec <m>y_c</m> et de seulement ajouter la solution particulière <m>y_p</m> par la suite.
+      Note : une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec <m>y_c</m> et de seulement ajouter la solution particulière <m>y_p</m> par la suite.
       <em>Ça ne fonctionnera pas</em>.
       Vous devez d'abord calculer <m>y = y_c + y_p</m> et
       <em>seulement ensuite</em>
@@ -169,7 +169,7 @@
       Lorsque le membre de droite est composé
       d'exponentielles, de sinus ou de cosinus,
       on travaille de manière semblable.
-      Prenons, par exemple:
+      Prenons, par exemple :
       <me>
         y''+2y'+2y = \cos (2x)
       </me>.
@@ -179,13 +179,13 @@
       On devine que la solution inclut un multiple de <m>\cos(2x)</m>.
       On doit aussi ajouter un multiple de
       <m>\sin (2x)</m> puisque la dérivée d'un cosinus est un sinus.
-      On essaie donc:
+      On essaie donc :
       <me>
         y_p = A \cos (2x) + B \sin (2x)
       </me>.
     </p>
     <p>
-      On substitue <m>y_p</m> dans l'équation et l'on obtient:
+      On substitue <m>y_p</m> dans l'équation et l'on obtient :
       <md>
         \underbrace{-4 A \cos (2x) - 4 B \sin (2x)}_{y_p''} +2 \underbrace{\bigl(-2A \sin (2x) + 2B \cos (2x)\bigr)}_{y_p'}  \\ +2 \underbrace{\bigl(A \cos (2x) + 2B \sin (2x)\bigr)}_{y_p} = \cos (2x)
       </md>
@@ -199,7 +199,7 @@
       savoir <m>-4A + 4B + 2A = 1</m> et <m>-4B - 4A + 2B = 0</m>.
       Alors, <m>-2A+4B =1</m> et <m>2A+B=0</m>,
       et aussi <m>A=\nicefrac{-1}{10}</m> et <m>B=\nicefrac{1}{5}</m>.
-      Alors:
+      Alors :
       <me>
         y_p = A \cos (2x) + B \sin (2x) = \frac{-\cos (2x) + 2 \sin (2x)}{10}
       </me>.
@@ -219,15 +219,15 @@
       d'un cosinus, d'une exponentielle ou d'un polynôme,
       on peut utiliser la règle du produit pour dériver et arriver à
       une expression à essayer.
-      On a besoin de deviner une forme pour <m>y_p</m> telle que <m>Ly_p</m> est de la même forme,
+      On a besoin de deviner une forme pour <m>y_p</m> telle que <m>Ly_p</m> est de la même forme
       et a tous les termes nécessaires pour le membre de droite.
-      Par exemple:
+      Par exemple :
       <me>
         Ly = (1+3x^2)\,e^{-x}\cos (\pi x)
       </me>.
     </p>
     <p>
-      Pour cette équation, on suppose que:
+      Pour cette équation, on suppose que :
       <me>
         y_p = (A + Bx + Cx^2)\,e^{-x} \cos (\pi x) + (D + Ex + Fx^2)\,e^{-x} \sin (\pi x)
       </me>.
@@ -236,12 +236,12 @@
       On substitue et l'on obtient les équations à
       résoudre pour <m>A</m>,
       <m>B</m>, <m>C</m>, <m>D</m>, <m>E</m> et <m>F</m>.
-      Comme on peut le voir, çaa peut engendrer rapidement un calcul très long et fastidieux.
+      Comme on peut le voir, ça peut engendrer rapidement un calcul très long et fastidieux.
     </p>
     <p>
-      Il y a un hic avec tout çaa.
+      Il y a un hic avec tout ça.
       Il est possible que la supposition faite résolve l'équation homogène associée.
-      Considérons, par exemple:
+      Considérons, par exemple :
       <me>
         y'' - 9y = e^{3x}
       </me>.
@@ -249,7 +249,7 @@
     <p>
       On aimerait poser que <m>y = Ae^{3x}</m>, mais,
       si l'on remplace dans le membre de gauche de l'équation,
-      on obtient:
+      on obtient :
       <me>
         y''-9y = 9Ae^{3x} - 9Ae^{3x} = 0 \not= e^{3x}
       </me>.
@@ -266,7 +266,7 @@
       avec notre expression.
       On la modifie pour qu'elle devienne <m>y = Axe^{3x}</m>,
       et alors il n'y a plus de duplication.
-      Essayons: <m>y' = Ae^{3x} + 3Axe^{3x}</m> et <m>y'' = 6Ae^{3x} + 9Axe^{3x}</m>, alors
+      Essayons : <m>y' = Ae^{3x} + 3Axe^{3x}</m> et <m>y'' = 6Ae^{3x} + 9Axe^{3x}</m>, alors
       <me>
         y'' -9y = 6Ae^{3x} + 9Axe^{3x} - 9Axe^{3x} = 6Ae^{3x}
       </me>.
@@ -274,14 +274,14 @@
     <p>
       Donc, <m>6Ae^{3x}</m> devrait être égal à <m>e^{3x}</m>.
       Ainsi, <m>6A = 1</m>, et alors <m>A=\nicefrac{1}{6}</m>.
-      On peut maintenant écrire la solution générale comme suit:
+      On peut maintenant écrire la solution générale comme suit :
       <me>
         y = y_c + y_p = C_1 e^{-3x} + C_2 e^{3x} + \frac{1}{6}\,xe^{3x}
       </me>.
     </p>
     <p>
       Il est possible que la multiplication par <m>x</m> n'enlève pas la duplication.
-      Voyons, par exemple:
+      Voyons, par exemple :
       <me>
         y''-6y'+9y = e^{3x}
       </me>.
@@ -316,7 +316,7 @@
       de dérivées linéairement indépendantes; à
       ce moment-là, on peut écrire une expression qui les contient toutes.
       Quelques équations sont un peu plus difficiles.
-      Considérons, par exemple:
+      Considérons, par exemple :
       <me>
         y''+y = \tan x
       </me>.
@@ -325,12 +325,13 @@
       Toutes les nouvelles dérivées de <m>\tan x</m> sont complètement différentes et ne peuvent pas s'écrire comme une combinaison linéaire des dérivées précédentes.
       Si l'on commence par dériver <m>\tan x</m>, on obtient:
       <md>
-        \sec^2 x, 2 \sec^2 x \, \tan x, 4 \sec^2 x \, \tan^2 x + 2 \sec^4 x, \\ 8 \sec^2 x \, \tan^3 x + 16 \sec^4 x \, \tan x, 16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x \ldots
+        <mrow>\sec^2 x, 2 \sec^2 x \, \tan x, 4 \sec^2 x \, \tan^2 x + 2 \sec^4 x,</mrow>
+        <mrow>8 \sec^2 x \, \tan^3 x + 16 \sec^4 x \, \tan x, 16\sec^2 x \, \tan^4 x + 88 \sec^4 x \tan^2 x + 16 \sec^6 x \ldots</mrow>
       </md>
     </p>
     <p>
       Cette équation fait appel à
-      une méthode différente:
+      une méthode différente :
       la méthode de la <em>variation des paramètres<idx><h>variation des paramètres</h></idx>
       </em>, qui gère toute équation de la forme <m>Ly = f(x)</m>, à
       condition de pouvoir résoudre certaines intégrales.
@@ -345,7 +346,7 @@
     </p>
     <p>
       Il est peut-être préférable d'expliquer cette méthode par un exemple.
-      On essaie de résoudre l'équation:
+      On essaie de résoudre l'équation :
       <me>
         Ly = y''+y = \tan x
       </me>.
@@ -356,7 +357,7 @@
       On obtient <m>y_c = C_1 y_1 + C_2 y_2</m>,
       où <m>y_1 = \cos x</m> et <m>y_2 = \sin x</m>.
       On trouve une solution particulière à
-      l'équation non homogène et l'on trouve:
+      l'équation non homogène et l'on trouve :
       <me>
         y_p = y = u_1 y_1 + u_2 y_2
       </me>,
@@ -365,7 +366,7 @@
       On essaie de satisfaire à
       <m>Ly = \tan x</m>,
       ce qui donne les conditions pour les fonctions <m>u_1</m> et <m>u_2</m>.
-      On calcule (règle du produit):
+      On calcule (règle du produit) :
       <me>
         y' = (u_1' y_1 + u_2' y_2) + (u_1 y_1' + u_2 y_2')
       </me>.
@@ -376,7 +377,7 @@
       (nous avons deux fonctions inconnues,
       alors nous pouvons ajouter deux conditions).
       On a besoin que <m>(u_1' y_1 + u_2' y_2) = 0</m>.
-      Ceci rend les calculs de la deuxième dérivée plus faciles:
+      Ceci rend les calculs de la deuxième dérivée plus faciles :
       <md>
         <mrow>\amp  y' = u_1 y_1' + u_2 y_2' ,</mrow>
         <mrow>\amp  y'' = (u_1' y_1' + u_2' y_2') + (u_1 y_1'' + u_2 y_2'') </mrow>
@@ -388,7 +389,7 @@
       <m>y_2'' = - y_2</m> (si l'équation était plus générale,
       <m>y''+p(x)y' +q(x)y = 0</m>,
       on aurait <m>y_i'' = -p(x)y_i' -q(x)y_i</m>).
-      Alors:
+      Alors :
       <me>
         y'' = (u_1' y_1' + u_2' y_2') - (u_1 y_1 + u_2 y_2)
       </me>.
@@ -409,10 +410,11 @@
     </p>
     <p>
       On doit résoudre les deux équations (conditions) qu'on a imposées à
-      <m>u_1</m> et à <m>u_2</m>:
-      <me>
-        \mybxbg{~~ \begin{aligned} \amp  u_1' y_1 + u_2' y_2 = 0 ,\\ \amp  u_1' y_1' + u_2' y_2' = f(x) . \end{aligned}~~}
-      </me>
+      <m>u_1</m> et à <m>u_2</m> :
+      <md>
+        <mrow>u_1' y_1 + u_2' y_2 = 0 ,</mrow>
+        <mrow>u_1' y_1' + u_2' y_2' = f(x) .</mrow>
+      </md>
     </p>
     <p>
       On résout pour <m>u_1'</m> et <m>u_2'</m> en termes de <m>f(x)</m>,
@@ -422,21 +424,21 @@
       Il y a une formule générale pour la solution qu'on peut remplacer, mais,
       au lieu de la mémoriser,
       c'est mieux et plus facile de simplement répéter ce qu'on a fait précédemment.
-      Dans ce cas, les deux équations sont:
+      Dans ce cas, les deux équations sont :
       <md>
         <mrow>u_1' \cos (x) + u_2' \sin (x) \amp = 0 ,</mrow>
         <mrow>-u_1' \sin (x) + u_2' \cos (x) \amp = \tan (x) </mrow>
       </md>.
     </p>
     <p>
-      Ainsi:
+      Ainsi :
       <md>
         <mrow>u_1' \cos (x) \sin (x) + u_2' \sin^2 (x) \amp  = 0 ,</mrow>
         <mrow>-u_1' \sin (x) \cos (x) + u_2' \cos^2 (x) \amp  = \tan (x) \cos (x) = \sin (x) </mrow>
       </md>.
     </p>
     <p>
-      Et alors:
+      Et alors :
       <md>
         <mrow>\amp  u_2' \bigl(\sin^2 (x) + \cos^2 (x)\bigr) = \sin (x) ,</mrow>
         <mrow>\amp  u_2' = \sin (x) ,</mrow>
@@ -444,7 +446,7 @@
       </md>.
     </p>
     <p>
-      On intègre <m>u_1'</m> et <m>u_2'</m> pour obtenir <m>u_1</m> et <m>u_2</m>:
+      On intègre <m>u_1'</m> et <m>u_2'</m> pour obtenir <m>u_1</m> et <m>u_2</m> :
       <md>
         <mrow>\amp  u_1 = \int u_1'\,dx   = \int - \tan (x) \sin (x)\,dx = \frac{1}{2} \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert   + \sin (x) ,</mrow>
         <mrow>\amp  u_2 = \int u_2'\,dx   = \int \sin (x)\,dx = -\cos (x) </mrow>
@@ -459,7 +461,7 @@
     </p>
     <p>
       La solution générale à
-      <m>y'' + y = \tan x</m> est:
+      <m>y'' + y = \tan x</m> est :
       <me>
         y = C_1 \cos (x) + C_2 \sin (x) + \frac{1}{2} \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert
       </me>.
@@ -512,7 +514,7 @@
         <p>
           \begin{tasks} \task Utilisez la variation des paramètres pour trouver une solution particulière de
           <m>y''-2y'+y = e^x</m>. \task Trouvez une solution particulière en utilisant les coefficients indéterminés. \task Est-ce que les deux solutions que vous avez trouvées sont les mêmes?
-          Vérifiez <xref ref="exercise_diffvarparunder">aussi</xref>. \end{tasks}
+          Vérifiez aussi <xref ref="exercise_diffvarparunder"></xref>. \end{tasks}
         </p>
       </statement>
     </exercise>
