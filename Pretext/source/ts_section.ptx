@@ -4,7 +4,7 @@
     <title>Fonctions périodiques et motivations</title>
     <p>
       Afin de motiver l'étude des séries de Fourier,
-      considérons le problème suivant:
+      considérons le problème suivant :
       <men xml:id="ts_deq">
         x'' + \omega_0^2 x = f(t)
       </men>
@@ -31,7 +31,7 @@
       <m>3P</m>-périodique et ainsi de suite.
       Par exemple, <m>\cos (t)</m> et
       <m>\sin (t)</m> sont <m>2\pi</m>-périodiques.
-      Les fonctions constantes sont des exemples extrêmes:
+      Les fonctions constantes sont des exemples extrêmes :
       elles sont périodiques pour n'importe quelle période
       (exercice).
     </p>
@@ -48,19 +48,20 @@
       pour <m>t</m> dans <m>[-3L,-L]</m>,
       <m>F(t) = f(t+2L)</m>, et ainsi de suite.
       Pour faire ce travail, on a besoin de <m>f(-L) = f(L)</m>.
-      On pourrait aussi commencer avec <m>f</m> définie seulement sur un demi-intervalle ouvert <m>(-L,L]</m> et on définit <m>f(-L) = f(L)</m>.
+      On pourrait aussi commencer avec <m>f</m> définie seulement sur un demi-intervalle ouvert <m>(-L,L]</m> et l'on définit <m>f(-L) = f(L)</m>.
     </p>
     <example>
       <statement>
         <p>
           Définissons <m>f(t) = 1-t^2</m> sur <m>[-1,1]</m>.
           Maintenant, on prolonge <m>f(t)</m> périodiquement pour obtenir une fonction 2-périodique.
-          Voir <xref ref="ts_perextofinvertedparabolafig">la</xref>.
+          Voir la <xref ref="ts_perextofinvertedparabolafig"></xref>.
         </p>
         <figure xml:id="ts_perextofinvertedparabolafig">
           <caption>Prolongement 2-périodique de la fonction
           <m>1-t^2</m>.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{ts-perextofinvertedparabola}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-perextofinvertedparabola} -->
+          <image source="ts-perextofinvertedparabola"></image>
         </figure>
       </statement>
     </example>
@@ -164,11 +165,11 @@
       </me>.
     </p>
     <p>
-      Nous avons calculé les fonctions propres dans l'<xref ref="bvp-periodic_example">exemple</xref> : <m>1</m>,
+      Nous avons calculé les fonctions propres dans l'<xref ref="bvp-periodic_example"></xref> : <m>1</m>,
       <m>\cos (k t)</m> et <m>\sin (k t)</m>.
-      Ainsi, on veut trouver une représentation d'une fonction <m>2\pi</m>-périodique <m>f(t)</m> de la forme suivante:
+      Ainsi, on veut trouver une représentation d'une fonction <m>2\pi</m>-périodique <m>f(t)</m> de la forme suivante :
       <me>
-        \mybxbg{~~ f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t) . ~~}
+        f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t) .
       </me>
     </p>
     <p>
@@ -176,7 +177,7 @@
           <idx><h>série de Fourier</h></idx>
       </em><fn>
       Nommée d'après le mathématicien françaais
-      <url href="https://en.wikipedia.org/wiki/Joseph_Fourier">Jean Baptiste Joseph Fourier</url>
+      <url href="https://fr.wikipedia.org/wiki/Joseph_Fourier">Jean Baptiste Joseph Fourier</url>
       (1768-1830).
       </fn> ou <em>série trigonométrique<idx><h>série trigonométrique</h></idx>
       </em> pour <m>f(t)</m>.
@@ -225,19 +226,23 @@
     </p>
     <p>
       Les coefficients sont donnés par
-      <me>
-        \mybxbg{~~ \begin{aligned} \amp  a_n = \frac{\langle \, f(t), \, \cos (nt) \, \rangle}{\langle \, \cos (nt) \, , \, \cos (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \, dt , \\ \amp  b_n = \frac{\langle \, f(t), \, \sin (nt) \, \rangle}{\langle \, \sin (nt), \, \sin (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \, dt . \end{aligned} ~~}
-      </me>
+      <!-- <me>
+        \begin{aligned} \amp  a_n = \frac{\langle \, f(t), \, \cos (nt) \, \rangle}{\langle \, \cos (nt) \, , \, \cos (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \, dt , \\ \amp  b_n = \frac{\langle \, f(t), \, \sin (nt) \, \rangle}{\langle \, \sin (nt), \, \sin (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \, dt . \end{aligned}
+      </me> -->
+      <md>
+        <mrow>\amp  a_n = \frac{\langle \, f(t), \, \cos (nt) \, \rangle}{\langle \, \cos (nt), \, \cos (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \, dt,</mrow>
+        <mrow> \amp b_n = \frac{\langle \, f(t), \, \sin (nt) \, \rangle}{\langle \, \sin (nt), \, \sin (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \, dt.</mrow>
+      </md>
     </p>
     <p>
       On compare ces expressions avec les exemples à dimensions finies.
       Pour <m>a_0</m>, on obtient une formule similaire :
       <me>
-        \mybxbg{~~ a_0 = 2 \frac{\langle \, f(t), \, 1 \, \rangle}{\langle \, 1, \, 1 \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \, dt . ~~}
+        a_0 = 2 \frac{\langle \, f(t), \, 1 \, \rangle}{\langle \, 1, \, 1 \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \, dt.
       </me>
     </p>
     <p>
-      Regardons la formule utilisée pour les propriétés d'orthogonalité. Supposons donc que:
+      Regardons la formule utilisée pour les propriétés d'orthogonalité. Supposons donc que :
       <me>
         f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t)
       </me>.
@@ -270,22 +275,22 @@
           Le terme <em>dents de scie
               <idx><h>dents de scie</h></idx>
           </em> est utilisé pour désigner les fonctions de cette forme.
-          Le graphe de <m>f(t)</m> se trouve à
-          <xref ref="ts_sawtoothfig">la</xref>.
+          Le graphe de <m>f(t)</m> se trouve à la <xref ref="ts_sawtoothfig"></xref>.
         </p>
         <figure xml:id="ts_sawtoothfig">
           <caption>Le graphe d'une fonction en dents de scie.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{ts-sawtooth}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-sawtooth} -->
+          <image source="ts-sawtooth"></image>
         </figure>
         <p>
           Calculons les coefficients.
-          On commence avec <m>a_0</m>:
+          On commence avec <m>a_0</m> :
           <me>
             a_0 = \frac{1}{\pi} \int_{-\pi}^\pi t \,dt = 0
           </me>.
         </p>
         <p>
-          Nous nous servirons souvent du résultat suivant:
+          Nous nous servirons souvent du résultat suivant :
           sur un intervalle de la forme <m>[-L,L]</m>,
           l'intégrale d'une fonction impaire est nulle.
           On rappelle qu'une <em>fonction impaire
@@ -301,14 +306,14 @@
         </p>
         <p>
           Calculons maintenant <m>b_n</m>.
-          Deuxième résultat utile:
+          Deuxième résultat utile :
           sur un intervalle de la forme <m>[-L,L]</m>,
           l'intégrale d'une fonction paire est égale à
           deux fois l'intégrale de cette même fonction sur <m>[0,L]</m>.
           On rappelle qu'une <em>fonction paire
               <idx><h>fonction paire</h></idx>
           </em> est une fonction <m>\varphi(t)</m> telle que <m>\varphi(-t) = \varphi(t)</m>.
-          Par exemple, <m>t \sin (nt)</m> est paire, et donc:
+          Par exemple, <m>t \sin (nt)</m> est paire, et donc :
           <me>
             \begin{split} b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi t \sin (nt) \,dt \\ \amp  = \frac{2}{\pi} \int_{0}^\pi t \sin (nt) \,dt \\ \amp  = \frac{2}{\pi} \left( \left[ \frac{-t \cos (nt)}{n} \right]_{t=0}^{\pi} + \frac{1}{n} \int_{0}^\pi \cos (nt) \,dt \right) \\ \amp  = \frac{2}{\pi} \left( \frac{-\pi \cos (n\pi)}{n} + 0 \right) \\ \amp  =  \frac{-2 \cos (n\pi)}{n} =  \frac{2 \,{(-1)}^{n+1}}{n} . \end{split}
           </me>
@@ -316,7 +321,7 @@
         <p>
           On a utilisé ici le fait suivant :
           <me>
-            \cos (n\pi) = {(-1)}^n = \begin{cases} 1 \amp  \text{ si }  n \text{ est pair }  , \\ -1 \amp  \text{ si }  n \text{ est impair }  . \end{cases}
+            \cos (n\pi) = {(-1)}^n = \begin{cases} 1 \amp  \text{ si }  n \text{ est pair } \\ -1 \amp  \text{ si }  n \text{ est impair }  . \end{cases}
           </me>
         </p>
         <p>
@@ -326,18 +331,18 @@
           </me>.
         </p>
         <p>
-          Écrivons les trois premières harmoniques de la série pour <m>f(t)</m>:
+          Écrivons les trois premières harmoniques de la série pour <m>f(t)</m> :
           <me>
             2 \, \sin (t) - \sin (2t) +\frac{2}{3} \sin (3t) + \cdots
           </me>
         </p>
         <p>
-          Le graphe des trois premiers termes de la série et celui des vingt premiers se trouvent à
-          <xref ref="ts_sawtoothfsfig">la</xref>.
+          Le graphe des trois premiers termes de la série et celui des vingt premiers se trouvent à la <xref ref="ts_sawtoothfsfig"></xref>.
         </p>
         <figure xml:id="ts_sawtoothfsfig">
-          <caption>Trois premières harmoniques (à gauche) et vingt premières (à droite) d'une fonction en dents de scie.</caption>
-          \diffyincludegraphics{width=6.24in}{width=9in}{ts-sawtooth-fs3-fs20}
+          <caption>Trois premières harmoniques (à gauche) et vingt premières harmoniques (à droite) d'une fonction en dents de scie.</caption>
+          <!-- \diffyincludegraphics{width=6.24in}{width=9in}{ts-sawtooth-fs3-fs20} -->
+          <image source="ts-sawtooth-fs3-fs20"></image>
         </figure>
       </statement>
     </example>
@@ -346,7 +351,7 @@
         <p>
           Prenons la fonction
           <me>
-            f(t) = \begin{cases} 0 \amp  \text{ si }  \;{-\pi} \lt  t \leq 0 , \\ \pi \amp  \text{ si }  \;0 \lt  t \leq \pi . \end{cases}
+            f(t) = \begin{cases} 0 \amp  \text{ si }  \;{-\pi} \lt  t \leq 0 \\ \pi \amp  \text{ si }  \;0 \lt  t \leq \pi . \end{cases}
           </me>
         </p>
         <p>
@@ -355,12 +360,12 @@
           et on les appelle des <em>vagues carrées
               <idx><h>vagues carrées</h></idx>
           </em>.
-          Le graphe du prolongement de <m>f(t)</m> est montré à
-          <xref ref="ts_squarewavefig">la</xref>.
+          Le graphe du prolongement de <m>f(t)</m> est montré à la <xref ref="ts_squarewavefig"></xref>.
         </p>
         <figure xml:id="ts_squarewavefig">
           <caption>Le graphe d'une vague carrée.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave} -->
+          <image source="ts-squarewave"></image>
         </figure>
         <p>
           Maintenant, on calcule les coefficients.
@@ -378,7 +383,7 @@
         <p>
           Et finalement,
           <me>
-            \begin{split} b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \,dt \\ \amp  = \frac{1}{\pi} \int_{0}^\pi \pi \sin (nt) \,dt \\ \amp  = \left[ \frac{- \cos (nt)}{n} \right]_{t=0}^\pi \\ \amp  = \frac{1 - \cos (\pi n)}{n} = \frac{1 - {(-1)}^n}{n} = \begin{cases} \frac{2}{n} \amp  \text{ si }  n \text{ est impair }  , \\ 0 \amp  \text{ si }  n \text{ est pair }  . \end{cases} \end{split}
+            \begin{split} b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \,dt \\ \amp  = \frac{1}{\pi} \int_{0}^\pi \pi \sin (nt) \,dt \\ \amp  = \left[ \frac{- \cos (nt)}{n} \right]_{t=0}^\pi \\ \amp  = \frac{1 - \cos (\pi n)}{n} = \frac{1 - {(-1)}^n}{n} = \begin{cases} \frac{2}{n} \amp  \text{ si }  n \text{ est impair }  \\ 0 \amp  \text{ si }  n \text{ est pair }  . \end{cases} \end{split}
           </me>
         </p>
         <p>
@@ -396,12 +401,12 @@
         <p>
           Le graphe des trois premières harmoniques de la série
           (et aussi des vingt premières)
-          se trouve à
-          <xref ref="ts_squarewavefsfig">la</xref>.
+          se trouve à la <xref ref="ts_squarewavefsfig"></xref>.
         </p>
         <figure xml:id="ts_squarewavefsfig">
           <caption>Trois premières harmoniques (à gauche) et vingt premières harmoniques (à droite) d'une vague carrée.</caption>
-          \diffyincludegraphics{width=6.24in}{width=9in}{ts-squarewave-fs3-fs20}
+          <!-- \diffyincludegraphics{width=6.24in}{width=9in}{ts-squarewave-fs3-fs20} -->
+          <image source="ts-squarewave-fs3-fs20"></image>
         </figure>
       </statement>
     </example>
@@ -416,7 +421,7 @@
       tient seulement pour les valeurs de <m>t</m> où <m>f(t)</m> est continue.
       On n'obtient pas l'égalité
       pour <m>t=-\pi,0,\pi</m> et pour toutes les autres discontinuités de <m>f(t)</m>.
-      Ce n'est pas difficile de voir que lorsque <m>t</m> est un entier muliple de <m>\pi</m>
+      Ce n'est pas difficile de voir que lorsque <m>t</m> est un entier multiple de <m>\pi</m>
       (ce qui inclut la discontinuité),
       alors
       <me>
@@ -426,12 +431,14 @@
     <p>
       Redéfinissons <m>f(t)</m> sur <m>[-\pi,\pi]</m> comme suit,
       <me>
-        f(t) = \begin{cases} 0 \amp  \text{ si }  \; {-\pi} \lt  t \lt  0 , \\ \pi \amp  \text{ si }  \; 0 \lt  t \lt  \pi , \\ \nicefrac{\pi}{2} \amp  \text{ si }  \; t = -\pi, t = 0\text{ ou } t = \pi, \end{cases}
+        f(t) = \begin{cases} 0 \amp  \text{ si }  \; {-\pi} \lt  t \lt  0 \\
+         \pi \amp  \text{ si }  \; 0 \lt  t \lt  \pi \\ 
+         \nicefrac{\pi}{2} \amp  \text{ si }  \; t = -\pi, t = 0\text{ ou } t = \pi, \end{cases}
       </me>
       et prolongeons périodiquement.
       Maintenant, la série est égale au prolongement de <m>f(t)</m> partout,
       y compris aux points de discontinuité. Généralement,
-      on ne s'en fera pas avec le changement de valeur des fonctions à certains points
+      on ne s'en fera pas avec le changement de valeurs des fonctions à certains points
       (en nombre fini).
     </p>
     <p>
@@ -440,8 +447,7 @@
       On zoome dans le voisinage de la discontinuité
       d'une vague carrée.
       Ensuite, on trace le graphe des 100 premières harmoniques,
-      comme à
-      <xref ref="ts_squarewavegibbsfig">la</xref>.
+      comme à la <xref ref="ts_squarewavegibbsfig"></xref>.
       Tandis que la série est une très bonne approximation loin des discontinuités, l'erreur
       (le dépassement)
       dans le voisinage de la discontinuité à
@@ -454,7 +460,8 @@
     </p>
     <figure xml:id="ts_squarewavegibbsfig">
       <caption>Phénomène de Gibbs en action.</caption>
-      \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave-gibbs}
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave-gibbs} -->
+      <image source="ts-squarewave-gibbs"></image>
     </figure>
     <p>
       On peut penser à une fonction périodique comme à un
@@ -552,7 +559,7 @@
     <exercise>
       <statement>
         <p>
-          \begin{samepage} Soit
+          Soit
           <me>
             f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t)
           </me>.
@@ -568,13 +575,10 @@
           Notez que la somme s'étend maintenant sur tous les entiers,
           y compris les nombres négatifs.
           Ne vous inquiétez pas de la convergence dans ce calcul.
-          Astuce: Il peut être préférable de partir de la forme exponentielle complexe et d'écrire la série comme
+          Astuce : il peut être préférable de partir de la forme exponentielle complexe et d'écrire la série comme
           <me>
             c_0 + \sum_{m=1}^\infty \Bigl( c_m e^{imt} + c_{-m} e^{-imt}  \Bigr)
           </me>.
-        </p>
-        <p>
-          \end{samepage}
         </p>
       </statement>
     </exercise>

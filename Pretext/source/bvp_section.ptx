@@ -26,19 +26,17 @@
       Par contre, l'unicité de la solution est une autre question.
       La solution générale de
       <m>x'' + \lambda x = 0</m> a deux constantes arbitraires<fn>
-      On regarde <xref ref="subsection_fourfundamental">la</xref>,
-      ou l' <xref ref="example_expsecondorder"></xref>
-      et l' <xref ref="example_sincossecondorder"></xref>.
+      On regarde la <xref ref="subsection_fourfundamental"></xref>,
+      ou l'<xref ref="example_expsecondorder"></xref>
+      et l'<xref ref="example_sincossecondorder"></xref>.
       </fn>.
-      C'est naturel
-      (mais faux)
-      de croire qu'exiger deux solutions garantit l'unicité.
+      C'est naturel (mais faux) de croire qu'exiger deux solutions garantit l'unicité.
     </p>
     <example>
       <statement>
         <p>
-          On prend <m>\lambda = 1</m>, <m>a=0</m>, <m>b=\pi</m>.
-          Ceci donne:
+          Prenons <m>\lambda = 1</m>, <m>a=0</m>, <m>b=\pi</m>.
+          Ceci donne :
           <me>
             x'' + x = 0,  x(0) = 0,  x(\pi) = 0
           </me>.
@@ -63,7 +61,7 @@
     <example>
       <statement>
         <p>
-          Posons maintenant <m>\lambda = 2</m>:
+          Posons maintenant <m>\lambda = 2</m> :
           <me>
             x'' + 2 x = 0,  x(0) = 0,  x(\pi) = 0
           </me>.
@@ -103,7 +101,7 @@
     <p>
       Un nombre <m>\lambda</m> est appelé
       une <em>valeur propre <idx><h>eigenvalue of a boundary value problem</h></idx>
-      </em> de <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) si et seulement si il existe une solution non nulle
+      </em> de <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) si et seulement s'il existe une solution non nulle
       (non identiquement nulle)
       à
       <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) donnée par un <m>\lambda</m> spécifique.
@@ -228,11 +226,11 @@
         </p>
         <p>
           Encore une fois,
-          on doit considérer séparément les trois cas suivants:
+          on doit considérer séparément les trois cas suivants :
           <m>\lambda > 0</m>, <m>\lambda = 0</m>, <m>\lambda \lt  0</m>.
           D'abord, on suppose que <m>\lambda > 0</m>.
           La solution générale est alors <m>x = A \cos ( \sqrt{\lambda}\, t) + B \sin ( \sqrt{\lambda}\, t)</m>.
-          Sa dérivée est:
+          Sa dérivée est :
           <me>
             x' = -A\sqrt{\lambda}\, \sin ( \sqrt{\lambda}\, t) + B\sqrt{\lambda}\, \cos (\sqrt{\lambda}\, t)
           </me>.
@@ -255,7 +253,7 @@
         <p>
           Maintenant, on suppose que <m>\lambda = 0</m>.
           Dans ce cas, l'équation est <m>x'' = 0</m>,
-          et la solution générale est <m>x = At + B</m> so <m>x' = A</m>.
+          et la solution générale est <m>x = At + B</m> et donc <m>x' = A</m>.
           La condition <m>x'(0) = 0</m> implique que <m>A=0</m>.
           La condition <m>x'(\pi) = 0</m> implique aussi que <m>A=0</m>.
           Ainsi, <m>B</m> pourrait être n'importe quoi
@@ -266,7 +264,7 @@
         <p>
           Finalement, soit <m>\lambda \lt  0</m>.
           Dans ce cas,
-          la solution générale est <m>x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t)</m> et
+          la solution générale est <m>x = A \cosh ( \sqrt{-\lambda}\, t) + B \sinh ( \sqrt{-\lambda}\, t)</m>, et
           <me>
             x' = A\sqrt{-\lambda}\, \sinh ( \sqrt{-\lambda}\, t) + B\sqrt{-\lambda}\, \cosh ( \sqrt{-\lambda}\, t )
           </me>.
@@ -283,9 +281,9 @@
           <me>
             \lambda_k = k^2  \text{ avec fonction propre }   x_k = \cos (k t) \text{ pour tous les entiers }  k \geq 1
           </me>,
-          et, de plus, il y a une autre valeur propre:
+          et, de plus, il y a une autre valeur propre :
           <me>
-            \lambda_0 = 0 \qquad \text{ avec une fonction propre }  \qquad x_0 = 1
+            \lambda_0 = 0 \qquad \text{ avec fonction propre }  \qquad x_0 = 1
           </me>.
         </p>
       </statement>
@@ -350,7 +348,7 @@
           Dans ce cas, toutefois,
           <m>x = A \cos (k t) + B \sin (k t)</m> est une fonction propre pour tout <m>A</m> et pour tout <m>B</m>.
           Par conséquent,
-          on a deux fonctions propres linéairement indépendantes:
+          on a deux fonctions propres linéairement indépendantes :
           <m>\sin (kt)</m> et <m>\cos (kt)</m>.
         </p>
         <p>
@@ -414,7 +412,7 @@
       </me>.
     </p>
     <p>
-      Maintenant, on intègre des deux côtés de l'équation:
+      Maintenant, on intègre des deux côtés de l'équation :
       <me>
         \begin{split} (\lambda_1 - \lambda_2) \int_a^b x_1 x_2 \,dt \amp  = \int_a^b x_2'' x_1 - x_2 x_1'' \,dt \\ \amp  = \int_a^b \frac{d}{dt} \left( x_2' x_1 - x_2 x_1' \right) \,dt \\ \amp  = \Bigl[ x_2' x_1 - x_2 x_1' \Bigr]_{t=a}^b = 0 . \end{split}
       </me>
@@ -440,7 +438,7 @@
     <p>
       La fonction <m>\sin (n t)</m> est une fonction propre pour l'équation <m>x''+\lambda x = 0</m>,
       <m>x(0) = 0</m>, <m>x(\pi) = 0</m>.
-      Donc, pour les entiers positifs <m>n</m> et <m>m</m>:
+      Donc, pour les entiers positifs <m>n</m> et <m>m</m> :
       <me>
         \int_{0}^\pi \sin (mt) \sin (nt) \,dt = 0 ,  \text{ lorsque }  m \not = n
       </me>.
@@ -476,7 +474,7 @@
     </p>
     <theorem xml:id="thm_fredholmsimple">
       <title>Alternative de Fredholm<footnote>Nommée d'après le mathématicien suédois
-      <url href="https://en.wikipedia.org/wiki/Fredholm">Erik Ivar Fredholm</url>
+      <url href="https://fr.wikipedia.org/wiki/Ivar_Fredholm">Erik Ivar Fredholm</url>
       (1866-1927).</footnote></title>
       <statement>
         <p>
@@ -499,7 +497,7 @@
       Le théorème veut dire que si <m>\lambda</m> n'est pas une valeur propre,
       l'équation non homogène <xref ref="simpfrednonhomeq"/> a une solution unique pour tous les côtés droits.
       Autrement dit, si <m>\lambda</m> est une valeur propre,
-      alors <xref ref="simpfrednonhomeq"/> n'a pas besoin d'avoir une solution pour tous les <m>f</m>, et,
+      alors <xref ref="simpfrednonhomeq"/> n'a pas besoin d'avoir une solution pour tous les <m>f</m> et,
       en plus, même s'il y a une solution,
       la solution n'est pas unique.
     </p>
@@ -513,9 +511,9 @@
     </p>
     <p>
       Beaucoup d'intuition de l'algèbre linéaire peut être appliquée aux opérateurs différentiels linéaires,
-      mais il faut bien sûr être prudent.
+      mais il faut bien faire preuve de prudence.
       Par exemple, une différence que nous avons déjà
-      vue est qu'en général un opérateur différentiel aura une infinité
+      vue est que, en général, un opérateur différentiel aura une infinité
       de valeurs propres, tandis qu'une matrice n'en a qu'un nombre fini.
     </p>
   </subsection>
@@ -525,11 +523,11 @@
       Considérons une application physique.
       On suppose avoir un élastique très tendu qui tourne rapidement ou une corde de densité
       linéaire uniforme <m>\rho</m>,
-      par exemple, en <m>\unitfrac{kg}{m}</m>.
+      par exemple, en kg/m.
       Mettons ce problème dans un plan <m>xy</m> avec <m>x</m> et <m>y</m> en mètres.
       L'axe des <m>x</m> représente la position de la corde.
       La corde tourne, et la vitesse angulaire est <m>\omega</m>,
-      mesurée en <m>\unitfrac{radians}{s}</m>.
+      mesurée en radians/s.
       Imaginez que l'entièreté
       du plan <m>xy</m> tourne à
       une vitesse angulaire <m>\omega</m>.
@@ -544,13 +542,13 @@
       En supposant que la déviation est petite,
       nous pouvons utiliser la deuxième loi de Newton
       (nous n'en faisons pas la démonstration)
-      pour obtenir l'équation suivante:
+      pour obtenir l'équation suivante :
       <me>
         T y'' + \rho \omega^2 y = 0
       </me>.
     </p>
     <p>
-      Pour vérifier les unités, notez que les unités de <m>y''</m> sont <m>\unitfrac{m}{m^2}</m>,
+      Pour vérifier les unités, notez que les unités de <m>y''</m> sont m/m<m>^2</m>
       lorsqu'on dérive par rapport à <m>x</m>.
     </p>
     <p>
@@ -558,17 +556,17 @@
       (en mètres)
       et est fixée aux deux extrémités.
       Alors, <m>y(0) = 0</m> et <m>y(L) = 0</m>.
-      Voir <xref ref="bvp_whirstringfig">la</xref>.
+      Voir la <xref ref="bvp_whirstringfig"></xref>.
     </p>
     <figure xml:id="bvp_whirstringfig">
       <caption>Corde tournante.</caption>
       <image width="73%" source="bvp-whirstring"/>
     </figure>
     <p>
-      On réécrit l'équation:
+      On réécrit l'équation :
       <m>y'' + \frac{\rho \omega^2}{T} y = 0</m>.
       La configuration est semblable à
-      l' <xref ref="bvp_eig1ex"></xref>,
+      l'<xref ref="bvp_eig1ex"></xref>,
       sauf que la longueur de l'intervalle est <m>L</m> plutôt que <m>\pi</m>.
       On cherche les valeurs propres de <m>y'' + \lambda y = 0, y(0) = 0, y(L) = 0</m>,
       où <m>\lambda = \frac{\rho \omega^2}{T}</m>.
@@ -604,10 +602,10 @@
       Par exemple, à <m>k=1</m>,
       la corde ne croise pas l'axe des <m>x</m>,
       et la forme ressemble à
-      <xref ref="bvp_whirstringfig">la</xref> plus haut.
+      la <xref ref="bvp_whirstringfig"></xref> plus haut.
       D'un autre côté, lorsque <m>k=3</m>,
       la corde croise l'axe des <m>x</m> deux fois.
-      On le voit dans <xref ref="bvp_whirstring2fig">la</xref>.
+      On le voit dans la <xref ref="bvp_whirstring2fig"></xref>.
       Lorsque <m>\omega</m> change encore, la corde retourne à
       sa position d'équilibre.
       Plus la vitesse angulaire est élevée, plus la corde croisera l'axe des <m>x</m> lorsqu'elle sortira.
@@ -630,7 +628,7 @@
   <subsection>
     <title>Exercices</title>
     <p>
-      Astuce pour les exercices suivants: Notez que lorsque <m>\lambda > 0</m>,
+      Astuce pour les exercices suivants : notez que lorsque <m>\lambda > 0</m>,
       alors <m>\cos \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> et
       <m>\sin \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> sont aussi des solutions de l'équation homogène.
     </p>

@@ -3,8 +3,7 @@
   <subsection>
     <title>Fonctions périodiques paires et impaires</title>
     <p>
-      Vous avez peut-être remarqué
-      qu'une fonction impaire n'a pas de termes en cosinus dans la série de Fourier et qu'une fonction paire n'a pas de termes en sinus dans la série de Fourier.
+      Vous avez peut-être remarqué qu'une fonction impaire n'a pas de termes en cosinus dans la série de Fourier et qu'une fonction paire n'a pas de termes en sinus dans la série de Fourier.
       Cette observation n'est pas une coïncidence.
       Regardons les fonctions périodiques paires et impaires plus en détail.
     </p>
@@ -23,12 +22,16 @@
     <exercise>
       <statement>
         <p>
-          Prenez deux fonctions <m>f(t)</m> et <m>g(t)</m>,
-          et définissez leur produit
-          <m>h(t) = f(t)g(t)</m>. \begin{tasks} \task Supposez que <m>f(t)</m> et <m>g(t)</m> sont impaires.
+          Prenez deux fonctions <m>f(t)</m> et <m>g(t)</m>, et définissez leur produit <m>h(t) = f(t)g(t)</m>.
+          <ol marker="a">
+            <li>Est-ce que <m>h(t)</m> est impaire ou paire? Supposez que l'une est paire et que l'autre est impaire.</li>
+            <li>Est-ce que <m>h(t)</m> est impaire ou paire? Supposez que les deux sont paires.</li>
+            <li>Est-ce que <m>h(t)</m> est impaire ou paire?</li>
+          </ol>
+          <!-- \begin{tasks} \task Supposez que <m>f(t)</m> et <m>g(t)</m> sont impaires.
           Est-ce que <m>h(t)</m> est impaire ou paire? \task Supposez que l'une est paire et que l'autre est impaire.
           Est-ce que <m>h(t)</m> est impaire ou paire? \task Supposez que les deux sont paires.
-          Est-ce que <m>h(t)</m> est impaire ou paire? \end{tasks}
+          Est-ce que <m>h(t)</m> est impaire ou paire? \end{tasks} -->
         </p>
       </statement>
     </exercise>
@@ -59,19 +62,18 @@
     </p>
     <p>
       On prend une fonction <m>f(t)</m> définie sur <m>[0,L]</m>.
-      Sur <m>(-L,L]</m>, la fonction est définie.
+      Sur <m>(-L,L]</m>, on définit :
       <md>
-        <mrow>F_{\text{ impaire } }(t) \amp  \overset{\text{ d\'ef } }{=} \begin{cases} f(t) \amp  \text{ si }  \; 0 \leq t \leq L ,</mrow>
-        <mrow>-f(-t) \amp  \text{ si }  \; {-L} \lt  t \lt  0 , \end{cases}</mrow>
-        <mrow>F_{\text{ paire } }(t) \amp  \overset{\text{ d\'ef } }{=} \begin{cases} f(t) \amp  \text{ si }  \; 0 \leq t \leq L ,</mrow>
-        <mrow>f(-t) \amp  \text{ si }  \; {-L} \lt  t \lt  0 . \end{cases}</mrow>
+        <mrow>F_{\text{ impaire } }(t) \amp  \overset{\text{ déf } }{=} \begin{cases} f(t) \amp  \text{ si }  \; 0 \leq t \leq L \\
+        -f(-t) \amp  \text{ si }  \; {-L} \lt  t \lt  0 , \end{cases}</mrow>
+        <mrow>F_{\text{ paire } }(t) \amp  \overset{\text{ déf } }{=} \begin{cases} f(t) \amp  \text{ si }  \; 0 \leq t \leq L \\ 
+        f(-t) \amp  \text{ si }  \; {-L} \lt  t \lt  0 . \end{cases}</mrow>
       </md>
     </p>
     <p>
       On étend <m>F_{\text{ impaire } }(t)</m> et <m>F_{\text{ paire } }(t)</m> à
-      une <m>2L</m>-périodique.
-      Alors, <m>F_{\text{ impaire } }(t)</m> est appelée l'
-      <em>extension périodique impaire<idx><h>extension périodique impaire</h></idx>
+      des fonctions <m>2L</m>-périodique.
+      Alors, <m>F_{\text{ impaire } }(t)</m> est appelée l'<em>extension périodique impaire<idx><h>extension périodique impaire</h></idx>
       </em> de <m>f(t)</m>,
       et <m>F_{\text{ paire } }(t)</m> est appelée l'<em>extension périodique paire<idx><h>extension périodique paire</h></idx>
       </em> de <m>f(t)</m>.
@@ -90,14 +92,14 @@
     <example>
       <statement>
         <p>
-          Prenez la fonction <m>f(t) = t\,(1-t)</m> définie sur <m>[0,1]</m>.
-          <xref ref="scs_oddevenextfig">La</xref>
+          Prenons la fonction <m>f(t) = t\,(1-t)</m> définie sur <m>[0,1]</m>.
+          La <xref ref="scs_oddevenextfig"></xref>
           montre les graphes des extensions périodiques impaires et paires de <m>f(t)</m>.
         </p>
         <figure xml:id="scs_oddevenextfig">
-          <caption>Extension 2-périodique impaire et paire de <m>f(t) =
-          t\ (1-t)</m>, <m>0 \leq t \leq 1</m>.</caption>
-          \diffyincludegraphics{width=6.24in}{width=9in}{scs-ext-odd-even}
+          <caption>Extension 2-périodique impaire et paire de <m>f(t) = t(1-t)</m>, <m>0 \leq t \leq 1</m>.</caption>
+          <!-- \diffyincludegraphics{width=6.24in}{width=9in}{scs-ext-odd-even} -->
+          <image source="scs-ext-odd-even"></image>
         </figure>
       </statement>
     </example>
@@ -119,13 +121,13 @@
       il n'y a pas de terme cosinus dans la série de Fourier d'une fonction impaire.
       L'intégrale est nulle,
       car <m>f(t) \cos \left( {n \pi}{L} t \right)</m> est une fonction impaire
-      (le produit d'une fonction impaire et d'une fonction paire est impaire),
+      (le produit d'une fonction impaire et d'une fonction paire est impair),
       et l'intégrale d'une fonction impaire sur un intervalle symétrique est toujours égale à zéro.
       L'intégrale d'une fonction paire sur un intervalle symétrique <m>[-L,L]</m> est le double de l'intégrale de la fonction sur l'intervalle <m>[0,L]</m>.
       La fonction <m>f(t) \sin \left( \frac{n \pi}{L} t \right)</m> est le produit de deux fonctions impaires et est donc paire.
       <me>
         b_n = \frac{1}{L} \int_{-L}^L f(t) \sin \left( \frac{n \pi}{L} t \right) \, dt = \frac{2}{L} \int_{0}^L f(t) \sin \left( \frac{n \pi}{L} t \right) \, dt
-      </me>.
+      </me>
     </p>
     <p>
       On écrit maintenant la série de Fourier de <m>f(t)</m> comme
@@ -136,7 +138,7 @@
     <p>
       De même si <m>f(t)</m> est une fonction <m>2L</m>-périodique paire.
       Pour la même raison que ci-dessus,
-      on constate que <m>b_n = 0</m> et
+      on constate que <m>b_n = 0</m> et que
       <me>
         a_n = \frac{2}{L} \int_{0}^L f(t) \cos \left( \frac{n \pi}{L} t \right) \, dt
       </me>.
@@ -167,23 +169,23 @@
       <statement>
         <p>
           Soit <m>f(t)</m> une fonction lisse par morceaux définie sur <m>[0,L]</m>.
-          Alors l'extension périodique impaire de <m>f(t)</m> a la série Fourier
+          Alors, l'extension périodique impaire de <m>f(t)</m> a la série Fourier
           <me>
-            \mybxbg{~~ F_{\text{ impaire } }(t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t \right) , ~~}
+            F_{\text{ impaire } }(t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t \right) ,
           </me>
           où
           <me>
-            \mybxbg{~~ b_n = \frac{2}{L} \int_{0}^L f(t)\, \sin \left( \frac{n \pi}{L} t \right) \, dt . ~~}
+            b_n = \frac{2}{L} \int_{0}^L f(t)\, \sin \left( \frac{n \pi}{L} t \right) \, dt .
           </me>
         </p>
         <p>
           L'extension périodique paire de <m>f (t)</m> a la série de Fourier
           <me>
-            \mybxbg{~~ F_{\text{ paire } }(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right) , ~~}
+            F_{\text{ paire } }(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right) ,
           </me>
           où
           <me>
-            \mybxbg{~~ a_n = \frac{2}{L} \int_{0}^L f(t)\, \cos \left( \frac{n \pi}{L} t \right) \, dt . ~~}
+            a_n = \frac{2}{L} \int_{0}^L f(t)\, \cos \left( \frac{n \pi}{L} t \right) \, dt .
           </me>
         </p>
       </statement>
@@ -191,7 +193,7 @@
     <p>
       On appelle la série <m>\sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L} t\right)</m> la <em>série sinus
           <idx><h>série sinus</h></idx>
-      </em> de <m>f(t)</m>, et l'on appelle la série
+      </em> de <m>f(t)</m> et l'on appelle la série
       <m>\frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} t \right)</m> la <em>série cosinus
           <idx><h>série cosinus</h></idx>
       </em> de <m>f(t)</m>.
@@ -201,16 +203,15 @@
     </p>
     <p>
       Il n'est pas nécessaire de commencer par la série de Fourier complète pour obtenir les séries de sinus et de cosinus.
-      La série sinus est en réalité
-      le développement des fonctions propres de <m>f(t)</m> en utilisant les fonctions propres du problème des valeurs propres <m>x''+\lambda x = 0</m>,
+      La série sinus est en réalité le développement des fonctions propres de <m>f(t)</m> en utilisant les fonctions propres du problème de valeurs propres <m>x''+\lambda x = 0</m>,
       <m>x(0) = 0</m>, <m>x(L) = L</m>.
-      La série cosinus est le développement des fonctions propres de <m>f(t)</m> en utilisant les fonctions propres du problème des valeurs propres <m>x''+\lambda x = 0</m>,
+      La série cosinus est le développement des fonctions propres de <m>f(t)</m> en utilisant les fonctions propres du problème de valeurs propres <m>x''+\lambda x = 0</m>,
       <m>x'(0) = 0</m>, <m>x'(L) = L</m>.
       On aurait donc pu obtenir les mêmes formules en définissant le produit intérieur
       <me>
         \langle f(t), g(t) \rangle = \int_0^L f(t) g(t) \, dt
       </me>
-      et en suivant la procédure <xref ref="ts_section">de</xref>.
+      et en suivant la procédure de <xref ref="ts_section"></xref>.
       Ce point de vue est utile,
       car on utilise couramment une série spécifique qui est née de la question sous-jacente qui a conduit à
       un certain problème de valeurs propres.
@@ -261,9 +262,13 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Calculez la dérivée de l'extension périodique paire de <m>f (t)</m> ci-dessus et vérifiez s'il y a des discontinuités de saut.
+          <!-- \begin{tasks} \task Calculez la dérivée de l'extension périodique paire de <m>f (t)</m> ci-dessus et vérifiez s'il y a des discontinuités de saut.
           Utilisez la définition réelle de <m>f (t)</m>,
-          pas sa série cosinus! \task Pourquoi est-ce que la dérivée de l'extension périodique paire de <m>f (t)</m> est l'extension périodique impaire de <m>f '(t)</m>? \end{tasks}
+          pas sa série cosinus! \task Pourquoi est-ce que la dérivée de l'extension périodique paire de <m>f (t)</m> est l'extension périodique impaire de <m>f '(t)</m>? \end{tasks} -->
+          <ol marker="a">
+            <li>Calculez la dérivée de l'extension périodique paire de <m>f (t)</m> ci-dessus et vérifiez s'il y a des discontinuités de saut. Utilisez la définition réelle de <m>f (t)</m>, pas sa série cosinus !</li>
+            <li>Pourquoi est-ce que la dérivée de l'extension périodique paire de <m>f(t)</m> est l'extension périodique impaire de <m>f'(t)</m> ?</li>
+          </ol>
         </p>
       </statement>
     </exercise>
@@ -271,17 +276,17 @@
   <subsection>
     <title>Application</title>
     <p>
-      La série de Fourier est liée aux problèmes de valeurs limites qu'on a étudiés plus tôt.
+      La série de Fourier est liée aux problèmes à valeurs limites qu'on a étudiés plus tôt.
       Voyons cette connexion dans une application.
     </p>
     <p>
-      Considérons le problème de valeurs limites pour <m>0 \lt  t \lt  L</m>,
+      Considérons le problème à valeurs limites pour <m>0 \lt  t \lt  L</m>,
       <me>
         x''(t) + \lambda\, x(t) = f(t)
       </me>,
       pour les <em>conditions aux frontières de Dirichlet<idx><h>conditions aux frontières de Dirichlet</h></idx>
       </em> <m>x(0) = 0</m>, <m>x(L) = 0</m>.
-      L'alternative de Fredholm ( <xref ref="thm_fredholmsimple"></xref>) dit que tant que <m>\lambda</m> n'est pas une valeur propre du problème homogène sous-jacent,
+      L'alternative de Fredholm (<xref ref="thm_fredholmsimple"></xref>) dit que tant que <m>\lambda</m> n'est pas une valeur propre du problème homogène sous-jacent,
       il existe une solution unique.
       Les fonctions propres de ce problème de valeurs propres sont les fonctions <m>\sin \left( \frac{n \pi}{L} t \right)</m>.
       Donc, pour trouver la solution,
@@ -289,10 +294,10 @@
       On écrit <m>x</m> également sous forme de série sinus,
       mais avec des coefficients inconnus.
       On substitue la série à
-      <m>x</m> dans l'équation et on résout avec les coefficients inconnus.
-      Si l'on a la <em>condition à
-      la frontière Neumann<idx><h>condition à
-      la frontière Neumann</h></idx>
+      <m>x</m> dans l'équation et l'on résout avec les coefficients inconnus.
+      Si l'on a la <em>condition aux
+      frontières de Neumann<idx><h>condition aux
+      frontières de Neumann</h></idx>
       </em> <m>x'(0) = 0</m>, <m>x'(L) = 0</m>,
       on suit la même procédure en utilisant la série cosinus.
     </p>
@@ -307,8 +312,7 @@
           <me>
             x''(t) + 2 x(t) = f(t)
           </me>,
-          où <m>f(t) = t</m> pour <m>0 \lt  t \lt  1</m>, et satisfaisant à
-          la condition aux frontières de Dirichlet <m>x(0) = 0</m>,
+          où <m>f(t) = t</m> pour <m>0 \lt  t \lt  1</m>, et satisfaisant aux conditions aux frontières de Dirichlet <m>x(0) = 0</m>,
           <m>x(1)=0</m>.
           On écrit <m>f(t)</m> comme une série sinus :
           <me>
@@ -352,7 +356,7 @@
           </me>.
         </p>
         <p>
-          Regardons <xref ref="bnd-dirich-graph_fig">la</xref>
+          Regardons la <xref ref="bnd-dirich-graph_fig"></xref>
           pour le graphe de la solution.
           On note que,
           puisque les fonctions propres satisfont aux conditions aux limites et que <m>x</m> s'écrit en fonction des conditions aux limites,
@@ -360,19 +364,20 @@
         </p>
         <figure xml:id="bnd-dirich-graph_fig">
           <caption>Graphe de la solution de <m>x''+2x=t</m>, <m>x(0)=0</m>, <m>x(1)=0</m>.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{bnd-dirich-graph}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{bnd-dirich-graph} -->
+          <image source="bnd-dirich-graph"></image>
         </figure>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          De même, on traite les conditions de Neumann.
-          On prend le problème de la valeur limite pour <m>0 \lt  t \lt  1</m>
+          De même, traitons les conditions de Neumann.
+          Prenons le problème à valeurs limites pour <m>0 \lt  t \lt  1</m>
           <me>
             x''(t) + 2 x(t) = f(t)
           </me>,
-          où <m>f(t) = t</m> sur <m>0 \lt  t \lt  1</m>,
+          où <m>f(t) = t</m> pour <m>0 \lt  t \lt  1</m>,
           mais maintenant satisfaisant aux conditions aux limites de Neumann <m>x'(0) = 0</m>,
           <m>x'(1)=0</m>.
           On écrit <m>f(t)</m> comme une série cosinus :
@@ -385,7 +390,7 @@
           </me>
           et
           <me>
-            c_n = 2 \int_0^1 t \cos (n \pi t) \,dt = \frac{2\bigl({(-1)}^n-1\bigr)}{\pi^2 n^2} = \begin{cases} \frac{-4}{\pi^2 n^2} \amp  \text{ si }  n \text{ est impair }  , \\ 0 \amp  \text{ si }  n \text{ est pair } . \end{cases}
+            c_n = 2 \int_0^1 t \cos (n \pi t) \,dt = \frac{2\bigl({(-1)}^n-1\bigr)}{\pi^2 n^2} = \begin{cases} \frac{-4}{\pi^2 n^2} \amp  \text{ si }  n \text{ est impair } \\ 0 \amp  \text{ si }  n \text{ est pair } . \end{cases}
           </me>
         </p>
         <p>
@@ -406,7 +411,7 @@
           pour <m>n</m> impair, on a
           <me>
             a_n (2 - n^2 \pi^2) = \frac{-4}{\pi^2 n^2}
-          </me>,
+          </me>
           ou
           <me>
             a_n = \frac{-4}{n^2 \pi^2 (2 - n^2 \pi^2)}
@@ -502,7 +507,7 @@
           Calculez <m>F(1)</m>, <m>F(2)</m>,
           <m>F(3)</m>, <m>F(-1)</m>,
           <m>F(\nicefrac{9}{2})</m>, <m>F(101)</m>, <m>F(103)</m>.
-          Note: Ne <em>pas</em> calculer la série sinusoïdale.
+          Note : ne <em>pas</em> calculer la série sinusoïdale.
         </p>
       </statement>
     </exercise>
@@ -563,7 +568,7 @@
           Soit <m>f(t) = t + \sum_{n=1}^\infty \frac{1}{2^n} \sin(nt)</m>.
           Résolvez <m>x'' + \pi x = f(t)</m> pour les conditions de Dirichlet
           <m>x(0) = 0</m> et <m>x(\pi) = 1</m>.
-          Astuce: notez que <m>\frac{t}{\pi}</m> satisfait aux conditions de Dirichlet données.
+          Astuce : notez que <m>\frac{t}{\pi}</m> satisfait aux conditions de Dirichlet données.
         </p>
       </statement>
     </exercise>
