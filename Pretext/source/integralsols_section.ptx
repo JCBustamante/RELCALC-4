@@ -170,7 +170,7 @@
     <p>
       On dirait qu'on fait tout simplement des manipulations algébriques avec <m>dx</m> et <m>dy</m>,
       qu'on traite comme des nombres.
-      Et c'est vrai que çaa marche.
+      Et c'est vrai que ça marche.
       Mais attention!
       Lorsqu'on verra des équations aux dérivées partielles,
       ce type de raisonnement ne fonctionnera plus.

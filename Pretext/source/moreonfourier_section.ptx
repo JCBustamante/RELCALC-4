@@ -529,7 +529,7 @@
           <me>
             f(t) = t^2 \qquad \text{ pour }  \; {-1} \lt  t \leq 1
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task En remplaçaant <m>t=0</m>, évaluez
+          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task En remplaçant <m>t=0</m>, évaluez
           <m>\displaystyle \sum_{n=1}^\infty \frac{{(-1)}^n}{n^2} = 1 - \frac{1}{4} + \frac{1}{9} - \cdots</m>. \task Maintenant évaluez <m>\displaystyle \sum_{n=1}^\infty \frac{1}{n^2} = 1 + \frac{1}{4} + \frac{1}{9} + \cdots</m>. \end{tasks}
         </p>
       </statement>

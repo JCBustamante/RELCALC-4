@@ -2,19 +2,14 @@
   <title>Équations différentielles partielles, séparation des variables et équation de la chaleur</title>
   <introduction>
     <p>
-      PLACEHOLDER
+      Note : pour des lectures supplémentaires, voir &#xa7;9.5 dans <xref ref="EP"></xref>, &#xa7;10.5 dans <xref ref="BD"></xref>.
     </p>
     <p>
-      2 lectures, &#xa7;9.5 dans \cite{EP}, &#xa7;10.5 dans \cite{BD}
-    </p>
-    <p>
-      Rappelons qu'une <em>équation différentielle partielle<idx><h>équation différentielle partielle</h></idx>
-      </em> ou <em>EDP
-          <idx><h>EDP</h></idx>
-      </em> est une équation contenant les dérivées partielles par rapport à
-      <em>plusieurs</em> variables indépendantes.
-      La résolution des EDP est la principale application des séries de Fourier à
-      laquelle on s'intéressera.
+      Rappelons qu'une
+      <em>équation différentielle partielle<idx><h>équation différentielle partielle</h></idx></em>, ou 
+      <em>EDP<idx><h>EDP</h></idx></em>,
+      est une équation contenant les dérivées partielles par rapport à <em>plusieurs</em> variables indépendantes.
+      La résolution des EDP est la principale application des séries de Fourier à laquelle on s'intéressera.
     </p>
     <p>
       Une EDP est dite <em>linéaire
@@ -23,7 +18,7 @@
       la première puissance et n'apparaissent dans aucune des fonctions.
       Avec l'EDP, on spécifie généralement quelques
       <em>conditions aux frontières<idx><h>boundary conditions for a PDE</h></idx>
-      </em>, où la valeur de la solution ou de ses dérivés est donnée par la limite d'une région,
+      </em>, où la valeur de la solution ou de ses dérivées est donnée par la limite d'une région,
       et/ou certaines <em>conditions initiales<idx><h>initial conditions for a PDE</h></idx>
       </em>, où la valeur de la solution ou de ses dérivées est donnée à
       un certain temps initial.
@@ -52,9 +47,9 @@
       (ou une fine tige métallique)
       de longueur <m>L</m> qui est isolé
       sauf au point de terminaison.
-      Soit <m>x</m> la position le long du fil,
+      Soit <m>x</m> la position le long du fil
       et soit <m>t</m> le temps.
-      Regardons <xref ref="heat_wirefig">la</xref>.
+      Regardons la <xref ref="heat_wirefig"></xref>.
     </p>
     <figure xml:id="heat_wirefig">
       <caption>Fil isolé.</caption>
@@ -65,10 +60,10 @@
       L'équation régissant cette configuration se nomme l'<em>équation de la chaleur à
       une dimension<idx><h>équation de la chaleur à
       une dimension</h></idx>
-      </em>:
+      </em> :
           <idx><h>heat equation</h></idx>
       <me>
-        \mybxbg{~~ \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} , ~~}
+        \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} ,
       </me>
       où <m>k > 0</m> est la constante
       (de <em>conductivité
@@ -76,7 +71,7 @@
       </em> du matériel).
       Ainsi, le changement de chaleur en un point spécifique est proportionnel à
       la seconde dérivée de la chaleur le long du fil.
-      C'est logique, puisqu'en effet si, à
+      C'est logique puisque, en effet, si, à
       un <m>t</m> fixe,
       le graphe de la répartition de la chaleur a un maximum
       (le graphe est concave vers le bas),
@@ -113,17 +108,17 @@
     </p>
     <p>
       Voyons pourquoi c'est ainsi.
-      Si <m>u_x</m> est positif à
+      Si <m>u_x</m> est positive à
       un certain moment <m>x_0</m>, alors, à
-      un certain moment, <m>u</m> est plus petit à
-      gauche de <m>x_0</m> et plus grand à
+      un certain moment, <m>u</m> est plus petite à
+      gauche de <m>x_0</m> et plus grande à
       droite de <m>x_0</m>.
       La chaleur passe d'une température élevée à
       une température basse, c'est-à-dire vers la gauche.
-      Par contre, si <m>u_x</m> est négatif,
+      Par contre, si <m>u_x</m> est négative,
       la chaleur circule de nouveau du feu vif au feu doux,
       c'est-à-dire à droite.
-      Donc, quand <m>u_x</m> est nul,
+      Donc, quand <m>u_x</m> est nulle,
       c'est un point où la chaleur n'est pas conduite.
       En d'autres termes,
       <m>u_x (0, t) = 0</m> signifie qu'aucune chaleur ne circule dans le fil ou hors du fil au point <m>x = 0</m>.
@@ -208,11 +203,11 @@
       On suppose que <m>u(x,t) = X(x)T(t)</m>.
       On essaie de faire en sorte que cette hypothèse satisfasse à
       l'équation différentielle, <m>u_t = k u_ {xx}</m>,
-      et les conditions homogènes,
+      et aux conditions homogènes
       <m>u (0, t) = 0</m> et <m>u (L, t) = 0</m>.
       Ensuite, comme la superposition préserve l'équation différentielle et les conditions homogènes secondaires,
       on essaie de construire une solution à
-      partir de ces éléments de base pour résoudre les conditions initiales non homogènes <m>u (x, 0) = f (x)</m>.
+      partir de ces éléments de base pour résoudre la condition initiale non homogène <m>u (x, 0) = f (x)</m>.
     </p>
     <p>
       D'abord, on remplace <m>u(x, t) = X(x)T(t)</m> dans l'équation de la chaleur et l'on obtient
@@ -257,7 +252,7 @@
       On a déjà constaté
       que les seules valeurs propres sont <m>\lambda_n = \frac{n^2 \pi^2}{L^2}</m>,
       pour les entiers <m>n \geq 1</m>,
-      où les valeurs propres sont <m>\sin \left(\frac{n \pi}{L} x\right)</m>.
+      où les fonctions propres sont <m>\sin \left(\frac{n \pi}{L} x\right)</m>.
       Par conséquent, choisissons les solutions
       <me>
         X_n (x) = \sin \left(\frac{n \pi}{L} x \right)
@@ -271,7 +266,7 @@
     </p>
     <p>
       C'est l'une des équations fondamentales,
-      et la solution est une exponentielle:
+      et la solution est une exponentielle :
       <me>
         T_n(t) = e^{\frac{-n^2 \pi^2}{L^2} k t}
       </me>.
@@ -293,10 +288,10 @@
       Autrement dit,
       on trouve la série de Fourier de l'extension périodique impaire de <m>f (x)</m>.
       On a utilisé la série sinus,
-      car elle correspond au problème des valeurs propres pour <m>X (x)</m> ci-dessus.
+      car elle correspond au problème de valeurs propres pour <m>X (x)</m> ci-dessus.
       Enfin, on utilise la superposition pour écrire la solution comme
       <me>
-        \mybxbg{~~ u(x,t) = \sum_{n=1}^\infty b_n u_n(x,t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L}  x \right) e^{\frac{-n^2 \pi^2}{L^2} k t} . ~~}
+        u(x,t) = \sum_{n=1}^\infty b_n u_n(x,t) = \sum_{n=1}^\infty b_n \sin \left( \frac{n \pi}{L}  x \right) e^{\frac{-n^2 \pi^2}{L^2} k t} .
       </me>
     </p>
     <p>
@@ -318,7 +313,7 @@
           de longueur 1 dont les extrémités sont noyées dans la glace
           (température 0).
           Soit <m>k = 0.003</m> et soit la distribution de chaleur initiale <m>u (x, 0) = 50 \, x \, (1-x)</m>.
-          Regardons <xref ref="heat_wireexinitfig">la</xref>.
+          Regardons la <xref ref="heat_wireexinitfig"></xref>.
           On suppose qu'on veut trouver la fonction de température <m>u (x, t)</m>.
           On suppose aussi qu'on veut trouver quand (à
           quel <m>t</m>) la température maximale dans le fil est la moitié
@@ -327,10 +322,11 @@
         <figure xml:id="heat_wireexinitfig">
           <caption>Distribution initiale de la température dans le
           fil.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{heat-wireex-init}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{heat-wireex-init} -->
+          <image source="heat-wireex-init"></image>
         </figure>
         <p>
-          On résout le problème d'EDP suivant:
+          On résout le problème d'EDP suivant :
           <md>
             <mrow>\amp  u_t = 0.003 \, u_{xx} ,</mrow>
             <mrow>\amp  u(0,t) = u(1,t) = 0 ,</mrow>
@@ -342,14 +338,14 @@
           <m>0 \lt  x \lt  1</m> comme une série de sinus.
           Alors, <m>f(x) = \sum_{n=1}^\infty b_n \sin (n \pi x)</m>, où
           <me>
-            b_n = 2 \int_0^1 50\,x\,(1-x) \sin (n \pi x) \,dx = \frac{200}{{\pi }^{3}{n}^{3}}-\frac{200\,{\left( -1\right) }^{n}}{{\pi }^{3}{n}^{3}} = \begin{cases} 0 \amp  \text{ si }  n \text{ est pair }  , \\ \frac{400}{\pi^3 n^3} \amp  \text{ si }  n \text{ est impair }  . \end{cases}
+            b_n = 2 \int_0^1 50\,x\,(1-x) \sin (n \pi x) \,dx = \frac{200}{{\pi }^{3}{n}^{3}}-\frac{200\,{\left( -1\right) }^{n}}{{\pi }^{3}{n}^{3}} = \begin{cases} 0 \amp  \text{ si }  n \text{ est pair } \\ \frac{400}{\pi^3 n^3} \amp  \text{ si }  n \text{ est impair }  . \end{cases}
           </me>
         </p>
         <p>
           La solution <m>u(x,t)</m>,
-          dans le graphique de <xref ref="heat_wireexfig">la</xref>
+          dans le graphique de la <xref ref="heat_wireexfig"></xref>
           pour <m>0 \leq t \leq 100</m>,
-          est donnée par la série:
+          est donnée par la série :
           <me>
             u(x,t) = \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{400}{\pi^3 n^3} \sin (n \pi x ) \, e^{-n^2 \pi^2 \, 0.003 \, t}
           </me>.
@@ -357,7 +353,8 @@
         <figure xml:id="heat_wireexfig">
           <caption>Graphique de la température dans le fil au point <m>x</m>
           et au temps <m>t</m>.</caption>
-          \diffyincludegraphics{width=5in}{width=7.5in}{heat-wireex}
+          <!-- \diffyincludegraphics{width=5in}{width=7.5in}{heat-wireex} -->
+          <image source="heat-wireex"></image>
         </figure>
         <p>
           Enfin, on répond à
@@ -385,13 +382,13 @@
           L'approximation s'améliore à
           mesure que <m>t</m> grandit et que les autres termes se dégradent de plus en plus rapidement.
           On trace la fonction <m>u (0.5, t)</m>,
-          c'est-à-dire la température au milieu du fil au temps <m>t</m>, à
-          <xref ref="heat_wireexmaxfig">la</xref>.
+          c'est-à-dire la température au milieu du fil au temps <m>t</m>, à la <xref ref="heat_wireexmaxfig"></xref>.
           La figure représente aussi l'approximation pour le premier terme.
         </p>
         <figure xml:id="heat_wireexmaxfig">
           <caption>Température au milieu du fil (courbe du bas) et approximation de cette température en n'utilisant que le premier terme de la série (courbe du haut).</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{heat-wireex-max}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{heat-wireex-max} -->
+          <image source="heat-wireex-max"></image>
         </figure>
         <p>
           Après <m>t = 5</m> environ,
@@ -403,7 +400,7 @@
         </p>
         <p>
           Revenons à la question qui cherche à
-          savoir quand est-ce que la température maximale est égale à la moitié
+          savoir quand la température maximale est égale à la moitié
           de la température maximale initiale.
           Autrement dit,
           quand la température au milieu est <m>\nicefrac{12.5}{2} = 6.25</m>.
@@ -440,7 +437,7 @@
       <m>\ frac {1} {n ^ p}</m> pour toute puissance <m>p</m>.
       En d'autres mots, la série de Fourier a une infinité
       de dérivées partout.
-      Ainsi, même si la fonction <m>f (x)</m> fait des sauts et des coins alors,
+      Ainsi, même si la fonction <m>f (x)</m> fait des sauts et des coins, alors
       pour un <m>t > 0</m> fixe,
       la solution <m>u (x, t)</m> en fonction de <m>x</m> est aussi lisse que possible.
     </p>
@@ -467,7 +464,7 @@
   <subsection>
     <title>Extrémités isolées</title>
     <p>
-      Supposons maintenant que les extrémités du fil soient isolées.
+      Supposons maintenant que les extrémités du fil sont isolées.
       Dans ce cas, on résout l'équation
       <me>
         u_t = k u_{xx} \qquad \text{ avec }  \qquad u_x(0,t) = 0, u_x(L,t) = 0  \text{ et } u(x,0) = f(x)
@@ -476,7 +473,7 @@
     <p>
       Encore une fois,
       on essaie une solution de la forme <m>u (x, t) = X (x) T (t)</m>.
-      On utilise la même procédure qu'avant pour remplacer dans l'équation de la chaleur et l'on arrive aux deux équations suivantes :
+      On utilise la même procédure que précédemment pour remplacer dans l'équation de la chaleur et l'on arrive aux deux équations suivantes :
       <md>
         <mrow>X''(x) + \lambda X(x) \amp = 0 ,</mrow>
         <mrow>T'(t) + \lambda k T(t) \amp = 0 </mrow>
@@ -538,7 +535,7 @@
     <p>
       On utilise la superposition pour écrire la solution comme
       <me>
-        \mybxbg{~~ u(x,t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n u_n(x,t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} x \right) e^{\frac{-n^2 \pi^2}{L^2} k t} . ~~}
+        u(x,t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n u_n(x,t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n \pi}{L} x \right) e^{\frac{-n^2 \pi^2}{L^2} k t} .
       </me>
     </p>
     <example>
@@ -564,7 +561,7 @@
         <p>
           Le calcul est laissé à vos soins.
           Par conséquent,
-          la solution au problème d'EDP, tracée dans <xref ref="heat_wireisolexfig">la</xref>,
+          la solution au problème d'EDP, tracée dans la <xref ref="heat_wireisolexfig"></xref>,
           est donnée par la série
           <me>
             u(x,t) = \frac{25}{3} + \sum_{\substack{n=2 \\ n \text{ pair } } }^\infty \left( \frac{-200}{\pi^2 n^2} \right) \cos ( n \pi x) \, e^{-n^2 \pi^2 \, 0.003 \, t}
@@ -573,10 +570,11 @@
         <figure xml:id="heat_wireisolexfig">
           <caption>Tracé de la température du fil isolé à la position <m>x</m> et
           au temps <m>t</m>.</caption>
-          \diffyincludegraphics{width=5in}{width=7.5in}{heat-wireisolex}
+          <!-- \diffyincludegraphics{width=5in}{width=7.5in}{heat-wireisolex} -->
+          <image source="heat-wireisolex"></image>
         </figure>
         <p>
-          On remarque dans le graphique qu'au fil du temps,
+          On remarque dans le graphique que, au fil du temps,
           la température s'équilibre à travers le fil.
           Finalement, tous les termes sauf la constante meurent,
           et l'on a une température uniforme
@@ -666,7 +664,7 @@
           </md>.
         </p>
         <p>
-          Astuce: Utilisez le fait que
+          Astuce : utilisez le fait que
           <m>u(x, t) = 100 x</m> est une solution satisfaisant à
           <m>u_t = u_{xx}</m>, <m>u(0, t) = 0</m>, <m>u(1, t) = 100</m>.
           Ensuite, utilise la superposition.
@@ -678,8 +676,7 @@
         <p>
           Trouvez la <em>température constante<idx><h>température constante</h></idx>
           </em> de la solution comme une fonction de <m>x</m> uniquement,
-          en laissant <m>t \to \infty</m> dans la solution de l'<xref ref="heat_cosexr">exercie</xref>
-          <xref ref="heat_oneto100exr">et</xref>.
+          en laissant <m>t \to \infty</m> dans les solutions de l'<xref ref="heat_cosexr"></xref> et de l'<xref ref="heat_oneto100exr"></xref>.
           Vérifiez qu'elle satisfait à
           l'équation <m>u_{xx} = 0</m>.
         </p>
@@ -691,7 +688,7 @@
           Utilisez la séparation des variables pour trouver un élément non trivial à
           la solution <m>u_ {xx} + u_ {yy} = 0</m>,
           où <m>u (x, 0) = 0</m> et <m>u (0, y) = 0</m>.
-          Astuce: Essayez<m>u(x,y) = X(x)Y(y)</m>.
+          Astuce : essayez <m>u(x,y) = X(x)Y(y)</m>.
         </p>
       </statement>
     </exercise>
@@ -739,7 +736,7 @@
           Considérez un fil isolé
           aux deux extrémités, <m>L=1</m>, <m>k=1</m>,
           et <m>u(x,0) = \cos^2(\pi x)</m>. \begin{tasks} \task Trouvez la solution de <m>u(x,t)</m>.
-          Astuce: Une identité
+          Astuce : une identité
           trigonométrique. \task Trouvez la température moyenne. \task Au départ,
           la variation de température est de 1
           (le maximum moins le minimum).
@@ -791,7 +788,7 @@
     <exercise>
       <statement>
         <p>
-          Use separation of variables (Hint:
+          Use separation of variables (hint :
           try <m>u(x,t) = X(x)+T(t)</m>) to find a nontrivial solution to <m>u_{x} + u_{t} = u</m>.
         </p>
       </statement>

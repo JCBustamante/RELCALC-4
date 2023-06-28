@@ -288,7 +288,7 @@
       <em>conditions initiales
           <idx><h>initial condition</h></idx>
       </em>.
-      Qu'est-ce que çaa veut dire?
+      Qu'est-ce que ça veut dire?
       Prenons <m>k=1</m> pour simplifier les choses.
       Supposons que nous voulons résoudre l'équation
       <m>\frac{dP}{dt} = P</m> avec la condition <m>P(0) = 1000</m>
@@ -320,7 +320,7 @@
       de sinus et de cosinus.
       Elles sont aussi plutôt simples à
       vérifier, ce qu'on devrait toujours faire.
-      Comme çaa, inutile de se demander si l'on s'est rappelé
+      Comme ça, inutile de se demander si l'on s'est rappelé
       correctement de la solution.
     </p>
     <p>

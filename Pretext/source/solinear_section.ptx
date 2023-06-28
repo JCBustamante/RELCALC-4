@@ -76,7 +76,7 @@
       La preuve devient plus claire avec l'utilisation d'un opérateur.
       Un <em>opérateur
           <idx><h>opérateur</h></idx>
-      </em> est un objet prenant pour entrée des fonctions et redonnant en sortie des fonctions (çaa ressemble à
+      </em> est un objet prenant pour entrée des fonctions et redonnant en sortie des fonctions (ça ressemble à
       la fonction qui, elle,
       prend pour entrée des nombres et donne en sortie des nombres).
       Définissons <m>L</m> tel que :
