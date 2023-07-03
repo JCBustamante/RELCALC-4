@@ -341,7 +341,7 @@
           Supposons que la voiture accélère à
           <m>\unitfrac[t^2]{m}{s^2}</m>. À <m>t=0</m>,
           la voiture est au mètre 1 et roule à
-          une vitesse de \unitfrac[10]{m}{s}. Où est la voiture à <m>t=10</m>?
+          une vitesse de <m>\unitfrac[10]{m}{s}</m>. Où est la voiture à <m>t=10</m>?
         </p>
         <p>
           Ceci est en fait un problème du deuxième ordre,
@@ -375,7 +375,7 @@
       </statement>
     </exercise>
   </introduction>
-  
+
   <!-- TODO -->
   <subsection>
     <title>Exercices</title>
@@ -435,7 +435,7 @@
       <statement>
         <p>
           Une fusée se déplace à
-          une vitesse de \unitfrac[<m>2t^2+1</m>]{km}{s}
+          une vitesse de <m>\unitfrac[2t^2+1]{km}{s}</m>
           (<m>t</m> est mesuré en secondes).
           La terre est directement derrière la fusée et à
           <m>t=0</m>, elle est à 1000 kilomètres de la terre. À quelle distance se trouve la fusée 1 minute plus tard?

@@ -4,6 +4,7 @@
 <macros>
 \newcommand{\theversion}{6.2}
 \newcommand{\nicefrac}[2]{\frac{#1}{#2}}
+\newcommand{\unitfrac}[3][\!\!]{#1 \,\, {{}^{#2}}\!/\!{{}_{#3}}}
 <!--
   \renewcommand{\bibname}{Lectures additionnelles}
 
@@ -95,7 +96,7 @@ Remarque
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
 \usepackage{pgfplots}
 </latex-image-preamble>
-<rename element="inlineexercise">Exo</rename>
+<rename element="inlineexercise">Exercice</rename>
 <rename element="fact">Formule</rename>
   </docinfo>
   <book>
@@ -114,7 +115,7 @@ Remarque
     <xi:include href="./sys_chapter.ptx"/>
     <xi:include href="./FS_chapter.ptx"/>
     <xi:include href="./linalg_appendix.ptx"/>
-    
+
     <backmatter>
       <xi:include href="./bibliography.ptx"/>
       <index>
