@@ -37,7 +37,7 @@
     </p>
     <p>
       Inner product satisfies the following rules
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             <m>\langle \vec{x} , \vec{x} \rangle \geq 0</m>,

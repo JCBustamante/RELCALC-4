@@ -115,7 +115,7 @@
       <statement>
         <p>
           Supposons que <m>r_1</m> et <m>r_2</m> sont des racines caractéristiques de l'équation.
-          <ol label="i">
+          <ol marker="i">
             <li>
               <p>
                 Si <m>r_1</m> et <m>r_2</m> sont distinctes et réelles

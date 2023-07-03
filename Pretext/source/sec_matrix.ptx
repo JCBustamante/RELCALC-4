@@ -184,7 +184,7 @@
     </p>
     <p>
       [2] Quelques avertissements s'imposent.
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             En règle générale, <m>AB \not= BA</m>
@@ -457,7 +457,7 @@
     </p>
     <p>
       [2] On peut appliquer les trois opérations élémentaires suivantes :
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             Permuter deux lignes;
@@ -566,7 +566,7 @@
       partir de la gauche) de chaque ligne est appelé
       <em>élément principal<idx><h>élément principal</h></idx>
       </em>.
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             Chaque premier élément non nul d'une ligne est dans la colonne à

@@ -377,7 +377,7 @@
     <title>Inverse</title>
     <p>
       A couple of other algebra rules you know for numbers do not quite work on matrices:
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             <m>AB = AC</m> does not necessarily imply <m>B=C</m>,

@@ -219,7 +219,7 @@
     <p>
       Lorsqu'on sait que l'équation différentielle est exacte,
       la démarche est donc :
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             Intégrer <m>F_x = M</m> par rapport à

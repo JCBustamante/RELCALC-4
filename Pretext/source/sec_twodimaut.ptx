@@ -234,22 +234,42 @@
     </p>
     <table xml:id="pln_behtab">
       <title>Résumé du comportement des systèmes linéaires homogènes bidimensionnels</title>
-      \begin{tcolorbox}[colback=white,colframe=lightgray,left=5pt,right=5pt]
-      <tabular>
-        {@ll@}
-        \toprule
-        Valeurs propres &amp; Comportement
-        \midrule
-        réelles et les deux positives &amp; nœud répulsif/nœud instable
-        réelles et les deux négatives &amp; nœud attractif/nœud stable
-        réelles et de signes opposés &amp; point selle/point col
-        purement imaginaires &amp; point centre/ellipses
-        complexes avec une partie réelle positive &amp; foyer répulsif \&amp;#223;
-        complexes avec une partie réelle négative &amp; foyer attractif
-        \bottomrule
+    <tabular halign = "left">
+      <caption></caption>
+        <row header = "yes" bottom = "minor">
+          <cell>Valeurs propres</cell>
+          <cell>Comportement</cell>
+        </row>
+        <row>
+          <cell>réelles et les deux positives</cell>
+          <cell>nœud répulsif/nœud instable</cell>
+        </row>
+        <row>
+          <cell>réelles et les deux négatives</cell>
+          <cell>nœud attractif/nœud stable</cell>
+        </row>
+        <row>
+          <cell>réelles et de signes opposés</cell>
+          <cell>point selle/point col</cell>
+        </row>
+        <row>
+          <cell>purement imaginaires</cell>
+          <cell>point centre/ellipses</cell>
+        </row>
+        <row>
+          <cell>complexes avec une partie réelle positive</cell>
+          <cell>foyer répulsif</cell>
+        </row>
+        <row bottom = "major">
+          <cell>complexes avec une partie réelle négative</cell>
+          <cell>foyer attractif</cell>
+        </row>
       </tabular>
-      \end{tcolorbox}
     </table>
+
+
+
+
     <!-- TODO fix table -->
   </introduction>
   <subsection>

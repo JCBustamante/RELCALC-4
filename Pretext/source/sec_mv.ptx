@@ -49,7 +49,7 @@
       Il s'agit d'une équation linéaire du deuxième ordre à
       coefficients constants.
       Le mouvement
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             est <em>forcé

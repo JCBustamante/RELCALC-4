@@ -124,7 +124,7 @@
       </em> or <em>elementary row operations<idx><h>elementary row operations</h></idx>
       </em>.
       Translating the operations to the matrix setting, the operations become:
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             Swap two rows.
@@ -159,7 +159,7 @@
       </em>.
       A matrix is in <em>row echelon form</em>
       if the following conditions are satisfied:
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             The leading entry in any row is strictly to the right of the leading entry of the row above.
@@ -180,7 +180,7 @@
     <p>
       A matrix is in <em>reduced row echelon form<idx><h>reduced row echelon form</h></idx>
       </em> if furthermore the following condition is satisfied.
-      <ol label="iresume">
+      <ol marker="iresume">
         <li>
           <p>
             All the entries above a leading entry are zero.
@@ -424,7 +424,7 @@
     </p>
     <p>
       If the system is consistent:
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             If every column corresponding to a variable has a pivot element,

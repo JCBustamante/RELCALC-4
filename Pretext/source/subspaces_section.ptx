@@ -312,7 +312,7 @@
     </p>
     <p>
       [2] The procedure to find the basis of the kernel of a matrix <m>L</m>:
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             Find the reduced row echelon form of <m>L</m>.
@@ -364,7 +364,7 @@
       </me>,
       where <m>A</m> is a square <m>n \times n</m> matrix.
       There are then two mutually exclusive possibilities:
-      <ol label="i">
+      <ol marker="i">
         <li>
           <p>
             A nonzero solution <m>\vec{x}</m> to <m>A \vec{x} = \vec{0}</m> exists.
