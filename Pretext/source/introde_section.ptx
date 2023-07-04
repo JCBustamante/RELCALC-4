@@ -664,6 +664,13 @@
     <p>
       \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\varphi = -9 e^{8s}</m> }
     </p>
+
+    <answer>
+      <p>
+        <m>\varphi = -9 e^{8s}</m> 
+      </p>
+    </answer>
+
     <exercise>
       <statement>
         <p>
@@ -674,8 +681,5 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>x=9e^{-4t}</m> b)<nbsp/><m>x=\cos(2t)+\sin(2t)</m> c)<nbsp/><m>p=4e^{3q}</m> d)<nbsp/><m>T=3\sinh(2x)</m> }
-    </p>
   </subsection>
 </section>
