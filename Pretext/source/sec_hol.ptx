@@ -571,7 +571,8 @@
     </exercise>
     <answer>
       <p>
-        $1
+        Oui. (Astuce : Notez d'abord que <m>\sin(x)</m> est délimité. Ensuite,
+      notez que <m>x</m> et <m>x\sin(x)</m> ne peuvent pas être multiples l'un de l'autre.)
       </p>
     </answer>
     <exercise>

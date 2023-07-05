@@ -652,7 +652,9 @@
         <p>
           Supposons que des réservoirs soient disposés comme dans l' <xref ref="sintro_closedbrine-example"></xref>,
           mais cette fois, de l'eau propre s'écoule à
-          un débit de <m>s</m> litres par seconde vers le réservoir 1 et une solution saline s'écoule dans le réservoir 2 et dans les égouts avec un même débit de <m>s</m> litres par seconde. \begin{tasks}$1\end{tasks}
+          un débit de <m>s</m> litres par seconde vers le réservoir 1 et une solution saline s'écoule dans le réservoir 2 et dans les égouts avec un même débit de <m>s</m> litres par seconde. \begin{tasks} \task Dessinez le schéma. \task Configurez le système d'équations différentielles. \task De façon intuitive,
+          qu'arrive-t-il lorsque <m>t</m> tend vers l'infini?
+          Expliquez. \end{tasks}
         </p>
       </statement>
     </exercise>
