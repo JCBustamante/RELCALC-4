@@ -581,11 +581,13 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y_1 = C_1 e^{3x}</m>,
+    <answer>
+      <p>
+        <m>y_1 = C_1 e^{3x}</m>,
       <m>y_2 = y(x) = C_2 e^x+ \frac{C_1}{2} e^{3 x}</m>,
-      <m>y_3 = y(x) = C_3 e^x+ \frac{C_1}{2} e^{3 x}</m> }
-    </p>
+      <m>y_3 = y(x) = C_3 e^x+ \frac{C_1}{2} e^{3 x}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -594,10 +596,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x=\frac{5}{3} e^{2t} - \frac{2}{3} e^{-t}</m>,
-      <m>y=\frac{5}{3} e^{2t} + \frac{4}{3} e^{-t}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x=\frac{5}{3} e^{2t} - \frac{2}{3} e^{-t}</m>,
+      <m>y=\frac{5}{3} e^{2t} + \frac{4}{3} e^{-t}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -605,10 +609,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x_1' = x_2</m>,
-      <m>x_2' = x_3</m>, <m>x_3' = x_1+t</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x_1' = x_2</m>,
+      <m>x_2' = x_3</m>, <m>x_3' = x_1+t</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -617,11 +623,13 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y_3' + y_1 + y_2 = t</m>,
+    <answer>
+      <p>
+        <m>y_3' + y_1 + y_2 = t</m>,
       <m>y_4' + y_1 - y_2 = t^2</m>,
-      <m>y_1' = y_3</m>, <m>y_2' = y_4</m> }
-    </p>
+      <m>y_1' = y_3</m>, <m>y_2' = y_4</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -633,27 +641,29 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x_1 = x_2 = at</m>.
-      Explanation of the intuition is left to reader. }
-    </p>
+    <answer>
+      <p>
+        <m>x_1 = x_2 = at</m>.
+      Explanation of the intuition is left to reader.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
           Supposons que des réservoirs soient disposés comme dans l' <xref ref="sintro_closedbrine-example"></xref>,
           mais cette fois, de l'eau propre s'écoule à
-          un débit de <m>s</m> litres par seconde vers le réservoir 1 et une solution saline s'écoule dans le réservoir 2 et dans les égouts avec un même débit de <m>s</m> litres par seconde. \begin{tasks} \task Dessinez le schéma. \task Configurez le système d'équations différentielles. \task De façon intuitive,
-          qu'arrive-t-il lorsque <m>t</m> tend vers l'infini?
-          Expliquez. \end{tasks}
+          un débit de <m>s</m> litres par seconde vers le réservoir 1 et une solution saline s'écoule dans le réservoir 2 et dans les égouts avec un même débit de <m>s</m> litres par seconde. \begin{tasks}$1\end{tasks}
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) Laissé
+    <answer>
+      <p>
+        a) Laissé
       au lecteur. b) <m>x_1' = \frac{r}{V} (x_2-x_1)</m>,
       <m>x_2' = \frac{r}{V} x_1- \frac{r-s}{V}x_2</m>. c) Lorsque <m>t</m> tend vers l'infini,
       chacun de <m>x_1</m> et <m>x_2</m> tendent vers zéro,
-      et le lecteur peut compléter l'explication. }
-    </p>
+      et le lecteur peut compléter l'explication.
+      </p>
+    </answer>
   </subsection>
 </section>

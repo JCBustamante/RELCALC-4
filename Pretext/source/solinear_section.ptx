@@ -387,7 +387,7 @@
       <title>\myindex{Équation de Chebyshev d'ordre 1}</title>
       <statement>
         <p>
-          Prenez <m>(1-x^2)y''-xy' + y = 0</m>. \begin{tasks} \task Montrez que <m>y=x</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task Écrivez la solution générale. \end{tasks}
+          Prenez <m>(1-x^2)y''-xy' + y = 0</m>. \begin{tasks}$1\end{tasks}
         </p>
       </statement>
     </exercise>
@@ -395,8 +395,7 @@
       <title>\myindex{Équation d'Hermite d'ordre 2}</title>
       <statement>
         <p>
-          Prenons <m>y''-2xy' + 4y = 0</m>. \begin{tasks} \task Montrez que
-          <m>y=1-2x^2</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task Écrivez la solution générale. \end{tasks}
+          Prenons <m>y''-2xy' + 4y = 0</m>. \begin{tasks}$1\end{tasks}
         </p>
       </statement>
     </exercise>
@@ -408,11 +407,13 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Oui.
+    <answer>
+      <p>
+        Oui.
       Pour justifier, essayez de trouver la constante <m>A</m> telle que
-      <m>\sin(x) = A e^x</m> pour tout <m>x</m>. }
-    </p>
+      <m>\sin(x) = A e^x</m> pour tout <m>x</m>.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -421,10 +422,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Non.
-      <m>e^{x+2} = e^2 e^x</m>. }
-    </p>
+    <answer>
+      <p>
+        Non.
+      <m>e^{x+2} = e^2 e^x</m>.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -432,9 +435,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y=5</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y=5</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -443,9 +448,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y=C_1 \ln(x) + C_2</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y=C_1 \ln(x) + C_2</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -458,8 +465,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y''-3y'+2y = 0</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y''-3y'+2y = 0</m>
+      </p>
+    </answer>
   </subsection>
 </section>

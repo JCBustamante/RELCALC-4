@@ -747,9 +747,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>-15</m> }
-    </p>
+    <answer>
+      <p>
+        <m>-15</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -757,9 +759,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>-2</m> }
-    </p>
+    <answer>
+      <p>
+        <m>-2</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -767,9 +771,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\vec{x} = \left[ \begin{matrix}15 \\ -5 \end{matrix} \right]</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\vec{x} = \left[ \begin{matrix}15 \\ -5 \end{matrix} \right]</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -779,9 +785,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
-      <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \\ 0 \amp \nicefrac{1}{b} \end{matrix} \right]</m> b) <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \amp 0 \\ 0 \amp \nicefrac{1}{b} \amp 0 \\ 0 \amp 0 \amp \nicefrac{1}{c} \end{matrix} \right]</m> }
-    </p>
+    <answer>
+      <p>
+        a)
+      <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \\ 0 \amp \nicefrac{1}{b} \end{matrix} \right]</m> b) <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \amp 0 \\ 0 \amp \nicefrac{1}{b} \amp 0 \\ 0 \amp 0 \amp \nicefrac{1}{c} \end{matrix} \right]</m>
+      </p>
+    </answer>
   </subsection>
 </section>

@@ -511,9 +511,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y=C_1 e^x +C_2 x^3 + C_3 x^2 +C_4 x + C_5</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y=C_1 e^x +C_2 x^3 + C_3 x^2 +C_4 x + C_5</m>
+      </p>
+    </answer>
     <exercise>
       <title>2</title>
       <statement>
@@ -522,10 +524,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>r^3-3r^2+4r-12 = 0</m> b)
-      <m>y'''-3y''+4y'-12y = 0</m> c) <m>y = C_1 e^{3x} + C_2 \sin(2x) + C_3 \cos(2x)</m> }
-    </p>
+    <answer>
+      <p>
+        a) <m>r^3-3r^2+4r-12 = 0</m> b)
+      <m>y'''-3y''+4y'-12y = 0</m> c) <m>y = C_1 e^{3x} + C_2 \sin(2x) + C_3 \cos(2x)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -534,9 +538,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y=0</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y=0</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -547,10 +553,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> No.
-      <m>e^1 e^x - e^{x+1} = 0</m>. }
-    </p>
+    <answer>
+      <p>
+        No.
+      <m>e^1 e^x - e^{x+1} = 0</m>.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -561,10 +569,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Oui. (Astuce : Notez d'abord que <m>\sin(x)</m> est délimité. Ensuite,
-      notez que <m>x</m> et <m>x\sin(x)</m> ne peuvent pas être multiples l'un de l'autre.) }
-    </p>
+    <answer>
+      <p>
+        $1
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -573,8 +582,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y'''-y''+y'-y=0</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y'''-y''+y'-y=0</m>
+      </p>
+    </answer>
   </subsection>
 </section>

@@ -369,9 +369,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>-2</m> b)<nbsp/><m>8</m> c)<nbsp/><m>0</m> d)<nbsp/><m>-6</m> e)<nbsp/><m>-3</m> f)<nbsp/><m>28</m> g)<nbsp/><m>16</m> h)<nbsp/><m>-24</m> }
-    </p>
+    <answer>
+      <p>
+        a)<nbsp/><m>-2</m> b)<nbsp/><m>8</m> c)<nbsp/><m>0</m> d)<nbsp/><m>-6</m> e)<nbsp/><m>-3</m> f)<nbsp/><m>28</m> g)<nbsp/><m>16</m> h)<nbsp/><m>-24</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -382,9 +384,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>3</m> b)<nbsp/><m>9</m> c)<nbsp/><m>3</m> d)<nbsp/><m>\nicefrac{1}{4}</m> }
-    </p>
+    <answer>
+      <p>
+        a)<nbsp/><m>3</m> b)<nbsp/><m>9</m> c)<nbsp/><m>3</m> d)<nbsp/><m>\nicefrac{1}{4}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -396,9 +400,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>12</m> }
-    </p>
+    <answer>
+      <p>
+        <m>12</m>
+      </p>
+    </answer>
     <exercise>
       <title>challenging</title>
       <statement>
@@ -413,8 +419,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>1</m> and <m>3</m> }
-    </p>
+    <answer>
+      <p>
+        <m>1</m> and <m>3</m>
+      </p>
+    </answer>
   </subsection>
 </section>

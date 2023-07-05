@@ -269,8 +269,9 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> }a) EDP , équation,
+    <answer>
+      <p>
+        }a) EDP , équation,
       deuxième ordre,
       linéaire, non homogène, coefficients constants.
     </p>
@@ -291,8 +292,9 @@
       e) EDO , système, deuxième ordre, non linéaire.
     </p>
     <p>
-      f) EDP , équation, deuxième ordre, non linéaire. }
-    </p>
+      f) EDP , équation, deuxième ordre, non linéaire.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -302,11 +304,13 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> équation :
+    <answer>
+      <p>
+        équation :
       <m>a(x) y = b(x)</m>, solution :
-      <m>y = \frac{b(x)}{a(x)}</m>. }
-    </p>
+      <m>y = \frac{b(x)}{a(x)}</m>.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -316,8 +320,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>k=0</m> ou <m>k=1</m> }
-    </p>
+    <answer>
+      <p>
+        <m>k=0</m> ou <m>k=1</m>
+      </p>
+    </answer>
   </subsection>
 </section>

@@ -335,8 +335,9 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) Deux valeurs propres:
+    <answer>
+      <p>
+        a) Deux valeurs propres:
       <m>\pm \sqrt{2}</m>,
       donc le comportement est une selle. b) Deux valeurs propres:
       <m>1</m> et <m>2</m>,
@@ -345,8 +346,9 @@
       (ellipses). d) Deux valeurs propres:
       <m>-1</m> et <m>-2</m>,
       donc le comportement est un puits. e) Deux valeurs propres:
-      <m>5</m> et <m>-3</m>, donc le comportement est une selle. }
-    </p>
+      <m>5</m> et <m>-3</m>, donc le comportement est une selle.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -356,9 +358,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Spiral source. }
-    </p>
+    <answer>
+      <p>
+        Spiral source.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -368,9 +372,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> }
-    </p>
+    <answer>
+      <p>
+        
+      </p>
+    </answer>
     <p>
       <image width="37%" source="images/0100vectorfield.png"/>
     </p>

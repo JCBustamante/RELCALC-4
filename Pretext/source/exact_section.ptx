@@ -542,11 +542,13 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
+    <answer>
+      <p>
+        a)
       <m>e^{xy}+\sin(x)=C</m> b) <m>x^2+xy-2y^2=C</m> c)
-      <m>e^x+e^y=C</m> d) <m>x^3 + 3xy+ y^3 = C</m> }
-    </p>
+      <m>e^x+e^y=C</m> d) <m>x^3 + 3xy+ y^3 = C</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -557,13 +559,15 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) L'équation est <m>- f(x) \, dx + \frac{1}{g(y)} \, dy</m>,
+    <answer>
+      <p>
+        a) L'équation est <m>- f(x) \, dx + \frac{1}{g(y)} \, dy</m>,
       elle est exacte puisque <m>M = -f(x)</m>,
       <m>N = \frac{1}{g(y)}</m>,
       donc <m>M_y = 0 = N_x</m>. b) <m>-x \, dx + \frac{1}{y} \, dy = 0</m>,
       ce qui donne la fonction potentielle <m>F(x,y) = -\frac{x^2}{2} + \ln \lvert y \rvert</m>,
-      on résout <m>F(x,y) = C</m> et la solution obtenue est la même que dans l'exemple. }
-    </p>
+      on résout <m>F(x,y) = C</m> et la solution obtenue est la même que dans l'exemple.
+      </p>
+    </answer>
   </subsection>
 </section>

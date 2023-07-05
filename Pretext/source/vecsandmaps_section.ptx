@@ -723,9 +723,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>\sqrt{10}</m> b)<nbsp/><m>\sqrt{14}</m> c)<nbsp/><m>3</m> }
-    </p>
+    <answer>
+      <p>
+        a)<nbsp/><m>\sqrt{10}</m> b)<nbsp/><m>\sqrt{14}</m> c)<nbsp/><m>3</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -734,10 +736,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/>
-      <m>\begin{bmatrix}\frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}\frac{1}{\sqrt{6}} \\ \frac{-1}{\sqrt{6}} \\ \frac{2}{\sqrt{6}} \end{bmatrix}</m> c)<nbsp/><m>\left( \frac{2}{\sqrt{33}},\frac{-5}{\sqrt{33}},\frac{2}{\sqrt{33}} \right)</m> }
-    </p>
+    <answer>
+      <p>
+        a)<nbsp/>
+      <m>\begin{bmatrix}\frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}\frac{1}{\sqrt{6}} \\ \frac{-1}{\sqrt{6}} \\ \frac{2}{\sqrt{6}} \end{bmatrix}</m> c)<nbsp/><m>\left( \frac{2}{\sqrt{33}},\frac{-5}{\sqrt{33}},\frac{2}{\sqrt{33}} \right)</m>
+      </p>
+    </answer>
     <exercise>
       <title>2</title>
       <statement>
@@ -749,9 +753,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>\begin{bmatrix}9 \\ -2 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}-3 \\ 3 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}5 \\ -3 \end{bmatrix}</m> d)<nbsp/><m>\begin{bmatrix}-4 \\ 8 \end{bmatrix}</m> e)<nbsp/><m>\begin{bmatrix}3 \\ 7 \end{bmatrix}</m> f)<nbsp/><m>\begin{bmatrix}-8 \\ 3 \end{bmatrix}</m> }
-    </p>
+    <answer>
+      <p>
+        a)<nbsp/><m>\begin{bmatrix}9 \\ -2 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}-3 \\ 3 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}5 \\ -3 \end{bmatrix}</m> d)<nbsp/><m>\begin{bmatrix}-4 \\ 8 \end{bmatrix}</m> e)<nbsp/><m>\begin{bmatrix}3 \\ 7 \end{bmatrix}</m> f)<nbsp/><m>\begin{bmatrix}-8 \\ 3 \end{bmatrix}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -760,9 +766,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>20</m> b)<nbsp/><m>10</m> c)<nbsp/><m>20</m> }
-    </p>
+    <answer>
+      <p>
+        a)<nbsp/><m>20</m> b)<nbsp/><m>10</m> c)<nbsp/><m>20</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -771,8 +779,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)<nbsp/><m>(3,-1)</m> b)<nbsp/><m>(4,0)</m> c)<nbsp/><m>(-1,-1)</m> }
-    </p>
+    <answer>
+      <p>
+        a)<nbsp/><m>(3,-1)</m> b)<nbsp/><m>(4,0)</m> c)<nbsp/><m>(-1,-1)</m>
+      </p>
+    </answer>
   </subsection>
 </section>

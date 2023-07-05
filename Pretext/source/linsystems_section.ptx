@@ -280,10 +280,7 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Vérifiez que le système
-          <m>{\vec{x}}' = \left[ \begin{matrix}1 \amp 3 \\ 3 \amp 1 \end{matrix} \right] \vec{x}</m> a les deux solutions <m>\left[ \begin{matrix}1 \\ 1 \end{matrix} \right] e^{4t}</m> et
-          <m>\left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{-2t}</m>. \task Écrivez la solution générale. \task Écrivez la solution générale sous la forme <m>x_1 = ?</m>,
-          <m>x_2 = ?</m> (i.e. écrivez la formule pour chaque élément de la solution). \end{tasks}
+          \begin{tasks}$1\end{tasks}
         </p>
       </statement>
     </exercise>
@@ -318,8 +315,7 @@
       <statement>
         <p>
           Prenez le système <m>x_1' + x_2' = x_1</m> et
-          <m>x_1' - x_2' = x_2</m>. \begin{tasks} \task Écrivez-le sous la forme
-          <m>A {\vec{x}}' = B \vec{x}</m> pour des matrices <m>A</m> et <m>B</m>. \task Calculez <m>A^{-1}</m> et utilisez le résultat pour écrire le système sous la forme <m>{\vec{x}}' = P \vec{x}</m>. \end{tasks}
+          <m>x_1' - x_2' = x_2</m>. \begin{tasks}$1\end{tasks}
         </p>
       </statement>
     </exercise>
@@ -332,9 +328,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Yes. }
-    </p>
+    <answer>
+      <p>
+        Yes.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -345,10 +343,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> No.
-      <m>2 \left[ \begin{matrix}\cosh(t) \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{t} \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{-t} \\ 1 \end{matrix} \right] = \vec{0}</m> }
-    </p>
+    <answer>
+      <p>
+        No.
+      <m>2 \left[ \begin{matrix}\cosh(t) \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{t} \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{-t} \\ 1 \end{matrix} \right] = \vec{0}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -357,20 +357,23 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\left[ \begin{matrix}x \\ y \end{matrix} \right] ' = \left[ \begin{matrix}3 \amp -1 \\ t \amp 0 \end{matrix} \right] \left[ \begin{matrix}x \\ y \end{matrix} \right] + \left[ \begin{matrix}e^{t} \\ 0 \end{matrix} \right]</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\left[ \begin{matrix}x \\ y \end{matrix} \right] ' = \left[ \begin{matrix}3 \amp -1 \\ t \amp 0 \end{matrix} \right] \left[ \begin{matrix}x \\ y \end{matrix} \right] + \left[ \begin{matrix}e^{t} \\ 0 \end{matrix} \right]</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Écrivez <m>x_1'=2tx_2</m>,
-          <m>x_2'=2tx_2</m> en notation matricielle. \task Résolvez et écrivez la solution en notation matricielle. \end{tasks}
+          \begin{tasks}$1\end{tasks}
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
-      <m>\vec{x}\,' = \left[ \begin{matrix}0 \amp 2t \\ 0 \amp 2t \end{matrix} \right] \vec{x}</m> b) <m>\vec{x} = \left[ \begin{matrix}C_2 e^{t^2} + C_1 \\ C_2 e^{t^2} \end{matrix} \right]</m> }
-    </p>
+    <answer>
+      <p>
+        a)
+      <m>\vec{x}\,' = \left[ \begin{matrix}0 \amp 2t \\ 0 \amp 2t \end{matrix} \right] \vec{x}</m> b) <m>\vec{x} = \left[ \begin{matrix}C_2 e^{t^2} + C_1 \\ C_2 e^{t^2} \end{matrix} \right]</m>
+      </p>
+    </answer>
   </subsection>
 </section>

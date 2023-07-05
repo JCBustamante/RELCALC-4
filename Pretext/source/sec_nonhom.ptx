@@ -550,12 +550,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y=\frac{-16\sin(3x)+6\cos(3x)}{73}</m> }
-    </p>
-    <p>
-      \begin{samepage}
-    </p>
+    <answer>
+      <p>
+        <m>y=\frac{-16\sin(3x)+6\cos(3x)}{73}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -564,10 +563,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \end{samepage} \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
-      <m>y=\frac{2e^x+3x^3-9x}{6}</m> b) <m>y=C_1 \cos(\sqrt{2} x) + C_2 \sin(\sqrt{2} x) + \frac{2e^x+3x^3-9x}{6}</m> }
-    </p>
+    <answer>
+      <p>
+        a)
+      <m>y=\frac{2e^x+3x^3-9x}{6}</m> b) <m>y=C_1 \cos(\sqrt{2} x) + C_2 \sin(\sqrt{2} x) + \frac{2e^x+3x^3-9x}{6}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -576,9 +577,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y(x) = x^2-4 x+6+e^{-x}(x-5)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y(x) = x^2-4 x+6+e^{-x}(x-5)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -586,9 +589,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = \frac{2xe^x-(e^x+e^{-x})\log(e^{2x}+1)}{4}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = \frac{2xe^x-(e^x+e^{-x})\log(e^{2x}+1)}{4}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -596,8 +601,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y=\frac{-\sin(x+c)}{3}+C_1 e^{\sqrt{2}\,x}+C_2 e^{-\sqrt{2}\,x}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y=\frac{-\sin(x+c)}{3}+C_1 e^{\sqrt{2}\,x}+C_2 e^{-\sqrt{2}\,x}</m>
+      </p>
+    </answer>
   </subsection>
 </section>

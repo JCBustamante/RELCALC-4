@@ -612,11 +612,13 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Calculer
+    <answer>
+      <p>
+        Calculer
       <m>x' = -2e^{-2t}</m> et <m>x'' = 4e^{-2t}</m>.
-      Alors, <m>(4e^{-2t}) + 4 (-2e^{-2t}) + 4 (e^{-2t}) = 0</m>. }
-    </p>
+      Alors, <m>(4e^{-2t}) + 4 (-2e^{-2t}) + 4 (e^{-2t}) = 0</m>.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -625,9 +627,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Oui. }
-    </p>
+    <answer>
+      <p>
+        Oui.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -638,9 +642,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y=x^r</m> est une solution pour <m>r=0</m> et <m>r=2</m>. }
-    </p>
+    <answer>
+      <p>
+        <m>y=x^r</m> est une solution pour <m>r=0</m> et <m>r=2</m>.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -650,10 +656,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>C_1 = 100</m>,
-      <m>C_2 = -90</m> }
-    </p>
+    <answer>
+      <p>
+        <m>C_1 = 100</m>,
+      <m>C_2 = -90</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -661,16 +669,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\varphi = -9 e^{8s}</m> }
-    </p>
-
     <answer>
       <p>
         <m>\varphi = -9 e^{8s}</m> 
       </p>
     </answer>
-
     <exercise>
       <statement>
         <p>

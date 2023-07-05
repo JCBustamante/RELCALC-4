@@ -382,9 +382,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \frac{1}{\sqrt{2}-4 \pi^2} \sin(2\pi t) + \frac{0.1}{\sqrt{2}-100 \pi^2} \cos(10 \pi t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x = \frac{1}{\sqrt{2}-4 \pi^2} \sin(2\pi t) + \frac{0.1}{\sqrt{2}-100 \pi^2} \cos(10 \pi t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -394,9 +396,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \sum\limits_{n=1}^\infty \frac{e^{-n}}{3-{(2n)}^2} \cos(2n t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x = \sum\limits_{n=1}^\infty \frac{e^{-n}}{3-{(2n)}^2} \cos(2n t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -407,9 +411,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \frac{1}{2\sqrt{3}} + \sum\limits_{\substack{n=1 \\ n \text{ impaire } } }^\infty \frac{-4}{n^2 \pi^2 (\sqrt{3}-n^2 \pi^2)} \cos (n \pi t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x = \frac{1}{2\sqrt{3}} + \sum\limits_{\substack{n=1 \\ n \text{ impaire } } }^\infty \frac{-4}{n^2 \pi^2 (\sqrt{3}-n^2 \pi^2)} \cos (n \pi t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -420,8 +426,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = \frac{1}{2\sqrt{3}} - \frac{2}{\pi^3} t \sin(\pi t) + \sum\limits_{\substack{n=3 \\ n \text{ impaire } } }^\infty \frac{-4}{n^2 \pi^4 (1-n^2)} \cos (n \pi t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x = \frac{1}{2\sqrt{3}} - \frac{2}{\pi^3} t \sin(\pi t) + \sum\limits_{\substack{n=3 \\ n \text{ impaire } } }^\infty \frac{-4}{n^2 \pi^4 (1-n^2)} \cos (n \pi t)</m>
+      </p>
+    </answer>
   </subsection>
 </section>

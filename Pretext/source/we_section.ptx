@@ -506,9 +506,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y(x,t) = \sin(x) \bigl(\sin(t) + \cos(t)\bigr)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y(x,t) = \sin(x) \bigl(\sin(t) + \cos(t)\bigr)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -519,9 +521,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y(x,t) = \frac{1}{5 \pi} \sin (\pi x) \sin (5 \pi t) + \frac{1}{100 \pi} \sin(2\pi x) \sin(10\pi t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y(x,t) = \frac{1}{5 \pi} \sin (\pi x) \sin (5 \pi t) + \frac{1}{100 \pi} \sin(2\pi x) \sin(10\pi t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -532,9 +536,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y(x,t) = \sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{n} \sin(nx) \cos( n \sqrt{2}\,t )</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y(x,t) = \sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{n} \sin(nx) \cos( n \sqrt{2}\,t )</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -545,9 +551,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y(x,t) = \sin(2x)+t\sin(x)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y(x,t) = \sin(2x)+t\sin(x)</m>
+      </p>
+    </answer>
     <p>
       \appendix
     </p>

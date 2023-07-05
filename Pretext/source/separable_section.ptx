@@ -456,9 +456,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = Ce^{x^2}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = Ce^{x^2}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -466,9 +468,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x = e^{t^3}+1</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x = e^{t^3}+1</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -477,9 +481,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x^3+x=t+2</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x^3+x=t+2</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -488,9 +494,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = \frac{1}{1-\ln x}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = \frac{1}{1-\ln x}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -498,9 +506,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sin(y) = -\cos(x) + C</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\sin(y) = -\cos(x) + C</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -518,9 +528,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> L'intervalle de temps est d'environ 7.45 à 12.15 minutes. }
-    </p>
+    <answer>
+      <p>
+        L'intervalle de temps est d'environ 7.45 à 12.15 minutes.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -534,9 +546,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
-      <m>x = \frac{1000e^t}{e^t+24}</m>. b) 102 lapins après un mois, 861 après 5 mois, 999 après 10 mois, 1000 après 15 mois. }
-    </p>
+    <answer>
+      <p>
+        a)
+      <m>x = \frac{1000e^t}{e^t+24}</m>. b) 102 lapins après un mois, 861 après 5 mois, 999 après 10 mois, 1000 après 15 mois.
+      </p>
+    </answer>
   </subsection>
 </section>

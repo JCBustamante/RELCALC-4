@@ -262,9 +262,6 @@
     <exercise>
       <statement>
         <p>
-          <!-- \begin{tasks} \task Calculez la dérivée de l'extension périodique paire de <m>f (t)</m> ci-dessus et vérifiez s'il y a des discontinuités de saut.
-          Utilisez la définition réelle de <m>f (t)</m>,
-          pas sa série cosinus! \task Pourquoi est-ce que la dérivée de l'extension périodique paire de <m>f (t)</m> est l'extension périodique impaire de <m>f '(t)</m>? \end{tasks} -->
           <ol marker="a">
             <li>Calculez la dérivée de l'extension périodique paire de <m>f (t)</m> ci-dessus et vérifiez s'il y a des discontinuités de saut. Utilisez la définition réelle de <m>f (t)</m>, pas sa série cosinus !</li>
             <li>Pourquoi est-ce que la dérivée de l'extension périodique paire de <m>f(t)</m> est l'extension périodique impaire de <m>f'(t)</m> ?</li>
@@ -519,10 +516,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
-      <m>\nicefrac{1}{2} + \sum\limits_{\substack{n=1\\n\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos\bigl(\frac{n\pi}{3} t \bigr)</m> b) <m>\sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{\pi n} \sin\bigl(\frac{n\pi}{3} t \bigr)</m> }
-    </p>
+    <answer>
+      <p>
+        a)
+      <m>\nicefrac{1}{2} + \sum\limits_{\substack{n=1\\n\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos\bigl(\frac{n\pi}{3} t \bigr)</m> b) <m>\sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{\pi n} \sin\bigl(\frac{n\pi}{3} t \bigr)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -531,10 +530,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
-      <m>\cos(2t)</m> b) <m>\sum\limits_{\substack{n=1 \\n \text{ impair } } }^\infty \frac{-4n}{\pi n^2 - 4 \pi} \sin(n t)</m> }
-    </p>
+    <answer>
+      <p>
+        a)
+      <m>\cos(2t)</m> b) <m>\sum\limits_{\substack{n=1 \\n \text{ impair } } }^\infty \frac{-4n}{\pi n^2 - 4 \pi} \sin(n t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -546,9 +547,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>f(t)</m> b) <m>0</m> }
-    </p>
+    <answer>
+      <p>
+        a) <m>f(t)</m> b) <m>0</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -558,9 +561,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sum\limits_{n=1}^\infty \frac{-1}{n^2(1+n^2)} \sin(nt)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\sum\limits_{n=1}^\infty \frac{-1}{n^2(1+n^2)} \sin(nt)</m>
+      </p>
+    </answer>
     <exercise>
       <title>défi</title>
       <statement>
@@ -572,8 +577,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)</m>
+      </p>
+    </answer>
   </subsection>
 </section>

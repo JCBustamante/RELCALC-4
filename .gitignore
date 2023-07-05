@@ -11,3 +11,5 @@
 diffyqs.pdf
 *.html
 /Pretext/output/*
+*.js
+*.json

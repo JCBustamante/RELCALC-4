@@ -586,9 +586,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = C_1 e^{(-2+\sqrt{2}) x} + C_2 e^{(-2-\sqrt{2}) x}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = C_1 e^{(-2+\sqrt{2}) x} + C_2 e^{(-2-\sqrt{2}) x}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -596,9 +598,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = C_1 e^{3x} + C_2 x e^{3x}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = C_1 e^{3x} + C_2 x e^{3x}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -607,9 +611,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = e^{-x/4} \cos\bigl((\nicefrac{\sqrt{7}}{4})x\bigr) - \sqrt{7} e^{-x/4} \sin\bigl((\nicefrac{\sqrt{7}}{4})x\bigr)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = e^{-x/4} \cos\bigl((\nicefrac{\sqrt{7}}{4})x\bigr) - \sqrt{7} e^{-x/4} \sin\bigl((\nicefrac{\sqrt{7}}{4})x\bigr)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -618,9 +624,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = \frac{2(a-b)}{5} \, e^{-3x/2}+\frac{3 a+2 b}{5} \, e^x</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = \frac{2(a-b)}{5} \, e^{-3x/2}+\frac{3 a+2 b}{5} \, e^x</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -629,9 +637,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>z(t) = 2e^{-t} \cos(t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>z(t) = 2e^{-t} \cos(t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -643,9 +653,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y = \frac{a \beta-b}{\beta-\alpha} e^{\alpha x} + \frac{b-a \alpha}{\beta-\alpha} e^{\beta x}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y = \frac{a \beta-b}{\beta-\alpha} e^{\alpha x} + \frac{b-a \alpha}{\beta-\alpha} e^{\beta x}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -654,8 +666,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>y'' -y'-6y=0</m> }
-    </p>
+    <answer>
+      <p>
+        <m>y'' -y'-6y=0</m>
+      </p>
+    </answer>
   </subsection>
 </section>

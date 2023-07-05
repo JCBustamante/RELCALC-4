@@ -591,9 +591,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sin(t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\sin(t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -603,9 +605,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\sum\limits_{n=1}^\infty \frac{(\pi-n) \sin( \pi n+{\pi}^{2}) +(\pi+n)\sin(\pi n-{\pi}^{2}) }{\pi {n}^{2}-{\pi}^{3}} \sin(nt)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\sum\limits_{n=1}^\infty \frac{(\pi-n) \sin( \pi n+{\pi}^{2}) +(\pi+n)\sin(\pi n-{\pi}^{2}) }{\pi {n}^{2}-{\pi}^{3}} \sin(nt)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -615,9 +619,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{1}{2}-\frac{1}{2}\cos(2t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\frac{1}{2}-\frac{1}{2}\cos(2t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -626,8 +632,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{\pi^4}{5} + \sum\limits_{n=1}^\infty \frac{{(-1)}^{n} (8{\pi}^{2}{n}^{2}-48) }{{n}^{4}} \cos(nt)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\frac{\pi^4}{5} + \sum\limits_{n=1}^\infty \frac{{(-1)}^{n} (8{\pi}^{2}{n}^{2}-48) }{{n}^{4}} \cos(nt)</m>
+      </p>
+    </answer>
   </subsection>
 </section>

@@ -540,16 +540,18 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) }Eigenvalues:
+    <answer>
+      <p>
+        a) }Eigenvalues:
       <m>4,0,-1</m> Eigenvectors:
       <m>\left[ \begin{matrix}1 \\ 0 \\ 1 \end{matrix} \right]</m>,
       <m>\left[ \begin{matrix}0 \\ 1 \\ 0 \end{matrix} \right]</m>,
       <m>\left[ \begin{matrix}3 \\ 5 \\ -2 \end{matrix} \right]</m>
     </p>
     <p>
-      b) <m>\vec{x} = C_1 \left[ \begin{matrix}1 \\ 0 \\ 1 \end{matrix} \right] e^{4t} + C_2 \left[ \begin{matrix}0 \\ 1 \\ 0 \end{matrix} \right] + C_3 \left[ \begin{matrix}3 \\ 5 \\ -2 \end{matrix} \right] e^{-t}</m> }
-    </p>
+      b) <m>\vec{x} = C_1 \left[ \begin{matrix}1 \\ 0 \\ 1 \end{matrix} \right] e^{4t} + C_2 \left[ \begin{matrix}0 \\ 1 \\ 0 \end{matrix} \right] + C_3 \left[ \begin{matrix}3 \\ 5 \\ -2 \end{matrix} \right] e^{-t}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -558,15 +560,17 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) }Eigenvalues:
+    <answer>
+      <p>
+        a) }Eigenvalues:
       <m>\frac{1+\sqrt{3}i}{2}, \frac{1-\sqrt{3}i}{2}</m>, Eigenvectors:
       <m>\left[ \begin{matrix}-2 \\ 1-\sqrt{3}i \end{matrix} \right]</m>,
       <m>\left[ \begin{matrix}-2 \\ 1+\sqrt{3}i \end{matrix} \right]</m>
     </p>
     <p>
-      b) <m>\vec{x} = C_1 e^{t/2} \left[ \begin{matrix}-2\cos\bigl(\frac{\sqrt{3}t}{2}\bigr) \\ \cos\bigl(\frac{\sqrt{3}t}{2}\bigr) + \sqrt{3}\sin\bigl(\frac{\sqrt{3}t}{2}\bigr) \end{matrix} \right] + C_2 e^{t/2} \left[ \begin{matrix}- 2\sin\bigl(\frac{\sqrt{3}t}{2}\bigr) \\ \sin\bigl(\frac{\sqrt{3}t}{2}\bigr) -\sqrt{3}\cos\bigl(\frac{\sqrt{3}t}{2}\bigr) \end{matrix} \right]</m> }
-    </p>
+      b) <m>\vec{x} = C_1 e^{t/2} \left[ \begin{matrix}-2\cos\bigl(\frac{\sqrt{3}t}{2}\bigr) \\ \cos\bigl(\frac{\sqrt{3}t}{2}\bigr) + \sqrt{3}\sin\bigl(\frac{\sqrt{3}t}{2}\bigr) \end{matrix} \right] + C_2 e^{t/2} \left[ \begin{matrix}- 2\sin\bigl(\frac{\sqrt{3}t}{2}\bigr) \\ \sin\bigl(\frac{\sqrt{3}t}{2}\bigr) -\sqrt{3}\cos\bigl(\frac{\sqrt{3}t}{2}\bigr) \end{matrix} \right]</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -575,9 +579,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\vec{x} = C_1 \left[ \begin{matrix}1 \\ 1 \end{matrix} \right] e^{t} + C_2 \left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{-t}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\vec{x} = C_1 \left[ \begin{matrix}1 \\ 1 \end{matrix} \right] e^{t} + C_2 \left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{-t}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -586,8 +592,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\vec{x} = C_1 \left[ \begin{matrix}\cos(t) \\ -\sin(t) \end{matrix} \right] + C_2 \left[ \begin{matrix}\sin(t) \\ \cos(t) \end{matrix} \right]</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\vec{x} = C_1 \left[ \begin{matrix}\cos(t) \\ -\sin(t) \end{matrix} \right] + C_2 \left[ \begin{matrix}\sin(t) \\ \cos(t) \end{matrix} \right]</m>
+      </p>
+    </answer>
   </subsection>
 </section>

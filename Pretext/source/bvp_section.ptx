@@ -683,9 +683,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\omega = \pi \sqrt{\frac{15}{2}}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\omega = \pi \sqrt{\frac{15}{2}}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -697,12 +699,14 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\lambda_k = 4 k^2 \pi^2</m> pour
+    <answer>
+      <p>
+        <m>\lambda_k = 4 k^2 \pi^2</m> pour
       <m>k = 1,2,3,\ldots</m> <m>x_k = \cos (2k\pi t) + B \sin (2k\pi t)</m>
       (pour tout <m>B</m>)
-      }
-    </p>
+     
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -711,9 +715,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>x(t) = - \sin(t)</m> }
-    </p>
+    <answer>
+      <p>
+        <m>x(t) = - \sin(t)</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -724,12 +730,14 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> La solution générale est <m>x = C e^{-\lambda t}</m>.
+    <answer>
+      <p>
+        La solution générale est <m>x = C e^{-\lambda t}</m>.
       Depuis que <m>x(0) = 0</m> alors <m>C=0</m>, et alors <m>x(t) = 0</m>.
       Ainsi, la solution est toujours identiquement nulle.
-      Une condition est toujours suffisante pour garantir une solution unique pour une équation de premier ordre. }
-    </p>
+      Une condition est toujours suffisante pour garantir une solution unique pour une équation de premier ordre.
+      </p>
+    </answer>
     <exercise>
       <title>défi</title>
       <statement>
@@ -743,8 +751,10 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>\frac{\sqrt{3}}{3} e^{\frac{-3}{2}\sqrt[3]{\lambda}} - \frac{\sqrt{3}}{3} \cos \bigl( \frac{\sqrt{3}\, \sqrt[3]{\lambda}}{2} \bigr) + \sin \bigl( \frac{\sqrt{3}\, \sqrt[3]{\lambda}}{2}\bigr) = 0</m> }
-    </p>
+    <answer>
+      <p>
+        <m>\frac{\sqrt{3}}{3} e^{\frac{-3}{2}\sqrt[3]{\lambda}} - \frac{\sqrt{3}}{3} \cos \bigl( \frac{\sqrt{3}\, \sqrt[3]{\lambda}}{2} \bigr) + \sin \bigl( \frac{\sqrt{3}\, \sqrt[3]{\lambda}}{2}\bigr) = 0</m>
+      </p>
+    </answer>
   </subsection>
 </section>

@@ -383,10 +383,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) 0, 1, 2 sont des points critiques. b) <m>x=0</m> est instable (semi-stable),
-      <m>x=1</m> est stable, et <m>x=2</m> est instable. c) 1 }
-    </p>
+    <answer>
+      <p>
+        a) 0, 1, 2 sont des points critiques. b) <m>x=0</m> est instable (semi-stable),
+      <m>x=1</m> est stable, et <m>x=2</m> est instable. c) 1
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -395,9 +397,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) Il n'y a pas de points critiques. b) <m>\infty</m> }
-    </p>
+    <answer>
+      <p>
+        a) Il n'y a pas de points critiques. b) <m>\infty</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -409,10 +413,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a)
-      <m>\frac{dx}{dt} = kx(M-x)+A</m> b) <m>\frac{kM + \sqrt{{(kM)}^2 + 4Ak}}{2k}</m> }
-    </p>
+    <answer>
+      <p>
+        a)
+      <m>\frac{dx}{dt} = kx(M-x)+A</m> b) <m>\frac{kM + \sqrt{{(kM)}^2 + 4Ak}}{2k}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -423,10 +429,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>\alpha</m> est un point critique stable,
+    <answer>
+      <p>
+        a) <m>\alpha</m> est un point critique stable,
       <m>\beta</m> est un point critique instable. b) <m>\alpha</m>,
-      c) <m>\alpha</m>, d) <m>\infty</m> ou n'existe pas . }
-    </p>
+      c) <m>\alpha</m>, d) <m>\infty</m> ou n'existe pas .
+      </p>
+    </answer>
   </subsection>
 </section>

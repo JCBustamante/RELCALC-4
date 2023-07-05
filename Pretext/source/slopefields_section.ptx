@@ -397,9 +397,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> }
-    </p>
+    <answer>
+      <p>
+        
+      </p>
+    </answer>
     <p>
       <image width="37%" source="images/yprimey3slope.png"/>
     </p>
@@ -414,14 +416,16 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Oui une solution existe.
+    <answer>
+      <p>
+        Oui une solution existe.
       Car <m>y' = f(x,y)</m> où <m>f(x,y) = xy</m>.
       La fonction <m>f(x,y)</m> est continue et <m>\frac{\partial f}{\partial y} = x</m>,
       qui est aussi continue près de <m>(0,0)</m>.
       Par conséquent,
-      la solution existe et est unique. (En fait <m>y=0</m> est une solution). }
-    </p>
+      la solution existe et est unique. (En fait <m>y=0</m> est une solution).
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -429,9 +433,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Non puisque la seule solution possible n'est pas définie au point <m>(x,y) = (1,0)</m>. }
-    </p>
+    <answer>
+      <p>
+        Non puisque la seule solution possible n'est pas définie au point <m>(x,y) = (1,0)</m>.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -443,10 +449,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>y'=\cos y</m>,
-      b) <m>y' = y\cos(x)</m>, c) <m>y'=\sin x</m>. }
-    </p>
+    <answer>
+      <p>
+        a) <m>y'=\cos y</m>,
+      b) <m>y' = y\cos(x)</m>, c) <m>y'=\sin x</m>.
+      </p>
+    </answer>
     <exercise>
       <title>défi</title>
       <statement>
@@ -464,15 +472,17 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> Picard ne s'applique pas puisque <m>f</m> n'est pas continue en <m>y=0</m>.
+    <answer>
+      <p>
+        Picard ne s'applique pas puisque <m>f</m> n'est pas continue en <m>y=0</m>.
       De plus, l'équation n'admet pas de solution dont la dérivée est continue.
       Car si c'était vrai, alors il s'ensuivrait que <m>y'(0) = 1</m>.
       Par le test de la première dérivée,
       <m>y(x) > 0</m> pour de petites valeurs positives de <m>x</m>.
       Mais on a que <m>y'(x) = 0</m> pour ces valeurs de <m>x</m>,
-      et donc <m>y'</m> n'est pas continue. }
-    </p>
+      et donc <m>y'</m> n'est pas continue.
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -484,9 +494,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> La solution est <m>y(x) = \int_{x_0}^x f(s) \,ds + y_0</m>,
-      ce qui existe pour toute valeur de <m>x</m>. }
-    </p>
+    <answer>
+      <p>
+        La solution est <m>y(x) = \int_{x_0}^x f(s) \,ds + y_0</m>,
+      ce qui existe pour toute valeur de <m>x</m>.
+      </p>
+    </answer>
   </subsection>
 </section>

@@ -756,9 +756,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>u(x,t) = 5 \sin (x) \, e^{- 3 t} + 2 \sin (5x) \, e^{-75 t}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>u(x,t) = 5 \sin (x) \, e^{- 3 t} + 2 \sin (5x) \, e^{-75 t}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -771,9 +773,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>u(x,t) = 1 + 2 \cos (x) \, e^{-0.1 t}</m> }
-    </p>
+    <answer>
+      <p>
+        <m>u(x,t) = 1 + 2 \cos (x) \, e^{-0.1 t}</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -781,10 +785,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/>
-      <m>u(x,t) = e^{\lambda t} e^{\lambda x}</m> for some <m>\lambda</m> }
-    </p>
+    <answer>
+      <p>
+        <m>u(x,t) = e^{\lambda t} e^{\lambda x}</m> for some <m>\lambda</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -793,9 +798,11 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> <m>u(x,t) = Ae^x + Be^t</m> }
-    </p>
+    <answer>
+      <p>
+        <m>u(x,t) = Ae^x + Be^t</m>
+      </p>
+    </answer>
     <exercise>
       <statement>
         <p>
@@ -807,10 +814,12 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \setbox\answerscollect=\vbox{\unvbox\answerscollect \theanswer<nbsp/><nbsp/> a) <m>0</m>,
+    <answer>
+      <p>
+        a) <m>0</m>,
       b) minimum <m>-100</m>,
-      maximum <m>100</m>, c) <m>t = \frac{\ln 2}{4 \pi^2}</m>. }
-    </p>
+      maximum <m>100</m>, c) <m>t = \frac{\ln 2}{4 \pi^2}</m>.
+      </p>
+    </answer>
   </subsection>
 </section>
