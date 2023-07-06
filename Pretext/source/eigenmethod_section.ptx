@@ -486,9 +486,10 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Trouvez la solution générale de <m>x_1' = 2 x_1</m>,
+          <ol marker="a"><li> Trouvez la solution générale de <m>x_1' = 2 x_1</m>,
           <m>x_2' = 3 x_2</m> avec la méthode des valeurs propres (écrivez d'abord le système sous la forme
-          <m>{\vec{x}}' = A \vec{x}</m>). \task Résolvez le système en calculant séparément chaque équation et vérifiez que vous obtenez la même solution générale. \end{tasks}
+          <m>{\vec{x}}' = A \vec{x}</m>). </li>
+          <li> Résolvez le système en calculant séparément chaque équation et vérifiez que vous obtenez la même solution générale. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -512,8 +513,9 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Calculez les valeurs propres et les vecteurs propres de
-          <m>A = \left[ \begin{matrix}9 \amp -2 \amp -6 \\ -8 \amp 3 \amp 6 \\ 10 \amp -2 \amp -6 \end{matrix} \right]</m>. \task Trouvez la solution générale de <m>{\vec{x}}' = A \vec{x}</m>. \end{tasks}
+          <ol marker="a"><li> Calculez les valeurs propres et les vecteurs propres de
+          <m>A = \left[ \begin{matrix}9 \amp -2 \amp -6 \\ -8 \amp 3 \amp 6 \\ 10 \amp -2 \amp -6 \end{matrix} \right]</m>. </li>
+          <li> Trouvez la solution générale de <m>{\vec{x}}' = A \vec{x}</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -535,8 +537,9 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Calculez les valeurs propres et les vecteurs propres de
-          <m>A= \left[ \begin{matrix}1 \amp 0 \amp 3 \\ -1 \amp 0 \amp 1 \\ 2 \amp 0 \amp 2 \end{matrix} \right]</m>. \task Résolvez le système <m>\vec{x}\,' = A \vec{x}</m>. \end{tasks}
+          <ol marker="a"><li> Calculez les valeurs propres et les vecteurs propres de
+          <m>A= \left[ \begin{matrix}1 \amp 0 \amp 3 \\ -1 \amp 0 \amp 1 \\ 2 \amp 0 \amp 2 \end{matrix} \right]</m>. </li>
+          <li> Résolvez le système <m>\vec{x}\,' = A \vec{x}</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -555,8 +558,9 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Calculez les valeurs propres et les vecteurs propres de
-          <m>A=\left[ \begin{matrix}1 \amp 1 \\ -1 \amp 0 \end{matrix} \right]</m>. \task Résolvez le système <m>\vec{x}\,' = A\vec{x}</m>. \end{tasks}
+          <ol marker="a"><li> Calculez les valeurs propres et les vecteurs propres de
+          <m>A=\left[ \begin{matrix}1 \amp 1 \\ -1 \amp 0 \end{matrix} \right]</m>. </li>
+          <li> Résolvez le système <m>\vec{x}\,' = A\vec{x}</m>. </li></ol>
         </p>
       </statement>
     </exercise>

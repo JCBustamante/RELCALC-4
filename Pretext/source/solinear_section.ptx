@@ -351,9 +351,10 @@
     <exercise xml:id="sol_eulerex">
       <statement>
         <p>
-          Supposons que <m>{(b-a)}^2-4ac > 0</m>. \begin{tasks} \task Trouvez la formule pour la solution générale de <m>a x^2 y'' + b x y' + c y = 0</m>.
-          Astuce : Essayez <m>y=x^r</m> et résolvez pour <m>r</m>. \task Que se passe-t-il lorsque
-          <m>{(b-a)}^2-4ac = 0</m> ou <m>{(b-a)}^2-4ac \lt 0</m>? \end{tasks}
+          Supposons que <m>{(b-a)}^2-4ac > 0</m>. <ol marker="a"><li> Trouvez la formule pour la solution générale de <m>a x^2 y'' + b x y' + c y = 0</m>.
+          Astuce : Essayez <m>y=x^r</m> et résolvez pour <m>r</m>. </li>
+          <li> Que se passe-t-il lorsque
+          <m>{(b-a)}^2-4ac = 0</m> ou <m>{(b-a)}^2-4ac \lt 0</m>? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -387,7 +388,9 @@
       <title>\myindex{Équation de Chebyshev d'ordre 1}</title>
       <statement>
         <p>
-          Prenez <m>(1-x^2)y''-xy' + y = 0</m>. \begin{tasks} \task Montrez que <m>y=x</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task Écrivez la solution générale. \end{tasks}
+          Prenez <m>(1-x^2)y''-xy' + y = 0</m>. <ol marker="a"><li> Montrez que <m>y=x</m> est une solution. </li>
+          <li> Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. </li>
+          <li> Écrivez la solution générale. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -395,8 +398,10 @@
       <title>\myindex{Équation d'Hermite d'ordre 2}</title>
       <statement>
         <p>
-          Prenons <m>y''-2xy' + 4y = 0</m>. \begin{tasks} \task Montrez que
-          <m>y=1-2x^2</m> est une solution. \task Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. \task Écrivez la solution générale. \end{tasks}
+          Prenons <m>y''-2xy' + 4y = 0</m>. <ol marker="a"><li> Montrez que
+          <m>y=1-2x^2</m> est une solution. </li>
+          <li> Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. </li>
+          <li> Écrivez la solution générale. </li></ol>
         </p>
       </statement>
     </exercise>

@@ -317,19 +317,23 @@
     <exercise>
       <statement>
         <p>
-          Considérons <m>x' = x^2</m>. \begin{tasks} \task Tracez le diagramme de phase,
-          trouvez les points critiques et déterminez leur stabilité. \task Tracez quelques solutions représentatives de l'équation. \task Trouvez
-          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = -1</m>. \end{tasks}
+          Considérons <m>x' = x^2</m>. <ol marker="a"><li> Tracez le diagramme de phase,
+          trouvez les points critiques et déterminez leur stabilité. </li>
+          <li> Tracez quelques solutions représentatives de l'équation. </li>
+          <li> Trouvez
+          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = -1</m>. </li></ol>
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Considérons <m>x' = \sin x</m>. \begin{tasks} \task Tracez le diagramme de phase pour <m>-4\pi \leq x \leq 4\pi</m>.
+          Considérons <m>x' = \sin x</m>. <ol marker="a"><li> Tracez le diagramme de phase pour <m>-4\pi \leq x \leq 4\pi</m>.
           Sur cet intervalle,
-          trouvez les points critiques et déterminez leur stabilité. \task Tracez quelques solutions représentatives de l'équation. \task Trouvez
-          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = 1</m>. \end{tasks}
+          trouvez les points critiques et déterminez leur stabilité. </li>
+          <li> Tracez quelques solutions représentatives de l'équation. </li>
+          <li> Trouvez
+          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = 1</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -338,9 +342,11 @@
         <p>
           Supposons que <m>f(x)</m> est positif pour <m>0 \lt x \lt 1</m>,
           zéro pour <m>x=0</m> et <m>x=1</m>,
-          et négatif pour les autres valeurs de <m>x</m>. \begin{tasks} \task Tracez le diagramme de phase pour <m>x' = f(x)</m>,
-          trouvez les points critiques et déterminez leur stabilité. \task Tracez quelques solutions représentatives de l'équation. \task Trouvez
-          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = 0.5</m>. \end{tasks}
+          et négatif pour les autres valeurs de <m>x</m>. <ol marker="a"><li> Tracez le diagramme de phase pour <m>x' = f(x)</m>,
+          trouvez les points critiques et déterminez leur stabilité. </li>
+          <li> Tracez quelques solutions représentatives de l'équation. </li>
+          <li> Trouvez
+          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = 0.5</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -352,8 +358,10 @@
           La quantité cultivée sera proportionnelle à la population.
           Autrement dit, on récolte <m>hx</m> par unité
           de temps pour un <m>h > 0</m> donné. (C'est analogue à
-          l'exemple vu plus haut mais avec un terme <m>hx</m> au lieu de <m>h</m>.) \begin{tasks} \task Trouvez l'équation différentielle modélisant cette situation. \task Montrez que si <m>kM > h</m>,
-          alors c'est toujours une équation logistique. \task Qu'arrive-t-il lorsque <m>kM \lt h</m>? \end{tasks}
+          l'exemple vu plus haut mais avec un terme <m>hx</m> au lieu de <m>h</m>.) <ol marker="a"><li> Trouvez l'équation différentielle modélisant cette situation. </li>
+          <li> Montrez que si <m>kM > h</m>,
+          alors c'est toujours une équation logistique. </li>
+          <li> Qu'arrive-t-il lorsque <m>kM \lt h</m>? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -367,19 +375,23 @@
           <m>x</m>,
           multiplié
           par le nombre de personnes non-infectées mas susceptibles de l'être,
-          <m>S-x</m>. \begin{tasks} \task Trouvez l'équation différentielle modélisant cette situation. \task En supposant que <m>x(0) > 0</m>,
+          <m>S-x</m>. <ol marker="a"><li> Trouvez l'équation différentielle modélisant cette situation. </li>
+          <li> En supposant que <m>x(0) > 0</m>,
           c'est-à-dire que certaine spersonnes sont déjà
           infectées au <m>t=0</m>,
-          trouvez <m>\displaystyle \lim_{t\to\infty} x(t)</m>. \task Est-ce que la solution en b) correspond à votre intuition?
-          Pourquoi ou pourquoi pas? \end{tasks}
+          trouvez <m>\displaystyle \lim_{t\to\infty} x(t)</m>. </li>
+          <li> Est-ce que la solution en b) correspond à votre intuition?
+          Pourquoi ou pourquoi pas? </li></ol>
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Soit <m>x'=(x-1)(x-2)x^2</m>. \begin{tasks} \task Esquissez le diagramme de phase et calculez les points critiques. \task Classifiez les points critiques. \task Si <m>x(0)=0{,}5</m>,
-          calculez <m>\displaystyle \lim_{t\to\infty} x(t)</m>. \end{tasks}
+          Soit <m>x'=(x-1)(x-2)x^2</m>. <ol marker="a"><li> Esquissez le diagramme de phase et calculez les points critiques. </li>
+          <li> Classifiez les points critiques. </li>
+          <li> Si <m>x(0)=0{,}5</m>,
+          calculez <m>\displaystyle \lim_{t\to\infty} x(t)</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -392,8 +404,9 @@
     <exercise>
       <statement>
         <p>
-          Soit <m>x'=e^{-x}</m>. \begin{tasks}(2) \task Calculez et classifiez les points critiques. \task Calculez
-          <m>\displaystyle \lim_{t\to\infty} x(t)</m> étant donnée une condition initiale arbitraire. \end{tasks}
+          Soit <m>x'=e^{-x}</m>. <ol marker="a"><li> Calculez et classifiez les points critiques. </li>
+          <li> Calculez
+          <m>\displaystyle \lim_{t\to\infty} x(t)</m> étant donnée une condition initiale arbitraire. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -409,7 +422,8 @@
           l'équation <m>\frac{dx}{dt} = kx(M-x)</m>.
           Maintenant supposons que des poissons sont ajoutés à
           un taux constant de <m>A</m> poissons par unité
-          de temps. \begin{tasks}(2) \task Trouvez l'équations différentielle pour <m>x</m>. \task Quelle est la nouvelle population limite? \end{tasks}
+          de temps. <ol marker="a"><li> Trouvez l'équations différentielle pour <m>x</m>. </li>
+          <li> Quelle est la nouvelle population limite? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -423,9 +437,11 @@
       <statement>
         <p>
           Supposons que <m>\frac{dx}{dt} = (x-\alpha)(x-\beta)</m>,
-          où <m>\alpha \lt \beta</m> sont deux nombres. \begin{tasks} \task Calculez et classifiez les points critiques. \end{tasks} Pour b), c), d),
-          calculez <m>\displaystyle \lim_{t\to\infty} x(t)</m> en vous basant sur le diagramme de phase. \begin{tasks}[resume](3) \task <m>x(0) \lt \alpha</m>, \task
-          <m>\alpha \lt x(0) \lt \beta</m>, \task <m>\beta \lt x(0)</m>. \end{tasks}
+          où <m>\alpha \lt \beta</m> sont deux nombres. <ol marker="a"><li> Calculez et classifiez les points critiques. </li></ol> Pour b), c), d),
+          calculez <m>\displaystyle \lim_{t\to\infty} x(t)</m> en vous basant sur le diagramme de phase. <ol marker="a"><li> <m>x(0) \lt \alpha</m>, </li>
+          <li>
+          <m>\alpha \lt x(0) \lt \beta</m>, </li>
+          <li> <m>\beta \lt x(0)</m>. </li></ol>
         </p>
       </statement>
     </exercise>

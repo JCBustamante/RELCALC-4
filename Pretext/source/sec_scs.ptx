@@ -23,15 +23,12 @@
       <statement>
         <p>
           Prenez deux fonctions <m>f(t)</m> et <m>g(t)</m>, et définissez leur produit <m>h(t) = f(t)g(t)</m>.
-          <ol marker="a">
-            <li>Est-ce que <m>h(t)</m> est impaire ou paire? Supposez que l'une est paire et que l'autre est impaire.</li>
-            <li>Est-ce que <m>h(t)</m> est impaire ou paire? Supposez que les deux sont paires.</li>
-            <li>Est-ce que <m>h(t)</m> est impaire ou paire?</li>
-          </ol>
-          <!-- \begin{tasks} \task Supposez que <m>f(t)</m> et <m>g(t)</m> sont impaires.
-          Est-ce que <m>h(t)</m> est impaire ou paire? \task Supposez que l'une est paire et que l'autre est impaire.
-          Est-ce que <m>h(t)</m> est impaire ou paire? \task Supposez que les deux sont paires.
-          Est-ce que <m>h(t)</m> est impaire ou paire? \end{tasks} -->
+          <ol marker="a"><li> Supposez que <m>f(t)</m> et <m>g(t)</m> sont impaires.
+          Est-ce que <m>h(t)</m> est impaire ou paire? </li>
+          <li> Supposez que l'une est paire et que l'autre est impaire.
+          Est-ce que <m>h(t)</m> est impaire ou paire? </li>
+          <li> Supposez que les deux sont paires.
+          Est-ce que <m>h(t)</m> est impaire ou paire? </li></ol> -->
         </p>
       </statement>
     </exercise>
@@ -262,174 +259,8 @@
     <exercise>
       <statement>
         <p>
-          <ol marker="a">
-            <li>Calculez la dérivée de l'extension périodique paire de <m>f (t)</m> ci-dessus et vérifiez s'il y a des discontinuités de saut. Utilisez la définition réelle de <m>f (t)</m>, pas sa série cosinus !</li>
-            <li>Pourquoi est-ce que la dérivée de l'extension périodique paire de <m>f(t)</m> est l'extension périodique impaire de <m>f'(t)</m> ?</li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-  </subsection>
-  <subsection>
-    <title>Application</title>
-    <p>
-      La série de Fourier est liée aux problèmes à valeurs limites qu'on a étudiés plus tôt.
-      Voyons cette connexion dans une application.
-    </p>
-    <p>
-      Considérons le problème à valeurs limites pour <m>0 \lt  t \lt  L</m>,
-      <me>
-        x''(t) + \lambda\, x(t) = f(t)
-      </me>,
-      pour les <em>conditions aux frontières de Dirichlet<idx><h>conditions aux frontières de Dirichlet</h></idx>
-      </em> <m>x(0) = 0</m>, <m>x(L) = 0</m>.
-      L'alternative de Fredholm (<xref ref="thm_fredholmsimple"></xref>) dit que tant que <m>\lambda</m> n'est pas une valeur propre du problème homogène sous-jacent,
-      il existe une solution unique.
-      Les fonctions propres de ce problème de valeurs propres sont les fonctions <m>\sin \left( \frac{n \pi}{L} t \right)</m>.
-      Donc, pour trouver la solution,
-      on trouve d'abord la série sinus de Fourier pour <m>f (t)</m>.
-      On écrit <m>x</m> également sous forme de série sinus,
-      mais avec des coefficients inconnus.
-      On substitue la série à
-      <m>x</m> dans l'équation et l'on résout avec les coefficients inconnus.
-      Si l'on a la <em>condition aux
-      frontières de Neumann<idx><h>condition aux
-      frontières de Neumann</h></idx>
-      </em> <m>x'(0) = 0</m>, <m>x'(L) = 0</m>,
-      on suit la même procédure en utilisant la série cosinus.
-    </p>
-    <p>
-      Voyons comment cette méthode fonctionne avec des exemples.
-    </p>
-    <example>
-      <statement>
-        <p>
-          Prenons le problème à
-          valeurs limites pour <m>0 \lt  t \lt  1</m>
-          <me>
-            x''(t) + 2 x(t) = f(t)
-          </me>,
-          où <m>f(t) = t</m> pour <m>0 \lt  t \lt  1</m>, et satisfaisant aux conditions aux frontières de Dirichlet <m>x(0) = 0</m>,
-          <m>x(1)=0</m>.
-          On écrit <m>f(t)</m> comme une série sinus :
-          <me>
-            f(t) = \sum_{n=1}^\infty c_n \sin (n \pi t)
-          </me>.
-        </p>
-        <p>
-          On calcule
-          <me>
-            c_n = 2 \int_0^1 t \sin (n \pi t) \,dt = \frac{2 \, {(-1)}^{n+1}}{n \pi}
-          </me>.
-        </p>
-        <p>
-          On écrit <m>x(t)</m> comme
-          <me>
-            x(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)
-          </me>.
-        </p>
-        <p>
-          On insère et l'on obtient
-          <me>
-            \begin{split} x''(t) + 2 x(t) \amp  = \underbrace{ \sum_{n=1}^\infty - b_n n^2 \pi^2 \sin (n \pi t) }_{x''} \, + \, 2 \underbrace{ \sum_{n=1}^\infty b_n \sin (n \pi t) }_{x} \\ \amp  = \sum_{n=1}^\infty b_n (2 - n^2 \pi^2 ) \sin (n \pi t) \\ \amp  = f(t) = \sum_{n=1}^\infty  \frac{2\, {(-1)}^{n+1}}{n \pi} \sin (n \pi t) . \end{split}
-          </me>
-        </p>
-        <p>
-          Donc,
-          <me>
-            b_n (2 - n^2 \pi^2) = \frac{2\,{(-1)}^{n+1}}{n \pi}
-          </me>
-          ou
-          <me>
-            b_n = \frac{2\,{(-1)}^{n+1}}{n \pi (2 - n^2 \pi^2)}
-          </me>.
-        </p>
-        <p>
-          Puisque <m>2</m> n'est pas une valeur propre du problème,
-          on a que <m>2-n ^ 2 \ pi ^ 2</m> n'est pas nul pour tout <m>n</m> et qu'on peut résoudre pour <m>b_n</m>.
-          On a ainsi obtenu une série de Fourier pour la solution :
-          <me>
-            x(t) = \sum_{n=1}^\infty \frac{2\,{(-1)}^{n+1}}{n \pi \,(2 - n^2 \pi^2)} \sin (n \pi t)
-          </me>.
-        </p>
-        <p>
-          Regardons la <xref ref="bnd-dirich-graph_fig"></xref>
-          pour le graphe de la solution.
-          On note que,
-          puisque les fonctions propres satisfont aux conditions aux limites et que <m>x</m> s'écrit en fonction des conditions aux limites,
-          alors <m>x</m> satisfait aux conditions aux limites.
-        </p>
-        <figure xml:id="bnd-dirich-graph_fig">
-          <caption>Graphe de la solution de <m>x''+2x=t</m>, <m>x(0)=0</m>, <m>x(1)=0</m>.</caption>
-          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{bnd-dirich-graph} -->
-          <image source="bnd-dirich-graph"></image>
-        </figure>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p>
-          De même, traitons les conditions de Neumann.
-          Prenons le problème à valeurs limites pour <m>0 \lt  t \lt  1</m>
-          <me>
-            x''(t) + 2 x(t) = f(t)
-          </me>,
-          où <m>f(t) = t</m> pour <m>0 \lt  t \lt  1</m>,
-          mais maintenant satisfaisant aux conditions aux limites de Neumann <m>x'(0) = 0</m>,
-          <m>x'(1)=0</m>.
-          On écrit <m>f(t)</m> comme une série cosinus :
-          <me>
-            f(t) = \frac{c_0}{2} + \sum_{n=1}^\infty c_n \cos (n \pi t)
-          </me>,
-          où
-          <me>
-            c_0 = 2 \int_0^1 t \,dt = 1
-          </me>
-          et
-          <me>
-            c_n = 2 \int_0^1 t \cos (n \pi t) \,dt = \frac{2\bigl({(-1)}^n-1\bigr)}{\pi^2 n^2} = \begin{cases} \frac{-4}{\pi^2 n^2} \amp  \text{ si }  n \text{ est impair } \\ 0 \amp  \text{ si }  n \text{ est pair } . \end{cases}
-          </me>
-        </p>
-        <p>
-          On écrit <m>x(t)</m> comme une série cosinus :
-          <me>
-            x(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n \pi t)
-          </me>.
-        </p>
-        <p>
-          On insère et l'on obtient
-          <me>
-            \begin{split} x''(t) + 2 x(t) \amp  = \sum_{n=1}^\infty \Bigl[ - a_n n^2 \pi^2 \cos (n \pi t) \Bigr] + a_0 + 2 \sum_{n=1}^\infty \Bigl[ a_n \cos (n \pi t) \Bigr] \\ \amp  = a_0 + \sum_{n=1}^\infty a_n (2 - n^2 \pi^2 ) \cos (n \pi t) \\ \amp  = f(t) = \frac{1}{2} + \sum_{\substack{n=1\\n~\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos (n \pi t) . \end{split}
-          </me>
-        </p>
-        <p>
-          Donc, <m>a_0 = \frac{1}{2}</m>,
-          <m>a_n = 0</m> pour <m>n</m> pair (<m>n \geq 2</m>) et,
-          pour <m>n</m> impair, on a
-          <me>
-            a_n (2 - n^2 \pi^2) = \frac{-4}{\pi^2 n^2}
-          </me>
-          ou
-          <me>
-            a_n = \frac{-4}{n^2 \pi^2 (2 - n^2 \pi^2)}
-          </me>.
-        </p>
-        <p>
-          La série de Fourier pour la solution <m>x(t)</m> est
-          <me>
-            x(t) = \frac{1}{4} + \sum_{\substack{n=1\\n~\text{ impair } } }^\infty \frac{-4}{n^2 \pi^2 (2 - n^2 \pi^2)} \cos (n \pi t)
-          </me>.
-        </p>
-      </statement>
-    </example>
-  </subsection>
-  <subsection>
-    <title>Exercises</title>
-    <exercise>
-      <statement>
-        <p>
-          Prenez <m>f(t) = {(t-1)}^2</m> défini sur
-          <m>0 \leq t \leq 1</m>. \begin{tasks} \task Esquissez le graphique de l'extension périodique paire de <m>f</m>. \task Esquissez le graphique de l'extension périodique impaire de <m>f</m>. \end{tasks}
+          <ol marker="a"><li> Esquissez le graphique de l'extension périodique paire de <m>f</m>. </li>
+          <li> Esquissez le graphique de l'extension périodique impaire de <m>f</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -467,8 +298,9 @@
           <me>
             x''(t) + 4 x(t) = f(t)
           </me>,
-          où <m>f(t) = 1</m> sur <m>0 \lt  t \lt  1</m>. \begin{tasks} \task Résolvez pour les conditions de Dirichlet
-          <m>x(0)=0, x(1) = 0</m>. \task Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. \end{tasks}
+          où <m>f(t) = 1</m> sur <m>0 \lt  t \lt  1</m>. <ol marker="a"><li> Résolvez pour les conditions de Dirichlet
+          <m>x(0)=0, x(1) = 0</m>. </li>
+          <li> Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -480,8 +312,9 @@
             x''(t) + 9 x(t) = f(t)
           </me>,
           pour <m>f(t) = \sin (2\pi t)</m> on
-          <m>0 \lt  t \lt  1</m>. \begin{tasks} \task Résolvez pour les conditions de Dirichlet
-          <m>x(0)=0, x(1) = 0</m>. \task Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. \end{tasks}
+          <m>0 \lt  t \lt  1</m>. <ol marker="a"><li> Résolvez pour les conditions de Dirichlet
+          <m>x(0)=0, x(1) = 0</m>. </li>
+          <li> Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -512,7 +345,8 @@
       <statement>
         <p>
           Soit <m>f(t) = \nicefrac{t}{3}</m> sur
-          <m>0 \leq t \lt 3</m>. \begin{tasks} \task Trouvez la série de Fourier de l'extension périodique paire. \task Trouvez la série de Fourier de l'extension périodique impaire. \end{tasks}
+          <m>0 \leq t \lt 3</m>. <ol marker="a"><li> Trouvez la série de Fourier de l'extension périodique paire. </li>
+          <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -526,7 +360,8 @@
       <statement>
         <p>
           Soit <m>f(t) = \cos(2t)</m> sur
-          <m>0 \leq t \lt \pi</m>. \begin{tasks} \task Trouvez la série de Fourier de l'extension périodique paire. \task Trouvez la série de Fourier de l'extension périodique impaire. \end{tasks}
+          <m>0 \leq t \lt \pi</m>. <ol marker="a"><li> Trouvez la série de Fourier de l'extension périodique paire. </li>
+          <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -541,9 +376,10 @@
         <p>
           Soit <m>f(t)</m> définie sur <m>0 \leq t \lt 1</m>.
           Maintenant prenez la moyenne des deux extensions
-          <m>g(t) = \frac{F_{\text{ impaire } }(t)+ F_{\text{ paire } }(t)}{2}</m>. \begin{tasks}(2) \task Qu'est-ce que <m>g(t)</m> si
-          <m>0 \leq t \lt 1</m> (Justifiez!) \task Qu'est-ce que <m>g(t)</m> si
-          <m>-1 \lt t \lt 0</m> (Justifiez!) \end{tasks}
+          <m>g(t) = \frac{F_{\text{ impaire } }(t)+ F_{\text{ paire } }(t)}{2}</m>. <ol marker="a"><li> Qu'est-ce que <m>g(t)</m> si
+          <m>0 \leq t \lt 1</m> (Justifiez!) </li>
+          <li> Qu'est-ce que <m>g(t)</m> si
+          <m>-1 \lt t \lt 0</m> (Justifiez!) </li></ol>
         </p>
       </statement>
     </exercise>

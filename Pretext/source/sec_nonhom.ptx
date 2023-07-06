@@ -512,9 +512,11 @@
       <title>2</title>
       <statement>
         <p>
-          \begin{tasks} \task Utilisez la variation des paramètres pour trouver une solution particulière de
-          <m>y''-2y'+y = e^x</m>. \task Trouvez une solution particulière en utilisant les coefficients indéterminés. \task Est-ce que les deux solutions que vous avez trouvées sont les mêmes?
-          Vérifiez aussi <xref ref="exercise_diffvarparunder"></xref>. \end{tasks}
+          <ol marker="a"><li> Utilisez la variation des paramètres pour trouver une solution particulière de
+          <m>y''-2y'+y = e^x</m>. </li>
+          <li> Trouvez une solution particulière en utilisant les coefficients indéterminés. </li>
+          <li> Est-ce que les deux solutions que vous avez trouvées sont les mêmes?
+          Vérifiez aussi <xref ref="exercise_diffvarparunder"></xref>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -537,9 +539,11 @@
     <exercise xml:id="exercise_diffvarparunder">
       <statement>
         <p>
-          [2] \begin{tasks} \task Utilisez la variation des paramètres pour trouver une solution particulière de
-          <m>y''-y = e^x</m>. \task Trouvez une solution particulière en utilisant les coefficients indéterminés. \task Est-ce que les deux solutions que vous avez trouvées sont les mêmes?
-          Que se passe-t-il? \end{tasks}
+          [2] <ol marker="a"><li> Utilisez la variation des paramètres pour trouver une solution particulière de
+          <m>y''-y = e^x</m>. </li>
+          <li> Trouvez une solution particulière en utilisant les coefficients indéterminés. </li>
+          <li> Est-ce que les deux solutions que vous avez trouvées sont les mêmes?
+          Que se passe-t-il? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -558,8 +562,9 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Trouvez une solution particulière de
-          <m>y''+2y=e^x + x^3</m>. \task Trouvez une solution générale. \end{tasks}
+          <ol marker="a"><li> Trouvez une solution particulière de
+          <m>y''+2y=e^x + x^3</m>. </li>
+          <li> Trouvez une solution générale. </li></ol>
         </p>
       </statement>
     </exercise>

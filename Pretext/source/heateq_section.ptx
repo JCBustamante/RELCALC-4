@@ -735,12 +735,14 @@
         <p>
           Considérez un fil isolé
           aux deux extrémités, <m>L=1</m>, <m>k=1</m>,
-          et <m>u(x,0) = \cos^2(\pi x)</m>. \begin{tasks} \task Trouvez la solution de <m>u(x,t)</m>.
+          et <m>u(x,0) = \cos^2(\pi x)</m>. <ol marker="a"><li> Trouvez la solution de <m>u(x,t)</m>.
           Astuce : une identité
-          trigonométrique. \task Trouvez la température moyenne. \task Au départ,
+          trigonométrique. </li>
+          <li> Trouvez la température moyenne. </li>
+          <li> Au départ,
           la variation de température est de 1
           (le maximum moins le minimum).
-          Trouvez l'heure à laquelle la variation est <m>\nicefrac{1}{2}</m>. \end{tasks}
+          Trouvez l'heure à laquelle la variation est <m>\nicefrac{1}{2}</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -809,8 +811,10 @@
           Suppose that the temperature on the wire is fixed at <m>0</m> at the ends,
           <m>L=1</m>,
           <m>k=1</m>,
-          and <m>u(x,0) = 100\sin(2 \pi x)</m>. \begin{tasks} \task What is the temperature at
-          <m>x = \nicefrac{1}{2}</m> at any time. \task What is the maximum and the minimum temperature on the wire at <m>t=0</m>. \task At what time is the maximum temperature on the wire exactly one half of the initial maximum at <m>t=0</m>. \end{tasks}
+          and <m>u(x,0) = 100\sin(2 \pi x)</m>. <ol marker="a"><li> What is the temperature at
+          <m>x = \nicefrac{1}{2}</m> at any time. </li>
+          <li> What is the maximum and the minimum temperature on the wire at <m>t=0</m>. </li>
+          <li> At what time is the maximum temperature on the wire exactly one half of the initial maximum at <m>t=0</m>. </li></ol>
         </p>
       </statement>
     </exercise>

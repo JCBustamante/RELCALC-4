@@ -358,8 +358,10 @@
           la sortie de chaque lac est 500 litres par heure.
           Le premier lac contient 100 000 litres d'eau et le deuxième lac en contient 200 000.
           Un camion déverse \unit[500]{kg} d'une matière dangereuse.
-          On suppose que l'eau est bien brassée par le ruisseau. \begin{tasks} \task Trouvez la concentration de la matière dangereuse dans chacun des lacs,
-          en fonction du temps. \task À quel moment est-ce que la concentration dans le premier lac tombe en-dessous de \unit[0.001]{kg} par litre? \task À quel moment est-ce que la concentration dans le deuxième sera maximale? \end{tasks}
+          On suppose que l'eau est bien brassée par le ruisseau. <ol marker="a"><li> Trouvez la concentration de la matière dangereuse dans chacun des lacs,
+          en fonction du temps. </li>
+          <li> À quel moment est-ce que la concentration dans le premier lac tombe en-dessous de \unit[0.001]{kg} par litre? </li>
+          <li> À quel moment est-ce que la concentration dans le deuxième sera maximale? </li></ol>
         </p>
         <!-- TODO begin tasks -->
       </statement>
@@ -376,9 +378,10 @@
           Autrement dit,
           la température ambiante oscille en fonction du temps
           (par exemple,
-          varie entre le jour et la nuit). \begin{tasks} \task Trouvez la solution générale. \task Est-ce que les conditions initiales ont un impact sur le comportement à
+          varie entre le jour et la nuit). <ol marker="a"><li> Trouvez la solution générale. </li>
+          <li> Est-ce que les conditions initiales ont un impact sur le comportement à
           long terme de la solution?
-          Pourquoi ou pourquoi pas? \end{tasks}
+          Pourquoi ou pourquoi pas? </li></ol>
         </p>
         <!-- TODO begin tasks -->
       </statement>

@@ -564,9 +564,12 @@
     <exercise>
       <statement>
         <p>
-          Résolvez \begin{tasks}(2) \task
-          <m>\dfrac{dA}{dt} = -10 A, A(0)=5</m> \task <m>\dfrac{dH}{dx} = 3 H, H(0)=1</m> \task
-          <m>\dfrac{d^2y}{dx^2} = 4 y, y(0)=0, y'(0)=1</m> \task <m>\dfrac{d^2x}{dy^2} = -9 x, x(0)=1, x'(0)=0</m> \end{tasks}
+          Résolvez <ol marker="a"><li>
+          <m>\dfrac{dA}{dt} = -10 A, A(0)=5</m> </li>
+          <li> <m>\dfrac{dH}{dx} = 3 H, H(0)=1</m> </li>
+          <li>
+          <m>\dfrac{d^2y}{dx^2} = 4 y, y(0)=0, y'(0)=1</m> </li>
+          <li> <m>\dfrac{d^2x}{dy^2} = -9 x, x(0)=1, x'(0)=0</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -597,7 +600,10 @@
           (donc modèle de croissance exponentielle,
           comme les bactéries).
           Dénotons par <m>s</m> le salaire en millions de dollars,
-          et <m>t</m> le temps en années. \begin{tasks}(2) \task Trouvez <m>s(0)</m> et <m>s(1)</m>. \task Après combien d'années approximativement le salaire sera-t-il de 10 millions? \task Après combien d'années approximativement le salaire sera-t-il de 20 millions? \task Après combien d'années approximativement le salaire sera-t-il de 30 millions? \end{tasks}
+          et <m>t</m> le temps en années. <ol marker="a"><li> Trouvez <m>s(0)</m> et <m>s(1)</m>. </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 10 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 20 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 30 millions? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -677,10 +683,13 @@
     <exercise>
       <statement>
         <p>
-          Résolvez \begin{tasks}(2) \task
+          Résolvez <ol marker="a"><li>
           <m>\dfrac{dx}{dt} = -4x,
-          x(0)=9</m> \task <m>\dfrac{d^2x}{dt^2} = -4x,
-          x(0)=1, x'(0)=2</m> \task <m>\dfrac{dp}{dq} = 3 p, p(0)=4</m> \task <m>\dfrac{d^2T}{dx^2} = 4 T, T(0)=0, T'(0)=6</m> \end{tasks}
+          x(0)=9</m> </li>
+          <li> <m>\dfrac{d^2x}{dt^2} = -4x,
+          x(0)=1, x'(0)=2</m> </li>
+          <li> <m>\dfrac{dp}{dq} = 3 p, p(0)=4</m> </li>
+          <li> <m>\dfrac{d^2T}{dx^2} = 4 T, T(0)=0, T'(0)=6</m> </li></ol>
         </p>
       </statement>
     </exercise>

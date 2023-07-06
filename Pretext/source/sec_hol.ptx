@@ -435,7 +435,8 @@
       <statement>
         <p>
           Supposons que l'équation caractéristique de l'EDO soit
-          <m>{(r-1)}^2{(r-2)}^2 = 0</m>. \begin{tasks} \task Trouvez une telle équation différentielle. \task Trouvez la solution générale. \end{tasks}
+          <m>{(r-1)}^2{(r-2)}^2 = 0</m>. <ol marker="a"><li> Trouvez une telle équation différentielle. </li>
+          <li> Trouvez la solution générale. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -443,7 +444,8 @@
       <statement>
         <p>
           Supposons qu'une équation de quatrième ordre admet la solution
-          <m>y = 2 e^{4x} x \cos x</m>. \begin{tasks} \task Trouvez une telle équation. \task Trouvez les conditions initiales auxquelles la solution donnée satisfait. \end{tasks}
+          <m>y = 2 e^{4x} x \cos x</m>. <ol marker="a"><li> Trouvez une telle équation. </li>
+          <li> Trouvez les conditions initiales auxquelles la solution donnée satisfait. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -520,7 +522,9 @@
       <title>2</title>
       <statement>
         <p>
-          Supposons que l'équation caractéristique de troisième ordre d'une équation différentielle possède les racines : <m>\pm 2i</m> et 3. \begin{tasks} \task Quelle est l'équation caractéristique? \task Trouvez l'équation différentielle correspondante. \task Trouvez la solution générale. \end{tasks}
+          Supposons que l'équation caractéristique de troisième ordre d'une équation différentielle possède les racines : <m>\pm 2i</m> et 3. <ol marker="a"><li> Quelle est l'équation caractéristique? </li>
+          <li> Trouvez l'équation différentielle correspondante. </li>
+          <li> Trouvez la solution générale. </li></ol>
         </p>
       </statement>
     </exercise>

@@ -482,8 +482,10 @@
       <statement>
         <p>
           Given that <m>\langle \vec{v} , \vec{w} \rangle = 3</m> and
-          <m>\langle \vec{v} , \vec{u} \rangle = -1</m> compute \begin{tasks}(3) \task <m>\langle \vec{u} , 2 \vec{v} \rangle</m> \task
-          <m>\langle \vec{v} , 2 \vec{w} + 3 \vec{u} \rangle</m> \task <m>\langle \vec{w} + 3 \vec{u}, \vec{v} \rangle</m> \end{tasks}
+          <m>\langle \vec{v} , \vec{u} \rangle = -1</m> compute <ol marker="a"><li> <m>\langle \vec{u} , 2 \vec{v} \rangle</m> </li>
+          <li>
+          <m>\langle \vec{v} , 2 \vec{w} + 3 \vec{u} \rangle</m> </li>
+          <li> <m>\langle \vec{w} + 3 \vec{u}, \vec{v} \rangle</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -491,8 +493,10 @@
       <statement>
         <p>
           Suppose <m>\vec{v} = (1,1,-1)</m>.
-          Find \begin{tasks}(3) \task <m>\operatorname{proj}_{\vec{v}}\bigl( (1,0,0) \bigr)</m> \task
-          <m>\operatorname{proj}_{\vec{v}}\bigl( (1,2,3) \bigr)</m> \task <m>\operatorname{proj}_{\vec{v}}\bigl( (1,-1,0) \bigr)</m> \end{tasks}
+          Find <ol marker="a"><li> <m>\operatorname{proj}_{\vec{v}}\bigl( (1,0,0) \bigr)</m> </li>
+          <li>
+          <m>\operatorname{proj}_{\vec{v}}\bigl( (1,2,3) \bigr)</m> </li>
+          <li> <m>\operatorname{proj}_{\vec{v}}\bigl( (1,-1,0) \bigr)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -501,8 +505,11 @@
       <statement>
         <p>
           Consider the vectors <m>(1,2,3)</m>, <m>(-3,0,1)</m>,
-          <m>(1,-5,3)</m>. \begin{tasks}(2) \task Check that the vectors are linearly independent and so form a basis. \task Check that the vectors are mutually orthogonal,
-          and are therefore an orthogonal basis. \task Represent <m>(1,1,1)</m> as a linear combination of this basis. \task Make the basis orthonormal. \end{tasks}
+          <m>(1,-5,3)</m>. <ol marker="a"><li> Check that the vectors are linearly independent and so form a basis. </li>
+          <li> Check that the vectors are mutually orthogonal,
+          and are therefore an orthogonal basis. </li>
+          <li> Represent <m>(1,1,1)</m> as a linear combination of this basis. </li>
+          <li> Make the basis orthonormal. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -572,8 +579,10 @@
       <statement>
         <p>
           Given that <m>\langle \vec{v} , \vec{w} \rangle = 1</m> and <m>\langle \vec{v} , \vec{u} \rangle = -1</m> and
-          <m>\lVert \vec{v} \rVert = 3</m> and \begin{tasks}(3) \task <m>\langle 3 \vec{u} , 5 \vec{v} \rangle</m> \task
-          <m>\langle \vec{v} , 2 \vec{w} + 3 \vec{u} \rangle</m> \task <m>\langle \vec{w} + 3 \vec{v}, \vec{v} \rangle</m> \end{tasks}
+          <m>\lVert \vec{v} \rVert = 3</m> and <ol marker="a"><li> <m>\langle 3 \vec{u} , 5 \vec{v} \rangle</m> </li>
+          <li>
+          <m>\langle \vec{v} , 2 \vec{w} + 3 \vec{u} \rangle</m> </li>
+          <li> <m>\langle \vec{w} + 3 \vec{v}, \vec{v} \rangle</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -586,8 +595,10 @@
       <statement>
         <p>
           Suppose <m>\vec{v} = (1,0,-1)</m>.
-          Find \begin{tasks}(3) \task <m>\operatorname{proj}_{\vec{v}}\bigl( (0,2,1) \bigr)</m> \task
-          <m>\operatorname{proj}_{\vec{v}}\bigl( (1,0,1) \bigr)</m> \task <m>\operatorname{proj}_{\vec{v}}\bigl( (4,-1,0) \bigr)</m> \end{tasks}
+          Find <ol marker="a"><li> <m>\operatorname{proj}_{\vec{v}}\bigl( (0,2,1) \bigr)</m> </li>
+          <li>
+          <m>\operatorname{proj}_{\vec{v}}\bigl( (1,0,1) \bigr)</m> </li>
+          <li> <m>\operatorname{proj}_{\vec{v}}\bigl( (4,-1,0) \bigr)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -601,8 +612,10 @@
         <p>
           The vectors <m>(1,1,-1)</m>,
           <m>(2,-1,1)</m>, <m>(1,-5,3)</m> for an orthonormal basis.
-          Represent the following vectors in terms of this basis. \begin{tasks}(3) \task <m>(1,-8,4)</m> \task
-          <m>(5,-7,5)</m> \task <m>(0,-6,2)</m> \end{tasks}
+          Represent the following vectors in terms of this basis. <ol marker="a"><li> <m>(1,-8,4)</m> </li>
+          <li>
+          <m>(5,-7,5)</m> </li>
+          <li> <m>(0,-6,2)</m> </li></ol>
         </p>
       </statement>
     </exercise>

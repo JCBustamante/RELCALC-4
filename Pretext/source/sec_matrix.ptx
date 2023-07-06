@@ -781,7 +781,8 @@
         <p>
           Supposez que <m>a, b, c</m> sont des nombres non nuls,
           que <m>M=\left[ \begin{matrix}a \amp 0 \\ 0 \amp b \end{matrix} \right]</m> et
-          <m>N=\left[ \begin{matrix}a \amp 0 \amp 0 \\ 0 \amp b \amp 0 \\ 0 \amp 0 \amp c \end{matrix} \right]</m>. \begin{tasks}(2) \task Calculez <m>M^{-1}</m>. \task Calculez <m>N^{-1}</m>. \end{tasks}
+          <m>N=\left[ \begin{matrix}a \amp 0 \amp 0 \\ 0 \amp b \amp 0 \\ 0 \amp 0 \amp c \end{matrix} \right]</m>. <ol marker="a"><li> Calculez <m>M^{-1}</m>. </li>
+          <li> Calculez <m>N^{-1}</m>. </li></ol>
         </p>
       </statement>
     </exercise>

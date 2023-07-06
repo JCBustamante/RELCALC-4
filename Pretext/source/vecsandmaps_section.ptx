@@ -599,8 +599,10 @@
     <exercise>
       <statement>
         <p>
-          On a piece of graph paper draw the vectors: \begin{tasks}(3) \task <m>\begin{bmatrix}2 \\ 5 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}-2 \\ -4 \end{bmatrix}</m> \task <m>(3,-4)</m> \end{tasks}
+          On a piece of graph paper draw the vectors: <ol marker="a"><li> <m>\begin{bmatrix}2 \\ 5 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}-2 \\ -4 \end{bmatrix}</m> </li>
+          <li> <m>(3,-4)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -609,7 +611,9 @@
         <p>
           On a piece of graph paper draw the vector <m>(1,2)</m> starting at
           (based at)
-          the given point: \begin{tasks}(3) \task based at <m>(0,0)</m> \task based at <m>(1,2)</m> \task based at <m>(0,-1)</m> \end{tasks}
+          the given point: <ol marker="a"><li> based at <m>(0,0)</m> </li>
+          <li> based at <m>(1,2)</m> </li>
+          <li> based at <m>(0,-1)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -617,34 +621,45 @@
       <statement>
         <p>
           On a piece of graph paper draw the following operations.
-          Draw and label the vectors involved in the operations as well as the result: \begin{tasks}(3) \task <m>\begin{bmatrix}1 \\ -4 \end{bmatrix} + \begin{bmatrix}2 \\ 3 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}-3 \\ 2 \end{bmatrix} - \begin{bmatrix}1 \\ 3 \end{bmatrix}</m> \task <m>3\begin{bmatrix}2 \\ 1 \end{bmatrix}</m> \end{tasks}
+          Draw and label the vectors involved in the operations as well as the result: <ol marker="a"><li> <m>\begin{bmatrix}1 \\ -4 \end{bmatrix} + \begin{bmatrix}2 \\ 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}-3 \\ 2 \end{bmatrix} - \begin{bmatrix}1 \\ 3 \end{bmatrix}</m> </li>
+          <li> <m>3\begin{bmatrix}2 \\ 1 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Compute the magnitude of \begin{tasks}(3) \task <m>\begin{bmatrix}7 \\ 2 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}-2 \\ 3 \\ 1 \end{bmatrix}</m> \task <m>(1,3,-4)</m> \end{tasks}
+          Compute the magnitude of <ol marker="a"><li> <m>\begin{bmatrix}7 \\ 2 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}-2 \\ 3 \\ 1 \end{bmatrix}</m> </li>
+          <li> <m>(1,3,-4)</m> </li></ol>
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Compute \begin{tasks}(3) \task
-          <m>\begin{bmatrix}2 \\ 3 \end{bmatrix} + \begin{bmatrix}7 \\ -8 \end{bmatrix}</m> \task <m>\begin{bmatrix}-2 \\ 3 \end{bmatrix} - \begin{bmatrix}6 \\ -4 \end{bmatrix}</m> \task
-          <m>-\begin{bmatrix}-3 \\ 2 \end{bmatrix}</m> \task <m>4\begin{bmatrix}-1 \\ 5 \end{bmatrix}</m> \task
-          <m>5\begin{bmatrix}1 \\ 0 \end{bmatrix} + 9 \begin{bmatrix}0 \\ 1 \end{bmatrix}</m> \task <m>3\begin{bmatrix}1 \\ -8 \end{bmatrix} - 2 \begin{bmatrix}3 \\ -1 \end{bmatrix}</m> \end{tasks}
+          Compute <ol marker="a"><li>
+          <m>\begin{bmatrix}2 \\ 3 \end{bmatrix} + \begin{bmatrix}7 \\ -8 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}-2 \\ 3 \end{bmatrix} - \begin{bmatrix}6 \\ -4 \end{bmatrix}</m> </li>
+          <li>
+          <m>-\begin{bmatrix}-3 \\ 2 \end{bmatrix}</m> </li>
+          <li> <m>4\begin{bmatrix}-1 \\ 5 \end{bmatrix}</m> </li>
+          <li>
+          <m>5\begin{bmatrix}1 \\ 0 \end{bmatrix} + 9 \begin{bmatrix}0 \\ 1 \end{bmatrix}</m> </li>
+          <li> <m>3\begin{bmatrix}1 \\ -8 \end{bmatrix} - 2 \begin{bmatrix}3 \\ -1 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Find the unit vector in the direction of the given vector \begin{tasks}(3) \task <m>\begin{bmatrix}1 \\ -3 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}2 \\ 1 \\ -1 \end{bmatrix}</m> \task <m>(3,1,-2)</m> \end{tasks}
+          Find the unit vector in the direction of the given vector <ol marker="a"><li> <m>\begin{bmatrix}1 \\ -3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \\ 1 \\ -1 \end{bmatrix}</m> </li>
+          <li> <m>(3,1,-2)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -668,10 +683,15 @@
     <exercise>
       <statement>
         <p>
-          If the magnitude of <m>\vec{x}</m> is 4, what is the magnitude of \begin{tasks}(6) \task
-          <m>0\vec{x}</m> \task <m>3\vec{x}</m> \task
-          <m>-\vec{x}</m> \task <m>-4\vec{x}</m> \task
-          <m>\vec{x}+\vec{x}</m> \task <m>\vec{x}-\vec{x}</m> \end{tasks}
+          If the magnitude of <m>\vec{x}</m> is 4, what is the magnitude of <ol marker="a"><li>
+          <m>0\vec{x}</m> </li>
+          <li> <m>3\vec{x}</m> </li>
+          <li>
+          <m>-\vec{x}</m> </li>
+          <li> <m>-4\vec{x}</m> </li>
+          <li>
+          <m>\vec{x}+\vec{x}</m> </li>
+          <li> <m>\vec{x}-\vec{x}</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -679,7 +699,9 @@
       <statement>
         <p>
           Suppose a linear mapping <m>F \colon {\mathbb R}^2 \to {\mathbb R}^2</m> takes <m>(1,0)</m> to <m>(2,-1)</m> and it takes <m>(0,1)</m> to <m>(3,3)</m>.
-          Where does it take \begin{tasks}(3) \task <m>(1,1)</m> \task <m>(2,0)</m> \task <m>(2,-1)</m> \end{tasks}
+          Where does it take <ol marker="a"><li> <m>(1,1)</m> </li>
+          <li> <m>(2,0)</m> </li>
+          <li> <m>(2,-1)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -718,8 +740,10 @@
     <exercise>
       <statement>
         <p>
-          Compute the magnitude of \begin{tasks}(3) \task <m>\begin{bmatrix}1 \\ 3 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}2 \\ 3 \\ -1 \end{bmatrix}</m> \task <m>(-2,1,-2)</m> \end{tasks}
+          Compute the magnitude of <ol marker="a"><li> <m>\begin{bmatrix}1 \\ 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \\ 3 \\ -1 \end{bmatrix}</m> </li>
+          <li> <m>(-2,1,-2)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -731,8 +755,10 @@
     <exercise>
       <statement>
         <p>
-          Find the unit vector in the direction of the given vector \begin{tasks}(3) \task <m>\begin{bmatrix}-1 \\ 1 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}1 \\ -1 \\ 2 \end{bmatrix}</m> \task <m>(2,-5,2)</m> \end{tasks}
+          Find the unit vector in the direction of the given vector <ol marker="a"><li> <m>\begin{bmatrix}-1 \\ 1 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}1 \\ -1 \\ 2 \end{bmatrix}</m> </li>
+          <li> <m>(2,-5,2)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -746,10 +772,15 @@
       <title>2</title>
       <statement>
         <p>
-          Compute \begin{tasks}(3) \task
-          <m>\begin{bmatrix}3 \\ 1 \end{bmatrix} + \begin{bmatrix}6 \\ -3 \end{bmatrix}</m> \task <m>\begin{bmatrix}-1 \\ 2 \end{bmatrix} - \begin{bmatrix}2 \\ -1 \end{bmatrix}</m> \task
-          <m>-\begin{bmatrix}-5 \\ 3 \end{bmatrix}</m> \task <m>2\begin{bmatrix}-2 \\ 4 \end{bmatrix}</m> \task
-          <m>3\begin{bmatrix}1 \\ 0 \end{bmatrix} + 7 \begin{bmatrix}0 \\ 1 \end{bmatrix}</m> \task <m>2\begin{bmatrix}2 \\ -3 \end{bmatrix} - 6 \begin{bmatrix}2 \\ -1 \end{bmatrix}</m> \end{tasks}
+          Compute <ol marker="a"><li>
+          <m>\begin{bmatrix}3 \\ 1 \end{bmatrix} + \begin{bmatrix}6 \\ -3 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}-1 \\ 2 \end{bmatrix} - \begin{bmatrix}2 \\ -1 \end{bmatrix}</m> </li>
+          <li>
+          <m>-\begin{bmatrix}-5 \\ 3 \end{bmatrix}</m> </li>
+          <li> <m>2\begin{bmatrix}-2 \\ 4 \end{bmatrix}</m> </li>
+          <li>
+          <m>3\begin{bmatrix}1 \\ 0 \end{bmatrix} + 7 \begin{bmatrix}0 \\ 1 \end{bmatrix}</m> </li>
+          <li> <m>2\begin{bmatrix}2 \\ -3 \end{bmatrix} - 6 \begin{bmatrix}2 \\ -1 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -761,8 +792,10 @@
     <exercise>
       <statement>
         <p>
-          If the magnitude of <m>\vec{x}</m> is 5, what is the magnitude of \begin{tasks}(3) \task <m>4\vec{x}</m> \task
-          <m>-2\vec{x}</m> \task <m>-4\vec{x}</m> \end{tasks}
+          If the magnitude of <m>\vec{x}</m> is 5, what is the magnitude of <ol marker="a"><li> <m>4\vec{x}</m> </li>
+          <li>
+          <m>-2\vec{x}</m> </li>
+          <li> <m>-4\vec{x}</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -775,7 +808,9 @@
       <statement>
         <p>
           Suppose a linear mapping <m>F \colon {\mathbb R}^2 \to {\mathbb R}^2</m> takes <m>(1,0)</m> to <m>(1,-1)</m> and it takes <m>(0,1)</m> to <m>(2,0)</m>.
-          Where does it take \begin{tasks}(3) \task <m>(1,1)</m> \task <m>(0,2)</m> \task <m>(1,-1)</m> \end{tasks}
+          Where does it take <ol marker="a"><li> <m>(1,1)</m> </li>
+          <li> <m>(0,2)</m> </li>
+          <li> <m>(1,-1)</m> </li></ol>
         </p>
       </statement>
     </exercise>

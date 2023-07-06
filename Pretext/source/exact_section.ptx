@@ -479,9 +479,12 @@
       <statement>
         <p>
           Résolvez les équations exactes suivantes,
-          en laissant la solution sous forme implicite. \begin{tasks}(2) \task
-          <m>(2 xy + x^2) \, dx + (x^2+y^2+1) \, dy = 0</m> \task <m>x^5 + y^5 \frac{dy}{dx} = 0</m> \task
-          <m>e^x+y^3 + 3xy^2 \frac{dy}{dx} = 0</m> \task <m>(x+y)\cos(x)+\sin(x) + \sin(x)y' = 0</m> \end{tasks}
+          en laissant la solution sous forme implicite. <ol marker="a"><li>
+          <m>(2 xy + x^2) \, dx + (x^2+y^2+1) \, dy = 0</m> </li>
+          <li> <m>x^5 + y^5 \frac{dy}{dx} = 0</m> </li>
+          <li>
+          <m>e^x+y^3 + 3xy^2 \frac{dy}{dx} = 0</m> </li>
+          <li> <m>(x+y)\cos(x)+\sin(x) + \sin(x)y' = 0</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -489,7 +492,8 @@
       <statement>
         <p>
           Supposons qu'on a une équation différentielle de la forme suivante :
-          <m>f(x) + g(y) \frac{dy}{dx} = 0</m>. \begin{tasks} \task Montrez que l'équation est exacte. \task Trouvez une expression pour le potentiel en fonction de <m>f</m> et <m>g</m>. \end{tasks}
+          <m>f(x) + g(y) \frac{dy}{dx} = 0</m>. <ol marker="a"><li> Montrez que l'équation est exacte. </li>
+          <li> Trouvez une expression pour le potentiel en fonction de <m>f</m> et <m>g</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -497,8 +501,9 @@
       <statement>
         <p>
           Supposons qu'on a l'équation suivante :
-          <m>f(x) \, dx - dy = 0</m>. \begin{tasks} \task L'équation est-elle exacte? \task Exprimez la solution générale à
-          l'aide d'une intégrale définie. \end{tasks}
+          <m>f(x) \, dx - dy = 0</m>. <ol marker="a"><li> L'équation est-elle exacte? </li>
+          <li> Exprimez la solution générale à
+          l'aide d'une intégrale définie. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -506,13 +511,14 @@
       <statement>
         <p>
           Trouvez une fonction potentielle <m>F(x,y)</m> pour l'équation exacte
-          <m>\frac{1+xy}{x}\, dx + \bigl(\nicefrac{1}{y} + x \bigr) \, dy = 0</m> de deux manières différentes. \begin{tasks} \task Intégrez <m>M</m> par rapport à <m>x</m>,
+          <m>\frac{1+xy}{x}\, dx + \bigl(\nicefrac{1}{y} + x \bigr) \, dy = 0</m> de deux manières différentes. <ol marker="a"><li> Intégrez <m>M</m> par rapport à <m>x</m>,
           dérivez par rapport à
           <m>y</m> et mettez le résultat égal à
-          <m>N</m>. \task Intégrez <m>N</m> par rapport à
+          <m>N</m>. </li>
+          <li> Intégrez <m>N</m> par rapport à
           <m>y</m>, dérivez par rapport à
           <m>x</m> et mettez le résultat égal à
-          <m>M</m>. \end{tasks}
+          <m>M</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -521,14 +527,16 @@
         <p>
           Une fonction <m>u(x,y)</m> est appelée une <em>fonction harmonique
               <idx><h>fonction harmonique</h></idx>
-          </em> si <m>u_{xx} + u_{yy} = 0</m>. \begin{tasks} \task Montrez que
+          </em> si <m>u_{xx} + u_{yy} = 0</m>. <ol marker="a"><li> Montrez que
           <m>-u_y \, dx + u_x \, dy = 0</m> est une équation exacte.
           Par conséquent, il existe
           (au moins localement)
           une fonction appelée la <em>conjuguée harmonique<idx><h>conjuguée harmonique</h></idx>
           </em>, <m>v(x,y)</m>, telle que <m>v_x = -u_y</m> et
-          <m>v_y = u_x</m>. \end{tasks} Montrez que les <m>u</m> suivantes sont harmoniques et trouvez leur conjuguée harmonique <m>v</m> : \begin{tasks}[resume](3) \task <m>u = 2xy</m> \task
-          <m>u = e^x \cos y</m> \task <m>u = x^3-3xy^2</m> \end{tasks}
+          <m>v_y = u_x</m>. </li></ol> Montrez que les <m>u</m> suivantes sont harmoniques et trouvez leur conjuguée harmonique <m>v</m> : <ol marker="a"><li> <m>u = 2xy</m> </li>
+          <li>
+          <m>u = e^x \cos y</m> </li>
+          <li> <m>u = x^3-3xy^2</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -536,9 +544,12 @@
       <statement>
         <p>
           Résolvez les équations exactes suivantes,
-          en laissant la solution sous forme implicite : \begin{tasks}(2) \task
-          <m>\cos(x)+ye^{xy} + xe^{xy} y' = 0</m> \task <m>(2x+y)\, dx + (x-4y) \, dy = 0</m> \task
-          <m>e^x + e^y \frac{dy}{dx} = 0</m> \task <m>(3x^2+3y)\,dx + (3y^2+3x)\, dy = 0</m> \end{tasks}
+          en laissant la solution sous forme implicite : <ol marker="a"><li>
+          <m>\cos(x)+ye^{xy} + xe^{xy} y' = 0</m> </li>
+          <li> <m>(2x+y)\, dx + (x-4y) \, dy = 0</m> </li>
+          <li>
+          <m>e^x + e^y \frac{dy}{dx} = 0</m> </li>
+          <li> <m>(3x^2+3y)\,dx + (3y^2+3x)\, dy = 0</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -552,10 +563,11 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Montrez que toute équation séparable
+          <ol marker="a"><li> Montrez que toute équation séparable
           <m>y' = f(x)g(y)</m> peut être écrite sous forme exacte,
-          et vérifiez qu'elle est bien exacte. \task Utilisez ceci pour écrire <m>y' = xy</m> comme une équation exacte,
-          résolvez l'équation et vérifiez que la solution obtenue est la même que dans l'<xref ref="example_yprimeisxy"></xref>. \end{tasks}
+          et vérifiez qu'elle est bien exacte. </li>
+          <li> Utilisez ceci pour écrire <m>y' = xy</m> comme une équation exacte,
+          résolvez l'équation et vérifiez que la solution obtenue est la même que dans l'<xref ref="example_yprimeisxy"></xref>. </li></ol>
         </p>
       </statement>
     </exercise>

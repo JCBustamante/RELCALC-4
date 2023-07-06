@@ -444,8 +444,9 @@
           <me>
             f(t) = \begin{cases} 0 \amp  \text{ si }  \; {-1} \lt  t \leq 0 , \\ t \amp  \text{ si }  \; 0 \lt  t \leq  1 \end{cases}
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Écrivez la série explicitement jusqu'à
-          la troisième harmonique. \end{tasks}
+          prolongée périodiquement. <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Écrivez la série explicitement jusqu'à
+          la troisième harmonique. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -459,8 +460,9 @@
           prolongée périodiquement.
         </p>
         <p>
-          \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Écrivez la série explicitement jusqu'à
-          la troisième harmonique. \end{tasks}
+          <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Écrivez la série explicitement jusqu'à
+          la troisième harmonique. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -472,8 +474,9 @@
             f(t) = \begin{cases} \frac{-t}{10} \amp  \text{ si }  \; {-10} \lt  t \leq 0 , \\ \frac{t}{10} \amp  \text{ si }  \; 0 \lt  t \leq  10 , \end{cases}
           </me>
           prolongée périodiquement
-          (la période est 20). \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Écrivez la série explicitement jusqu'à
-          la troisième harmonique. \end{tasks}
+          (la période est 20). <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Écrivez la série explicitement jusqu'à
+          la troisième harmonique. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -504,8 +507,9 @@
           <me>
             f(t) = \begin{cases} 0 \amp  \text{ si }  \; {-2} \lt  t \leq 0, \\ t \amp  \text{ si }  \; 0 \lt  t \leq 1, \\ -t+2 \amp  \text{ si }  \; 1 \lt  t \leq 2, \end{cases}
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Écrivez la série explicitement jusqu'à
-          la troisième harmonique. \end{tasks}
+          prolongée périodiquement. <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Écrivez la série explicitement jusqu'à
+          la troisième harmonique. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -516,9 +520,11 @@
           <me>
             f(t) = e^t \qquad \text{ pour }  \; {-1} \lt  t \leq 1
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Écrivez la série explicitement jusqu'à
-          la troisième harmonique. \task Vers quoi la série converge-t-elle à
-          <m>t=1</m>? \end{tasks}
+          prolongée périodiquement. <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Écrivez la série explicitement jusqu'à
+          la troisième harmonique. </li>
+          <li> Vers quoi la série converge-t-elle à
+          <m>t=1</m>? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -529,8 +535,10 @@
           <me>
             f(t) = t^2 \qquad \text{ pour }  \; {-1} \lt  t \leq 1
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task En remplaçant <m>t=0</m>, évaluez
-          <m>\displaystyle \sum_{n=1}^\infty \frac{{(-1)}^n}{n^2} = 1 - \frac{1}{4} + \frac{1}{9} - \cdots</m>. \task Maintenant évaluez <m>\displaystyle \sum_{n=1}^\infty \frac{1}{n^2} = 1 + \frac{1}{4} + \frac{1}{9} + \cdots</m>. \end{tasks}
+          prolongée périodiquement. <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> En remplaçant <m>t=0</m>, évaluez
+          <m>\displaystyle \sum_{n=1}^\infty \frac{{(-1)}^n}{n^2} = 1 - \frac{1}{4} + \frac{1}{9} - \cdots</m>. </li>
+          <li> Maintenant évaluez <m>\displaystyle \sum_{n=1}^\infty \frac{1}{n^2} = 1 + \frac{1}{4} + \frac{1}{9} + \cdots</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -543,7 +551,12 @@
           </me>
           prolongée périodiquement.
           Supposez que <m>F(t)</m> est la fonction donnée par la série de Fourier de <m>f</m>.
-          Sans calculer la série de Fourier évaluez \begin{tasks}(3) \task <m>F(2)</m> \task <m>F(-2)</m> \task <m>F(4)</m> \task <m>F(-4)</m> \task <m>F(3)</m> \task <m>F(-9)</m> \end{tasks}
+          Sans calculer la série de Fourier évaluez <ol marker="a"><li> <m>F(2)</m> </li>
+          <li> <m>F(-2)</m> </li>
+          <li> <m>F(4)</m> </li>
+          <li> <m>F(-4)</m> </li>
+          <li> <m>F(3)</m> </li>
+          <li> <m>F(-9)</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -554,8 +567,9 @@
           <me>
             f(t) = t^2 \qquad \text{ pour }  \; {-2} \lt  t \leq 2
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Écrivez la série explicitement jusqu'à
-          la troisième harmonique. \end{tasks}
+          prolongée périodiquement. <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Écrivez la série explicitement jusqu'à
+          la troisième harmonique. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -572,8 +586,9 @@
           <me>
             f(t) = t \qquad \text{ pour }  \; {-\lambda} \lt  t \leq \lambda \; \text{ (pour un certain }  \lambda > 0 \text{)}
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Écrivez la série explicitement jusqu'à
-          la troisième harmonique. \end{tasks}
+          prolongée périodiquement. <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Écrivez la série explicitement jusqu'à
+          la troisième harmonique. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -610,7 +625,8 @@
           </me>.
         </p>
         <p>
-          \begin{tasks} \task Trouvez la primitive. \task La primitive est-elle périodique? \end{tasks}
+          <ol marker="a"><li> Trouvez la primitive. </li>
+          <li> La primitive est-elle périodique? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -626,9 +642,11 @@
           <me>
             f(t) = \nicefrac{t}{2} \qquad \text{ pour }  \; {-\pi} \lt  t \lt  \pi
           </me>
-          prolongée périodiquement. \begin{tasks} \task Calculez la série de Fourier pour <m>f(t)</m>. \task Remplacez
+          prolongée périodiquement. <ol marker="a"><li> Calculez la série de Fourier pour <m>f(t)</m>. </li>
+          <li> Remplacez
           <m>t=\nicefrac{\pi}{2}</m> pour trouver une représentation en série pour
-          <m>\nicefrac{\pi}{4}</m>. \task En utilisant les 4 premiers termes du résultat de la partie b) approximez <m>\nicefrac{\pi}{4}</m>. \end{tasks}
+          <m>\nicefrac{\pi}{4}</m>. </li>
+          <li> En utilisant les 4 premiers termes du résultat de la partie b) approximez <m>\nicefrac{\pi}{4}</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -653,7 +671,12 @@
           </me>
           prolongée périodiquement.
           Supposez que <m>F(t)</m> soit la fonction donnée par la série de Fourier de <m>f</m>.
-          Sans calculer la série de Fourier évaluez \begin{tasks}(3) \task <m>F(0)</m> \task <m>F(-1)</m> \task <m>F(1)</m> \task <m>F(-2)</m> \task <m>F(4)</m> \task <m>F(-8)</m> \end{tasks}
+          Sans calculer la série de Fourier évaluez <ol marker="a"><li> <m>F(0)</m> </li>
+          <li> <m>F(-1)</m> </li>
+          <li> <m>F(1)</m> </li>
+          <li> <m>F(-2)</m> </li>
+          <li> <m>F(4)</m> </li>
+          <li> <m>F(-8)</m> </li></ol>
         </p>
       </statement>
     </exercise>

@@ -541,8 +541,9 @@
           où la variable indépendante <m>t</m> est le temps,
           mesuré
           en mois. À <m>t=0</m>,
-          l'île contient 40 lapins. \begin{tasks} \task Résolvez l'équation différentielle avec condition initiale. \task Combien de lapins habitent l'île après 1 mois, 5 mois, 10 mois, 15 mois?
-          Arrondissez à l'entier le plus proche. \end{tasks}
+          l'île contient 40 lapins. <ol marker="a"><li> Résolvez l'équation différentielle avec condition initiale. </li>
+          <li> Combien de lapins habitent l'île après 1 mois, 5 mois, 10 mois, 15 mois?
+          Arrondissez à l'entier le plus proche. </li></ol>
         </p>
       </statement>
     </exercise>

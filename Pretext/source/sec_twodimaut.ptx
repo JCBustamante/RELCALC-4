@@ -278,9 +278,11 @@
       <statement>
         <p>
           Prenez l'équation <m>m x'' + c x' + kx = 0</m> avec <m>m > 0</m>,
-          <m>c \geq 0</m> et <m>k > 0</m> comme système masse-ressort. \begin{tasks} \task Transformez-la en système d'équations de premier ordre. \task Pour quels
+          <m>c \geq 0</m> et <m>k > 0</m> comme système masse-ressort. <ol marker="a"><li> Transformez-la en système d'équations de premier ordre. </li>
+          <li> Pour quels
           <m>m,
-          c</m> et <m>k</m> obtenez-vous quel comportement? \task Pouvez-vous expliquer intuitivement pourquoi vous n'obtenez pas tous les types de comportements? \end{tasks}
+          c</m> et <m>k</m> obtenez-vous quel comportement? </li>
+          <li> Pouvez-vous expliquer intuitivement pourquoi vous n'obtenez pas tous les types de comportements? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -326,12 +328,16 @@
     <exercise>
       <statement>
         <p>
-          Décrivez le comportement des systèmes suivants sans les résoudre : \begin{tasks}(2) \task <m>x' = x + y</m>,
-          <m>y' = x-y</m>. \task <m>x_1' = x_1 + x_2</m>,
-          <m>x_2' = 2 x_2</m>. \task <m>x_1' = -2x_2</m>,
-          <m>x_2' = 2 x_1</m>. \task <m>x' = x + 3y</m>,
-          <m>y' = -2x-4y</m>. \task <m>x' = x - 4y</m>,
-          <m>y' = -4x+y</m>. \end{tasks}
+          Décrivez le comportement des systèmes suivants sans les résoudre : <ol marker="a"><li> <m>x' = x + y</m>,
+          <m>y' = x-y</m>. </li>
+          <li> <m>x_1' = x_1 + x_2</m>,
+          <m>x_2' = 2 x_2</m>. </li>
+          <li> <m>x_1' = -2x_2</m>,
+          <m>x_2' = 2 x_1</m>. </li>
+          <li> <m>x' = x + 3y</m>,
+          <m>y' = -2x-4y</m>. </li>
+          <li> <m>x' = x - 4y</m>,
+          <m>y' = -4x+y</m>. </li></ol>
         </p>
       </statement>
     </exercise>

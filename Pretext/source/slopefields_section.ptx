@@ -316,7 +316,9 @@
           Associez les équations suivantes <m>y'=1-x</m>,
           <m>y'=x-2y</m>, <m>y' = x(1-y)</m> à
           leurs champs de directions respectifs.
-          Justifiez votre réponse. \begin{tasks}(3) \task <image width="32%" source="images/yprimex1minusyslope.png"/> \task <image width="32%" source="images/yprime1minusxslope.png"/> \task <image width="32%" source="images/yprimexminus2yslope.png"/> \end{tasks}
+          Justifiez votre réponse. <ol marker="a"><li> <image width="32%" source="images/yprimex1minusyslope.png"/> </li>
+          <li> <image width="32%" source="images/yprime1minusxslope.png"/> </li>
+          <li> <image width="32%" source="images/yprimexminus2yslope.png"/> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -337,7 +339,8 @@
       <statement>
         <p>
           Soit <m>(y-x)y' = 0</m>,
-          <m>y(0) = 0</m>. \begin{tasks} \task Trouvez deux solutions distinctes. \task Expliquez pourquoi ceci ne contredit pas le théorème de Picard. \end{tasks}
+          <m>y(0) = 0</m>. <ol marker="a"><li> Trouvez deux solutions distinctes. </li>
+          <li> Expliquez pourquoi ceci ne contredit pas le théorème de Picard. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -348,9 +351,12 @@
           Dites ce que vous savez à
           propos de son champ de directions,
           et dessinez un exemple, si vous avez l'information suivante à
-          propos de <m>f(x,y)</m> : \begin{tasks}(2) \task <m>f</m> ne dépend pas de <m>y</m>. \task <m>f</m> ne dépend pas de <m>x</m>. \task
-          <m>f(t,t) = 0</m> pour toute valeur <m>t</m>. \task <m>f(x,0) = 0</m> et
-          <m>f(x,1) = 1</m> pour tout <m>x</m>. \end{tasks}
+          propos de <m>f(x,y)</m> : <ol marker="a"><li> <m>f</m> ne dépend pas de <m>y</m>. </li>
+          <li> <m>f</m> ne dépend pas de <m>x</m>. </li>
+          <li>
+          <m>f(t,t) = 0</m> pour toute valeur <m>t</m>. </li>
+          <li> <m>f(x,0) = 0</m> et
+          <m>f(x,1) = 1</m> pour tout <m>x</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -378,14 +384,16 @@
       <statement>
         <p>
           [2] Soit <m>y' = f(x,y)</m> tel que <m>f(x,1) = 0</m> pour tout <m>x</m>,
-          <m>f</m> est continue et <m>\frac{\partial f}{\partial y}</m> existe et est continue pour tous <m>x</m> et <m>y</m>. \begin{tasks} \task Devinez une solution pour la condition initiale
-          <m>y(0) = 1</m>. \task Les graphes de deux solutions ayant des conditions initiales différentes peuvent-elles s'intersecter? \task En supposant que
+          <m>f</m> est continue et <m>\frac{\partial f}{\partial y}</m> existe et est continue pour tous <m>x</m> et <m>y</m>. <ol marker="a"><li> Devinez une solution pour la condition initiale
+          <m>y(0) = 1</m>. </li>
+          <li> Les graphes de deux solutions ayant des conditions initiales différentes peuvent-elles s'intersecter? </li>
+          <li> En supposant que
           <m>y(0) = 0</m>, que peut-on dire à
           propos de la solution?
           En particulier, peut-on avoir
           <m>y(x) > 1</m> pour un certain <m>x</m>?
           Peut-on avoir <m>y(x) = 1</m> pour un certain <m>x</m>?
-          Pourquoi ou pourquoi pas? \end{tasks}
+          Pourquoi ou pourquoi pas? </li></ol>
         </p>
       </statement>
     </exercise>
@@ -445,7 +453,9 @@
           <m>y'=\sin x</m>, <m>y'=\cos y</m>,
           <m>y' = y\cos(x)</m> à
           leurs champs de directions respectifs.
-          Justifiez votre réponse. \begin{tasks}(3) \task <image width="32%" source="images/yprimecosyslope.png"/> \task <image width="32%" source="images/yprimecosxyslope.png"/> \task <image width="32%" source="images/yprimesinxslope.png"/> \end{tasks}
+          Justifiez votre réponse. <ol marker="a"><li> <image width="32%" source="images/yprimecosyslope.png"/> </li>
+          <li> <image width="32%" source="images/yprimecosxyslope.png"/> </li>
+          <li> <image width="32%" source="images/yprimesinxslope.png"/> </li></ol>
         </p>
       </statement>
     </exercise>

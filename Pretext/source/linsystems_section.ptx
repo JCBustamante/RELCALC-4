@@ -280,10 +280,12 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Vérifiez que le système
+          <ol marker="a"><li> Vérifiez que le système
           <m>{\vec{x}}' = \left[ \begin{matrix}1 \amp 3 \\ 3 \amp 1 \end{matrix} \right] \vec{x}</m> a les deux solutions <m>\left[ \begin{matrix}1 \\ 1 \end{matrix} \right] e^{4t}</m> et
-          <m>\left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{-2t}</m>. \task Écrivez la solution générale. \task Écrivez la solution générale sous la forme <m>x_1 = ?</m>,
-          <m>x_2 = ?</m> (i.e. écrivez la formule pour chaque élément de la solution). \end{tasks}
+          <m>\left[ \begin{matrix}1 \\ -1 \end{matrix} \right] e^{-2t}</m>. </li>
+          <li> Écrivez la solution générale. </li>
+          <li> Écrivez la solution générale sous la forme <m>x_1 = ?</m>,
+          <m>x_2 = ?</m> (i.e. écrivez la formule pour chaque élément de la solution). </li></ol>
         </p>
       </statement>
     </exercise>
@@ -318,8 +320,9 @@
       <statement>
         <p>
           Prenez le système <m>x_1' + x_2' = x_1</m> et
-          <m>x_1' - x_2' = x_2</m>. \begin{tasks} \task Écrivez-le sous la forme
-          <m>A {\vec{x}}' = B \vec{x}</m> pour des matrices <m>A</m> et <m>B</m>. \task Calculez <m>A^{-1}</m> et utilisez le résultat pour écrire le système sous la forme <m>{\vec{x}}' = P \vec{x}</m>. \end{tasks}
+          <m>x_1' - x_2' = x_2</m>. <ol marker="a"><li> Écrivez-le sous la forme
+          <m>A {\vec{x}}' = B \vec{x}</m> pour des matrices <m>A</m> et <m>B</m>. </li>
+          <li> Calculez <m>A^{-1}</m> et utilisez le résultat pour écrire le système sous la forme <m>{\vec{x}}' = P \vec{x}</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -369,8 +372,9 @@
     <exercise>
       <statement>
         <p>
-          \begin{tasks} \task Écrivez <m>x_1'=2tx_2</m>,
-          <m>x_2'=2tx_2</m> en notation matricielle. \task Résolvez et écrivez la solution en notation matricielle. \end{tasks}
+          <ol marker="a"><li> Écrivez <m>x_1'=2tx_2</m>,
+          <m>x_2'=2tx_2</m> en notation matricielle. </li>
+          <li> Résolvez et écrivez la solution en notation matricielle. </li></ol>
         </p>
       </statement>
     </exercise>

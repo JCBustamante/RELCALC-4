@@ -218,10 +218,15 @@
           Est-ce linéaire ou non-linéaire et si c'est linéaire,
           est-ce homogène? à
           coefficients constants?
-          Si c'est une EDO, est-elle autonome? \begin{tasks}(2) \task
-          <m>\displaystyle \sin(t) \frac{d^2 x}{dt^2} + \cos(t) x = t^2</m> \task <m>\displaystyle \frac{\partial u}{\partial x} + 3 \frac{\partial u}{\partial y} = xy</m> \task
-          <m>\displaystyle y''+3y+5x=0, x''+x-y=0</m> \task <m>\displaystyle \frac{\partial^2 u}{\partial t^2} + u\frac{\partial^2 u}{\partial s^2} = 0</m> \task
-          <m>\displaystyle x''+tx^2=t</m> \task <m>\displaystyle \frac{d^4 x}{dt^4} = 0</m> \end{tasks}
+          Si c'est une EDO, est-elle autonome? <ol marker="a"><li>
+          <m>\displaystyle \sin(t) \frac{d^2 x}{dt^2} + \cos(t) x = t^2</m> </li>
+          <li> <m>\displaystyle \frac{\partial u}{\partial x} + 3 \frac{\partial u}{\partial y} = xy</m> </li>
+          <li>
+          <m>\displaystyle y''+3y+5x=0, x''+x-y=0</m> </li>
+          <li> <m>\displaystyle \frac{\partial^2 u}{\partial t^2} + u\frac{\partial^2 u}{\partial s^2} = 0</m> </li>
+          <li>
+          <m>\displaystyle x''+tx^2=t</m> </li>
+          <li> <m>\displaystyle \frac{d^4 x}{dt^4} = 0</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -262,10 +267,15 @@
           Quel est l'ordre?
           Est-ce linéaire ou non-linéaire et si c'est linéaire,
           est-ce homogène? À coefficients constants?
-          Si c'est une EDO, est-elle autonome? \begin{tasks}(2) \task
-          <m>\displaystyle \frac{\partial^2 v}{\partial x^2} + 3 \frac{\partial^2 v}{\partial y^2} = \sin(x)</m> \task <m>\displaystyle \frac{d x}{dt} + \cos(t) x = t^2+t+1</m> \task
-          <m>\displaystyle \frac{d^7 F}{dx^7} = 3F(x)</m> \task <m>\displaystyle y''+8y'=1</m> \task
-          <m>\displaystyle x''+tyx'=0, y''+txy = 0</m> \task <m>\displaystyle \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial s^2} + u^2</m> \end{tasks}
+          Si c'est une EDO, est-elle autonome? <ol marker="a"><li>
+          <m>\displaystyle \frac{\partial^2 v}{\partial x^2} + 3 \frac{\partial^2 v}{\partial y^2} = \sin(x)</m> </li>
+          <li> <m>\displaystyle \frac{d x}{dt} + \cos(t) x = t^2+t+1</m> </li>
+          <li>
+          <m>\displaystyle \frac{d^7 F}{dx^7} = 3F(x)</m> </li>
+          <li> <m>\displaystyle y''+8y'=1</m> </li>
+          <li>
+          <m>\displaystyle x''+tyx'=0, y''+txy = 0</m> </li>
+          <li> <m>\displaystyle \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial s^2} + u^2</m> </li></ol>
         </p>
       </statement>
     </exercise>

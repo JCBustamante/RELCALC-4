@@ -599,9 +599,11 @@
         <p>
           Considérez le système masse-ressort tel que <m>m=2</m>,
           la constante du ressort <m>k=3</m>,
-          et la constante d'amortissement <m>c=1</m>. \begin{tasks} \task Écrivez le système et trouvez la solution générale de celui-ci. \task Est-ce que le système est en état de sous-amortissement,
-          sur-amortissement ou d'amortissement critique? \task Si le système n'est pas en amortissment critique,
-          trouve un <m>c</m> qui amène le système dans un état d'amortissement critique. \end{tasks}
+          et la constante d'amortissement <m>c=1</m>. <ol marker="a"><li> Écrivez le système et trouvez la solution générale de celui-ci. </li>
+          <li> Est-ce que le système est en état de sous-amortissement,
+          sur-amortissement ou d'amortissement critique? </li>
+          <li> Si le système n'est pas en amortissment critique,
+          trouve un <m>c</m> qui amène le système dans un état d'amortissement critique. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -623,9 +625,10 @@
               <idx><h>mks units</h></idx>
           supposez que vous avez un ressort de constante 4 N/m. Vous voulez l'utiliser pour peser des objets.
           Supposez qu'il n'y a pas de friction.
-          Attachez la masse au ressort et mettez-la en mouvement. \begin{tasks} \task Vous trouvez que la fréquence est 0.8 Hz
+          Attachez la masse au ressort et mettez-la en mouvement. <ol marker="a"><li> Vous trouvez que la fréquence est 0.8 Hz
           (cycles per seconde).
-          Quelle est la masse? \task Trouvez la formule pour une masse <m>m</m> et donnez la fréquence <m>\omega</m> en Hz. \end{tasks}
+          Quelle est la masse? </li>
+          <li> Trouvez la formule pour une masse <m>m</m> et donnez la fréquence <m>\omega</m> en Hz. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -638,14 +641,16 @@
           mais que vous avez deux poids de références 1 kg et 2 kg pour calibrer votre système.
           Vous les mettez, chacun leur tour,
           en mouvement sur votre ressort et vous mesurez la fréquence.
-          Pour la masse de 1 kg vous mesurez 1.1 Hz, pour la masse de 2 kg vous mesurez 0.8 Hz. \begin{tasks} \task Trouvez <m>k</m>
+          Pour la masse de 1 kg vous mesurez 1.1 Hz, pour la masse de 2 kg vous mesurez 0.8 Hz. <ol marker="a"><li> Trouvez <m>k</m>
           (la constante du ressort)
           et <m>c</m>
-          (la constante d'amortissement). \task Trouvez la formule pour la masse en terme de fréquence en Hz.
+          (la constante d'amortissement). </li>
+          <li> Trouvez la formule pour la masse en terme de fréquence en Hz.
           <em>Notez qu'il pourrait avoir plus qu'une masse possible pour une fréquence donnée.</em>
-          \task Pour un objet inconnu,
+          </li>
+          <li> Pour un objet inconnu,
           vous mesurez 0.2 Hz, quelle est la masse de cet objet?
-          Supposez que la masse de l'objet inconnue est supérieure un kilogramme. \end{tasks}
+          Supposez que la masse de l'objet inconnue est supérieure un kilogramme. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -688,8 +693,10 @@
           un inducteur ayant une inductance de 50 millihenries (0.05 henries),
           et une capacité
           de 5 farads,
-          avec un voltage constant. \begin{tasks} \task Écrivez l'EDO pour le <m>I</m> courant. \task Trouvez la solution générale. \task Résolvez pour
-          <m>I(0) = 10</m> et <m>I'(0) = 0</m>. \end{tasks}
+          avec un voltage constant. <ol marker="a"><li> Écrivez l'EDO pour le <m>I</m> courant. </li>
+          <li> Trouvez la solution générale. </li>
+          <li> Résolvez pour
+          <m>I(0) = 10</m> et <m>I'(0) = 0</m>. </li></ol>
         </p>
       </statement>
     </exercise>
@@ -708,9 +715,12 @@
           à 1 m/s, et le ressort comprime de 0.1 m. Supposez qu'il n'y a pas d'amortissement.
         </p>
         <p>
-          \begin{tasks} \task Trouvez <m>k</m>. \task Quelle est la compression du ressort lorsqu'un wagon de 10000 kg le frappe à
-          la même vitesse? \task Supposons que le ressort brise lorsqu'il comprime de plus de 0.3 m. Quelle serait la masse maximale permise au wagon pour qu'il puisse le frapper à 1 m/s? \task Quel est la masse maximale du wagon pouvant frapper le ressort sans briser à
-          une vitesse de 2 m/s? \end{tasks}
+          <ol marker="a"><li> Trouvez <m>k</m>. </li>
+          <li> Quelle est la compression du ressort lorsqu'un wagon de 10000 kg le frappe à
+          la même vitesse? </li>
+          <li> Supposons que le ressort brise lorsqu'il comprime de plus de 0.3 m. Quelle serait la masse maximale permise au wagon pour qu'il puisse le frapper à 1 m/s? </li>
+          <li> Quel est la masse maximale du wagon pouvant frapper le ressort sans briser à
+          une vitesse de 2 m/s? </li></ol>
         </p>
       </statement>
     </exercise>

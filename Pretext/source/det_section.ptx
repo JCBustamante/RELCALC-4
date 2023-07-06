@@ -281,10 +281,17 @@
     <exercise>
       <statement>
         <p>
-          Compute the determinant of the following matrices: \begin{tasks}(4) \task <m>\begin{bmatrix}3 \end{bmatrix}</m> \task <m>\begin{bmatrix}1 \amp 3 \\ 2 \amp 1 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}2 \amp 1 \\ 4 \amp 2 \end{bmatrix}</m> \task <m>\begin{bmatrix}1 \amp 2 \amp 3 \\ 0 \amp 4 \amp 5 \\ 0 \amp 0 \amp 6 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}2 \amp 1 \amp 0 \\ -2 \amp 7 \amp -3 \\ 0 \amp 2 \amp 0 \end{bmatrix}</m> \task <m>\begin{bmatrix}2 \amp 1 \amp 3 \\ 8 \amp 6 \amp 3 \\ 7 \amp 9 \amp 7 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}0 \amp 2 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp -3 \\ 3 \amp 4 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp 4 \end{bmatrix}</m> \task <m>\begin{bmatrix}0 \amp 1 \amp 2 \amp 0 \\ 1 \amp 1 \amp -1 \amp 2 \\ 1 \amp 1 \amp 2 \amp 1 \\ 2 \amp -1 \amp -2 \amp 3 \end{bmatrix}</m> \end{tasks}
+          Compute the determinant of the following matrices: <ol marker="a"><li> <m>\begin{bmatrix}3 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 3 \\ 2 \amp 1 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 1 \\ 4 \amp 2 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 2 \amp 3 \\ 0 \amp 4 \amp 5 \\ 0 \amp 0 \amp 6 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 1 \amp 0 \\ -2 \amp 7 \amp -3 \\ 0 \amp 2 \amp 0 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp 1 \amp 3 \\ 8 \amp 6 \amp 3 \\ 7 \amp 9 \amp 7 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}0 \amp 2 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp -3 \\ 3 \amp 4 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp 4 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}0 \amp 1 \amp 2 \amp 0 \\ 1 \amp 1 \amp -1 \amp 2 \\ 1 \amp 1 \amp 2 \amp 1 \\ 2 \amp -1 \amp -2 \amp 3 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -292,9 +299,12 @@
       <statement>
         <p>
           For which <m>x</m> are the following matrices singular
-          (not invertible). \begin{tasks}(4) \task
-          <m>\begin{bmatrix}2 \amp 3 \\ 2 \amp x \end{bmatrix}</m> \task <m>\begin{bmatrix}2 \amp x \\ 1 \amp 2 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}x \amp 1 \\ 4 \amp x \end{bmatrix}</m> \task <m>\begin{bmatrix}x \amp 0 \amp 1 \\ 1 \amp 4 \amp 2 \\ 1 \amp 6 \amp 2 \end{bmatrix}</m> \end{tasks}
+          (not invertible). <ol marker="a"><li>
+          <m>\begin{bmatrix}2 \amp 3 \\ 2 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp x \\ 1 \amp 2 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}x \amp 1 \\ 4 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}x \amp 0 \amp 1 \\ 1 \amp 4 \amp 2 \\ 1 \amp 6 \amp 2 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -362,10 +372,17 @@
       <title>2</title>
       <statement>
         <p>
-          Compute the determinant of the following matrices: \begin{tasks}(4) \task <m>\begin{bmatrix}-2 \end{bmatrix}</m> \task <m>\begin{bmatrix}2 \amp -2 \\ 1 \amp 3 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}2 \amp 2 \\ 2 \amp 2 \end{bmatrix}</m> \task <m>\begin{bmatrix}2 \amp 9 \amp -11 \\ 0 \amp -1 \amp 5 \\ 0 \amp 0 \amp 3 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}2 \amp 1 \amp 0 \\ -2 \amp 7 \amp 3 \\ 1 \amp 1 \amp 0 \end{bmatrix}</m> \task <m>\begin{bmatrix}5 \amp 1 \amp 3 \\ 4 \amp 1 \amp 1 \\ 4 \amp 5 \amp 1 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}3 \amp 2 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp 0 \\ 0 \amp 4 \amp 5 \amp 0 \\ 2 \amp 1 \amp 2 \amp 4 \end{bmatrix}</m> \task <m>\begin{bmatrix}0 \amp 2 \amp 1 \amp 0 \\ 1 \amp 2 \amp -3 \amp 4 \\ 5 \amp 6 \amp -7 \amp 8 \\ 1 \amp 2 \amp 3 \amp -2 \end{bmatrix}</m> \end{tasks}
+          Compute the determinant of the following matrices: <ol marker="a"><li> <m>\begin{bmatrix}-2 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp -2 \\ 1 \amp 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 2 \\ 2 \amp 2 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp 9 \amp -11 \\ 0 \amp -1 \amp 5 \\ 0 \amp 0 \amp 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 1 \amp 0 \\ -2 \amp 7 \amp 3 \\ 1 \amp 1 \amp 0 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}5 \amp 1 \amp 3 \\ 4 \amp 1 \amp 1 \\ 4 \amp 5 \amp 1 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}3 \amp 2 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp 0 \\ 0 \amp 4 \amp 5 \amp 0 \\ 2 \amp 1 \amp 2 \amp 4 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}0 \amp 2 \amp 1 \amp 0 \\ 1 \amp 2 \amp -3 \amp 4 \\ 5 \amp 6 \amp -7 \amp 8 \\ 1 \amp 2 \amp 3 \amp -2 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
     </exercise>
@@ -378,9 +395,12 @@
       <statement>
         <p>
           For which <m>x</m> are the following matrices singular
-          (not invertible). \begin{tasks}(4) \task
-          <m>\begin{bmatrix}1 \amp 3 \\ 1 \amp x \end{bmatrix}</m> \task <m>\begin{bmatrix}3 \amp x \\ 1 \amp 3 \end{bmatrix}</m> \task
-          <m>\begin{bmatrix}x \amp 3 \\ 3 \amp x \end{bmatrix}</m> \task <m>\begin{bmatrix}x \amp 1 \amp 0 \\ 1 \amp 4 \amp 0 \\ 1 \amp 6 \amp 2 \end{bmatrix}</m> \end{tasks}
+          (not invertible). <ol marker="a"><li>
+          <m>\begin{bmatrix}1 \amp 3 \\ 1 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}3 \amp x \\ 1 \amp 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}x \amp 3 \\ 3 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}x \amp 1 \amp 0 \\ 1 \amp 4 \amp 0 \\ 1 \amp 6 \amp 2 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
     </exercise>
