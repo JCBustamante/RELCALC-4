@@ -1,0 +1,93 @@
+##DESCRIPTION
+## Separable equation initial value problem, population word problem
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Dartmouth)
+## Level(5)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.3')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'separable', 'initial value problem', 'exponential growth', 'population')
+
+#####################################
+
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+ 
+#####################################
+
+TEXT(beginproblem());
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->variables->are(t=>"Real");
+
+$initial= random(300,900,100);
+$later = random(3000,10000,1000);
+$t1 = random(3,9);
+
+#####################################
+
+Context()->texStrings;
+BEGIN_TEXT
+A bacteria culture starts with $initial bacteria and grows at a rate
+proportional to its size.  After $t1 hours, there are $later bacteria.
+$PAR
+
+Find an expression for the number of bacteria after \(t\) hours.
+$BR
+
+\{ans_rule(60)\}
+\{ AnswerFormatHelp("formulas") \}
+
+$PAR
+Find the number of bacteria after \{$t1 + 1\} hours.
+$BR
+
+\{ans_rule(30)\}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+Find the growth rate after \{$t1 + 1\} hours.
+$BR
+
+\{ans_rule(30)\}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+After how many hours will the population reach 30000?
+$BR
+
+\{ans_rule(30)\}
+\{ AnswerFormatHelp("numbers") \}
+END_TEXT
+Context()->normalStrings;
+
+#####################################
+
+$k = log($later/$initial)/$t1;
+$t11 = $t1+1;
+
+ANS(Formula("$initial*exp($k*t)")->cmp() );
+ANS(Compute("$initial*exp($k*$t11)")->cmp() );
+ANS(Compute("$initial*exp($k*$t11)*$k")->cmp() );
+ANS(Compute("ln(30000/$initial)/$k")->cmp() );
+
+#####################################
+
+COMMENT("Separable equation initial value problem, population word problem");
+
+ENDDOCUMENT();

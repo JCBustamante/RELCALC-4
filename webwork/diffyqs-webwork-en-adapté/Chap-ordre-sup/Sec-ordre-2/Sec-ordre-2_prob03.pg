@@ -1,0 +1,97 @@
+# Superposition principle for general nonhomogeneous linear equations.
+
+## Author(Jiri Lebl)
+## Institution(Oklahoma State University)
+## KEYWORDS('ODE', 'differential', 'equation', 'superposition', 'nonhomogeneous')
+
+########################################################################
+
+###########################
+# Initialization
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+Context("Numeric");
+
+
+$a = random(2,9,1);
+do { $b = random(2,9,1); } until ($b != $a);
+do { $c = random(2,9,1); } until (($c != $a) and ($c != $b));
+
+Context()->flags->set(
+     reduceConstants => 0,
+     reduceConstantFunctions => 0,
+);
+
+
+$answer1 = Formula("$c x e^x");
+$answer2 = Formula("$b x sin($a x) + $c x e^x");
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Suppose you know that \( y = x \sin ($a x) \) is a solution to
+\( y'' + f(x) y' + g(x) y = \sin($a x) , \)
+and
+\( y = x e^{x} \) is a solution to
+\( y'' + f(x) y' + g(x) y = e^x . \)
+$PAR
+Find a solution to
+\( y'' + f(x) y' + g(x) y = $c e^x . \)
+$PAR
+\( y = {} \) \{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Now find a solution to
+\( y'' + f(x) y' + g(x) y = $b \sin($a x) + $c e^x . \)
+$PAR
+\( y = {} \) \{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+
+#############################
+# Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $answer1->cmp() );
+ANS( $answer2->cmp() );
+
+
+#####################
+# Solution
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The left hand side of the equation is linear in \(y,\) \(y',\) and \(y''.\)
+So by linearity we get that \($c\) times \(x e^x\) will give
+\($c\) times the right hand side corresponding to \(x e^x.\)
+$PAR
+Thus if \( y = $answer1\) then \( y'' + f(x) y' + g(x) y = $c e^x . \)
+$PAR
+Similarly for sums.
+Thus, if \( y = $answer2\) then \( y'' + f(x) y' + g(x) y = $b \sin($a x) + $c e^x . \)
+END_SOLUTION
+Context()->normalStrings;
+
+#####################
+
+COMMENT("Superposition principle for general nonhomogeneous linear equations.");
+
+ENDDOCUMENT();

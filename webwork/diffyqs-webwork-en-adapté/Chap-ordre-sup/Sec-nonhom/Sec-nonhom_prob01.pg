@@ -1,0 +1,96 @@
+# Undetermined coefficients
+
+## Institution(Univeristy of Utah and Oklahoma State University)
+## Author(Utah ww group, Jiri Lebl)
+
+##############################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "unorderedAnswer.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+
+TEXT(beginproblem()); 
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+$k = random(2,4,1);
+$c = random(2,9,1);
+
+$twok = $k*2;
+$ksq = $k*$k;
+
+$A = Compute("-(2*$c*$k)/($k^4+2*$k^2+1)")->reduce;
+$B = Compute("($c*$k^2-$c)/($k^4+2*$k^2+1)")->reduce;
+
+$ans1 = Compute("$A*cos(x)+$B*sin(x)")->reduce;
+#.16*sin(x)-.12*cos(x)");
+$ans2 = Compute("e^(-$k*x)");
+$ans3 = Compute("x*e^(-$k*x)");
+
+##############################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Use the method of undetermined coefficients to solve the following
+differential equation:
+
+\[ y'' + $twok y' + $ksq y = $c \sin(x) \]
+
+\( y(x) = \) \{ans_rule(25)\} \( + C_{1} \) \{ans_rule(15)\} \( + C_{2} \) \{ans_rule(15)\}
+$BR
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+
+ANS($ans1->cmp());
+UNORDERED_ANS($ans2->cmp(),
+              $ans3->cmp());
+
+##############################################################
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The characteristic equation is \(r^2+ $twok r + $ksq = (r+$k)^2 = 0 \), so the
+associated homogeneous solution is
+\[
+y_c = C_1 e^{-$k x} + C_2 x e^{-$k x} .
+\]
+To find a particular solution we try
+\[
+y_p = A \cos(x) + B \sin(x) .
+\]
+We compute
+\[
+$c \sin(x) =
+y_p''+$twok y_p' + $ksq y =
+(-A + $twok B + $ksq A)\cos(x)
++
+(-B - $twok A + $ksq B)\sin(x)
+.
+\]
+So 
+\(-A + $twok B + $ksq A = 0\) and
+\(-B - $twok A + $ksq B = $c .\) Solving for
+\(A\) and \(B\) we get \(A = $A\) and \(B = $B .\)
+Hence we find the solution
+\[
+y = y_p + y_c
+= $ans1 + C_1 $ans2 + C_2 $ans3 .
+\]
+END_SOLUTION
+Context()->normalStrings;
+
+##############################################################
+
+ENDDOCUMENT();

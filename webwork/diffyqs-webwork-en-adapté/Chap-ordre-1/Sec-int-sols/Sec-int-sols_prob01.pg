@@ -1,0 +1,145 @@
+##DESCRIPTION
+## Solving ODE with definite integral
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Fort Lewis College, Oklahoma State University)
+## Author(Paul Pearson, Jiri Lebl)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','initial value problem')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGunion.pl",
+  "answerHints.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Numeric")->variables->are(
+x=>"Real", dx=>"Real",
+t=>"Real", dt=>"Real",
+);
+
+$a = random(1,5,1);
+$ya = random(6,20,1);
+
+$fx = Formula("x^2 + x"); 
+$ft = $fx->substitute(x=>'t');   
+
+$fname = "y(x)";
+$dummyvar = "t";
+$indvar = "x";
+
+#
+#  Display the answer blanks properly in different modes
+#
+Context()->texStrings;
+if ($displayMode eq 'TeX') {
+   $integral =
+   "\(\displaystyle $fname = ".
+   ans_rule(4). 
+   "+ \int_{$dummyvar = ". 
+   ans_rule(4). 
+   "}^{$dummyvar = ". 
+   ans_rule(4).
+   '}'. 
+   ans_rule(20).
+   '\)';
+  } else {
+   $integral =
+   BeginTable(center=>0).
+     Row([
+       "\($fname=\) ".ans_rule(4).' \(+\displaystyle\int\)',
+       "\( $dummyvar = \) ".ans_rule(4).$BR.$BR."\( $dummyvar = \) ".ans_rule(4),
+       ans_rule(20)],separation=>2).
+   EndTable();
+}
+Context()->normalStrings;
+
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Set up a definite integral for solving 
+\( \displaystyle \frac{dy}{dx} = x^2 + x \)
+when \( y($a) = $ya \).
+$BR
+$BITALIC Use \(t\) for the variable of integration. $EITALIC
+$PAR
+$integral
+
+$PAR
+
+Evaluate the integral to find \( y(x) \).
+$PAR
+\( $fname = \)
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+
+############################
+#  Answers
+
+$showPartialCorrectAnswers = 1;
+
+ANS( Compute("$ya")->cmp() );
+ANS( Compute("x")->cmp() );
+ANS( Compute("$a")->cmp() );
+ANS( Compute("$ft * dt")->cmp()
+->withPostFilter(AnswerHints( 
+  [Formula("$fx"),Formula("$fx*dx"),Formula("x^2+x*dx")] => 
+  "Are you using the correct variable?",
+  Formula("$ft") => "Don't forget the differential dt", 
+  Formula("t^2 + t*dt") => "Don't forget parentheses", 
+))
+);
+
+ANS( Compute("$ya + (x^3/3 + x^2/2) - ($a^3/3 + $a^2/2)")->cmp() );
+
+########################################################
+
+BEGIN_PGML_SOLUTION
+We need to integrate (antidifferentiate) [:x^2 + x:].
+We set up an antiderivative
+that is zero when [:x=[$a]:] and then add [$ya] to it.
+That is,
+
+>>[``y = [$ya] + \int_{[$a]}^{x} (t^2+t) \, dt.``]<<
+
+If we evaluate the integral, we find
+
+>>[::y=[$ya] + (x^3/3 + x^2/2) - ([$a]^3/3 + [$a]^2/2).::]<<
+END_PGML_SOLUTION
+
+########################################################
+
+
+COMMENT("Solving ODE with definite integral.");
+
+ENDDOCUMENT();

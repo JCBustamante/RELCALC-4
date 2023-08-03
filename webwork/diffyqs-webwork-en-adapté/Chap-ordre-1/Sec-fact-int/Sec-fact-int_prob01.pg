@@ -1,0 +1,178 @@
+##DESCRIPTION
+## Integrating factor, initial value problem, solutions are in terms of powers of x
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Integrating factor)
+## Institution(The College of Idaho, Oklahoma State University)
+## Author(LA Danielson, Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.4')
+## Problem1('')
+## Level(3)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'integrating factor', 'initial value problem')
+
+####################################################
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+####################################################
+
+TEXT(beginproblem());
+
+Context("Numeric");
+
+Context()->variables->set(x=>{limits=>[0.1,5]});
+Context()->variables->add(C=>'Real');
+
+##axy'+by=x^{-p}
+$a = Real(random(2,4,1));
+$m = Real(non_zero_random(1,5,1));
+$b = $m*$a;
+##so that $b/$a = $m, 
+$p = Real(random(1,9,1));
+
+$y1 = Real(random(-9,9,1));
+
+$pa = $p*$a;
+$p1 = $p+1;
+$m1 = $m+1;
+$pm1 = $p+$m+1;
+$pm = $p+$m;
+$apm = $a*$pm;
+
+#Context()->flags->set(reduceConstants=>0);
+$C = $y1+1/$apm;
+
+# see also the answer checker below
+$rx = Formula("x^{-$m}")->reduce();
+
+# see also the answer checker below
+$ans1 = Formula("(x^{-$p} / {-$apm}) + (C * x^($m))")->reduce();
+
+$ans2 = Formula("(x^{-$p} / {-$apm}) + ($C * x^($m))")->reduce();
+
+####################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Solve \( $a x y' - $b y = x^{-$p}\), given \( y(1) = $y1 \).
+$PAR
+First, identify the integrating factor, \(r(x)\).
+$PAR
+\(r(x)\) = \{ans_rule(40)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Now find the general solution.
+$PAR
+\( y(x) = \) \{ans_rule(40)\}
+\{ AnswerFormatHelp("formulas") \}
+$BR
+${BITALIC}${BBOLD}Note:$EBOLD Use \( C \) for the arbitrary constant. $EITALIC
+$PAR
+Finally, solve the initial value problem \( y(1) = $y1 \).
+$PAR
+\( y(x) = \) \{ans_rule(40)\}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+####################################################
+
+ANS($rx->cmp( checker => sub {
+    my ($correct, $student, $self) = @_;
+    
+    if ($student == Compute("0")) {
+        return 0;
+    }
+
+    my $context = Context()->copy; 
+    $context->flags->set(no_parameters=>0);
+    $context->variables->add('C0'=>'Parameter');
+    my $c0 = Formula($context,'C0');
+    
+    $student = Formula($context,$student);
+    $correct = Formula($context,"($c0)*x^{-$m}");
+    
+    return $correct == $student;
+}));
+
+ANS($ans1->cmp( checker => sub {
+    my ($correct, $student, $self) = @_;
+
+    my $context = Context()->copy; 
+    $context->flags->set(no_parameters=>0);
+    $context->variables->add('C0'=>'Parameter');
+    $context->variables->add('C1'=>'Parameter');
+    my $c0 = Formula($context,'C0');
+    my $c1 = Formula($context,'C1');
+    
+    my $context2 = Context()->copy; 
+    $context2->flags->set(no_parameters=>0);
+    $context2->variables->add('C0'=>'Parameter');
+    my $cc0 = Formula($context2,'C0');
+    
+    $student2 = Formula($context2,$student);
+    $student = Formula($context,$student);
+ 
+    $correct = Formula($context,"(x^{-$p} / {-$apm}) + ((($c0)*C+($c1)) * x^($m))");
+    
+    $nongeneral = Formula($context2,"(x^{-$p} / {-$apm}) + (($cc0) * x^($m))");
+    
+    if ($nongeneral == $student2) {
+        Value->Error("Your answer is not the most general solution");
+    }
+    
+    return $correct == $student;
+}));
+
+ANS($ans2->cmp);
+
+####################################################
+
+Context()->texStrings;
+BEGIN_SOLUTION
+Rewrite the equation as
+\[ y' - \frac{$b}{$a x} y = \frac{1}{$a}x^{-$p-1} ,\]
+which is in standard linear form
+\[ y' + p(x)y = f(x) \]
+with \( p(x) = \frac{-$m}{x} \) and \( f(x) = \frac{1}{$a} x^{-$p1}\).  The integrating factor \( r(x) \) is defined by
+\[ r(x) = e^{\int p(x) dx} = e^{\ln x^{-$m}} = x^{-$m}. \]
+$PAR
+Let us now find the general solution.
+When multiplied by \( r(x) \), the equation becomes:
+\[ x^{-$m} y' - $m x^{-$m1} y = \frac{1}{$a}x^{-$pm1}. \]
+Now, \(  x^{-$m} y' - $m x^{-$m1} y = (x^{-$m} y)' \), so
+\[ (x^{-$m} y)' = \frac{1}{$a}x^{-$pm1}. \]
+So \( x^{-$m} y = \frac{1}{$a(-$pm)} x^{-$pm} + C \) and
+$PAR
+\[ y = \frac{1}{-$apm} x^{-$p} + C x^{$m}. \]
+$PAR
+Finally, let's find the particular solution.
+If \( y(1) = $y1 \), we find
+$PAR
+\( $y1 = \frac{1}{-$apm} + C \) so \( C = $y1 + \frac{1}{$apm} = $C\).
+$PAR
+The solution, therefore, is
+$PAR
+\( y = \frac{1}{-$apm} x^{-$p} + \left($y1 + \frac{1}{$apm}\right) x^{$m} = $ans2 \).
+END_SOLUTION
+Context()->normalStrings;
+
+####################################################
+
+COMMENT("Integrating factor, initial value problem, solutions are in terms of powers of x");
+
+####################################################
+
+ENDDOCUMENT();

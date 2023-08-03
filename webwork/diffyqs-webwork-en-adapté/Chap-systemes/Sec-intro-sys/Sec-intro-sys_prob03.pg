@@ -1,0 +1,118 @@
+##DESCRIPTION
+## Solve a simple nonhomogeneous system, can be solved one equation at a time
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Systems of differential equations)
+## DBsection(Nonhomogeneous systems)
+## Institution(Fort Lewis College, Oklahoma State University)
+## Author(Paul Pearson, Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('3.1')
+## Problem1('')
+## Level(3)
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'system', 'equation')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Numeric");
+Context()->variables->are(
+t=>"Real"
+);
+
+$x0 = random(1,9,1);
+do { $y0 = random(2,8,2); } until ($y0 != $x0);
+
+$x = Compute("($x0 + 1 - $y0/2) e^(-t) + $y0/2 e^t + t - 1")->reduce;
+$y = Compute("$y0 e^t");
+
+
+######################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Solve
+\[
+\begin{aligned}
+x^{\prime} & = y - x + t \\
+y^{\prime} & = y
+\end{aligned}
+\qquad
+\begin{aligned}
+x(0) & = $x0 \\
+y(0) & = $y0
+\end{aligned}
+\]
+$PAR
+\( x(t) = \) 
+\{ ans_rule(50) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+\( y(t) = \) 
+\{ ans_rule(50) \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+
+######################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $x->cmp() );
+ANS( $y->cmp() );
+
+######################
+#  Solution
+
+Context()->texStrings;
+BEGIN_SOLUTION
+First, note that \(y'=y\) and \(y(0)=$y0\) and hence
+\[
+y = $y0 e^t.
+\]
+Now plug this \(y\) into the equation for \(x\) to obtain
+\(
+x^{\prime} = $y0 e^t - x + t
+\)
+or in more standard form
+\[
+x^{\prime} + x = $y0 e^t + t .
+\]
+This is a first order linear equation.  One solves the problem
+together with the initial condition \(x(0)=$x0\) using the integrating
+factor method to find
+\[
+x = $x
+\]
+END_SOLUTION
+Context()->normalStrings;
+
+######################
+
+COMMENT("Solve a simple nonhomogeneous system, can be solved one equation at a time");
+
+######################
+
+ENDDOCUMENT();

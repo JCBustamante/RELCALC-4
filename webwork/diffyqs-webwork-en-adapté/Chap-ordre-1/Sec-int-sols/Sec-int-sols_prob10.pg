@@ -1,0 +1,87 @@
+##DESCRIPTION
+## Word problem for an ODE with integral as solution
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Fort Lewis College, Oklahoma State University)
+## Author(Paul Pearson, Jiri Lebl)
+## Level(5)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','initial value problem')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserNumberWithUnits.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Numeric");
+
+$a = random(2,6,1);
+$b = random(1,6,1);
+
+$d0 = list_random(250,500,750,1000,1250,1500);
+
+$answer = NumberWithUnits("$d0 + $a*(60)^3/3 + $b * 60","km");
+
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+A spaceship is traveling directly away from earth
+with speed \( $a t^2 + $b \ \mathrm{km/s} \).  At
+time \( t = 0 \ \mathrm{s} \), it is \( $d0 \ \mathrm{km} \)
+from earth.  How far is it from earth one minute
+after time \( t = 0 \ \mathrm{s}\)?  Include units in your answer.
+$PAR
+Distance = 
+\{ ans_rule(30) \} 
+\{ AnswerFormatHelp("units") \}
+END_TEXT
+Context()->normalStrings;
+
+
+############################
+#  Answers
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $answer->cmp(tolType=>absolute,tolerance=>0.0001) );
+
+BEGIN_SOLUTION
+To find distance traveled we integrate speed.  So distance from earth
+in kilometers after one minute (60 seconds) is
+\[
+$d0 + \int_0^{60} ($a t^2 + $b) \, dt
+=
+$d0 + \frac{$a (60)^3}{3} + $b(60) = $answer .
+\]
+END_SOLUTION
+
+############################
+
+COMMENT("Word problem for an ODE with integral as solution");
+
+ENDDOCUMENT();

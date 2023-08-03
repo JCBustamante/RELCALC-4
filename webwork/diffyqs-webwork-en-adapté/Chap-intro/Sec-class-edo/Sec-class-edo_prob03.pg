@@ -1,0 +1,92 @@
+##DESCRIPTION
+## Classify a homogeneous linear ODE (check all that applies, nonrandomized equation).
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Classifications of differential equations)
+## Institution(Alfred University)
+## Author(Darwyn Cook)
+## Level(2)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.3')
+## Problem1('')
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'classify')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+##############################################################
+#  Setup
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+  "Check all that apply.", 
+  "ODE",
+  "linear",
+  "homogeneous"
+);
+$mc -> extra(
+  "system",
+  "autonomous",
+  "constant coefficients",
+  "PDE"
+);
+
+##############################################################
+#  Text
+
+BEGIN_TEXT
+Consider
+\[
+\frac{dy}{dx}=e^x y .
+\]
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS( checkbox_cmp( $mc->correct_ans() ) );
+
+##############################################################
+
+BEGIN_SOLUTION
+The differential equation involves derivatives of only one independent variable,
+\(x,\) and so it is an ODE and not a PDE.  The dependent variable and its
+derivatives (the \(y\) and the \( \frac{dy}{dx} \)) only appear linearly,
+and in no other functions or powers, so it is a linear ODE.
+It is homogeneous since there is no term
+that does not depend on \(y.\)
+$PAR
+The coefficients in front
+of \(y\) and \(\frac{dy}{dx}\) are not constants, the coefficient of
+\(y\) is \(e^x\), and so it is not a
+constant coefficient equation.  
+It is just a single equation, so it is not a system.
+It is also not autonomous since it does
+depend on \(x,\) in particlar the \(e^x.\) 
+END_SOLUTION
+
+##############################################################
+
+
+COMMENT("Classify a homogeneous linear ODE (check all that applies, nonrandomized equation).");
+
+ENDDOCUMENT();

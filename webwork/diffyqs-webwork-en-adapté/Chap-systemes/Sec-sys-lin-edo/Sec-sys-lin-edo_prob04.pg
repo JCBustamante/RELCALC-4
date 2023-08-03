@@ -1,0 +1,129 @@
+# Systems of ODEs: introduction to systems of ODEs
+
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## KEYWORDS('differential equations','systems of ODEs')
+
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "weightedGrader.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+install_weighted_grader();
+
+
+#############################
+#  Setup
+
+Context("Matrix");
+Context()->variables->are(
+  t=>"Real"
+);
+
+$a = random(2,8,1);
+do { $b = random(2,5,1); } until ($b != $a);
+$c = random(-8,-2,1);
+
+foreach my $i (0..3) {
+  foreach my $j (0..3) {
+  $P[$i][$j] = Formula("0");
+  }
+}
+
+$P[0][1] = Formula("1");
+$P[1][0] = Formula("$a");
+$P[1][1] = Formula("1/t");
+$P[1][2] = Formula("-t");
+$P[1][3] = Formula("sin(t)");
+$P[2][3] = Formula("1");
+$P[3][0] = Formula("1");
+$P[3][3] = Formula("$c");
+
+$ansm = Matrix([
+  [$P[0][0], $P[0][1], $P[0][2], $P[0][3]],
+  [$P[1][0], $P[1][1], $P[1][2], $P[1][3]],
+  [$P[2][0], $P[2][1], $P[2][2], $P[2][3]],
+  [$P[3][0], $P[3][1], $P[3][2], $P[3][3]]
+]);
+
+foreach my $i (0..3) {
+  $g[$i] = Formula("0");
+}
+$g[1] = Formula("e^($b t)");
+
+$ansv = Matrix([[$g[0]], [$g[1]], [$g[2]], [$g[3]]]);
+
+######################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Consider the system of higher order differential equations
+\[
+\begin{aligned}
+y^{\prime\prime} & = t^{-1} y^{\prime} + $a y - t z + (\sin t) z^{\prime} + e^{$b t}, \\
+z^{\prime\prime} & = y + $c z^{\prime}.
+\end{aligned}
+\]
+Rewrite the given system of two second order differential
+equations as a system of four first order linear differential
+equations of the form \( {\vec{y}^{\,\prime}} = P(t) {\vec{y}} +
+{\vec{g}}(t) \).  Use the following change of variables
+\[
+{\vec{y}}(t) 
+= 
+\left\lbrack
+\begin{array}{r}
+y_1(t) \\
+y_2(t) \\
+y_3(t) \\
+y_4(t)
+\end{array}
+\right\rbrack
+=
+\left\lbrack
+\begin{array}{r}
+y(t) \\
+y^{\prime}(t) \\
+z(t) \\
+z^{\prime}(t)
+\end{array}
+\right\rbrack.
+\]
+$PAR
+\(
+\displaystyle
+\begin{bmatrix} y_1^{\prime} \\ y_2^{\prime} \\ y_3^{\prime} \\ y_4^{\prime} \end{bmatrix}
+=
+\)
+\{ $ansm->ans_array(6) \}
+\( \begin{bmatrix} y_1 \\ y_2 \\ y_3 \\ y_4 \end{bmatrix} + \)
+\{ $ansv->ans_array(6) \}
+$BR
+\{ AnswerFormatHelp("formulas") \}
+\{ AnswerFormatHelp("matrices") \}
+
+END_TEXT
+Context()->normalStrings;
+
+
+######################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+WEIGHTED_ANS( $ansm->cmp(), 80 );
+WEIGHTED_ANS( $ansv->cmp(), 20 );
+
+ENDDOCUMENT();

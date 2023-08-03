@@ -1,0 +1,92 @@
+##DESCRIPTION
+## Solve a differential equation implicitly by finding an integrating factor, but only the equation is given
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Exact)
+## Institution(Rochester)
+## Author(Unknown)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.8')
+## Problem1('')
+## Level(4)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'exact equations', 'implicit solution', 'integrating factor')
+
+###################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+###################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context('Numeric');
+Context()->variables->add(y=>'Real');
+
+$a = random(2,4,1) * random(-1,1,2);
+$b = non_zero_random(-4,4,1);
+$n = random(1,4,1);
+$n1=$n+1;
+$m = random(2,4,1);
+$m1= $m+1;
+
+###################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Find a function \(F(x,y)\) whose level curves are solutions to the differential equation
+\[ ( x^2 + ${a}xy )\, dx + x \,dy= 0 \]
+\(F(x,y) = {}\) \{ ans_rule(30) \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+###################################################
+
+# Can input a root, which defaults to [0,0], and another point
+#  which defaults to [2,1]
+sub lcc {
+  my ( $correct, $student, $anshash) = @_;
+  my %ah = %{ $anshash };
+  my $root = $ah{root};
+  $root = [0,0] unless defined($root);
+  my $other = $ah{other};
+  $other = [2,1] unless defined($other);
+  my $const = $student->eval(x=>$root->[0], y=>$root->[1]);
+  $student = $student-$const;
+  if($student== 0) {
+    Value::Error("The function cannot be constant");
+    return 0;
+  }
+  my $c1 = $student->eval(x=>$other->[0], y=>$other->[1])/
+    $correct->eval(x=>$other->[0], y=>$other->[1]);
+  return 0 if($c1==0);
+  $student = $student/$c1;
+  return $correct == $student;
+}
+
+ANS(Compute("e^( ${a}x )(y   + x/$a - 1/($a)^2 )")->cmp(checker => ~~&lcc,
+  root => [0, 1/($a)**2], other=>[0, 5+1/($a)^2] ));
+
+#ANS(level_curve_check(
+#         FEQ(" -${a}y-x"),
+#          FEQ(" e^( ${a}x )(y   + x/$a - 1/($a)^2 ) "), initial_t=>0,initial_y=>2/($a)**2,tol => .1)    
+#);     
+
+###################################################
+
+COMMENT("Solve a differential equation implicitly by finding an integrating factor, but only the equation is given");
+
+ENDDOCUMENT();

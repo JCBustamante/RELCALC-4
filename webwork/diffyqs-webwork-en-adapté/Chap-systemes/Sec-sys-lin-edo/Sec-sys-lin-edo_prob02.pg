@@ -1,0 +1,166 @@
+# Linear systems of ODEs
+
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## KEYWORDS('differential equations','linear systems')
+
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Matrix");
+Context()->variables->add(
+  t=>"Real",
+  a=>"Real",b=>"Real",k=>"Real",
+  A=>"Real",B=>"Real"
+);
+
+$answer1 = Compute("a k e^(k t)");
+$answer2 = Compute("b k e^(k t)");
+
+$ans = Matrix([[$answer1],[$answer2]]);
+
+$i = random(0,2,1);
+
+if ($i == 0) {
+
+  @matrix = (1,3,3,1);
+  @evect1 = (1,1);
+  $eval1  = 4;
+  @evect2 = (1,-1);
+  $eval2  = -2;
+
+} elsif ($i == 1) {
+
+  @matrix = (7,2,-4,1);
+  @evect1 = (1,-1);
+  $eval1  = 5;
+  @evect2 = (1,-2);
+  $eval2  = 3;
+
+} else {
+
+  @matrix = (5,3,3,5);
+  @evect1 = (1,-1);
+  $eval1  = 2;
+  @evect2 = (1,1);
+  $eval2  = 8;
+}
+
+$x1a = Compute("$evect1[0] A e^($eval1 t) + $evect2[0] B e^($eval2 t)")->reduce;
+$x2a = Compute("$evect1[1] A e^($eval1 t) + $evect2[1] B e^($eval2 t)")->reduce;
+
+######################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Assuming \( a, b \) and \( k \) are constants, 
+calculate the following derivative.
+$PAR
+
+\( \displaystyle \frac{d}{dt} \left( \left\lbrack \begin{array}{c} a \\ b \end{array} \right\rbrack e^{k t} \right) = \)
+\{ $ans->ans_array(20) \}
+\{ AnswerFormatHelp("formulas") \}
+\{ AnswerFormatHelp("matrices") \}
+
+$PAR
+Find a value of \( k \) so that 
+\( \displaystyle 
+\left\lbrack 
+\begin{array}{r} $evect1[0] \\ $evect1[1] \end{array} 
+\right\rbrack 
+e^{k t}
+\) 
+is a solution to
+\( \displaystyle
+{\vec{x}^{\,\prime}}
+= 
+\left\lbrack
+\begin{array}{rr}
+$matrix[0] & $matrix[1] \\
+$matrix[2] & $matrix[3]
+\end{array}
+\right\rbrack 
+{\vec{x}}.
+\)
+$PAR
+\( k = \) 
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+Find a value of \( k \) so that 
+\( \displaystyle 
+\left\lbrack 
+\begin{array}{r} $evect2[0] \\ $evect2[1] \end{array} 
+\right\rbrack 
+e^{k t}
+\) 
+is a solution to
+\( \displaystyle
+{\vec{x}^{\,\prime}}
+= 
+\left\lbrack
+\begin{array}{rr}
+$matrix[0] & $matrix[1] \\
+$matrix[2] & $matrix[3]
+\end{array}
+\right\rbrack 
+{\vec{x}}.
+\)
+$PAR
+\( k = \) 
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+Write down the general solution in 
+the form \( x_1(t) = ? \) and \( x_2(t) = ? \), 
+i.e., write down a formula for each 
+component of the solution.  Use \( A \)
+and \( B \) to denote arbitrary constants.  The \(A\) should go with the first
+\(k\) you found above, and the \(B\) should go with the second \(k\) you found
+above.
+$PAR
+\( x_1(t) = \) 
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+\( x_2(t) = \) 
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+
+END_TEXT
+Context()->normalStrings;
+
+
+######################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $ans->cmp() );
+
+ANS( Compute("$eval1")->cmp() );
+ANS( Compute("$eval2")->cmp() );
+
+ANS( $x1a->cmp() );
+ANS( $x2a->cmp() );
+
+ENDDOCUMENT();

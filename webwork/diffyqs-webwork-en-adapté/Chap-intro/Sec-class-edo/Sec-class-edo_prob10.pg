@@ -1,0 +1,119 @@
+##DESCRIPTION
+## Putting a linear equation into standard form, and checking for homogeneity.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Classifications of differential equations)
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## Level(2)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.3')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'classify')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+#############################
+#  Setup
+
+Context("Numeric");
+Context()->variables->are(x=>"Real");
+
+$a = random(2,9,1);
+do { $b = random(2,6,1); } until ($b != $a);
+do { $n = random(2,5,1); } until ($n != $a && $n != $b);
+
+$p = Compute("-(x^$n + $a) cos(x) / x");
+$g = Formula("(x^$n + $a) e^($b x) / x");
+
+$popup = PopUp(["Choose","linear and homogeneous","linear and nonhomogeneous","nonlinear"],"linear and nonhomogeneous");
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Put the differential equation
+\[
+\frac{x y^{\prime}}{(x^{$n}+$a) y} = \cos(x) + \frac{e^{$b x}}{y}
+\]
+into the form \( y^{\prime} + p(x) y = g(x)\) and find
+\( p(x) \) and \( g(x) . \)
+$PAR
+\( p(x) = \) 
+\{ ans_rule(30) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+\( g(x) = \) 
+\{ ans_rule(30) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Is the differential equation 
+\( \displaystyle \frac{x y^{\,\prime}}{(x^{$n}+$a) y} = \cos(x) + \frac{e^{$b x}}{y} \)
+linear and homogeneous, linear and nonhomogeneous, or nonlinear?
+$PAR
+Answer: \{ $popup->menu() \}
+END_TEXT
+Context()->normalStrings;
+
+############################
+#  Answers
+
+$showPartialCorrectAnswers = 0;
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS( $p->cmp() );
+ANS( $g->cmp() );
+ANS( $popup->cmp() );
+
+############################
+
+Context()->texStrings;
+BEGIN_SOLUTION
+To put
+\[
+\frac{x y^{\prime}}{(x^{$n}+$a) y} = \cos(x) + \frac{e^{$b x}}{y}
+\]
+into normal form, first clear denominators by multiplying both sides by
+\(x^{$n}+$a) y :\)
+\[
+x y^{\prime} = (x^{$n}+$a) y\cos(x) + (x^{$n}+$a) e^{$b x} .
+\]
+Now divide by \(x\) and move the term with the \(y\) to the left side
+\[
+y^{\prime} - \frac{(x^{$n}+$a)\cos(x)}{x} y = \frac{(x^{$n}+$a) e^{$b x}}{x} .
+\]
+So
+\[
+p(x) = $p , \qquad g(x) = $g .
+\]
+Anything that can be put into the form \( y^{\prime} + p(x) y = g(x)\)
+is a first order linear equation.  It is not homogeneous since
+\(g(x)\) is not the zero function.
+END_SOLUTION
+Context()->normalStrings;
+
+############################
+
+COMMENT("Putting a linear equation into standard form, and checking for homogeneity.");
+
+ENDDOCUMENT();

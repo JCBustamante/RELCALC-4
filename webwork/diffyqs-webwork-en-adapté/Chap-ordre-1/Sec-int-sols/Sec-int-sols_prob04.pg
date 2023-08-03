@@ -1,0 +1,95 @@
+##DESCRIPTION
+## Integrate to solve after inverse function theorem, simple separable.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Unknown, Oklahoma State University)
+## Author(Unknown, Jiri Lebl)
+## Level(4)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','initial value problem')
+
+###########################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+###########################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->variables->are(t=>["Real",limits => [0,1]]);
+
+$a = random(2,9,1); 
+$x0 = random(2,9,1); 
+
+$c = $x0 * $x0;
+
+###########################################################
+
+
+BEGIN_PGML
+Solve the differential equation
+
+>>[``\frac{dx}{dt} = \frac{[$a]}{x} ,``]<<
+
+and find the particular solution satisfying the initial condition
+
+>>[``x(0) = [$x0].``]<<
+
+[`x(t) = {}`] [______]{"sqrt(2*$a*t+$c)"}{40}
+[@ AnswerFormatHelp("formulas") @]*
+END_PGML
+
+######################################################
+
+BEGIN_PGML_SOLUTION
+Since [`\frac{dx}{dt}= \frac{[$a]}{x}`]
+we have [`\frac{dt}{dx}= \frac{x}{[$a]}`].
+We can now integrate with respect to [:x:]:
+
+>>[``t = \int \frac{x}{[$a]} dx + C = \frac{x^2}{[$a*2]} + C.``]<<
+
+Solving for [:x:],
+
+>>[``x = \sqrt{[$a*2](t-C)}.``]<<
+
+Now [: x(0)= [$x0] :], so
+
+>>[``x(0) = \sqrt{[$a*2](0-C)} = [$x0].``]<<
+
+Solving for [:C:] we find
+
+>>[``C =- \frac{[$x0]^2}{[$a*2]}.``]<<
+
+Plugging this back into the solution we get
+
+>>[``x =
+\sqrt{[$a*2]\left(t-\left(- \frac{[$x0]^2}{[$a*2]}\right)\right)}
+=
+\sqrt{[$a*2]t+ [$x0]^2} .
+``]<<
+END_PGML_SOLUTION
+
+######################################################
+
+COMMENT("Integrate to solve after inverse function theorem, simple separable.");
+
+ENDDOCUMENT();
+

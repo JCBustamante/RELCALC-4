@@ -1,0 +1,99 @@
+# Solve constant coefficient equation with auxiliary equations
+
+## Institution(Alfred University)
+## Author(Darwyn Cook)
+## KEYWORDS('linear', 'constant', 'coefficient')
+
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+##############################################################
+#
+#  Setup - repeated root
+#
+#
+
+# Make a context for the derivatives
+Context("Numeric");
+Context()->variables->{namePattern} = qr/[a-z][a-z0-9_]*'*/i;
+Context()->variables->are("r"=>"Real","x"=>"Real","y"=>"Real","y'"=>"Real","y''"=>"Real","y'''"=>"Real");
+Context()->variables->set("y'" => {TeX => '\frac{dy}{dx}'},"y''" => {TeX => '\frac{d^2y}{dx^2}'},"y'''" => {TeX => '\frac{d^3y}{dx^3}'});
+
+$a = Compute(non_zero_random(-9,9));
+$b = Compute(non_zero_random(-9,9));
+if ($a == $b){$b++};
+$diffeqn = Formula("y'''-(2*$a+$b)*y''+(($a)^2+2*$a*$b)y'-($a)^2*$b*y")->reduce;
+$rhs = Formula("0");
+$aux = Formula("r^3-(2*$a+$b)*r^2+(($a)^2+2*$a*$b)r-($a)^2*$b")->reduce;
+
+
+$f1 = Formula("e^($a*x)");
+$f2 = Formula("e^($a*x)*x");
+$f3 = Formula("e^($b*x)");
+
+$fundamental = List($f1,$f2,$f3);
+
+$y0 = Compute(non_zero_random(-9,9));
+$y1 = Compute(non_zero_random(-9,9));
+$y2 = Compute(non_zero_random(-9,9));
+
+### Thank you Maple :)
+$soln = Formula("($y0*($a)^2+$y2-2*$a*$y1)/(($b)^2+($a)^2-2*$a*$b)*exp($b*x)-($y2-($b)^2*$y0-2*$a*$y1+2*$a*$y0*$b)/(($b)^2+($a)^2-2*$a*$b)*exp($a*x)+(-$a*$y1+$a*$y0*$b+$y2-$b*$y1)/(-$b+$a)*exp($a*x)*x");
+
+$roots = List(Compute("$a"),Compute("$b"));
+
+Context()->texStrings;
+BEGIN_TEXT
+The differential equation \($diffeqn = $rhs\) has characteristic equation 
+$PAR
+\{$aux->ans_rule\} \({}=0\)
+$SPACE \{ AnswerFormatHelp("formulas") \}
+$PAR
+with roots \{$roots->ans_rule(30)\}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+$BITALIC $BBOLD Note: $EBOLD Enter the roots as a comma separated list.$EITALIC
+$PAR
+Therefore there are three fundamental solutions
+$BR
+\{$fundamental->ans_rule(50)\}
+\{ AnswerFormatHelp("formulas") \}
+$BR
+$BITALIC $BBOLD Note: $EBOLD Enter the solutions as a comma separated list.$EITALIC
+$PAR
+Use these to solve the initial value problem
+\[$diffeqn = $rhs,
+\quad y(0) = $y0,
+\quad \frac{dy}{dx}(0) = $y1,
+\quad \frac{d^2y}{dx^2}(0) = $y2\]
+$BR
+\(y(x) = \)\{$soln->ans_rule(60)\}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#
+#  Answers 
+#
+#
+ANS($aux->cmp());
+ANS($roots->cmp());
+ANS($fundamental->cmp);
+ANS($soln->cmp);
+
+ENDDOCUMENT();

@@ -1,0 +1,55 @@
+##DESCRIPTION
+## Separable equation initial value problem
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.3')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'separable', 'initial value problem')
+
+############################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+############################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$a = random(2,10);
+$b = random(2,11);
+
+Context("Numeric");
+Context()->variables->are(x=>['Real',limits => [$a, $a+2]]);
+
+############################################################
+
+BEGIN_PGML
+Find a function [:y:] of [:x:] such that  
+
+>>[`` [$a] yy' = x \ \mbox{ and } \ y([$a])= [$b]. ``]<<
+
+[`y ={}`] [__________]{"sqrt(x^2/$a + $b^2 - $a )"}{40}
+[@ AnswerFormatHelp("formulas") @]*
+END_PGML
+
+############################################################
+
+COMMENT("Separable equation initial value problem");
+
+ENDDOCUMENT();

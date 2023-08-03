@@ -1,0 +1,75 @@
+##DESCRIPTION
+## Integrate to solve ODE
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(University of Michigan)
+## Author(Gavin LaRose)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','general solution')
+
+#################################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserFormulaUpToConstant.pl",
+  "PGcourse.pl"
+);
+
+#################################################################
+
+Context("Numeric");
+$showPartialCorrectAnswers = 1;
+
+$r = random(2,5,1);
+$b = random(1,8,1);
+
+TEXT(beginproblem());
+
+#################################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Find the general solution of the differential equation
+\[ \displaystyle {dy\over dx}=x^{$r} + $b . \]
+
+$PAR
+\(y(x) = {}\) \{ ans_rule(35) \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+#################################################################
+
+$ans = FormulaUpToConstant("(1/($r+1))*x^($r+1) + $b*x + C");
+ANS($ans->cmp() );
+
+$r1 = $r + 1;
+
+#################################################################
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The equation can be solved by just integrating (antidifferentiating)
+the right hand side.  That is,
+\[ y=\int (x^{$r} + $b)\,dx + C = \frac{x^{$r1}}{$r1} + $b x + C .\]
+END_SOLUTION
+Context()->normalStrings;
+
+#################################################################
+
+COMMENT("Integrate to solve ODE.");
+
+ENDDOCUMENT();

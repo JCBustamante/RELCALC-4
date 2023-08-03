@@ -1,0 +1,77 @@
+##DESCRIPTION
+## Explicitly solving exact equation with initial value, using exact equation and an integrating factor
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Exact)
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.8')
+## Problem1('')
+## Level(4)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'exact equations', 'integrating factor', 'initial value problem')
+
+##############################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+##############################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context('Numeric');
+
+$a = random(2,9,1);
+$b = random(2,9,1);
+
+$ans1 = Formula("x");
+
+##############################################
+
+BEGIN_PGML
+Consider the equation
+[```[$a*4] ([$a] x^2-y) \, dx + \left(\frac{2y}{x} - [$a*2]x\right) \, dy = 0 . ```]
+
+Find an integrating factor [`u(x)`] (so a function of [`x`] alone).
+
+[`u(x) = {}`][_______]{$ans1->cmp(checker => sub {
+      my ( $correct, $student, $self ) = @_;
+      my $context = Context()->copy;
+      return 0 if $student == 0;
+      $context->flags->set(no_parameters=>0);
+      $context->variables->add('C0'=>'Parameter');
+      my $c0 = Formula($context,'C0');
+      $student = Formula($context,$student);
+      $correct = Formula($context,"$c0 * $ans1");
+      return $correct == $student;
+    }
+)}{30}
+[@ AnswerFormatHelp("formulas") @]*
+
+Now once you have an integrating factor, you can solve the equation as an exact equation.
+An explicit solution can be found, that is, one of the form [`y=y(x) .`] 
+Find an explicit solution that solves [`y(1)=[$b].`]
+
+[`y(x) = {}`][_______]{"$a*x^2-$a+$b"}{30}
+[@ AnswerFormatHelp("formulas") @]*
+END_PGML
+
+##############################################
+
+COMMENT("Explicitly solving exact equation with initial value, using exact equation and an integrating factor");
+
+ENDDOCUMENT();

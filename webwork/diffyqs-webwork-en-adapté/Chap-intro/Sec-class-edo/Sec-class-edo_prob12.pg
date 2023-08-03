@@ -1,0 +1,93 @@
+##DESCRIPTION
+## Classify a linear PDE equation (check all that applies, nonrandomized).
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Classifications of differential equations)
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(2)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.3')
+## Problem1('')
+## KEYWORDS('ODE', 'ordinary', 'differential', 'system', 'classify')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+##############################################################
+#  Setup
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+  "Check all that apply.", 
+  "PDE",
+  "linear",
+  "second order",
+);
+$mc -> extra(
+  "first order",
+  "third order",
+  "system",
+  "ODE"
+);
+
+
+##############################################################
+#  Text
+
+BEGIN_TEXT
+Consider
+\[
+\frac{\partial^2 \psi}{\partial x^2}
++
+\frac{\partial^2 \psi}{\partial y^2}
+=
+\frac{1}{x^2+y^2} .
+\]
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS( checkbox_cmp( $mc->correct_ans() ) );
+
+##############################################################
+
+BEGIN_SOLUTION
+The equation involves partial derivatives of two
+independent variables, \(x\) and \(t ,\) so it is
+a partial differential equation, a PDE, and not an ODE.
+The highest order derivative that appears is of second
+order, so that is the order of the equation.
+The dependent variable \(\psi\) and its derivatives (the
+\(\frac{\partial^2 \psi}{\partial x^2}\) and
+\(\frac{\partial^2 \psi}{\partial y^2}\) only appear linearly
+and so the equation is linear.
+$PAR
+It is not a system as there is only one equation.
+END_SOLUTION
+
+##############################################################
+
+COMMENT("Classify a linear PDE equation (check all that applies, nonrandomized).");
+
+ENDDOCUMENT();

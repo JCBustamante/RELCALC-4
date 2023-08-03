@@ -1,0 +1,183 @@
+# Eigenvalues and systems of differential equations
+# Phase planes
+
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGgraphmacros.pl",
+  "PGunion.pl",
+  "VectorField2D.pl",
+  "imageChoice.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+$refreshCachedImages = 1;
+
+#############################
+#  Setup
+
+Context("Numeric");
+Context()->variables->add(y=>"Real");
+
+@systems = (); # TeX
+
+$systems[0] = 
+"\( \displaystyle
+\begin{array}{rcl}
+y_1^{\,\prime} & = & -y_1 \\
+y_2^{\,\prime} & = & 2y_1 - y_2
+\end{array}
+\)";
+
+$systems[1] = 
+"\( \displaystyle
+{\vec{y}^{\,\prime}} 
+= 
+\left\lbrack 
+\begin{array}{rr} 
+2 & 0 \\ 
+0 & 2 
+\end{array} 
+\right\rbrack 
+{\vec{y}}
+\)";
+
+$systems[2] = 
+"\( \displaystyle
+\begin{array}{rcl}
+y_1^{\,\prime} & = & y_1 + y_2 \\
+y_2^{\,\prime} & = & y_2
+\end{array}
+\)";
+
+$systems[3] = 
+"\( \displaystyle
+{\vec{y}^{\,\prime}} 
+=
+\left\lbrack 
+\begin{array}{rr} 
+-1.5 & 0 \\ 
+0 & -1.5 
+\end{array} 
+\right\rbrack 
+{\vec{y}}
+\)";
+
+
+#
+#  Graph canvas setup
+#
+
+@gr = ();
+
+foreach my $j (0..3) {
+  $gr[$j] = init_graph(-2,-2,2,2,grid=>[8,8],axes=>[0,0],pixels=>[400,400]);
+
+  my $thex;
+  my $they;
+  if ($j == 0) {
+    #  Slope field for y' / x' = (2x-y) / (-x)
+    $thex = Formula("-x");
+    $they = Formula("2x-y");
+  } elsif ($j == 1) {
+    #  Slope field for y' / x' = (2y) / (2x)
+    $thex = Formula("2x");
+    $they = Formula("2y");
+  } elsif ($j == 2) {
+    #  Slope field for y' / x' = (y) / (x+y)
+    $thex = Formula("x+y");
+    $they = Formula("y");
+  } else {
+    #  Slope field for y' / x' = (-1.5y) / (-1.5x)
+    $thex = Formula("-1.5x");
+    $they = Formula("-1.5y");
+  }
+  
+  # Rescale by only "somewhat" to make things look easier to read
+  $thex = Compute("$thex/(5+3*sqrt(($thex)^2+($they)^2))");
+  $they = Compute("$they/(5+3*sqrt(($thex)^2+($they)^2))");
+  
+  VectorField2D(
+    graphobject => $gr[$j],
+    Fx => $thex,
+    Fy => $they,
+    xvar => "x",
+    yvar => "y",
+    xmin => -2,
+    xmax =>  2,
+    ymin => -2,
+    ymax =>  2,
+    xsamples => 14,
+    ysamples => 14,
+    vectorcolor => "blue",
+    vectorscale => 1,
+    vectorthickness => 2,
+    #xavoid=>0,
+    #yavoid=>0,
+  );
+} # end setting up graph
+
+@QA = ();
+foreach my $i (0..3) { push( @QA, $systems[$i],  $gr[$i] ); }
+
+$ml = new_image_match_list(
+  link => 1,                #  do not link to separate image
+  size => [300,300],        #  image size in pixels
+  tex_size => 450,          #  tex size in precent times 10
+  columns => 2,             #  number of columns
+  separation => 20,         #  separation between image columns 
+);
+
+$ml->rf_print_q(~~&pop_up_list_print_q); # use pop-up-lists
+$ml->ra_pop_up_list([ No_answer=>"?", A=>"A", B=>"B", C=>"C", D=>"D"] );
+
+$ml->qa(@QA);               #  set the questions and answers
+$ml->choose(4);             #  select 4 of them
+#$ml->choose_extra(0);      #  and show the other 1
+
+
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+\{
+ColumnTable(
+"Match each linear system with one of the 
+phase plane direction fields.".
+$ml->print_q()
+,
+$BCENTER.
+$ml->print_a().
+$BR.
+$ECENTER
+,
+indent => 0, separation => 30, valign => "TOP"
+)
+\}
+END_TEXT
+Context()->normalStrings;
+
+
+############################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($ml->ra_correct_ans));
+
+ENDDOCUMENT();

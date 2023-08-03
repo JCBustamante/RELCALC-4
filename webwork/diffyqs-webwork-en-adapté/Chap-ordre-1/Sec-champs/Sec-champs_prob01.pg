@@ -1,0 +1,102 @@
+##DESCRIPTION
+## Choose a solution given a slope field
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Direction fields)
+## Institution(Alfred University)
+## Author(Darwyn Cook)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations', 'direction field', 'slope field')
+
+##############################################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGgraphmacros.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+TEXT(beginproblem());
+
+
+##############################################################################
+##############################################################################
+##
+##  Create the slope field graph for y' = xy
+##    
+$gr1 = init_graph(-4,-4,4,4,axes=>[0,0], grid=>[8,8], size=>[500,500], ticks=>[8,8]);
+$dy1 = sub { my ($x,$y) = @_;
+	     return $x*$y;  };
+$fn1 = new VectorField( $dy1, $gr1 );
+$fn1->dot_radius(0);
+$fn1->x_steps(20);
+$fn1->y_steps(20);
+$fn1->rf_arrow_length( sub{
+    my($dx,$dy)=@_;
+    return(0) if sqrt($dx*$dx + $dy*$dy)==0;
+    0.23*1/sqrt($dx*$dx + $dy*$dy);
+} );
+
+###############################################################################
+##
+## Create a list of potential solutions. The first must be the correct 
+## solution
+##
+
+$f1 = Formula("e^(x^2/2)");
+$f2 = Formula("sin(x^2)");
+$f3 = Formula("2sin(x^2)");
+$f4 = Formula("x^3-x");
+$f5 = Formula("x^2-x");
+
+$f1tex = $f1->TeX;
+$f2tex = $f2->TeX;
+$f3tex = $f3->TeX;
+$f4tex = $f4->TeX;
+$f5tex = $f5->TeX;
+
+$mc = new_multiple_choice();
+$mc->qa("Which of the following is a solution to the differential equation \(\frac{dy}{dx} = f(x,y)\) whose slope field is graphed below?", "\(y=$f1tex\)");
+$mc->extra("\(y=$f2tex\)","\(y=$f3tex\)","\(y=$f4tex\)","\(y=$f5tex\)");
+
+##############################################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ $mc->print_q() \}
+
+$PAR
+
+$BCENTER
+        \{image( insertGraph( $gr1 ), tex_size=>250, height=>250, width=>250,
+	       extra_html_tags=>'alt="graph of a slope field"' )\}
+$ECENTER
+\{ $mc->print_a() \}
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################################
+
+install_problem_grader(~~&std_problem_grader);
+
+$showPartialCorrectAnswers = 0;
+
+ANS( radio_cmp( $mc->correct_ans() ) );
+
+##############################################################################
+
+COMMENT("Choose a solution given a slope field.");
+
+ENDDOCUMENT();

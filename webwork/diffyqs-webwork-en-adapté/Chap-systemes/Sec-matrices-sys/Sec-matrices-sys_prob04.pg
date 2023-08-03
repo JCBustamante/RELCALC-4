@@ -1,0 +1,99 @@
+##DESCRIPTION
+## Checking if matrix product is defined
+##ENDDESCRIPTION
+
+## DBsubject(Linear algebra)
+## DBchapter(Matrices)
+## DBsection(Matrix algebra)
+## Institution(Unknown)
+## Author(Unknown)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('3.2')
+## Problem1('')
+## Level(2)
+## MO(1)
+## KEYWORDS('matrix', 'matrix product')
+
+################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "parserPopUp.pl",
+  "PGcourse.pl"
+);
+
+################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 0;
+
+$a11=random(-5,5,1);
+$a12=random(-5,5,1);
+$a13=random(-5,5,1);
+$a21=random(-5,5,1);
+$a22=random(-5,5,1);
+$a23=random(-5,5,1);
+$b11=random(-5,5,1);
+$b12=random(-5,5,1);
+$b13=random(-5,5,1);
+$b21=random(-5,5,1);
+$b22=random(-5,5,1);
+$b23=random(-5,5,1);
+
+$c11=random(-5,5,1);
+$c12=random(-5,5,1);
+$c21=random(-5,5,1);
+$c22=random(-5,5,1);
+
+
+$ABpopup = PopUp(["Choose","Yes","No"],"No");
+$ACpopup = PopUp(["Choose","Yes","No"],"No");
+$CBpopup = PopUp(["Choose","Yes","No"],"Yes");
+$CApopup = PopUp(["Choose","Yes","No"],"Yes");
+
+
+################################################
+
+BEGIN_TEXT
+Let
+\[
+A=\begin{bmatrix}
+        $a11 & $a12 & $a13\\
+        $a21 & $a22 & $a23\\
+\end{bmatrix},\qquad
+B=\begin{bmatrix}
+        $b11 & $b12 & $b13\\
+        $b21 & $b22 & $b23\\
+\end{bmatrix},\qquad
+C=\begin{bmatrix}
+        $c11 & $c12 \\
+        $c21 & $c22
+\end{bmatrix}.
+\]
+$PAR
+Can the operation \(AB\) be performed? $SPACE \{ $ABpopup->menu(); \} 
+$PAR
+Can the operation \(AC\) be performed? $SPACE \{ $ACpopup->menu(); \} 
+$PAR
+Can the operation \(CB\) be performed? $SPACE \{ $CBpopup->menu(); \} 
+$PAR
+Can the operation \(CA\) be performed? $SPACE \{ $CApopup->menu(); \} 
+END_TEXT
+
+################################################
+
+ANS($ABpopup->cmp());
+ANS($ACpopup->cmp());
+ANS($CBpopup->cmp());
+ANS($CApopup->cmp());
+
+################################################
+
+COMMENT("Checking if matrix product is defined");
+
+ENDDOCUMENT();

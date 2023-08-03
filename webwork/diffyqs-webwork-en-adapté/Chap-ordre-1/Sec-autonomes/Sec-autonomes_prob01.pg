@@ -1,0 +1,89 @@
+##DESCRIPTION
+## Autonomous equation word problem, ask simple questions including about
+## carrying capacity (explains what that is)
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Equilibrium points and phase lines)
+## Institution(Unknown, Oklahoma State University)
+## Author(Unknown, Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.6')
+## Problem1('')
+## Level(4)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'autonomous', 'population', 'carrying capacity', 'equilibria')
+
+
+########################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "AnswerFormatHelp.pl",
+  "MathObjects.pl",
+  "PGcourse.pl"
+);
+
+########################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context('Numeric');
+#Context()->{format}{number} = "%.6f#";
+Context()->{format}{number} = "%.8f#";
+
+$k = Compute(list_random(0.05,0.10,0.15,0.20,0.25));
+$K = Compute(list_random(50,100,200,250,400,750,1000));
+$b = Compute("$k/$K");
+
+########################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Suppose that a population develops according
+to the logistic equation 
+\[
+\frac{dP}{dt} = $k P - $b P^2 ,
+\]
+where \(t\) is measured in weeks.
+$PAR
+A logistic equation has two equilibrium solutions.  The higher one is
+called the ${BITALIC}carrying capacity${EITALIC}, since if \(P\) models
+a population, then the carrying capacity is the maximum sustainable
+population that the environment can support.
+$PAR
+What is the carrying capacity?
+$BR
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Is the solution increasing or decreasing
+when \( P \) is between \( 0 \) and the
+carriying capacity?
+$BR
+\{ pop_up_list(['?','increasing', 'decreasing']) \}
+$PAR
+Is the solution increasing or decreasing when
+\( P \) is greater than the carrying capacity? 
+$BR
+\{ pop_up_list(['?','increasing', 'decreasing']) \}
+END_TEXT
+Context()->normalStrings;
+
+########################################################
+
+ANS($K->cmp);
+ANS(str_cmp("increasing"));
+ANS(str_cmp("decreasing"));
+
+########################################################
+
+COMMENT("Autonomous equation word problem, ask simple questions including about carrying capacity (explains what that is)");
+
+ENDDOCUMENT();

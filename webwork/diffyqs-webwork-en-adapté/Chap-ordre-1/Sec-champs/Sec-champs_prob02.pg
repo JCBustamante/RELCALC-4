@@ -1,0 +1,146 @@
+##DESCRIPTION
+## Match equations to slope fields
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Direction fields)
+## Institution(University of Michigan)
+## Author(Gavin LaRose)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations', 'direction field', 'slope field')
+
+#####################################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGchoicemacros.pl",
+  "PGgraphmacros.pl",
+  "PGunion.pl",
+  "PGcourse.pl"
+);
+
+Context("Numeric");
+$showPartialCorrectAnswers = 0;
+
+# some functions to match
+@equations = ( "\( y' = 1 + y^2 \)", "\( y' = x \)", "\( y' = \sin(x) \)",
+	       "\( y' = y \)", "\( y' = x - y \)", "\( y' = 4 - y \)",
+	       "\( y' = y^2 \)", "\( y' = y - x \)", "\( y' = 4 - x \)",
+	       "\( y' = \cos(x) \)", "\( y' = x^2 \)", "\( y' = -y^2 \)" );
+
+# and their slope fields
+#    first define functions giving the slopes
+@slfunc = ( sub { my ($x,$y) = @_; return 1 + $y*$y; },
+	    sub { my ($x,$y) = @_; return $x; },
+	    sub { my ($x,$y) = @_; return sin($x); },
+	    sub { my ($x,$y) = @_; return $y; },
+	    sub { my ($x,$y) = @_; return $x - $y; },
+	    sub { my ($x,$y) = @_; return 4 - $y; },
+	    sub { my ($x,$y) = @_; return $y*$y; },
+	    sub { my ($x,$y) = @_; return $y - $x; },
+	    sub { my ($x,$y) = @_; return 4 - $x; },
+	    sub { my ($x,$y) = @_; return cos($x); },
+	    sub { my ($x,$y) = @_; return $x*$x; },
+	    sub { my ($x,$y) = @_; return -1*$y*$y; } );
+@sfields = ( );
+foreach $f ( @slfunc ) {
+    $gr = init_graph(-5,-5,5,5,axes=>[0,0],size=>[400,400]);
+    $fn = new VectorField( $f, $gr );
+    $fn->dot_radius(0);
+    $fn->x_steps(15);
+    $fn->y_steps(15);
+    $fn->rf_arrow_length( sub{my($dx,$dy)=@_;
+			      return(0) if sqrt($dx**2 + $dy**2) ==0;
+			      0.375*1/sqrt($dx**2 + $dy**2);} );
+    push( @sfields, $gr );
+}
+
+# make the matching object
+$ml = new_match_list();
+$ml->rf_print_q(~~&pop_up_list_print_q);
+$ml->ra_pop_up_list([
+"No answer" => "?",
+"A" => "A", "B" => "B", "C" => "C", 
+"D" => "D", "E" => "E", "F" => "F",
+#"G" => "G", "H" => "H", "I" => "I",
+]);
+
+@qa = ();
+for (my $i=0; $i<@equations; $i++) {
+    push( @qa, $equations[$i],
+	  image(insertGraph($sfields[$i]),tex_size=>200,height=>200,
+		width=>200,extra_html_tags=>'alt="graph of a slope field"') );
+}
+$ml->qa( @qa );
+
+$ml->choose(6);
+
+@ans = @{$ml->selected_a()};
+
+#####################################################################
+
+TEXT(beginproblem());
+Context()->texStrings;
+BEGIN_TEXT
+Match the slope fields shown below with the differential equations.
+$PAR
+\{
+BeginTable().
+Row( ["${BBOLD}A.$EBOLD" . $ans[0],
+      "${BBOLD}B.$EBOLD" . $ans[1],
+      "${BBOLD}C.$EBOLD" . $ans[2] ] ).
+TableSpace(40).
+Row( ["${BBOLD}D.$EBOLD" . $ans[3],
+	  "${BBOLD}E.$EBOLD" . $ans[4],
+	  "${BBOLD}F.$EBOLD" . $ans[5] ] ).
+EndTable()
+\}
+
+$PAR
+
+\{ $ml->print_q() \}
+END_TEXT
+Context()->normalStrings;
+
+ANS( str_cmp( $ml->ra_correct_ans ) );
+
+@ca = @{$ml->ra_correct_ans};
+
+#####################################################################
+
+Context()->texStrings;
+BEGIN_SOLUTION
+We can determine the answers by considering the right-hand
+side of differential equation at different \((x,y)\) coordinates
+to determine what the slope has to be at those points.
+This gives the correct answers:
+$PAR
+1. \(\leftrightarrow\) $ca[0]
+$BR
+2. \(\leftrightarrow\) $ca[1]
+$BR
+3. \(\leftrightarrow\) $ca[2]
+$BR
+4. \(\leftrightarrow\) $ca[3]
+$BR
+5. \(\leftrightarrow\) $ca[4]
+$BR
+6. \(\leftrightarrow\) $ca[5]
+END_SOLUTION
+Context()->normalStrings;
+
+#####################################################################
+
+COMMENT("Match equations to slope fields.");
+
+ENDDOCUMENT();

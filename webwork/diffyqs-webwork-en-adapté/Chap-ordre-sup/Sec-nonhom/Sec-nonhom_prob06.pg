@@ -1,0 +1,138 @@
+# Variation of parameters
+
+## Institution(Alfred University)
+## Author(Juan Marin)
+
+##############################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGgraphmacros.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserMultiAnswer.pl",
+  "parserImplicitEquation.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+ 
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+## Declare variables
+Context()->variables->are(x=>'Real',y=>'Real');
+
+$a   = random(2,11);
+$a2 = $a * $a;
+$g = Formula("sec^2($a x)")->reduce;
+$Yh1 = Formula("sin($a x)")->reduce;
+$Yh2 = Formula("cos($a x)")->reduce;
+
+
+
+$DYh1 = $Yh1->D('x')->reduce;
+$DYh2 = $Yh2->D('x')->reduce;
+$W = Formula("$Yh1 * $DYh2 - $Yh2 * $DYh1")->reduce;
+$W1 = Formula("-$g * $Yh2")->reduce;
+$W2 = Formula("$g * $Yh1")->reduce;
+
+
+$Du1 = Formula("$W1/$W")->reduce;
+$Du2 = Formula("$W2/$W")->reduce;
+$u1 = Formula("ln(abs(cos($a x))/abs(sin($a x)-1))/$a2")->reduce;
+$u2 = Formula("-1/($a2 *cos($a x))")->reduce;
+
+
+
+
+  $Yp = Formula("$Yh1 *$u1 +$Yh2 * $u2")->reduce;
+
+  $multipart4 = MultiAnswer($Yh1, $Yh2)->with(
+    singleResult => 0,
+    checker => sub {
+        my ( $correct4, $student4, $self4 ) = @_;
+        my ( $f1stu4, $f2stu4 ) = @{$student4};
+        my ( $f14, $f24 ) = @{$correct4};
+        if ( ($f14 == $f1stu4 && $f24 == $f2stu4) ||
+             ($f14 == $f2stu4 && $f24 == $f1stu4) ) {
+            return [1,1];
+        } else {
+            if ($f14 == $f1stu4 || $f24 == $f1stu4) {
+                return [1,0];
+            } elsif ($f14 == $f1stu4 || $f24 == $f2stu4) {
+                return [0,1];
+            } else {
+                return [0,0];
+            }
+        }
+    }
+  );
+
+##############################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+In this problem you will solve the non-homogeneous differential equation
+\[y''+$a2 y =$g \] 
+$PAR
+Let \(C_1\) and \(C_2\) be arbitrary constants.  The general solution to the related homogeneous differential equation  
+\(y''+$a2 y =0\) is the function
+$PAR
+\(y_h(x)=C_1\ y_1(x)+C_2\ y_2(x)=C_1\) \{ans_rule(15)\} \(+C_2\)\{ans_rule(15)\}
+$SPACE \{ AnswerFormatHelp("formulas") \}
+$BR
+$BITALIC $BBOLD
+Note: $EBOLD The order in which you enter the answers is important; that is,
+\(C_1 f(x) + C_2 g(x) \neq C_1 g(x) + C_2 f(x)\).  Therfore put sine before cosine.
+$EITALIC
+$PAR
+The particular solution \(y_p(x)\) to the differential equation \(y''+$a2 y =\sec^2($a x)\) is of the form 
+\( y_p(x)=y_1(x)\ u_1(x)+y_2(x)\ u_2(x)\) where 
+$PAR
+\(u_1'(x)=\) 
+\{ans_rule(15)\}
+and \(u_2'(x)=\)
+\{ans_rule(15)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+It follows that 
+$PAR
+\(u_1(x)=\)
+\{ans_rule(20)\}
+and \(u_2(x)=\)
+\{ans_rule(20)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Thus
+\(y_p(x)=\) \{ans_rule(30)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+The most general solution to the non-homogeneous differential equation
+\(y''+$a2 y =\sec^2($a x)\) is
+$PAR
+\(y=C_1\)
+\{$multipart4->ans_rule(10)\}
+\(+C_2\)\{$multipart4->ans_rule(10)\}\(+\)\{ans_rule(30)\}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+
+ANS($Yh1->cmp);
+ANS($Yh2->cmp);
+ANS($Du1->cmp);
+ANS($Du2->cmp);
+ANS($u1->cmp);
+ANS($u2->cmp);
+ANS($Yp->cmp);
+ANS( $multipart4->cmp() );
+ANS($Yp->cmp);
+
+COMMENT("Variation of parameters, tutorial problem");
+
+ENDDOCUMENT();

@@ -1,0 +1,93 @@
+# Solve constant coefficient equation with auxiliary equations
+
+## Institution(Alfred University)
+## Author(Darwyn Cook)
+## KEYWORDS('linear' 'constant' 'coefficient')
+
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+##############################################################
+#
+#  Setup
+#
+#
+
+# Make a context for the derivatives
+Context()->variables->{namePattern} = qr/[a-z][a-z0-9_]*'*/i;
+Context()->variables->are("r"=>"Real","x"=>"Real","y"=>"Real","y'"=>"Real","y''"=>"Real");
+Context()->variables->set("y'" => {TeX => '\frac{dy}{dx}'},"y''" => {TeX => '\frac{d^2y}{dx^2}'});
+
+
+$b = Compute(non_zero_random(-9,9));
+$c = Compute(non_zero_random(-9,9));
+if ($b == $c) { $c++; }
+$diffeqn = Formula("y''+($b+$c)*y'+$b*$c*y")->reduce;
+$rhs = Formula("0");
+$aux = Formula("r^2+($b+$c)*r+$b*$c")->reduce;
+
+
+$f1 = Formula("e^(-$b*x)");
+$f2 = Formula("e^(-$c*x)");
+
+$roots = List(-$b,-$c);
+$fundamental = List($f1,$f2);
+
+$y0 = Compute(non_zero_random(-9,9));
+$y1 = Compute(non_zero_random(-9,9));
+
+$soln = Formula("($y0*$b+$y1)/(-$c+$b)*exp(-$c*x)-($y1+$c*$y0)/(-$c+$b)*exp(-$b*x)");
+
+##############################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+The differential equation \($diffeqn = $rhs\) has characteristic equation 
+$PAR
+\{$aux->ans_rule(30)\} \(=0\)
+$SPACE \{ AnswerFormatHelp("formulas") \}
+$PAR
+ with roots \{$roots->ans_rule(30)\}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Therefore there are two linearly independent solutions
+$BR
+\{$fundamental->ans_rule(40)\}
+\{ AnswerFormatHelp("formulas") \}
+$BR
+$BITALIC $BBOLD Note: $EBOLD Enter the solutions as a comma separated list (they should be those usual exponential ones as in the book).$EITALIC
+
+$PAR
+Use these to solve the initial value problem
+\[$diffeqn = $rhs, \qquad y(0) = $y0, \qquad \frac{dy}{dx}(0) = $y1\]
+$PAR
+\(y(x) = {} \)\{$soln->ans_rule(50)\}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#
+#  Answers 
+#
+#
+ANS($aux->cmp());
+ANS($roots->cmp());
+ANS($fundamental->cmp);
+ANS($soln->cmp);
+
+ENDDOCUMENT();

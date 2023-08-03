@@ -1,0 +1,89 @@
+##DESCRIPTION
+## Solve an initial value problem (one of the four fundamental equations)
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Verification of solutions)
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+#############################
+#  Setup
+
+Context("Numeric")->variables->are(
+  t=>"Real"
+);
+
+$k = random(-1,1,2) * random(2,10,1);
+do { $A0 = random(2,9,1); } until ($A0 != $k);
+
+$answer = Formula("$A0 * e^($k t)");
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Find a solution to 
+\( \displaystyle \frac{dA}{dt} = $k A \text{,} \) where
+\( A(0) = $A0 \text{.}\)
+$PAR
+\( A(t) = \)
+\{ ans_rule(30); \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+############################
+#  Answers
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $answer->cmp() ); 
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The equation is the exponential growth equation.  Its solution
+is, therefore, \(A(t) = C e^{$k t} \text{.}\)
+To make \(A(0) = $A0 \) we plug in \(t=0\text{.}\)  That is,
+\[
+$A0 = A(0) = C e^{$k \cdot 0} = C \text{.}
+\]
+So \(C = $A0 \text{,}\) and so the solution is
+\[
+A(t) = $answer \text{.}
+\]
+END_SOLUTION
+Context()->normalStrings;
+
+############################
+
+COMMENT("Solve an initial value problem (one of the four fundamental equations).");
+
+ENDDOCUMENT();

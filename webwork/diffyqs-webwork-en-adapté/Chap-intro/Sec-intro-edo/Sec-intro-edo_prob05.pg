@@ -1,0 +1,83 @@
+##DESCRIPTION
+## Match solutions to equations
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Verification of solutions)
+## Institution(OSU)
+## Author(Zig Fiedorowicz)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.2')
+## Problem1('')
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'match')
+
+################################################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "unionTables.pl",
+  "PGcourse.pl"
+);
+
+################################################################################
+
+TEXT(beginproblem());
+
+$a = random(2,9,1);
+$aa = $a**2;
+$a2 = 2*$a;
+$b = random(3,8,1);
+$bb = $b**2;
+$b2 = 2*$b;
+$b3 = 3*$b;
+
+$ml = new_match_list();
+$ml->rf_print_q(~~&pop_up_list_print_q);
+$ml->ra_pop_up_list([
+"No answer" => "?",
+"A" => "A", "B" => "B", "C" => "C", 
+"D" => "D", "E" => "E", #"F" => "F",
+#"G" => "G", "H" => "H", "I" => "I",
+]);
+
+$ml->qa(EV2("\(\ \frac{d^2y}{dx^2}+$aa y =0\)" ),
+		EV2("\(\ y = A\cos($a x) + B\sin($a x)\)"));
+$ml->qa(EV2("\(\ \frac{dy}{dx}=$b y\)" ),
+		EV2("\(\ y = Ce^{$b x}\)"));
+$ml->qa(EV2("\(\ \frac{d^2y}{dx^2}+$b2\frac{dy}{dx}+$bb y=0\)"),
+		EV2("\(\ y = A e^{-$b x} + B xe^{-$b x}\)"));
+$ml->qa(EV2("\(\ \frac{dy}{dx}= $a2 xy\)" ),
+		EV2("\(\ y = A e^{$a x^2}\)"));
+$ml->qa(EV2("\(\ \frac{dy}{dx}+$b3 x^2y = $b3 x^2\)"),
+		EV2("\(\ y= Ce^{-$b x^3}+1\)"));
+
+$ml->choose(5);
+
+################################################################################
+
+BEGIN_TEXT
+Match the following differential equations with their solutions.
+The symbols \(A\text{,}\) \(B\text{,}\) \(C\) in the solutions stand for arbitrary constants.
+$PAR
+\{ ColumnMatchTable($ml) \}
+END_TEXT
+
+################################################################################
+
+$showPartialCorrectAnswers = 0;
+install_problem_grader(~~&std_problem_grader);
+
+ANS(str_cmp($ml->ra_correct_ans));
+
+################################################################################
+
+COMMENT("Match solutions to equations.");
+
+ENDDOCUMENT();

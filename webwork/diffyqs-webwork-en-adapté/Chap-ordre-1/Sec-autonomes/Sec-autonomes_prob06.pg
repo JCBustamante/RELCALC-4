@@ -1,0 +1,111 @@
+##DESCRIPTION
+## Find equilibrium points and classify stability, equation given by graph
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Equilibrium points and phase lines)
+## Institution(Rochester, Oklahoma State University)
+## Author(Unknown, Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.6')
+## Problem1('')
+## Level(3)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'autonomous', 'equilibria', 'stability')
+
+#############################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGchoicemacros.pl",
+  "PGgraphmacros.pl",
+  "PGcourse.pl"
+);
+
+#############################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+$a = random(-3.5, -2.5, 0.5);
+$b = $a + random(1,2,0.5);
+$c = $b + random(1,2,0.5);
+$d = $c + random(1,2,0.5);
+$pa = random(2, 5,.1);
+$pb = random(2, 5,.1);
+$pc = random(2, 5,.1);
+$pd = random(2, 5,.1);
+$sign = non_zero_random(-1,1,1);
+
+$graph = init_graph(-4,-4,4,4,axes =>[0,0], grid =>[8,8], size=>[400,400]);
+$hermite_obj = new Hermite( [-4, $a, $b, $c, $d,4],
+                            [-5*$sign, 0,0,0,0, 5*$sign],
+                            [$sign, $sign*$pa, 0, -$sign*$pc, $sign*$pd, $sign]);
+$fun_obj = new Fun($hermite_obj->rf_f,$graph);
+
+#############################################################
+
+BEGIN_TEXT
+The graph of the function  \(f(x)  \)  is
+$PAR
+$BCENTER
+\{image( insertGraph($graph), width=>200, height=>200 )\}
+$BR
+(the horizontal axis is \(x\).) 
+$ECENTER
+$PAR
+Consider the differential equation \(x' = f( x ) \). 
+$PAR
+List the constant (or equilibrium) solutions to this differential equation
+in increasing order and indicate whether or not these equalibria
+are ${BITALIC}stable${EITALIC}, ${BITALIC}semi-stable${EITALIC}
+(stable from one side, unstable from the other),
+or ${BITALIC}unstable${EITALIC}.
+$BR
+\(x = {}\) \{ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+$SPACE
+\{ pop_up_list(''=>'','stable'=>'stable', 'unstable'=>'unstable', 'semi-stable' => 'semi-stable') \}
+$BR
+\(x = {}\) \{ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+$SPACE
+\{ pop_up_list(''=>'','stable'=>'stable', 'unstable'=>'unstable', 'semi-stable' => 'semi-stable') \}
+$BR
+\(x = {}\) \{ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+$SPACE
+\{ pop_up_list(''=>'','stable'=>'stable', 'unstable'=>'unstable', 'semi-stable' => 'semi-stable') \}
+$BR
+\(x = {}\) \{ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+$SPACE
+\{ pop_up_list(''=>'','stable'=>'stable', 'unstable'=>'unstable', 'semi-stable' => 'semi-stable') \}
+END_TEXT
+
+#############################################################
+
+$ans1 = ($sign > 0) ? 'unstable': 'stable';
+$ans2 = 'semi-stable';
+$ans3 = ($sign > 0) ? 'stable': 'unstable';
+$ans4 = ($sign > 0) ? 'unstable':'stable';
+
+ANS(Compute("$a")->cmp(),str_cmp($ans1));
+ANS(Compute("$b")->cmp(),str_cmp($ans2));
+ANS(Compute("$c")->cmp(),str_cmp($ans3));
+ANS(Compute("$d")->cmp(),str_cmp($ans4));
+
+#############################################################
+
+COMMENT("Find equilibrium points and classify stability, equation given by graph");
+
+ENDDOCUMENT();

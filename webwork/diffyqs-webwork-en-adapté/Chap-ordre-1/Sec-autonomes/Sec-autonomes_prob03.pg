@@ -1,0 +1,66 @@
+##DESCRIPTION
+## Find equilibrium points and identify direction of movement in between
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Equilibrium points and phase lines)
+## Institution(Unknown, Oklahoma State University)
+## Author(Unknown, Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.6')
+## Problem1('')
+## Level(4)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'autonomous', 'equilibria')
+
+##############################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+$neg = random(-9,-1,1);
+$pos = random(1,7,1);
+if (abs($pos + $neg) < 2) { $pos = 9; } 
+$a = - $pos - $neg;
+$b = $pos*$neg;
+
+##############################################################
+
+BEGIN_PGML
+A function [:x(t):] satisfies the differential equation 
+
+>>[`` \frac{dx}{dt} = - x^4 - [$a] x^3 - [$b] x^2. ``]<<
+
+What are the constant solutions of this equation?
+
+[___________]{"$neg,0,$pos"}{50} [@ AnswerFormatHelp("numbers") @]*  
+_*Note:* Separate your answers by commas._
+
+For what values of [:x:] is [:x:] increasing?
+
+[____________]{"$neg"} [` {} < x < {} `] [____________]{"$pos"}
+[@ AnswerFormatHelp("numbers") @]*
+END_PGML
+
+##############################################################
+
+COMMENT("Find equilibrium points and identify direction of movement in between");
+
+ENDDOCUMENT();

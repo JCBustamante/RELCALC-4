@@ -1,0 +1,77 @@
+##DESCRIPTION
+## Integrate to solve ODE, must put into standard form first
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Miami Univ. Ohio, Hope College, Oklahoma State University)
+## Author(Anna Ghazaryan, Fuli Zhang, Paul Pearson, Jiri Lebl)
+## Level(4)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','general solution')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserFormulaUpToConstant.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+
+Context()->variables->set(x => {limits => [0,5]});
+
+$a = random(2,9,1);
+
+$answer = FormulaUpToConstant("$a (x-ln(abs(1+x)) )");
+
+##############################################################
+#  Main text
+
+BEGIN_PGML
+Find the general solution of the differential equation
+
+>>[`` (1+x)y'= [$a] x. ``]<<
+
+[`y(x) = {}`] [____________]{$answer->cmp()}{30}
+[@ AnswerFormatHelp("formulas") @]*
+
+_Don't forget the "[`+C`]"._
+END_PGML
+
+#############################################################
+#  Solution
+
+BEGIN_PGML_SOLUTION
+First write the equation as
+
+>>[``y'= \frac{[$a] x}{1+x} .``]<<
+
+Now integrate
+
+>>[``y = \int \frac{[$a] x}{1+x} dx + C = [$answer] .``]<<
+END_PGML_SOLUTION
+
+#############################################################
+
+COMMENT("Integrate to solve ODE, must put into standard form first.");
+
+ENDDOCUMENT();    

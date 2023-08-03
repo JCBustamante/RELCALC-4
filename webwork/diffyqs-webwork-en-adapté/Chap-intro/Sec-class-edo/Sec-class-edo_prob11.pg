@@ -1,0 +1,86 @@
+##DESCRIPTION
+## Classify an ODE system (check all that applies, nonrandomized).
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Classifications of differential equations)
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(2)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.3')
+## Problem1('')
+## KEYWORDS('ODE', 'ordinary', 'differential', 'system', 'classify')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+##############################################################
+#  Setup
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+  "Check all that apply.", 
+  "ODE",
+  "linear",
+  "system",
+);
+$mc -> extra(
+  "autonomous",
+  "PDE"
+);
+
+
+##############################################################
+#  Text
+
+BEGIN_TEXT
+Consider
+\[
+\frac{dx}{dt} = 3x-2y , \qquad 
+\frac{dy}{dt} = 5x-t y .
+\]
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS( checkbox_cmp( $mc->correct_ans() ) );
+
+##############################################################
+
+BEGIN_SOLUTION
+There are two equations, and so this is a system of equations.
+There is only one independent variables, \(t,\) 
+and so it is an ODE and not a PDE.
+The dependent variables and their derivatives (the \(x,\) \(y,\) \(\frac{dx}{dt},\) and \( \frac{dy}{dx} \))
+only appear linearly,
+and in no other functions or powers, so it is linear.
+$PAR
+It is also not autonomous since it does
+depend on \(t,\) in particlar the term \(ty.\)
+END_SOLUTION
+
+##############################################################
+
+COMMENT("Classify an ODE system (check all that applies, nonrandomized).");
+
+ENDDOCUMENT();

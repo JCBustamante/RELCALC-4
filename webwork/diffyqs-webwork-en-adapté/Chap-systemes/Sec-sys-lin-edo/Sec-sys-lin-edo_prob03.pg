@@ -1,0 +1,120 @@
+# Linear systems of ODEs
+
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## KEYWORDS('differential equations','linear systems')
+
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Numeric");
+
+$i = random(0,2,1);
+
+if ($i == 0) {
+
+  @matrix = (1,3,3,1);
+  @evect1 = (1,1);
+  $eval1  = 4;
+  @evect2 = (1,-1);
+  $eval2  = -2;
+
+} elsif ($i == 1) {
+
+  @matrix = (7,2,-4,1);
+  @evect1 = (1,-1);
+  $eval1  = 5;
+  @evect2 = (1,-2);
+  $eval2  = 3;
+
+} else {
+
+  @matrix = (5,3,3,5);
+  @evect1 = (1,-1);
+  $eval1  = 2;
+  @evect2 = (1,1);
+  $eval2  = 8;
+}
+
+######################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Find a value of \( k \) so that 
+\( \displaystyle 
+\left\lbrack 
+\begin{array}{r} $evect1[0] \\ $evect1[1] \end{array} 
+\right\rbrack 
+e^{k t}
+\) 
+is a solution to
+\( \displaystyle
+{\vec{x}^{\,\prime}}
+= 
+\left\lbrack
+\begin{array}{rr}
+$matrix[0] & $matrix[1] \\
+$matrix[2] & $matrix[3]
+\end{array}
+\right\rbrack 
+{\vec{x}}.
+\)
+$PAR
+\( k = \) 
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+Find a value of \( k \) so that 
+\( \displaystyle 
+\left\lbrack 
+\begin{array}{r} $evect2[0] \\ $evect2[1] \end{array} 
+\right\rbrack 
+e^{k t}
+\) 
+is a solution to
+\( \displaystyle
+{\vec{x}^{\,\prime}}
+= 
+\left\lbrack
+\begin{array}{rr}
+$matrix[0] & $matrix[1] \\
+$matrix[2] & $matrix[3]
+\end{array}
+\right\rbrack 
+{\vec{x}}.
+\)
+$PAR
+\( k = \) 
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+END_TEXT
+Context()->normalStrings;
+
+
+######################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( Compute("$eval1")->cmp() );
+ANS( Compute("$eval2")->cmp() );
+
+ENDDOCUMENT();

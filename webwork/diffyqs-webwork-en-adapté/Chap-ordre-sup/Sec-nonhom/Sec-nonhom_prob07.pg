@@ -1,0 +1,98 @@
+# Variation of parameters
+
+## Institution(Berkeley)
+## Author(Paul Vojta)
+## KEYWORDS('differential equation' 'second order' 'linear' 'nonhomogeneous' 'variation of parameters')
+
+##############################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->variables->add(a=>'Parameter',b=>'Parameter');
+
+
+$a = random(1, 5);	# -$a is the (double) root of the characteristic poly.
+$b = random(3, 6);
+
+# Simplified expressions
+$aor1 = $a == 1 ? '' : $a;
+$aa = $a * $a;
+$aaor1 = $aa == 1 ? '' : $aa;
+$twoa = 2 * $a;
+$bmins1 = $b - 1;
+$bmins2 = $b - 2;
+$bmins2or1 = $bmins2 == 1 ? '' : $bmins2;
+$bmins1bmins2 = $bmins1 * $bmins2;
+
+$ans = Compute("e^(-$aor1 x)/($bmins1bmins2 x^$bmins2)");
+$homogeneous = Compute("a*e^(-$aor1 x) + b*x*e^(-$aor1 x)");
+
+##############################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Find a particular solution to
+\(\displaystyle y'' + $twoa y' + $aaor1 y = \frac{e^{-$aor1 x}}{x^$b} \)
+$PAR
+\(y_{\text p} = \) \{ ans_rule(60) \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+
+#ANS(fun_cmp("$ans + $homogeneous", var => 'x',  params => ['a', 'b']) );
+ANS(Compute("$ans + $homogeneous")->cmp());
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The auxiliary polynomial of \( y'' + $twoa y' + $aaor1 y = 0 \) is
+\[ r^2 + $twoa r + $aa = (r + $a)^2 \]
+with a double root \( r=-$a \), so the solution of the complementary equation is
+\[ y_c = c_1e^{-$aor1 x} + c_2xe^{-$aor1 x} \;. \]
+Since \( G(x) = e^{-$aor1 x}/x^$b \) is not of the form for which the
+method of undetermined coefficients will work, we use the method of
+variation of parameters.
+$PAR
+We seek a solution of the form
+\[ y_p(x) = u_1(x)e^{-$aor1 x} + u_2(x)xe^{-$aor1 x} \;, \]
+where \( u_1(x) \) and \( u_2(x) \) satisfy the equations
+\[ \begin{aligned}
+  u_1' e^{-$aor1 x} + u_2' xe^{-$aor1 x} &= 0 \\
+  -$aor1 u_1' e^{-$aor1 x} + (1-$aor1 x) u_2' e^{-$aor1 x}
+    &= \frac{e^{-$aor1 x}}{x^$b} \;. \end{aligned} \]
+$PAR
+\{ $a == 1 ? 'Adding the two equations'
+  : "Multiplying the first equation by $a and adding it to the second" \}
+gives \( u_2' e^{-$aor1 x} = \dfrac{e^{-$aor1 x}}{x^$b} \), so
+\[ u_2' = \frac1{x^$b} \;. \]
+From the first equation we then see that
+\[ u_1' = -xu_2' = -\frac1{x^$bmins1} \;. \]
+Therefore we can take
+\[ u_1 = \frac1{$bmins2or1 x^{$bmins2or1}}
+  \qquad\text{and}\qquad u_2 = -\frac1{$bmins1 x^$bmins1} \;. \]
+Combining these gives the answer
+\[ y_p = \frac{e^{-$aor1 x}}{$bmins2or1 x^{$bmins2or1}}
+    - \frac{xe^{-$aor1 x}}{$bmins1 x^$bmins1}
+  = \frac{e^{-$aor1 x}}{x^{$bmins2or1}}
+    \left(\frac1{$bmins2} - \frac1{$bmins1}\right)
+  = \frac{e^{-$aor1 x}}{$bmins1bmins2 x^{$bmins2or1}} \;. \]
+END_SOLUTION
+Context()->normalStrings;
+
+COMMENT("Variation of parameters.");
+
+ENDDOCUMENT();

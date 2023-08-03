@@ -1,0 +1,140 @@
+##DESCRIPTION
+## Differentiating a possible solution, finding the general solution for a specific constant.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Verification of solutions)
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'verify')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserAssignment.pl",
+  "parserOneOf.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+#############################
+#  Setup
+
+Context("Numeric")->variables->add(
+  y=>"Real", k=>"Real", 'C1'=>"Real", 'C2'=>"Real"
+);
+parser::Assignment->Allow;
+
+Context()->flags->set(
+  reduceConstants=>0, # no decimals
+  reduceConstantFunctions=>1, # combine 4+5*2?
+  formatStudentAnswer=>'parsed', # no decimals
+);
+
+$k = random(3,9,1);
+$kk = $k**2;
+
+$f   = Formula("C1 cosh(k x) + C2 sinh(k x)");
+$fx  = $f->D('x');
+$fxx = $f->D('x','x');
+$fk = $f->substitute(k=>$k);
+$fk_alt = $f->substitute(k=>-1*$k);
+
+$answer[0] = $fx;
+$answer[1] = $fxx;
+$answer[2] = Formula("k^2 y");
+$answer[3] = OneOf(Formula("y=$fk"),Formula("y=$fk_alt"));
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Suppose \( y = $f \) where \( k > 0 \) is a 
+constant, and \( C_1 \) and \( C_2 \) are arbitrary
+constants.  Find the following.  Enter \( C_1 \) 
+as ${LQ}C1${RQ} and \( C_2 \) as ${LQ}C2${RQ}.
+
+$PAR
+\( \displaystyle \frac{dy}{dx} = \) 
+\{ ans_rule(45); \}
+\{ AnswerFormatHelp("formulas"); \}
+
+$PAR
+\( \displaystyle \frac{d^2y}{dx^2} = \)
+\{ ans_rule(45); \}
+\{ AnswerFormatHelp("formulas"); \}
+
+$PAR
+Rewrite your answer to the previous part 
+in terms of \( y \).
+$PAR
+\( \displaystyle \frac{d^2y}{dx^2} = \)
+\{ ans_rule(45); \}
+\{ AnswerFormatHelp("formulas"); \}
+
+$PAR
+Find the general solution to 
+\( \displaystyle \frac{d^2y}{dx^2} = $kk y . \)
+Enter your answer as an equation \( y = ? \).
+$PAR
+\{ ans_rule(45); \}
+\{ AnswerFormatHelp("equations"); \}
+END_TEXT
+Context()->normalStrings;
+
+############################
+#  Answers
+
+$showPartialCorrectAnswers = 1;
+
+foreach my $i (0..3) {
+  ANS( $answer[$i]->cmp() );
+}
+
+############################
+#  Solution
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The derivatives are
+$PAR
+\( \displaystyle \frac{dy}{dx} = $fx \) 
+$PAR
+\( \displaystyle \frac{d^2y}{dx^2} = $fxx \)
+
+$PAR
+Notice that the second derivative is \( k^2 \) times \(y \text{,}\) that is, 
+$PAR
+\( \displaystyle \frac{d^2y}{dx^2} = k^2 \bigl($f\bigr) = k^2 y \)
+
+$PAR
+As \($k^2 = $kk \text{,}\)
+the general solution to
+\( \displaystyle \frac{d^2y}{dx^2} = $kk y \) is the above \(y\) with
+\(k = $k \text{,}\) that is,
+$PAR
+\( y = $fk \)
+END_SOLUTION
+Context()->normalStrings;
+
+############################
+
+COMMENT("Differentiating a possible solution, finding the general solution for a specific constant.");
+
+ENDDOCUMENT();

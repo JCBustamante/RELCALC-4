@@ -1,0 +1,81 @@
+##DESCRIPTION
+## Spotting a linear equation, where linearity depends on a parameter.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Classifications of differential equations)
+## Institution(Cleveland State University)
+## Author(Barbara Margolius)
+## Level(2)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.3')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'classify')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+#############################
+#  Setup 
+
+Context("Numeric")->variables->are(
+ a=>"Real",
+);
+$a=random(2,8);
+$answer = Compute("$a");
+$expr = Compute("a^2-$a*a")->reduce();
+
+#############################
+#  Main text 
+
+Context()->texStrings;
+BEGIN_TEXT
+For what value(s) of the constant \(a\) is the differential equation
+\[\frac{d^2x}{dt^2}+($expr)x\frac{dx}{dt}=te^{(a-$a)x}\]
+a linear equation?
+$PAR
+\(a = {}\) \{ ans_rule(10) \}
+\{ AnswerFormatHelp("numbers") \}
+END_TEXT
+Context()->normalStrings;
+
+
+##############################
+#  Answer evaluation 
+
+$showPartialCorrectAnswers = 1;
+ANS( $answer->cmp );
+
+#############################
+#  Solution
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The dependent variable \(x\) appears possibly nonlinearly in the
+expression \(e^{(a-$a)x} .\)  The only way that this is
+going to be linear in \(x\) is if \(a=$a,\) in which case
+the right hand side of the equation will just be \(t.\)
+END_SOLUTION
+Context()->normalStrings;
+
+##############################
+
+COMMENT("Spotting a linear equation, where linearity depends on a parameter.");
+
+ENDDOCUMENT();

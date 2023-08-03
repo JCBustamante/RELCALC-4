@@ -1,0 +1,74 @@
+##DESCRIPTION
+## Integrable ODE general solution
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Miami Univ. Ohio, Hope College, Oklahoma State University)
+## Author(Anna Ghazaryan, Fuli Zhang, Paul Pearson, Jiri Lebl)
+## Level(4)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','general solution')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserFormulaUpToConstant.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+
+$a = random(3,9,2);
+
+$answer = FormulaUpToConstant("$a/2 e^(x^(2))");
+
+##############################################################
+#  Main text
+
+BEGIN_PGML
+Find the general solution of the differential equation
+
+>>[`` y'= [$a] xe^{x^{2}}. ``]<<
+
+[` y(x) = `] [_________]{$answer->cmp()}{30}
+[@ AnswerFormatHelp("formulas") @]*
+
+_Don't forget the "[`+C`]"._
+END_PGML
+
+#############################################################
+#  Solution
+
+BEGIN_PGML_SOLUTION
+We integrate (use the substitution [`u=x^2`]):
+
+>>[``y = \int [$a] xe^{x^{2}}\, dx + C = [$answer] .``]<<
+END_PGML_SOLUTION
+
+##############################################################
+
+COMMENT("Integrable ODE general solution");
+
+ENDDOCUMENT();    

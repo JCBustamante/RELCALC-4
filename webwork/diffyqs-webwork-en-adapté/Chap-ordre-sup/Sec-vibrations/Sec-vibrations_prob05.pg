@@ -1,0 +1,89 @@
+## Institution(Dartmouth)
+## KEYWORDS('Hooke's Law', 'position', 'underdamping')
+
+#######################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+#######################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+$m = random(2,10);
+$k = random(2,5);
+$x0 = random(.5, 2.5, .5);
+$F0 = $k * $x0;
+$c0 = int(sqrt(4*$k*$m));
+$c = random(1, $c0-1);
+
+##########################################################
+
+BEGIN_TEXT
+A spring with a $m-kg mass and a damping constant $c can be held stretched
+$x0 meters beyond its natural length by a force of $F0 newtons.  Suppose
+the spring is stretched \{2*$x0\} meters beyond its natural length and
+then released with zero velocity.
+
+$PAR
+
+In the notation of the text, what is the value \(c^2 - 4mk\)?
+\{ans_rule(20)\} \( \text m^2\text{kg}^2/\text{sec}^2 \)
+$SPACE \{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+Find the position of the mass, in meters, after t seconds.  Your answer
+should be a function of the variable t with the general form
+ \( c_1 e^{\alpha t}\cos(\beta t) + c_2 e^{\gamma t}\sin(\delta t)\)
+$PAR
+\( \alpha = \) \{ans_rule(20)\}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( \beta = \) \{ans_rule(20)\}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( \gamma = \) \{ans_rule(20)\}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( \delta = \) \{ans_rule(20)\}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( c_1 = \) \{ans_rule(20)\}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( c_2 = \) \{ans_rule(20)\}
+\{ AnswerFormatHelp("numbers") \}
+END_TEXT
+
+#######################################################
+
+$r_real = -$c/(2*$m);
+$r_imag = sqrt(-$c*$c + 4*$k*$m)/(2*$m);
+
+
+$c1 = 2*$x0;
+$c2 = (-$r_real*$c1)/$r_imag;
+
+ANS(Compute("$c^2 - 4*$k*$m")->cmp());
+ANS(Compute("$r_real")->cmp());
+ANS(Compute("$r_imag")->cmp());
+ANS(Compute("$r_real")->cmp());
+ANS(Compute("$r_imag")->cmp());
+ANS(Compute("$c1")->cmp());
+ANS(Compute("$c2")->cmp());
+
+
+# ANS(fun_cmp("exp($r_real*t) * ($c1*cos($r_imag * t) +  $c2*sin($r_imag*t))", vars=>['t']));
+ENDDOCUMENT();
+

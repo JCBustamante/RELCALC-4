@@ -1,0 +1,66 @@
+# Linear, constant coefficients, homogeneous
+
+## Institution(Rochester)
+## KEYWORDS('differential equation' 'higher order' 'third')
+
+##############################################
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "unionTables.pl",
+  "PGcourse.pl"
+);
+
+##############################################
+
+TEXT(beginproblem());
+
+$showPartialCorrectAnswers = 0;
+
+$ml = new_match_list();
+$ml->rf_print_q(~~&pop_up_list_print_q);
+$ml->ra_pop_up_list([
+"No answer" => "?",
+"A" => "A", "B" => "B", "C" => "C", 
+"D" => "D", "E" => "E", #"F" => "F",
+#"G" => "G", "H" => "H", "I" => "I",
+]);
+
+$b = random(2,9,1);
+$c = random(2,5,1);
+$d = random(2,5,1);
+while ($c == $d) {$d = random(2,5,1);}
+$c1 = $c + $d;
+$c2 = $c * $d;
+
+$ml -> qa ( "\(\ y'''- y''- y'+ y = 0 \)",
+                        "\(\quad e^x, \quad xe^x, \quad e^{-x} \)",
+            "\(\ y'''+y' = 0 \)",
+                        "\(\quad 1, \quad \cos(x), \quad \sin(x) \)",
+            "\(\ y'''-$b y''+y'-$b y = 0 \)",
+                        "\(\quad e^{$b x}, \quad \cos(x), \quad \sin(x) \)",
+            "\(\ y'''-$c1 y'' +$c2 y' = 0 \)",
+                        "\(\quad 1, \quad e^{$c x}, \quad e^{$d x} \)",
+            "\(\ y'''+3y''+3y'+y = 0 \)",
+                        "\(\quad e^{-x}, \quad xe^{-x}, \quad x^2e^{-x} \)",
+
+);
+
+$ml->choose(5);
+
+##############################################
+
+BEGIN_TEXT
+Match the third order linear equations with their fundamental solution sets.
+$PAR
+\{ ColumnMatchTable($ml) \}
+END_TEXT
+
+##############################################
+
+ANS(str_cmp( $ml->ra_correct_ans )   ) ;
+
+ENDDOCUMENT();
+

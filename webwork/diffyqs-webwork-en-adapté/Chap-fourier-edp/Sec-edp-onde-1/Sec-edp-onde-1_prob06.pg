@@ -1,0 +1,103 @@
+##DESCRIPTION
+## Questions on how frequency of oscillation transforms in the wave equation
+## based on length and tension.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Partial differential equations)
+## DBsection(Wave equation)
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('4.7')
+## Problem1('')
+## MO(1)
+## KEYWORDS('PDE', 'partial', 'differential', 'equation', 'wave equation')
+
+########################################################################
+
+###########################
+##  Initialization
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+
+###########################
+#  Setup
+
+Context("Numeric");
+
+
+$a = random(2,9,1);
+do { $b = random(2,9,1); } until ($b != $a);
+$bsq = $b*$b;
+
+$answer1 = Compute("1/$a")->reduce;
+$answer2 = Compute("$b")->reduce;
+
+############################
+##  Main text
+#
+
+Context()->texStrings;
+BEGIN_TEXT
+Take the vibrating string satisfying
+$PAR
+\( \quad u_{tt} = a^2 u_{xx}  , \qquad 0 < x < L , \quad t > 0 \)
+$PAR
+with boundary conditions \( \quad u(0,t) = u(L,t)= 0 . \) 
+$PAR
+The constant \(a^2 = \frac{T}{\rho} \) where \(T\) is tension
+and \(\rho\) is linear density of the string.
+$PAR
+Suppose the string vibrates at base frequency \(\omega .\)
+$PAR
+If we lengthen the string to \( $a L \)
+the frequency \(\omega\) gets multiplied by
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+If we increase tension by a factor of \( $bsq \)
+the frequency \(\omega\) gets multiplied by
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+END_TEXT
+Context()->normalStrings;
+
+
+#############################
+##  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $answer1->cmp() );
+ANS( $answer2->cmp() );
+
+
+#####################
+# Solution
+
+Context()->texStrings;
+BEGIN_SOLUTION
+The base frequency (angular) is \( \frac{\pi a}{L} \)
+where \(a^2 = \frac{T}{\rho} \)
+for tension \(T\) and linear density \(\rho .\)
+Therefore increasing \(L\) by a factor of \($a,\)
+divides the base frequency by \($a .\)
+Increasing tension by a factor of \($bsq\) multiplies the frequency by the square root, that is \($b .\)
+END_SOLUTION
+Context()->normalStrings;
+
+ENDDOCUMENT();

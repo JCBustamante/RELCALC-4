@@ -1,0 +1,90 @@
+##DESCRIPTION
+## Pick solutions from a list
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Verification of solutions)
+## Institution(Rochester)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'match')
+
+#####################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+#####################################################
+
+TEXT(beginproblem());
+
+$case = random(1,2,1);
+
+if ($case == 1) { 
+	$root = non_zero_random(-7,7,1);
+	$a = -2*$root;
+	$b = $root**2;
+	if ($root == 1) {
+		@yes = ("\(y(x)=e^x\)", "\(y(x)=xe^x\)", "\(y(x)=0\)");
+		@no = ("\(y(x)=e^{-x}\)", "\(y(x)=xe^{-x}\)", "\(y(x)=x^2e^x\)", "\(y(x)=x\)");
+	} elsif ($root == -1) { 
+		@yes = ("\(y(x)=e^{-x}\)", "\(y(x)=xe^{-x}\)", "\(y(x)=0\)");
+                @no = ("\(y(x)=e^x\)", "\(y(x)=xe^x\)", "\(y(x)=-e^x\)", "\(y(x)=-x\)");
+	} else {
+		@yes = ("\(y(x)=e^{$root x}\)", "\(y(x)=xe^{$root x}\)", "\(y(x)=0\)");
+                @no = ("\(y(x)=e^{-$root x}\)", "\(y(x)=x^2e^{$root x}\)", "\(y(x)=$root x\)", "\(y(x)=$root x e^{-$root x}\)");
+	}
+} else { 
+	$root1 = non_zero_random(-3,3,1);
+	$root2 = random(abs($root1)+2, 7,1);
+	$a = - $root1 - $root2;
+	$b = $root1 * $root2;
+        if ($root1 == 1) {
+                @yes = ("\(y(x)=e^x\)", "\(y(x)=e^{$root2 x}\)", "\(y(x)=0\)");
+                @no = ("\(y(x)=e^{-x}\)", "\(y(x)=xe^{- $root2 x}\)", "\(y(x)=x\)", "\(y(x)=$root2 x\)");
+        } elsif ($root1 == -1) { 
+                @yes = ("\(y(x)=e^{-x}\)", "\(y(x)=e^{$root2 x}\)", "\(y(x)=0\)");
+                @no = ("\(y(x)=e^x\)", "\(y(x)=xe^{-x}\)", "\(y(x)=-x\)", "\(y(x)=- $root2 x\)");
+        } else {
+                @yes = ("\(y(x)=e^{$root1 x}\)", "\(y(x)=e^{$root2 x}\)", "\(y(x)=0\)");
+                @no = ("\(y(x)=e^{-$root x}\)", "\(y(x)=e^{x}\)", "\(y(x)=$root1 x\)", "\(y(x)=$root2 x\)");
+        }
+}
+
+$cmc = new_checkbox_multiple_choice();
+
+$cmc -> qa ("Which of the following functions are solutions of the differential equation \( y'' + $a y' + $b y = 0 \text{?}\)", 
+	    $yes[0], $yes[1], $yes[2]);
+
+$cmc-> extra ($no[0], $no[1], $no[2], $no[3]);
+
+#####################################################
+
+BEGIN_TEXT
+\{ $cmc -> print_q \}
+$BR
+\{ $cmc -> print_a \}
+END_TEXT
+
+#####################################################
+
+$showPartialCorrectAnswers = 0;
+
+ANS(checkbox_cmp($cmc->correct_ans));
+
+#####################################################
+
+COMMENT("Pick solutions from a list.");
+
+ENDDOCUMENT();

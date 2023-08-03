@@ -1,0 +1,173 @@
+##DESCRIPTION
+## Plugging a test solution into a differential equation, verifying it, and verifying a nonsolution
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Verification of solutions)
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'verify')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "answerHints.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+#############################
+#  Setup
+
+Context("Numeric")->variables->add(
+  t=>"Real"
+);
+
+$k = random(2,5,1);
+$k3 = 3 * $k;
+$kk3 = 3 * $k**2;
+$kkk = $k**3;
+$x = Formula("e^($k t)");
+$expr = "x''' - $k3 x'' + $kk3 x' - $kkk x";
+
+Context()->flags->set(
+  reduceConstants=>0, # no decimals
+  reduceConstantFunctions=>1, # combine 4+5*2?
+  formatStudentAnswer=>'parsed', # no decimals
+);
+
+$answer[0] = Formula("$k^3 * $x")->reduce;
+$answer[1] = Formula("-3*$k * $k^2*$x")->reduce;
+$answer[2] = Formula("3*$k^2 * $k*$x")->reduce;
+$answer[3] = Formula("-$k^3*$x")->reduce;
+
+$answer[4] = Formula("0");
+
+$answer[5] = PopUp(["Choose","Yes","No"],"Yes");
+
+$answer[6] = PopUp(["Choose","Yes","No"],"No");
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Suppose \( x = $x \).  
+
+$PAR
+Find the value of the expression
+\( $expr \) in terms of the variable \( t \).
+$BR
+$BITALIC Enter the terms in the order given. $EITALIC
+$PAR
+\{ ans_rule(10) \}
++
+\{ ans_rule(10) \}
++
+\{ ans_rule(10) \}
++
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("formulas") \}
+
+$PAR
+Simplify your answer above to obtain
+a differential equation in terms
+of the dependent variable \( x \) satisfied
+by \( x = $x \).  
+$PAR
+\( $expr = \) 
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("formulas") \}
+
+$PAR
+So, is \(x = $x \) a solution to your
+differential equation above?
+\{ $answer[5]->menu() \}
+
+$PAR
+Now,
+is \( x = e^t \) a solution to your
+differential equation above?
+\{ $answer[6]->menu() \}
+$BR
+$BITALIC Be sure you can
+justify your answer. $EITALIC
+END_TEXT
+Context()->normalStrings;
+
+############################
+#  Answers
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $answer[0]->cmp() );
+ANS( $answer[1]->cmp()->withPostFilter(AnswerHints(
+  [Compute("-$answer[1]"),
+   Compute("-1/(3*$k)*$answer[1]"),
+   Compute(" 1/(3*$k)*$answer[1]")] => 
+  "Check your signs and the coefficients in the D.E.",
+)) 
+);
+ANS( $answer[2]->cmp()->withPostFilter(AnswerHints(
+  [Compute("1/(3*$k^2)*$answer[2]")] => 
+  "Check your signs and the coefficients in the D.E.",
+)) 
+);
+ANS( $answer[3]->cmp()->withPostFilter(AnswerHints(
+  [Compute("-$answer[3]"),
+   Compute("-1/($k^3)*$answer[3]"),
+   Compute(" 1/($k^3)*$answer[3]")] => 
+  "Check your signs and the coefficients in the D.E.",
+))  
+);
+ANS( $answer[4]->cmp() );
+ANS( $answer[5]->cmp() );
+ANS( $answer[6]->cmp() );
+
+############################
+#  Solution
+
+Context()->texStrings;
+BEGIN_SOLUTION
+As \(x = $x \text{,}\) then
+\( x' = $k $x \text{,}\)
+\(x'' = $k^2 $x \text{,}\) and
+\(x''' = $k^3 $x \text{.} \)
+So the terms are:
+\[x''' = $answer[0] \text{,} \]
+\[- $k3 x'' = $answer[1] \text{,} \]
+\[$kk3 x' = $answer[2] \text{,} \]
+\[-$kkk x = $answer[3] \text{.} \]
+When we add those terms together we get \(0\text{,}\) and hence the differential equation we get is
+\[x''' - $k3 x'' + $kk3 x' - $kkk x = 0 \text{.}\]
+The right hand side \(0\) is precisely what we get when we plug in \(x=$x\text{,}\)
+and so \(x = $x\) is a solution to the equation.
+$PAR
+On the other hand when we plug in \(x = e^x\) to the left hand side we get
+\[ x''' - $k3 x'' + $kk3 x' - $kkk x = e^x - $k3 e^x + $kk3 e^x - $kkk e^x = (1-$k3+$kk3-$kkk) e^x \not= 0 \text{.}\]
+Since the left hand side is not zero when we plug in \(x = e^x\text{,}\)
+then this is not a solution to the differential equation.
+END_SOLUTION
+Context()->normalStrings;
+
+############################
+
+COMMENT("Plugging a test solution into a differential equation, verifying it, and verifying a nonsolution.");
+
+ENDDOCUMENT();

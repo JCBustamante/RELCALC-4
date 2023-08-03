@@ -1,0 +1,96 @@
+##DESCRIPTION
+## Finding a parameter so that a function is a solution.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Verification of solutions)
+## Institution(Dartmouth)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'verify')
+
+#####################################################
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+ 
+#####################################################
+
+## Choose a value of k for sin(kt)
+$k = non_zero_random(2,20);
+
+$ans1 = Compute("$k");
+$ans2 = Compute("-$k");
+$ans3 = Compute("$k");
+
+TEXT(beginproblem());
+
+#####################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+For what positive value of \(k\) does the function \(y = \sin(kt) \) satisfy the differential equation \( y'' + \{$k*$k\}y = 0\text{?}\) 
+$PAR
+\{ ans_rule(20); \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+For what negative value of \(k\) does the function \(y = \sin(kt) \) satisfy the differential equation \( y'' + \{$k*$k\}y = 0\text{?}\) 
+$PAR
+\{ ans_rule(20); \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Similarly, for which positive value of \(k\) does the function \(y = \cos(kt) \) satisfy the differential equation \( y'' + \{$k*$k\}y = 0\text{?}\) 
+$PAR
+\{ ans_rule(20); \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+#####################################################
+
+## Do NOT show partial correct answers
+$showPartialCorrectAnswers = 0;
+
+ANS($ans1->cmp());
+ANS($ans2->cmp());
+ANS($ans3->cmp());
+
+#####################################################
+
+Context()->texStrings;
+BEGIN_SOLUTION
+Let
+\(y = \sin(kt) \text{.} \)  Then \(y' = k \cos(kt)\) and \( y'' = -k^2 \sin(kt) \text{.} \)
+So if we plug this into the left hand side of the equation we get
+\[ y'' + \{$k*$k\} y = -k^2 \sin(kt) + \{ $k*$k \} \sin(kt) = (-k^2 + \{$k*$k\}) \sin(kt) \text{.} \]
+For this to be equal to zero we must have that \( -k^2 + \{$k*$k\} = 0 \text{,} \)
+or in other words that 
+\(k= \pm \sqrt{ \{$k*$k\} } \text{.} \)
+So either \( k = $k \) or \( k = -$k \text{.}\)
+$PAR
+Let
+\(y = \cos(kt) \text{.}\)  Then \(y' = -k \sin(kt)\) and \( y'' = -k^2 \cos(kt) \text{.}\)
+If we plug this into the left hand side of the equation we get
+\[ y'' + \{$k*$k\} y = -k^2 \cos(kt) + \{ $k*$k \} \cos(kt) = (-k^2 + \{$k*$k\}) \cos(kt) \text{.} \]
+For this to be equal to zero we must have that \( -k^2 + \{$k*$k\} = 0 \text{.} \)  We now want just the positive value of \(k\) so
+\(k= \sqrt{ \{$k*$k\} } = $k \text{.} \)
+END_SOLUTION
+Context()->normalStrings;
+
+#####################################################
+
+COMMENT("Finding a parameter so that a function is a solution.");
+
+ENDDOCUMENT();

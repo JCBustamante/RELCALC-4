@@ -1,0 +1,64 @@
+##DESCRIPTION
+## Integrating factor, initial value problem
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Integrating factor)
+## Institution(ASU, Oklahoma State University)
+## Author(Unknown, Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.4')
+## Problem1('')
+## Level(3)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'integrating factor', 'initial value problem')
+
+##############################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+##############################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$k = random(3,9,1);
+$a = random(2,9,1);
+$b = random(1,9,1);
+$B = ($k - 1)*$b;
+$m = random(2,10,1);
+
+##############################################
+
+BEGIN_PGML
+Solve the initial value problem
+
+>>[``
+\frac{dy}{dx} -  y = [$a] e^x + [$B] e^{[$k] x}
+``]<<
+
+with [: y(0) = [$m] :].
+
+[` y = {} `]
+[________]{"($m - $b )* exp(x) + $a * x * exp(x) + $b * exp($k * x)"}{70}
+[@ AnswerFormatHelp("formulas") @]*
+END_PGML
+
+##############################################
+
+COMMENT("Integrating factor, initial value problem");
+
+##############################################
+
+ENDDOCUMENT();       

@@ -1,0 +1,62 @@
+##DESCRIPTION
+## Integrating factor, initial value problem, easy integration
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Integrating factor)
+## Institution(ASU, Oklahoma State University)
+## Author(Unknown, Jiri Lebl)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.4')
+## Problem1('')
+## Level(3)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'integrating factor', 'initial value problem')
+
+##############################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+	
+TEXT(beginproblem());
+
+Context("Numeric");
+
+$b = non_zero_random(-15,15,3);
+$y0 = non_zero_random(-5,5,1);
+
+$c = $b/3;
+
+##############################################################
+
+BEGIN_PGML
+Find the function [:y(x):] that satisfies the differential equation 
+
+>>[`` \frac{dy}{dx} - 2 x y = [$b] x^2 e^{x^2} ``]<<
+
+and the condition [: y(0) = [$y0] :]. 
+
+[`y(x)={}`]
+[______]{"($c*x^3 + $y0)*e^(x^2)"}{50}
+[@ AnswerFormatHelp("formulas") @]*
+END_PGML
+
+##############################################################
+
+COMMENT("Integrating factor, initial value problem, easy integration");
+
+##############################################################
+
+ENDDOCUMENT();

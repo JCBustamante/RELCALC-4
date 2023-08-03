@@ -1,0 +1,124 @@
+##DESCRIPTION
+## Separable equation initial value problem, guided solution
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Alfred University)
+## Author(Darwyn Cook)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.3')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'separable', 'initial value problem')
+
+############################################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserFormulaUpToConstant.pl",
+  "answerHints.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+Context("Numeric");
+$xvariable = Context()->copy;
+Context()->variables->add(y=>"Real",k=>"Real",dy=>"Real");
+$showPartialCorrectAnswers = 1;
+
+
+############################################################################
+##
+##  ayy'=x
+##
+$a = random(2,6,1); 
+$x0 = 1;
+$y0 = random(-9,-3,1); 
+$C = Compute("(($y0)^2-$a)"); 
+
+$inty = Formula("2*y/(y^2-$a)");
+$intx = Formula("1/x^2");
+$solny = FormulaUpToConstant("ln(abs(y^2-$a))");
+$solnx = FormulaUpToConstant("-1/x");
+$u = Formula("y^2-$a");
+$du = Formula("2*y*dy");
+
+$gensolnpos = Formula("sqrt(k*e^(-1/x)+$a)");
+$gensolnneg = Formula("-sqrt(k*e^(-1/x)+$a)");
+$soln =Formula($xvariable,"-sqrt($C*e^(-1/x+1)+$a)");
+
+############################################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+To solve the separable differential equation 
+\[ \frac{x^2}{y^2-$a}\frac{dy}{dx} = \frac{1}{2y} ,\]
+we must find two separate integrals:
+$PAR
+\(\displaystyle\int\) \{$inty->ans_rule(30)\} \(dy = \) \{$solny->ans_rule(30)\}
+\{ AnswerFormatHelp("formulas") \}
+$BR
+and
+$BR
+\(\displaystyle\int\) \{$intx->ans_rule(30)\} \(dx = \)\{$solnx->ans_rule(30)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+The first integral we integrate by substitution:
+$BR
+\(u = \) \{$u->ans_rule(25)\}
+\{ AnswerFormatHelp("formulas") \}
+$BR
+\(du = \) \{$du->ans_rule(25)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Solving for \(y\) we get one positive solution
+$BR
+\(y = \) \{$gensolnpos->ans_rule(40)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+And one negative solution
+$BR
+\(y = \) \{$gensolnneg->ans_rule(40)\}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+$BITALIC $BBOLD Note: $EBOLD You must simplify all arbitrary constants down to one constant \(k.\) $EITALIC
+$PAR
+Find the particular solution satisfying the initial condition 
+\[ y($x0) = $y0. \]
+$BR
+\( y(x) = \) \{ $soln->ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+############################################################################
+
+ANS($inty->cmp());
+ANS($solny->cmp()->withPostFilter(AnswerHints(
+                   FormulaUpToConstant("ln(y^2-$a)")=>
+                   "You forgot the absolute value")));
+ANS($intx->cmp());
+ANS($solnx->cmp());
+ANS($u->cmp());
+ANS($du->cmp()->withPostFilter(AnswerHints(
+                Formula("2*y") => "You forgot dy")));
+ANS($gensolnpos->cmp()->withPostFilter(AnswerHints(
+                Formula("sqrt(e^k*e^(-1/x)+$a)") => "When you remove the absolute values from the y^2-$a you need to make a constant that can be both positive and negative (and zero) - replace the e^k with just k")));
+ANS($gensolnneg->cmp()->withPostFilter(AnswerHints(
+                Formula("-sqrt(e^k*e^(-1/x)+$a)") => "When you remove the absolute values from the y^2-$a you need to make a constant that can be both positive and negative (and zero) - replace the e^k with just k")));
+ANS($soln->cmp());
+
+############################################################################
+
+COMMENT("Separable equation initial value problem, guided solution");
+
+ENDDOCUMENT();

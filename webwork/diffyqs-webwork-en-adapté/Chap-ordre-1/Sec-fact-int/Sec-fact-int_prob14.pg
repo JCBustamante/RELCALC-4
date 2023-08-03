@@ -1,0 +1,104 @@
+##DESCRIPTION
+## Integrating factor, initial value problem, word problem - mixing, work backwards from solution
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Applications - mixing problems)
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.4')
+## Problem1('')
+## Level(5)
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'integrating factor', 'initial value problem')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "unionLists.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+#############################
+#  Setup 
+
+Context("Numeric")->variables->are(t=>"Real");
+Context()->variables->set(t=>{limits=>[-100,100]});
+
+$a = random(20,90,10);
+$b = 10 * $a;
+
+$v = $a * random(10,20,1);  # volume of the tank
+$f = random(2,5,1); # flowrate
+
+$c = Formula("e^(-t/$b) / $a");
+$cp= $c->D('t');
+
+$y0 = Compute("$v / $a");
+
+$c_in = Compute("(1-$v /($b*$f)  )*e^(-t/$b)/$a");
+
+#############################
+#  Main text 
+
+Context()->texStrings;
+BEGIN_TEXT
+A tank, containing $v liters of liquid,
+has a brine solution entering at a constant 
+rate of $f liters per minute.  The 
+well-stirred solution leaves the tank at the
+same rate.  The concentration within the tank
+is monitored and found to be
+$PAR
+\[
+c(t) = $c \ \ \mathrm{kg/L}.
+\]
+
+$PAR
+Determine the amount of salt initially
+present within the tank.  
+$PAR
+Initial amount of salt = \{ ans_rule(20) \} kg
+$SPACE $SPACE
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+Determine the inflow concentration 
+\( c_{in}(t) \), where \( c_{in}(t) \)
+denotes the concentration of salt in the 
+brine solution flowing into the tank.
+$PAR
+\( c_{in}(t) = \)
+\{ ans_rule(50) \} kg / L
+$SPACE $SPACE
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+##############################
+#  Answer evaluation 
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $y0->cmp() );
+ANS( $c_in->cmp() );
+
+##############################
+
+COMMENT("Integrating factor, initial value problem, word problem - mixing, work backwards from solution");
+
+##############################
+
+ENDDOCUMENT();

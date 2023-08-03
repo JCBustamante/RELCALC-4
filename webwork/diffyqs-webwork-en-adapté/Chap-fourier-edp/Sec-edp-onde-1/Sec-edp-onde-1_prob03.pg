@@ -1,0 +1,140 @@
+##DESCRIPTION
+## Wave equation series solution
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Partial differential equations)
+## DBsection(Wave equation)
+## Institution(Alfred University)
+## Author(Darwyn Cook)
+## Level(4)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('4.7')
+## Problem1('')
+## MO(1)
+## KEYWORDS('PDE', 'partial', 'differential', 'equation', 'wave equation')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "Alfredmacros.pl",
+  "answerHints.pl",
+  "unionTables.pl",
+  "PGcourse.pl"
+);
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+##############################################################
+#
+#  Setup
+#
+#
+
+Context("Numeric");
+Context()->variables->add(n=>['Real',limits=>[1,20],resolution=>1]);
+
+$k1 = random(1,9);
+$k2 = random(1,9);
+$L = random(3,9,2);
+$a = random(2,4);
+$asq = $a*$a;
+$g = Compute("$k2*x*($L-x)");
+
+$Cn = Formula("$k1*(2 (cos((n*pi)/2) - cos(n*pi)))/(n*pi)");
+$Bn = Formula("$k2*(-4)*($L^2)*(-1 + (-1)^n)/(n^3*pi^3)");
+
+##############################################################
+#
+#  Text
+#
+#
+
+Context()->texStrings;
+BEGIN_TEXT
+Solve the wave equation with fixed endpoints and the given initial displacement and velocity.
+\[
+u_{tt} = $asq u_{xx}, \quad 0< x < $L, \quad t > 0
+\]
+\[
+u(0,t) = 0, \quad u($L,t) = 0, \quad t > 0
+\]
+\[
+u(x,0) = 
+\begin{cases}
+0, &0 < x < \frac{$L}{2}\\
+$k1, &\frac{$L}{2}<x<$L\\
+\end{cases}\]
+\[
+u_t(x,0) = $g, \quad 0<x<$L
+\]
+We solve the PDE using the series solution
+\[
+u(x,t) = \sum_{n=1}^\infty \sin\left( \frac{n\pi}{$L}x\right) \left(\frac{$L}{$a n\pi}  b_n \sin\left(\frac{$a n\pi}{$L}t\right)+c_n \cos\left(\frac{$a n\pi}{$L}t\right) \right)  .
+\]
+The coefficients \(b_n\) and \(c_n\) are Fourier coefficients we have computed many times:
+$PAR
+\{BeginTable(center=>0).
+      Row(['\(b_n=\)',ans_rule(15),tableintegral(width=>1),ans_rule(30),'\(dx\)'],separation=>2).
+  EndTable();
+\}
+\{BeginTable(center=>0).
+      Row(['\(\hskip 12pt\)','\(=\)',ans_rule(60)],separation=>2).
+  EndTable();
+\}
+$PAR
+\{BeginTable(center=>0).
+      Row(['\(c_n\)','\(=\)',ans_rule(15),tableintegral(),ans_rule(20),'\(dx\)'],separation=>2).
+  EndTable();
+\}
+\{BeginTable(center=>0).
+      Row(['\(\hskip 12pt\)','\(=\)',ans_rule(35),tableevaluate()],separation=>2).
+  EndTable();
+\}
+\{BeginTable(center=>0).
+      Row(['\(\hskip 12pt\)','\(=\)',ans_rule(60)],separation=>2).
+  EndTable();
+\}
+$PAR
+\{ AnswerFormatHelp("formulas") \}
+$SPACE
+\{ AnswerFormatHelp("numbers") \}
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#
+#  Answers
+#
+#
+
+# Compute b_n
+ANS(Compute("2/$L")->cmp() );
+ANS(Compute("0")->cmp() );
+ANS(Compute("$L")->cmp() );
+ANS(Compute("$g*sin(n*pi*x/$L)")->cmp() );
+ANS($Bn->cmp);
+
+# Compute c_n
+ANS(Compute("2/$L")->cmp() );
+ANS(Compute("$L/2")->cmp() );
+ANS(Compute("$L")->cmp() );
+ANS(Compute("$k1*sin(n*pi*x/$L)")->cmp() );
+ANS(Compute("$k1*(-2)/(n*pi)*cos(n*pi*x/$L)")->cmp() );
+ANS(Compute("$L/2")->cmp() );
+ANS(Compute("$L")->cmp() );
+ANS($Cn->cmp); 
+
+
+ENDDOCUMENT();        

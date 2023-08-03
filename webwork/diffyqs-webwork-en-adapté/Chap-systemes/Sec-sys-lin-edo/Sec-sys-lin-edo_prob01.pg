@@ -1,0 +1,111 @@
+# Linear systems of ODEs, matrix notation for systems
+
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## KEYWORDS('differential equations','linear systems')
+
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Matrix");
+Context()->variables->{namePattern} = qr/[a-z][a-z0-9_]*'*/i;
+Context()->variables->are(
+  "x"=>"Real",
+  "x'"=>"Real",
+  "y"=>"Real",
+  "y'"=>"Real",
+  "t"=>"Real"
+);
+
+$a = random(2,9,1);
+$b = random(2,9,1);
+$c = random(2,9,1);
+$d = random(2,9,1);
+
+$a11 = Formula("e^($a t)");
+$a12 = Formula("$b t");
+$a21 = Formula("$c");
+$a22 = Formula("$d tan(t)");
+
+$A = Matrix([[$a11,-$a12],[$a21,$a22]]);
+
+$f1 = Formula("$c sin(t)");
+$f2 = Formula("$a cos(t)");
+
+$f = Matrix([[$f1],[-$f2]]);
+
+$x = Formula("x");
+$y = Formula("y");
+
+$xy = Matrix([[$x],[$y]]);
+
+$xp = Formula("x'");
+$yp = Formula("y'");
+
+$xyp = Matrix([[$xp],[$yp]]);
+
+######################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Write the system 
+\[
+\begin{aligned}
+x' & = $a11 x - $a12 y + $f1 \\
+y' & = $a22 y + $a21 x - $f2
+\end{aligned}
+\]
+in the form 
+\[ 
+\frac{d}{dt} \left\lbrack\begin{array}{c} x \\ y \end{array}\right\rbrack 
+= 
+P(t) \left\lbrack\begin{array}{c} x \\ y \end{array}\right\rbrack + {\vec{f}}(t).
+\]
+
+$PAR
+\{ $xyp->ans_array(5) \}
+\(=\)
+\{ $A->ans_array(10) \}
+\{ $xy->ans_array(5) \}
+\(+\)
+\{ $f->ans_array(10) \}
+$BR
+\{ AnswerFormatHelp("formulas") \} \{ AnswerFormatHelp("matrices") \}
+$PAR
+$BITALIC $BBOLD Note: $EBOLD Use prime notation for derivatives and write 
+\( x \) and \( x' \), etc., instead of 
+\( x(t) \), \( x'(t) \), or \( \frac{dx}{dt} \).
+$EITALIC
+END_TEXT
+Context()->normalStrings;
+
+
+######################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS($xyp->cmp());
+ANS($A->cmp());
+ANS($xy->cmp());
+ANS($f->cmp());
+
+ENDDOCUMENT();
+

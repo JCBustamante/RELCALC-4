@@ -1,0 +1,97 @@
+##DESCRIPTION
+## Verifying a solution to a nonlinear equation
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(Introductory concepts)
+## DBsection(Verification of solutions)
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('0.2')
+## Problem1('')
+## MO(1)
+## KEYWORDS('ODE', 'ordinary', 'differential', 'equation', 'verify', 'nonlinear')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+#############################
+#  Setup
+
+Context("Numeric")->variables->add(
+  t=>"Real"
+);
+
+Context()->flags->set(
+  reduceConstants=>0, # no decimals
+  reduceConstantFunctions=>1, # combine 4+5*2?
+  formatStudentAnswer=>'parsed', # no decimals
+);
+
+$a = random(0,1,1);
+if ($a==0) {
+  $y = Formula("sin(t)");
+} else {
+  $y = Formula("cos(t)");
+}
+
+$yt = $y->D('t');
+
+$answer[0] = Formula("($yt)^2");
+$answer[1] = Formula("1-($y)^2");
+
+#############################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Show that \( y = $y \) is a solution to 
+\( \displaystyle 
+\left(
+\frac{dy}{dt}
+\right)^2
+=
+1 - y^2
+\text{.}
+\)
+$PAR
+To do so, compute each side of the equation in terms of the
+the independent variable \( t \text{.} \)
+$BR
+$BITALIC
+Be sure you can justify your answer. $EITALIC
+$PAR
+\{ ans_rule(20); \} \({}={}\) \{ ans_rule(20); \}
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+############################
+#  Answers
+
+$showPartialCorrectAnswers = 1;
+
+foreach my $i (0..1) {
+  ANS( $answer[$i]->cmp() );
+}
+
+############################
+
+COMMENT("Verifying a solution to a nonlinear equation.");
+
+ENDDOCUMENT();

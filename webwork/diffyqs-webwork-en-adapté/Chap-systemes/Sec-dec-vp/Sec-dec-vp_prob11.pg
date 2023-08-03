@@ -1,0 +1,85 @@
+# Eigenvalues and systems of differential equations
+# Complex eigenvalues
+
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Complex-Matrix");
+
+$a = non_zero_random(-7,7,1);
+
+($P11,$P12,$P21,$P22) = ( Real("$a * 4"), Real("$a * (-2)"), Real("$a * 5"), Real("$a * (-2)") );
+
+$P = Matrix ([[$P11,$P12],[$P21,$P22]]);
+
+######################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Consider the system of differential equations
+\[
+\begin{aligned}
+x_1^{\prime} & = $P11 x_1 + $P12 x_2, \\
+x_2^{\prime} & = $P21 x_1 + $P22 x_2. 
+\end{aligned}
+\]
+
+$PAR
+Rewrite this system as a matrix equation 
+\( {\vec{x}^{\,\prime}} = A {\vec{x}} \).
+$PAR
+\( {\vec{x}^{\,\prime}} = \)
+\{ $P->ans_array(5) \}
+\( {\vec{x}} \)
+$SPACE
+\{ AnswerFormatHelp("matrices") \}
+
+END_TEXT
+Context()->normalStrings;
+
+
+######################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $P->cmp() );
+
+$eigenvals = List( Compute("$a + $a i"), Compute("$a - $a i") );
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Compute the eigenvalues of the coefficient matrix \( A \)
+and enter them as a comma separated list.
+$PAR
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+END_TEXT
+Context()->normalStrings;
+
+ANS( $eigenvals->cmp() );
+
+COMMENT("Distinct complex eigenvalues a +/- ai.");
+
+ENDDOCUMENT();

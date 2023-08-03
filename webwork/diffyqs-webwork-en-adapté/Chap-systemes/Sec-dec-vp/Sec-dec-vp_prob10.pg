@@ -1,0 +1,71 @@
+# Eigenvalues and systems of differential equations
+# Distinct real eigenvalues
+
+
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+Context("Matrix");
+
+$a = random(2,7,1);
+do { $b = random(2,7,1); } until ($b != $a);
+
+$A = Matrix("[[1/$a,0],[0,1/$b]]");
+
+
+######################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+The general solution of the linear system
+\( {\vec{x}^{\,\prime}} = A {\vec{x}} \)
+is
+\[
+{\vec{x}}(t)
+=
+\begin{bmatrix}
+e^{t/$a} & 0 \\
+0 & e^{t/$b}
+\end{bmatrix}
+\begin{bmatrix}
+c_1 \\
+c_2
+\end{bmatrix}
+.
+\]
+Determine the constant coefficient matrix \( A \).
+$PAR
+\( A = \) \{ $A->ans_array() \}
+\{ AnswerFormatHelp("matrices") \}
+END_TEXT
+Context()->normalStrings;
+
+
+######################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $A->cmp() );
+
+ENDDOCUMENT();

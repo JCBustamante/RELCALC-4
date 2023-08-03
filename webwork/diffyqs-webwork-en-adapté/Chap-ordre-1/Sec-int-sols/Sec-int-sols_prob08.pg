@@ -1,0 +1,162 @@
+##DESCRIPTION
+## Integrate to solve after inverse function theorem, simple separable.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Unknown, Oklahoma State University)
+## Author(Unknown, Jiri Lebl)
+## Level(4)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','initial value problem')
+
+########################################################################
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+########################################################
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+$a = random(2,9,1) * random(-1,1,2); 
+$k = random(4,6,1); 
+$x0 = non_zero_random(-6,6,1);
+$x0abs = $x0;
+$x0sign = 1;
+$anssign = 1;
+$oddroot = 1;
+if ((-1)**($k-1) == 1) {
+  $oddroot = 0;
+}
+$anssignstr = "";
+if ($x0 < 0) {
+  $x0sign = -1;
+  $x0abs = -$x0;
+  if ((-1)**($k-1) == 1) {
+    $anssignstr = "-";
+    $anssign = -1;
+  }
+}
+
+# Make sure the range is something sane
+$tmin1 =  (0.01 - ($x0**($k-1))) / ($a*(1-$k));
+$tmax1 =  (2 - ($x0**($k-1))) / ($a*(1-$k));
+
+# Alternate range for odd roots since students may have done something
+# like -(-foo)^(1/3)
+$tmin2 =  (-0.01 - ($x0**($k-1))) / ($a*(1-$k));
+$tmax2 =  (-2 - ($x0**($k-1))) / ($a*(1-$k));
+
+if ($tmin1 > $tmax1) {
+  $tmp = $tmax1;
+  $tmax1 = $tmin1;
+  $tmin1 = $tmp;
+}
+
+if ($tmin2 > $tmax2) {
+  $tmp = $tmax2;
+  $tmax2 = $tmin2;
+  $tmin2 = $tmp;
+}
+
+Context()->variables->are(t=>['Real']);
+Context()->variables->set(t=>{limits=>[$tmin2,$tmax2]});
+$WLcontext = Context()->copy;
+Context()->variables->set(t=>{limits=>[$tmin1,$tmax1]});
+$DEFcontext = Context();
+
+$a1 = "($anssign)*((-$k+1)*$a*t+($x0)^($k-1))^(-1/($k-1))";
+$a2 = "-($anssign)*(-((-$k+1)*$a*t+($x0)^($k-1)))^(-1/($k-1))";
+$ans = Compute("$a1");
+$cmp = $ans->cmp( checker=>sub {
+  my ( $correct, $student, $ansHash ) = @_;
+  if ($oddroot) {
+    if (Formula($WLcontext,"$a2") == Formula($WLcontext,"$student")) {
+      return 1;
+    }
+  }
+  return Formula($DEFcontext,"$a1") == Formula($DEFcontext,"$student");
+} );
+
+########################################################
+
+BEGIN_PGML
+Solve the differential equation
+
+>>[``\frac{dx}{dt} = [$a] x^{[$k]} ,``]<<
+
+and find the particular solution satisfying the initial condition 
+
+>>[`` x(0) = \frac{[$x0sign]}{[$x0abs]}. ``]<<
+
+[` x(t) = {} `] [_________]{$cmp}{40}
+[@ AnswerFormatHelp("formulas") @]*
+
+_*Hint:* When solving for [:x:], if you need to take a root, make sure you use the correct sign._
+END_PGML
+
+######################################################
+
+BEGIN_PGML_SOLUTION
+Since [`\frac{dx}{dt}= [$a] x^{[$k]}`]
+we have [`\frac{dt}{dx}= \frac{1}{[$a]} x^{-[$k]}`].
+We can now integrate with respect to [:x:]:
+
+>>[``t = \int \frac{1}{[$a]} x^{-[$k]} \, dx + C =
+\frac{1}{[$a](1-[$k])}x^{1-[$k]} + C .``]<<
+
+To solve for [`C`] it may be easier to use the equation
+[`t = \frac{1}{[$a](1-[$k])}x^{1-[$k]} + C .`]  At [`t=0`], [`x`] is supposed to be [`\frac{[$x0sign]}{[$x0abs]} .`]  So
+
+>>[``
+0 = \frac{1}{[$a](1-[$k])}{\left(\frac{[$x0sign]}{[$x0abs]}\right)}^{1-[$k]} + C
+``]<<
+
+which is easy to solve for [`C = -\frac{1}{[$a](1-[$k])}{\left(\frac{[$x0sign]}{[$x0abs]}\right)}^{1-[$k]} .`]
+
+Therefore,
+
+>>[``t =
+\frac{1}{[$a](1-[$k])}x^{1-[$k]}
+- \frac{1}{[$a](1-[$k])}{\left(\frac{[$x0sign]}{[$x0abs]}\right)}^{1-[$k]}.``]<<
+
+Let us solve for [`x.`]  (Make sure to take the correct sign for even
+roots depending on the sign of [`x(0)`].)
+
+>>[``x =
+[$anssignstr]{\left( [$a](1-[$k])t + {\left(\frac{[$x0sign]}{[$x0abs]}\right)}^{1-[$k]} \right)}^{\frac{1}{1-[$k]}}.
+``]<<
+
+We can simplify:
+
+>>[``
+x =
+\frac{[$anssign]}{
+{\left( [$a*(1-$k)]t + [$x0**($k-1)] \right)}^{1/[$k-1]}}
+.
+``]<<
+END_PGML_SOLUTION
+
+########################################################
+
+COMMENT("Integrate to solve after inverse function theorem, simple separable.");
+
+ENDDOCUMENT();

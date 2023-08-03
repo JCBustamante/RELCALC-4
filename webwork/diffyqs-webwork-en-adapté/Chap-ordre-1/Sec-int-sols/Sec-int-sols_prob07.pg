@@ -1,0 +1,87 @@
+##DESCRIPTION
+## Integrate to solve after inverse function theorem, simple separable.
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(Fort Lewis College, Oklahoma State University)
+## Author(Paul Pearson, Jiri Lebl)
+## Level(4)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.1')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations','first order','integrals as solutions','initial value problem')
+
+##############################
+#  Initialization
+
+DOCUMENT(); 
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+
+#############################
+#  Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->variables->set(x=>{limits=>[0,4]});
+
+$a = random(1,5,1);
+$a2 = 2 * $a;
+
+$answer = Compute("2 / (1 + e^(2x-$a2)) - 1");
+
+
+#############################
+#  Main text
+
+BEGIN_PGML
+Solve [`` \frac{dy}{dx} = (y-1)(y+1) ``] if the
+solution passes through the point [` (x,y) = ([$a],0) `].
+
+[` y(x) = {} `]
+[_________]{$answer}{40}
+[@ AnswerFormatHelp("formulas") @]*
+END_PGML
+
+############################
+#  Answers
+
+BEGIN_PGML_SOLUTION
+_Solution sketch:_
+
+Rewrite [``\frac{dy}{dx} = (y-1)(y+1)``]
+as [``\frac{dx}{dy} = \frac{1}{(y-1)(y+1)} .``]
+
+Now integrate (use partial fractions)
+
+>>[``x = \int \frac{1}{(y-1)(y+1)} dy + C
+=
+\frac{1}{2} \ln \left(\frac{2}{y+1}-1\right) + C .
+``]<<
+
+Solve for [:y:].  Now use the condition [:y([$a])=0:] to solve for [:C:].
+Plug this [:C:] into the answer to obtain the final answer:
+
+>>[::y(x) = [$answer] .::]<<
+END_PGML_SOLUTION
+
+############################
+
+COMMENT("Integrate to solve after inverse function theorem, simple separable.");
+
+ENDDOCUMENT();

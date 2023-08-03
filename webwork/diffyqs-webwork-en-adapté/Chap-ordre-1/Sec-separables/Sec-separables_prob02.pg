@@ -1,0 +1,95 @@
+##DESCRIPTION
+## Separable equation initial value problem, easy integration
+##ENDDESCRIPTION
+
+## DBsubject(Differential equations)
+## DBchapter(First order differential equations)
+## DBsection(Separable)
+## Institution(University of Michigan)
+## Author(Gavin LaRose)
+## Level(3)
+## TitleText1('Notes on Diffy Qs: Differential Equations for Engineers')
+## AuthorText1('Jiri Lebl')
+## EditionText1('6')
+## Section1('1.3')
+## Problem1('')
+## MO(1)
+## KEYWORDS('differential equations', 'first order', 'separable', 'initial value problem')
+
+############################################################################
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "hhAdditionalMacros.pl",
+  "PGML.pl",
+  "PGcourse.pl"
+);
+ 
+Context("Numeric");
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$a = random(1,8,1);
+$y0 = random(2,8,1);
+
+Context("Numeric");
+Context()->variables->are(x=>'Real',y=>'Real');
+
+############################################################################
+
+BEGIN_PGML
+Find the solution to the differential equation
+
+>>[`` \frac{dy}{dx} = y^2([$a] + x), ``]<<
+
+such that [` y=[$y0] `] when [` x=1 .`]
+
+[` y = {} `] [__________]{"2*$y0/(2 + (1-x)*(1 + 2*$a + x)*$y0)"}{40}
+[@ AnswerFormatHelp("formulas") @]*
+END_PGML
+
+############################################################################
+
+$ap1 = $a + 1;
+$ap1sq = $ap1*$ap1;
+$ap1sq1y0 = $ap1sq*$y0;
+$constnum = 2+$ap1sq1y0;
+
+BEGIN_PGML_SOLUTION
+Separating variables gives
+
+>>[``\frac{dy}{y^2} = ([$a] + x)\,dx, ``]<<
+
+so
+
+>>[`` \int \frac{dy}{y^2} = \int ([$a] + x)\,dx, ``]<<
+
+and
+
+>>[``-\frac{1}{y} = \frac{1}{2}([$a] + x)^2 + C, ``]<<
+
+giving
+
+>>[``y=-\frac{2}{([$a] + x)^2 + A}, ``]<<
+
+where [`A = 2C.`]  Since [`y=[$y0]`] when [`x=1,`] we have
+
+>>[``
+[$y0] = -\frac{2}{[$ap1]^2 + A},\quad \hbox{ so } \quad 
+  [$y0] A + [$ap1sq1y0] = -2, ``]<<
+
+and [` A = \frac{-[$constnum]}{[$y0]} .`]
+Thus
+
+>>[`` y = -\frac{2}{([$a] + x)^2 - \frac{[$constnum]}{[$y0]}}. ``]<<
+END_PGML_SOLUTION
+
+############################################################################
+
+COMMENT("Separable equation initial value problem, easy integration");
+
+ENDDOCUMENT();
