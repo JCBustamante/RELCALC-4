@@ -589,8 +589,7 @@
       </p>
     </subsubsection>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <p>
       \begin{samepage}
     </p>
@@ -678,7 +677,6 @@
           Quelle valeur <m>k</m> devrait-elle avoir pour que la masse n'aille pas plus loin que trois mètres de sa position de repos?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>k=\nicefrac{8}{9}</m>
@@ -686,6 +684,7 @@
      
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -699,13 +698,13 @@
           <m>I(0) = 10</m> et <m>I'(0) = 0</m>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>0.05 I'' + 0.1 I' + (\nicefrac{1}{5}) I = 0</m> b)
       <m>I = C e^{-t} \cos(\sqrt{3} \, t - \gamma)</m> c) <m>I = 10 e^{-t} \cos(\sqrt{3} \, t) + \frac{10}{\sqrt{3}} e^{-t} \sin(\sqrt{3} \, t)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <title>2</title>
       <statement>
@@ -723,13 +722,13 @@
           une vitesse de 2 m/s? </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>k=500000</m> b)
       <m>\frac{1}{5\sqrt{2}} \approx 0.141</m> c) 45000 kg d) 11250 kg
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -741,7 +740,6 @@
           et est-ce qu'il s'agit d'un sur-amortissement ou d'un sous-amortissement?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>m_0 = \frac{1}{3}</m>.
@@ -749,5 +747,6 @@
       alors le système est sur-amorti et ne va pas osciller.
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

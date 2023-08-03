@@ -267,8 +267,7 @@
       </statement>
     </example>
   </introduction>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -334,12 +333,12 @@
           Justifiez votre réponse.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Yes.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -349,13 +348,13 @@
           Justifiez votre réponse.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         No.
       <m>2 \left[ \begin{matrix}\cosh(t) \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{t} \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{-t} \\ 1 \end{matrix} \right] = \vec{0}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -363,12 +362,12 @@
           <m>y'=tx</m> en notation matricielle.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>\left[ \begin{matrix}x \\ y \end{matrix} \right] ' = \left[ \begin{matrix}3 \amp -1 \\ t \amp 0 \end{matrix} \right] \left[ \begin{matrix}x \\ y \end{matrix} \right] + \left[ \begin{matrix}e^{t} \\ 0 \end{matrix} \right]</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -377,12 +376,12 @@
           <li> Résolvez et écrivez la solution en notation matricielle. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>\vec{x}\,' = \left[ \begin{matrix}0 \amp 2t \\ 0 \amp 2t \end{matrix} \right] \vec{x}</m> b) <m>\vec{x} = \left[ \begin{matrix}C_2 e^{t^2} + C_1 \\ C_2 e^{t^2} \end{matrix} \right]</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

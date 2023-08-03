@@ -874,8 +874,7 @@
       Really in practice this is done efficiently by a computer.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises</title>
+  <exercises>
     <p>
       \begin{samepage}
     </p>
@@ -986,12 +985,12 @@
           <li> <m>\begin{bmatrix}1 \amp 2 \amp 3 \amp 3 \\ 1 \amp 2 \amp 3 \amp 5 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}1 \amp 0 \\ 0 \amp 1 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}1 \amp 1 \\ 0 \amp 0 \end{bmatrix}</m> d)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 0 \\ 0 \amp 1 \amp -1/3 \\ 0 \amp 0 \amp 0 \end{bmatrix}</m> e)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 0 \amp 77/15 \\ 0 \amp 1 \amp 0 \amp -2/15 \\ 0 \amp 0 \amp 1 \amp -8/5 \end{bmatrix}</m> f)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp -1/2 \amp 0 \\ 0 \amp 1 \amp 1/2 \amp 1/2 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}</m> g)<nbsp/><m>\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}</m> h)<nbsp/><m>\begin{bmatrix}1 \amp 2 \amp 3 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \end{bmatrix}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -1001,12 +1000,12 @@
           <li> <m>\begin{bmatrix}2 \amp 4 \amp 0 \\ 2 \amp 2 \amp 3 \\ 2 \amp 4 \amp 1 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>\begin{bmatrix}0 \amp -1 \amp 0 \\ 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}0 \amp 0 \amp 1 \\ 0 \amp 1 \amp -1 \\ 1 \amp -1 \amp 0 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}\nicefrac{5}{2} \amp 1 \amp -3 \\ -1 \amp \nicefrac{-1}{2} \amp \nicefrac{3}{2} \\ -1 \amp 0 \amp 1 \end{bmatrix}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -1019,7 +1018,6 @@
           <li> <m>\begin{aligned}-2 x_1+2x_2+8x_3 \amp = 6 \\ x_2+x_3 \amp = 2 \\ x_1+4x_2+x_3 \amp = 7 \end{aligned}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>x_1=-2</m>,
@@ -1029,6 +1027,7 @@
       <m>x_1 = -1+3x_3</m>, <m>x_2 = 2-x_3</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -1038,12 +1037,12 @@
           <li> <m>\begin{bmatrix}2 \amp 7 \\ 1 \amp 6 \end{bmatrix} \vec{x} = \begin{bmatrix}1 \\ 3 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>\begin{bmatrix}-1 \\ 3 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}-3 \\ 1 \end{bmatrix}</m>
       </p>
     </answer>
+    </exercise>
     <exercise xml:id="exercise_rankmatrixans">
       <statement>
         <p>
@@ -1053,12 +1052,12 @@
           <li> <m>\begin{bmatrix}0 \amp 3 \amp -1 \\ 6 \amp 3 \amp 1 \\ 4 \amp 7 \amp -1 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) 3 b) 1 c) 2
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -1067,7 +1066,6 @@
           (they don't need to be rows of the matrix).
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>\begin{bmatrix}1 \amp 0 \amp 0 \end{bmatrix}</m>,
@@ -1076,6 +1074,7 @@
       <m>\begin{bmatrix}0 \amp 1 \amp \nicefrac{-1}{3} \end{bmatrix}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -1084,7 +1083,6 @@
           That is, find the pivot columns of the matrices.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>\begin{bmatrix}7 \\ 7 \\ 7 \end{bmatrix}</m>,
@@ -1093,6 +1091,7 @@
       <m>\begin{bmatrix}3 \\ 3 \\ 7 \end{bmatrix}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -1102,11 +1101,11 @@
           </me>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>\begin{bmatrix}3 \\ 1 \\ -5 \end{bmatrix} , \begin{bmatrix}0 \\ 3 \\ -1 \end{bmatrix}</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

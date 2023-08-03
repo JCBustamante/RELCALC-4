@@ -352,206 +352,205 @@
       </statement>
     </example>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
-    <exercise>
-      <statement>
+  <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez <m>y' = \nicefrac{x}{y}</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez<m>y' = x^2y</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez <m>\dfrac{dx}{dt} = (x^2-1)\,t</m>, <m>x(0) = 0</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez <m>\dfrac{dx}{dt} = x\,\sin(t)</m>, for <m>x(0) = 1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez <m>\dfrac{dy}{dx} = xy+x+y+1</m>.
+            Indice : factorisez le côté droit.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez <m>xy' = y + 2x^2 y</m>, <m>y(1) = 1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez<m>\dfrac{dy}{dx} = \dfrac{y^2+1}{x^2+1}</m>,
+            <m>y(0) = 1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez une solution implicite pour <m>\dfrac{dy}{dx} = \dfrac{x^2+1}{y^2+1}</m>,
+            <m>y(0) = 1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez une solution explicite pour <m>y' = xe^{-y}</m>,
+            <m>y(0)=1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez une solution explicite pour <m>xy' = e^{-y}</m>,
+            <m>y(1)=1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez une solution explicite pour <m>y' = ye^{-x^2}</m>,
+            <m>y(0)=1</m>.
+            Au besoin, votre réponse peut inclure une intégrale.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Supposons qu'une tasse de café
+            est à 100 degrés Celsius au temps <m>t=0</m>,
+            et 70 degrés à
+            <m>t=10</m> minutes, et 50 degrés à <m>t=20</m> minutes.
+            Calculez la température ambiante.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez <m>y'=2xy</m>.
+          </p>
+        </statement>
+      </exercise>
+      <answer>
         <p>
-          Résolvez <m>y' = \nicefrac{x}{y}</m>.
+          <m>y = Ce^{x^2}</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      <exercise>
+        <statement>
+          <p>
+            Résolvez <m>x'=3xt^2-3t^2</m>, <m>x(0)=2</m>.
+          </p>
+        </statement>
+      </exercise>
+      <answer>
         <p>
-          Résolvez<m>y' = x^2y</m>.
+          <m>x = e^{t^3}+1</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez une solution implicite pour <m>x'=\frac{1}{3x^2+1}</m>,
+            <m>x(0)=1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <answer>
         <p>
-          Résolvez <m>\dfrac{dx}{dt} = (x^2-1)\,t</m>, <m>x(0) = 0</m>.
+          <m>x^3+x=t+2</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez une solution explicite pour <m>x y' = y^2</m>,
+            <m>y(1) = 1</m>.
+          </p>
+        </statement>
+      </exercise>
+      <answer>
         <p>
-          Résolvez <m>\dfrac{dx}{dt} = x\,\sin(t)</m>, for <m>x(0) = 1</m>.
+          <m>y = \frac{1}{1-\ln x}</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez une solution implicite pour <m>y' = \frac{\sin(x)}{\cos(y)}</m>.
+          </p>
+        </statement>
+      </exercise>
+      <answer>
         <p>
-          Résolvez <m>\dfrac{dy}{dx} = xy+x+y+1</m>.
-          Indice : factorisez le côté droit.
+          <m>\sin(y) = -\cos(x) + C</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      <exercise>
+        <statement>
+          <p>
+            Reprenez l' <xref ref="sep_coffeeexample"></xref>
+            avec les mêmes valeurs : 89 degrés à
+            <m>t=0</m>, 85 degrés à
+            <m>t=1</m>, et une température ambiante de 22 degrés.
+            Supposons que ces températures ont été
+            mesurées avec une précision de <m>\pm 0.5</m> degrés. À cause de cette imprécision,
+            on ne connaît qu'un intervalle de temps pour que la température du café
+            atteigne exactement 60 degrés.
+            Trouvez cet intervalle de temps.
+            Indice : quel type d'erreur rend le temps de refroidissement plus long?
+            Plus court?
+          </p>
+        </statement>
+      </exercise>
+      <answer>
         <p>
-          Résolvez <m>xy' = y + 2x^2 y</m>, <m>y(1) = 1</m>.
+          L'intervalle de temps est d'environ 7.45 à 12.15 minutes.
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      <exercise>
+        <statement>
+          <p>
+            Une population de lapins <m>x</m> sur une île est modelisée par l'équation suivante :
+            <m>x' = x- \bigl(\nicefrac{1}{1000} \bigr) x^2</m>,
+            où la variable indépendante <m>t</m> est le temps,
+            mesuré
+            en mois. À <m>t=0</m>,
+            l'île contient 40 lapins. <ol marker="a"><li> Résolvez l'équation différentielle avec condition initiale. </li>
+            <li> Combien de lapins habitent l'île après 1 mois, 5 mois, 10 mois, 15 mois?
+            Arrondissez à l'entier le plus proche. </li></ol>
+          </p>
+        </statement>
+      </exercise>
+      <answer>
         <p>
-          Résolvez<m>\dfrac{dy}{dx} = \dfrac{y^2+1}{x^2+1}</m>,
-          <m>y(0) = 1</m>.
+          a)
+        <m>x = \frac{1000e^t}{e^t+24}</m>. b) 102 lapins après un mois, 861 après 5 mois, 999 après 10 mois, 1000 après 15 mois.
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Trouvez une solution implicite pour <m>\dfrac{dy}{dx} = \dfrac{x^2+1}{y^2+1}</m>,
-          <m>y(0) = 1</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Trouvez une solution explicite pour <m>y' = xe^{-y}</m>,
-          <m>y(0)=1</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Trouvez une solution explicite pour <m>xy' = e^{-y}</m>,
-          <m>y(1)=1</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Trouvez une solution explicite pour <m>y' = ye^{-x^2}</m>,
-          <m>y(0)=1</m>.
-          Au besoin, votre réponse peut inclure une intégrale.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Supposons qu'une tasse de café
-          est à 100 degrés Celsius au temps <m>t=0</m>,
-          et 70 degrés à
-          <m>t=10</m> minutes, et 50 degrés à <m>t=20</m> minutes.
-          Calculez la température ambiante.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Résolvez <m>y'=2xy</m>.
-        </p>
-      </statement>
-    </exercise>
-    <answer>
-      <p>
-        <m>y = Ce^{x^2}</m>
-      </p>
-    </answer>
-    <exercise>
-      <statement>
-        <p>
-          Résolvez <m>x'=3xt^2-3t^2</m>, <m>x(0)=2</m>.
-        </p>
-      </statement>
-    </exercise>
-    <answer>
-      <p>
-        <m>x = e^{t^3}+1</m>
-      </p>
-    </answer>
-    <exercise>
-      <statement>
-        <p>
-          Trouvez une solution implicite pour <m>x'=\frac{1}{3x^2+1}</m>,
-          <m>x(0)=1</m>.
-        </p>
-      </statement>
-    </exercise>
-    <answer>
-      <p>
-        <m>x^3+x=t+2</m>
-      </p>
-    </answer>
-    <exercise>
-      <statement>
-        <p>
-          Trouvez une solution explicite pour <m>x y' = y^2</m>,
-          <m>y(1) = 1</m>.
-        </p>
-      </statement>
-    </exercise>
-    <answer>
-      <p>
-        <m>y = \frac{1}{1-\ln x}</m>
-      </p>
-    </answer>
-    <exercise>
-      <statement>
-        <p>
-          Trouvez une solution implicite pour <m>y' = \frac{\sin(x)}{\cos(y)}</m>.
-        </p>
-      </statement>
-    </exercise>
-    <answer>
-      <p>
-        <m>\sin(y) = -\cos(x) + C</m>
-      </p>
-    </answer>
-    <exercise>
-      <statement>
-        <p>
-          Reprenez l' <xref ref="sep_coffeeexample"></xref>
-          avec les mêmes valeurs : 89 degrés à
-          <m>t=0</m>, 85 degrés à
-          <m>t=1</m>, et une température ambiante de 22 degrés.
-          Supposons que ces températures ont été
-          mesurées avec une précision de <m>\pm 0.5</m> degrés. À cause de cette imprécision,
-          on ne connaît qu'un intervalle de temps pour que la température du café
-          atteigne exactement 60 degrés.
-          Trouvez cet intervalle de temps.
-          Indice : quel type d'erreur rend le temps de refroidissement plus long?
-          Plus court?
-        </p>
-      </statement>
-    </exercise>
-    <answer>
-      <p>
-        L'intervalle de temps est d'environ 7.45 à 12.15 minutes.
-      </p>
-    </answer>
-    <exercise>
-      <statement>
-        <p>
-          Une population de lapins <m>x</m> sur une île est modelisée par l'équation suivante :
-          <m>x' = x- \bigl(\nicefrac{1}{1000} \bigr) x^2</m>,
-          où la variable indépendante <m>t</m> est le temps,
-          mesuré
-          en mois. À <m>t=0</m>,
-          l'île contient 40 lapins. <ol marker="a"><li> Résolvez l'équation différentielle avec condition initiale. </li>
-          <li> Combien de lapins habitent l'île après 1 mois, 5 mois, 10 mois, 15 mois?
-          Arrondissez à l'entier le plus proche. </li></ol>
-        </p>
-      </statement>
-    </exercise>
-    <answer>
-      <p>
-        a)
-      <m>x = \frac{1000e^t}{e^t+24}</m>. b) 102 lapins après un mois, 861 après 5 mois, 999 après 10 mois, 1000 après 15 mois.
-      </p>
-    </answer>
-  </subsection>
+      </answer>
+  </exercises>
 </section>

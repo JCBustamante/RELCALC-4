@@ -207,8 +207,7 @@
   </introduction>
 
   <!-- TODO exos -->
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -278,7 +277,6 @@
           <li> <m>\displaystyle \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial s^2} + u^2</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         }a) EDP , équation,
@@ -305,6 +303,7 @@
       f) EDP , équation, deuxième ordre, non linéaire.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -313,7 +312,6 @@
           Trouvez sa solution générale.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         équation :
@@ -321,6 +319,7 @@
       <m>y = \frac{b(x)}{a(x)}</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -329,11 +328,11 @@
           Indice : il y a deux valeurs possibles.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>k=0</m> ou <m>k=1</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

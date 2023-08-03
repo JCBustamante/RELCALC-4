@@ -489,153 +489,197 @@
       vous avez entendu des sons de vagues carrées.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur
-          <m>[-\pi,\pi]</m> comme <m>\sin (5t) + \cos (3t)</m>.
-          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+          Montrez que <m>x = e^{4t}</m> est une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur
-          <m>[-\pi,\pi]</m> comme <m>\lvert t \rvert</m>.
-          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+          Montrez que <m>x = e^{t}</m> n'est pas une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur
-          <m>[-\pi,\pi]</m> comme <m>\lvert t \rvert^3</m>.
-          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+          Est-ce que <m>y = \sin t</m> est une solution de <m>{\left( \frac{dy}{dt} \right)}^2 = 1 - y^2</m>?
+          Justifiez votre réponse.
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur <m>(-\pi,\pi]</m> comme
-          <me>
-            f(t) = \begin{cases} -1 \amp  \text{ si }  \; {-\pi} \lt  t \leq 0 , \\ 1 \amp  \text{ si }  \; 0 \lt  t \leq \pi . \end{cases}
-          </me>
-        </p>
-        <p>
-          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Supposez que <m>f(t)</m> est défini sur <m>(-\pi,\pi]</m> comme <m>t^3</m>.
-          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+          Considérons <m>y'' + 2y' - 8y = 0</m>.
+          Essayez une solution de la forme
+          <m>y = e^{rx}</m> pour une constante (à
+          déterminer) <m>r</m>.
+          Existe-il une valeur de <m>r</m> qui donne une solution?
+          Si oui, trouvez toutes les valeurs possibles de <m>r</m>.
         </p>
       </statement>
     </exercise>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur <m>[-\pi,\pi]</m> comme <m>t^2</m>.
-          Prolongez périodiquement et calculez la série de Fourier pour <m>f(t)</m>.
+          Vérifiez que <m>x = C e^{-2t}</m> est une solution de <m>x' = -2x</m>.
+          Trouvez <m>C</m> satisfaisant à
+          la condition initiale <m>x(0) = 100</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>x = C_1 e^{-t} + C_2 e^{2t}</m> est une solution de <m>x'' - x' -2 x = 0</m>.
+          Trouvez <m>C_1</m> et <m>C_2</m> satisfaisant aux conditions initiales <m>x(0) = 10</m> et <m>x'(0) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution <m>{(x')}^2 + x^2 = 4</m> en utilisant ce que vous avez appris à
+          propos des dérivées dans vos cours de calcul.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <ol marker="a"><li>
+          <m>\dfrac{dA}{dt} = -10 A, A(0)=5</m> </li>
+          <li> <m>\dfrac{dH}{dx} = 3 H, H(0)=1</m> </li>
+          <li>
+          <m>\dfrac{d^2y}{dx^2} = 4 y, y(0)=0, y'(0)=1</m> </li>
+          <li> <m>\dfrac{d^2x}{dy^2} = -9 x, x(0)=1, x'(0)=0</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Existe-t-il une solution de <m>y' = y</m>,
+          telle que <m>y(0) = y(1)</m>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          La population de la ville X était 100<nbsp/>000 il y a 20 ans,
+          et 120<nbsp/>000 il y a 10 ans.
+          Si l'on suppose une croissance continue,
+          on peut utiliser le modèle de croissance exponentielle
+          (comme pour une population de bactéries). À combien estimez-vous la population actuelle maintenant?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million $,
+          et qu'il a une augmentation salariale de <m>10\%</m> chaque année
+          (donc modèle de croissance exponentielle,
+          comme les bactéries).
+          Dénotons par <m>s</m> le salaire en millions de dollars,
+          et <m>t</m> le temps en années. <ol marker="a"><li> Trouvez <m>s(0)</m> et <m>s(1)</m>. </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 10 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 20 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 30 millions? </li></ol>
         </p>
       </statement>
     </exercise>
     <p>
-      Il y a une autre forme de la série de Fourier qui utilise l'exponentielle complexe <m>e^{int}</m> pour
-      <m>n=\ldots,-2,-1,0,1,2,\ldots</m> plutôt que <m>\cos(nt)</m> et
-      <m>\sin(nt)</m> pour <m>n</m> positif.
-      Cette forme pourrait être plus facile à
-      travailler à certains moments.
-      Elle est certainement plus compacte dans son écriture et il y a seulement une formule pour les coefficients.
-      Par contre, les coefficients sont des nombres complexes.
+      <em>Note : Les exercices dont les numéros sont 101 et plus ont des réponses à
+      la fin du manuel.</em>
     </p>
     <exercise>
       <statement>
         <p>
-          Soit
-          <me>
-            f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t)
-          </me>.
-        </p>
-        <p>
-          Utilisez la formule d'Euler
-          <m>e^{i\theta} = \cos (\theta) + i \sin (\theta)</m> pour montrer qu'il existe des nombres complexes <m>c_m</m> tels que
-          <me>
-            f(t) = \sum_{m=-\infty}^\infty c_m e^{imt}
-          </me>.
-        </p>
-        <p>
-          Notez que la somme s'étend maintenant sur tous les entiers,
-          y compris les nombres négatifs.
-          Ne vous inquiétez pas de la convergence dans ce calcul.
-          Astuce : il peut être préférable de partir de la forme exponentielle complexe et d'écrire la série comme
-          <me>
-            c_0 + \sum_{m=1}^\infty \Bigl( c_m e^{imt} + c_{-m} e^{-imt}  \Bigr)
-          </me>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Supposez que <m>f(t)</m> est défini sur
-          <m>[-\pi,\pi]</m> comme <m>f(t) = \sin(t)</m>.
-          Prolongez périodiquement et calculez la série de Fourier.
+          Montrez que <m>x = e^{-2t}</m> est une solution de <m>x'' + 4x' + 4x = 0</m>.
         </p>
       </statement>
     </exercise>
     <answer>
       <p>
-        <m>\sin(t)</m>
+        Calculer
+      <m>x' = -2e^{-2t}</m> et <m>x'' = 4e^{-2t}</m>.
+      Alors, <m>(4e^{-2t}) + 4 (-2e^{-2t}) + 4 (e^{-2t}) = 0</m>.
       </p>
     </answer>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur
-          <m>(-\pi,\pi]</m> comme <m>f(t) = \sin(\pi t)</m>.
-          Prolongez périodiquement et calculez la série de Fourier.
+          Est-ce que <m>y = x^2</m> est une solution de <m>x^2y'' - 2y = 0</m>?
+          Justifiez votre réponse.
         </p>
       </statement>
     </exercise>
     <answer>
       <p>
-        <m>\sum\limits_{n=1}^\infty \frac{(\pi-n) \sin( \pi n+{\pi}^{2}) +(\pi+n)\sin(\pi n-{\pi}^{2}) }{\pi {n}^{2}-{\pi}^{3}} \sin(nt)</m>
+        Oui.
       </p>
     </answer>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur
-          <m>(-\pi,\pi]</m> comme <m>f(t) = \sin^2(t)</m>.
-          Prolongez périodiquement et calculez la série de Fourier.
+          Soit <m>xy'' - y' = 0</m>.
+          Essayez une solution de la forme <m>y = x^r</m>.
+          Existe-t-il une valeur de <m>r</m> qui donne une solution?
+          Si oui, trouvez toutes les valeurs possibles de <m>r</m>.
         </p>
       </statement>
     </exercise>
     <answer>
       <p>
-        <m>\frac{1}{2}-\frac{1}{2}\cos(2t)</m>
+        <m>y=x^r</m> est une solution pour <m>r=0</m> et <m>r=2</m>.
       </p>
     </answer>
     <exercise>
       <statement>
         <p>
-          Supposez que <m>f(t)</m> est défini sur<m>(-\pi,\pi]</m> comme <m>f(t) = t^4</m>.
-          Prolongez périodiquement et calculez la série de Fourier.
+          Vérifiez que <m>x=C_1e^t+C_2</m> est une solution de <m>x''-x' = 0</m>.
+          Trouvez <m>C_1</m> et <m>C_2</m> telles que
+          <m>x(0) = 10</m> et <m>x'(0) = 100</m>.
         </p>
       </statement>
     </exercise>
     <answer>
       <p>
-        <m>\frac{\pi^4}{5} + \sum\limits_{n=1}^\infty \frac{{(-1)}^{n} (8{\pi}^{2}{n}^{2}-48) }{{n}^{4}} \cos(nt)</m>
+        <m>C_1 = 100</m>,
+      <m>C_2 = -90</m>
       </p>
     </answer>
-  </subsection>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <m>\frac{d\varphi}{ds} = 8 \varphi</m> et <m>\varphi(0) = -9</m>.
+        </p>
+      </statement>
+    </exercise>
+    <answer>
+      <p>
+        <m>\varphi = -9 e^{8s}</m> 
+      </p>
+    </answer>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <ol marker="a"><li>
+          <m>\dfrac{dx}{dt} = -4x,
+          x(0)=9</m> </li>
+          <li> <m>\dfrac{d^2x}{dt^2} = -4x,
+          x(0)=1, x'(0)=2</m> </li>
+          <li> <m>\dfrac{dp}{dq} = 3 p, p(0)=4</m> </li>
+          <li> <m>\dfrac{d^2T}{dx^2} = 4 T, T(0)=0, T'(0)=6</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
 </section>

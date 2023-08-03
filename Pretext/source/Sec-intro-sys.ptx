@@ -519,8 +519,7 @@
       des solutions pour des équations d'ordre supérieur qui n'ont pas encore été énoncées explicitement.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -580,7 +579,6 @@
           <m>y_2' = y_1 + y_2</m>, <m>y_3' = y_1 + y_3</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y_1 = C_1 e^{3x}</m>,
@@ -588,6 +586,7 @@
       <m>y_3 = y(x) = C_3 e^x+ \frac{C_1}{2} e^{3 x}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -595,26 +594,26 @@
           <m>x(0)=1</m>, <m>y(0)=3</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>x=\frac{5}{3} e^{2t} - \frac{2}{3} e^{-t}</m>,
       <m>y=\frac{5}{3} e^{2t} + \frac{4}{3} e^{-t}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Écrivez <m>x''' = x+t</m> sous forme de système du premier ordre.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>x_1' = x_2</m>,
       <m>x_2' = x_3</m>, <m>x_3' = x_1+t</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -622,7 +621,6 @@
           <m>y_2'' + y_1 - y_2 = t^2</m> sous forme de système du premier ordre.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y_3' + y_1 + y_2 = t</m>,
@@ -630,6 +628,7 @@
       <m>y_1' = y_3</m>, <m>y_2' = y_4</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -640,13 +639,13 @@
           Utilisez votre intuition pour résoudre le système différentiel et expliquez votre raisonnement.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>x_1 = x_2 = at</m>.
       Explanation of the intuition is left to reader.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -659,7 +658,6 @@
           Expliquez. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) Laissé
@@ -669,5 +667,6 @@
       et le lecteur peut compléter l'explication.
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

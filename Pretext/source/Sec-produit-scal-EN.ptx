@@ -461,8 +461,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection>
-    <title>Exercises</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -557,24 +556,24 @@
           <m>(1,1,1)</m>, <m>(1,s,1)</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>s=-2</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Find the angle <m>\theta</m> between <m>(1,2,3)</m>, <m>(1,1,1)</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>\theta \approx 0.3876</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -585,12 +584,12 @@
           <li> <m>\langle \vec{w} + 3 \vec{v}, \vec{v} \rangle</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/>-15 b)<nbsp/>-1 c)<nbsp/>28
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -601,12 +600,12 @@
           <li> <m>\operatorname{proj}_{\vec{v}}\bigl( (4,-1,0) \bigr)</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>(\nicefrac{-1}{2},0,\frac{1}{2})</m> b)<nbsp/><m>(0,0,0)</m> c)<nbsp/><m>(2,0,-2)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -618,12 +617,12 @@
           <li> <m>(0,-6,2)</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>(1,1,-1)-(2,-1,1)+2(1,-5,3)</m> b)<nbsp/><m>2(2,-1,1)+(1,-5,3)</m> c)<nbsp/><m>2(1,1,-1)-2(2,-1,1)+2(1,-5,3)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -632,13 +631,13 @@
           Find an orthogonal basis of <m>S</m> by the Gram-Schmidt process.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>(2,-1,1)</m>,
       <m>(\nicefrac{2}{3},\nicefrac{8}{3},\nicefrac{4}{3})</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -647,7 +646,6 @@
           follow the Gram-Schmidt process to find an orthogonal basis of <m>{\mathbb{R}}^3</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>(1,1,-1)</m>,
@@ -655,5 +653,6 @@
       <m>(\nicefrac{4}{3},\nicefrac{-2}{3},\nicefrac{2}{3})</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

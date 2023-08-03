@@ -467,8 +467,7 @@
       </me>.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -553,12 +552,12 @@
           Trouvez une solution particulière de <m>y''-y'+y=2\sin(3x)</m>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y=\frac{-16\sin(3x)+6\cos(3x)}{73}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -567,13 +566,13 @@
           <li> Trouvez une solution générale. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>y=\frac{2e^x+3x^3-9x}{6}</m> b) <m>y=C_1 \cos(\sqrt{2} x) + C_2 \sin(\sqrt{2} x) + \frac{2e^x+3x^3-9x}{6}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -581,35 +580,35 @@
           <m>y(0)=1</m>, <m>y'(0)=2</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y(x) = x^2-4 x+6+e^{-x}(x-5)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Utilisez la variation des paramètres pour trouver une solution particulière de f <m>y''-y = \frac{1}{e^x+e^{-x}}</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y = \frac{2xe^x-(e^x+e^{-x})\log(e^{2x}+1)}{4}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Pour une constante arbitraire <m>c</m> trouvez la solution générale de <m>y''-2y=\sin(x+c)</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y=\frac{-\sin(x+c)}{3}+C_1 e^{\sqrt{2}\,x}+C_2 e^{-\sqrt{2}\,x}</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

@@ -267,8 +267,7 @@
   </subsection>
 
   <!-- TODO -->
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -404,12 +403,12 @@
           Pouvez-vous identifier visuellement une solution telle que <m>y(0)=0</m>?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         
       </p>
     </answer>
+    </exercise>
     <p>
       <image width="37%" source="images/yprimey3slope.png"/>
     </p>
@@ -423,7 +422,6 @@
           La solution est-elle unique?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Oui une solution existe.
@@ -434,18 +432,19 @@
       la solution existe et est unique. (En fait <m>y=0</m> est une solution).
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Peut-on résoudre <m>y' = \frac{x}{x^2-1}</m>, <m>y(1) = 0</m>?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Non puisque la seule solution possible n'est pas définie au point <m>(x,y) = (1,0)</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -458,13 +457,13 @@
           <li> <image width="32%" source="images/yprimesinxslope.png"/> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>y'=\cos y</m>,
       b) <m>y' = y\cos(x)</m>, c) <m>y'=\sin x</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <title>défi</title>
       <statement>
@@ -481,7 +480,6 @@
           Pourquoi ou pourquoi pas?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Picard ne s'applique pas puisque <m>f</m> n'est pas continue en <m>y=0</m>.
@@ -493,6 +491,7 @@
       et donc <m>y'</m> n'est pas continue.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -503,12 +502,12 @@
           Pourquoi ou pourquoi pas?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         La solution est <m>y(x) = \int_{x_0}^x f(s) \,ds + y_0</m>,
       ce qui existe pour toute valeur de <m>x</m>.
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

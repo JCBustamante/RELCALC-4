@@ -377,8 +377,7 @@
   </introduction>
 
   <!-- TODO -->
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -474,24 +473,24 @@
           Résolvez <m>\frac{dy}{dx} = e^x + x</m>, <m>y(0) = 10</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y = e^x + \frac{x^2}{2} + 9</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Résolvez <m>x' = \frac{1}{x^2}</m>, <m>x(1)=1</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>x = {(3t-2)}^{1/3}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -499,12 +498,12 @@
           <m>x(0)=\frac{\pi}{2}</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>x = \sin^{-1} \bigl(t+1\bigr)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -513,12 +512,12 @@
           en heures. À <m>t=0</m>, Max est à 10 kilomètres de Québec. À quelle distance de Québec sera Max deux heures plus tard?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         170
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -527,7 +526,6 @@
           Indice : il y a plusieurs cas à considérer.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Si <m>n \not= 1</m>,
@@ -535,6 +533,7 @@
       Si <m>n=1</m>, alors <m>y = e^x</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -549,7 +548,6 @@
           Dans combien de temps est-ce que la boule de neige aura complètement fondu?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         L'équation est <m>r' = -C</m>,
@@ -557,6 +555,7 @@
       La boule de neige aura complètement fondu 25 minutes après <m>t=0</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -564,11 +563,11 @@
           Combien de constantes distinctes sont nécessaires?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y = Ax^3 + Bx^2 + Cx + D</m>, donc quatre constantes.
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

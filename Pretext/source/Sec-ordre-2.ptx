@@ -301,8 +301,7 @@
       Il est donc plus facile de se rappeler comment faire plutôt que de se rappeler une formule spécifique.
     </p>
   </introduction>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -412,7 +411,6 @@
           Justifiez votre réponse.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Oui.
@@ -420,6 +418,7 @@
       <m>\sin(x) = A e^x</m> pour tout <m>x</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -427,25 +426,25 @@
           Justifiez votre réponse.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Non.
       <m>e^{x+2} = e^2 e^x</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Devinez une solution de <m>y'' + y' + y= 5</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y=5</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -453,12 +452,12 @@
           Astuce : C'est une équation différentielle du premier ordre pour <m>y'</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y=C_1 \ln(x) + C_2</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -470,11 +469,11 @@
           mettez dans chacune <m>e^x</m> et <m>e^{2x}</m> et résolvez pour <m>A</m> et <m>B</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y''-3y'+2y = 0</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

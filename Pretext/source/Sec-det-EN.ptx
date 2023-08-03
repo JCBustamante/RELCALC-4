@@ -276,8 +276,7 @@
       This notation is not used in this book.
     </p>
   </introduction>
-  <subsection>
-    <title>Exercises</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -385,12 +384,12 @@
           <li> <m>\begin{bmatrix}0 \amp 2 \amp 1 \amp 0 \\ 1 \amp 2 \amp -3 \amp 4 \\ 5 \amp 6 \amp -7 \amp 8 \\ 1 \amp 2 \amp 3 \amp -2 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>-2</m> b)<nbsp/><m>8</m> c)<nbsp/><m>0</m> d)<nbsp/><m>-6</m> e)<nbsp/><m>-3</m> f)<nbsp/><m>28</m> g)<nbsp/><m>16</m> h)<nbsp/><m>-24</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -403,12 +402,12 @@
           <li> <m>\begin{bmatrix}x \amp 1 \amp 0 \\ 1 \amp 4 \amp 0 \\ 1 \amp 6 \amp 2 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>3</m> b)<nbsp/><m>9</m> c)<nbsp/><m>3</m> d)<nbsp/><m>\nicefrac{1}{4}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -419,12 +418,12 @@
           without computing the inverse.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>12</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <title>challenging</title>
       <statement>
@@ -438,11 +437,11 @@
           Note that there are two answers.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>1</m> and <m>3</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

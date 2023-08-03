@@ -661,8 +661,7 @@
       Il suffit alors de lire l'inverse <m>A^{-1}</m>.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -746,36 +745,36 @@
           Calculez le déterminant de <m>\left[ \begin{matrix}1 \amp 1 \amp 1 \\ 2 \amp 3 \amp -5 \\ 1 \amp -1 \amp 0 \end{matrix} \right]</m>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>-15</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Trouvez <m>t</m> tel que <m>\left[ \begin{matrix}1 \amp t \\ -1 \amp 2 \end{matrix} \right]</m> n'est pas inversible.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>-2</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Résolvez <m>\left[ \begin{matrix}1 \amp 1 \\ 1 \amp -1 \end{matrix} \right] \vec{x} = \left[ \begin{matrix}10 \\ 20 \end{matrix} \right]</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>\vec{x} = \left[ \begin{matrix}15 \\ -5 \end{matrix} \right]</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -785,12 +784,12 @@
           <li> Calculez <m>N^{-1}</m>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \\ 0 \amp \nicefrac{1}{b} \end{matrix} \right]</m> b) <m>\left[ \begin{matrix}\nicefrac{1}{a} \amp 0 \amp 0 \\ 0 \amp \nicefrac{1}{b} \amp 0 \\ 0 \amp 0 \amp \nicefrac{1}{c} \end{matrix} \right]</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

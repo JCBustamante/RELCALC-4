@@ -272,8 +272,8 @@
 
     <!-- TODO fix table -->
   </introduction>
-  <subsection>
-    <title>Exercices</title>
+
+<exercises>
     <exercise>
       <statement>
         <p>
@@ -340,7 +340,6 @@
           <m>y' = -4x+y</m>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) Deux valeurs propres:
@@ -355,6 +354,7 @@
       <m>5</m> et <m>-3</m>, donc le comportement est une selle.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -363,12 +363,12 @@
           Décrivez le comportement.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Spiral source.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -377,12 +377,12 @@
           Correspond-il à un comportement préalablement observé?
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         
       </p>
     </answer>
+    </exercise>
     <p>
       <image width="37%" source="images/0100vectorfield.png"/>
     </p>
@@ -400,5 +400,6 @@
       Note that the matrix has a double eigenvalue 0 and the general solution is <m>x = C_1 t + C_2</m> and <m>y = C_1</m>,
       which agrees with the description above. }
     </p>
-  </subsection>
+
+  </exercises>
 </section>

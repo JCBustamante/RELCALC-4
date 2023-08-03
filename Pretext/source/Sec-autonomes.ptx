@@ -312,8 +312,7 @@
       <image width="100%" source="2-2-logistic-h2"/>
     </figure>
   </introduction>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -394,13 +393,13 @@
           calculez <m>\displaystyle \lim_{t\to\infty} x(t)</m>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) 0, 1, 2 sont des points critiques. b) <m>x=0</m> est instable (semi-stable),
       <m>x=1</m> est stable, et <m>x=2</m> est instable. c) 1
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -409,12 +408,12 @@
           <m>\displaystyle \lim_{t\to\infty} x(t)</m> étant donnée une condition initiale arbitraire. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) Il n'y a pas de points critiques. b) <m>\infty</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -426,13 +425,13 @@
           <li> Quelle est la nouvelle population limite? </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>\frac{dx}{dt} = kx(M-x)+A</m> b) <m>\frac{kM + \sqrt{{(kM)}^2 + 4Ak}}{2k}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -444,7 +443,6 @@
           <li> <m>\beta \lt x(0)</m>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>\alpha</m> est un point critique stable,
@@ -452,5 +450,6 @@
       c) <m>\alpha</m>, d) <m>\infty</m> ou n'existe pas .
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

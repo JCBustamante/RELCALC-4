@@ -302,8 +302,7 @@
       </statement>
     </example>
   </introduction>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <p>
       Dans les exercices suivants, n'hésitez pas à
       laisser la réponse sous forme d'intégrale définie si une solution analytique n'est pas possible.
@@ -420,12 +419,12 @@
           Résolvez <m>y'+3 x^2 y = x^2</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y = C e^{-x^3} + \nicefrac{1}{3}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -433,12 +432,12 @@
           <m>y(\nicefrac{\pi}{2}) = 3</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y = 2 e^{\cos(2x)+1} + 1</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -460,12 +459,12 @@
           vide, combien de grammes de matière dangereuse sont contenus dans le réservoir? (On suppose que c'est bien brassé.)
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>250</m> grammes
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -476,12 +475,12 @@
           Si <m>P(0) = 1000</m>, trouvez la population pour <m>t=5</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>P(5) = 1000 e^{2 \times 5 - 0{,}05 \times {5}^2} = 1000 e^{8{,}75} \approx 6{,}31 \times {10}^6</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -498,7 +497,6 @@
           Donnez aussi les unités pour vos constantes.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>Ah' = d - kh</m>,
@@ -507,5 +505,6 @@
      
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

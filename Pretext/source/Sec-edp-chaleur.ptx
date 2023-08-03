@@ -604,8 +604,7 @@
       la constante <m>\frac{a_0}{2}</m> partout.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -757,12 +756,12 @@
           </md>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>u(x,t) = 5 \sin (x) \, e^{- 3 t} + 2 \sin (5x) \, e^{-75 t}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -774,24 +773,24 @@
           </md>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>u(x,t) = 1 + 2 \cos (x) \, e^{-0.1 t}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Use separation of variables to find a nontrivial solution to <m>u_{xt} = u_{xx}</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>u(x,t) = e^{\lambda t} e^{\lambda x}</m> for some <m>\lambda</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -799,12 +798,12 @@
           try <m>u(x,t) = X(x)+T(t)</m>) to find a nontrivial solution to <m>u_{x} + u_{t} = u</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>u(x,t) = Ae^x + Be^t</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -817,7 +816,6 @@
           <li> At what time is the maximum temperature on the wire exactly one half of the initial maximum at <m>t=0</m>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>0</m>,
@@ -825,5 +823,6 @@
       maximum <m>100</m>, c) <m>t = \frac{\ln 2}{4 \pi^2}</m>.
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

@@ -456,7 +456,7 @@
       </em>.
       De plus, le graphe de <m>\cosh</m> offre la forme idéale pour une arche supportant son propre poids;
       une telle arche de forme parabolique risquerait de s'écrouler.
-      Un exemple célèbre est la {Gateway Arch} de la ville américaine de Saint-Louis,
+      Un exemple célèbre est la Gateway Arch de la ville américaine de Saint-Louis,
       dont la formule est inscrite dans la structure :
       <me>
         y = -127.7 \; \textrm{ft}  \cdot \cosh\left( x /127.7  \; \textrm{ft}  \right) + 757.7 \;\textrm{ft}
@@ -481,27 +481,7 @@
 
 
 
- <exercises>
-   <exercisegroup>
-     <title>Les exos</title>
-
-     <exercise>
-       <statement>
-         <p>
-           Montrez que <m>x = e^{4t}</m> est une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
-         </p>
-       </statement>
-     </exercise>
-
-
-
-   </exercisegroup>
- </exercises>
-
-
-
-  <subsection>
-    <title>Exercices</title>
+<exercises>
     <exercise>
       <statement>
         <p>
@@ -595,7 +575,7 @@
     <exercise>
       <statement>
         <p>
-          Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million <m>$</m>,
+          Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million $,
           et qu'il a une augmentation salariale de <m>10\%</m> chaque année
           (donc modèle de croissance exponentielle,
           comme les bactéries).
@@ -617,7 +597,6 @@
           Montrez que <m>x = e^{-2t}</m> est une solution de <m>x'' + 4x' + 4x = 0</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Calculer
@@ -625,6 +604,7 @@
       Alors, <m>(4e^{-2t}) + 4 (-2e^{-2t}) + 4 (e^{-2t}) = 0</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -632,12 +612,12 @@
           Justifiez votre réponse.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Oui.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -647,12 +627,12 @@
           Si oui, trouvez toutes les valeurs possibles de <m>r</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y=x^r</m> est une solution pour <m>r=0</m> et <m>r=2</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -661,25 +641,25 @@
           <m>x(0) = 10</m> et <m>x'(0) = 100</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>C_1 = 100</m>,
       <m>C_2 = -90</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
           Résolvez <m>\frac{d\varphi}{ds} = 8 \varphi</m> et <m>\varphi(0) = -9</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>\varphi = -9 e^{8s}</m> 
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -693,5 +673,5 @@
         </p>
       </statement>
     </exercise>
-  </subsection>
+</exercises>
 </section>

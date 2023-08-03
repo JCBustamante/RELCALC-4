@@ -435,8 +435,7 @@
       </statement>
     </exercise>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -572,13 +571,13 @@
           la troisième harmonique. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>\frac{8}{6} + \sum\limits_{n=1}^\infty \frac{16{(-1)}^n}{\pi^2 n^2} \cos\bigl(\frac{n\pi}{2} t\bigr)</m> b) <m>\frac{8}{6} - \frac{16}{\pi^2 } \cos\bigl(\frac{\pi}{2} t\bigr) + \frac{4}{\pi^2} \cos\bigl(\pi t\bigr) - \frac{16}{9\pi^2} \cos\bigl(\frac{3\pi}{2} t\bigr) + \cdots</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -591,13 +590,13 @@
           la troisième harmonique. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>\sum\limits_{n=1}^\infty \frac{{(-1)}^{n+1}2\lambda}{n \pi} \sin\bigl(\frac{n\pi}{\lambda} t\bigr)</m> b) <m>\frac{2\lambda}{\pi} \sin\bigl(\frac{\pi}{\lambda} t\bigr) - \frac{\lambda}{\pi} \sin\bigl(\frac{2\pi}{\lambda} t\bigr) + \frac{2\lambda}{3\pi} \sin\bigl(\frac{3\pi}{\lambda} t\bigr) - \cdots</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -610,12 +609,12 @@
           Calculez <m>f'(t)</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>f'(t) = \sum\limits_{n=1}^\infty \frac{\pi}{n^2+1} \cos(n\pi t)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -629,12 +628,12 @@
           <li> La primitive est-elle périodique? </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>F(t) = \frac{t}{2} + C + \sum\limits_{n=1}^\infty \frac{1}{n^4} \sin(nt)</m> b) non
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -649,7 +648,6 @@
           <li> En utilisant les 4 premiers termes du résultat de la partie b) approximez <m>\nicefrac{\pi}{4}</m>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
@@ -662,6 +660,7 @@
       <m>0.01</m> de <m>\nicefrac{\pi}{4}</m>).
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -679,7 +678,6 @@
           <li> <m>F(-8)</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>F(0) = 1</m>,
@@ -687,5 +685,6 @@
       d) <m>F(-2) = 1</m>, e) <m>F(4) = 1</m>, f) <m>F(-9) = 0</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

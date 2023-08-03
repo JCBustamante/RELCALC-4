@@ -473,8 +473,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -552,7 +551,6 @@
           <li> <m>(3x^2+3y)\,dx + (3y^2+3x)\, dy = 0</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
@@ -560,6 +558,7 @@
       <m>e^x+e^y=C</m> d) <m>x^3 + 3xy+ y^3 = C</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -570,7 +569,6 @@
           résolvez l'équation et vérifiez que la solution obtenue est la même que dans l'<xref ref="example_yprimeisxy"></xref>. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) L'équation est <m>- f(x) \, dx + \frac{1}{g(y)} \, dy</m>,
@@ -581,5 +579,6 @@
       on résout <m>F(x,y) = C</m> et la solution obtenue est la même que dans l'exemple.
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

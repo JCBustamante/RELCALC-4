@@ -408,8 +408,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection>
-    <title>Exercices</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -512,12 +511,12 @@
           Trouvez la solution générale de <m>y^{(5)}-y^{(4)}=0</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y=C_1 e^x +C_2 x^3 + C_3 x^2 +C_4 x + C_5</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <title>2</title>
       <statement>
@@ -527,13 +526,13 @@
           <li> Trouvez la solution générale. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>r^3-3r^2+4r-12 = 0</m> b)
       <m>y'''-3y''+4y'-12y = 0</m> c) <m>y = C_1 e^{3x} + C_2 \sin(2x) + C_3 \cos(2x)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -541,12 +540,12 @@
           <m>y(0)=0</m>, <m>y'(0) = 0</m>, <m>y''(0) = 0</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y=0</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -556,13 +555,13 @@
           Sinon, trouvez une combinaison linéaire qui fonctionne.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         No.
       <m>e^1 e^x - e^{x+1} = 0</m>.
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -572,13 +571,13 @@
           Sinon, trouvez une combinaison linéaire qui fonctionne.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         Oui. (Astuce : Notez d'abord que <m>\sin(x)</m> est délimité. Ensuite,
       notez que <m>x</m> et <m>x\sin(x)</m> ne peuvent pas être multiples l'un de l'autre.)
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -586,11 +585,11 @@
           <m>y=e^x</m> sont des solutions.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>y'''-y''+y'-y=0</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

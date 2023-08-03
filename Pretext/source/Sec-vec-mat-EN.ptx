@@ -594,8 +594,7 @@
       and that's the corresponding entry in the resulting vector.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises</title>
+  <exercises>
     <exercise>
       <statement>
         <p>
@@ -746,12 +745,12 @@
           <li> <m>(-2,1,-2)</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>\sqrt{10}</m> b)<nbsp/><m>\sqrt{14}</m> c)<nbsp/><m>3</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -761,13 +760,13 @@
           <li> <m>(2,-5,2)</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/>
       <m>\begin{bmatrix}\frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}\frac{1}{\sqrt{6}} \\ \frac{-1}{\sqrt{6}} \\ \frac{2}{\sqrt{6}} \end{bmatrix}</m> c)<nbsp/><m>\left( \frac{2}{\sqrt{33}},\frac{-5}{\sqrt{33}},\frac{2}{\sqrt{33}} \right)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <title>2</title>
       <statement>
@@ -783,12 +782,12 @@
           <li> <m>2\begin{bmatrix}2 \\ -3 \end{bmatrix} - 6 \begin{bmatrix}2 \\ -1 \end{bmatrix}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>\begin{bmatrix}9 \\ -2 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}-3 \\ 3 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}5 \\ -3 \end{bmatrix}</m> d)<nbsp/><m>\begin{bmatrix}-4 \\ 8 \end{bmatrix}</m> e)<nbsp/><m>\begin{bmatrix}3 \\ 7 \end{bmatrix}</m> f)<nbsp/><m>\begin{bmatrix}-8 \\ 3 \end{bmatrix}</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -798,12 +797,12 @@
           <li> <m>-4\vec{x}</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>20</m> b)<nbsp/><m>10</m> c)<nbsp/><m>20</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -813,11 +812,11 @@
           <li> <m>(1,-1)</m> </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)<nbsp/><m>(3,-1)</m> b)<nbsp/><m>(4,0)</m> c)<nbsp/><m>(-1,-1)</m>
       </p>
     </answer>
-  </subsection>
+    </exercise>
+  </exercises>
 </section>

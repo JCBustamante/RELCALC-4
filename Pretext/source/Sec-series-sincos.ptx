@@ -349,13 +349,13 @@
           <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>\nicefrac{1}{2} + \sum\limits_{\substack{n=1\\n\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos\bigl(\frac{n\pi}{3} t \bigr)</m> b) <m>\sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{\pi n} \sin\bigl(\frac{n\pi}{3} t \bigr)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -364,13 +364,13 @@
           <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a)
       <m>\cos(2t)</m> b) <m>\sum\limits_{\substack{n=1 \\n \text{ impair } } }^\infty \frac{-4n}{\pi n^2 - 4 \pi} \sin(n t)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -382,12 +382,12 @@
           <m>-1 \lt t \lt 0</m> (Justifiez!) </li></ol>
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         a) <m>f(t)</m> b) <m>0</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <statement>
         <p>
@@ -396,12 +396,12 @@
           <m>x(0) = 0</m> et <m>x(\pi) = 0</m>.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>\sum\limits_{n=1}^\infty \frac{-1}{n^2(1+n^2)} \sin(nt)</m>
       </p>
     </answer>
+    </exercise>
     <exercise>
       <title>défi</title>
       <statement>
@@ -412,11 +412,11 @@
           Astuce : notez que <m>\frac{t}{\pi}</m> satisfait aux conditions de Dirichlet données.
         </p>
       </statement>
-    </exercise>
     <answer>
       <p>
         <m>\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)</m>
       </p>
     </answer>
+    </exercise>
   </subsection>
 </section>
