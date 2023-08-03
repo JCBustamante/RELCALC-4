@@ -1,8 +1,0 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ho_chapter">
-  <title>Équations différentielles ordinaires d'ordre supérieur</title>
-  <xi:include  href="solinear_section.ptx"/>
-  <xi:include  href="sec_ccsol.ptx"/>
-  <xi:include  href="sec_hol.ptx"/>
-  <xi:include  href="sec_mv.ptx"/>
-  <xi:include  href="sec_nonhom.ptx"/>
-</chapter>

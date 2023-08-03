@@ -1,0 +1,9 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="linalg_appendix">
+  <title>Linear algebra</title>
+  <xi:include  href="Sec-vec-mat-EN.ptx"/>
+  <xi:include  href="Sec-alg-mat-EN.ptx"/>
+  <xi:include  href="Sec-elim-EN.ptx"/>
+  <xi:include  href="Sec-sous-esp-EN.ptx"/>
+  <xi:include  href="Sec-produit-scal-EN.ptx"/>
+  <xi:include  href="Sec-det-EN.ptx"/>
+</chapter>

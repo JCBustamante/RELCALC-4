@@ -1,9 +1,0 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="linalg_appendix">
-  <title>Linear algebra</title>
-  <xi:include  href="vecsandmaps_section.ptx"/>
-  <xi:include  href="matalg_section.ptx"/>
-  <xi:include  href="elim_section.ptx"/>
-  <xi:include  href="subspaces_section.ptx"/>
-  <xi:include  href="innerproduct_section.ptx"/>
-  <xi:include  href="det_section.ptx"/>
-</chapter>

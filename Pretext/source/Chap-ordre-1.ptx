@@ -1,0 +1,9 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="fo_chapter">
+  <title>Équations du premier ordre</title>
+  <xi:include  href="Sec-int-sols.ptx"/>
+  <xi:include  href="Sec-champs.ptx"/>
+  <xi:include  href="Sec-separables.ptx"/>
+  <xi:include  href="Sec-fact-int.ptx"/>
+  <xi:include  href="Sec-autonomes.ptx"/>
+  <xi:include  href="Sec-exactes.ptx"/>
+</chapter>
