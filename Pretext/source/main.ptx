@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr-CA">
   <docinfo>
 <macros>
 \newcommand{\theversion}{6.2}
@@ -100,7 +100,7 @@ Remarque
 <rename element="fact">Formule</rename>
   </docinfo>
   <book>
-    <title>Équations différentielles pour le génie</title>
+    <title>Équations différentielles pour les sciences appliquées et le génie</title>
     <frontmatter>
       <titlepage>
         <author>
