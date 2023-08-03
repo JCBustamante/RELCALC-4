@@ -1,14 +1,9 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="linalg_appendix">
   <title>Linear algebra</title>
   <xi:include  href="vecsandmaps_section.ptx"/>
-  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
   <xi:include  href="matalg_section.ptx"/>
-  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
   <xi:include  href="elim_section.ptx"/>
-  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
   <xi:include  href="subspaces_section.ptx"/>
-  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
   <xi:include  href="innerproduct_section.ptx"/>
-  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
   <xi:include  href="det_section.ptx"/>
 </chapter>
