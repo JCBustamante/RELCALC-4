@@ -454,24 +454,26 @@
             Résolvez <m>y'=2xy</m>.
           </p>
         </statement>
+        <answer>
+          <p>
+            <m>y = Ce^{x^2}</m>
+          </p>
+        </answer>
       </exercise>
-      <answer>
-        <p>
-          <m>y = Ce^{x^2}</m>
-        </p>
-      </answer>
+      
       <exercise>
         <statement>
           <p>
             Résolvez <m>x'=3xt^2-3t^2</m>, <m>x(0)=2</m>.
           </p>
         </statement>
+        <answer>
+          <p>
+            <m>x = e^{t^3}+1</m>
+          </p>
+        </answer>
       </exercise>
-      <answer>
-        <p>
-          <m>x = e^{t^3}+1</m>
-        </p>
-      </answer>
+      
       <exercise>
         <statement>
           <p>
@@ -479,12 +481,13 @@
             <m>x(0)=1</m>.
           </p>
         </statement>
+        <answer>
+          <p>
+            <m>x^3+x=t+2</m>
+          </p>
+        </answer>
       </exercise>
-      <answer>
-        <p>
-          <m>x^3+x=t+2</m>
-        </p>
-      </answer>
+      
       <exercise>
         <statement>
           <p>
@@ -492,24 +495,26 @@
             <m>y(1) = 1</m>.
           </p>
         </statement>
+        <answer>
+          <p>
+            <m>y = \frac{1}{1-\ln x}</m>
+          </p>
+        </answer>
       </exercise>
-      <answer>
-        <p>
-          <m>y = \frac{1}{1-\ln x}</m>
-        </p>
-      </answer>
+      
       <exercise>
         <statement>
           <p>
             Trouvez une solution implicite pour <m>y' = \frac{\sin(x)}{\cos(y)}</m>.
           </p>
         </statement>
+        <answer>
+          <p>
+            <m>\sin(y) = -\cos(x) + C</m>
+          </p>
+        </answer>
       </exercise>
-      <answer>
-        <p>
-          <m>\sin(y) = -\cos(x) + C</m>
-        </p>
-      </answer>
+      
       <exercise>
         <statement>
           <p>
@@ -526,12 +531,13 @@
             Plus court?
           </p>
         </statement>
+        <answer>
+          <p>
+            L'intervalle de temps est d'environ 7.45 à 12.15 minutes.
+          </p>
+        </answer>
       </exercise>
-      <answer>
-        <p>
-          L'intervalle de temps est d'environ 7.45 à 12.15 minutes.
-        </p>
-      </answer>
+      
       <exercise>
         <statement>
           <p>
@@ -545,12 +551,13 @@
             Arrondissez à l'entier le plus proche. </li></ol>
           </p>
         </statement>
+        <answer>
+          <p>
+            a)
+          <m>x = \frac{1000e^t}{e^t+24}</m>. b) 102 lapins après un mois, 861 après 5 mois, 999 après 10 mois, 1000 après 15 mois.
+          </p>
+        </answer>
       </exercise>
-      <answer>
-        <p>
-          a)
-        <m>x = \frac{1000e^t}{e^t+24}</m>. b) 102 lapins après un mois, 861 après 5 mois, 999 après 10 mois, 1000 après 15 mois.
-        </p>
-      </answer>
+      
   </exercises>
 </section>
