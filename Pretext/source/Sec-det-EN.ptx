@@ -1,6 +1,6 @@
 <section xml:id="det_section">
   <title>Determinant</title>
-  <introduction>
+  <!-- <introduction> -->
     <p>
       For square matrices we define a useful quantity called the <em>determinant
           <idx><h>determinant</h></idx>
@@ -275,7 +275,7 @@
       Also think about how to write the absolute value of a determinant.
       This notation is not used in this book.
     </p>
-  </introduction>
+  <!-- </introduction> -->
   <exercises>
     <exercise>
       <statement>

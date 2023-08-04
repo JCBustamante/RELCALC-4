@@ -1,6 +1,6 @@
 <section xml:id="we_section">
   <title>Équation d'onde unidimensionnelle</title>
-  <introduction>
+  <!-- <introduction> -->
     <p>
       Imaginez avoir une corde de guitare tendue de longueur <m>L</m>.
       On considère les vibrations dans une seule direction.
@@ -415,7 +415,7 @@
       et sans la résistance de l'air.
       Ces variables ont clairement un impact sur le son également.
     </p>
-  </introduction>
+  <!-- </introduction> -->
   <exercises>
     <exercise>
       <statement>

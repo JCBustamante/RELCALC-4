@@ -1,6 +1,6 @@
 <section xml:id="intfactor_section">
   <title>Équations linéaires et facteur intégrant</title>
-  <introduction>
+  <!--  <introduction> --> 
     <p>
       Les <em>équations linéaires<idx><h>équation linéaire</h></idx>
       </em> sont parmi les équations différentielles les plus importantes à comprendre.
@@ -146,12 +146,11 @@
     <p>
       Écrivons la solution sous forme d'intégrale définie :
       <men xml:id="lei_defsol">
-        \mybxbg{ ~~ y(x) = e^{-\int_{x_0}^x p(s)\, ds} \left( \int_{x_0}^x e^{\int_{x_0}^t p(s)\, ds} f(t) \,dt + y_0 \right). ~~ }
+         y(x) = e^{-\int_{x_0}^x p(s)\, ds} \left( \int_{x_0}^x e^{\int_{x_0}^t p(s)\, ds} f(t) \,dt + y_0 \right).
       </men>
     </p>
     <p>
-      Cette formule peut maintenant être lue par une application de calcul numérique,
-      si nous la codons convenablement.
+      Cette formule peut maintenant être lue par une application de calcul numérique, si nous la codons convenablement.
     </p>
     <exercise>
       <statement>
@@ -160,6 +159,7 @@
         </p>
       </statement>
     </exercise>
+
     <exercise>
       <statement>
         <p>
@@ -171,6 +171,7 @@
         </p>
       </statement>
     </exercise>
+
     <remark xml:id="rem_regular">
       <p>
         Avant de continuer,
@@ -192,7 +193,7 @@
           la concentration de produits chimiques dans un plan d'eau.
         </p>
         <p>
-          <image width="73%" source="lin-tank"/> 
+          <image width="73%" source="lin-tank"/>
           <!-- TODO on ne voit pas le texte sur l'image -->
           Un réservoir d'une capacité
           de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau.
@@ -295,13 +296,14 @@
           <!-- \unitfrac[0{,}1186]{kg}{litre} -->
           0,1186 kg/L,
           alors que la concentration initiale est de
-          <m>\nicefrac{1}{6}</m> ou 
+          <m>\nicefrac{1}{6}</m> ou
           <!-- \unitfrac[0{,}167]{kg}{litre} -->
           0,167 kg/L.
         </p>
       </statement>
     </example>
-  </introduction>
+  <!--  </introduction>  -->
+
   <exercises>
     <p>
       Dans les exercices suivants, n'hésitez pas à
@@ -501,8 +503,8 @@
       <p>
         <m>Ah' = d - kh</m>,
       où <m>k</m> est une constante mesurée en <m>m^2 s</m>
-      . 
-     
+      .
+
       </p>
     </answer>
     </exercise>

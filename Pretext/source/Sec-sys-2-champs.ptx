@@ -1,6 +1,6 @@
 <section xml:id="sec_twodimaut">
   <title>Systèmes bidimensionnels et leurs champs vectoriels</title>
-  <introduction>
+  <!-- <introduction> -->
     <p>
       Note : lectures supplémentaires dans <xref ref="EP"></xref> (partie de &#xa7;6.2)
       et dans <xref ref="BD"></xref> (parties de &#xa7;7.5 et &#xa7;7.6).
@@ -271,7 +271,7 @@
 
 
     <!-- TODO fix table -->
-  </introduction>
+  <!-- </introduction> -->
 
 <exercises>
     <exercise>

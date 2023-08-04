@@ -1,6 +1,6 @@
 <section xml:id="linsystems_section">
   <title>Systèmes linéaires d'équations différentielles ordinaires</title>
-  <introduction>
+  <!-- <introduction> -->
     <p>
       Commençaons par parler des fonctions matricielles et vectorielles.
       Ces fonctions sont des matrices ou des vecteurs où un élément dépend d'une variable.
@@ -266,7 +266,7 @@
         </p>
       </statement>
     </example>
-  </introduction>
+  <!-- </introduction> -->
   <exercises>
     <exercise>
       <statement>

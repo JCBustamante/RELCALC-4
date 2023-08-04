@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="16" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="RELCALC3-pretext/Chap_Fonc-Multi-Variables/Derivees-Partielles-05.pg">
+      <statement><p>Supposons que <m>f(x,y)</m> est une fonction lisse et que ses dérivées partielles ont pour valeurs, <m>f_x(-7, 5) = -4</m> et <m>f_y(-7, 5) = 
+4</m>. Étant donné que <m>f(-7, 5) = 7</m>, utilisez cette information pour estimer la valeur de <m>f(-6, 6)</m>. Remarquer que cela est analogue à trouver l'approximation linéaire d'une fonction à une variable. En d'autre mots, c'est l'approximation de Taylor d'ordre un.</p>
+<p>Estimer de (valeur entière) <m>f(-7, 6)</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>Estimer de (valeur entière) <m>f(-6, 5)</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p>Estimer de (valeur entière) <m>f(-6, 6)</m> <fillin name="AnSwEr0003" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>11</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>7</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="RELCALC3-pretext/Chap_Fonc-Multi-Variables/Derivees-Partielles-05.pg" domain="https://webwork-dev.dmat.usherbrooke.ca" course-id="pretext" user-id="anonyme" course-password="anonyme" language="en-US"/>
+    <pg source="RELCALC3-pretext/Chap_Fonc-Multi-Variables/Derivees-Partielles-05.pg"/>
+  </webwork-reps>
+</webwork-representations>

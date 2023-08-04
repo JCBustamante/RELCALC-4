@@ -1,6 +1,6 @@
 <section xml:id="auteq_section">
   <title>Équations autonomes</title>
-  <introduction>
+  <!-- <introduction> -->
     <p>
       Considérons une équation différentielle comme suit :
       <me>
@@ -311,7 +311,7 @@
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h2} -->
       <image width="100%" source="2-2-logistic-h2"/>
     </figure>
-  </introduction>
+  <!-- </introduction> -->
   <exercises>
     <exercise>
       <statement>

@@ -156,9 +156,9 @@
     <figure>
       <image>
 <latex-image>
-\begin{tikzpicture}\draw (0,0) node {Situation-probl\`eme};
+\begin{tikzpicture}\draw (0,0) node {Situation-problème};
 \draw[->] (-0.1,-0.5) -- (-4,-3.8) node[left,pos=0.5] {abstraire};
-\draw (-5,-4) node {Mod\`ele math\'ematique} ;
+\draw (-5,-4) node {Modèle math\'ematique} ;
 \draw[->] (-2.5,-4) -- (2.5,-4) node [above, pos=0.5] {r\'esoudre};
 \draw (5,-4)  node {Solution math\'ematique};
 \draw[->] (4,-3.8) -- (0.1,-0.5)  node[right,pos=0.5] {interpr\'eter};
