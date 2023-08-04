@@ -1,0 +1,513 @@
+<section xml:id="slopefields_section">
+  <title>Champs de direction</title>
+  <introduction>
+    <p>
+      Rappelons que l'équation générale du premier ordre s'écrit comme suit :
+      <me>
+        y' = f(x , y)
+      </me>.
+    </p>
+    <p>
+      Souvent, on ne peut tout simplement pas trouver une solution analytique à cette équation.
+      Mais on aimerait au moins avoir une idée de la forme et du comportement de la solution,
+      ou trouver une solution approximative.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Champs de direction</title>
+    <p>
+      L'équation <m>y' = f(x , y)</m> donne une formule pour la pente de la tangente à une solution à
+      chaque point du plan <m>(x , y)</m>.
+      Autrement dit, si <m>y(x)</m> est une solution,
+      alors son graphe passe par le point <m>(x , y)</m>,
+      et la pente de la tangente au graphe à
+      ce point est donnée par <m>f(x , y)</m>.
+      La solution exacte au point <m>(x , y)</m> est approximée par une droite de pente <m>f(x , y)</m>,
+      alors on place à ce point un petit segment de droite ayant cette pente.
+      Par exemple, si <m>f(x , y) = xy</m>,
+      alors, au point <m>(2 , 1,5)</m>,
+      on trace une petite ligne de pente <m>xy = 2 \times 1,5 = 3</m>.
+      Si <m>y(x)</m> est une solution et que <m>y(2) = 1,5</m>,
+      l'équation différentielle impose la condition <m>y'(2) = 3</m>.
+      Voir la <xref ref="x1_3_fig0">figure</xref>.
+    </p>
+    <figure xml:id="x1_3_fig0">
+      <caption>La tangente au point <m>(2 , 1,5)</m>, dont la pente est <m>y'=xy</m>.</caption>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1-3-xysl-one} -->
+      <image width="100%" source="1-3-xysl-one"/>
+    </figure>
+    <p>
+      Pour visualiser le comportement des solutions,
+      on trace de tels segments de droite à
+      plusieurs points du plan
+      (idéalement, on voudrait voir la tangente à
+      chaque point du plan, ce qui est évidemment impossible).
+      Typiquement, on se donne un grillage de points,
+      suffisamment fin pour qu'on voie le comportement des solutions,
+      mais pas trop, sinon on ne voit plus les segments individuels.
+      On appelle une telle figure le <em>champ de directions
+          <idx><h>champ de directions</h></idx>
+      </em> pour l'équation.
+      La <xref ref="x1_3_fig1">figure</xref> montre le champ de directions pour l'équation <m>y' = xy</m>. Habituellement,
+      on laissera à
+      un ordinateur le soin de tracer une telle figure.
+    </p>
+    <p>
+      Supposons que nous nous faisons donner une condition initiale,
+      <m>y(x_0) = y_0</m>.
+      Une solution, c'est-à-dire le graphe d'une solution,
+      est une courbe tangente aux segments de droite qu'on a dessinés.
+      Quelques exemples de solutions sont donnés à la <xref ref="x1_3_fig2">figure</xref>.
+      On peut tracer grosso modo une solution dans le champ de directions,
+      juste en regardant les directions.
+      Il suffit de tracer une courbe qui passe par la condition initiale et qui est à
+      peu près tangente aux segments du champ de directions.
+    </p>
+    <figure xml:id="x1_3_fig1">
+      <caption>Champ de directions pour <m>y' = xy</m>.</caption>
+      <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{1-3-xysl} -->
+      <image width="100%" source="1-3-xysl"/>
+      
+      <!-- <nbsp/><nbsp/> -->
+      <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{1-3-xysl-sol} -->
+      
+      <!-- \caption{Champ de directions pour <m>y' = xy</m>, avec les graphes de solutions satisfaisant à <m>y(0) = 0,2</m>, <m>y(0) = 0</m> et <m>y(0) = -0,2</m>.} -->
+    </figure>
+
+    <figure xml:id="x1_3_fig2">
+      <caption>Champ de directions pour <m>y' = xy</m>, avec les graphes de solutions satisfaisant à <m>y(0) = 0,2</m>, <m>y(0) = 0</m> et <m>y(0) = -0,2</m>.</caption>
+      <image width="100%" source="1-3-xysl-sol"/>
+    </figure>
+
+    <p>
+      L'observation du champ de directions suffit pour avoir beaucoup d'information sur le comportement des solutions.
+      Par exemple, la <xref ref="x1_3_fig2">figure</xref>
+      nous montre le comportement des solutions selon que <m>y(0) > 0</m>,
+      <m>y(0) = 0</m> ou <m>y(0) \lt 0</m>.
+      Un petit changement dans la condition initiale peut entraîner des différences appréciables dans le comportement des solutions.
+      Et l'on peut le voir juste en regardant le champ de directions et en imaginant ce que font les solutions.
+    </p>
+    <p>
+      Le comportement est tout autre avec l'équation <m>y' = -y</m>. La
+      <xref ref="x1_3_fig3">figure</xref> montre le champ de directions de cette équation,
+      ainsi que quelques solutions.
+      Lorsqu'on se déplace de gauche à
+      droite (dans la direction où <m>x</m> augmente),
+      on voit que, quelle que soit la valeur de <m>y(0)</m>,
+      toutes les solutions tendent vers 0 lorsque <m>x</m> tend vers l'infini.
+      Ce comportement s'observe bien du champ de directions,
+      sans devoir résoudre l'équation explicitement.
+    </p>
+    <figure xml:id="x1_3_fig3">
+      <caption>Champ de directions pour <m>y' = -y</m>, avec le graphe de quelques solutions.</caption>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1-3-mysl-sol} -->
+      <image width="100%" source="1-3-mysl-sol"/>
+    </figure>
+  </subsection>
+  <subsection>
+    <title>Existence et unicité</title>
+    <p>
+      Nous allons considérer maintenant deux questions fondamentales à
+      propos de l'équation
+      <me>
+        y' = f(x,y), \qquad y(x_0) = y_0
+      </me>.
+      <ol marker="i">
+        <li>
+          <p>
+            Est-ce qu'une solution <em>existe</em>?
+          </p>
+        </li>
+        <li>
+          <p>
+            Si elle existe, est-ce que la solution est <em>unique</em>?
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Avant de continuer, essayez de répondre à ces questions.
+    </p>
+    <p>
+      Tous les exemples vus jusqu'ici pourraient vous faire croire que la réponse est oui aux deux questions.
+      Mais ce n'est pas toujours le cas.
+    </p>
+    <p>
+      Pour les équations décrivant des lois de la nature,
+      on s'attend à
+      ce qu'une solution existe.
+      Cette solution devrait aussi être unique,
+      du moins si l'on croit en un univers déterministe.
+      Si aucune solution n'existe,
+      ou si elle n'est pas unique,
+      il y a probablement un problème avec le modèle.
+      C'est donc pertinent de saisir les conditions dans lesquelles une solution unique existe.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Essayons de résoudre l'équation suivante :
+          <me>
+            y' = \frac{1}{x},  \qquad  y(0) = 0
+          </me>.
+        </p>
+        <p>
+          En intégrant,
+          on trouve la solution générale <m>y = \ln \, \lvert x \rvert + C</m>.
+          Mais cette solution n'est pas définie en <m>x=0</m>.
+          Voir la <xref ref="x1_3_xinvfig">figure</xref>.
+          On aurait pu écrire l'équation comme
+          <m>x y' = 1</m> et l'on pourrait croire que la solution devrait être jolie.
+        </p>
+        <figure xml:id="x1_3_xinvfig">
+          <caption>Champ de directions pour <m>y' = \nicefrac{1}{x}</m>.</caption>
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1-3-xinv-sol} -->
+          <image width="100%" source="1-3-xinv-sol"/>
+        </figure>
+        <figure xml:id="x1_3_sqrtfig">
+          <!-- <nbsp/><nbsp/>
+          \diffyincludegraphics{width=3in}{width=4.5in}{1-3-sqrt-sol} -->
+          <caption>Champ de directions pour <m>y' = 2 \sqrt{\lvert y \rvert}</m>, avec deux solutions satisfaisant à <m>y(0) = 0</m>.</caption>
+          <!-- \caption{Champ de directions pour <m>y' = 2 \sqrt{\lvert y \rvert}</m>, avec deux solutions satisfaisant à <m>y(0) = 0</m>. } -->
+          <image width="100%" source="1-3-sqrt-sol"/>
+        </figure>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Résolvons :
+          <me>
+            y' = 2 \sqrt{\lvert y \rvert}, \qquad y(0) = 0
+          </me>.
+        </p>
+        <p>
+          Voir la <xref ref="x1_3_sqrtfig">figure</xref>.
+          Remarquons que <m>y=0</m> est une solution.
+          Et en voici une autre :
+          <me>
+            y(x) =  \begin{cases} x^2 \amp  \text{ si }  \; x \geq 0 \\ -x^2 \amp  \text{ si }  \; x \lt  0. \end{cases}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <p>
+      Si l'on se fie au champ de directions,
+      il peut être difficile de se rendre compte que la solution n'est pas unique.
+      Que faire?
+      Heureusement, on a le théorème de Picard<m>\!</m><fn>
+      <url href="https://fr.wikipedia.org/wiki/Émile_Picard">Charles Émile Picard</url>,
+      mathématicien français (1856-1941).
+      </fn>.
+    </p>
+    <theorem xml:id="slope_picardthm">
+      <title>Théorème d'existence et d'unicité de Picard</title>
+      <statement>
+        <p>
+              <idx><h>existence et unicité</h></idx>
+              <idx><h>théorème de Picard</h></idx>
+          Si <m>f(x , y)</m> est une fonction continue en <m>(x , y)</m> et que <m>\frac{\partial f}{\partial y}</m> existe dans un voisinage d'un point <m>(x_0 , y_0)</m>, alors il existe une solution à l'équation différentielle
+          <me>
+            y' = f(x,y), \qquad y(x_0) = y_0
+          </me>
+        </p>
+        <p>
+          (possiblement dans un petit intervalle de valeurs de <m>x</m>) et,
+          de plus, la solution est unique.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Observons que les équations des deux exemples précédents,
+      <m>y' = \nicefrac{1}{x}</m>,
+      <m>y(0) = 0</m> et <m>y' = 2 \sqrt{\lvert y \rvert}</m>,
+      <m>y(0) = 0</m>,
+      ne satisfont pas aux conditions du théorème de Picard.
+      Même lorsque le théorème s'applique,
+      il faut faire attention puisque la solution ne sera possiblement pas définie pour toutes les valeurs réelles de <m>x</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Résolvons :
+          <me>
+            y' = y^2, \qquad y(0) = A
+          </me>,
+          où <m>A</m> est une constante quelconque.
+        </p>
+        <p>
+          On peut résoudre cette équation avec les outils que nous avons déjà vus.
+          D'abord, supposons que <m>A \not= 0</m>;
+          alors, <m>y</m> est différent de 0 pour des valeurs de <m>x</m> proches de 0.
+          Nous pouvons donc réécrire l'équation : <m>x' = \nicefrac{1}{y^2}</m>,
+          ce qui nous donne, en intégrant,
+          <m>x = \nicefrac{-1}{y} + C</m>,
+          et donc <m>y = \frac{1}{C-x}</m>.
+          Si <m>y(0) = A</m>, alors <m>C = \nicefrac{1}{A}</m>, et donc
+          <me>
+            y = \frac{1}{\nicefrac{1}{A} - x}
+          </me>.
+        </p>
+        <p>
+          Lorsque <m>A=0</m>, <m>y=0</m> est une solution.
+        </p>
+        <p>
+          Lorsque <m>A=1</m>, par exemple,
+          la solution explose à <m>x=1</m>.
+          Ainsi, une solution existe,
+          mais elle n'est pas définie pour toute valeur de <m>x</m>, et ce,
+          même si l'équation <m>y' = y^2</m> semble plutôt innocente.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Dans ce manuel,
+      nous considérerons principalement des équations dont la solution existe et est unique pour toutes les valeurs de la variable indépendante.
+    </p>
+  </subsection>
+
+  <!-- TODO -->
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Dessinez un champ de directions pour <m>y'=e^{x-y}</m>.
+          Comment se comportent les solutions lorsque <m>x</m> augmente?
+          Pouvez-vous deviner une solution particulière en regardant le champ de directions?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Dessinez un champ de directions pourr <m>y'=x^2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Dessinez un champ de directions pour <m>y'=y^2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Peut-on résoudre <m>y' = \frac{xy}{\cos x}</m>, <m>y(0) = 1</m>?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Peut-on résoudre <m>y' = y\sqrt{\lvert x\rvert}</m>,
+          <m>y(0) = 0</m>?
+          La solution est-elle unique?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Associez les équations suivantes <m>y'=1-x</m>,
+          <m>y'=x-2y</m>, <m>y' = x(1-y)</m> à
+          leurs champs de directions respectifs.
+          Justifiez votre réponse. <ol marker="a"><li> <image width="32%" source="images/yprimex1minusyslope.png"/> </li>
+          <li> <image width="32%" source="images/yprime1minusxslope.png"/> </li>
+          <li> <image width="32%" source="images/yprimexminus2yslope.png"/> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>défi</title>
+      <statement>
+        <p>
+          Soit <m>y' = f(x,y)</m>, <m>y(0) = 0</m>,
+          tel que <m>f(x,y) > 1</m> pour tous <m>x</m> et <m>y</m>.
+          Si la solution existe pour tout <m>x</m>, que peut-on dire à
+          propos de <m>y(x)</m> lorsque <m>x</m> tend vers l'infini?
+          Expliquez.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>défi</title>
+      <statement>
+        <p>
+          Soit <m>(y-x)y' = 0</m>,
+          <m>y(0) = 0</m>. <ol marker="a"><li> Trouvez deux solutions distinctes. </li>
+          <li> Expliquez pourquoi ceci ne contredit pas le théorème de Picard. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>y' = f(x,y)</m>.
+          Dites ce que vous savez à
+          propos de son champ de directions,
+          et dessinez un exemple, si vous avez l'information suivante à
+          propos de <m>f(x,y)</m> : <ol marker="a"><li> <m>f</m> ne dépend pas de <m>y</m>. </li>
+          <li> <m>f</m> ne dépend pas de <m>x</m>. </li>
+          <li>
+          <m>f(t,t) = 0</m> pour toute valeur <m>t</m>. </li>
+          <li> <m>f(x,0) = 0</m> et
+          <m>f(x,1) = 1</m> pour tout <m>x</m>. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution à <m>y' = \lvert y \rvert</m>,
+          <m>y(0) = 0</m>.
+          Peut-on appliquer le théorème de Picard?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>y' = (y-2x) g(x,y) + 2</m>,
+          où <m>g(x,y)</m> est une fonction quelconque.
+          Pouvez-vous résoudre l'équation avec condition initiale <m>y(0) = 0</m>,
+          et si oui, quelle est la solution?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>défi</title>
+      <statement>
+        <p>
+          [2] Soit <m>y' = f(x,y)</m> tel que <m>f(x,1) = 0</m> pour tout <m>x</m>,
+          <m>f</m> est continue et <m>\frac{\partial f}{\partial y}</m> existe et est continue pour tous <m>x</m> et <m>y</m>. <ol marker="a"><li> Devinez une solution pour la condition initiale
+          <m>y(0) = 1</m>. </li>
+          <li> Les graphes de deux solutions ayant des conditions initiales différentes peuvent-elles s'intersecter? </li>
+          <li> En supposant que
+          <m>y(0) = 0</m>, que peut-on dire à
+          propos de la solution?
+          En particulier, peut-on avoir
+          <m>y(x) > 1</m> pour un certain <m>x</m>?
+          Peut-on avoir <m>y(x) = 1</m> pour un certain <m>x</m>?
+          Pourquoi ou pourquoi pas? </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Dessiner le champ de directions pour <m>y'=y^3</m>.
+          Pouvez-vous identifier visuellement une solution telle que <m>y(0)=0</m>?
+        </p>
+      </statement>
+    <answer>
+      <p>
+        
+      </p>
+    </answer>
+    </exercise>
+    <p>
+      <image width="37%" source="images/yprimey3slope.png"/>
+    </p>
+    <p>
+      <m>y=0</m> est une solution telle que <m>y(0)=0</m>. }
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Est-il possible de résoudre <m>y' = xy</m>, <m>y(0) = 0</m>?
+          La solution est-elle unique?
+        </p>
+      </statement>
+    <answer>
+      <p>
+        Oui une solution existe.
+      Car <m>y' = f(x,y)</m> où <m>f(x,y) = xy</m>.
+      La fonction <m>f(x,y)</m> est continue et <m>\frac{\partial f}{\partial y} = x</m>,
+      qui est aussi continue près de <m>(0,0)</m>.
+      Par conséquent,
+      la solution existe et est unique. (En fait <m>y=0</m> est une solution).
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Peut-on résoudre <m>y' = \frac{x}{x^2-1}</m>, <m>y(1) = 0</m>?
+        </p>
+      </statement>
+    <answer>
+      <p>
+        Non puisque la seule solution possible n'est pas définie au point <m>(x,y) = (1,0)</m>.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Associez les équations suivantes,
+          <m>y'=\sin x</m>, <m>y'=\cos y</m>,
+          <m>y' = y\cos(x)</m> à
+          leurs champs de directions respectifs.
+          Justifiez votre réponse. <ol marker="a"><li> <image width="32%" source="images/yprimecosyslope.png"/> </li>
+          <li> <image width="32%" source="images/yprimecosxyslope.png"/> </li>
+          <li> <image width="32%" source="images/yprimesinxslope.png"/> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a) <m>y'=\cos y</m>,
+      b) <m>y' = y\cos(x)</m>, c) <m>y'=\sin x</m>.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <title>défi</title>
+      <statement>
+        <p>
+          Supposons que
+          <me>
+            f(y) = \begin{cases} 0 \amp  \text{ si \(y > 0\) } , \\ 1 \amp  \text{ si \(y \leq 0\) }  . \end{cases}
+          </me>
+        </p>
+        <p>
+          Est-ce que <m>y' = f(y)</m>,
+          <m>y(0) = 0</m> admet une solution dont la dérivée est continue?
+          Le théorème de Picard s'applique-t-il?
+          Pourquoi ou pourquoi pas?
+        </p>
+      </statement>
+    <answer>
+      <p>
+        Picard ne s'applique pas puisque <m>f</m> n'est pas continue en <m>y=0</m>.
+      De plus, l'équation n'admet pas de solution dont la dérivée est continue.
+      Car si c'était vrai, alors il s'ensuivrait que <m>y'(0) = 1</m>.
+      Par le test de la première dérivée,
+      <m>y(x) > 0</m> pour de petites valeurs positives de <m>x</m>.
+      Mais on a que <m>y'(x) = 0</m> pour ces valeurs de <m>x</m>,
+      et donc <m>y'</m> n'est pas continue.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Considérons une équation de la forme <m>y' = f(x)</m>,
+          où <m>f</m> est une fonction continue quelconque,
+          avec condition initiale <m>y(x_0) = y_0</m>.
+          Existe-t-il une solution pour tout <m>x</m>?
+          Pourquoi ou pourquoi pas?
+        </p>
+      </statement>
+    <answer>
+      <p>
+        La solution est <m>y(x) = \int_{x_0}^x f(s) \,ds + y_0</m>,
+      ce qui existe pour toute valeur de <m>x</m>.
+      </p>
+    </answer>
+    </exercise>
+  </exercises>
+</section>

@@ -1,0 +1,685 @@
+<section xml:id="ts_section">
+  <title>Séries trigonométriques</title>
+  <subsection>
+    <title>Fonctions périodiques et motivations</title>
+    <p>
+      Afin de motiver l'étude des séries de Fourier,
+      considérons le problème suivant :
+      <men xml:id="ts_deq">
+        x'' + \omega_0^2 x = f(t)
+      </men>
+      pour une certaine fonction périodique <m>f(t)</m>.
+      On a déjà résolu
+      <men xml:id="ts_deqcos">
+        x'' + \omega_0^2 x = F_0 \cos ( \omega t)
+      </men>.
+    </p>
+    <p>
+      Une manière de résoudre <xref ref="ts_deq"/> est de décomposer <m>f(t)</m> comme une somme de cosinus
+      (et de sinus)
+      et de résoudre plusieurs problèmes de la forme <xref ref="ts_deqcos"/>.
+      On utilise ensuite le principe de superposition pour additionner toutes les solutions obtenues pour obtenir la solution de <xref ref="ts_deq"/>.
+    </p>
+    <p>
+      Avant de procéder,
+      parlons un peu plus en détail des fonctions périodiques.
+      Une fonction est <em>périodique
+          <idx><h>périodique</h></idx>
+      </em> avec période <m>P</m> si <m>f(t) = f(t+P)</m> pour tout <m>t</m>.
+      On dit alors que <m>f(t)</m> est <m>P</m>-périodique.
+      On note qu'une fonction <m>P</m>-périodique est aussi <m>2P</m>-périodique,
+      <m>3P</m>-périodique et ainsi de suite.
+      Par exemple, <m>\cos (t)</m> et
+      <m>\sin (t)</m> sont <m>2\pi</m>-périodiques.
+      Les fonctions constantes sont des exemples extrêmes :
+      elles sont périodiques pour n'importe quelle période
+      (exercice).
+    </p>
+    <p>
+      Normalement,
+      on commence avec la fonction <m>f(t)</m> définie sur un certain intervalle <m>[-L,L]</m> et l'on veut
+      <em>prolonger périodiquement</em>
+          <idx><h>extend periodically</h></idx>
+          <idx><h>periodic extension</h></idx> <m>f(t)</m> pour qu'elle devienne une fonction <m>2L</m>-périodique.
+      On fait cette extension en définissant une nouvelle fonction <m>F(t)</m> telle que,
+      pour tout <m>t</m> dans <m>[-L,L]</m>, <m>F(t) = f(t)</m>.
+      Pour tout <m>t</m> dans <m>[L,3L]</m>,
+      on définit <m>F(t) = f(t-2L)</m>;
+      pour <m>t</m> dans <m>[-3L,-L]</m>,
+      <m>F(t) = f(t+2L)</m>, et ainsi de suite.
+      Pour faire ce travail, on a besoin de <m>f(-L) = f(L)</m>.
+      On pourrait aussi commencer avec <m>f</m> définie seulement sur un demi-intervalle ouvert <m>(-L,L]</m> et l'on définit <m>f(-L) = f(L)</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Définissons <m>f(t) = 1-t^2</m> sur <m>[-1,1]</m>.
+          Maintenant, on prolonge <m>f(t)</m> périodiquement pour obtenir une fonction 2-périodique.
+          Voir la <xref ref="ts_perextofinvertedparabolafig"></xref>.
+        </p>
+        <figure xml:id="ts_perextofinvertedparabolafig">
+          <caption>Prolongement 2-périodique de la fonction
+          <m>1-t^2</m>.</caption>
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-perextofinvertedparabola} -->
+          <image source="ts-perextofinvertedparabola"></image>
+        </figure>
+      </statement>
+    </example>
+    <p>
+      On doit faire attention à
+      bien distinguer <m>f(t)</m> de ses différents prolongements.
+      Une erreur commune est de supposer que la formule pour <m>f(t)</m> fonctionne toujours pour ses prolongements.
+      Il faut faire preuve de prudence,
+      particulièrement lorsque <m>f(t)</m> est périodique,
+      mais avec une période différente.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Définissez <m>f(t) = \cos t</m> sur <m>[\nicefrac{-\pi}{2},\nicefrac{\pi}{2}]</m>.
+          Prenez l'extension <m>\pi</m>-périodique et esquissez le graphe.
+          Comparez avec le graphe de <m>\cos t</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection>
+    <title>Produit scalaire et décomposition de vecteurs propres</title>
+    <p>
+      Comme on l'a remarqué précédemment,
+      lorsque <m>A</m> est une <em>matrice symétrique
+          <idx><h>matrice symétrique</h></idx>
+      </em>, c'est-à-dire lorsque <m>A^T = A</m>,
+      les vecteurs propres de <m>A</m> sont orthogonaux.
+      Ici, le mot <em>orthogonal</em><idx><h>orthogonal</h><h>vectors</h></idx> signifie que si <m>\vec{v}</m> et <m>\vec{w}</m> sont deux vecteurs propres de <m>A</m> pour des valeurs propres distinctes,
+      alors <m>\langle \vec{v} , \vec{w} \rangle = 0</m>.
+      Dans ce cas,
+      le produit scalaire <m>\langle \vec{v} , \vec{w} \rangle</m> est le
+      <em>produit scalaire à
+      dimensions finies<idx><h>produit scalaire à
+      dimensions finies</h></idx>
+      </em>, que l'on peut calculer comme <m>\vec{v}^T\vec{w}</m>.
+    </p>
+    <p>
+      Pour décomposer un vecteur <m>\vec{v}</m> en termes de vecteurs mutuellement orthogonaux
+      <m>\vec{w}_1</m> et <m>\vec{w}_2</m>, on écrit
+      <me>
+        \vec{v} = a_1 \vec{w}_1  + a_2 \vec{w}_2
+      </me>.
+    </p>
+    <p>
+      On trouve la formule pour <m>a_1</m> et <m>a_2</m>.
+      D'abord, on calcule
+      <me>
+        \langle \vec{v} , \vec{w_1} \rangle = \langle a_1 \vec{w}_1  + a_2 \vec{w}_2 , \vec{w_1} \rangle = a_1 \langle \vec{w}_1 , \vec{w_1} \rangle + a_2 \underbrace{\langle \vec{w}_2 , \vec{w_1} \rangle}_{=~0} = a_1 \langle \vec{w}_1 , \vec{w_1} \rangle
+      </me>.
+    </p>
+    <p>
+      Ensuite,
+      <me>
+        a_1 = \frac{\langle \vec{v} , \vec{w_1} \rangle}{ \langle \vec{w}_1 , \vec{w_1} \rangle}
+      </me>.
+    </p>
+    <p>
+      De façaon semblable,
+      <me>
+        a_2 = \frac{\langle \vec{v} , \vec{w_2} \rangle}{ \langle \vec{w}_2 , \vec{w_2} \rangle}
+      </me>.
+    </p>
+    <p>
+      (Vous avez possiblement vu cette formule dans un cours d'algèbre linéaire.)
+    </p>
+    <example>
+      <statement>
+        <p>
+          Écrivons <m>\vec{v} = \left[ \begin{matrix}2 \\ 3 \end{matrix} \right]</m> comme une combinaison linéaire de
+          <m>\vec{w_1} = \left[ \begin{matrix}1 \\ -1 \end{matrix} \right]</m> et de <m>\vec{w_2} = \left[ \begin{matrix}1 \\ 1 \end{matrix} \right]</m>.
+        </p>
+        <p>
+          D'abord, on note que <m>\vec{w}_1</m> et <m>\vec{w}_2</m> sont orthogonaux,
+          puisque <m>\langle \vec{w}_1 , \vec{w}_2 \rangle = 1(1) + (-1)1 = 0</m>.
+          Alors,
+          <md>
+            <mrow>\amp  a_1 = \frac{\langle \vec{v} , \vec{w_1} \rangle}{ \langle \vec{w}_1 , \vec{w_1} \rangle} = \frac{2(1) + 3(-1)}{1(1) + (-1)(-1)} = \frac{-1}{2} ,</mrow>
+            <mrow>\amp  a_2 = \frac{\langle \vec{v} , \vec{w_2} \rangle}{ \langle \vec{w}_2 , \vec{w_2} \rangle} = \frac{2 + 3}{1 + 1} = \frac{5}{2} </mrow>
+          </md>.
+        </p>
+        <p>
+          Ainsi,
+          <me>
+            \begin{bmatrix} 2 \\ 3 \end{bmatrix} = \frac{-1}{2} \begin{bmatrix} 1 \\ -1 \end{bmatrix} + \frac{5}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+          </me>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Séries trigonométriques</title>
+    <p>
+      Plutôt que de décomposer un vecteur en termes de vecteurs propres d'une matrice,
+      on va décomposer une fonction en termes de fonctions propres associées à
+      un problème de valeurs propres.
+      Le problème de valeurs propres qu'on utilise pour les séries de Fourier est
+      <me>
+        x'' + \lambda x = 0,  x(-\pi) = x(\pi),  x'(-\pi) = x'(\pi)
+      </me>.
+    </p>
+    <p>
+      Nous avons calculé les fonctions propres dans l'<xref ref="bvp-periodic_example"></xref> : <m>1</m>,
+      <m>\cos (k t)</m> et <m>\sin (k t)</m>.
+      Ainsi, on veut trouver une représentation d'une fonction <m>2\pi</m>-périodique <m>f(t)</m> de la forme suivante :
+      <me>
+        f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t) .
+      </me>
+    </p>
+    <p>
+      Cette série s'appelle une <em>série de Fourier
+          <idx><h>série de Fourier</h></idx>
+      </em><fn>
+      Nommée d'après le mathématicien français
+      <url href="https://fr.wikipedia.org/wiki/Joseph_Fourier">Jean Baptiste Joseph Fourier</url>
+      (1768-1830).
+      </fn> ou <em>série trigonométrique<idx><h>série trigonométrique</h></idx>
+      </em> pour <m>f(t)</m>.
+      Par convention,
+      on écrit le coefficient de la fonction propre 1 comme <m>\frac{a_0}{2}</m>.
+      On peut y penser comme à
+      <m>1 = \cos (0t)</m>.
+    </p>
+    <p>
+      Comme pour les matrices, on veut trouver une <em>projection
+          <idx><h>projection</h></idx>
+      </em> de <m>f(t)</m> sur un sous-espace donné
+      par les fonctions propres.
+      Alors, on veut définir le <em>produit scalaire d'une fonction<idx><h>produit scalaire d'une fonction</h></idx>
+      </em>.
+      Par exemple, pour trouver <m>a_n</m>,
+      on veut calculer <m>\langle \, f(t), \, \cos (nt) \, \rangle</m>.
+      On définit le produit scalaire comme
+      <me>
+        \langle \, f(t), \, g(t) \, \rangle \overset{\text{ d\'ef } }{=} \int_{-\pi}^\pi f(t) \, g(t) \, dt
+      </me>.
+    </p>
+    <p>
+      Avec cette définition du produit scalaire,
+      on voit dans les sections précédentes que les fonctions propres <m>\cos (kt)</m>
+      (incluant la fonction propre constante)
+      et <m>\sin (kt)</m> sont <em>orthogonales<idx><h>orthogonal</h><h>functions</h></idx>
+      </em> dans le sens que
+      <md>
+        <mrow>\langle \, \cos (mt), \, \cos (nt) \, \rangle = 0 \amp  \qquad \text{ pour }  m \not= n ,</mrow>
+        <mrow>\langle \, \sin (mt), \, \sin (nt) \, \rangle = 0 \amp  \qquad \text{ pour }  m \not= n ,</mrow>
+        <mrow>\langle \, \sin (mt), \, \cos (nt) \, \rangle = 0 \amp  \qquad \text{ pour tout }  m \text{ et }  n </mrow>
+      </md>.
+    </p>
+    <p>
+      Pour <m>n=1,2,3,\ldots</m>, on a
+      <md>
+        <mrow>\langle \, \cos (nt), \, \cos (nt) \, \rangle \amp = \int_{-\pi}^\pi \cos(nt)\cos(nt) \, dt = \pi,</mrow>
+        <mrow>\langle \, \sin (nt), \, \sin (nt) \, \rangle \amp = \int_{-\pi}^\pi \sin(nt)\sin(nt) \, dt = \pi</mrow>
+      </md>,
+      par du calcul élémentaire.
+      Pour la constante, on obtient
+      <me>
+        \langle \, 1, \, 1 \, \rangle = \int_{-\pi}^\pi 1 \cdot 1 \, dt = 2\pi
+      </me>.
+    </p>
+    <p>
+      Les coefficients sont donnés par
+      <!-- <me>
+        \begin{aligned} \amp  a_n = \frac{\langle \, f(t), \, \cos (nt) \, \rangle}{\langle \, \cos (nt) \, , \, \cos (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \, dt , \\ \amp  b_n = \frac{\langle \, f(t), \, \sin (nt) \, \rangle}{\langle \, \sin (nt), \, \sin (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \, dt . \end{aligned}
+      </me> -->
+      <md>
+        <mrow>\amp  a_n = \frac{\langle \, f(t), \, \cos (nt) \, \rangle}{\langle \, \cos (nt), \, \cos (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \, dt,</mrow>
+        <mrow> \amp b_n = \frac{\langle \, f(t), \, \sin (nt) \, \rangle}{\langle \, \sin (nt), \, \sin (nt) \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \, dt.</mrow>
+      </md>
+    </p>
+    <p>
+      On compare ces expressions avec les exemples à dimensions finies.
+      Pour <m>a_0</m>, on obtient une formule similaire :
+      <me>
+        a_0 = 2 \frac{\langle \, f(t), \, 1 \, \rangle}{\langle \, 1, \, 1 \, \rangle} = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \, dt.
+      </me>
+    </p>
+    <p>
+      Regardons la formule utilisée pour les propriétés d'orthogonalité. Supposons donc que :
+      <me>
+        f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t)
+      </me>.
+    </p>
+    <p>
+      Alors, pour <m>m \geq 1</m>, on a
+      <me>
+        \begin{split} \langle \, f(t),\,\cos (mt) \, \rangle \amp  = \Bigl\langle \, \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (n t) + b_n \sin (n t),\, \cos (mt) \, \Bigr\rangle \\ \amp  = \frac{a_0}{2} \langle \, 1, \, \cos (mt) \, \rangle + \sum_{n=1}^\infty a_n \langle \, \cos (nt), \, \cos (mt) \, \rangle + b_n \langle \, \sin (n t), \, \cos (mt) \, \rangle \\ \amp  = a_m \langle \, \cos (mt), \, \cos (mt) \, \rangle . \end{split}
+      </me>
+    </p>
+    <p>
+      Ainsi, <m>a_m = \frac{\langle \, f(t), \, \cos (mt) \, \rangle}{\langle \, \cos (mt), \, \cos (mt) \, \rangle}</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Faites les calculs pour <m>a_0</m> et pour <m>b_m</m>.
+        </p>
+      </statement>
+    </exercise>
+    <example>
+      <statement>
+        <p>
+          Prenons la fonction
+          <me>
+            f(t) = t
+          </me>
+          pour <m>t</m> dans <m>(-\pi,\pi]</m>.
+          Nous allons calculer la série de Fourier du prolongement périodique de <m>f(t)</m>.
+          Le terme <em>dents de scie
+              <idx><h>dents de scie</h></idx>
+          </em> est utilisé pour désigner les fonctions de cette forme.
+          Le graphe de <m>f(t)</m> se trouve à la <xref ref="ts_sawtoothfig"></xref>.
+        </p>
+        <figure xml:id="ts_sawtoothfig">
+          <caption>Le graphe d'une fonction en dents de scie.</caption>
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-sawtooth} -->
+          <image source="ts-sawtooth"></image>
+        </figure>
+        <p>
+          Calculons les coefficients.
+          On commence avec <m>a_0</m> :
+          <me>
+            a_0 = \frac{1}{\pi} \int_{-\pi}^\pi t \,dt = 0
+          </me>.
+        </p>
+        <p>
+          Nous nous servirons souvent du résultat suivant :
+          sur un intervalle de la forme <m>[-L,L]</m>,
+          l'intégrale d'une fonction impaire est nulle.
+          On rappelle qu'une <em>fonction impaire
+              <idx><h>fonction impaire</h></idx>
+          </em> est une fonction <m>\varphi(t)</m> telle que <m>\varphi(-t) = -\varphi(t)</m>.
+          Par exemple, les fonctions <m>t</m>, <m>\sin t</m> ou
+          (celle qui est importante présentement)
+          <m>t \cos (nt)</m> sont toutes des fonctions impaires.
+          Ainsi,
+          <me>
+            a_n = \frac{1}{\pi} \int_{-\pi}^\pi t \cos (nt) \,dt = 0
+          </me>.
+        </p>
+        <p>
+          Calculons maintenant <m>b_n</m>.
+          Deuxième résultat utile :
+          sur un intervalle de la forme <m>[-L,L]</m>,
+          l'intégrale d'une fonction paire est égale à
+          deux fois l'intégrale de cette même fonction sur <m>[0,L]</m>.
+          On rappelle qu'une <em>fonction paire
+              <idx><h>fonction paire</h></idx>
+          </em> est une fonction <m>\varphi(t)</m> telle que <m>\varphi(-t) = \varphi(t)</m>.
+          Par exemple, <m>t \sin (nt)</m> est paire, et donc :
+          <me>
+            \begin{split} b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi t \sin (nt) \,dt \\ \amp  = \frac{2}{\pi} \int_{0}^\pi t \sin (nt) \,dt \\ \amp  = \frac{2}{\pi} \left( \left[ \frac{-t \cos (nt)}{n} \right]_{t=0}^{\pi} + \frac{1}{n} \int_{0}^\pi \cos (nt) \,dt \right) \\ \amp  = \frac{2}{\pi} \left( \frac{-\pi \cos (n\pi)}{n} + 0 \right) \\ \amp  =  \frac{-2 \cos (n\pi)}{n} =  \frac{2 \,{(-1)}^{n+1}}{n} . \end{split}
+          </me>
+        </p>
+        <p>
+          On a utilisé ici le fait suivant :
+          <me>
+            \cos (n\pi) = {(-1)}^n = \begin{cases} 1 \amp  \text{ si }  n \text{ est pair } \\ -1 \amp  \text{ si }  n \text{ est impair }  . \end{cases}
+          </me>
+        </p>
+        <p>
+          La série est
+          <me>
+            \sum_{n=1}^\infty \frac{2 \,{(-1)}^{n+1}}{n} \, \sin (n t)
+          </me>.
+        </p>
+        <p>
+          Écrivons les trois premières harmoniques de la série pour <m>f(t)</m> :
+          <me>
+            2 \, \sin (t) - \sin (2t) +\frac{2}{3} \sin (3t) + \cdots
+          </me>
+        </p>
+        <p>
+          Le graphe des trois premiers termes de la série et celui des vingt premiers se trouvent à la <xref ref="ts_sawtoothfsfig"></xref>.
+        </p>
+        <figure xml:id="ts_sawtoothfsfig">
+          <caption>Trois premières harmoniques (à gauche) et vingt premières harmoniques (à droite) d'une fonction en dents de scie.</caption>
+          <!-- \diffyincludegraphics{width=6.24in}{width=9in}{ts-sawtooth-fs3-fs20} -->
+          <image source="ts-sawtooth-fs3-fs20"></image>
+        </figure>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Prenons la fonction
+          <me>
+            f(t) = \begin{cases} 0 \amp  \text{ si }  \;{-\pi} \lt  t \leq 0 \\ \pi \amp  \text{ si }  \;0 \lt  t \leq \pi . \end{cases}
+          </me>
+        </p>
+        <p>
+          [4]Prolongeons <m>f(t)</m> périodiquement et écrivons-la comme une série de Fourier.
+          Cette fonction ou une de ses variantes apparaissent dans plusieurs applications,
+          et on les appelle des <em>vagues carrées
+              <idx><h>vagues carrées</h></idx>
+          </em>.
+          Le graphe du prolongement de <m>f(t)</m> est montré à la <xref ref="ts_squarewavefig"></xref>.
+        </p>
+        <figure xml:id="ts_squarewavefig">
+          <caption>Le graphe d'une vague carrée.</caption>
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave} -->
+          <image source="ts-squarewave"></image>
+        </figure>
+        <p>
+          Maintenant, on calcule les coefficients.
+          On commence avec <m>a_0</m> :
+          <me>
+            a_0 = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \,dt = \frac{1}{\pi} \int_{0}^\pi \pi \,dt = \pi
+          </me>.
+        </p>
+        <p>
+          Ensuite,
+          <me>
+            a_n = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \cos (nt) \,dt = \frac{1}{\pi} \int_{0}^\pi \pi \cos (nt) \,dt = 0
+          </me>.
+        </p>
+        <p>
+          Et finalement,
+          <me>
+            \begin{split} b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi f(t) \sin (nt) \,dt \\ \amp  = \frac{1}{\pi} \int_{0}^\pi \pi \sin (nt) \,dt \\ \amp  = \left[ \frac{- \cos (nt)}{n} \right]_{t=0}^\pi \\ \amp  = \frac{1 - \cos (\pi n)}{n} = \frac{1 - {(-1)}^n}{n} = \begin{cases} \frac{2}{n} \amp  \text{ si }  n \text{ est impair }  \\ 0 \amp  \text{ si }  n \text{ est pair }  . \end{cases} \end{split}
+          </me>
+        </p>
+        <p>
+          La série de Fourier est
+          <me>
+            \frac{\pi}{2} +  \sum_{\substack{n=1\\n \text{ impair } } }^\infty \frac{2}{n} \sin (n t) = \frac{\pi}{2} + \sum_{k=1}^\infty \frac{2}{2k-1} \sin \bigl( (2k-1)\, t \bigr)
+          </me>.
+        </p>
+        <p>
+          Voici les trois premières harmoniques de la série pour <m>f(t)</m> :
+          <me>
+            \frac{\pi}{2} + 2 \, \sin (t) + \frac{2}{3}  \sin (3t) + \cdots
+          </me>
+        </p>
+        <p>
+          Le graphe des trois premières harmoniques de la série
+          (et aussi des vingt premières)
+          se trouve à la <xref ref="ts_squarewavefsfig"></xref>.
+        </p>
+        <figure xml:id="ts_squarewavefsfig">
+          <caption>Trois premières harmoniques (à gauche) et vingt premières harmoniques (à droite) d'une vague carrée.</caption>
+          <!-- \diffyincludegraphics{width=6.24in}{width=9in}{ts-squarewave-fs3-fs20} -->
+          <image source="ts-squarewave-fs3-fs20"></image>
+        </figure>
+      </statement>
+    </example>
+    <p>
+      On a jusqu'ici évité
+      la question de la convergence.
+      Par exemple,
+      si <m>f(t)</m> est une vague carrée, l'égalité
+      <me>
+        f(t) = \frac{\pi}{2} + \sum_{k=1}^\infty \frac{2}{2k-1} \sin \bigl( (2k-1)\, t \bigr)
+      </me>
+      tient seulement pour les valeurs de <m>t</m> où <m>f(t)</m> est continue.
+      On n'obtient pas l'égalité
+      pour <m>t=-\pi,0,\pi</m> et pour toutes les autres discontinuités de <m>f(t)</m>.
+      Ce n'est pas difficile de voir que lorsque <m>t</m> est un entier multiple de <m>\pi</m>
+      (ce qui inclut la discontinuité),
+      alors
+      <me>
+        \frac{\pi}{2} + \sum_{k=1}^\infty \frac{2}{2k-1} \sin \bigl( (2k-1)\, t \bigr) = \frac{\pi}{2}
+      </me>.
+    </p>
+    <p>
+      Redéfinissons <m>f(t)</m> sur <m>[-\pi,\pi]</m> comme suit,
+      <me>
+        f(t) = \begin{cases} 0 \amp  \text{ si }  \; {-\pi} \lt  t \lt  0 \\
+         \pi \amp  \text{ si }  \; 0 \lt  t \lt  \pi \\ 
+         \nicefrac{\pi}{2} \amp  \text{ si }  \; t = -\pi, t = 0\text{ ou } t = \pi, \end{cases}
+      </me>
+      et prolongeons périodiquement.
+      Maintenant, la série est égale au prolongement de <m>f(t)</m> partout,
+      y compris aux points de discontinuité. Généralement,
+      on ne s'en fera pas avec le changement de valeurs des fonctions à certains points
+      (en nombre fini).
+    </p>
+    <p>
+      On discutera davantage de la convergence dans la prochaine section.
+      Cependant, mentionnons brièvement un effet de la discontinuité ici.
+      On zoome dans le voisinage de la discontinuité
+      d'une vague carrée.
+      Ensuite, on trace le graphe des 100 premières harmoniques,
+      comme à la <xref ref="ts_squarewavegibbsfig"></xref>.
+      Tandis que la série est une très bonne approximation loin des discontinuités, l'erreur
+      (le dépassement)
+      dans le voisinage de la discontinuité à
+      <m>t=\pi</m> ne semble pas devenir plus petite.
+      Ce comportement est connu sous le nom de
+      <em>phénomène de Gibbs<idx><h>phénomène de Gibbs</h></idx>
+      </em>.
+      La région où l'erreur est large ne diminue pas,
+      même lorsqu'on prend plus de termes dans la série.
+    </p>
+    <figure xml:id="ts_squarewavegibbsfig">
+      <caption>Phénomène de Gibbs en action.</caption>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{ts-squarewave-gibbs} -->
+      <image source="ts-squarewave-gibbs"></image>
+    </figure>
+    <p>
+      On peut penser à une fonction périodique comme à un
+      <q>signal</q>
+      obtenu par la superposition de plusieurs signaux de fréquence pure.
+      Par exemple, on peut penser à
+      la vague carrée comme un à
+      ton d'une certaine fréquence de base.
+      Cette fréquence est nommée la
+      <em>fréquence fondamentale<idx><h>fréquence fondamentale</h></idx>
+      </em>.
+      La vague carrée sera la superposition de plusieurs tons purs de fréquences qui sont des multiples de la fréquence fondamentale.
+      En musique, les plus hautes fréquences s'appellent les <em>harmoniques
+          <idx><h>harmoniques</h></idx>
+      </em>.
+      L'ensemble des fréquences apparaissant s'appelle le <em>spectre
+          <idx><h>spectre</h></idx>
+      </em> du signal.
+      Par contre, une onde sinusoïdale est un ton pur
+      (pas d'harmonique).
+      La manière la plus simple de créer un son en utilisant un ordinateur est avec des vagues carrées,
+      et le son est vraiment différent du ton pur.
+      Si vous avez déjà joué à
+      des jeux vidéo des années 1980,
+      vous avez entendu des sons de vagues carrées.
+    </p>
+  </subsection>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Montrez que <m>x = e^{4t}</m> est une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Montrez que <m>x = e^{t}</m> n'est pas une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>y = \sin t</m> est une solution de <m>{\left( \frac{dy}{dt} \right)}^2 = 1 - y^2</m>?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Considérons <m>y'' + 2y' - 8y = 0</m>.
+          Essayez une solution de la forme
+          <m>y = e^{rx}</m> pour une constante (à
+          déterminer) <m>r</m>.
+          Existe-il une valeur de <m>r</m> qui donne une solution?
+          Si oui, trouvez toutes les valeurs possibles de <m>r</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>x = C e^{-2t}</m> est une solution de <m>x' = -2x</m>.
+          Trouvez <m>C</m> satisfaisant à
+          la condition initiale <m>x(0) = 100</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>x = C_1 e^{-t} + C_2 e^{2t}</m> est une solution de <m>x'' - x' -2 x = 0</m>.
+          Trouvez <m>C_1</m> et <m>C_2</m> satisfaisant aux conditions initiales <m>x(0) = 10</m> et <m>x'(0) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution <m>{(x')}^2 + x^2 = 4</m> en utilisant ce que vous avez appris à
+          propos des dérivées dans vos cours de calcul.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <ol marker="a"><li>
+          <m>\dfrac{dA}{dt} = -10 A, A(0)=5</m> </li>
+          <li> <m>\dfrac{dH}{dx} = 3 H, H(0)=1</m> </li>
+          <li>
+          <m>\dfrac{d^2y}{dx^2} = 4 y, y(0)=0, y'(0)=1</m> </li>
+          <li> <m>\dfrac{d^2x}{dy^2} = -9 x, x(0)=1, x'(0)=0</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Existe-t-il une solution de <m>y' = y</m>,
+          telle que <m>y(0) = y(1)</m>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          La population de la ville X était 100<nbsp/>000 il y a 20 ans,
+          et 120<nbsp/>000 il y a 10 ans.
+          Si l'on suppose une croissance continue,
+          on peut utiliser le modèle de croissance exponentielle
+          (comme pour une population de bactéries). À combien estimez-vous la population actuelle maintenant?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million $,
+          et qu'il a une augmentation salariale de <m>10\%</m> chaque année
+          (donc modèle de croissance exponentielle,
+          comme les bactéries).
+          Dénotons par <m>s</m> le salaire en millions de dollars,
+          et <m>t</m> le temps en années. <ol marker="a"><li> Trouvez <m>s(0)</m> et <m>s(1)</m>. </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 10 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 20 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 30 millions? </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      <em>Note : Les exercices dont les numéros sont 101 et plus ont des réponses à
+      la fin du manuel.</em>
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Montrez que <m>x = e^{-2t}</m> est une solution de <m>x'' + 4x' + 4x = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <answer>
+      <p>
+        Calculer
+      <m>x' = -2e^{-2t}</m> et <m>x'' = 4e^{-2t}</m>.
+      Alors, <m>(4e^{-2t}) + 4 (-2e^{-2t}) + 4 (e^{-2t}) = 0</m>.
+      </p>
+    </answer>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>y = x^2</m> est une solution de <m>x^2y'' - 2y = 0</m>?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    </exercise>
+    <answer>
+      <p>
+        Oui.
+      </p>
+    </answer>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>xy'' - y' = 0</m>.
+          Essayez une solution de la forme <m>y = x^r</m>.
+          Existe-t-il une valeur de <m>r</m> qui donne une solution?
+          Si oui, trouvez toutes les valeurs possibles de <m>r</m>.
+        </p>
+      </statement>
+    </exercise>
+    <answer>
+      <p>
+        <m>y=x^r</m> est une solution pour <m>r=0</m> et <m>r=2</m>.
+      </p>
+    </answer>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>x=C_1e^t+C_2</m> est une solution de <m>x''-x' = 0</m>.
+          Trouvez <m>C_1</m> et <m>C_2</m> telles que
+          <m>x(0) = 10</m> et <m>x'(0) = 100</m>.
+        </p>
+      </statement>
+    </exercise>
+    <answer>
+      <p>
+        <m>C_1 = 100</m>,
+      <m>C_2 = -90</m>
+      </p>
+    </answer>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <m>\frac{d\varphi}{ds} = 8 \varphi</m> et <m>\varphi(0) = -9</m>.
+        </p>
+      </statement>
+    </exercise>
+    <answer>
+      <p>
+        <m>\varphi = -9 e^{8s}</m> 
+      </p>
+    </answer>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <ol marker="a"><li>
+          <m>\dfrac{dx}{dt} = -4x,
+          x(0)=9</m> </li>
+          <li> <m>\dfrac{d^2x}{dt^2} = -4x,
+          x(0)=1, x'(0)=2</m> </li>
+          <li> <m>\dfrac{dp}{dq} = 3 p, p(0)=4</m> </li>
+          <li> <m>\dfrac{d^2T}{dx^2} = 4 T, T(0)=0, T'(0)=6</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+</section>

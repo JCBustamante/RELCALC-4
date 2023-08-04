@@ -1,0 +1,775 @@
+<section xml:id="matalg_section">
+  <title>Matrix algebra</title>
+  <subsection>
+    <title>One-by-one matrices</title>
+    <p>
+      Let us motivate what we want to achieve with matrices.
+      Real-valued linear mappings of the real line,
+      linear functions that eat numbers and spit out numbers,
+      are just multiplications by a number.
+      Consider a mapping defined by multiplying by a number.
+      Let's call this number <m>\alpha</m>.
+      The mapping then takes <m>x</m> to <m>\alpha x</m>.
+      What we can do is to <em>add</em> such mappings.
+      If we have another mapping <m>\beta</m>, then
+      <me>
+        \alpha x + \beta x = (\alpha + \beta) x
+      </me>.
+    </p>
+    <p>
+      We get a new mapping <m>\alpha+\beta</m> that multiplies <m>x</m> by,
+      well, <m>\alpha+\beta</m>.
+      If <m>D</m> is a mapping that doubles things,
+      <m>Dx = 2x</m>,
+      and <m>T</m> is a mapping that triples, <m>Tx = 3x</m>,
+      then <m>D+T</m> is a mapping that multiplies by <m>5</m>,
+      <m>(D+T)x = 5x</m>.
+    </p>
+    <p>
+      Similarly we can <em>compose</em> such mappings, that is,
+      we could apply one and then the other.
+      We take <m>x</m>,
+      we run it through the first mapping <m>\alpha</m> to get <m>\alpha</m> times <m>x</m>,
+      then we run <m>\alpha x</m> through the second mapping <m>\beta</m>.
+      In other words,
+      <me>
+        \beta ( \alpha x ) = (\beta \alpha) x
+      </me>.
+    </p>
+    <p>
+      We just multiply those two numbers.
+      Using our doubling and tripling mappings,
+      if we double and then triple,
+      that is <m>T(Dx)</m> then we obtain <m>3(2x) = 6x</m>.
+      The composition <m>TD</m> is the mapping that multiplies by <m>6</m>.
+      For larger matrices,
+      composition also ends up being a kind of multiplication.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Matrix addition and scalar multiplication</title>
+    <p>
+      The mappings that multiply numbers by numbers are just <m>1 \times 1</m> matrices.
+      The number <m>\alpha</m> above could be written as a matrix <m>[\alpha]</m>.
+      So perhaps we would want to do the same things to all matrices that we did to those
+      <m>1 \times 1</m> matrices at the start of this section above.
+      First, let us add matrices.
+      If we have a matrix <m>A</m> and a matrix <m>B</m> that are of the same size,
+      say <m>m \times n</m>,
+      then they are mappings from
+      <m>{\mathbb{R}}^n</m> to <m>{\mathbb{R}}^m</m>.
+      The mapping <m>A+B</m> should also be a mapping from
+      <m>{\mathbb{R}}^n</m> to <m>{\mathbb{R}}^m</m>,
+      and it should do the following to vectors:
+      <me>
+        (A+B) \vec{x} = A\vec{x} + B \vec{x}
+      </me>.
+    </p>
+    <p>
+      It turns out you just add the matrices element-wise: If the
+      <m>ij^{\text{ th } }</m> entry of <m>A</m> is <m>a_{ij}</m>,
+      and the <m>ij^{\text{ th } }</m> entry of <m>B</m> is <m>b_{ij}</m>,
+      then the <m>ij^{\text{ th } }</m> entry of <m>A+B</m> is <m>a_{ij} + b_{ij}</m>.
+      If
+      <me>
+        A = \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13}  \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix} \qquad \text{ and }  \qquad B = \begin{bmatrix} b_{11} \amp  b_{12} \amp  b_{13}  \\ b_{21} \amp  b_{22} \amp  b_{23} \end{bmatrix}
+      </me>,
+      then
+      <me>
+        A+B = \begin{bmatrix} a_{11} + b_{11} \amp  a_{12} + b_{12} \amp  a_{13} + b_{13}  \\ a_{21} + b_{21} \amp  a_{22} + b_{22} \amp  a_{23} + b_{23} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Let us illustrate on a more concrete example:
+      <me>
+        \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \\ 5 \amp  6 \end{bmatrix} + \begin{bmatrix} 7 \amp  8 \\ 9 \amp  10 \\ 11 \amp  -1 \end{bmatrix} = \begin{bmatrix} 1+7 \amp  2+8 \\ 3+9 \amp  4+10 \\ 5+11 \amp  6-1 \end{bmatrix} = \begin{bmatrix} 8 \amp  10 \\ 12 \amp  14 \\ 16 \amp  5 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Let's check that this does the right thing to a vector.
+      Let's use some of the vector algebra that we already know,
+      and regroup things:
+      <me>
+        \begin{split} \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \\ 5 \amp  6 \end{bmatrix} \begin{bmatrix} 2 \\ -1 \end{bmatrix} + \begin{bmatrix} 7 \amp  8 \\ 9 \amp  10 \\ 11 \amp  -1 \end{bmatrix} \begin{bmatrix} 2 \\ -1 \end{bmatrix} \amp  = \left( 2 \begin{bmatrix} 1 \\ 3 \\ 5 \end{bmatrix} - \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} \right) + \left( 2 \begin{bmatrix} 7 \\ 9 \\ 11 \end{bmatrix} - \begin{bmatrix} 8 \\ 10 \\ -1 \end{bmatrix} \right) \\ \amp  = 2 \left( \begin{bmatrix} 1 \\ 3 \\ 5 \end{bmatrix} + \begin{bmatrix} 7 \\ 9 \\ 11 \end{bmatrix} \right) - \left( \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} + \begin{bmatrix} 8 \\ 10 \\ -1 \end{bmatrix} \right) \\ \amp  = 2 \begin{bmatrix} 1+7 \\ 3+9 \\ 5+11 \end{bmatrix} - \begin{bmatrix} 2+8 \\ 4+10 \\ 6-1 \end{bmatrix} = 2 \begin{bmatrix} 8 \\ 12 \\ 16 \end{bmatrix} - \begin{bmatrix} 10 \\ 14 \\ 5 \end{bmatrix} \\ \amp  = \begin{bmatrix} 8 \amp  10 \\ 12 \amp  14 \\ 16 \amp  5 \end{bmatrix} \begin{bmatrix} 2 \\ -1 \end{bmatrix}  \left( = \begin{bmatrix} 2(8)- 10 \\ 2(12) - 14 \\ 2(16) - 5 \end{bmatrix} = \begin{bmatrix} 6 \\ 10 \\ 27 \end{bmatrix} \right) . \end{split}
+      </me>
+    </p>
+    <p>
+      If we replaced the numbers by letters that would constitute a proof!
+      You'll notice that we didn't really have to even compute what the result is to convince ourselves that the two expressions were equal.
+    </p>
+    <p>
+      If the sizes of the matrices do not match,
+      then addition is not defined.
+      If <m>A</m> is <m>3 \times 2</m> and <m>B</m> is <m>2 \times 5</m>,
+      then we cannot add these matrices.
+      We don't know what that could possibly mean.
+    </p>
+    <p>
+      It is also useful to have a matrix that when added to any other matrix does nothing.
+      This is the zero matrix, the matrix of all zeros:
+      <me>
+        \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix} + \begin{bmatrix} 0 \amp  0 \\ 0 \amp  0 \end{bmatrix} = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      We often denote the zero matrix by <m>0</m> without specifying size.
+      We would then just write <m>A + 0</m>,
+      where we just assume that <m>0</m> is the zero matrix of the same size as <m>A</m>.
+    </p>
+    <p>
+      There are really two things we can multiply matrices by.
+      We can multiply matrices by scalars or we can multiply by other matrices.
+      Let us first consider multiplication by scalars.
+      For a matrix <m>A</m> and a scalar <m>\alpha</m> we want
+      <m>\alpha A</m> to be the matrix that accomplishes
+      <me>
+        (\alpha A) \vec{x} = \alpha (A \vec{x})
+      </me>.
+    </p>
+    <p>
+      That is just scaling the result by <m>\alpha</m>.
+      If you think about it,
+      scaling every term in <m>A</m> by <m>\alpha</m> accomplishes just that: If
+      <me>
+        A = \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13}  \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix}, \qquad\text{ then }  \qquad \alpha A = \begin{bmatrix} \alpha a_{11} \amp  \alpha a_{12} \amp  \alpha a_{13}  \\ \alpha a_{21} \amp  \alpha a_{22} \amp  \alpha a_{23} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      For example,
+      <me>
+        2 \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix} = \begin{bmatrix} 2 \amp  4 \amp  6 \\ 8 \amp  10 \amp  12 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Let us list some properties of matrix addition and scalar multiplication.
+      Denote by <m>0</m> the zero matrix, by <m>\alpha</m>,
+      <m>\beta</m> scalars, and by <m>A</m>,
+      <m>B</m>, <m>C</m> matrices.
+      Then:
+      <md>
+        <mrow>A + 0 \amp  = A = 0 + A ,</mrow>
+        <mrow>A + B \amp  = B + A ,</mrow>
+        <mrow>(A + B) + C \amp  = A + (B + C) ,</mrow>
+        <mrow>\alpha(A+B) \amp  = \alpha A+\alpha B,</mrow>
+        <mrow>(\alpha+\beta)A \amp  = \alpha A + \beta A</mrow>
+      </md>.
+    </p>
+    <p>
+      These rules should look very familiar.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Matrix multiplication</title>
+    <p>
+      As we mentioned above,
+      composition of linear mappings is also a multiplication of matrices.
+      Suppose <m>A</m> is an <m>m \times n</m> matrix, that is,
+      <m>A</m> takes <m>{\mathbb R}^n</m> to <m>{\mathbb R}^m</m>,
+      and <m>B</m> is an <m>n \times p</m> matrix, that is,
+      <m>B</m> takes <m>{\mathbb R}^p</m> to <m>{\mathbb R}^n</m>.
+      The composition <m>AB</m> should work as follows
+      <me>
+        AB\vec{x} = A(B\vec{x})
+      </me>.
+    </p>
+    <p>
+      First, a vector <m>\vec{x}</m> in
+      <m>{\mathbb R}^p</m> gets taken to the vector
+      <m>B\vec{x}</m> in <m>{\mathbb R}^n</m>.
+      Then the mapping <m>A</m> takes it to the vector
+      <m>A(B\vec{x})</m> in <m>{\mathbb R}^m</m>.
+      In other words,
+      the composition <m>AB</m> should be an <m>m \times p</m> matrix.
+      In terms of sizes we should have
+      <me>
+        \text{ `` }  [ m \times n ] \, [ n \times p ] = [ m \times p ] . \text{ '' }
+      </me>
+    </p>
+    <p>
+      Notice how the middle size must match.
+    </p>
+    <p>
+      OK , now we know what sizes of matrices we should be able to multiply,
+      and what the product should be.
+      Let us see how to actually compute matrix multiplication.
+      We start with the so-called <em>dot product
+          <idx><h>dot product</h></idx>
+      </em> (or <em>inner product
+          <idx><h>inner product</h></idx>
+      </em>) of two vectors.
+      Usually this is a row vector multiplied with a column vector of the same size.
+      Dot product multiplies each pair of entries from the first and the second vector and sums these products.
+      The result is a single number.
+      For example,
+      <me>
+        \begin{bmatrix} a_1 \amp  a_2 \amp  a_3 \end{bmatrix} \cdot \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} = a_1 b_1 + a_2 b_2 + a_3 b_3
+      </me>.
+    </p>
+    <p>
+      And similarly for larger
+      (or smaller)
+      vectors.
+      A dot product is really a product of two matrices:
+      a <m>1 \times n</m> matrix and an
+      <m>n \times 1</m> matrix resulting in a
+      <m>1 \times 1</m> matrix, that is, a number.
+    </p>
+    <p>
+      Armed with the dot product we define the <em>product of matrices
+          <idx><h>product of matrices</h></idx>
+      </em>.
+          <idx><h>matrix product</h></idx>
+      First let us denote by <m>\operatorname{row}_i(A)</m> the
+      <m>i^{\text{ th } }</m> row of <m>A</m> and by
+      <m>\operatorname{column}_j(A)</m> the <m>j^{\text{ th } }</m> column of <m>A</m>.
+      For an <m>m \times n</m> matrix <m>A</m> and an
+      <m>n \times p</m> matrix <m>B</m> we can compute the product <m>AB</m>.
+      The matrix <m>AB</m> is an <m>m \times p</m> matrix whose
+      <m>ij^{\text{ th } }</m> entry is the dot product
+      <me>
+        \operatorname{row}_i(A) \cdot \operatorname{column}_j(B)
+      </me>.
+    </p>
+    <p>
+      For example, given a <m>2 \times 3</m> and a
+      <m>3 \times 2</m> matrix we should end up with a <m>2 \times 2</m> matrix:
+      <men xml:id="linalg_eqmatrixmulex">
+        \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix} \begin{bmatrix} b_{11} \amp  b_{12} \\ b_{21} \amp  b_{22} \\ b_{31} \amp  b_{32} \end{bmatrix} = \begin{bmatrix} a_{11} b_{11} + a_{12} b_{21} + a_{13} b_{31} \amp  \amp a_{11} b_{12} + a_{12} b_{22} + a_{13} b_{32} \\ a_{21} b_{11} + a_{22} b_{21} + a_{23} b_{31} \amp  \amp a_{21} b_{12} + a_{22} b_{22} + a_{23} b_{32} \end{bmatrix}
+      </men>,
+      or with some numbers:
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix} \begin{bmatrix} -1 \amp  2 \\ -7 \amp  0 \\ 1 \amp  -1 \end{bmatrix} = \begin{bmatrix} 1\cdot (-1) + 2\cdot (-7) + 3 \cdot 1 \amp   \amp 1\cdot 2 + 2\cdot 0 + 3 \cdot (-1) \\ 4\cdot (-1) + 5\cdot (-7) + 6 \cdot 1 \amp   \amp 4\cdot 2 + 5\cdot 0 + 6 \cdot (-1) \end{bmatrix} = \begin{bmatrix} -12 \amp  -1 \\ -33 \amp  2 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      A useful consequence of the definition is that the evaluation
+      <m>A \vec{x}</m> for a matrix <m>A</m> and a (column) vector <m>\vec{x}</m> is also matrix multiplication.
+      That is really why we think of vectors as column vectors,
+      or <m>n \times 1</m> matrices.
+      For example,
+      <me>
+        \begin{bmatrix} 1 \amp  2 \\ 3 \amp  4 \end{bmatrix} \begin{bmatrix} 2 \\ -1 \end{bmatrix} = \begin{bmatrix} 1 \cdot 2 + 2 \cdot (-1) \\ 3 \cdot 2 + 4 \cdot (-1) \end{bmatrix} = \begin{bmatrix} 0 \\ 2 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      If you look at the last section,
+      that is precisely the last example we gave.
+    </p>
+    <p>
+      You should stare at the computation of multiplication of matrices <m>AB</m> and the previous definition of
+      <m>A\vec{y}</m> as a mapping for a moment.
+      What we are doing with matrix multiplication is applying the mapping <m>A</m> to the columns of <m>B</m>.
+      This is usually written as follows.
+      Suppose we write the <m>n \times p</m> matrix <m>B = [ \vec{b}_1 ~ \vec{b}_2 ~ \cdots ~ \vec{b}_p ]</m>,
+      where <m>\vec{b}_1, \vec{b}_2, \ldots, \vec{b}_p</m> are the columns of <m>B</m>.
+      Then for an <m>m \times n</m> matrix <m>A</m>,
+      <me>
+        AB = A [ \vec{b}_1 ~ \vec{b}_2 ~ \cdots ~ \vec{b}_p ] = [ A\vec{b}_1 ~ A\vec{b}_2 ~ \cdots ~ A\vec{b}_p ]
+      </me>.
+    </p>
+    <p>
+      The columns of the <m>m \times p</m> matrix <m>AB</m> are the vectors <m>A\vec{b}_1, A\vec{b}_2, \ldots, A\vec{b}_p</m>.
+      For example,
+      in <xref ref="linalg_eqmatrixmulex"/>, the columns of
+      <me>
+        \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix} \begin{bmatrix} b_{11} \amp  b_{12} \\ b_{21} \amp  b_{22} \\ b_{31} \amp  b_{32} \end{bmatrix}
+      </me>
+      are
+      <me>
+        \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix} \begin{bmatrix} b_{11} \\ b_{21} \\ b_{31} \end{bmatrix} \qquad \text{ and } \qquad \begin{bmatrix} a_{11} \amp  a_{12} \amp  a_{13} \\ a_{21} \amp  a_{22} \amp  a_{23} \end{bmatrix} \begin{bmatrix} b_{12} \\ b_{22} \\ b_{32} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      This is a very useful way to understand what matrix multiplication is.
+      It should also make it easier to remember how to perform matrix multiplication.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Some rules of matrix algebra</title>
+    <p>
+      For multiplication we want an analogue of a 1.
+      That is, we desire a matrix that just leaves everything as it found it.
+      This analogue is the so-called <em>identity matrix
+          <idx><h>identity matrix</h></idx>
+      </em>.
+      The identity matrix is a square matrix with 1s on the main diagonal and zeros everywhere else.
+      It is usually denoted by <m>I</m>.
+      For each size we have a different identity matrix and so sometimes we may denote the size as a subscript.
+      For example,
+      the <m>I_3</m> would be the <m>3 \times 3</m> identity matrix
+      <me>
+        I = I_3 = \begin{bmatrix} 1 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Let us see how the matrix works on a smaller example,
+      <me>
+        \begin{bmatrix} a_{11} \amp  a_{12} \\ a_{21} \amp  a_{22} \end{bmatrix} \begin{bmatrix} 1 \amp  0 \\ 0 \amp  1 \end{bmatrix} = \begin{bmatrix} a_{11} \cdot 1 + a_{12} \cdot 0 \amp  \amp a_{11} \cdot 0 + a_{12} \cdot 1 \\ a_{21} \cdot 1 + a_{22} \cdot 0 \amp  \amp a_{21} \cdot 0 + a_{22} \cdot 1 \end{bmatrix} = \begin{bmatrix} a_{11} \amp  a_{12} \\ a_{21} \amp  a_{22} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Multiplication by the identity from the left looks similar,
+      and also does not touch anything.
+    </p>
+    <p>
+      We have the following rules for matrix multiplication.
+      Suppose that <m>A</m>, <m>B</m>,
+      <m>C</m> are matrices of the correct sizes so that the following make sense.
+      Let <m>\alpha</m> denote a scalar
+      (number).
+      Then
+      <md>
+        <mrow>A(BC) \amp  = (AB)C \amp  \amp  \text{(\myindex{associative law})}  ,</mrow>
+        <mrow>A(B+C) \amp  = AB + AC \amp  \amp  \text{(\myindex{distributive law})}  ,</mrow>
+        <mrow>(B+C)A \amp  = BA + CA \amp  \amp  \text{ (distributive law) }  ,</mrow>
+        <mrow>\alpha(AB) \amp  = (\alpha A)B = A(\alpha B) , \amp  \amp</mrow>
+        <mrow>IA \amp  = A = AI \amp  \amp  \text{ (identity) } </mrow>
+      </md>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Let us demonstrate a couple of these rules.
+          For example, the associative law:
+          <me>
+            \underbrace{ \begin{bmatrix} -3 \amp  3 \\ 2 \amp  -2 \end{bmatrix} }_A \biggl( \underbrace{ \begin{bmatrix} 4 \amp  4 \\ 1 \amp  -3 \end{bmatrix} }_B \underbrace{ \begin{bmatrix} -1 \amp  4 \\ 5 \amp  2 \end{bmatrix} }_C \biggr) = \underbrace{ \begin{bmatrix} -3 \amp  3 \\ 2 \amp  -2 \end{bmatrix} }_A \underbrace{ \begin{bmatrix} 16 \amp  24 \\ -16 \amp  -2 \end{bmatrix} }_{BC} = \underbrace{ \begin{bmatrix} -96 \amp  -78 \\ 64 \amp  52 \end{bmatrix} }_{A(BC)}
+          </me>,
+          and
+          <me>
+            \biggl( \underbrace{ \begin{bmatrix} -3 \amp  3 \\ 2 \amp  -2 \end{bmatrix} }_A \underbrace{ \begin{bmatrix} 4 \amp  4 \\ 1 \amp  -3 \end{bmatrix} }_B \biggr) \underbrace{ \begin{bmatrix} -1 \amp  4 \\ 5 \amp  2 \end{bmatrix} }_C = \underbrace{ \begin{bmatrix} -9 \amp  -21 \\ 6 \amp  14 \end{bmatrix} }_{AB} \underbrace{ \begin{bmatrix} -1 \amp  4 \\ 5 \amp  2 \end{bmatrix} }_C = \underbrace{ \begin{bmatrix} -96 \amp  -78 \\ 64 \amp  52 \end{bmatrix} }_{(AB)C}
+          </me>.
+        </p>
+        <p>
+          Or how about multiplication by scalars:
+          <me>
+            10 \biggl( \underbrace{ \begin{bmatrix} -3 \amp  3 \\ 2 \amp  -2 \end{bmatrix} }_A \underbrace{ \begin{bmatrix} 4 \amp  4 \\ 1 \amp  -3 \end{bmatrix} }_B \biggr) = 10 \underbrace{ \begin{bmatrix} -9 \amp  -21 \\ 6 \amp  14 \end{bmatrix} }_{A B} = \underbrace{ \begin{bmatrix} -90 \amp  -210 \\ 60 \amp  140 \end{bmatrix} }_{10 (AB)}
+          </me>,
+          <me>
+            \biggl( 10 \underbrace{ \begin{bmatrix} -3 \amp  3 \\ 2 \amp  -2 \end{bmatrix} }_A \biggr) \underbrace{ \begin{bmatrix} 4 \amp  4 \\ 1 \amp  -3 \end{bmatrix} }_B = \underbrace{ \begin{bmatrix} -30 \amp  30 \\ 20 \amp  -20 \end{bmatrix} }_{10 A} \underbrace{ \begin{bmatrix} 4 \amp  4 \\ 1 \amp  -3 \end{bmatrix} }_B = \underbrace{ \begin{bmatrix} -90 \amp  -210 \\ 60 \amp  140 \end{bmatrix} }_{(10 A)B}
+          </me>,
+          and
+          <me>
+            \underbrace{ \begin{bmatrix} -3 \amp  3 \\ 2 \amp  -2 \end{bmatrix} }_A \biggl( 10 \underbrace{ \begin{bmatrix} 4 \amp  4 \\ 1 \amp  -3 \end{bmatrix} }_B \biggr) = \underbrace{ \begin{bmatrix} -3 \amp  3 \\ 2 \amp  -2 \end{bmatrix} }_{A} \underbrace{ \begin{bmatrix} 40 \amp  40 \\ 10 \amp  -30 \end{bmatrix} }_{10B} = \underbrace{ \begin{bmatrix} -90 \amp  -210 \\ 60 \amp  140 \end{bmatrix} }_{A(10B)}
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      A multiplication rule you have used since primary school on numbers is quite conspicuously missing for matrices.
+      That is, matrix multiplication is not commutative.
+      Firstly, just because <m>AB</m> makes sense,
+      it may be that <m>BA</m> is not even defined.
+      For example, if <m>A</m> is <m>2 \times 3</m>,
+      and <m>B</m> is <m>3 \times 4</m>,
+      the we can multiply <m>AB</m> but not <m>BA</m>.
+    </p>
+    <p>
+      Even if <m>AB</m> and <m>BA</m> are both defined,
+      does not mean that they are equal.
+      For example,
+      take <m>A = \left[ \begin{matrix}1 \amp  1 \\ 1 \amp  1 \end{matrix}  \right]</m> and <m>B = \left[ \begin{matrix}1 \amp  0 \\ 0 \amp  2 \end{matrix}  \right]</m>:
+      <me>
+        AB = \begin{bmatrix} 1 \amp  1 \\ 1 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \amp  0 \\ 0 \amp  2 \end{bmatrix} = \begin{bmatrix} 1 \amp  2 \\ 1 \amp  2 \end{bmatrix} \qquad \not= \qquad \begin{bmatrix} 1 \amp  1 \\ 2 \amp  2 \end{bmatrix} = \begin{bmatrix} 1 \amp  0 \\ 0 \amp  2 \end{bmatrix} \begin{bmatrix} 1 \amp  1 \\ 1 \amp  1 \end{bmatrix} = BA
+      </me>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Inverse</title>
+    <p>
+      A couple of other algebra rules you know for numbers do not quite work on matrices:
+      <ol marker="i">
+        <li>
+          <p>
+            <m>AB = AC</m> does not necessarily imply <m>B=C</m>,
+            even if <m>A</m> is not 0.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>AB = 0</m> does not necessarily mean that <m>A=0</m> or <m>B=0</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      For example:
+      <me>
+        \begin{bmatrix} 0 \amp  1 \\ 0 \amp  0 \end{bmatrix} \begin{bmatrix} 0 \amp  1 \\ 0 \amp  0 \end{bmatrix} = \begin{bmatrix} 0 \amp  0 \\ 0 \amp  0 \end{bmatrix} = \begin{bmatrix} 0 \amp  1 \\ 0 \amp  0 \end{bmatrix} \begin{bmatrix} 0 \amp  2 \\ 0 \amp  0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      To make these rules hold,
+      we do not just need one of the matrices to not be zero,
+      we would need to
+      <q>divide</q>
+      by a matrix.
+      This is where the <em>matrix inverse
+          <idx><h>matrix inverse</h></idx>
+      </em> comes in.
+      Suppose that <m>A</m> and <m>B</m> are <m>n \times n</m> matrices such that
+      <me>
+        AB = I = BA
+      </me>.
+    </p>
+    <p>
+      Then we call <m>B</m> the inverse of <m>A</m> and we denote <m>B</m> by <m>A^{-1}</m>.
+      Perhaps not surprisingly, <m>{(A^{-1})}^{-1} = A</m>,
+      since if the inverse of <m>A</m> is <m>B</m>,
+      then the inverse of <m>B</m> is <m>A</m>.
+      If the inverse of <m>A</m> exists,
+      then we say <m>A</m> is <em>invertible
+          <idx><h>invertible matrix</h></idx>
+      </em>.
+      If <m>A</m> is not invertible,
+      we say <m>A</m> is <em>singular
+          <idx><h>singular matrix</h></idx>
+      </em>.
+    </p>
+    <p>
+      If <m>A = [a]</m> is a <m>1 \times 1</m> matrix,
+      then <m>A^{-1}</m> is <m>a^{-1} = \frac{1}{a}</m>.
+      That is where the notation comes from.
+      The computation is not nearly as simple when <m>A</m> is larger.
+    </p>
+    <p>
+      The proper formulation of the cancellation rule is:
+      <em>If <m>A</m> is invertible,
+      then <m>AB = AC</m> implies <m>B=C</m>.</em>
+      The computation is what you would do in regular algebra with numbers,
+      but you have to be careful never to commute matrices:
+      <md>
+        <mrow>AB \amp  = AC ,</mrow>
+        <mrow>A^{-1}AB \amp  = A^{-1}AC ,</mrow>
+        <mrow>IB \amp  = IC ,</mrow>
+        <mrow>B \amp  = C </mrow>
+      </md>.
+    </p>
+    <p>
+      And similarly for cancellation on the right:
+      <em>If <m>A</m> is invertible,
+      then <m>BA = CA</m> implies <m>B=C</m>.</em>
+    </p>
+    <p>
+      The rule says, among other things,
+      that the inverse of a matrix is unique if it exists: If <m>AB = I = AC</m>,
+      then <m>A</m> is invertible and <m>B=C</m>.
+    </p>
+    <p>
+      We will see later how to compute an inverse of a matrix in general.
+      For now, let us note that there is a simple formula for the inverse of a <m>2 \times 2</m> matrix
+      <me>
+        \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix}^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d \amp  -b \\ -c \amp  a \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      For example:
+      <me>
+        \begin{bmatrix} 1 \amp  1 \\ 2 \amp  4 \end{bmatrix}^{-1} = \frac{1}{1\cdot 4-1 \cdot 2} \begin{bmatrix} 4 \amp  -1 \\ -2 \amp  1 \end{bmatrix} = \begin{bmatrix} 2 \amp  \nicefrac{-1}{2} \\ -1 \amp  \nicefrac{1}{2} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Let's try it:
+      <me>
+        \begin{bmatrix} 1 \amp  1 \\ 2 \amp  4 \end{bmatrix} \begin{bmatrix} 2 \amp  \nicefrac{-1}{2} \\ -1 \amp  \nicefrac{1}{2} \end{bmatrix} = \begin{bmatrix} 1 \amp  0 \\ 0 \amp  1 \end{bmatrix} \qquad \text{ and } \qquad \begin{bmatrix} 2 \amp  \nicefrac{-1}{2} \\ -1 \amp  \nicefrac{1}{2} \end{bmatrix} \begin{bmatrix} 1 \amp  1 \\ 2 \amp  4 \end{bmatrix} = \begin{bmatrix} 1 \amp  0 \\ 0 \amp  1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Just as we cannot divide by every number,
+      not every matrix is invertible.
+      In the case of matrices however we may have singular matrices that are not zero.
+      For example,
+      <me>
+        \begin{bmatrix} 1 \amp  1 \\ 2 \amp  2 \end{bmatrix}
+      </me>
+      is a singular matrix.
+      But didn't we just give a formula for an inverse?
+      Let us try it:
+      <me>
+        \begin{bmatrix} 1 \amp  1 \\ 2 \amp  2 \end{bmatrix}^{-1} = \frac{1}{1\cdot 2-1 \cdot 2} \begin{bmatrix} 2 \amp  -1 \\ -2 \amp  1 \end{bmatrix} = \text{ ? }
+      </me>
+    </p>
+    <p>
+      We get into a bit of trouble;
+      we are trying to divide by zero.
+    </p>
+    <p>
+      So a <m>2 \times 2</m> matrix <m>A</m> is invertible whenever
+      <me>
+        ad - bc \not= 0
+      </me>
+      and otherwise it is singular.
+      The expression <m>ad-bc</m> is called the <em>determinant</em>
+      and we will look at it more carefully in a later section.
+      There is a similar expression for a square matrix of any size.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Diagonal matrices</title>
+    <p>
+      A simple (and surprisingly useful) type of a square matrix is a so-called <em>diagonal matrix
+          <idx><h>diagonal matrix</h></idx>
+      </em>.
+      It is a matrix whose entries are all zero except those on the main diagonal from top left to bottom right.
+      For example a <m>4 \times 4</m> diagonal matrix is of the form
+      <me>
+        \begin{bmatrix} d_1 \amp  0 \amp  0 \amp  0 \\ 0 \amp  d_2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  d_3 \amp  0 \\ 0 \amp  0 \amp  0 \amp  d_4 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Such matrices have nice properties when we multiply by them.
+      If we multiply them by a vector,
+      they multiply the <m>k^{\text{ th } }</m> entry by <m>d_k</m>.
+      For example,
+      <me>
+        \begin{bmatrix} 1 \amp  0 \amp  0 \\ 0 \amp  2 \amp  0 \\ 0 \amp  0 \amp  3 \end{bmatrix} \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix} = \begin{bmatrix} 1 \cdot 4 \\ 2 \cdot 5 \\ 3 \cdot 6 \end{bmatrix} = \begin{bmatrix} 4 \\ 10 \\ 18 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Similarly, when they multiply another matrix from the left,
+      they multiply the <m>k^{\text{ th } }</m> row by <m>d_k</m>.
+      For example,
+      <me>
+        \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  3 \amp  0 \\ 0 \amp  0 \amp  -1 \end{bmatrix} \begin{bmatrix} 1 \amp  1 \amp  1 \\ 1 \amp  1 \amp  1 \\ 1 \amp  1 \amp  1 \end{bmatrix} = \begin{bmatrix} 2 \amp  2 \amp  2 \\ 3 \amp  3 \amp  3 \\ -1 \amp  -1 \amp  -1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      On the other hand, multiplying on the right,
+      they multiply the columns:
+      <me>
+        \begin{bmatrix} 1 \amp  1 \amp  1 \\ 1 \amp  1 \amp  1 \\ 1 \amp  1 \amp  1 \end{bmatrix} \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  3 \amp  0 \\ 0 \amp  0 \amp  -1 \end{bmatrix} = \begin{bmatrix} 2 \amp  3 \amp  -1 \\ 2 \amp  3 \amp  -1 \\ 2 \amp  3 \amp  -1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      And it is really easy to multiply two diagonal matrices together:
+      <me>
+        \begin{bmatrix} 1 \amp  0 \amp  0 \\ 0 \amp  2 \amp  0 \\ 0 \amp  0 \amp  3 \end{bmatrix} \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  3 \amp  0 \\ 0 \amp  0 \amp  -1 \end{bmatrix} = \begin{bmatrix} 1 \cdot 2 \amp  0 \amp  0 \\ 0 \amp  2 \cdot 3 \amp  0 \\ 0 \amp  0 \amp  3 \cdot (-1) \end{bmatrix} = \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  6 \amp  0 \\ 0 \amp  0 \amp  -3 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      For this last reason, they are easy to invert,
+      you simply invert each diagonal element:
+      <me>
+        \begin{bmatrix} d_1 \amp  0 \amp  0 \\ 0 \amp  d_2 \amp  0 \\ 0 \amp  0 \amp  d_3 \end{bmatrix}^{-1} = \begin{bmatrix} d_1^{-1} \amp  0 \amp  0 \\ 0 \amp  d_2^{-1} \amp  0 \\ 0 \amp  0 \amp  d_3^{-1} \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Let us check an example
+      <me>
+        \underbrace{ \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  3 \amp  0 \\ 0 \amp  0 \amp  4 \end{bmatrix}^{-1} }_{A^{-1}} \underbrace{ \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  3 \amp  0 \\ 0 \amp  0 \amp  4 \end{bmatrix} }_{A} = \underbrace{ \begin{bmatrix} \frac{1}{2} \amp  0 \amp  0 \\ 0 \amp  \frac{1}{3} \amp  0 \\ 0 \amp  0 \amp  \frac{1}{4} \end{bmatrix} }_{A^{-1}} \underbrace{ \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  3 \amp  0 \\ 0 \amp  0 \amp  4 \end{bmatrix} }_{A} = \underbrace{ \begin{bmatrix} 1 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix} }_{I}
+      </me>.
+    </p>
+    <p>
+      It is no wonder that the way we solve many problems in linear algebra
+      (and in differential equations)
+      is to try to reduce the problem to the case of diagonal matrices.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Transpose</title>
+    <p>
+      Vectors do not always have to be column vectors,
+      that is just a convention.
+      Swapping rows and columns is from time to time needed.
+      The operation that swaps rows and columns is the so-called <em>transpose
+          <idx><h>transpose</h></idx>
+      </em>.
+      The transpose of <m>A</m> is denoted by <m>A^T</m>.
+      Example:
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix}^T = \begin{bmatrix} 1 \amp  4 \\ 2 \amp  5 \\ 3 \amp  6 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      So transpose takes an <m>m \times n</m> matrix to an <m>n \times m</m> matrix.
+    </p>
+    <p>
+      A key fact about the transpose is that if the product <m>AB</m> makes sense then <m>B^TA^T</m> also makes sense,
+      at least from the point of view of sizes.
+      In fact, we get precisely the transpose of <m>AB</m>.
+      That is:
+      <me>
+        {(AB)}^T = B^TA^T
+      </me>.
+    </p>
+    <p>
+      For example,
+      <me>
+        {\left( \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix} \begin{bmatrix} 0 \amp  1 \\ 1 \amp  0 \\ 2 \amp  -2 \end{bmatrix} \right)}^T = \begin{bmatrix} 0 \amp  1 \amp  2 \\ 1 \amp  0 \amp  -2 \end{bmatrix} \begin{bmatrix} 1 \amp  4 \\ 2 \amp  5 \\ 3 \amp  6 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      It is left to the reader to verify that computing the matrix product on the left and then transposing is the same as computing the matrix product on the right.
+    </p>
+    <p>
+      If we have a column vector <m>\vec{x}</m> to which we apply a matrix <m>A</m> and we transpose the result,
+      then the row vector <m>\vec{x}^T</m> applies to <m>A^T</m> from the left:
+      <me>
+        {(A\vec{x})}^T = \vec{x}^TA^T
+      </me>.
+    </p>
+    <p>
+      Another place where transpose is useful is when we wish to apply the dot product<fn>
+      As a side note, mathematicians write
+      <m>\vec{y}^T\vec{x}</m> and physicists write <m>\vec{x}^T\vec{y}</m>.
+      Shhh<ellipsis/> don't tell anyone,
+      but the physicists are probably right on this.
+      </fn> to two column vectors:
+      <me>
+        \vec{x} \cdot \vec{y} = \vec{y}^T \vec{x}
+      </me>.
+    </p>
+    <p>
+      That is the way that one often writes the dot product in software.
+    </p>
+    <p>
+      We say a matrix <m>A</m> is <em>symmetric</em>
+          <idx><h>symmetric matrix</h></idx>
+      if <m>A = A^T</m>.
+      For example,
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \\ 2 \amp  4 \amp  5 \\ 3 \amp  5 \amp  6 \end{bmatrix}
+      </me>
+      is a symmetric matrix.
+      Notice that a symmetric matrix is always square,
+      that is, <m>n \times n</m>.
+      Symmetric matrices have many nice properties<fn>
+      Although so far we have not learned enough about matrices to really appreciate them.
+      </fn>,
+      and come up quite often in applications.
+    </p>
+  </subsection>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Add the following matrices <ol marker="a"><li>
+          <m>\begin{bmatrix}-1 \amp 2 \amp 2 \\ 5 \amp 8 \amp -1 \end{bmatrix} + \begin{bmatrix}3 \amp 2 \amp 3 \\ 8 \amp 3 \amp 5 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 2 \amp 4 \\ 2 \amp 3 \amp 1 \\ 0 \amp 5 \amp 1 \end{bmatrix} + \begin{bmatrix}2 \amp -8 \amp -3 \\ 3 \amp 1 \amp 0 \\ 6 \amp -4 \amp 1 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute <ol marker="a"><li>
+          <m>3\begin{bmatrix}0 \amp 3 \\ -2 \amp 2 \end{bmatrix} + 6 \begin{bmatrix}1 \amp 5 \\ -1 \amp 5 \end{bmatrix}</m> </li>
+          <li> <m>2\begin{bmatrix}-3 \amp 1 \\ 2 \amp 2 \end{bmatrix} - 3 \begin{bmatrix}2 \amp -1 \\ 3 \amp 2 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Multiply the following matrices <ol marker="a"><li>
+          <m>\begin{bmatrix}-1 \amp 2 \\ 3 \amp 1 \\ 5 \amp 8 \end{bmatrix} \begin{bmatrix}3 \amp -1 \amp 3 \amp 1 \\ 8 \amp 3 \amp 2 \amp -3 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 2 \amp 3 \\ 3 \amp 1 \amp 1 \\ 1 \amp 0 \amp 3 \end{bmatrix} \begin{bmatrix}2 \amp 3 \amp 1 \amp 7 \\ 1 \amp 2 \amp 3 \amp -1 \\ 1 \amp -1 \amp 3 \amp 0 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}4 \amp 1 \amp 6 \amp 3 \\ 5 \amp 6 \amp 5 \amp 0 \\ 4 \amp 6 \amp 6 \amp 0 \end{bmatrix} \begin{bmatrix}2 \amp 5 \\ 1 \amp 2 \\ 3 \amp 5 \\ 5 \amp 6 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 1 \amp 4 \\ 0 \amp 5 \amp 1 \end{bmatrix} \begin{bmatrix}2 \amp 2 \\ 1 \amp 0 \\ 6 \amp 4 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute the inverse of the given matrices <ol marker="a"><li>
+          <m>\begin{bmatrix}-3 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}0 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}1 \amp 4 \\ 1 \amp 3 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp 2 \\ 1 \amp 4 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute the inverse of the given matrices <ol marker="a"><li> <m>\begin{bmatrix}-2 \amp 0 \\ 0 \amp 1 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}3 \amp 0 \amp 0 \\ 0 \amp -2 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 0 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0.01 \amp 0 \\ 0 \amp 0 \amp 0 \amp -5 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Add the following matrices <ol marker="a"><li>
+          <m>\begin{bmatrix}2 \amp 1 \amp 0 \\ 1 \amp 1 \amp -1 \end{bmatrix} + \begin{bmatrix}5 \amp 3 \amp 4 \\ 1 \amp 2 \amp 5 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}6 \amp -2 \amp 3 \\ 7 \amp 3 \amp 3 \\ 8 \amp -1 \amp 2 \end{bmatrix} + \begin{bmatrix}-1 \amp -1 \amp -3 \\ 6 \amp 7 \amp 3 \\ -9 \amp 4 \amp -1 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)<nbsp/><m>\begin{bmatrix}7 \amp 4 \amp 4 \\ 2 \amp 3 \amp 4 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}5 \amp -3 \amp 0 \\ 13 \amp 10 \amp 6 \\ -1 \amp 3 \amp 1 \end{bmatrix}</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute <ol marker="a"><li>
+          <m>2\begin{bmatrix}1 \amp 2 \\ 3 \amp 4 \end{bmatrix} + 3 \begin{bmatrix}-1 \amp 3 \\ 1 \amp 2 \end{bmatrix}</m> </li>
+          <li> <m>3\begin{bmatrix}2 \amp -1 \\ 1 \amp 3 \end{bmatrix} - 2 \begin{bmatrix}2 \amp 1 \\ -1 \amp 2 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)<nbsp/><m>\begin{bmatrix}-1 \amp 13 \\ 9 \amp 14 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}2 \amp -5 \\ 5 \amp 5 \end{bmatrix}</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <title>2</title>
+      <statement>
+        <p>
+          Multiply the following matrices <ol marker="a"><li>
+          <m>\begin{bmatrix}2 \amp 1 \amp 4 \\ 3 \amp 4 \amp 4 \end{bmatrix} \begin{bmatrix}2 \amp 4 \\ 6 \amp 3 \\ 3 \amp 5 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}0 \amp 3 \amp 3 \\ 2 \amp -2 \amp 1 \\ 3 \amp 5 \amp -2 \end{bmatrix} \begin{bmatrix}6 \amp 6 \amp 2 \\ 4 \amp 6 \amp 0 \\ 2 \amp 0 \amp 4 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}3 \amp 4 \amp 1 \\ 2 \amp -1 \amp 0 \\ 4 \amp -1 \amp 5 \end{bmatrix} \begin{bmatrix}0 \amp 2 \amp 5 \amp 0 \\ 2 \amp 0 \amp 5 \amp 2 \\ 3 \amp 6 \amp 1 \amp 6 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}-2 \amp -2 \\ 5 \amp 3 \\ 2 \amp 1 \end{bmatrix} \begin{bmatrix}0 \amp 3 \\ 1 \amp 3 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)<nbsp/><m>\begin{bmatrix}22 \amp 31 \\ 42 \amp 44 \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}18 \amp 18 \amp 12 \\ 6 \amp 0 \amp 8 \\ 34 \amp 48 \amp -2 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}11 \amp 12 \amp 36 \amp 14 \\ -2 \amp 4 \amp 5 \amp -2 \\ 13 \amp 38 \amp 20 \amp 28 \end{bmatrix}</m> d)<nbsp/><m>\begin{bmatrix}-2 \amp -12 \\ 3 \amp 24 \\ 1 \amp 9 \end{bmatrix}</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute the inverse of the given matrices <ol marker="a"><li>
+          <m>\begin{bmatrix}2 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}0 \amp 1 \\ 1 \amp 0 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}1 \amp 2 \\ 3 \amp 5 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}4 \amp 2 \\ 4 \amp 4 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)
+      <m>\begin{bmatrix}\nicefrac{1}{2} \end{bmatrix}</m> b) <m>\begin{bmatrix}0 \amp 1 \\ 1 \amp 0 \end{bmatrix}</m> c)
+      <m>\begin{bmatrix}-5 \amp 2 \\ 3 \amp -1 \end{bmatrix}</m> d) <m>\begin{bmatrix}\nicefrac{1}{2} \amp \nicefrac{-1}{4} \\ \nicefrac{-1}{2} \amp \nicefrac{1}{2} \end{bmatrix}</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute the inverse of the given matrices <ol marker="a"><li> <m>\begin{bmatrix}2 \amp 0 \\ 0 \amp 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}4 \amp 0 \amp 0 \\ 0 \amp 5 \amp 0 \\ 0 \amp 0 \amp -1 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}-1 \amp 0 \amp 0 \amp 0 \\ 0 \amp 2 \amp 0 \amp 0 \\ 0 \amp 0 \amp 3 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0.1 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)<nbsp/><m>\begin{bmatrix}\nicefrac{1}{2} \amp 0 \\ 0 \amp \nicefrac{1}{3} \end{bmatrix}</m> b)<nbsp/><m>\begin{bmatrix}\nicefrac{1}{4} \amp 0 \amp 0 \\ 0 \amp \nicefrac{1}{5} \amp 0 \\ 0 \amp 0 \amp -1 \end{bmatrix}</m> c)<nbsp/><m>\begin{bmatrix}-1 \amp 0 \amp 0 \amp 0 \\ 0 \amp \nicefrac{1}{2} \amp 0 \amp 0 \\ 0 \amp 0 \amp \nicefrac{1}{3} \amp 0 \\ 0 \amp 0 \amp 0 \amp 10 \end{bmatrix}</m>
+      </p>
+    </answer>
+    </exercise>
+  </exercises>
+</section>

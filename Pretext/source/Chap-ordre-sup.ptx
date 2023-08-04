@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ho_chapter">
+  <title>Équations différentielles ordinaires d'ordre supérieur</title>
+  <xi:include  href="Sec-ordre-2.ptx"/>
+  <xi:include  href="Sec-ordre-2-cc.ptx"/>
+  <xi:include  href="Sec-ordre-sup.ptx"/>
+  <xi:include  href="Sec-vibrations.ptx"/>
+  <xi:include  href="Sec-nonhom.ptx"/>
+</chapter>

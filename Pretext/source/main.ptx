@@ -108,16 +108,16 @@ Remarque
         </author>
       </titlepage>
     </frontmatter>
-    <xi:include href="./intro_chapter.ptx"/>
-    <xi:include href="./fo_chapter.ptx"/>
+    <xi:include href="./Chap-intro.ptx"/>
+    <xi:include href="./Chap-ordre-1.ptx"/>
 
-    <xi:include href="./ho_chapter.ptx"/>
-    <xi:include href="./sys_chapter.ptx"/>
-    <xi:include href="./FS_chapter.ptx"/>
-    <xi:include href="./linalg_appendix.ptx"/>
+    <xi:include href="./Chap-ordre-sup.ptx"/>
+    <xi:include href="./Chap-systemes.ptx"/>
+    <xi:include href="./Chap-fourier-edp.ptx"/>
+    <xi:include href="./Chap-alg-lin.ptx"/>
 
     <backmatter>
-      <xi:include href="./bibliography.ptx"/>
+      <xi:include href="./Bibliographie.ptx"/>
       <index>
         <title>Index</title>
         <index-list/>

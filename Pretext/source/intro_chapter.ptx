@@ -1,8 +1,0 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="intro_chapter">
-  <title>Introduction</title>
-  <xi:include  href="notes_section.ptx"/>
-  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
-  <xi:include  href="introde_section.ptx"/>
-  texte81822c2cfdb1434cfbe50c952f863443c6cc962END
-  <xi:include  href="classification_section.ptx"/>
-</chapter>

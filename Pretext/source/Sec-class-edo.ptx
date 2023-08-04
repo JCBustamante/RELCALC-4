@@ -1,0 +1,338 @@
+<section xml:id="classification_section">
+  <title>Classification des équations différentielles</title>
+  <introduction>
+    <p>
+      Il y a plusieurs types d'équations différentielles,
+      et on les classifie en différentes catégories selon leurs propriétés.
+      Parlons brièvement d'une classification de base.
+      D'abord, la distinction entre EDO et EDP :
+      <ul>
+        <li>
+          <p>
+            Dans les <em>équations différentielles ordinaires</em><idx><h>Équations différentielles ordinaires</h></idx>,
+              <idx><h>EDO</h></idx>
+            ou EDO, les dérivées sont prises par rapport à une seule variable.
+            Autrement dit, il y a une seule variable indépendante.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dans les <em>équations aux dérivées partielles</em><idx><h>Équations aux dérivées partielles</h></idx>,
+              <idx><h>EDP</h></idx>
+            ou EDP, les dérivées sont prises par rapport à plusieurs variables.
+            Autrement dit, il y a plusieurs variables indépendantes.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      <!-- TODO trucs bizarres -->
+      Voici quelques exemples d'équations différentielles ordinaires :
+      <md>
+        <mrow>\amp  \frac{d y}{dt} = ky,  \amp  \amp  \text{(croissance exponentielle\knownindex{\lt h>exponential growth\lt /h>})}</mrow>
+        <mrow>\amp  \frac{d y}{dt} = k(A-y),  \amp  \amp  \text{(\myindex{loi de refroidissement de Newton})}</mrow>
+        <mrow>\amp  m \frac{d^2 x}{dt^2} + c \frac{dx}{dt} + kx = f(t) . \amp  \amp \text{(vibrations m\'ecaniques\knownindex{\lt h>mechanical vibrations\lt /h>})}</mrow>
+      </md>
+    </p>
+    <p>
+      Voici quelques exemples d'équations aux dérivées partielles :
+      <md>
+        <mrow>\amp  \frac{\partial y}{\partial t} + c \frac{\partial y}{\partial x} = 0, \amp  \amp \text{(\'equation du transport\knownindex{\lt h>\'Equation du transport\lt /h>})}</mrow>
+        <mrow>\amp  \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2},  \amp  \amp \text{(\'equation de la chaleur ou de la diffusion\knownindex{\lt h>\'Equation de la chaleur/diffusion\lt /h>})}</mrow>
+        <mrow>\amp  \frac{\partial^2 u}{\partial t^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} . \amp  \amp \text{(\'equation de l'onde en 2 dimensions\knownindex{\lt h>\'Equation de l'onde en deux dimensions\lt /h>})}</mrow>
+      </md>
+    </p>
+    <p>
+      Lorsque la situation est soumise à
+      plusieurs équations en même temps,
+      on a un <em>système d'équations différentielles<idx><h>système d'équations différentielles</h></idx>
+      </em>.
+      Par exemple :
+      <me>
+        y' = x , \qquad x' = y
+      </me>
+      est un système simple d'équations différentielles ordinaires.
+      Les équations de Maxwell<idx><h>équations de Maxwell</h></idx> en électromagnétisme forment elles aussi un système d'équations aux dérivées partielles :
+      <md>
+        <mrow>\amp  \nabla \cdot \vec{D} = \rho, \amp  \amp  \nabla \cdot \vec{B} = 0,</mrow>
+        <mrow>\amp  \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}, \amp \amp  \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} </mrow>
+      </md>.
+    </p>
+    <p>
+      Les opérateurs de divergence <m>\nabla \cdot</m> et de rotationnel
+      <m>\nabla \times</m> s'écrivent en termes de dérivées partielles des fonctions en termes des variables <m>x</m>,
+      <m>y</m> et <m>z</m>.
+    </p>
+    <p>
+      Le prochain élément d'information est l'<em>ordre
+          <idx><h>ordre</h></idx>
+      </em> de l'équation
+      (ou du système).
+      L'ordre est tout simplement l'ordre de la plus grande dérivée apparaissant dans l'équation.
+      Si la plus grande dérivée est la dérivée première,
+      c'est une équation du premier ordre.
+      Si la dérivée la plus grande est la dérivée seconde,
+      alors c'est une équation du deuxième ordre.
+      Par exemple,
+      la loi de refroidissement de Newton est une équation du premier ordre,
+      alors que l'équation des vibrations mécaniques est une équation du deuxième ordre.
+      L'équation décrivant les vibrations transversales dans une poutre,
+      <me>
+        a^4 \frac{\partial^4 y}{\partial x^4} + \frac{\partial^2 y}{\partial t^2} = 0
+      </me>,
+      est une équation aux dérivées partielles d'ordre quatre.
+      En effet, une des dérivées dans l'équation est la quatrième dérivée.
+      Le fait que la dérivée en <m>t</m> soit seulement d'ordre deux n'affecte pas l'ordre de l'équation.
+    </p>
+    <p>
+      Dans le premier chapitre,
+      nous commencerons par les équations différentielles ordinaires du premier ordre,
+      c'est-à-dire les équations de la forme <m>\frac{dy}{dx} = f(x,y)</m>.
+      En général,
+      les équations de petit ordre sont plus simples à
+      résoudre et à étudier.
+    </p>
+    <p>
+      Dans la classification des équations,
+      on s'intéresse aussi à
+      comment les variables dépendantes apparaissent dans l'équation
+      (ou le système).
+      En particulier, on l'appelle une
+      <em>équation linéaire</em>
+          <idx><h>linear equation</h></idx>
+      si la variable dépendante
+      (ou les variables dépendantes)
+      et ses dérivées apparaissent linéairement,
+      c'est-à-dire qu'elles ne sont pas multipliées ensemble et qu'aucune autre fonction des variables dépendantes n'apparaît dans l'équation.
+      Sinon, il s'agit d'une équation
+      <em>non linéaire</em>.
+          <idx><h>nonlinear equation</h></idx>
+      Une EDO est linéaire si elle peut être exprimée de la manière suivante :
+      <men xml:id="classification_eqlingen">
+        a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = b(x) *
+      </men>.
+    </p>
+    <p>
+      Les fonctions <m>a_0</m>, <m>a_1</m>,
+      <ellipsis/>, <m>a_n</m> s'appellent les <em>coefficients
+          <idx><h>coefficients</h></idx>
+      </em>.
+      L'équation peut dépendre arbitrairement de la variable indépendante.
+      Ainsi, l'équation suivante est linéaire :
+      <men xml:id="classification_eqlinex">
+        e^x \frac{d^2 y}{dx^2} + \sin(x) \frac{d y}{dx} +  x^2 y = \frac{1}{x}
+      </men>,
+      et ce, malgré la présence de <m>e^x</m> et de <m>\sin(x)</m>,
+      puisque <m>y</m> et ses dérivées apparaissent de manière linéaire dans l'équation.
+    </p>
+    <p>
+      Tous les exemples mentionnés au début de la section sont linéaires.
+      Ce n'est peut-être pas évident dans le cas des équations de Maxwell;
+      pour s'en convaincre,
+      on peut écrire la divergence et le rotationnel en termes des dérivées partielles.
+    </p>
+    <p>
+      Considérons maintenant quelques équations non linéaires.
+      Par exemple, l'équation de Burgers,
+          <idx><h>Burgers</h></idx>
+      <me>
+        \frac{\partial y}{\partial t} +  \frac{\partial y}{\partial x} = \nu \frac{\partial^2 y}{\partial x^2}
+      </me>,
+      est une EDP du second ordre, qui est non linéaire,
+      puisque <m>y</m> et <m>\frac{\partial y}{\partial x}</m> sont multipliées ensemble.
+      L'équation suivante :
+      <men xml:id="classification_eqnonlinode">
+        \frac{dx}{dt} = x^2
+      </men>,
+      est une EDO non linéaire du premier ordre,
+      puisque la variable dépendante <m>x</m> est au carré.
+    </p>
+    <p>
+      Une équation qui est linéaire est de plus appelée <em>homogène
+          <idx><h>homogène</h></idx>
+      </em> si tous les termes dépendent de la variable dépendante.
+      Autrement dit,
+      il n'y a aucun terme qui dépend uniquement de la variable indépendante.
+      Sinon, l'équation est dite <em>non homogène
+          <idx><h>non homogène</h></idx>
+      </em>.
+      Par exemple, l'équation de la croissance exponentielle,
+      l'équation de l'onde et l'équation du transport sont homogènes.
+      L'équation des vibrations mécaniques est non homogène à
+      moins que <m>f(t)</m> soit la fonction nulle.
+      De manière analogue,
+      la loi de refroidissement de Newton est non homogène sauf si la température ambiante <m>A</m> est nulle.
+      Une EDO linéaire homogène peut être écrite sous la forme suivante :
+      <me>
+        a_n(x) \frac{d^n y}{dx^n} + a_{n-1}(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx} + a_{0}(x) y = 0
+      </me>.
+    </p>
+    <p>
+      Comparez à <xref ref="classification_eqlingen"/> et observez l'absence de fonction <m>b(x)</m>.
+    </p>
+    <p>
+      Lorsque les coefficients d'une équation linéaire sont en fait des constantes,
+      on dit alors que l'équation est à
+      <em>coefficients constants</em>.
+          <idx><h>constant coefficient</h></idx>
+      Les coefficients sont les fonctions multipliées par la variable dépendante ou par une de ses dérivées,
+      et non la fonction <m>b(x)</m> qui apparaît seule.
+      Une EDO non homogène à
+      coefficients constants a la forme suivante :
+      <me>
+        a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_{1} \frac{dy}{dx} + a_{0} y = b(x)
+      </me>,
+      où <m>a_0, a_1, \ldots, a_n</m> sont toutes des constantes,
+      mais où <m>b</m> peut dépendre de la variable indépendante <m>x</m>.
+      L'équation des vibrations mécaniques que nous avons vue plus haut est une EDO non homogène du second ordre à
+      coefficients constants.
+    </p>
+    <p>
+      La même nomenclature s'applique aux EDP. Par conséquent,
+      les équations du transport,
+      de la chaleur/diffusion et de l'onde sont toutes des EDP linéaires à
+      coefficients constants.
+    </p>
+    <p>
+      Pour terminer, une équation est dite <em>autonome
+          <idx><h>autonome</h></idx>
+      </em> si l'équation ne dépend pas de la variable indépendante.
+      Pour des EDO autonomes, on pensera souvent à
+      la variable indépendante comme à
+      la variable du temps. Être une équation autonome signifie que l'équation ne varie pas dans le temps.
+      Par exemple, la loi de refroidissement de Newton est autonome,
+      ainsi que l'équation <xref ref="classification_eqnonlinode"/>.
+      Par contre, les équations de vibrations mécaniques ou <xref ref="classification_eqlinex"/> ne sont pas autonomes.
+    </p>
+  </introduction>
+
+  <!-- TODO exos -->
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Classifiez les équations suivantes.
+          S'agit-il d'une EDO ou d'une EDP? Est-ce une équation ou un système?
+          Quel est l'ordre?
+          Est-ce linéaire ou non-linéaire et si c'est linéaire,
+          est-ce homogène? à
+          coefficients constants?
+          Si c'est une EDO, est-elle autonome? <ol marker="a"><li>
+          <m>\displaystyle \sin(t) \frac{d^2 x}{dt^2} + \cos(t) x = t^2</m> </li>
+          <li> <m>\displaystyle \frac{\partial u}{\partial x} + 3 \frac{\partial u}{\partial y} = xy</m> </li>
+          <li>
+          <m>\displaystyle y''+3y+5x=0, x''+x-y=0</m> </li>
+          <li> <m>\displaystyle \frac{\partial^2 u}{\partial t^2} + u\frac{\partial^2 u}{\partial s^2} = 0</m> </li>
+          <li>
+          <m>\displaystyle x''+tx^2=t</m> </li>
+          <li> <m>\displaystyle \frac{d^4 x}{dt^4} = 0</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Si <m>\vec{u} = (u_1,u_2,u_3)</m> est un vecteur, sa divergence est :
+          <m>\nabla \cdot \vec{u} = \frac{\partial u_1}{\partial x} + \frac{\partial u_2}{\partial y} + \frac{\partial u_3}{\partial z}</m> et son rotationnel est :
+          <m>\nabla \times \vec{u} = \Bigl( \frac{\partial u_3}{\partial y} - \frac{\partial u_2}{\partial z} , ~ \frac{\partial u_1}{\partial z} - \frac{\partial u_3}{\partial x} , ~ \frac{\partial u_2}{\partial x} - \frac{\partial u_1}{\partial y} \Bigr)</m>.
+          Observez que le rotationnel d'un vecteur est lui-même un vecteur. écrivez les équations de Maxwell en termes de dérivées partielles et classifiez le système.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que <m>F</m> est une fonction linéaire,
+          c'est-à-dire que <m>F(x,y) = ax+by</m> pour des constantes <m>a</m> et <m>b</m>.
+          Classifiez les équations de la forme <m>F(y',y) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez un exemple explicite d'un système de deux EDO satisfaisant aux critères suivants :
+          d'ordre trois, non autonome,
+          non homogène, dont les coefficients sont non constants,
+          et tel que toutes les dérivées possibles apparaissent dans le système au moins une fois.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Classifiez les équations suivantes.
+          S'agit-il d'une EDO ou d'une EDP? Est-ce une équation ou un système?
+          Quel est l'ordre?
+          Est-ce linéaire ou non-linéaire et si c'est linéaire,
+          est-ce homogène? À coefficients constants?
+          Si c'est une EDO, est-elle autonome? <ol marker="a"><li>
+          <m>\displaystyle \frac{\partial^2 v}{\partial x^2} + 3 \frac{\partial^2 v}{\partial y^2} = \sin(x)</m> </li>
+          <li> <m>\displaystyle \frac{d x}{dt} + \cos(t) x = t^2+t+1</m> </li>
+          <li>
+          <m>\displaystyle \frac{d^7 F}{dx^7} = 3F(x)</m> </li>
+          <li> <m>\displaystyle y''+8y'=1</m> </li>
+          <li>
+          <m>\displaystyle x''+tyx'=0, y''+txy = 0</m> </li>
+          <li> <m>\displaystyle \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial s^2} + u^2</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        }a) EDP , équation,
+      deuxième ordre,
+      linéaire, non homogène, coefficients constants.
+    </p>
+    <p>
+      b) EDO , équation, premier ordre, linéaire,
+      non homogène, coefficients non constants, non autonome.
+    </p>
+    <p>
+      c) EDO , équation, ordre sept,
+      linéaire, homogène,
+      coefficients constants, autonome.
+    </p>
+    <p>
+      d) EDO , équation, deuxième ordre, linéaire,
+      non homogène, coefficients constants, autonome.
+    </p>
+    <p>
+      e) EDO , système, deuxième ordre, non linéaire.
+    </p>
+    <p>
+      f) EDP , équation, deuxième ordre, non linéaire.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Écrivez la forme générale de l'équation différentielle ordinaire d'ordre
+          <em>zero</em> et linéaire.
+          Trouvez sa solution générale.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        équation :
+      <m>a(x) y = b(x)</m>, solution :
+      <m>y = \frac{b(x)}{a(x)}</m>.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Pour quelles valeurs de <m>k</m> l'équation
+          <m>\frac{dx}{dt}+x^k = t^{k+2}</m> est-elle linéaire?
+          Indice : il y a deux valeurs possibles.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>k=0</m> ou <m>k=1</m>
+      </p>
+    </answer>
+    </exercise>
+  </exercises>
+</section>

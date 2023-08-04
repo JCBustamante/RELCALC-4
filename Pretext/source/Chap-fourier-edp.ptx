@@ -1,0 +1,10 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="FS_chapter">
+  <title>Séries de Fourier et équations différentielles partielles</title>
+  <xi:include  href="Sec-bord.ptx"/>
+  <xi:include  href="Sec-series-trigo.ptx"/>
+  <xi:include  href="Sec-fourier-plus.ptx"/>
+  <xi:include  href="Sec-series-sincos.ptx"/>
+  <xi:include  href="Sec-fourier-appli.ptx"/>
+  <xi:include  href="Sec-edp-chaleur.ptx"/>
+  <xi:include  href="Sec-edp-onde-1.ptx"/>
+</chapter>

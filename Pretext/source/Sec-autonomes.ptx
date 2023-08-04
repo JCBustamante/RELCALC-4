@@ -1,0 +1,455 @@
+<section xml:id="auteq_section">
+  <title>Équations autonomes</title>
+  <introduction>
+    <p>
+      Considérons une équation différentielle comme suit :
+      <me>
+        \frac{dx}{dt} = f(x)
+      </me>,
+      où la dérivée dépend uniquement de <m>x</m>,
+      la variable dépendante, et non de <m>t</m>,
+      la variable indépendante.
+      De telles équations sont dites <em>autonomes
+          <idx><h>équation autonome</h></idx>
+      </em>.
+      On dit autonome parce que, si l'on pense à
+      la variable indépendante comme étant le temps,
+      la valeur de la dérivée à
+      un point est la même à tout moment.
+    </p>
+    <p>
+      Reprenons, par exemple, le problème du café
+      qui tiédit (<xref ref="sep_coffeeexample"></xref>).  
+      <!-- TODO example exemple -->
+      La loi de refroidissement de Newton<idx><h>La loi de refroidissement de Newton</h></idx> est une équation autonome :
+      <me>
+        \frac{dx}{dt} = k (A-x),
+      </me>
+      où <m>x</m> est la température, <m>t</m> est le temps,
+      <m>k</m> est une constante positive
+      et <m>A</m> est la température ambiante.
+      Voir la <xref ref="x2_2_coffeefig"></xref>
+      pour un exemple avec <m>k=0{,}3</m> et <m>A=5</m>.
+    </p>
+    <p>
+      On remarque que l'équation admet la solution constante <m>x=A</m>
+      (dans la figure, <m>x=5</m>).
+      On appelle ces solutions constantes des
+      <em>solutions d'équilibre</em>.
+          <idx><h>solution d'équilibre</h></idx>
+      Les points sur l'axe des <m>x</m> où
+      <m>f(x) = 0</m> sont des <em>points critiques
+          <idx><h>point critique</h></idx>
+      </em>.
+      Par exemple, le point <m>x=A</m> est un point critique.
+      Notons que chaque point critique correspond à
+      une solution d'équilibre.
+    </p>
+    <p>
+      Le graphe nous indique que la solution <m>x=A</m> est stable,
+      c'est-à-dire que de petits changements dans <m>x</m> ne mènent pas à
+      des changements importants dans les solutions lorsque <m>t</m> augmente.
+      Si l'on modifie légèrement la condition initiale,
+      alors <m>x(t) \to A</m> lorsque <m>t \to \infty</m>.
+      Le point critique est alors appelé <em>stable</em>.
+          <idx><h>point critique stable</h></idx>
+      Dans l'exemple du refroidissement,
+      toutes les solutions tendent vers <m>A</m> lorsque <m>t \to \infty</m>.
+      Mais ce n'est pas toujours le cas.
+      Lorsqu'un point critique n'est pas stable,
+      on l'appelle alors <em>instable</em>.
+          <idx><h>point critique instable</h></idx>
+    </p>
+    <figure xml:id="x2_2_coffeefig">
+      <caption>Le champ de directions de
+      <m>x' = 0.3\ (5-x)</m> et quelques solutions.</caption>
+      <!-- \diffyincludegraphics{width=2.93in}{width=4.5in}{2-2-coffee} -->
+      <image width="100%" source="2-2-coffee"/>
+    </figure>
+    <figure xml:id="x2_2_logisticfig">
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic} -->
+      <image width="100%" source="2-2-logistic"/>
+      <caption>Le champ de directions de <m>x' = 0.1\,x\,(5-x)</m> et quelques solutions.</caption>
+    </figure>
+    <p>
+      Considérons maintenant <em>l'équation logistique<idx><h>l'équation logistique</h></idx>
+      </em> :
+      <me>
+        \frac{dx}{dt} = kx(M-x)
+      </me>,
+      où <m>k</m> et <m>M</m> sont des constantes positives.
+      Cette équation sert communément à
+      modéliser une population si l'on connaît la population limite <m>M</m>,
+      c'est-à-dire la capacité
+      maximale du système.
+      Les prédictions issues d'une équation logistique sont moins catastrophiques que pour <m>x'=kx</m>.
+      Bien que <m>x</m> ne puisse pas être négatif, en pratique,
+      puisqu'il s'agit d'une population,
+      la solution mathématique admet des valeurs négatives.
+    </p>
+    <p>
+      La <xref ref="x2_2_logisticfig"></xref>
+      illustre l'exemple <m>x' = 0.1 x(5-x)</m>.
+      Il y a deux points critiques, <m>x=0</m> et <m>x=5</m>.
+      Celui à <m>x=5</m> est stable, alors que celui à
+      <m>x=0</m> est instable.
+    </p>
+    <p>
+      On peut analyser le comportement à
+      long terme des solutions sans devoir les déterminer exactement.
+      Le champ de directions de <m>x' = 0.1 x(5-x)</m> nous montre que :
+      <me>
+        \lim_{t\to \infty} x(t) =   \begin{cases} 5 \amp  \text{ si }  \; x(0) > 0 \\ 0 \amp  \text{ si }  \; x(0) = 0 \\ \text{ n'existe pas ou }  {-\infty} \amp  \text{ si }  \; x(0) \lt  0 . \end{cases}
+      </me>
+    </p>
+    <p>
+      Quant au cas où <m>x(0) \lt  0</m>,
+      il ne suffit pas de simplement observer le champ de directions.
+      Il se pourrait que la solution n'existe pas pour tout <m>t</m> positif.
+      Rappelons l'exemple de <m>x' = x^2</m> où les solutions existent seulement sur un intervalle fini.
+      Un tel scénario est possible ici.
+      Dans les faits,
+      on trouverait ici que la solution n'existe pas pour toutes les valeurs réelles <mdash/> et qu'elle tend vers
+      <m>-\infinity</m> dans un temps fini <mdash/> mais,
+      pour le voir, il faudrait résoudre l'équation.
+    </p>
+    <p>
+      Si l'on s'intéresse seulement au comportement à
+      long terme de la solution,
+      on n'a pas besoin de résoudre l'équation logistique exactement.
+      Il suffirait de dessiner le champ de directions.
+      En fait, on peut simplifier le travail encore plus,
+      en traçant ce qu'on appelle le <em>diagramme de phase
+          <idx><h>diagramme de phase</h></idx>
+      </em> ou <em>portrait de phase
+          <idx><h>portrait de phase</h></idx>
+      </em> de l'équation autonome.
+      Voici comment on fait dans un cas comme celui-ci,
+      où il y a une seule variable dépendante <m>x</m>.
+      <ul>
+        <li>
+          <p>
+            Nous traçons l'axe des <m>x</m>,
+            nous y marquons tous les points critiques de l'équation et nous traçons des flèches dans les intervalles déterminés par ces points critiques.
+          </p>
+        </li>
+        <li>
+          <p>
+            Étant donné que <m>x</m> est la variable dépendante,
+            nous traçons l'axe des <m>x</m> verticalement,
+            pour reproduire sa position dans le champ de directions.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>f(x) > 0</m>, la flèche pointe vers le haut.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>f(x) \lt 0</m>, la flèche pointe vers le bas.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour trouver le bon signe dans un intervalle donné, il suffit d'évaluer <m>f(x)</m> à
+            une valeur <m>x</m> quelconque appartenant à l'intervalle.
+            En effet, lorsque <m>f(x)</m> est continue
+            (ce qui est le cas dans la plupart des applications),
+            le signe est constant dans chaque intervalle.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Dans notre exemple :
+      <ul>
+        <li>
+          <p>
+            Pour <m>x > 5</m> : <m>f(6) = -0{,}6 \lt 0</m>, donc <m>f(x) \lt 0</m>,
+            et la flèche au-dessus de <m>x=5</m> pointe vers le bas.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <m>0 \lt x \lt 5</m> :
+            <m>f(1) = 0{,}4 > 0</m>, donc <m>f(x) > 0</m>,
+            et la flèche dans cet intervalle pointe vers le haut.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <m>x \lt 0</m> :
+            <m>f(-1) = -0{,}6 \lt 0</m>, donc <m>f(x) \lt 0</m>,
+            et la flèche dans cet intervalle pointe vers le bas.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      <image width="73%" source="2-2-l-phasedia"/>
+    </p>
+    <p>
+      Grâce à un diagramme de phase,
+      nous pouvons facilement tracer une approximation des solutions,
+      car le signe de <m>f(x)</m> nous dit le signe de la dérivée, et donc si la valeur augmente ou diminue.
+      De gauche à droite
+      (dans le sens où augmente la variable indépendante),
+      le graphe de la solution monte là
+      où la flèche pointe vers le haut et descend là
+      où la flèche pointe vers le bas.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Essayez de tracer quelques solutions en vous servant seulement du diagramme de phase.
+          Vérifiez votre réponse en comparant avec les graphes plus haut.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      À l'aide du diagramme de phase,
+      nous pouvons classifier les points critiques comme stables ou instables<fn>
+      Parfois, on dira d'un point critique instable qu'il est <em>semi-stable</em>,
+          <idx><h>point critique semi-stable</h></idx>
+      si une des deux flèches pointe vers le point critique.
+      </fn>.
+    </p>
+    <p>
+      <image width="73%" source="2-2-ph-class"/>
+    </p>
+    <p>
+      Puisqu'un modèle mathématique est généralement une version approximative de la réalité, la présence de points critiques instables peut donner du fil à retordre.
+    </p>
+    <p>
+      Considérons une équation logistique avec un terme pour la récolte<idx><h>équation logistique</h><h>avec récolte</h></idx>.
+          <idx><h>récolte</h></idx>
+      Supposons que des extraterrestres adorent déguster des êtres humains.
+      Ils entretiennent une planète où ils gardent des humains et les récoltent à
+      un taux de <m>h</m> millions d'humains par année.
+      Dénotons par <m>x</m> le nombre d'humains en millions sur la planète et par <m>t</m> le temps en années.
+      Soit <m>M</m> la capacité
+      totale en humains sur la planète en l'absence de récolte.
+      Le nombre <m>k > 0</m> est une constante représentant le taux de reproduction des humains.
+      Notre équation devient :
+      <me>
+        \frac{dx}{dt} = kx(M-x) - h
+      </me>.
+    </p>
+    <p>
+      On développe le côté
+      droit et on le met égal à
+      zéro afin de trouver les points critiques :
+      <me>
+        kx(M-x) - h = -kx^2+kMx - h  = 0
+      </me>.
+    </p>
+    <p>
+      En résolvant pour les points critiques,
+      qu'on dénotera par <m>A</m> et <m>B</m>, on obtient :
+      <me>
+        A = \frac{kM + \sqrt{{(kM)}^2 - 4hk}}{2k}, \qquad B = \frac{kM - \sqrt{{(kM)}^2 - 4hk}}{2k}
+      </me>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Tracez le diagramme de phase pour quelques cas.
+          Notez que les cas possibles sont :
+          <m>A > B</m>, ou <m>A=B</m>,
+          ou alors <m>A</m> et <m>B</m> sont deux nombres complexes
+          (et donc aucune solution réelle).
+          Indice : fixez des valeurs simples pour <m>k</m> et <m>M</m> et, ensuite,
+          faites varier <m>h</m>, pour obtenir différents cas.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Par exemple, posons <m>M=8</m> et <m>k=0.1</m>.
+      Si <m>h=1</m>,
+      alors <m>A</m> et <m>B</m> sont distincts et positifs.
+      Le champ de directions est illustré à la
+      <xref ref="x2_2_harv1"></xref>.
+      Tant que la population initiale est au-dessus de <m>B</m>,
+      approximativement 1,55 million,
+      la population n'atteindra pas l'extinction.
+      En fait, elle tendra vers <m>A \approx 6{,}45</m> millions.
+      Si une catastrophe faisait chuter la population en dessous de <m>B</m>,
+      les humains disparaîtraient.
+    </p>
+    <figure xml:id="x2_2_harv1">
+      <caption>Le champ de directions et quelques solutions pour
+      <m>x' = 0{,}1\ x\ (8-x)-1</m>.</caption>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h1} -->
+      <image width="100%" source="2-2-logistic-h1"/>
+    </figure>
+    <figure xml:id="x2_2_harvc">  
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-hc} -->
+      <image width="100%" source="2-2-logistic-hc"/>
+      <caption>Le champ de directions et quelques solutions pour
+      <m>x' = 0{,}1\,x\,(8-x)-1.6</m>.</caption>
+    </figure>
+    <p>
+      Si <m>h = 1{,}6</m>, alors <m>A=B=4</m>.
+      Il y a un unique point critique, et il est instable.
+      Si la population initiale est au-dessus de 4 millions,
+      elle tendra vers 4 millions.
+      Mais en dessous de cette valeur,
+      elle tendra vera l'extinction.
+      Et si l'état d'équilibre est légèrement perturbé, on risque encore l'extinction.
+      Voir la <xref ref="x2_2_harvc"></xref>.
+    </p>
+    <p>
+      Enfin, si la récolte est de 2 millions par année, il n'y a aucun point critique.
+      La population tendra vers zéro,
+      quelle que soit sa quantité initiale.
+      Voir la <xref ref="x2_2_harv2"></xref>.
+    </p>
+    <figure xml:id="x2_2_harv2">
+      <caption>Le champ de directions et quelques solutions pour
+      <m>x' = 0{,}1\ x\ (8-x)-2</m>.</caption>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h2} -->
+      <image width="100%" source="2-2-logistic-h2"/>
+    </figure>
+  </introduction>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Considérons <m>x' = x^2</m>. <ol marker="a"><li> Tracez le diagramme de phase,
+          trouvez les points critiques et déterminez leur stabilité. </li>
+          <li> Tracez quelques solutions représentatives de l'équation. </li>
+          <li> Trouvez
+          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = -1</m>. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Considérons <m>x' = \sin x</m>. <ol marker="a"><li> Tracez le diagramme de phase pour <m>-4\pi \leq x \leq 4\pi</m>.
+          Sur cet intervalle,
+          trouvez les points critiques et déterminez leur stabilité. </li>
+          <li> Tracez quelques solutions représentatives de l'équation. </li>
+          <li> Trouvez
+          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = 1</m>. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que <m>f(x)</m> est positif pour <m>0 \lt x \lt 1</m>,
+          zéro pour <m>x=0</m> et <m>x=1</m>,
+          et négatif pour les autres valeurs de <m>x</m>. <ol marker="a"><li> Tracez le diagramme de phase pour <m>x' = f(x)</m>,
+          trouvez les points critiques et déterminez leur stabilité. </li>
+          <li> Tracez quelques solutions représentatives de l'équation. </li>
+          <li> Trouvez
+          <m>\displaystyle \lim_{t\to \infty} x(t)</m> pour la solution avec condition initiale <m>x(0) = 0.5</m>. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Commençaons avec l'équation logistique <m>\frac{dx}{dt} = kx(M-x)</m>.
+          Nous allons modifier la récolte comme suit.
+          La quantité cultivée sera proportionnelle à la population.
+          Autrement dit, on récolte <m>hx</m> par unité
+          de temps pour un <m>h > 0</m> donné. (C'est analogue à
+          l'exemple vu plus haut mais avec un terme <m>hx</m> au lieu de <m>h</m>.) <ol marker="a"><li> Trouvez l'équation différentielle modélisant cette situation. </li>
+          <li> Montrez que si <m>kM > h</m>,
+          alors c'est toujours une équation logistique. </li>
+          <li> Qu'arrive-t-il lorsque <m>kM \lt h</m>? </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Une maladie contagieuse se répand dans une population.
+          Soit <m>x</m> le nombre de personnes infectées,
+          et <m>S</m> la constante donnant le nombre de personnes susceptibles d'être infectées.
+          Le taux d'infection <m>\frac{dx}{dt}</m> est propostionnelle au nombre de personnes infectées,
+          <m>x</m>,
+          multiplié
+          par le nombre de personnes non-infectées mas susceptibles de l'être,
+          <m>S-x</m>. <ol marker="a"><li> Trouvez l'équation différentielle modélisant cette situation. </li>
+          <li> En supposant que <m>x(0) > 0</m>,
+          c'est-à-dire que certaine spersonnes sont déjà
+          infectées au <m>t=0</m>,
+          trouvez <m>\displaystyle \lim_{t\to\infty} x(t)</m>. </li>
+          <li> Est-ce que la solution en b) correspond à votre intuition?
+          Pourquoi ou pourquoi pas? </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>x'=(x-1)(x-2)x^2</m>. <ol marker="a"><li> Esquissez le diagramme de phase et calculez les points critiques. </li>
+          <li> Classifiez les points critiques. </li>
+          <li> Si <m>x(0)=0{,}5</m>,
+          calculez <m>\displaystyle \lim_{t\to\infty} x(t)</m>. </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a) 0, 1, 2 sont des points critiques. b) <m>x=0</m> est instable (semi-stable),
+      <m>x=1</m> est stable, et <m>x=2</m> est instable. c) 1
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>x'=e^{-x}</m>. <ol marker="a"><li> Calculez et classifiez les points critiques. </li>
+          <li> Calculez
+          <m>\displaystyle \lim_{t\to\infty} x(t)</m> étant donnée une condition initiale arbitraire. </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a) Il n'y a pas de points critiques. b) <m>\infty</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons qu'une population de poissons dans un lac satisfait à
+          l'équation <m>\frac{dx}{dt} = kx(M-x)</m>.
+          Maintenant supposons que des poissons sont ajoutés à
+          un taux constant de <m>A</m> poissons par unité
+          de temps. <ol marker="a"><li> Trouvez l'équations différentielle pour <m>x</m>. </li>
+          <li> Quelle est la nouvelle population limite? </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)
+      <m>\frac{dx}{dt} = kx(M-x)+A</m> b) <m>\frac{kM + \sqrt{{(kM)}^2 + 4Ak}}{2k}</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons que <m>\frac{dx}{dt} = (x-\alpha)(x-\beta)</m>,
+          où <m>\alpha \lt \beta</m> sont deux nombres. <ol marker="a"><li> Calculez et classifiez les points critiques. </li></ol> Pour b), c), d),
+          calculez <m>\displaystyle \lim_{t\to\infty} x(t)</m> en vous basant sur le diagramme de phase. <ol marker="a"><li> <m>x(0) \lt \alpha</m>, </li>
+          <li>
+          <m>\alpha \lt x(0) \lt \beta</m>, </li>
+          <li> <m>\beta \lt x(0)</m>. </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a) <m>\alpha</m> est un point critique stable,
+      <m>\beta</m> est un point critique instable. b) <m>\alpha</m>,
+      c) <m>\alpha</m>, d) <m>\infty</m> ou n'existe pas .
+      </p>
+    </answer>
+    </exercise>
+  </exercises>
+</section>

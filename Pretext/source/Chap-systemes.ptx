@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="sys_chapter">
+  <title>Systèmes d'équations différentielles ordinaires</title>
+  <xi:include  href="Sec-intro-sys.ptx"/>
+  <xi:include  href="Sec-matrices-sys.ptx"/>
+  <xi:include  href="Sec-sys-lin-edo.ptx"/>
+  <xi:include  href="Sec-dec-vp.ptx"/>
+  <xi:include  href="Sec-sys-2-champs.ptx"/>
+</chapter>

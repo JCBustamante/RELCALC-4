@@ -1,0 +1,584 @@
+<section xml:id="exact_section">
+  <title>Équations exactes</title>
+  <introduction>
+    <p>
+      Les <em>équations exactes
+          <idx><h>équations exactes</h></idx>
+      </em> jouent un rôle important en physique et en génie,
+      puisqu'elles apparaissent souvent dans des contextes où il y a conservation d'une quantité, telle que l'énergie.
+      Dans le contexte d'une équation différentielle ordinaire (EDO) du premier ordre,
+      une équation exacte est associée à une fonction à
+      deux variables, appelée une
+      <em>fonction potentielle
+          <idx><h>fonction potentielle</h></idx>
+      </em>.
+      Intuitivement, on peut penser à
+      l'énergie potentielle ou alors au potentiel électrique.
+    </p>
+    <p>
+      Pour expliquer comment résoudre une équation exacte,
+      on va remonter à
+      la source du problème.
+      Supposons donc que nous avons a une fonction potentielle <m>F(x , y)</m>
+      et voyons comment émerge l'équation exacte associée.
+    </p>
+    <p>
+      Pour fixer les idées, considérons l'exemple suivant :
+      <me>
+        F(x,y) = x^2+y^2
+      </me>.
+    </p>
+    <figure xml:id="exact_circlesfig">
+      <caption>Solutions pour <m>F(x,y) = x^2+y^2 = C</m> pour quelques valeurs de <m>C</m>.</caption>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{circlesfig} -->
+      <image width="100%" source="circlesfig"/>
+    </figure>
+    <p>
+      Les lieux d'énergie constante,
+      c'est-à-dire les courbes où l'énergie est conservée, sont les courbes d'équation <m>F(x,y) = C</m>,
+      où <m>C</m> est une constante.
+      Dans notre exemple,
+      ce sont les cercles d'équation <m>x^2+y^2=C</m>.
+      Voir la <xref ref="exact_circlesfig"></xref>.
+    </p>
+    <p>
+      Prenons la <em>dérivée totale<idx><h>dérivée totale</h></idx>
+      </em> de <m>F</m> :
+      <me>
+        dF = \frac{\partial F}{\partial x} dx + \frac{\partial F}{\partial y} dy
+      </me>.
+    </p>
+    <p>
+      Pour la suite, nous utiliserons la notation simplifiée
+      <m>F_x = \frac{\partial F}{\partial x}</m> et <m>F_y = \frac{\partial F}{\partial y}</m>.
+      Dans notre exemple :
+      <me>
+        dF = 2x \, dx + 2y \, dy
+      </me>.
+    </p>
+    <p>
+      En prenant la dérivée totale de chaque côté
+      de l'équation <m>F(x,y) = C</m>,
+      on obtient une équation différentielle, <m>dF = 0</m>.
+      Cette équation s'écrit de la manière suivante :
+      <men xml:id="eq_exact">
+        M \, dx + N \, dy = 0 \qquad \text{ ou }  \qquad  M + N \, \frac{dy}{dx} = 0
+      </men>,
+      où <m>M=F_x</m> et où <m>N=F_y</m>.
+      Une équation comme<nbsp/><xref ref="eq_exact"/> est dite <em>exacte</em>
+      lorsqu'elle correspond à
+      <m>dF = 0</m>, pour une fonction potentielle <m>F</m>;
+      autrement dit,
+      lorsqu'on peut trouver une fonction potentielle <m>F</m> telle que <m>F_x=M</m> et <m>F_y=N</m>.
+      Dans notre exemple, nous obtenons :
+      <me>
+        2x \, dx + 2y \, dy = 0 \qquad   \text{ ou }  \qquad  2x + 2y \, \frac{dy}{dx} = 0
+      </me>.
+    </p>
+    <p>
+      L'équation est exacte puisqu'elle a été
+      obtenue en dérivant l'équation <m>x^2+y^2=C</m>.
+    </p>
+    <p>
+      Parfois, on voudra écrire <m>y</m> comme une fonction de <m>x</m>.
+      Dans notre exemple :
+      <me>
+        y = \pm \sqrt{C^2-x^2}
+      </me>.
+    </p>
+    <p>
+      Avant de poursuivre le problème de la résolution d'une équation exacte,
+      parlons de son interprétation, à
+      l'aide d'un peu de calcul vectoriel.
+      En général,
+      l'équation<nbsp/><xref ref="eq_exact"/> nous donne un vecteur <m>\vec{v} = (M,N)</m>,
+      en fait un <em>champ de vecteurs
+          <idx><h>champ de vecteurs</h></idx>
+      </em>, puisque <m>M</m> et <m>N</m> sont des fonctions de <m>(x,y)</m>.
+      Dans le cas d'une équation exacte,
+      on a une fonction potentielle <m>F(x,y)</m> telle que :
+      <me>
+        \vec{v} = \left( \frac{\partial F}{\partial x} ,\frac{\partial F}{\partial y} \right)
+      </me>.
+    </p>
+    <p>
+      Ainsi, le champ de vecteurs <m>\vec{v}</m> est <em>conservatif
+          <idx><h>conservatif</h></idx>
+      </em>, ce qui implique des conséquences fondamentales pour le travail en présence d'une force.
+      En effet, soit <m>\gamma</m> une trajectoire dans le plan
+      (une courbe paramétrée)
+      débutant au point <m>(x_1,y_1)</m> et finissant au point <m>(x_2,y_2)</m>.
+      Si l'on pense à <m>\vec{v}</m> comme à
+      un champ de force, alors le travail effectué
+      par cette force le long de la trajectoire <m>\gamma</m> est :
+      <me>
+        \int_\gamma \vec{v}(\vec{r}) \cdot d\vec{r} = \int_\gamma M \, dx + N \, dy = F(x_2,y_2) - F(x_1,y_1)
+      </me>.
+    </p>
+    <p>
+      Autrement dit, lorsque le champ est conservatif,
+      le travail dépend seulement de la valeur de la fonction potentielle aux extrémités de la trajectoire.
+      Si, par exemple, <m>F</m> est le potentiel gravitationnel,
+      le gradient de <m>F</m>, <m>\vec{v}</m>,
+      est la force gravitationnelle.
+      Dire que c'est un champ conservatif,
+      c'est dire que le travail requis pour hisser une boîte du rez-de-chaussée au premier étage dépend seulement de la hauteur de l'étage,
+      et non du chemin qu'on prend pour s'y rendre.
+      En particulier, aucun travail n'est effectué
+      lorsque la trajectoire suit une courbe <m>F(x,y) = C</m>.
+    </p>
+    <p>
+      En résumé : une équation différentielle exacte correspond à
+      un champ de vecteurs conservatif,
+      et la solution d'une telle équation est une fonction potentielle de ce champ de vecteurs.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Résoudre des équations exactes</title>
+    <p>
+      Vous vous demandez peut-être :
+      où avons-nous résolu une équation différentielle?
+      C'est que, dans les applications,
+      on connaît <m>M</m> et <m>N</m>,
+      qui sont les dérivées partielles de <m>F</m>,
+      mais <m>F</m> elle-même est inconnue.
+      Si, par exemple,
+      on commence avec <m>2x + 2y \frac{dy}{dx} = 0</m> ou encore avec
+      <me>
+        x + y \frac{dy}{dx} = 0
+      </me>,
+      il faut trouver une fonction potentielle <m>F</m> associée à cette équation.
+      Il y a un nombre infini de <m>F</m> possibles,
+      puisque la fonction potentielle est seulement définie à
+      une constante près.
+      Une fois trouvée <m>F</m>,
+      la solution implicite à
+      l'équation différentielle sera :
+      <me>
+        F\bigl(x,y(x)\bigr) = C
+      </me>.
+    </p>
+    <p>
+      Voyons la démarche dans un exemple.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Trouvons la solution générale pour <m>2x + 2y \frac{dy}{dx} = 0</m>
+          (nous ferons semblant que nous avons oublié ce qu'est <m>F</m>).
+        </p>
+        <p>
+          Si l'on sait déjà que l'équation est exacte,
+          on cherche une fonction potentielle <m>F</m> pour l'équation.
+          On a que <m>M = 2x</m> et <m>N=2y</m>.
+          Donc, si <m>F</m> existe,
+          on a nécessairement que <m>F_x (x,y) = 2x</m>.
+          On intègre par rapport à
+          <m>x</m> et l'on obtient :
+          <men xml:id="eq_exact_fint">
+            F(x,y) = x^2 + A(y)
+          </men>,
+          où <m>A(y)</m> est une fonction arbitraire.
+          La fonction <m>A</m> est la <em>constante d'intégration</em> :
+          elle est seulement constante par rapport à
+          <m>x</m>, mais elle peut dépendre de <m>y</m>.
+          Ensuite, on dérive <xref ref="eq_exact_fint"/> par rapport à
+          <m>y</m> et l'on met le résultat égal à
+          <m>N</m>, autrement dit <m>F_y</m> :
+          <me>
+            2y = F_y (x,y) = A'(y)
+          </me>.
+        </p>
+        <p>
+          En intégrant, on trouve <m>A(y) = y^2</m>.
+          Il n'est pas nécessaire ici d'ajouter une constante d'intégration
+          (voir l'exercice).
+          Nous avons donc trouvé <m>F(x,y) = x^2+y^2</m>.
+          Il ne reste qu'à résoudre pour <m>y</m>,
+          en fonction de <m>x</m>, dans l'équation suivante :
+          <me>
+            F\bigl(x,y(x)\bigr) = C
+          </me>,
+          où <m>C</m> est une constante arbitraire.
+          Dans notre cas,
+          nous obtenons <m>y = \pm \sqrt{C^2-x^2}</m>, comme plus haut.
+        </p>
+      </statement>
+    </example>
+    <exercise xml:id="exer_exact">
+      <statement>
+        <p>
+          Pourquoi n'a-t-on pas besoin d'ajouter une constante d'intégration lorsqu'on intègre <m>A'(y) = 2y</m>?
+          Ajoutez une constante d'intégration,
+          disons <em>3</em>, et observez la fonction <m>F</m> obtenue.
+          Comparez à la réponse plus haut.
+          Pourquoi la différence n'est-elle pas importante?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Lorsqu'on sait que l'équation différentielle est exacte,
+      la démarche est donc :
+      <ol marker="i">
+        <li>
+          <p>
+            Intégrer <m>F_x = M</m> par rapport à
+            <m>x</m> pour obtenir <m>F(x, y) = \text{ quelque chose } + A(y)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dériver cette expression pour <m>F</m> par rapport à
+            <m>y</m> et mettre le résultat égal à
+            <m>N</m>, afin de déterminer <m>A(y)</m> en intégrant.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Autrement, on peut d'abord dériver par rapport à
+      <m>y</m> et ensuite par rapport à <m>x</m>.
+      Voyons un autre exemple.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Considérons <m>2x+y + xy \frac{dy}{dx} = 0</m>.
+        </p>
+        <p>
+          Donc, <m>M = 2x+y</m> et <m>N=xy</m>.
+          On applique la démarche.
+          Si l'on suppose qu'une fonction potentielle <m>F</m> existe pour l'équation,
+          alors <m>F_x (x,y) = 2x+y</m>.
+          On intègre :
+          <me>
+            F(x,y) = x^2 + xy + A(y)
+          </me>,
+          où <m>A(y)</m> est une fonction quelconque.
+          On dérive par rapport à
+          <m>y</m> et l'on met le résultat égal à <m>N</m> :
+          <me>
+            N = xy = F_y (x,y) = x+A'(y)
+          </me>.
+        </p>
+        <p>
+          On a obtenu une équation impossible à résoudre.
+          En effet, on ne peut pas écrire <m>xy</m> comme <m>x</m> plus une fonction de <m>y</m>.
+          Conclusion : l'équation différentielle n'admet pas de fonction potentielle et elle n'est donc pas exacte.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Pouvait-on arriver à cette conclusion sans faire tous ces calculs?
+      En fait, oui.
+      Supposons en effet que <m>M = F_x</m> et que <m>N = F_y</m>.
+      Si les dérivées secondes sont continues,
+      on a forcément que les dérivées mixtes s'interchangent :
+      <me>
+        \frac{\partial M}{\partial y} =   \frac{\partial^2 F}{\partial y \partial x} =  \frac{\partial^2 F}{\partial x \partial y} =   \frac{\partial N}{\partial x}
+      </me>.
+    </p>
+    <p>
+      Ceci nous donne donc une condition que nous pouvons vérifier,
+      sans recourir à
+      des calculs d'intégrales. À l'inverse,
+      on a le lemme de Poincaré<fn>
+      Nommé ainsi en l'honneur de
+      <url href="https://fr.wikipedia.org/wiki/Henri_Poincar%C3%A9">Jules Henri Poincaré</url>
+      (1854-1912).
+      </fn>.
+    </p>
+    <theorem>
+      <title>Poincaré</title>
+      <statement>
+        <p>
+          Si <m>M</m> et <m>N</m> sont des fonctions continûment différentiables de <m>(x, y)</m> et que <m>\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}</m>,
+          alors il existe une fonction <m>F(x,y)</m>, définie localement,
+          telle que <m>M = \frac{\partial F}{\partial x}</m> et <m>N = \frac{\partial F}{\partial y}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Le théorème affirme l'existence d'une fonction <m>F</m> définie localement,
+      ce qui veut dire,
+      grosso modo,
+      qu'on n'aura pas une fonction définie partout,
+      mais possiblement définie seulement dans une petite région contenant le point initial.
+    </p>
+    <p>
+      Retournons à notre exemple précédent :
+      <m>M = 2x + y</m> et <m>N = xy</m>.
+      On note que <m>M_y = 1</m> et que <m>N_x = y</m>.
+      Les deux expressions ne sont pas égales,
+      et donc l'équation différentielle n'est pas exacte.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Résolvons
+          <me>
+            \frac{dy}{dx} = \frac{-2x-y}{x-1} ,  \qquad y(0) = 1
+          </me>.
+        </p>
+        <p>
+          D'abord, on écrit l'équation sous la forme suivante :
+          <me>
+            (2x+y) + (x-1)\frac{dy}{dx} = 0
+          </me>,
+          donc <m>M = 2x+y</m> et <m>N = x-1</m>.
+          Alors :
+          <me>
+            M_y = 1 = N_x
+          </me>.
+        </p>
+        <p>
+          L'équation différentielle est donc exacte,
+          et nous procédons avec la démarche.
+          On intègre <m>M</m> par rapport à
+          <m>x</m> et l'on trouve :
+          <me>
+            F(x,y) = x^2+xy + A(y)
+          </me>.
+        </p>
+        <p>
+          On dérive par rapport à
+          <m>y</m> et l'on met le résultat égal à <m>N</m> :
+          <me>
+            x-1 = x + A'(y)
+          </me>.
+        </p>
+        <p>
+          Donc, <m>A'(y) = -1</m>, et l'on peut prendre <m>A(y) = -y</m>.
+          Ceci donne <m>F(x, y) = x^2+xy-y</m>.
+          Nous obtenons ainsi la solution générale à
+          l'équation, sous forme implicite :
+          <me>
+            x^2+xy-y = C
+          </me>.
+        </p>
+        <p>
+          On calcule maintenant la valeur de <m>C</m> :
+          puisque <m>y(0)=1</m>, on a que <m>F(0,1) = C</m>.
+          Donc, <m>0^2+0\times 1 - 1 = C</m>, et <m>C=-1</m>.
+          En dernier lieu, on isole le <m>y</m> dans l'expression
+          (puisque c'est possible)
+          pour obtenir une solution explicite :
+          <me>
+            y = \frac{-x^2-1}{x-1}
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Résolvons :
+          <me>
+            -\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0,   \qquad y(1) = 2
+          </me>.
+        </p>
+        <p>
+          D'abord, on laisse en exercice la vérification que <m>M_y = N_x</m>.
+        </p>
+        <p>
+          La condition d'exactitude est vérifiée;
+          pourtant, le champ de vecteurs <m>(M,N)</m> n'est pas conservatif,
+          lorsque considéré
+          sur tout le plan moins l'origine.
+          Le problème est en fait à
+          l'origine <m>(0,0)</m>,
+          point où le champ de vecteurs n'est pas défini.
+          Prenons, par exemple, une courbe <m>\gamma</m> qui encercle l'origine,
+          disons qu'elle part du point <m>(1,0)</m> et y retourne par un chemin dans le sens inverse des aiguilles d'une montre.
+          Si une fonction potentielle <m>F</m> existe, on obtiendrait alors :
+          <me>
+            0 = F(1,0) - F(1,0) = \int_\gamma F_x \, dx + F_y \, dy = \int_\gamma \frac{-y}{x^2+y^2} \, dx + \frac{x}{x^2+y^2} \, dy = 2\pi
+          </me>.
+        </p>
+        <p>
+          Bien entendu, c'est impossible
+          (le calcul de l'intégrale de ligne est laissé en exercice;
+          vous pouvez aussi consulter votre manuel de calcul à
+          plusieurs variables).
+          Ainsi, cette équation différentielle n'admet pas de fonction potentielle définie sur tout le plan moins <m>(0,0)</m>.
+        </p>
+        <p>
+          Ceci ne contredit pas le lemme de Poincaré. Notez que l'énoncé
+          du théorème garantit seulement l'existence d'une fonction potentielle définie localement,
+          c'est-à-dire dans un voisinage du point de départ.
+          Dans notre exemple, puisque <m>y(1) = 2</m>,
+          le point de départ est <m>(1,2)</m>.
+          En considérant le cas où <m>x > 0</m> et en intégrant <m>M</m> par rapport à
+          <m>x</m>, ou <m>N</m> par rapport à <m>y</m>, on trouve :
+          <me>
+            F(x,y) = \operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr)
+          </me>.
+        </p>
+        <p>
+          La solution implicite est <m>\operatorname{arctan} \bigl( \nicefrac{y}{x} \bigr) = C</m>.
+          En isolant <m>y</m>, on obtient <m>y = \tan(C) x</m>.
+          Autrement dit, la solution est une droite.
+          Poser <m>y(1) = 2</m> nous donne <m>\tan(C) = 2</m>,
+          et donc <m>y= 2x</m> est la solution désirée.
+          Voir la <xref ref="exact_y2x"></xref>,
+          en notant que la solution est seulement définie pour <m>x > 0</m>.
+        </p>
+        <figure xml:id="exact_y2x">
+          <caption>Solution pour
+          <m>-\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0</m>, <m>y(1) = 2</m>,
+          avec le point initial indiqué.</caption>
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{exact-y2x} -->
+          <image width="100%" source="exact-y2x"/>
+        </figure>
+      </statement>
+    </example>
+    <example xml:id="exact_exampleabove">
+      <statement>
+        <p>
+          Résolvons :
+          <me>
+            x^2+y^2 + 2y(x+1) \frac{dy}{dx} = 0
+          </me>.
+        </p>
+        <p>
+          On vérifie d'abord que l'équation est exacte
+          (exercice).
+          On pose <m>M= x^2+y^2</m> et <m>N=2y(x+1)</m>.
+          On suit la démarche :
+          <me>
+            F(x, y) = \frac{1}{3}x^3 + xy^2 + A(y)
+          </me>,
+          et donc
+          <me>
+            2y(x+1) = 2xy + A'(y)
+          </me>.
+        </p>
+        <p>
+          Par conséquent, <m>A'(y) = 2y</m> ou <m>A(y) = y^2</m>,
+          et <m>F(x,y) = \frac{1}{3}x^3 + xy^2 + y^2</m>.
+          Maintenant, on tente d'isoler le <m>y</m> dans l'expression <m>F(x,y) = C</m>.
+          On peut mettre <m>y^2</m> en évidence et ensuite prendre la racine carrée :
+          <me>
+            y^2 = \frac{C-(\nicefrac{1}{3})x^3}{x+1},\qquad \text{ donc }  \qquad   y = \pm \sqrt{\frac{C-(\nicefrac{1}{3})x^3}{x+1}}
+          </me>.
+        </p>
+        <p>
+          Observons que lorsque <m>x=-1</m>,
+          le coefficient de <m>\frac{dy}{dx}</m> s'annule.
+          On voit aussi que la solution obtenue n'est pas définie en <m>x=-1</m>.
+          On pourrait essayer de résoudre pour <m>x</m> en fonction de <m>y</m> dans la solution implicite <m>\frac{1}{3}x^3 + xy^2 + y^2 = C</m>.
+          La solution dans ce cas n'est pas très jolie;
+          il vaut mieux laisser la solution sous forme implicite.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez les équations exactes suivantes,
+          en laissant la solution sous forme implicite. <ol marker="a"><li>
+          <m>(2 xy + x^2) \, dx + (x^2+y^2+1) \, dy = 0</m> </li>
+          <li> <m>x^5 + y^5 \frac{dy}{dx} = 0</m> </li>
+          <li>
+          <m>e^x+y^3 + 3xy^2 \frac{dy}{dx} = 0</m> </li>
+          <li> <m>(x+y)\cos(x)+\sin(x) + \sin(x)y' = 0</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons qu'on a une équation différentielle de la forme suivante :
+          <m>f(x) + g(y) \frac{dy}{dx} = 0</m>. <ol marker="a"><li> Montrez que l'équation est exacte. </li>
+          <li> Trouvez une expression pour le potentiel en fonction de <m>f</m> et <m>g</m>. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons qu'on a l'équation suivante :
+          <m>f(x) \, dx - dy = 0</m>. <ol marker="a"><li> L'équation est-elle exacte? </li>
+          <li> Exprimez la solution générale à
+          l'aide d'une intégrale définie. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une fonction potentielle <m>F(x,y)</m> pour l'équation exacte
+          <m>\frac{1+xy}{x}\, dx + \bigl(\nicefrac{1}{y} + x \bigr) \, dy = 0</m> de deux manières différentes. <ol marker="a"><li> Intégrez <m>M</m> par rapport à <m>x</m>,
+          dérivez par rapport à
+          <m>y</m> et mettez le résultat égal à
+          <m>N</m>. </li>
+          <li> Intégrez <m>N</m> par rapport à
+          <m>y</m>, dérivez par rapport à
+          <m>x</m> et mettez le résultat égal à
+          <m>M</m>. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Une fonction <m>u(x,y)</m> est appelée une <em>fonction harmonique
+              <idx><h>fonction harmonique</h></idx>
+          </em> si <m>u_{xx} + u_{yy} = 0</m>. <ol marker="a"><li> Montrez que
+          <m>-u_y \, dx + u_x \, dy = 0</m> est une équation exacte.
+          Par conséquent, il existe
+          (au moins localement)
+          une fonction appelée la <em>conjuguée harmonique<idx><h>conjuguée harmonique</h></idx>
+          </em>, <m>v(x,y)</m>, telle que <m>v_x = -u_y</m> et
+          <m>v_y = u_x</m>. </li></ol> Montrez que les <m>u</m> suivantes sont harmoniques et trouvez leur conjuguée harmonique <m>v</m> : <ol marker="a"><li> <m>u = 2xy</m> </li>
+          <li>
+          <m>u = e^x \cos y</m> </li>
+          <li> <m>u = x^3-3xy^2</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez les équations exactes suivantes,
+          en laissant la solution sous forme implicite : <ol marker="a"><li>
+          <m>\cos(x)+ye^{xy} + xe^{xy} y' = 0</m> </li>
+          <li> <m>(2x+y)\, dx + (x-4y) \, dy = 0</m> </li>
+          <li>
+          <m>e^x + e^y \frac{dy}{dx} = 0</m> </li>
+          <li> <m>(3x^2+3y)\,dx + (3y^2+3x)\, dy = 0</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)
+      <m>e^{xy}+\sin(x)=C</m> b) <m>x^2+xy-2y^2=C</m> c)
+      <m>e^x+e^y=C</m> d) <m>x^3 + 3xy+ y^3 = C</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <ol marker="a"><li> Montrez que toute équation séparable
+          <m>y' = f(x)g(y)</m> peut être écrite sous forme exacte,
+          et vérifiez qu'elle est bien exacte. </li>
+          <li> Utilisez ceci pour écrire <m>y' = xy</m> comme une équation exacte,
+          résolvez l'équation et vérifiez que la solution obtenue est la même que dans l'<xref ref="example_yprimeisxy"></xref>. </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a) L'équation est <m>- f(x) \, dx + \frac{1}{g(y)} \, dy</m>,
+      elle est exacte puisque <m>M = -f(x)</m>,
+      <m>N = \frac{1}{g(y)}</m>,
+      donc <m>M_y = 0 = N_x</m>. b) <m>-x \, dx + \frac{1}{y} \, dy = 0</m>,
+      ce qui donne la fonction potentielle <m>F(x,y) = -\frac{x^2}{2} + \ln \lvert y \rvert</m>,
+      on résout <m>F(x,y) = C</m> et la solution obtenue est la même que dans l'exemple.
+      </p>
+    </answer>
+    </exercise>
+  </exercises>
+</section>

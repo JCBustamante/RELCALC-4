@@ -1,0 +1,677 @@
+<section xml:id="introde_section">
+  <title>Introduction aux équations différentielles</title>
+  <subsection>
+    <title>Équations différentielles</title>
+    <p>
+      Les lois de la physique sont généralement exprimées sous forme d'équations différentielles.
+      Ainsi, toute discipline de science ou de génie utilise les équations différentielles, à
+      un niveau plus ou moins sophistiqué. Comprendre les équations différentielles est essentiel à
+      la compréhension de presque tout ce que vous apprendrez dans vos cours de science ou de génie.
+      On peut penser aux mathématiques comme au langage de la science,
+      et les équations différentielles forment une partie importante de ce langage.
+    </p>
+    <p>
+      Vous avez déjà vu plusieurs équations différentielles,
+      peut-être sans savoir que c'en était.
+      Et vous avez même résolu des équations différentielles dans vos cours de calcul.
+      Voyons un exemple que vous n'avez peut-être pas vu :
+      <men xml:id="eq1">
+        \frac{dx}{dt} + x = 2 \cos t
+      </men>.
+    </p>
+    <p>
+      Ici, <m>x</m> est la <em>variable dépendante<idx><h>variable dépendante</h></idx>
+      </em>, et <m>t</m> est la <em>variable indépendante<idx><h>variable indépendante</h></idx>
+      </em>.
+      L'équation <xref ref="eq1"/> est un exemple de base d'une
+      <em>équation différentielle<idx><h>équation différentielle</h></idx>
+      </em>.
+      Plus précisément,
+      c'est un exemple d'<em>équation différentielle du premier ordre<idx><h>équation différentielle du premier ordre</h></idx>
+      </em>, puisqu'elle n'implique que la première dérivée de la variable dépendante <m>x</m>.
+      Cette équation vient de la loi de refroidissement de Newton,
+      lorsque la température ambiante oscille en fonction du temps.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Solutions d'équations différentielles</title>
+    <p>
+      Quand on résout une équation différentielle comme <xref ref="eq1"/>,
+      l'inconnue est une variable <m>x</m>,
+      qui elle-même dépend d'une variable <m>t</m>,
+      c'est-à-dire qu'on veut trouver un <m>x</m>,
+      dépendant de <m>t</m>, tel que,
+      lorsqu'on substitue <m>x</m>,
+      <m>t</m> et <m>\frac{dx}{dt}</m> dans l'équation <xref ref="eq1"/>, le côté
+      gauche est égal au côté
+      droit, et donc l'égalité est satisfaite.
+      C'est le même principe que pour une équation ordinaire (algébrique) impliquant <m>x</m> et <m>t</m>.
+      Nous affirmons que l'expression suivante est une <em>solution
+          <idx><h>solution</h></idx>
+      </em> :
+      <me>
+        x = x(t) = \cos t + \sin t
+      </me>.
+    </p>
+    <p>
+      Comment le vérifier?
+      Il suffit de substituer <m>x</m> dans l'équation <xref ref="eq1"/> et de vérifier que l'égalité
+      est bel et bien établie.
+      Nous devons d'abord calculer <m>\frac{dx}{dt}</m>.
+      On trouve que <m>\frac{dx}{dt} = -\sin t + \cos t</m>.
+      Maintenant, calculons le côté
+      gauche de <xref ref="eq1"/> :
+      <me>
+        \frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t)}_{\frac{dx}{dt}} + \underbrace{(\cos t + \sin t)}_{x} = 2\cos t
+      </me>.
+    </p>
+    <p>
+      C'est bien ce que nous voulons :
+      nous obtenons exactement le côté
+      droit de l'équation.
+      Mais ce n'est pas tout.
+      Nous affirmons que <m>x = \cos t + \sin t + e^{-t}</m> est aussi une solution.
+      Vérifions :
+      <me>
+        \frac{dx}{dt} = -\sin t + \cos t - e^{-t}
+      </me>.
+    </p>
+    <p>
+      On remplace ceci dans <xref ref="eq1"/> :
+      <me>
+        \frac{dx}{dt} + x = \underbrace{(-\sin t + \cos t - e^{-t})}_{\frac{dx}{dt}} + \underbrace{(\cos t + \sin t + e^{-t})}_{x} = 2\cos t
+      </me>.
+    </p>
+    <p>
+      Il s'agit bien d'une solution.
+    </p>
+    <p>
+      Ainsi, plusieurs solutions sont possibles.
+      Pour cette équation en particulier,
+      toutes les solutions peuvent s'écrire sous la forme
+      <me>
+        x = \cos t + \sin t + C e^{-t}
+      </me>
+      pour une constante <m>C</m>.
+      Différentes constantes <m>C</m> donneront des solutions différentes,
+      donc il y a vraiment un nombre infini de solutions possibles.
+      Voir <xref ref="intro_plotsfig">la figure</xref>
+      pour le graphe de quelques solutions.
+      Nous verrons un peu plus tard comment trouver ces solutions de manière générale.
+    </p>
+    <!--
+    <figure xml:id="intro_plotsfig">
+      <caption>Quelques solutions de <m>\frac{dx}{dt} + x = 2 \cos t</m>.</caption>
+      {3.25in}
+      \diffyincludegraphics{width=3in}{width=4.5in}{intro-plots-alt}
+    </figure>
+    -->
+    <figure xml:id="intro_plotsfig">
+    <caption>Quelques courbes solution de l'<xref ref="eq1">équation</xref>.
+    </caption>
+    <image width = "80%" source  = "intro-plots-alt"/>
+    </figure>
+
+
+
+    <p>
+      La résolution d'une équation différentielle peut être très ardue.
+      Il n'y a pas une méthode générale pour les résoudre toutes.
+      La plupart du temps,
+      nous verrons comment obtenir des formules exactes pour résoudre certaines équations différentielles,
+      mais parfois nous n'obtiendrons que des solutions approximatives.
+      De plus, nous passerons un peu de temps à
+      comprendre certaines équations, sans les résoudre.
+    </p>
+    <p>
+      La majeure partie de ce manuel est dédiée aux
+      <em>équations différentielles ordinaires<idx><h>ordinary differential equation</h></idx>
+      </em>, ou EDO,
+          <idx><h>ODE</h></idx>
+      c'est-à-dire aux équations ayant une seule variable indépendante,
+      où les dérivées se prennent en termes de cette unique variable.
+      Lorsqu'il y a plusieurs variables indépendantes,
+      on obtient des <em>équations aux dérivées partielles<idx><h>partial differential equation</h></idx>
+      </em>, ou EDP.
+          <idx><h>PDE</h></idx>
+    </p>
+    <p>
+      Même pour les EDO, qui sont très bien comprises,
+      il ne s'agit pas simplement de tourner une manivelle pour obtenir une réponse.
+      C'est important de comprendre comment de telles solutions sont trouvées.
+      Même si, dans la vraie vie, vous laisserez la plupart des calculs à
+      des ordinateurs, vous devez comprendre ce qu'ils font.
+      Il est parfois nécessaire de simplifier ou de transformer votre équation pour que la machine la comprenne et la résolve.
+      Il vous faudra peut-être même ajouter ou modifier des hypothèses dans votre modèle pour ce faire.
+    </p>
+    <p>
+      Pour réussir en génie ou en science, vous aurez à
+      résoudre des problèmes dans votre travail que vous n'aurez jamais vus auparavant,
+      d'où l'importance d'apprendre des techniques de résolution de problèmes,
+      afin d'appliquer ces techniques aux nouveaux problèmes.
+    </p>
+  </subsection>
+  <subsection>
+    <title>En pratique</title>
+    <figure>
+      <image>
+<latex-image>
+\begin{tikzpicture}\draw (0,0) node {Situation-probl\`eme};
+\draw[->] (-0.1,-0.5) -- (-4,-3.8) node[left,pos=0.5] {abstraire};
+\draw (-5,-4) node {Mod\`ele math\'ematique} ;
+\draw[->] (-2.5,-4) -- (2.5,-4) node [above, pos=0.5] {r\'esoudre};
+\draw (5,-4)  node {Solution math\'ematique};
+\draw[->] (4,-3.8) -- (0.1,-0.5)  node[right,pos=0.5] {interpr\'eter};
+\end{tikzpicture}
+</latex-image>
+      </image>
+    </figure>
+    <p>
+      Comment utilise-t-on les équations différentielles en science et en génie?
+      On commence avec une <em>situation-problème
+          <idx><h>situation-problème</h></idx>
+      </em> qu'on veut comprendre. À l'aide d'hypothèses supplémentaires pour simplifier le problème,
+      on crée un <em>modèle mathématique<idx><h>modèle mathématique</h></idx>
+      </em>.
+      Autrement dit,
+      on traduit la situation en équations différentielles.
+      Ensuite, on utilise les mathématiques afin d'obtenir une
+      <em>solution mathématique<idx><h>solution mathématique</h></idx>
+      </em>.
+      Mais ce n'est pas fini.
+      Il faut encore interpréter les résultats :
+      qu'est-ce que la solution mathématique nous dit à
+      propos de la situation-problème de départ?
+    </p>
+    <p>
+      Pour ce qui est de formuler le modèle mathématique,
+      et d'interpréter les résultats,
+      vous ferez cela surtout dans vos cours de génie et de science.
+      Dans ce cours-ci,
+      nous nous concentrerons principalement sur l'analyse mathématique.
+      Parfois, nous travaillerons avec des exemples réalistes simples afin de développer notre intuition et de motiver les concepts que nous verrons.
+    </p>
+    <p>
+      Considérons ici un exemple.
+      Une des équations les plus fondamentales est le
+      <em>modèle de croissance exponentielle<idx><h>modèle de croissance exponentielle</h></idx>
+      </em>.
+      Dénotons une population de bactéries par la variable <m>P</m>
+      (plus précisément,
+      <m>P</m> dénote la quantité de population).
+      On suppose que l'environnement contient suffisamment de nutriments et d'espace.
+      Dans ce cas-là, le taux de croissance de la population de bactéries est proportionnel à
+      la population <mdash/> une population plus nombreuse croîtra plus rapidement.
+      Dénotons le temps (en secondes, disons)
+      par la variable <m>t</m>. Notre modèle est alors :
+      <me>
+        \frac{dP}{dt} = kP
+      </me>,
+      où <m>k > 0</m> est une constante.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Supposons qu'il y a 100 bactéries au temps 0 et 200 bactéries 10 secondes plus tard.
+          Combien aura-t-on de bactéries à
+          une minute (60 secondes) du début?
+        </p>
+        <p>
+          D'abord, nous devons résoudre l'équation différentielle.
+          Nous affirmons que la fonction suivante est une solution :
+          <me>
+            P(t) = C e^{kt}
+          </me>,
+          où <m>C</m> est une constante.
+          Vérifions ceci :
+          <me>
+            \frac{dP}{dt} = C k e^{kt} = k P
+          </me>.
+        </p>
+        <p>
+          Il s'agit donc bel et bien d'une solution.
+        </p>
+        <p>
+          Ensuite?
+          On ne connaît pas la valeur de <m>C</m>, ni de <m>k</m>.
+          Mais on sait ceci : <m>P(0) = 100</m> et <m>P(10) = 200</m>.
+          Substituons ces valeurs dans l'expression et regardons ce que nous obtenons :
+          <md>
+            <mrow>\amp  100 = P(0) = C e^{k0} = C ,</mrow>
+            <mrow>\amp  200 = P(10) = 100 \, e^{k10} </mrow>
+          </md>.
+        </p>
+        <p>
+          Par conséquent,
+          <m>2 = e^{10k}</m> ou <m>\frac{\ln 2}{10} = k \approx 0{,}069</m>.
+          Donc :
+          <me>
+            P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0{,}069 t}
+          </me>.
+        </p>
+        <p>
+          À une minute,
+          <m>t=60</m>, la population est <m>P(60) = 6400</m>.
+          Voir <xref ref="intro_plotbactfig">la figure</xref>.
+        </p>
+        <!--
+        <figure xml:id="intro_plotbactfig">
+          <caption>Croissance de bactéries en 60 secondes.</caption>
+          \diffyincludegraphics{width=3in}{width=4.5in}{intro-plotbact}
+        </figure>
+        -->
+
+        <figure width="60%" xml:id="intro_plotbactfig">
+          <caption>Croissance de la population de bactéries en fonction du temps.</caption>
+          <image source  = "intro-plotbact"/>
+        </figure>
+
+
+        <p>
+          Parlons maintenant de l'interprétation de ces résultats.
+          Doit-on penser qu'il y aura exactement 6400 bactéries à 60 secondes?
+          Bien sûr que non.
+          Nous avons fait des hypothèses simplificatrices qui ne seront pas exactement vraies,
+          mais approximativement vraies.
+          Si nos hypothèses sont raisonnables,
+          il y aura environ 6400 bactéries.
+          De plus, <m>P</m> devrait être un nombre entier,
+          puisqu'il compte une quantité de bactéries.
+          Pourtant, notre modèle admet des nombres comme <m>P(61) \approx 6859{,}35</m>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Habituellement,
+      la constante <m>k</m> dans <m>P' = kP</m> est connue, et l'on cherche à
+      résoudre l'équation différentielle pour différentes
+      <em>conditions initiales
+          <idx><h>initial condition</h></idx>
+      </em>.
+      Qu'est-ce que ça veut dire?
+      Prenons <m>k=1</m> pour simplifier les choses.
+      Supposons que nous voulons résoudre l'équation
+      <m>\frac{dP}{dt} = P</m> avec la condition <m>P(0) = 1000</m>
+      (la condition initiale).
+      Alors, la solution est (exercice) :
+      <me>
+        P(t) = 1000 \, e^t
+      </me>.
+    </p>
+    <p>
+      On appelle <m>P(t) = C e^t</m> <em>la solution générale<idx><h>solution générale</h></idx>
+      </em>, puisque toute solution de l'équation peut s'écrire sous cette forme pour un certain choix de la constante <m>C</m>.
+      La condition initiale sert à
+      déterminer <m>C</m>,
+      afin de trouver la <em>solution particulière<idx><h>solution particulière</h></idx>
+      </em>.
+    </p>
+  </subsection>
+  <subsection xml:id="subsection_fourfundamental">
+    <title>Quatre équations fondamentales</title>
+    <p>
+      Quelques équations apparaissent fréquemment,
+      et nous pouvons trouver utile de tout simplement apprendre par cœur leur solution
+      (nous les verrons aussi de manière plus formelle dans les chapitres suivants).
+      Appelons-les nos quatre équations fondamentales.
+          <idx><h>quatre équations fondamentales</h></idx>
+      Leurs solutions sont assez simples à
+      deviner en nous rappelant les propriétés des exponentielles,
+      de sinus et de cosinus.
+      Elles sont aussi plutôt simples à
+      vérifier, ce qu'on devrait toujours faire.
+      Comme ça, inutile de se demander si l'on s'est rappelé
+      correctement de la solution.
+    </p>
+    <p>
+      Voici notre première équation fondamentale :
+      <me>
+        \frac{dy}{dx} = k y
+      </me>,
+      où <m>k > 0</m> est une constante.
+      Ici, <m>y</m> est la variable dépendante, et <m>x</m>
+      la variable indépendante.
+      La solution générale de cette équation est :
+      <me>
+        y(x) = C e^{kx}
+      </me>.
+    </p>
+    <p>
+      Nous avons vu ceci dans l'exemple précédent de la croissance exponentielle,
+      même si les noms de variables ont changé.
+    </p>
+    <p>
+      La deuxième équation s'obtient en modifiant légèrement la première :
+      <me>
+        \frac{dy}{dx} = -k y
+      </me>,
+      où <m>k > 0</m> est une constante.
+      La solution générale de cette équation est :
+      <me>
+        y(x) = C e^{-kx}
+      </me>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>y</m> est bien une solution à cette équation.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Notre troisième équation fondamentale est une
+      <em>équation différentielle du second ordre<idx><h>équation différentielle du second ordre</h></idx>
+      </em> :
+      <me>
+        \frac{d^2y}{{dx}^2} = -k^2 y
+      </me>,
+      où <m>k > 0</m> est une constante.
+      La solution générale de cette équation est :
+      <me>
+        y(x) = C_1 \cos(kx) + C_2 \sin(kx)
+      </me>.
+    </p>
+    <p>
+      Puisque l'équation est du second ordre,
+      la solution contient deux constantes.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>y</m> est bien une solution à cette équation.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Enfin, considérons l'équation suivante,
+      elle aussi du second ordre :
+      <me>
+        \frac{d^2y}{{dx}^2} = k^2 y
+      </me>,
+      où <m>k > 0</m> est une constante.
+      La solution générale de cette équation est :
+      <me>
+        y(x) = C_1 e^{kx} + C_2 e^{-kx}
+      </me>
+      ou
+      <me>
+        y(x) = D_1 \cosh(kx) + D_2 \sinh(kx)
+      </me>.
+    </p>
+    <p>
+      Les fonctions <m>\cosh</m> et <m>\sinh</m> se définissent comme suit :
+      <me>
+        \cosh x = \frac{e^{x} + e^{-x}}{2} , \qquad \sinh x = \frac{e^{x} - e^{-x}}{2}
+      </me>.
+    </p>
+    <p>
+      Elles s'appellent respectivement
+      <em>cosinus hyperbolique
+          <idx><h>cosinus hyperbolique</h></idx>
+      </em> et <em>sinus hyperbolique
+          <idx><h>sinus hyperbolique</h></idx>
+      </em>.
+      Elles sont parfois plus simples à
+      utiliser que les fonctions exponentielles.
+      Elles ont de jolies propriétés, telles que <m>\cosh 0 = 1</m>,
+      <m>\sinh 0 = 0</m>, <m>\frac{d}{dx} \cosh x = \sinh x</m>
+      (non, il n'y a pas de signe moins,
+      ce n'est pas une coquille)
+      et <m>\frac{d}{dx} \sinh x = \cosh x</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que les deux expressions sont des solutions à cette équation.
+        </p>
+      </statement>
+    </exercise>
+    <example>
+      <statement>
+        <p>
+          Pour les équations d'ordre supérieur,
+          les solutions comportent plus de constantes pour lesquelles on doit résoudre afin d'obtenir une solution particulière.
+          L'équation <m>\frac{d^2y}{dx^2} = 0</m> a pour solution générale <m>y = C_1 x + C_2</m>;
+          il suffit d'intégrer deux fois,
+          sans oublier les constantes d'intégration.
+          Considérons les conditions initiales <m>y(0) = 2</m> et <m>y'(0) = 3</m>.
+          On substitue ces valeurs dans la solution et l'on obtient :
+          <me>
+            2 = y(0) = C_1 \cdot 0 + C_2 = C_2, \qquad 3 = y'(0) = C_1
+          </me>.
+        </p>
+        <p>
+          Ainsi, <m>y = 3x + 2</m> est la solution particulière recherchée.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Fait intéressant à
+      propos de <m>\cosh</m> :
+      le graphe de <m>\cosh</m> est précisément la forme d'une chaînette pendante
+      (pas d'une parabole, contrairement à
+      ce qu'on pourrait croire).
+      Cette forme s'appelle une <em>caténaire
+          <idx><h>caténaire</h></idx>
+      </em>.
+      De plus, le graphe de <m>\cosh</m> offre la forme idéale pour une arche supportant son propre poids;
+      une telle arche de forme parabolique risquerait de s'écrouler.
+      Un exemple célèbre est la Gateway Arch de la ville américaine de Saint-Louis,
+      dont la formule est inscrite dans la structure :
+      <me>
+        y = -127.7 \; \textrm{ft}  \cdot \cosh\left( x /127.7  \; \textrm{ft}  \right) + 757.7 \;\textrm{ft}
+      </me>.
+    </p>
+  </subsection>
+
+<!-- <fact xml:id="fact-test">
+  <statement>
+    <p>Le fait est que <m>2+2 \ne 5</m>
+      
+    </p>
+  </statement>
+</fact> -->
+
+<!-- TODO exos -->
+  <exercise xml:id = "Derivees-Partielles-05" component = "webwork">
+      <webwork source ="RELCALC3-pretext/Chap_Fonc-Multi-Variables/Derivees-Partielles-05.pg"/>
+  </exercise>
+
+
+
+
+
+<exercises>
+    <exercise>
+      <statement>
+        <p>
+          Montrez que <m>x = e^{4t}</m> est une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Montrez que <m>x = e^{t}</m> n'est pas une solution de <m>x'''-12 x'' + 48 x' - 64 x = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>y = \sin t</m> est une solution de <m>{\left( \frac{dy}{dt} \right)}^2 = 1 - y^2</m>?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Considérons <m>y'' + 2y' - 8y = 0</m>.
+          Essayez une solution de la forme
+          <m>y = e^{rx}</m> pour une constante (à
+          déterminer) <m>r</m>.
+          Existe-il une valeur de <m>r</m> qui donne une solution?
+          Si oui, trouvez toutes les valeurs possibles de <m>r</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>x = C e^{-2t}</m> est une solution de <m>x' = -2x</m>.
+          Trouvez <m>C</m> satisfaisant à
+          la condition initiale <m>x(0) = 100</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>x = C_1 e^{-t} + C_2 e^{2t}</m> est une solution de <m>x'' - x' -2 x = 0</m>.
+          Trouvez <m>C_1</m> et <m>C_2</m> satisfaisant aux conditions initiales <m>x(0) = 10</m> et <m>x'(0) = 0</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez une solution <m>{(x')}^2 + x^2 = 4</m> en utilisant ce que vous avez appris à
+          propos des dérivées dans vos cours de calcul.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <ol marker="a"><li>
+          <m>\dfrac{dA}{dt} = -10 A, A(0)=5</m> </li>
+          <li> <m>\dfrac{dH}{dx} = 3 H, H(0)=1</m> </li>
+          <li>
+          <m>\dfrac{d^2y}{dx^2} = 4 y, y(0)=0, y'(0)=1</m> </li>
+          <li> <m>\dfrac{d^2x}{dy^2} = -9 x, x(0)=1, x'(0)=0</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Existe-t-il une solution de <m>y' = y</m>,
+          telle que <m>y(0) = y(1)</m>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          La population de la ville X était 100<nbsp/>000 il y a 20 ans,
+          et 120<nbsp/>000 il y a 10 ans.
+          Si l'on suppose une croissance continue,
+          on peut utiliser le modèle de croissance exponentielle
+          (comme pour une population de bactéries). À combien estimez-vous la population actuelle maintenant?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Supposons qu'un coach de football obtient présentement un salaire annuel de 1 million $,
+          et qu'il a une augmentation salariale de <m>10\%</m> chaque année
+          (donc modèle de croissance exponentielle,
+          comme les bactéries).
+          Dénotons par <m>s</m> le salaire en millions de dollars,
+          et <m>t</m> le temps en années. <ol marker="a"><li> Trouvez <m>s(0)</m> et <m>s(1)</m>. </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 10 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 20 millions? </li>
+          <li> Après combien d'années approximativement le salaire sera-t-il de 30 millions? </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      <em>Note : Les exercices dont les numéros sont 101 et plus ont des réponses à
+      la fin du manuel.</em>
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Montrez que <m>x = e^{-2t}</m> est une solution de <m>x'' + 4x' + 4x = 0</m>.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        Calculer
+      <m>x' = -2e^{-2t}</m> et <m>x'' = 4e^{-2t}</m>.
+      Alors, <m>(4e^{-2t}) + 4 (-2e^{-2t}) + 4 (e^{-2t}) = 0</m>.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>y = x^2</m> est une solution de <m>x^2y'' - 2y = 0</m>?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        Oui.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>xy'' - y' = 0</m>.
+          Essayez une solution de la forme <m>y = x^r</m>.
+          Existe-t-il une valeur de <m>r</m> qui donne une solution?
+          Si oui, trouvez toutes les valeurs possibles de <m>r</m>.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>y=x^r</m> est une solution pour <m>r=0</m> et <m>r=2</m>.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez que <m>x=C_1e^t+C_2</m> est une solution de <m>x''-x' = 0</m>.
+          Trouvez <m>C_1</m> et <m>C_2</m> telles que
+          <m>x(0) = 10</m> et <m>x'(0) = 100</m>.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>C_1 = 100</m>,
+      <m>C_2 = -90</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <m>\frac{d\varphi}{ds} = 8 \varphi</m> et <m>\varphi(0) = -9</m>.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>\varphi = -9 e^{8s}</m> 
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Résolvez <ol marker="a"><li>
+          <m>\dfrac{dx}{dt} = -4x,
+          x(0)=9</m> </li>
+          <li> <m>\dfrac{d^2x}{dt^2} = -4x,
+          x(0)=1, x'(0)=2</m> </li>
+          <li> <m>\dfrac{dp}{dq} = 3 p, p(0)=4</m> </li>
+          <li> <m>\dfrac{d^2T}{dx^2} = 4 T, T(0)=0, T'(0)=6</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+</exercises>
+</section>

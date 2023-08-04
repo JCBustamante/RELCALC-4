@@ -1,0 +1,447 @@
+<section xml:id="det_section">
+  <title>Determinant</title>
+  <introduction>
+    <p>
+      For square matrices we define a useful quantity called the <em>determinant
+          <idx><h>determinant</h></idx>
+      </em>.
+      We define the determinant of a
+      <m>1 \times 1</m> matrix as the value of its only entry
+      <me>
+        \det \left( \begin{bmatrix} a \end{bmatrix} \right) \overset{\text{ def } }{=} a
+      </me>.
+    </p>
+    <p>
+      For a <m>2 \times 2</m> matrix we define
+      <me>
+        \det \left( \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix} \right) \overset{\text{ def } }{=} ad-bc
+      </me>.
+    </p>
+    <p>
+      Before defining the determinant for larger matrices,
+      we note the meaning of the determinant.
+      An <m>n \times n</m> matrix gives a mapping of the <m>n</m>-dimensional euclidean space <m>{\mathbb{R}}^n</m> to itself.
+      In particular,
+      a <m>2 \times 2</m> matrix <m>A</m> is a mapping of the plane to itself.
+      The determinant of <m>A</m> is the factor by which the area of objects changes.
+      If we take the unit square
+      (square of side 1)
+      in the plane,
+      then <m>A</m> takes the square to a parallelogram of area <m>\lvert\det(A)\rvert</m>.
+      The sign of <m>\det(A)</m> denotes a change of orientation
+      (negative if the axes get flipped).
+      For example, let
+      <me>
+        A = \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Then <m>\det(A) = 1+1 = 2</m>.
+      Let us see where <m>A</m> sends the unit square with vertices <m>(0,0)</m>,
+      <m>(1,0)</m>,
+      <m>(0,1)</m>, and <m>(1,1)</m>.
+      The point <m>(0,0)</m> gets sent to <m>(0,0)</m>.
+      <me>
+        \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} , \qquad \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} , \qquad \begin{bmatrix} 1 \amp  1 \\ -1 \amp  1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      The image of the square is another square with vertices <m>(0,0)</m>,
+      <m>(1,-1)</m>,
+      <m>(1,1)</m>, and <m>(2,0)</m>.
+      The image square has a side of length
+      <m>\sqrt{2}</m> and is therefore of area 2.
+      <xref ref="linalg-imagesquare_fig">See</xref>.
+    </p>
+    <figure xml:id="linalg-imagesquare_fig">
+      <caption>Image of the unit quare via the mapping
+      <m>A</m>.</caption>
+      <image width="73%" source="linalg-imagesquare"/>
+    </figure>
+    <p>
+      In general the image of a square is going to be a parallelogram.
+          <idx><h>parallelogram</h></idx>
+      In high school geometry,
+      you may have seen a formula for computing the area of a parallelogram
+          <idx><h>parallelogram</h></idx>
+      with vertices <m>(0,0)</m>, <m>(a,c)</m>,
+      <m>(b,d)</m> and <m>(a+b,c+d)</m>.
+      The area is
+      <me>
+        \left\lvert \, \det \left( \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix} \right) \, \right\lvert = \lvert a d - b c \rvert
+      </me>.
+    </p>
+    <p>
+      The vertical lines above mean absolute value.
+      The matrix <m>\left[ \begin{matrix}a \amp b \\ c \amp d \end{matrix} \right]</m> carries the unit square to the given parallelogram.
+    </p>
+    <p>
+      There are a number of ways to define the determinant for an <m>n \times n</m> matrix.
+      Let us use the so-called <em>cofactor expansion
+          <idx><h>cofactor expansion</h></idx>
+      </em>.
+      We define <m>A_{ij}</m> as the matrix <m>A</m> with the
+      <m>i^{\text{ th } }</m> row and the <m>j^{\text{ th } }</m> column deleted.
+      For example, if
+      <me>
+        \text{ If }  \qquad A = \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \\ 7 \amp  8 \amp  9 \end{bmatrix} , \qquad \text{ then } \qquad A_{12} = \begin{bmatrix} 4 \amp  6 \\ 7 \amp  9 \end{bmatrix} \qquad \text{ and } \qquad A_{23} = \begin{bmatrix} 1 \amp  2 \\ 7 \amp  8 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      We now define the determinant recursively
+      <me>
+        \det (A) \overset{\text{ def } }{=} \sum_{j=1}^n {(-1)}^{1+j} a_{1j} \det (A_{1j})
+      </me>,
+      or in other words
+      <me>
+        \det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + a_{13} \det (A_{13}) - \cdots \begin{cases} + a_{1n} \det (A_{1n}) \amp  \text{ if }  n \text{ is odd, }  \\ - a_{1n} \det (A_{1n}) \amp  \text{ if }  n \text{ even. } \end{cases}
+      </me>
+    </p>
+    <p>
+      For a <m>3 \times 3</m> matrix,
+      we get <m>\det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + a_{13} \det (A_{13})</m>.
+      For example,
+      <me>
+        \begin{split} \det \left( \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \\ 7 \amp  8 \amp  9 \end{bmatrix} \right) \amp  = 1 \cdot \det \left( \begin{bmatrix} 5 \amp  6 \\ 8 \amp  9 \end{bmatrix} \right) - 2 \cdot \det \left( \begin{bmatrix} 4 \amp  6 \\ 7 \amp  9 \end{bmatrix} \right) + 3 \cdot \det \left( \begin{bmatrix} 4 \amp  5 \\ 7 \amp  8 \end{bmatrix} \right) \\ \amp  = 1 (5 \cdot 9 - 6 \cdot 8) - 2 (4 \cdot 9 - 6 \cdot 7) + 3 (4 \cdot 8 - 5 \cdot 7) = 0 . \end{split}
+      </me>
+    </p>
+    <p>
+      It turns out that we did not have to necessarily use the first row.
+      That is for any <m>i</m>,
+      <me>
+        \det (A) = \sum_{j=1}^n {(-1)}^{i+j} a_{ij} \det (A_{ij})
+      </me>.
+    </p>
+    <p>
+      It is sometimes useful to use a row other than the first.
+      In the following example it is more convenient to expand along the second row.
+      Notice that for the second row we are starting with a negative sign.
+      <me>
+        \begin{split} \det \left( \begin{bmatrix} 1 \amp  2 \amp  3 \\ 0 \amp  5 \amp  0 \\ 7 \amp  8 \amp  9 \end{bmatrix} \right) \amp  = - 0 \cdot \det \left( \begin{bmatrix} 2 \amp  3 \\ 8 \amp  9 \end{bmatrix} \right) + 5 \cdot \det \left( \begin{bmatrix} 1 \amp  3 \\ 7 \amp  9 \end{bmatrix} \right) - 0 \cdot \det \left( \begin{bmatrix} 1 \amp  2 \\ 7 \amp  8 \end{bmatrix} \right) \\ \amp  = 0 + 5 (1 \cdot 9 - 3 \cdot 7) + 0 = -60 . \end{split}
+      </me>
+    </p>
+    <p>
+      Let us check if it is really the same as expanding along the first row,
+      <me>
+        \begin{split} \det \left( \begin{bmatrix} 1 \amp  2 \amp  3 \\ 0 \amp  5 \amp  0 \\ 7 \amp  8 \amp  9 \end{bmatrix} \right) \amp  = 1 \cdot \det \left( \begin{bmatrix} 5 \amp  0 \\ 8 \amp  9 \end{bmatrix} \right) - 2 \cdot \det \left( \begin{bmatrix} 0 \amp  0 \\ 7 \amp  9 \end{bmatrix} \right) + 3 \cdot \det \left( \begin{bmatrix} 0 \amp  5 \\ 7 \amp  8 \end{bmatrix} \right) \\ \amp  = 1 (5 \cdot 9 - 0 \cdot 8) - 2 (0 \cdot 9 - 0 \cdot 7) + 3 (0 \cdot 8 - 5 \cdot 7) = -60 . \end{split}
+      </me>
+    </p>
+    <p>
+      In computing the determinant,
+      we alternately add and subtract the determinants of the submatrices <m>A_{ij}</m> multiplied by <m>a_{ij}</m> for a fixed <m>i</m> and all <m>j</m>.
+      The numbers <m>{(-1)}^{i+j}\det(A_{ij})</m> are called <em>cofactors
+          <idx><h>cofactor</h></idx>
+      </em> of the matrix.
+      And that is why this method of computing the determinant is called the
+      <em>cofactor expansion</em>.
+    </p>
+    <p>
+      Similarly we do not need to expand along a row,
+      we can expand along a column.
+      For any <m>j</m>
+      <me>
+        \det (A) = \sum_{i=1}^n {(-1)}^{i+j} a_{ij} \det (A_{ij})
+      </me>.
+    </p>
+    <p>
+      A related fact is that
+      <me>
+        \det (A) = \det (A^T)
+      </me>.
+    </p>
+    <p>
+      A matrix is <em>upper triangular
+          <idx><h>upper triangular</h></idx>
+      </em> if all elements below the main diagonal are 0.
+      For example,
+      <me>
+        \begin{bmatrix} 1 \amp  2 \amp  3 \\ 0 \amp  5 \amp  6 \\ 0 \amp  0 \amp  9 \end{bmatrix}
+      </me>
+      is upper triangular.
+      Similarly a <em>lower triangular
+          <idx><h>lower triangular</h></idx>
+      </em> matrix is one where everything above the diagonal is zero.
+      For example,
+      <me>
+        \begin{bmatrix} 1 \amp  0 \amp  0 \\ 4 \amp  5 \amp  0 \\ 7 \amp  8 \amp  9 \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      The determinant for triangular matrices is very simple to compute.
+      Consider the lower triangular matrix.
+      If we expand along the first row,
+      we find that the determinant is 1 times the determinant of the lower triangular matrix <m>\left[ \begin{matrix}5 \amp  0 \\ 8 \amp  9 \end{matrix}  \right]</m>.
+      So the deteriminant is just the product of the diagonal entries:
+      <me>
+        \det \left( \begin{bmatrix} 1 \amp  0 \amp  0 \\ 4 \amp  5 \amp  0 \\ 7 \amp  8 \amp  9 \end{bmatrix} \right) = 1 \cdot 5 \cdot 9 = 45
+      </me>.
+    </p>
+    <p>
+      Similarly for upper triangular matrices
+      <me>
+        \det \left( \begin{bmatrix} 1 \amp  2 \amp  3 \\ 0 \amp  5 \amp  6 \\ 0 \amp  0 \amp  9 \end{bmatrix} \right) = 1 \cdot 5 \cdot 9 = 45
+      </me>.
+    </p>
+    <p>
+      In general, if <m>A</m> is triangular, then
+      <me>
+        \det (A) = a_{11} a_{22} \cdots a_{nn}
+      </me>.
+    </p>
+    <p>
+      If <m>A</m> is diagonal, then it is also triangular
+      (upper and lower),
+      so same formula applies.
+      For example,
+      <me>
+        \det \left( \begin{bmatrix} 2 \amp  0 \amp  0 \\ 0 \amp  3 \amp  0 \\ 0 \amp  0 \amp  5 \end{bmatrix} \right) = 2 \cdot 3 \cdot 5 = 30
+      </me>.
+    </p>
+    <p>
+      In particular, the identity matrix <m>I</m> is diagonal,
+      and the diagonal entries are all 1.
+      Thus,
+      <me>
+        \det(I) = 1
+      </me>.
+    </p>
+    <p>
+      The determinant is telling you how geometric objects scale.
+      If <m>B</m> doubles the sizes of geometric objects and <m>A</m> triples them,
+      then <m>AB</m>
+      (which applies <m>B</m> to an object and then it applies <m>A</m>)
+      should make size go up by a factor of <m>6</m>.
+      This is true in general:
+    </p>
+    <theorem>
+      <statement>
+        <me>
+          \det(AB) = \det(A)\det(B)
+        </me>.
+      </statement>
+    </theorem>
+    <p>
+      This property is one of the most useful,
+      and it is employed often to actually compute determinants.
+      A particularly interesting consequence is to note what it means for existence of inverses.
+      Take <m>A</m> and <m>B</m> to be inverses, that is <m>AB=I</m>.
+      Then
+      <me>
+        \det(A)\det(B) = \det(AB) = \det(I) = 1
+      </me>.
+    </p>
+    <p>
+      Neither <m>\det(A)</m> nor <m>\det(B)</m> can be zero.
+      This fact is an extremely useful property of the determinant,
+      and one which is used often in this book:
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          An <m>n \times n</m> matrix <m>A</m> is invertible if and only if <m>\det (A) \not= 0</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      In fact, <m>\det(A^{-1}) \det(A) = 1</m> says that
+      <me>
+        \det(A^{-1}) = \frac{1}{\det(A)}
+      </me>.
+    </p>
+    <p>
+      So we know what the determinant of <m>A^{-1}</m> is without computing <m>A^{-1}</m>.
+    </p>
+    <p>
+      Let us return to the formula for the inverse of a <m>2 \times 2</m> matrix:
+      <me>
+        \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix}^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d \amp  -b \\ -c \amp  a \end{bmatrix}
+      </me>.
+    </p>
+    <p>
+      Notice the determinant of the matrix
+      <m>[\begin{matrix}a\amp b\\c\amp d \end{matrix} ]</m> in the denominator of the fraction.
+      The formula only works if the determinant is nonzero,
+      otherwise we are dividing by zero.
+    </p>
+    <p>
+      A common notation for the determinant is a pair of vertical lines:
+      <me>
+        \begin{vmatrix} a \amp  b \\ c \amp  d \end{vmatrix} = \det \left( \begin{bmatrix} a \amp  b \\ c \amp  d \end{bmatrix} \right)
+      </me>.
+    </p>
+    <p>
+      Personally, I find this notation confusing as vertical lines usually mean a positive quantity,
+      while determinants can be negative.
+      Also think about how to write the absolute value of a determinant.
+      This notation is not used in this book.
+    </p>
+  </introduction>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Compute the determinant of the following matrices: <ol marker="a"><li> <m>\begin{bmatrix}3 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 3 \\ 2 \amp 1 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 1 \\ 4 \amp 2 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}1 \amp 2 \amp 3 \\ 0 \amp 4 \amp 5 \\ 0 \amp 0 \amp 6 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 1 \amp 0 \\ -2 \amp 7 \amp -3 \\ 0 \amp 2 \amp 0 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp 1 \amp 3 \\ 8 \amp 6 \amp 3 \\ 7 \amp 9 \amp 7 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}0 \amp 2 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp -3 \\ 3 \amp 4 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp 4 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}0 \amp 1 \amp 2 \amp 0 \\ 1 \amp 1 \amp -1 \amp 2 \\ 1 \amp 1 \amp 2 \amp 1 \\ 2 \amp -1 \amp -2 \amp 3 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          For which <m>x</m> are the following matrices singular
+          (not invertible). <ol marker="a"><li>
+          <m>\begin{bmatrix}2 \amp 3 \\ 2 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp x \\ 1 \amp 2 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}x \amp 1 \\ 4 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}x \amp 0 \amp 1 \\ 1 \amp 4 \amp 2 \\ 1 \amp 6 \amp 2 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute
+          <me>
+            \det \left( \begin{bmatrix} 2 \amp  1 \amp  2 \amp  3 \\ 0 \amp  8 \amp  6 \amp  5 \\ 0 \amp  0 \amp  3 \amp  9 \\ 0 \amp  0 \amp  0 \amp  1 \end{bmatrix}^{-1} \right)
+          </me>
+          without computing the inverse.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Suppose
+          <me>
+            L = \begin{bmatrix} 1 \amp  0 \amp  0 \amp  0 \\ 2 \amp  1 \amp  0 \amp  0 \\ 7 \amp  \pi \amp  1 \amp  0 \\ 2^8 \amp  5 \amp  -99 \amp  1 \end{bmatrix} \qquad \text{ and }  \qquad U = \begin{bmatrix} 5 \amp  9 \amp  1 \amp  -\sin(1) \\ 0 \amp  1 \amp  88 \amp  -1 \\ 0 \amp  0 \amp  1 \amp  3 \\ 0 \amp  0 \amp  0 \amp  1 \end{bmatrix}
+          </me>.
+        </p>
+        <p>
+          Let <m>A = LU</m>.
+          Compute <m>\det(A)</m> in a simple way,
+          without computing what is <m>A</m>.
+          Hint: First read off <m>\det(L)</m> and <m>\det(U)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Consider the linear mapping from
+          <m>{\mathbb R}^2</m> to <m>{\mathbb R}^2</m> given by the matrix
+          <m>A = \left[ \begin{matrix}1 \amp x \\ 2 \amp 1 \end{matrix} \right]</m> for some number <m>x</m>.
+          You wish to make <m>A</m> such that it doubles the area of every geometric figure.
+          What are the possibilities for <m>x</m>
+          (there are two answers).
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Suppose <m>A</m> and <m>S</m> are <m>n \times n</m> matrices,
+          and <m>S</m> is invertible.
+          Suppose that <m>\det(A) = 3</m>.
+          Compute <m>\det(S^{-1}AS)</m> and <m>\det(SAS^{-1})</m>.
+          Justify your answer using the theorems in this section.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Let <m>A</m> be an <m>n \times n</m> matrix such that <m>\det(A)=1</m>.
+          Compute <m>\det(x A)</m> given a number <m>x</m>.
+          Hint: First try computing <m>\det(xI)</m>,
+          then note that <m>xA = (xI)A</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>2</title>
+      <statement>
+        <p>
+          Compute the determinant of the following matrices: <ol marker="a"><li> <m>\begin{bmatrix}-2 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp -2 \\ 1 \amp 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 2 \\ 2 \amp 2 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}2 \amp 9 \amp -11 \\ 0 \amp -1 \amp 5 \\ 0 \amp 0 \amp 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}2 \amp 1 \amp 0 \\ -2 \amp 7 \amp 3 \\ 1 \amp 1 \amp 0 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}5 \amp 1 \amp 3 \\ 4 \amp 1 \amp 1 \\ 4 \amp 5 \amp 1 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}3 \amp 2 \amp 5 \amp 7 \\ 0 \amp 0 \amp 2 \amp 0 \\ 0 \amp 4 \amp 5 \amp 0 \\ 2 \amp 1 \amp 2 \amp 4 \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}0 \amp 2 \amp 1 \amp 0 \\ 1 \amp 2 \amp -3 \amp 4 \\ 5 \amp 6 \amp -7 \amp 8 \\ 1 \amp 2 \amp 3 \amp -2 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)<nbsp/><m>-2</m> b)<nbsp/><m>8</m> c)<nbsp/><m>0</m> d)<nbsp/><m>-6</m> e)<nbsp/><m>-3</m> f)<nbsp/><m>28</m> g)<nbsp/><m>16</m> h)<nbsp/><m>-24</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          For which <m>x</m> are the following matrices singular
+          (not invertible). <ol marker="a"><li>
+          <m>\begin{bmatrix}1 \amp 3 \\ 1 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}3 \amp x \\ 1 \amp 3 \end{bmatrix}</m> </li>
+          <li>
+          <m>\begin{bmatrix}x \amp 3 \\ 3 \amp x \end{bmatrix}</m> </li>
+          <li> <m>\begin{bmatrix}x \amp 1 \amp 0 \\ 1 \amp 4 \amp 0 \\ 1 \amp 6 \amp 2 \end{bmatrix}</m> </li></ol>
+        </p>
+      </statement>
+    <answer>
+      <p>
+        a)<nbsp/><m>3</m> b)<nbsp/><m>9</m> c)<nbsp/><m>3</m> d)<nbsp/><m>\nicefrac{1}{4}</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Compute
+          <me>
+            \det \left( \begin{bmatrix} 3 \amp  4 \amp  7 \amp  12 \\ 0 \amp  -1 \amp  9 \amp  -8 \\ 0 \amp  0 \amp  -2 \amp  4 \\ 0 \amp  0 \amp  0 \amp  2 \end{bmatrix}^{-1} \right)
+          </me>
+          without computing the inverse.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>12</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <title>challenging</title>
+      <statement>
+        <p>
+          Find all the <m>x</m> that make the matrix inverse
+          <me>
+            \begin{bmatrix} 1 \amp  2 \\ 1 \amp  x \end{bmatrix}^{-1}
+          </me>
+          have only integer entries
+          (no fractions).
+          Note that there are two answers.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>1</m> and <m>3</m>
+      </p>
+    </answer>
+    </exercise>
+  </exercises>
+</section>

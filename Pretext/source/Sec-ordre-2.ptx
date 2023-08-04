@@ -1,0 +1,479 @@
+<section xml:id="solinear_section">
+  <title>Équations différentielles du deuxième ordre</title>
+  <introduction>
+    <p>
+      Nous abordons maintenant l'<em>équation différentielle linéaire du deuxième ordre<idx><h>équation différentielle linéaire du deuxième ordre</h></idx>
+      </em> :
+      <me>
+        A(x) y'' + B(x)y' + C(x)y = F(x)
+      </me>.
+    </p>
+    <p>
+      En divisant par <m>A(x)</m>, on obtient :
+      <men xml:id="sol_eqlin">
+        y'' + p(x)y' + q(x)y = f(x)
+      </men>,
+      où <m>p(x) = \nicefrac{B(x)}{A(x)}</m>,
+      <m>q(x) = \nicefrac{C(x)}{A(x)}</m> et <m>f(x) = \nicefrac{F(x)}{A(x)}</m>.
+      Le terme <em>linéaire
+          <idx><h>linear equation</h></idx>
+      </em> signifie que l'équation ne contient aucune puissance ni fonction de <m>y</m>,
+      <m>y'</m> ou <m>y''</m>.
+    </p>
+    <p>
+      Dans le cas particulier où <m>f(x) = 0</m>,
+      <men xml:id="sol_eqlinhom">
+        y'' + p(x)y' + q(x)y = 0
+      </men>
+      et l'équation est dite <em>homogène<idx><h>homogeneous linear equation</h></idx>
+      </em>.
+      On a déjà vu quelques équations linéaires homogènes du deuxième ordre.
+      <md>
+        <mrow>\qquad y'' + k^2 y \amp  = 0 \amp \amp  \text{ Les deux solutions sont : }  \amp  y_1 \amp = \cos (kx), \amp  y_2 \amp = \sin(kx) .</mrow>
+        <mrow>\qquad y'' - k^2 y \amp  = 0 \amp \amp  \text{ Les deux solutions sont : }  \amp y_1 \amp = e^{kx}, \amp  y_2 \amp = e^{-kx} </mrow>
+      </md>.
+    </p>
+    <p>
+      Si l'on connaît deux solutions de l'équation linéaire homogène,
+      on connaît beaucoup plus que celles-ci.
+    </p>
+    <theorem>
+      <title>Superposition</title>
+      <statement>
+        <p>
+              <idx><h>superposition</h></idx>
+          Supposons que <m>y_1</m> et <m>y_2</m> sont deux solutions de l'équation homogène<nbsp/><xref ref="sol_eqlinhom"/>.
+          Alors,
+          <me>
+            y(x) = C_1 y_1(x) + C_2 y_2(x)
+          </me>
+          est aussi une solution de<nbsp/><xref ref="sol_eqlinhom"/>,
+          pour des constantes arbitraires <m>C_1</m> et <m>C_2</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      On peut additionner les constantes et les multiplier par des constantes pour obtenir des solutions nouvelles et différentes.
+      L'expression <m>C_1 y_1 + C_2 y_2</m> s'appelle une
+      <em>combinaison linéaire<idx><h>combinaison linéaire</h></idx>
+      </em> de <m>y_1</m> et de <m>y_2</m>.
+      Prouvons ce théorème,
+      puisque la preuve permet de mieux comprendre le fonctionnement des équations linéaires.
+    </p>
+    <p>
+      <em>Preuve :</em> Soit <m>y = C_1 y_1 + C_2 y_2</m>.
+    </p>
+    <p>
+      Alors,
+      <md>
+        <mrow>y'' + py' + qy \amp  =  (C_1 y_1 + C_2 y_2)'' + p(C_1 y_1 + C_2 y_2)' + q(C_1 y_1 + C_2 y_2)</mrow>
+        <mrow>\amp  = C_1 y_1'' + C_2 y_2'' + C_1 p y_1' + C_2 p y_2' + C_1 q y_1 + C_2 q y_2</mrow>
+        <mrow>\amp  = C_1 ( y_1'' + p y_1' + q y_1 ) + C_2 ( y_2'' + p y_2' + q y_2 )</mrow>
+        <mrow>\amp  = C_1 \cdot 0 + C_2 \cdot 0 = 0 </mrow>
+      </md>.
+    </p>
+    <p>
+      La preuve devient plus claire avec l'utilisation d'un opérateur.
+      Un <em>opérateur
+          <idx><h>opérateur</h></idx>
+      </em> est un objet prenant pour entrée des fonctions et redonnant en sortie des fonctions (ça ressemble à
+      la fonction qui, elle,
+      prend pour entrée des nombres et donne en sortie des nombres).
+      Définissons <m>L</m> tel que :
+      <me>
+        Ly = y'' + py' + qy
+      </me>.
+    </p>
+    <p>
+      L'équation différentielle est alors : <m>Ly=0</m>.
+      Dire qu'un opérateur
+      (ou une équation)
+      <m>L</m> est <em>linéaire</em>
+          <idx><h>linear operator</h></idx>
+      implique que <m>L(C_1y_1 + C_2y_2) = C_1 Ly_1 + C_2 Ly_2</m>.
+      La preuve faite précédemment devient moins lourde :
+      <me>
+        Ly = L(C_1y_1 + C_2y_2) =   C_1 Ly_1 + C_2 Ly_2 = C_1 \cdot 0 + C_2 \cdot 0 = 0
+      </me>.
+    </p>
+    <p>
+      Le principe de superposition nous dit entre autres que <m>y_1 = \cosh (kx)</m> et
+      <m>y_2 = \sinh (kx)</m> sont aussi des solutions de l'équation <m>y'' - k^2y = 0</m>.
+      Pour nous en convaincre,
+      rappelons d'abord la définition de ces deux fonctions :
+      <md>
+        <mrow>\cosh x \amp  = \frac{e^x  + e^{-x}}{2},</mrow>
+        <mrow>\sinh x  \amp  = \frac{e^x - e^{-x}}{2}</mrow>
+      </md>.
+    </p>
+    <p>
+      Donc, ce sont des solutions par superposition puisqu'elles sont des combinaisons linéaires des solutions <m>e^x</m> et <m>e^{-x}</m>.
+      Les fonctions <m>\sinh</m> et <m>\cosh</m> sont parfois plus simples à utiliser.
+      Rappelons quelques-unes de leurs propriétés :
+      <md>
+        <mrow>\amp  \cosh 0  = 1 , \amp    \amp  \sinh 0 = 0 ,</mrow>
+        <mrow>\amp  \frac{d}{dx} \Bigl[ \cosh x \Bigr] = \sinh x , \amp   \amp  \frac{d}{dx} \Bigl[ \sinh x \Bigr] = \cosh x ,</mrow>
+        <mrow>\amp  \cosh^2 x - \sinh^2 x = 1 </mrow>
+      </md>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Vérifiez ces propriétés à
+          partir de la définition de <m>\sinh</m> et <m>\cosh</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Quant aux questions de l'existence et de l'unicité, les équations linéaires offrent des réponses simples.
+    </p>
+    <theorem>
+      <title>Existence et unicité</title>
+      <statement>
+        <p>
+              <idx><h>existence and uniqueness</h></idx>
+          Supposons que <m>p, q, f</m> sont des fonctions continues sur un intervalle <m>I</m>, que <m>a</m> est un nombre appartenant à <m>I</m> et que <m>a, b_0, b_1</m> sont constantes.
+          L'équation suivante,
+          <me>
+            y'' + p(x) y' + q(x) y = f(x)
+          </me>,
+          admet exactement une solution <m>y(x)</m>,
+          définie sur le même intervalle <m>I</m>,
+          et satisfaisant aux conditions initiales :
+          <me>
+            y(a) = b_0 , \qquad y'(a) = b_1
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Par exemple, l'équation <m>y'' + k^2 y = 0</m>,
+      avec les conditions initiales
+      <m>y(0) = b_0</m> et <m>y'(0) = b_1</m>,
+      admet la solution suivante,
+      <me>
+        y(x) = b_0 \cos (kx) + \frac{b_1}{k} \sin (kx)
+      </me>,
+      et cette solution est unique,
+      par le théorème.
+    </p>
+    <p>
+      L'équation <m>y'' - k^2 y = 0</m>,
+      avec les conditions initiales
+      <m>y(0) = b_0</m> et <m>y'(0) = b_1</m>,
+      admet la solution suivante :
+      <me>
+        y(x) = b_0 \cosh (kx) + \frac{b_1}{k} \sinh (kx)
+      </me>.
+    </p>
+    <p>
+      Avec les conditions initiales données,
+      le recours aux fonctions <m>\cosh(x)</m> et
+      <m>\sinh(x)</m> permet de résoudre l'équation d'une manière plus propre qu'en prenant une combinaison linéaire de <m>e^x</m> et <m>e^{-x}</m>.
+    </p>
+    <p>
+      Les conditions initiales pour une équation différentielle ordinaire comprennent deux équations.
+      Le bon sens suggère que si l'on a deux constantes arbitraires et deux équations,
+      alors on devrait être capable de résoudre l'équation pour les constantes et de trouver une solution à
+      l'équation différentielle satisfaisant aux conditions initiales.
+    </p>
+    <p>
+      <em>Question :</em> Supposons que nous avons trouvé
+      deux solutions distinctes <m>y_1</m> et <m>y_2</m> à
+      l'équation homogène<nbsp/><xref ref="sol_eqlinhom"/>.
+      Est-ce que toutes les solutions peuvent s'écrire sous la forme suivante :
+      <me>
+        y = C_1 y_1 + C_2 y_2\,?
+      </me>
+    </p>
+    <p>
+      La réponse est oui, à
+      condition que <m>y_1</m> et <m>y_2</m> soient des solutions suffisamment différentes dans le sens suivant.
+      Disons que <m>y_1</m> et <m>y_2</m> sont
+      <em>linéairement indépendantes<idx><h>linéairement indépendantes</h></idx>
+      </em> si l'une n'est pas un multiple de l'autre.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Soit <m>p, q</m> des fonctions continues.
+          Soit <m>y_1</m> et <m>y_2</m> deux solutions linéairement indépendantes de l'équation homogène <xref ref="sol_eqlinhom"/>.
+          Alors, toutes les solutions sont de la forme
+          <me>
+            y = C_1 y_1 + C_2 y_2
+          </me>.
+        </p>
+        <p>
+          Autrement dit,
+          <m>y = C_1 y_1 + C_2 y_2</m> est la solution générale.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Par exemple, on a trouvé
+      les solutions <m>y_1 = \sin x</m> et
+      <m>y_2 = \cos x</m> pour l'équation <m>y'' + y = 0</m>.
+      Ce n'est pas difficile de voir que le sinus et le cosinus ne peuvent pas s'obtenir en multipliant l'un ou l'autre par une constante.
+      En effet, si <m>\sin x = A \cos x</m> pour une constante quelconque <m>A</m>,
+      alors c'est vrai pour <m>x=0</m>,
+      et ceci impliquerait que <m>A = 0</m>.
+      Mais, alors,
+      <m>\sin x = 0</m> pour tout <m>x</m>, ce qui est absurde.
+      Par conséquent,
+      <m>y_1</m> et <m>y_2</m> sont linéairement indépendantes et
+      <me>
+        y = C_1 \cos x + C_2 \sin x
+      </me>
+      est une solution générale à <m>y'' + y = 0</m>.
+    </p>
+    <p>
+      C'est plutôt simple de vérifier que deux fonctions sont linéairement indépendantes.
+      Regardons un autre exemple : <m>y''-2x^{-2}y = 0</m>.
+      Alors, <m>y_1 = x^2</m> et <m>y_2 = \nicefrac{1}{x}</m> sont des solutions.
+      Pour vérifier si elles sont linéairement indépendantes,
+      supposons que l'une est un multiple de l'autre : <m>y_1 = A y_2</m>.
+      Il suffit de vérifier que <m>A</m> ne peut pas être une constante.
+      Dans ce cas, on a <m>A = \nicefrac{y_1}{y_2} = x^3</m>,
+      ce qui ne peut pas être une constante.
+      Alors, <m>y = C_1 x^2 + C_2 \nicefrac{1}{x}</m> est la solution générale à
+      l'équation différentielle.
+    </p>
+    <p>
+      Si l'on a une solution à
+      une équation linéaire homogène du deuxième ordre,
+      on peut en trouver une autre à
+      l'aide de la méthode de <em>réduction d'ordre
+          <idx><h>réduction d'ordre</h></idx>
+      </em>.
+      L'idée est que, étant donné
+      une solution <m>y_1</m> à
+      l'équation <m>y'' + p(x) y' + q(x) y = 0</m>,
+      on essaie une deuxième solution de la forme <m>y_2(x) = y_1(x) v(x)</m>.
+      On a seulement besoin de trouver <m>v</m>.
+      On met <m>y_2</m> dans l'équation :
+      <md>
+        <mrow>0 =  y_2'' + p(x) y_2' + q(x) y_2 \amp  =  y_1'' v + 2 y_1' v' + y_1 v'' + p(x) ( y_1' v + y_1 v' ) + q(z) y_1 v</mrow>
+        <mrow>\amp  = y_1 v'' + (2 y_1' + p(x) y_1) v' + \cancelto{0}{\bigl( y_1'' + p(x) y_1' + q(x) y_1 \bigr)} v </mrow>
+      </md>.
+    </p>
+    <p>
+      En d'autres mots, <m>y_1 v'' + (2 y_1' + p(x) y_1) v' = 0</m>.
+      En posant <m>w = v'</m>, on a réduit le problème à
+      une équation linéaire du premier ordre :
+      <me>
+        y_1 w' + (2 y_1' + p(x) y_1) w = 0
+      </me>.
+    </p>
+    <p>
+      Après avoir résolu cette équation pour <m>w</m>,
+      on trouve <m>v</m> en intégrant <m>w</m>
+      (<m>w=v'</m>).
+      On trouve alors <m>y_2</m> en calculant <m>y_1 v</m>,
+      par exemple en admettant que <m>y_1 = x</m> est une solution de <m>y''+x^{-1}y'-x^{-2} y=0</m>.
+      L'équation pour <m>w</m> est alors <m>xw' + 3 w = 0</m>.
+      On calcule <m>w = Cx^{-3}</m> et,
+      en intégrant, on trouve <m>v = \frac{-C}{2x^2}</m>.
+      Ainsi :
+      <me>
+        y_2 = y_1 v = \frac{-C}{-2x}
+      </me>.
+    </p>
+    <p>
+      Tous les <m>C</m> fonctionnent et,
+      en choisissant <m>C=-2</m>, on obtient <m>y_2 = \nicefrac{1}{x}</m>.
+      Ainsi, la solution générale est :
+      <me>
+        y = C_1 x + C_2\nicefrac{1}{x}
+      </me>.
+    </p>
+    <p>
+      Comme on a une formule pour la solution d'une équation linéaire du premier ordre,
+      on peut écrire la formule pour <m>y_2</m> :
+      <me>
+        y_2(x) = y_1(x) \int \frac{e^{-\int p(x)\,dx}}{{\bigl(y_1(x)\bigr)}^2} \,dx
+      </me>.
+    </p>
+    <p>
+      Toutefois, c'est beaucoup plus facile de se rappeler qu'on doit simplement essayer
+      <m>y_2(x) = y_1(x) v(x)</m> et trouver <m>v(x)</m> comme on l'a fait plus haut.
+      Ainsi, la méthode fonctionne pour les équations de plus grand ordre aussi :
+      il faut réduire l'ordre pour chacune des solutions trouvées.
+      Il est donc plus facile de se rappeler comment faire plutôt que de se rappeler une formule spécifique.
+    </p>
+  </introduction>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Montrez que <m>y=e^x</m> et
+          <m>y=e^{2x}</m> sont linéairement indépendantes.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Soit <m>y'' + 5 y = 10 x + 5</m>.
+          Trouvez (en devinant) la solution.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Montrez le principe de superposition pour les équations non homogènes comme suit.
+          Supposez que <m>y_1</m> est une solution à
+          <m>L y_1 = f(x)</m> et que <m>y_2</m> est une solution à
+          <m>L y_2 = g(x)</m> (même opérateur linéaire <m>L</m>).
+          Montrez que <m>y = y_1+y_2</m> est une solution de <m>Ly = f(x) + g(x)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Pour l'équation <m>x^2 y'' - x y' = 0</m>, trouvez deux solutions,
+          montrez qu'elles sont linéairement indépendantes et trouvez la solution générale.
+          Astuce : Essayez <m>y = x^r</m>.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      Les équations de la forme <m>a x^2 y'' + b x y' + c y = 0</m> s'appellent les
+      <em>équations d'Euler
+          <idx><h>Euler's equation</h></idx>
+      </em> ou les <em>équations de Cauchy<ndash/>Euler<idx><h>Cauchy<ndash/>Euler equation</h></idx>
+      </em>.
+      Elles se résolvent en essayant une solution de la forme <m>y=x^r</m> et en résolvant pour <m>r</m>
+      (supposons que <m>x \geq 0</m> pour simplifier le problème).
+    </p>
+    <exercise xml:id="sol_eulerex">
+      <statement>
+        <p>
+          Supposons que <m>{(b-a)}^2-4ac > 0</m>. <ol marker="a"><li> Trouvez la formule pour la solution générale de <m>a x^2 y'' + b x y' + c y = 0</m>.
+          Astuce : Essayez <m>y=x^r</m> et résolvez pour <m>r</m>. </li>
+          <li> Que se passe-t-il lorsque
+          <m>{(b-a)}^2-4ac = 0</m> ou <m>{(b-a)}^2-4ac \lt 0</m>? </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      On va retravailler le cas lorsque <m>{(b-a)}^2-4ac \lt 0</m> plus tard.
+    </p>
+    <exercise xml:id="sol_eulerexln">
+      <statement>
+        <p>
+          Considérons la même équation que l'<xref ref="sol_eulerex"></xref>.
+          Supposons <m>{(b-a)}^2-4ac = 0</m>.
+          Trouvez la formule pour la solution générale de <m>a x^2 y'' + b x y' + c y = 0</m>.
+          Astuce : Essayez <m>y=x^r \ln x</m> pour la deuxième solution.
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise_reductionoforder">
+      <title>Réduction d'ordre</title>
+      <statement>
+        <p>
+          Supposons que <m>y_1</m> est une solution de <m>y'' + p(x) y' + q(x) y = 0</m>.
+          En l'insérant directement dans l'équation, montrez que
+          <me>
+            y_2(x) = y_1(x) \int \frac{e^{-\int p(x)\,dx}}{{\bigl(y_1(x)\bigr)}^2} \,dx
+          </me>
+          est aussi une solution.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>\myindex{Équation de Chebyshev d'ordre 1}</title>
+      <statement>
+        <p>
+          Prenez <m>(1-x^2)y''-xy' + y = 0</m>. <ol marker="a"><li> Montrez que <m>y=x</m> est une solution. </li>
+          <li> Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. </li>
+          <li> Écrivez la solution générale. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>\myindex{Équation d'Hermite d'ordre 2}</title>
+      <statement>
+        <p>
+          Prenons <m>y''-2xy' + 4y = 0</m>. <ol marker="a"><li> Montrez que
+          <m>y=1-2x^2</m> est une solution. </li>
+          <li> Utilisez la réduction d'ordre pour trouver une deuxième solution linéairement indépendante. </li>
+          <li> Écrivez la solution générale. </li></ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>\sin(x)</m> et <m>e^x</m> sont linéairement indépendantes?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        Oui.
+      Pour justifier, essayez de trouver la constante <m>A</m> telle que
+      <m>\sin(x) = A e^x</m> pour tout <m>x</m>.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Est-ce que <m>e^x</m> et <m>e^{x+2}</m>sont linéairement indépendantes?
+          Justifiez votre réponse.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        Non.
+      <m>e^{x+2} = e^2 e^x</m>.
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Devinez une solution de <m>y'' + y' + y= 5</m>.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>y=5</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Trouvez la solution générale de <m>x y'' + y' = 0</m>.
+          Astuce : C'est une équation différentielle du premier ordre pour <m>y'</m>.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>y=C_1 \ln(x) + C_2</m>
+      </p>
+    </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Écrivez une équation
+          (en utilisant votre imagination)
+          telle qu'elle a les solutions <m>e^x</m> et <m>e^{2x}</m>.
+          Astuce : Essayez une équation de la forme
+          <m>y''+Ay'+By = 0</m> pour des constances <m>A</m> et <m>B</m>,
+          mettez dans chacune <m>e^x</m> et <m>e^{2x}</m> et résolvez pour <m>A</m> et <m>B</m>.
+        </p>
+      </statement>
+    <answer>
+      <p>
+        <m>y''-3y'+2y = 0</m>
+      </p>
+    </answer>
+    </exercise>
+  </exercises>
+</section>
