@@ -39,7 +39,7 @@
       </em>.
     </p>
   </introduction>
-  <subsection>
+  <paragraphs>
     <title>Chaleur sur un fil isolé</title>
     <p>
       Commençaons par l'équation de la chaleur.
@@ -139,8 +139,8 @@
       pour une certaine fonction connue <m>f (x)</m>.
       Cette condition initiale n'est pas une condition homogène.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Séparation des variables</title>
     <p>
       L'équation de la chaleur est linéaire,
@@ -460,8 +460,8 @@
         </p>
       </statement>
     </example>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Extrémités isolées</title>
     <p>
       Supposons maintenant que les extrémités du fil sont isolées.
@@ -603,7 +603,7 @@
       la température devient égale à
       la constante <m>\frac{a_0}{2}</m> partout.
     </p>
-  </subsection>
+  </paragraphs>
   <exercises>
     <exercise>
       <statement>

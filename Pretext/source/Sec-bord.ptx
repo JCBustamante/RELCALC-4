@@ -1,6 +1,6 @@
 <section xml:id="bvp_section">
   <title>Équations avec conditions au bord</title>
-  <subsection>
+  <paragraphs>
     <title>Valeurs au bord</title>
     <p>
       Avant de s'attaquer aux séries de Fourier,
@@ -26,7 +26,7 @@
       Par contre, l'unicité de la solution est une autre question.
       La solution générale de
       <m>x'' + \lambda x = 0</m> a deux constantes arbitraires<fn>
-      On regarde la <xref ref="subsection_fourfundamental"></xref>,
+      On regarde le  <xref ref="pars_fourfundamental" text = "custom">paragraphe </xref>,
       ou l'<xref ref="example_expsecondorder"></xref>
       et l'<xref ref="example_sincossecondorder"></xref>.
       </fn>.
@@ -81,8 +81,8 @@
       Ce problème est analogue à
       trouver les valeurs propres et les vecteurs propres des matrices.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Problèmes de valeurs propres</title>
     <p>
       Pour la théorie de base des séries de Fourier,
@@ -365,8 +365,8 @@
         </p>
       </statement>
     </example>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Orthogonalité des fonctions propres</title>
     <p>
       Une chose qui sera très utile dans la prochaine section est la propriété
@@ -462,8 +462,8 @@
         \int_{-\pi}^\pi \cos (mt) \sin (nt) \,dt = 0 \qquad \text{ (même si \(m=n\)). }
       </me>
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Alternative de Fredholm</title>
     <p>
       On arrive maintenant à
@@ -516,8 +516,8 @@
       vue est que, en général, un opérateur différentiel aura une infinité
       de valeurs propres, tandis qu'une matrice n'en a qu'un nombre fini.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Application</title>
     <p>
       Considérons une application physique.
@@ -624,7 +624,7 @@
       alors la vitesse augmente pour que la corde reste
       <q>sortie</q>.
     </p>
-  </subsection>
+  </paragraphs>
   <exercises>
     <p>
       Astuce pour les exercices suivants : notez que lorsque <m>\lambda > 0</m>,

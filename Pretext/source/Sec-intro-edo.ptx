@@ -1,6 +1,6 @@
 <section xml:id="introde_section">
   <title>Introduction aux équations différentielles</title>
-  <subsection>
+  <paragraphs>
     <title>Équations différentielles</title>
     <p>
       Les lois de la physique sont généralement exprimées sous forme d'équations différentielles.
@@ -32,8 +32,9 @@
       Cette équation vient de la loi de refroidissement de Newton,
       lorsque la température ambiante oscille en fonction du temps.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+
+  <paragraphs>
     <title>Solutions d'équations différentielles</title>
     <p>
       Quand on résout une équation différentielle comme <xref ref="eq1"/>,
@@ -150,22 +151,11 @@
       d'où l'importance d'apprendre des techniques de résolution de problèmes,
       afin d'appliquer ces techniques aux nouveaux problèmes.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+
+  <paragraphs>
     <title>En pratique</title>
-    <figure>
-      <image>
-<latex-image>
-\begin{tikzpicture}\draw (0,0) node {Situation-problème};
-\draw[->] (-0.1,-0.5) -- (-4,-3.8) node[left,pos=0.5] {abstraire};
-\draw (-5,-4) node {Modèle math\'ematique} ;
-\draw[->] (-2.5,-4) -- (2.5,-4) node [above, pos=0.5] {r\'esoudre};
-\draw (5,-4)  node {Solution math\'ematique};
-\draw[->] (4,-3.8) -- (0.1,-0.5)  node[right,pos=0.5] {interpr\'eter};
-\end{tikzpicture}
-</latex-image>
-      </image>
-    </figure>
+
     <p>
       Comment utilise-t-on les équations différentielles en science et en génie?
       On commence avec une <em>situation-problème
@@ -183,6 +173,21 @@
       qu'est-ce que la solution mathématique nous dit à
       propos de la situation-problème de départ?
     </p>
+
+    <figure>
+      <image>
+        <latex-image>
+        \begin{tikzpicture}\draw (0,0) node {Situation-problème};
+        \draw[->] (-0.1,-0.5) -- (-4,-3.8) node[left,pos=0.5] {abstraire};
+        \draw (-5,-4) node {Modèle math\'ematique} ;
+        \draw[->] (-2.5,-4) -- (2.5,-4) node [above, pos=0.5] {r\'esoudre};
+        \draw (5,-4)  node {Solution math\'ematique};
+        \draw[->] (4,-3.8) -- (0.1,-0.5)  node[right,pos=0.5] {interpr\'eter};
+        \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    
     <p>
       Pour ce qui est de formuler le modèle mathématique,
       et d'interpréter les résultats,
@@ -306,8 +311,8 @@
       afin de trouver la <em>solution particulière<idx><h>solution particulière</h></idx>
       </em>.
     </p>
-  </subsection>
-  <subsection xml:id="subsection_fourfundamental">
+  </paragraphs>
+  <paragraphs xml:id="pars_fourfundamental">
     <title>Quatre équations fondamentales</title>
     <p>
       Quelques équations apparaissent fréquemment,
@@ -462,15 +467,8 @@
         y = -127.7 \; \textrm{ft}  \cdot \cosh\left( x /127.7  \; \textrm{ft}  \right) + 757.7 \;\textrm{ft}
       </me>.
     </p>
-  </subsection>
+  </paragraphs>
 
-<!-- <fact xml:id="fact-test">
-  <statement>
-    <p>Le fait est que <m>2+2 \ne 5</m>
-      
-    </p>
-  </statement>
-</fact> -->
 
 <!-- TODO exos -->
   <exercise xml:id = "Derivees-Partielles-05" component = "webwork">

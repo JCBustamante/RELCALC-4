@@ -189,28 +189,20 @@
     <example>
       <statement>
         <p>
-          Voyons maintenant une application des équations linéaires qui est couramment rencontrée :
-          la concentration de produits chimiques dans un plan d'eau.
+          Voyons maintenant une application des équations linéaires qui est couramment rencontrée :          la concentration de produits chimiques dans un plan d'eau.
         </p>
-        <p>
+        
+        <sidebyside widths="45% 45%"  valign="top">
           <image width="73%" source="lin-tank"/>
+          <p>
           <!-- TODO on ne voit pas le texte sur l'image -->
-          Un réservoir d'une capacité
-          de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau.
-          Une solution d'eau saline avec une concentration de 0,1 kilogramme par litre entre dans le réservoir à
-          un taux de 5 litres par minute.
-          La solution dans le réservoir est bien brassée (c'est-à-dire qu'on peut supposer que la concentration est la même partout) et sort à
-          un taux de 3 litres par minute.
-          Combien de sel est contenu dans le réservoir lorsqu'il est plein?
+          Un réservoir d'une capacité de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau. Une solution d'eau saline avec une concentration de 0,1 kilogramme par litre entre dans le réservoir à
+          un taux de 5 litres par minute. La solution dans le réservoir est bien brassée (c'est-à-dire qu'on peut supposer que la concentration est la même partout) et sort à un taux de 3 litres par minute. Combien de sel est contenu dans le réservoir lorsqu'il est plein?
         </p>
+      </sidebyside>
         <p>
-          Commençons par établir l'équation différentielle modélisant ce problème.
-          Dénotons par <m>x</m> la quantité
-          de sel dans le réservoir,
-          en kilogrammes, et par <m>t</m> le temps en minutes.
-          Si l'on considère une petite variation <m>\Delta t</m> dans le temps,
-          la variation en <m>x</m> (dénotée
-          <m>\Delta x</m>) est approximativement :
+          Commençons par établir l'équation différentielle modélisant ce problème. Dénotons par <m>x</m> la quantité de sel dans le réservoir,
+          en kilogrammes, et par <m>t</m> le temps en minutes. Si l'on considère une petite variation <m>\Delta t</m> dans le temps, la variation en <m>x</m> (dénotée <m>\Delta x</m>) est approximativement :
           <me>
             \Delta x \approx (\text{ taux entrée }  \times \text{ concentration entrée } ) \Delta t - (\text{ taux sortie }  \times \text{ concentration sortie } ) \Delta t
           </me>.
@@ -358,10 +350,14 @@
           Le débit à l'entrée et à
           la sortie de chaque lac est 500 litres par heure.
           Le premier lac contient 100 000 litres d'eau et le deuxième lac en contient 200 000.
-          Un camion déverse \unit[500]{kg} d'une matière dangereuse.
+          Un camion déverse 500 kg 
+          <!-- \unit[500]{kg}  -->
+          d'une matière dangereuse.
           On suppose que l'eau est bien brassée par le ruisseau. <ol marker="a"><li> Trouvez la concentration de la matière dangereuse dans chacun des lacs,
           en fonction du temps. </li>
-          <li> À quel moment est-ce que la concentration dans le premier lac tombe en-dessous de \unit[0.001]{kg} par litre? </li>
+          <li> À quel moment est-ce que la concentration dans le premier lac tombe en-dessous de 
+            <!-- \unit[0.001]{kg}  -->
+          par litre? </li>
           <li> À quel moment est-ce que la concentration dans le deuxième sera maximale? </li></ol>
         </p>
         <!-- TODO begin tasks -->

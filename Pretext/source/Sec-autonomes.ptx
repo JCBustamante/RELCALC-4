@@ -186,9 +186,12 @@
         </li>
       </ul>
     </p>
-    <p>
-      <image width="73%" source="2-2-l-phasedia"/>
-    </p>
+
+    
+    <!-- TODO : Images vs LaTeX --> 
+    <sidebyside widths = "15%">
+      <image width = "23%" source="2-2-l-phasedia"/>
+    </sidebyside>
     <p>
       Grâce à un diagramme de phase,
       nous pouvons facilement tracer une approximation des solutions,
@@ -215,6 +218,7 @@
       si une des deux flèches pointe vers le point critique.
       </fn>.
     </p>
+    <!-- TODO : Images vs LaTeX --> 
     <p>
       <image width="73%" source="2-2-ph-class"/>
     </p>

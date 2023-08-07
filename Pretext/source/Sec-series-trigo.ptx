@@ -1,6 +1,6 @@
 <section xml:id="ts_section">
   <title>Séries trigonométriques</title>
-  <subsection>
+  <paragraphs>
     <title>Fonctions périodiques et motivations</title>
     <p>
       Afin de motiver l'étude des séries de Fourier,
@@ -82,8 +82,8 @@
         </p>
       </statement>
     </exercise>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Produit scalaire et décomposition de vecteurs propres</title>
     <p>
       Comme on l'a remarqué précédemment,
@@ -152,8 +152,8 @@
         </p>
       </statement>
     </example>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Séries trigonométriques</title>
     <p>
       Plutôt que de décomposer un vecteur en termes de vecteurs propres d'une matrice,
@@ -488,7 +488,7 @@
       des jeux vidéo des années 1980,
       vous avez entendu des sons de vagues carrées.
     </p>
-  </subsection>
+  </paragraphs>
   <exercises>
     <exercise>
       <statement>

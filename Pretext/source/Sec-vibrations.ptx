@@ -6,10 +6,10 @@
       coefficients constants.
     </p>
   </introduction>
-  <subsection>
+  <paragraphs>
     <title>Quelques exemples</title>
     <p>
-      <image width="73%" source="massfigforce"/>
+      <image width="50%" source="massfigforce"/>
     </p>
     <p>
     Le premier exemple est une masse sur un ressort.
@@ -195,8 +195,8 @@
       il est souvent nécessaire de faire ce genre de simplifications.
       On doit comprendre les mathématiques et la physique de la situation pour voir si les simplifications sont valides dans le contexte que l'on tente d'étudier.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Mouvement libre non amorti</title>
     <p>
       Dans cette section,
@@ -379,8 +379,9 @@
       Cette fonction prend deux arguments,
       <m>B</m> et <m>A</m>, et retourne <m>\gamma</m> dans le bon quadrant.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+
+  <paragraphs>
     <title>Mouvement libre amorti</title>
     <introduction>
       <p>
@@ -423,7 +424,7 @@
         Ainsi, on obtient des racines réelles si et seulement si <m>c^2-4km</m> n'est pas négatif (c'est-à-dire si <m>c^2 \geq 4km</m>).
       </p>
     </introduction>
-    <subsubsection>
+    <!-- <subsubsection> -->
       <title>Suramortissement</title>
       <figure xml:id="mv_overdampedfig">
         <caption>Mouvement suramorti, avec quelques conditions initiales différentes.</caption>
@@ -436,11 +437,8 @@
         le système est <em>suramorti
             <idx><h>suramorti</h></idx>
         </em>.
-        Dans ce cas,
-        il y a deux racines réelles <m>r_1</m> et <m>r_2</m>.
-        Les deux racines sont négatives :
-        puisque <m>\sqrt{p^2 - \omega_0^2}</m> est toujours plus petite que <m>p</m>,
-        alors <m>-p \pm \sqrt{p^2 - \omega_0^2}</m> est négative dans tous les cas.
+        Dans ce cas, il y a deux racines réelles <m>r_1</m> et <m>r_2</m>.
+        Les deux racines sont négatives : puisque <m>\sqrt{p^2 - \omega_0^2}</m> est toujours plus petite que <m>p</m>, alors <m>-p \pm \sqrt{p^2 - \omega_0^2}</m> est négative dans tous les cas.
       </p>
       <p>
         La solution est
@@ -449,36 +447,22 @@
         </me>.
       </p>
       <p>
-        Puisque <m>r_1, r_2</m> sont négatives,
-        <m>x(t) \to 0</m> lorsque <m>t \to \infty</m>.
-        Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini. 
-        La <xref ref="mv_overdampedfig"></xref>
-        montre le graphe de quelques solutions,
+        Puisque <m>r_1, r_2</m> sont négatives, <m>x(t) \to 0</m> lorsque <m>t \to \infty</m>. Ainsi, la masse se rapprochera vers la position de repos lorsque le temps tendra vers l'infini. La <xref ref="mv_overdampedfig" > </xref> montre le graphe de quelques solutions,
         avec des conditions initiales différentes.
       </p>
       <p>
-        Il n'y a aucune oscillation.
-        En effet, le graphe croise l'axe des <m>x</m> au plus une fois.
-        Pour comprendre pourquoi,
-        résolvons <m>0 = C_1 e^{r_1 t} + C_2 e^{r_2 t}</m>.
-        Donc, <m>C_1 e^{r_1 t} = - C_2 e^{r_2 t}</m>
-        et, en utilisant les lois des exposants, on obtient
+        Il n'y a aucune oscillation. En effet, le graphe croise l'axe des <m>x</m> au plus une fois. Pour comprendre pourquoi, résolvons <m>0 = C_1 e^{r_1 t} + C_2 e^{r_2 t}</m>. Donc, <m>C_1 e^{r_1 t} = - C_2 e^{r_2 t}</m> et, en utilisant les lois des exposants, on obtient
         <me>
           \frac{-C_1}{C_2} = e^{(r_2-r_1) t}
         </me>.
       </p>
       <p>
-        Cette équation a au plus une solution <m>t \geq 0</m>.
-        Pour certaines conditions initiales,
-        le graphe ne croise jamais l'axe des <m>x</m>,
-        comme le montre le graphe précédent.
+        Cette équation a au plus une solution <m>t \geq 0</m>. Pour certaines conditions initiales, le graphe ne croise jamais l'axe des <m>x</m>,comme le montre le graphe précédent.
       </p>
       <example>
         <statement>
           <p>
-            Supposons que la masse n'est plus au repos.
-            Elle est au repos lorsque <m>x(0) = x_0</m> et <m>x'(0) = 0</m>.
-            Alors,
+            Supposons que la masse n'est plus au repos. Elle est au repos lorsque <m>x(0) = x_0</m> et <m>x'(0) = 0</m>. Alors,
             <me>
               x(t) = \frac{x_0}{r_1-r_2} \left(r_1 e^{r_2 t} - r_2 e^{r_1 t} \right)
             </me>.
@@ -488,34 +472,27 @@
           </p>
         </statement>
       </example>
-    </subsubsection>
-    <subsubsection>
-      <title>Amortissement critique</title>
+    <!-- </subsubsection> -->
+    <!-- <subsubsection> -->
+      <!-- <title>Amortissement critique</title> -->
       <p>
-        Lorsque <m>c^2 - 4km = 0</m>,
-        le système présente un
-        <em>amortissement critique
+        Lorsque <m>c^2 - 4km = 0</m>, le système présente un      <em>amortissement critique
             <idx><h>amortissement critique</h></idx>
         </em>.
-        Dans ce cas, il y a une racine double <m>-p</m>.
-        Notre solution est
+        Dans ce cas, il y a une racine double <m>-p</m>. Notre solution est
         <me>
           x(t) = C_1 e^{-pt} + C_2 t e^{-pt}
         </me>.
       </p>
       <p>
-        Le comportement d'un système avec amortissement critique est très semblable à
-        celui d'un système avec amortissement ordinaire.
-        Après tout,
-        le premier est en quelque sorte un cas limite du second.
+        Le comportement d'un système avec amortissement critique est très semblable à celui d'un système avec amortissement ordinaire.
+        Après tout, le premier est en quelque sorte un cas limite du second.
         Mais ces équations sont après tout des approximations :
-        dans le vrai monde,
-        on est toujours un peu sous-amorti ou un peu trop amorti.
-        On ne s'attardera donc pas sur l'amortissement critique.
+        dans le vrai monde, on est toujours un peu sous-amorti ou un peu trop amorti. On ne s'attardera donc pas sur l'amortissement critique.
       </p>
-    </subsubsection>
-    <subsubsection>
-      <title>Sous-amortissement</title>
+    <!-- </subsubsection> -->
+    <!-- <subsubsection>
+      <title>Sous-amortissement</title> -->
       <figure xml:id="mv_underdampedfig">
         <caption>Système sous-amorti avec ses courbes enveloppes.</caption>
         <!-- {3.25in} -->
@@ -523,8 +500,7 @@
         <image source="mv-underdamped"/>
       </figure>
       <p>
-        Lorsque <m>c^2 - 4km \lt  0</m>,
-        le système est <em>sous-amorti
+        Lorsque <m>c^2 - 4km \lt  0</m>, le système est <em>sous-amorti
             <idx><h>sous-amorti</h></idx>
         </em>.
         Dans ce cas, les racines sont complexes :
@@ -533,8 +509,7 @@
           <mrow>\amp  = -p \pm \sqrt{-1}\sqrt{\omega_0^2 - p^2}</mrow>
           <mrow>\amp  = -p \pm i \omega_1 </mrow>
         </md>,
-        où <m>\omega_1 =\sqrt{\omega_0^2 - p^2}</m>.
-        Notre solution est
+        où <m>\omega_1 =\sqrt{\omega_0^2 - p^2}</m>.  Notre solution est
         <me>
           x(t) = e^{-pt} \bigl( A \cos (\omega_1 t) + B \sin (\omega_1 t) \bigr)
         </me>
@@ -544,20 +519,12 @@
         </me>.
       </p>
       <p>
-        Le graphe d'un exemple est illustré
-        dans la <xref ref="mv_underdampedfig"></xref>.
-        Notez que nous avons encore
+        Le graphe d'un exemple est illustré dans la <xref ref="mv_underdampedfig"></xref>. Notez que nous avons encore
         <m>x(t) \to 0</m> lorsque <m>t \to \infty</m>.
       </p>
       <p>
-        La figure montre aussi les<nbsp/><em>courbes enveloppes
-            <idx><h>courbes enveloppes</h></idx>
-        </em> <m>C e^{-pt}</m> et <m>-C e^{-pt}</m>.
-        La solution est la ligne qui oscille entre les deux courbes.
-        Les courbes enveloppes donnent l'amplitude maximale de l'oscillation à
-        n'importe quel point donné. Le calcul de la courbe enveloppe vous intéressera si,
-        par exemple,
-        vous sautez en <em>bungee</em> et vous voulez éviter de vous cogner la tête.
+        La figure montre aussi les <nbsp/><em>courbes enveloppes
+            <idx><h>courbes enveloppes</h></idx>  </em> <m>C e^{-pt}</m> et <m>-C e^{-pt}</m>. La solution est la ligne qui oscille entre les deux courbes. Les courbes enveloppes donnent l'amplitude maximale de l'oscillation à n'importe quel point donné. Le calcul de la courbe enveloppe vous intéressera si, par exemple, vous sautez en <em>bungee</em> et vous voulez éviter de vous cogner la tête.
       </p>
       <p>
         Le changement de phase <m>\gamma</m> fait varier l'oscillation vers la gauche ou vers la droite,
@@ -568,37 +535,22 @@
         La <em>pseudo-fréquence
             <idx><h>pseudo-fréquence</h></idx>
         </em><fn>
-        On n'appelle pas <m>\omega_1</m> une fréquence puisque la solution n'est pas réellement périodique.
-        </fn> angulaire devient plus petite lorsque l'amortissement <m>c</m>,
-        et donc <m>p</m>, devient plus grand.
-        Cela a du sens :
-        lorsque l'amortissement change légèrement, on ne s'attend pas à
-        ce que le comportement de la solution change beaucoup.
-        Lorsque <m>c</m> augmente, alors, à
-        un certain point, la solution devrait ressembler à
-        la solution pour un amortissement critique ou pour un suramortissement où il n'y a pas d'oscillation.
-        Alors, si <m>c^2</m> approche <m>4km</m>,
-        on veut que <m>\omega_1</m> tende vers 0.
+        On n'appelle pas <m>\omega_1</m> une fréquence puisque la solution n'est pas réellement périodique. </fn> angulaire devient plus petite lorsque l'amortissement <m>c</m>, et donc <m>p</m>, devient plus grand.
+        Cela a du sens : lorsque l'amortissement change légèrement, on ne s'attend pas à ce que le comportement de la solution change beaucoup.
+        Lorsque <m>c</m> augmente, alors, à un certain point, la solution devrait ressembler à la solution pour un amortissement critique ou pour un suramortissement où il n'y a pas d'oscillation. Alors, si <m>c^2</m> approche <m>4km</m>, on veut que <m>\omega_1</m> tende vers 0.
       </p>
       <p>
-        De l'autre côté, lorsque <m>c</m> devient plus petit,
-        <m>\omega_1</m> approche <m>\omega_0</m> (<m>\omega_1</m> est toujours plus petit que <m>\omega_0</m>),
-        et la solution ressemble de plus en plus au cas de sous-amortissement.
-        La courbe enveloppe devient de plus en plus plate lorsque <m>c</m>,
-        et donc <m>p</m>, tend vers 0.
+        De l'autre côté, lorsque <m>c</m> devient plus petit, <m>\omega_1</m> approche <m>\omega_0</m> (<m>\omega_1</m> est toujours plus petit que <m>\omega_0</m>), et la solution ressemble de plus en plus au cas de sous-amortissement. La courbe enveloppe devient de plus en plus plate lorsque <m>c</m>, et donc <m>p</m>, tend vers 0.
       </p>
-    </subsubsection>
-  </subsection>
+    <!-- </subsubsection> -->
+  </paragraphs>
+
   <exercises>
-    <p>
-      \begin{samepage}
-    </p>
     <exercise xml:id="mv_ex1">
       <statement>
         <p>
           Considérez le système masse-ressort tel que <m>m=2</m>,
-          la constante du ressort <m>k=3</m>,
-          et la constante d'amortissement <m>c=1</m>. <ol marker="a"><li> Écrivez le système et trouvez la solution générale de celui-ci. </li>
+          la constante du ressort <m>k=3</m>, et la constante d'amortissement <m>c=1</m>. <ol marker="a"><li> Écrivez le système et trouvez la solution générale de celui-ci. </li> 
           <li> Est-ce que le système est en état de sous-amortissement,
           sur-amortissement ou d'amortissement critique? </li>
           <li> Si le système n'est pas en amortissment critique,

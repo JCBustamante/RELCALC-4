@@ -1,6 +1,6 @@
 <section xml:id="sec_nonhom">
   <title>Équations non homogènes</title>
-  <subsection>
+  <paragraphs>
     <title>Résoudre des équations non homogènes</title>
     <p>
       On a résolu des équations linéaires homogènes à
@@ -95,8 +95,8 @@
       et les constantes choisies pour satisfaire aux conditions initiales pourraient être différentes,
       mais ce serait la même solution.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Coefficients indéterminés</title>
     <p>
           <idx><h>undetermined coefficients</h></idx>
@@ -306,8 +306,8 @@
       alors <m>Ly = e^{2x} + \cos x</m> puisque <m>L</m> est linéaire;
       donc, <m>Ly = L(u+v) = Lu + Lv = e^{2x} + \cos x</m>.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Variation des paramètres</title>
     <p>
       La méthode des coefficients indéterminés fonctionne pour plusieurs problèmes de base.
@@ -466,7 +466,7 @@
         y = C_1 \cos (x) + C_2 \sin (x) + \frac{1}{2} \cos (x) \ln \left\lvert \frac{\sin (x)-1}{\sin (x) + 1} \right\rvert
       </me>.
     </p>
-  </subsection>
+  </paragraphs>
   <exercises>
     <exercise>
       <statement>

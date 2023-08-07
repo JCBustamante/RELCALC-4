@@ -1,6 +1,6 @@
 <section xml:id="sec_ccsol">
   <title>Équations différentielles d'ordre deux à coefficients constants</title>
-  <subsection>
+  <paragraphs>
     <title>Résoudre les équations à coefficients constants</title>
     <p>
       Considérons le problème suivant :
@@ -40,6 +40,7 @@
         <mrow>(r-2)(r-4) \amp  = 0 </mrow>
       </md>.
     </p>
+    <!-- TODO : exercice doit (?) dans un apragraph pose poroblème ?? -->  
     <exercise>
       <statement>
         <p>
@@ -230,8 +231,9 @@
       La limite est donc la valeur de cette dérivée, <m>x e^{rx}</m>,
       et c'est une solution dans le cas d'une racine double.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  
+  <paragraphs>
     <title>Nombres complexes et formule d'Euler</title>
     <p>
       Un polynôme peut avoir des racines complexes.
@@ -362,8 +364,9 @@
         \operatorname{Re}(a+ib) = a \qquad \text{ et }  \qquad \operatorname{Im}(a+ib) = b
       </me>.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  
+  <paragraphs>
     <title>Racines complexes</title>
     <p>
       Supposons que nous avons une équation <m>ay'' + by' + cy = 0</m>,
@@ -493,7 +496,8 @@
         </p>
       </statement>
     </example>
-  </subsection>
+  </paragraphs>
+  
   <exercises>
     <exercise>
       <statement>

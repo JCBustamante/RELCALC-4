@@ -1,6 +1,6 @@
 <section xml:id="sec_scs">
   <title>Séries de sinus et de cosinus</title>
-  <subsection>
+  <paragraphs>
     <title>Fonctions périodiques paires et impaires</title>
     <p>
       Vous avez peut-être remarqué qu'une fonction impaire n'a pas de termes en cosinus dans la série de Fourier et qu'une fonction paire n'a pas de termes en sinus dans la série de Fourier.
@@ -100,8 +100,9 @@
         </figure>
       </statement>
     </example>
-  </subsection>
-  <subsection>
+  </paragraphs>
+
+  <paragraphs>
     <title>Séries sinus et cosinus</title>
     <p>
       Soit <m>f(t)</m> une fonction <m>2L</m>-périodique impaire.
@@ -258,165 +259,172 @@
     </example>
     <exercise>
       <statement>
-        <p>
+
+        <p> Soit <m>f</m> le fonction définie par  <m>f(t) = t^2</m> pour <m>0 \leq t \leq \pi</m>.
           <ol marker="a"><li> Esquissez le graphique de l'extension périodique paire de <m>f</m>. </li>
           <li> Esquissez le graphique de l'extension périodique impaire de <m>f</m>. </li></ol>
         </p>
       </statement>
     </exercise>
-    <exercise>
-      <statement>
+  </paragraphs>
+
+  <!-- TODO : Dans la version anglaise il y a deux applications qui semblent importantes. -->
+
+    <exercises>
+      
+      <exercise>
+        <statement>
+          <p>
+            Trouvez la série de Fourier des extensions périodiques paires impaires et paires de la fonction
+            <m>f(t) = {(t-1)}^2</m> pour <m>0 \leq t \leq 1</m>.
+            Pouvez-vous dire quelle extension est continue à
+            partir des coefficients de la série de Fourier?
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez la série de Fourier de l'extension périodique paire et impaire de la fonction
+            <m>f(t) = t</m> pour <m>0 \leq t \leq \pi</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Trouvez la série de Fourier de l'extension périodique paire et impaire de la fonction
+            <m>f(t) = \sin t</m> pour <m>0 \leq t \leq \pi</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <!-- <title>2</title> -->
+        <statement>
+          <p>
+            Considerez
+            <me>
+              x''(t) + 4 x(t) = f(t)
+            </me>,
+            où <m>f(t) = 1</m> sur <m>0 \lt  t \lt  1</m>. <ol marker="a"><li> Résolvez pour les conditions de Dirichlet
+            <m>x(0)=0, x(1) = 0</m>. </li>
+            <li> Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. </li></ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Considerez
+            <me>
+              x''(t) + 9 x(t) = f(t)
+            </me>,
+            pour <m>f(t) = \sin (2\pi t)</m> on
+            <m>0 \lt  t \lt  1</m>. <ol marker="a"><li> Résolvez pour les conditions de Dirichlet
+            <m>x(0)=0, x(1) = 0</m>. </li>
+            <li> Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. </li></ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Considerez
+            <me>
+              x''(t) + 3 x(t) = f(t) ,  x(0) = 0,  x(1) = 0
+            </me>,
+            où <m>f(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)</m>. Écrivez la solution de <m>x(t)</m> comme une série de Fourier où les coefficients sont donnés en terme de <m>b_n</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Soit <m>f(t) = t^2(2-t)</m> pour <m>0 \leq t \leq 2</m>.
+            Soit <m>F(t)</m> l'extension périodique impaire.
+            Calculez <m>F(1)</m>, <m>F(2)</m>,
+            <m>F(3)</m>, <m>F(-1)</m>,
+            <m>F(\nicefrac{9}{2})</m>, <m>F(101)</m>, <m>F(103)</m>.
+            Note : ne <em>pas</em> calculer la série sinusoïdale.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Soit <m>f(t) = \nicefrac{t}{3}</m> sur
+            <m>0 \leq t \lt 3</m>. <ol marker="a"><li> Trouvez la série de Fourier de l'extension périodique paire. </li>
+            <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
+          </p>
+        </statement>
+      <answer>
         <p>
-          Trouvez la série de Fourier des extensions périodiques paires impaires et paires de la fonction
-          <m>f(t) = {(t-1)}^2</m> pour <m>0 \leq t \leq 1</m>.
-          Pouvez-vous dire quelle extension est continue à
-          partir des coefficients de la série de Fourier?
+          a)
+        <m>\nicefrac{1}{2} + \sum\limits_{\substack{n=1\\n\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos\bigl(\frac{n\pi}{3} t \bigr)</m> b) <m>\sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{\pi n} \sin\bigl(\frac{n\pi}{3} t \bigr)</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Soit <m>f(t) = \cos(2t)</m> sur
+            <m>0 \leq t \lt \pi</m>. <ol marker="a"><li> Trouvez la série de Fourier de l'extension périodique paire. </li>
+            <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
+          </p>
+        </statement>
+      <answer>
         <p>
-          Trouvez la série de Fourier de l'extension périodique paire et impaire de la fonction
-          <m>f(t) = t</m> pour <m>0 \leq t \leq \pi</m>.
+          a)
+        <m>\cos(2t)</m> b) <m>\sum\limits_{\substack{n=1 \\n \text{ impair } } }^\infty \frac{-4n}{\pi n^2 - 4 \pi} \sin(n t)</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Soit <m>f(t)</m> définie sur <m>0 \leq t \lt 1</m>.
+            Maintenant prenez la moyenne des deux extensions
+            <m>g(t) = \frac{F_{\text{ impaire } }(t)+ F_{\text{ paire } }(t)}{2}</m>. <ol marker="a"><li> Qu'est-ce que <m>g(t)</m> si
+            <m>0 \leq t \lt 1</m> (Justifiez!) </li>
+            <li> Qu'est-ce que <m>g(t)</m> si
+            <m>-1 \lt t \lt 0</m> (Justifiez!) </li></ol>
+          </p>
+        </statement>
+      <answer>
         <p>
-          Trouvez la série de Fourier de l'extension périodique paire et impaire de la fonction
-          <m>f(t) = \sin t</m> pour <m>0 \leq t \leq \pi</m>.
+          a) <m>f(t)</m> b) <m>0</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <title>2</title>
-      <statement>
+      </answer>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Soit <m>f(t) = \sum_{n=1}^\infty \frac{1}{n^2} \sin(nt)</m>.
+            Résolvez <m>x''- x = f(t)</m> pour les conditions de Dirichlet
+            <m>x(0) = 0</m> et <m>x(\pi) = 0</m>.
+          </p>
+        </statement>
+      <answer>
         <p>
-          Considerez
-          <me>
-            x''(t) + 4 x(t) = f(t)
-          </me>,
-          où <m>f(t) = 1</m> sur <m>0 \lt  t \lt  1</m>. <ol marker="a"><li> Résolvez pour les conditions de Dirichlet
-          <m>x(0)=0, x(1) = 0</m>. </li>
-          <li> Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. </li></ol>
+          <m>\sum\limits_{n=1}^\infty \frac{-1}{n^2(1+n^2)} \sin(nt)</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </answer>
+      </exercise>
+      <exercise>
+        <title>défi</title>
+        <statement>
+          <p>
+            Soit <m>f(t) = t + \sum_{n=1}^\infty \frac{1}{2^n} \sin(nt)</m>.
+            Résolvez <m>x'' + \pi x = f(t)</m> pour les conditions de Dirichlet
+            <m>x(0) = 0</m> et <m>x(\pi) = 1</m>.
+            Astuce : notez que <m>\frac{t}{\pi}</m> satisfait aux conditions de Dirichlet données.
+          </p>
+        </statement>
+      <answer>
         <p>
-          Considerez
-          <me>
-            x''(t) + 9 x(t) = f(t)
-          </me>,
-          pour <m>f(t) = \sin (2\pi t)</m> on
-          <m>0 \lt  t \lt  1</m>. <ol marker="a"><li> Résolvez pour les conditions de Dirichlet
-          <m>x(0)=0, x(1) = 0</m>. </li>
-          <li> Résolvez pour les Neumann <m>x'(0)=0, x'(1) = 0</m>. </li></ol>
+          <m>\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)</m>
         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Considerez
-          <me>
-            x''(t) + 3 x(t) = f(t) ,  x(0) = 0,  x(1) = 0
-          </me>,
-          où <m>f(t) = \sum_{n=1}^\infty b_n \sin (n \pi t)</m>. Écrivez la solution de <m>x(t)</m> comme une série de Fourier où les coefficients sont donnés en terme de <m>b_n</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Soit <m>f(t) = t^2(2-t)</m> pour <m>0 \leq t \leq 2</m>.
-          Soit <m>F(t)</m> l'extension périodique impaire.
-          Calculez <m>F(1)</m>, <m>F(2)</m>,
-          <m>F(3)</m>, <m>F(-1)</m>,
-          <m>F(\nicefrac{9}{2})</m>, <m>F(101)</m>, <m>F(103)</m>.
-          Note : ne <em>pas</em> calculer la série sinusoïdale.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Soit <m>f(t) = \nicefrac{t}{3}</m> sur
-          <m>0 \leq t \lt 3</m>. <ol marker="a"><li> Trouvez la série de Fourier de l'extension périodique paire. </li>
-          <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
-        </p>
-      </statement>
-    <answer>
-      <p>
-        a)
-      <m>\nicefrac{1}{2} + \sum\limits_{\substack{n=1\\n\text{ impair } } }^\infty \frac{-4}{\pi^2 n^2} \cos\bigl(\frac{n\pi}{3} t \bigr)</m> b) <m>\sum\limits_{n=1}^\infty \frac{2{(-1)}^{n+1}}{\pi n} \sin\bigl(\frac{n\pi}{3} t \bigr)</m>
-      </p>
-    </answer>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Soit <m>f(t) = \cos(2t)</m> sur
-          <m>0 \leq t \lt \pi</m>. <ol marker="a"><li> Trouvez la série de Fourier de l'extension périodique paire. </li>
-          <li> Trouvez la série de Fourier de l'extension périodique impaire. </li></ol>
-        </p>
-      </statement>
-    <answer>
-      <p>
-        a)
-      <m>\cos(2t)</m> b) <m>\sum\limits_{\substack{n=1 \\n \text{ impair } } }^\infty \frac{-4n}{\pi n^2 - 4 \pi} \sin(n t)</m>
-      </p>
-    </answer>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Soit <m>f(t)</m> définie sur <m>0 \leq t \lt 1</m>.
-          Maintenant prenez la moyenne des deux extensions
-          <m>g(t) = \frac{F_{\text{ impaire } }(t)+ F_{\text{ paire } }(t)}{2}</m>. <ol marker="a"><li> Qu'est-ce que <m>g(t)</m> si
-          <m>0 \leq t \lt 1</m> (Justifiez!) </li>
-          <li> Qu'est-ce que <m>g(t)</m> si
-          <m>-1 \lt t \lt 0</m> (Justifiez!) </li></ol>
-        </p>
-      </statement>
-    <answer>
-      <p>
-        a) <m>f(t)</m> b) <m>0</m>
-      </p>
-    </answer>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Soit <m>f(t) = \sum_{n=1}^\infty \frac{1}{n^2} \sin(nt)</m>.
-          Résolvez <m>x''- x = f(t)</m> pour les conditions de Dirichlet
-          <m>x(0) = 0</m> et <m>x(\pi) = 0</m>.
-        </p>
-      </statement>
-    <answer>
-      <p>
-        <m>\sum\limits_{n=1}^\infty \frac{-1}{n^2(1+n^2)} \sin(nt)</m>
-      </p>
-    </answer>
-    </exercise>
-    <exercise>
-      <title>défi</title>
-      <statement>
-        <p>
-          Soit <m>f(t) = t + \sum_{n=1}^\infty \frac{1}{2^n} \sin(nt)</m>.
-          Résolvez <m>x'' + \pi x = f(t)</m> pour les conditions de Dirichlet
-          <m>x(0) = 0</m> et <m>x(\pi) = 1</m>.
-          Astuce : notez que <m>\frac{t}{\pi}</m> satisfait aux conditions de Dirichlet données.
-        </p>
-      </statement>
-    <answer>
-      <p>
-        <m>\frac{t}{\pi} + \sum\limits_{n=1}^\infty \frac{1}{2^n(\pi-n^2)} \sin(nt)</m>
-      </p>
-    </answer>
-    </exercise>
-  </subsection>
+      </answer>
+      </exercise>
+    </exercises>  
 </section>

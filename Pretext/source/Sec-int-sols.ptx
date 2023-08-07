@@ -225,6 +225,7 @@
         </p>
       </statement>
     </example>
+
     <example>
       <statement>
         <p>
@@ -335,6 +336,7 @@
         </p>
       </statement>
     </example>
+
     <example xml:id="ex-int-voiture">
       <statement>
         <p>
@@ -366,6 +368,7 @@
         </p>
       </statement>
     </example>
+    <!-- TODO Cet exercice n'est pas dans un "paragraph" -->
     <exercise>
       <statement>
         <p>

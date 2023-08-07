@@ -1,6 +1,6 @@
 <section xml:id="sec_introtosys">
   <title>Introduction aux systèmes d'équations différentielles ordinaires</title>
-  <subsection>
+  <paragraphs>
     <title>Systèmes différentiels</title>
     <p>
       Un problème n'a pas toujours qu'une seule variable dépendante et qu'une seule équation.
@@ -129,8 +129,8 @@
         <mrow>y_2'' \amp = t y_1'-y_2' + 2 y_1 + \cos(t)</mrow>
       </md>.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Applications</title>
     <p>
       Voici quelques applications simples de systèmes différentiels et la manière de mettre en place les équations.
@@ -261,8 +261,8 @@
         </p>
       </statement>
     </example>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Passage au premier ordre</title>
     <p>
       Avant de parler de la façon de traiter des systèmes différentiels,
@@ -392,8 +392,8 @@
       Il suffit alors de traiter la variable dépendante comme un vecteur au lieu d'un nombre.
       La syntaxe est semblable pour la plupart des langages informatiques mathématiques.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Systèmes autonomes et champs de vecteurs</title>
     <p>
       Un système où les équations ne dépendent pas de la variable indépendante se nomme un
@@ -485,8 +485,8 @@
       mesure que <m>t</m> change.
       Chaque <m>t</m> donne un champ vectoriel différent.
     </p>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Théorème de Picard</title>
     <p>
       Avant d'aller plus loin,
@@ -518,7 +518,7 @@
       ce théorème permet également l'existence et l'unicité
       des solutions pour des équations d'ordre supérieur qui n'ont pas encore été énoncées explicitement.
     </p>
-  </subsection>
+  </paragraphs>
   <exercises>
     <exercise>
       <statement>

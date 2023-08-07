@@ -1,6 +1,6 @@
 <section xml:id="appoffourier_section">
   <title>Applications des séries de Fourier</title>
-  <subsection>
+  <paragraphs>
     <title>Oscillations périodiques forcées</title>
     <p>
       <image width="73%" source="massfigforce"/>
@@ -152,15 +152,15 @@
           Regardons la <xref ref="afs_steadyexfig"></xref>
           pour le graphe de cette solution.
         </p>
-        <figure xml:id="afs_steadyexfig">
+        <figure width = "75%" xml:id="afs_steadyexfig">
           <caption>Graphe de la fonction périodique constante  <m>x_{sp}</m> de l'<xref ref="afs_steadyex"></xref>.</caption>
           <!-- \diffyincludegraphics{width=3in}{width=4.5in}{afs-steadyex} -->
           <image source="afs-steadyex"></image>
         </figure>
       </statement>
     </example>
-  </subsection>
-  <subsection>
+  </paragraphs>
+  <paragraphs>
     <title>Résonance</title>
     <p>
       Tout comme lorsque la fonction de forçage était un simple cosinus,
@@ -325,7 +325,7 @@
       On ne va pas s'intéresser à
       ces détails ici.
     </p>
-  </subsection>
+  </paragraphs>
   <exercises>
     <exercise>
       <statement>

@@ -1,5 +1,6 @@
 <section xml:id="exact_section">
   <title>Équations exactes</title>
+  
   <introduction>
     <p>
       Les <em>équations exactes
@@ -133,7 +134,8 @@
       et la solution d'une telle équation est une fonction potentielle de ce champ de vecteurs.
     </p>
   </introduction>
-  <subsection>
+
+  <paragraphs>
     <title>Résoudre des équations exactes</title>
     <p>
       Vous vous demandez peut-être :
@@ -472,7 +474,8 @@
         </p>
       </statement>
     </example>
-  </subsection>
+  </paragraphs>
+  
   <exercises>
     <exercise>
       <statement>
@@ -581,4 +584,5 @@
     </answer>
     </exercise>
   </exercises>
+
 </section>

@@ -18,7 +18,7 @@
       </em>:
           <idx><h>wave equation</h></idx>
       <me>
-        \mybxbg{~~ y_{tt} = a^2 y_{xx} , ~~}
+        y_{tt} = a^2 y_{xx} ,
       </me>
       pour une certaine constante <m>a > 0</m>.
       L'intuition est semblable à
@@ -252,7 +252,7 @@
         <p>
           Alors, la solution <m>y (x, t)</m> peut être écrite comme une somme des solutions de <xref ref="wave_weq"/> et de <xref ref="wave_zeq"/>:
           <me>
-            \mybxbg{~~ \begin{aligned} y(x,t) \amp  = \sum_{n=1}^\infty b_n \frac{L}{n \pi a} \sin \left( \frac{n \pi}{L} x \right) \sin \left( \frac{n \pi a}{L} t \right) + c_n \sin \left( \frac{n \pi}{L} x \right) \cos \left( \frac{n \pi a}{L} t \right) \\ \amp  = \sum_{n=1}^\infty \sin \left( \frac{n \pi}{L} x \right) \left[ b_n \frac{L}{n \pi a} \sin \left( \frac{n \pi a}{L} t \right) + c_n \cos \left( \frac{n \pi a}{L} t \right) \right] . \end{aligned} ~~}
+            \begin{aligned} y(x,t) \amp  = \sum_{n=1}^\infty b_n \frac{L}{n \pi a} \sin \left( \frac{n \pi}{L} x \right) \sin \left( \frac{n \pi a}{L} t \right) + c_n \sin \left( \frac{n \pi}{L} x \right) \cos \left( \frac{n \pi a}{L} t \right) \\ \amp  = \sum_{n=1}^\infty \sin \left( \frac{n \pi}{L} x \right) \left[ b_n \frac{L}{n \pi a} \sin \left( \frac{n \pi a}{L} t \right) + c_n \cos \left( \frac{n \pi a}{L} t \right) \right] . \end{aligned} 
           </me>
         </p>
       </statement>
