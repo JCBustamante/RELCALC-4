@@ -326,13 +326,7 @@
         mais elle n'a pas de dérivée seconde à
         chaque <m>t</m> entier.
       </p>
-      <exercise>
-        <statement>
-          <p>
-            Calculez <m>f''(0+)</m> et <m>f''(0-)</m>.
-          </p>
-        </statement>
-      </exercise>
+      
       <p>
         Voici les coefficients de la série de Fourier.
         Leur calcul implique plusieurs intégrations par parties et est laissé en exercice.
@@ -369,6 +363,12 @@
       </p>
       </statement>
     </example>
+    <exercise>
+      <statement>
+        <p> Dans le contexte de l'exemple précédent, calculez <m>f''(0+)</m> et <m>f''(0-)</m>.
+        </p>
+      </statement>
+    </exercise>
     <p>
       Pour les fonctions construites par morceaux à
       partir de polynômes comme ci-dessus,

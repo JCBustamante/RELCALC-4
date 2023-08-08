@@ -106,7 +106,65 @@ Remarque
         <author>
           <personname>Jiří Lebl</personname>
         </author>
+        <credit>
+          <title>Traduit par</title>
+          <author>
+          <personname> Virginie Charette </personname>
+          <institution> Université de Sherbrooke </institution>
+        </author>
+        </credit>
       </titlepage>
+
+      <preface>
+        <title>Notes à propos de ce manuel</title>
+        <p>
+          Ceci est une traduction d'un manuel libre écrit par Jiří Lebl.
+          Il s'agit d'un premier cours d'équations différentielles pour les personnes étudiant en génie.
+        </p>
+        <p>
+          Originalement,
+          ce manuel constituait des notes pour un cours enseigné à l'<url href="https://www.math.uiuc.edu/">Université de l'Illinois à Urbana-Champaign (UIUC)</url>,
+          en 2008-2009.
+          Ensuite, l'auteur les a utilisées à l'<url href="https://www.math.ucsd.edu/">Université de Californie à San Diego (UCSD)</url>
+          et à l'<url href="https://math.okstate.edu/">Université de l'État d'Oklahoma (OSU)</url>.
+        </p>
+        <p>
+          Normalement, ces cours sont enseignés avec le livre de Edwards, Penney et Calvis, <em>Differential Equations and Boundary Value Problems: Computing and Modeling</em><nbsp/><xref ref="EP"/>, ou avec celui de Boyce et DiPrima, <em>Elementary Differential Equations and Boundary Value Problems</em><nbsp/><xref ref="BD"/>, et ce manuel-ci se veut un remplacement de ces ressources.
+        </p>
+        <p>
+          L'adaptation en français a été écrite pour les cours de GCH217 et MAT217, donnés à l'Université de Sherbrooke.
+        </p>
+        <p>
+          Voici d'autres références (les détails se trouvent à la ... ): 
+          <ul marker = "circle">
+            <li>
+              <p>
+                E. L.<nbsp/>Ince, <em>Ordinary Differential Equations</em><nbsp/><xref ref="I"/>, classique (et économique);    
+              </p>
+            </li>
+            <li>
+              <p>
+                Stanley Farlow, <em>An Introduction to Differential Equations and Their Applications</em> <nbsp/> 
+                <xref ref="F"/>;                
+              </p>
+            </li>
+            <li>
+              <p>
+                Berg et McGregor, <em>Elementary Partial Differential Equations</em><nbsp/><xref ref="BM"/>, maintenant disponible dans Dover;                
+              </p>
+              <p>
+                William Trench,<em>Elementary Differential Equations with Boundary Value Problems</em><nbsp/><xref ref="T"/>, une ressource libre.
+              </p>
+            </li>
+          </ul>
+        </p>
+
+      </preface>
+
+
+
+
+
     </frontmatter>
     <xi:include href="./Chap-intro.ptx"/>
     <xi:include href="./Chap-ordre-1.ptx"/>
@@ -118,10 +176,10 @@ Remarque
 
     <backmatter>
       <xi:include href="./Bibliographie.ptx"/>
-      <index>
+      <!-- <index>
         <title>Index</title>
         <index-list/>
-      </index>
+      </index> -->
     </backmatter>
   </book>
 </pretext>

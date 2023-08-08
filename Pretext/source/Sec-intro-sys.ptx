@@ -146,7 +146,7 @@
         </p>
         <figure xml:id="sintro_closedbrine">
           <caption>Système fermé de deux réservoirs de solution saline.</caption>
-          <image width="73%" source="lin-tank-sys"/>
+          <image width="50%" source="lin-tank-sys-FR"/>
         </figure>
         <p>
           Supposons que nous avons deux réservoirs contenant un volume de <m>V</m> litres d'eau salée.
@@ -220,34 +220,21 @@
     </example>
     <example xml:id="sintro_carts-example">
       <statement>
-        <p>
-          Étudions un exemple du second ordre.
-          Reprenons le montage avec une masse et un ressort, mais,
-          cette fois-ci, considérons deux masses.
-        </p>
-        <p>        
-          <image width="73%" source="cartsfig"/>
-        </p>
-        <p>
-          On a un ressort avec une constante <m>k</m> et deux masses <m>m_1</m> et <m>m_2</m>.
-          Imaginez les masses comme des chariots qui se déplacent sans friction le long d'une voie linéaire.
-          La variable <m>x_1</m> représente le déplacement du premier chariot,
-          et <m>x_2</m>, le déplacement du second.
-          Les deux chariots reposent sans tension dans le ressort,
-          et l'on marque la position des deux chariots qu'on appelle les positions zéro.
-          Alors, <m>x_1</m> indique la distance du premier chariot par rapport à
-          sa position zéro, et <m>x_2</m> fait la même chose pour le second.
-          La force exercée par le ressort sur le premier chariot est
-          <m>k(x_2-x_1)</m> étant donné
-          que <m>x_2-x_1</m> représente l'étirement
-          (ou la compression)
-          du ressort par rapport à
-          la position de repos.
-          La force exercée sur le second chariot est l'inverse,
-          donc la même avec un signe négatif.
-          La deuxième loi de Newton<idx><h>deuxième loi de Newton</h></idx> stipule que la force est égale à
-          la masse multipliée par l'accélération.
-          Le système d'équations est donc
+        
+        <sidebyside widths="65% 35%" valign="bottom">
+          <p>
+            Étudions un exemple du second ordre.
+            Reprenons le montage avec une masse et un ressort, mais,
+            cette fois-ci, considérons deux masses.
+          </p>
+          <p>        
+            <image width="100%" source="cartsfig-FR"/>
+          </p>
+  
+          
+        </sidebyside>
+          <p>
+          On a un ressort avec une constante <m>k</m> et deux masses <m>m_1</m> et <m>m_2</m>. Imaginez les masses comme des chariots qui se déplacent sans friction le long d'une voie linéaire. La variable <m>x_1</m> représente le déplacement du premier chariot, et <m>x_2</m>, le déplacement du second. Les deux chariots reposent sans tension dans le ressort, et l'on marque la position des deux chariots qu'on appelle les positions zéro. Alors, <m>x_1</m> indique la distance du premier chariot par rapport à sa position zéro, et <m>x_2</m> fait la même chose pour le second. La force exercée par le ressort sur le premier chariot est <m>k(x_2-x_1)</m> étant donné que <m>x_2-x_1</m> représente l'étirement (ou la compression) du ressort par rapport à la position de repos. La force exercée sur le second chariot est l'inverse, donc la même avec un signe négatif. La deuxième loi de Newton<idx><h>deuxième loi de Newton</h></idx> stipule que la force est égale à la masse multipliée par l'accélération. Le système d'équations est donc
           <md>
             <mrow>m_1 x_1'' \amp  = k(x_2-x_1) ,</mrow>
             <mrow>m_2 x_2'' \amp  = - k(x_2-x_1) </mrow>
@@ -467,13 +454,13 @@
     <figure xml:id="sintro-vectorfield_fig">
       <caption>Portrait de phase pour <m>x' = 2y-x</m>, <m>y' = x</m>.</caption>
       <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield} -->
-      <image source="sintro-vectorfield"/>
+      <image source="sintro-vectorfield" width ="75%"/>
     </figure>
     <figure width="%" xml:id="sintro-vectorfield-sol_fig">
       <caption>Portrait de phase pour <m>x' = 2y-x</m>, <m>y' = x</m>, avec la trajectoire de la solution commençant au point <m>(1,0)</m>
       pour <m>0 \leq t \leq 2</m>.</caption>
       <!-- \diffyincludegraphics{width=3.0in}{width=4.5in}{sintro-vectorfield-sol} -->
-      <image source="sintro-vectorfield-sol"/>
+      <image source="sintro-vectorfield-sol" width ="75%"/>
     </figure>
     <p>
       Observez la similitude avec les diagrammes pour les systèmes autonomes à une dimension.

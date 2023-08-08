@@ -182,34 +182,38 @@
         <mrow>IA \amp  = A = AI </mrow>
       </md>.
     </p>
-    <p>
-      [2] Quelques avertissements s'imposent.
-      <ol marker="i">
-        <li>
-          <p>
-            En règle générale, <m>AB \not= BA</m>
-            (le hasard peut faire que ce soit vrai).
-            La multiplication de matrices n'est pas commutative.
-              <idx><h>commutative</h></idx>
-          Par exemple,
-            prenez <m>A = \left[ \begin{matrix}1 \amp 1 \\ 1 \amp 1 \end{matrix} \right]</m> et <m>B = \left[ \begin{matrix}1 \amp 0 \\ 0 \amp 2 \end{matrix} \right]</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Le fait que <m>AB = AC</m> ne signifie pas nécessairement que <m>B=C</m>,
-            même si <m>A</m> n'est pas nulle.
-          </p>
-        </li>
-        <li>
-          <p>
-            Le fait que <m>AB = 0</m> ne signifie pas nécessairement que <m>A=0</m> ou <m>B=0</m>.
-            Essayez, par exemple,
-            avec <m>A = B = \left[ \begin{matrix}0 \amp 1 \\ 0 \amp 0 \end{matrix} \right]</m>.
-          </p>
-        </li>
-      </ol>
-    </p>
+    <warning>
+      <p>
+        Quelques avertissements s'imposent.
+        <ol marker="i">
+          <li>
+            <p>
+              En règle générale, <m>AB \not= BA</m>
+              (le hasard peut faire que ce soit vrai).
+              La multiplication de matrices n'est pas commutative.
+                <idx><h>commutative</h></idx>
+            Par exemple,
+              prenez <m>A = \left[ \begin{matrix}1 \amp 1 \\ 1 \amp 1 \end{matrix} \right]</m> et <m>B = \left[ \begin{matrix}1 \amp 0 \\ 0 \amp 2 \end{matrix} \right]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Le fait que <m>AB = AC</m> ne signifie pas nécessairement que <m>B=C</m>,
+              même si <m>A</m> n'est pas nulle.
+            </p>
+          </li>
+          <li>
+            <p>
+              Le fait que <m>AB = 0</m> ne signifie pas nécessairement que <m>A=0</m> ou <m>B=0</m>.
+              Essayez, par exemple,
+              avec <m>A = B = \left[ \begin{matrix}0 \amp 1 \\ 0 \amp 0 \end{matrix} \right]</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      
+      
+    </warning>
     <p>
       Afin que les deux derniers points soient vrais, on doit <q>diviser</q>
       par une matrice.
@@ -323,8 +327,10 @@
     </p>
     <p>
       Pour la première ligne, on obtient
+
+
       <me>
-        \det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + a_{13} \det (A_{13}) - \cdots \begin{cases} + a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est impair}  \\ - a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est pair. } \end{cases}
+        \det (A) = a_{11} \det (A_{11}) - a_{12} \det (A_{12}) + \cdots \begin{cases} + a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est impair}  \\ - a_{1n} \det (A_{1n}) \amp  \text{ si }  n \text{ est pair. } \end{cases}
       </me>
     </p>
     <p>
@@ -456,7 +462,7 @@
       </me>.
     </p>
     <p>
-      [2] On peut appliquer les trois opérations élémentaires suivantes :
+      On peut appliquer les trois opérations élémentaires suivantes :
       <ol marker="i">
         <li>
           <p>

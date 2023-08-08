@@ -237,7 +237,7 @@
         <me>
           F(t) = \sum_{\substack{n=1 \\ n \text{ impair } } }^\infty \frac{4}{\pi n} \sin (n \pi t)
         </me>.
-        (Exercice : calculez la série de Fourier de <m>F</m> pour vérifier l'équation ci-dessus.)
+        <term>Exercice :</term> calculez la série de Fourier de <m>F</m> pour vérifier l'équation ci-dessus.
       </p>
       <!-- <exercise>
         <statement>

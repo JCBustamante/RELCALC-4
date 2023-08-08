@@ -23,9 +23,7 @@
     <p>
       Avant de procéder,
       parlons un peu plus en détail des fonctions périodiques.
-      Une fonction est <em>périodique
-          <idx><h>périodique</h></idx>
-      </em> avec période <m>P</m> si <m>f(t) = f(t+P)</m> pour tout <m>t</m>.
+      Une fonction est <em>périodique</em> avec période <m>P</m> si <m>f(t) = f(t+P)</m> pour tout <m>t</m>.
       On dit alors que <m>f(t)</m> est <m>P</m>-périodique.
       On note qu'une fonction <m>P</m>-périodique est aussi <m>2P</m>-périodique,
       <m>3P</m>-périodique et ainsi de suite.

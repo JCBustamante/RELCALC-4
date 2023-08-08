@@ -158,6 +158,7 @@
         </p>
       </statement>
     </exercise>
+    <warning>
     <p>
       Note : une erreur fréquente est de résoudre pour des constantes en utilisant les conditions initiales avec <m>y_c</m> et de seulement ajouter la solution particulière <m>y_p</m> par la suite.
       <em>Ça ne fonctionnera pas</em>.
@@ -165,6 +166,7 @@
       <em>seulement ensuite</em>
       résoudre pour les constantes en utilisant les conditions initiales.
     </p>
+    </warning>
     <p>
       Lorsque le membre de droite est composé
       d'exponentielles, de sinus ou de cosinus,

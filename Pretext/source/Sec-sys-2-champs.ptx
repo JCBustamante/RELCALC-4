@@ -39,7 +39,7 @@
       <caption>Valeurs propres de <m>P</m>.</caption>
       <!-- {3.25in}
       \diffyincludegraphics{width=3in}{width=4.5in}{pln-source-eig} -->
-      <image source="pln-source-eig"/>
+      <image source="pln-source-eig" width = "75%"/>
     </figure>
     <p>
       Supposons que le point <m>(x,y)</m> est sur la ligne définie par un vecteur propre <m>\vec{v}</m> pour une valeur propre <m>\lambda</m>,
@@ -70,13 +70,13 @@
     <figure xml:id="pln_source-eig-arrfig">
       <caption>Valeurs propres de <m>P</m> avec directions.</caption>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{pln-source-eig-arr} -->
-      <image source="pln-source-eig-arr"/>
+      <image source="pln-source-eig-arr" width = "75%"/>
     </figure>
     <figure xml:id="pln_source-fullfig">
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{pln-source-full} -->
       <caption>Exemple de nœud répulsif avec ses vecteurs propres et ses
       solutions.</caption>
-      <image source="pln-source-full"/>
+      <image source="pln-source-full" width = "75%" />
     </figure>
     <p>
       <em>Cas n<m>^\text{o}</m>2.</em> Supposons que les deux valeurs propres sont négatives.
@@ -100,13 +100,13 @@
       <caption>Exemple de nœud attractif avec ses vecteurs propres et ses
       solutions.</caption>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{pln-sink-full} -->
-      <image source="pln-sink-full"/>
+      <image source="pln-sink-full" width = "75%"/>
     </figure>
     <figure xml:id="pln_saddle-fullfig">
       <caption>Exemple de point selle avec ses vecteurs propres et ses
       solutions.</caption>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{pln-saddle-full} -->
-      <image source="pln-saddle-full"/>
+      <image source="pln-saddle-full" width = "75%" />
     </figure>
     <p>
       <em>Cas n<m>^\text{o}</m>3.</em> Supposons une valeur propre positive et une négative.
@@ -124,14 +124,14 @@
       </em>.
     </p>
     <p>
-      [0] Pour les trois prochains cas,
+      Pour les trois prochains cas,
       on suppose que les valeurs propres sont complexes.
       Dans cette situation,
       les vecteurs propres sont également complexes,
       et l'on ne peut pas simplement les tracer dans le plan.
     </p>
     <p>
-      [0] <em>Cas n<m>^\text{o}</m>4.</em> Supposons que les valeurs propres sont purement imaginaires,
+      <em>Cas n<m>^\text{o}</m>4.</em> Supposons que les valeurs propres sont purement imaginaires,
       c'est-à-dire,
       supposons, que les valeurs propres sont <m>\pm ib</m>.
       Par exemple,
@@ -161,12 +161,12 @@
     </p>
     <figure xml:id="pln_ellipsesfig">
       <caption>Exemple de point centre.</caption>
-      <image source="pln-ellipses"/>
+      <image source="pln-ellipses" width = "75%"/>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{} -->
      </figure>
     <figure xml:id="pln_spiral-sourcefig">
       <caption>Exemple de foyer répulsif.</caption>
-      <image source="pln-spiral-source"/>
+      <image source="pln-spiral-source" width = "75%" />
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{pln-spiral-source} -->
     </figure>
     <p>
@@ -220,7 +220,7 @@
     </p>
     <figure xml:id="pln_spiral-sinkfig">
       <caption>Exemple de foyer attractif.</caption>
-      <image source="pln-spiral-sink"/>
+      <image source="pln-spiral-sink" width = "75%"/>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{pln-spiral-sink} -->
     </figure>
     <p>
@@ -267,10 +267,6 @@
       </tabular>
     </table>
 
-
-
-
-    <!-- TODO fix table -->
   <!-- </introduction> -->
 
 <exercises>
@@ -379,27 +375,26 @@
       </statement>
     <answer>
       <p>
-        
+        <image width="37%" source="0100vectorfield"/>
       </p>
+      <p>
+        The solution does not move anywhere if <m>y = 0</m>.
+        When <m>y</m> is positive, the solution moves
+        (with constant speed)
+        in the positive <m>x</m> direction.
+        When <m>y</m> is negative, the solution moves
+        (with constant speed)
+        in the negative <m>x</m> direction.
+        It is not one of the behaviors we have seen.
+      </p>
+      <p>
+        Note that the matrix has a double eigenvalue 0 and the general solution is <m>x = C_1 t + C_2</m> and <m>y = C_1</m>,
+        which agrees with the description above.
+      </p>
+      
     </answer>
     </exercise>
-    <p>
-      <image width="37%" source="images/0100vectorfield.png"/>
-    </p>
-    <p>
-      The solution does not move anywhere if <m>y = 0</m>.
-      When <m>y</m> is positive, the solution moves
-      (with constant speed)
-      in the positive <m>x</m> direction.
-      When <m>y</m> is negative, the solution moves
-      (with constant speed)
-      in the negative <m>x</m> direction.
-      It is not one of the behaviors we have seen.
-    </p>
-    <p>
-      Note that the matrix has a double eigenvalue 0 and the general solution is <m>x = C_1 t + C_2</m> and <m>y = C_1</m>,
-      which agrees with the description above. }
-    </p>
+    
 
   </exercises>
 </section>

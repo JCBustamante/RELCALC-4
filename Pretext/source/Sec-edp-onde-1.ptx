@@ -183,7 +183,7 @@
       </statement>
     </exercise>
     <p>
-      On résout <xref ref="wave_zeq"/> de façaon sembable.
+      On résout <xref ref="wave_zeq"/> de façon sembable.
       On essaie encore <m>z(x,y) = X(x)T(t)</m>.
       La procédure fonctionne exactement de la même manière qu'avant.
       On obtient
@@ -447,9 +447,6 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \begin{samepage}
-    </p>
     <exercise>
       <statement>
         <p>
@@ -465,9 +462,7 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \end{samepage}
-    </p>
+    
     <exercise>
       <title>défi</title>
       <statement>
@@ -555,8 +550,6 @@
       </p>
     </answer>
     </exercise>
-    <p>
-      \appendix
-    </p>
+    
   </exercises>
 </section>

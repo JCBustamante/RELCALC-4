@@ -40,14 +40,16 @@
         <mrow>(r-2)(r-4) \amp  = 0 </mrow>
       </md>.
     </p>
-    <!-- TODO : exercice doit (?) dans un apragraph pose poroblème ?? -->  
-    <exercise>
-      <statement>
-        <p>
-          Vérifiez que <m>y_1= e^{2x}</m> et <m>y_2= e^{4x}</m> sont des solutions.
-        </p>
-      </statement>
-    </exercise>
+    
+      <exercise>
+        <statement>
+          <p>
+            Vérifiez que <m>y_1= e^{2x}</m> et <m>y_2= e^{4x}</m> sont des solutions.
+          </p>
+        </statement>
+      </exercise>
+    
+
     <p>
       Les fonctions <m>e^{2x}</m> et <m>e^{4x}</m> sont linéairement indépendantes.
       Sinon, on pourrait écrire
@@ -188,14 +190,7 @@
           y = (C_1 + C_2 x)\, e^{4 x} = C_1 e^{4x} + C_2 x e^{4x}
         </me>.
       </p>
-      <exercise>
-        <statement>
-          <p>
-            Vérifiez que <m>e^{4x}</m> et
-            <m>x e^{4x}</m> sont linéairement indépendantes.
-          </p>
-        </statement>
-      </exercise>
+     
       <p>
         Il est clair que <m>e^{4x}</m> est une solution de l'équation.
         Si <m>x e^{4x}</m> résout l'équation,
@@ -210,6 +205,14 @@
       </p>
       </statement>
     </example>
+      <exercise>
+        <statement>
+          <p>
+            Vérifiez que <m>e^{4x}</m> et
+            <m>x e^{4x}</m> sont linéairement indépendantes.
+          </p>
+        </statement>
+      </exercise>
     <p>
       Remarquons que les équations linéaires à
       coefficients constants présentant une racine double sont rares.
@@ -281,6 +284,7 @@
       on utilisera la convention des mathématiciens et des mathématiciennes,
       c'est-à-dire la lettre <m>i</m>.
     </p>
+
     <exercise>
       <statement>
         <p>
@@ -297,9 +301,7 @@
       </statement>
     </exercise>
     <p>
-      [2] On peut également définir l'exponentielle
-      <m>e^{a+ib}</m> d'un nombre complexe. À cette fin,
-      on utilise la série de Taylor de <m>e^x</m> en remplaçant la variable <m>x</m> dans la série par un nombre complexe.
+      On peut également définir l'exponentielle <m>e^{a+ib}</m> d'un nombre complexe. À cette fin, on utilise la série de Taylor de <m>e^x</m> en remplaçant la variable <m>x</m> dans la série par un nombre complexe.
       Puisque les propriétés de l'exponentielle peuvent être prouvées en considérant sa série de Taylor,
       ces propriétés sont toujours vraies pour les exponentielles complexes.
       Par exemple, une propriété

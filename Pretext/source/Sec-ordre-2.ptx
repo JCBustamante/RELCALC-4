@@ -252,7 +252,9 @@
       On a seulement besoin de trouver <m>v</m>.
       On met <m>y_2</m> dans l'équation :
       <md>
-        <mrow>0 =  y_2'' + p(x) y_2' + q(x) y_2 \amp  =  y_1'' v + 2 y_1' v' + y_1 v'' + p(x) ( y_1' v + y_1 v' ) + q(z) y_1 v</mrow>
+        <mrow>0 \amp=  y_2'' + p(x) y_2' + q(x) y_2   
+        </mrow>
+        <mrow> \amp =  y_1'' v + 2 y_1' v' + y_1 v'' + p(x) ( y_1' v + y_1 v' ) + q(z) y_1 v</mrow>
         <mrow>\amp  = y_1 v'' + (2 y_1' + p(x) y_1) v' + \cancelto{0}{\bigl( y_1'' + p(x) y_1' + q(x) y_1 \bigr)} v </mrow>
       </md>.
     </p>
@@ -384,7 +386,7 @@
       </statement>
     </exercise>
     <exercise>
-      <title>\myindex{Équation de Chebyshev d'ordre 1}</title>
+      <title>Équation de Chebyshev d'ordre 1</title>
       <statement>
         <p>
           Prenez <m>(1-x^2)y''-xy' + y = 0</m>. <ol marker="a"><li> Montrez que <m>y=x</m> est une solution. </li>
@@ -394,7 +396,7 @@
       </statement>
     </exercise>
     <exercise>
-      <title>\myindex{Équation d'Hermite d'ordre 2}</title>
+      <title>Équation d'Hermite d'ordre 2</title>
       <statement>
         <p>
           Prenons <m>y''-2xy' + 4y = 0</m>. <ol marker="a"><li> Montrez que

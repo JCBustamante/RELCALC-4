@@ -661,7 +661,7 @@
     <exercise>
       <statement>
         <p>
-          Résolvez <ol marker="a"><li>
+          Résolvez <ol marker="a" cols = "2"><li>
           <m>\dfrac{dx}{dt} = -4x,
           x(0)=9</m> </li>
           <li> <m>\dfrac{d^2x}{dt^2} = -4x,
@@ -670,6 +670,32 @@
           <li> <m>\dfrac{d^2T}{dx^2} = 4 T, T(0)=0, T'(0)=6</m> </li></ol>
         </p>
       </statement>
+      <answer>
+        <p>
+          <ol marker = "a" cols = "2">
+            <li>
+              <p><m>x=9e^{-4t}</m>
+                
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x=\cos(2t) + \sin(2t) </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>p=4e^{3q}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>T= 3\sinh (2x)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
     </exercise>
 </exercises>
 </section>

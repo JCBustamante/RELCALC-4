@@ -32,7 +32,7 @@
     <figure xml:id="exact_circlesfig">
       <caption>Solutions pour <m>F(x,y) = x^2+y^2 = C</m> pour quelques valeurs de <m>C</m>.</caption>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{circlesfig} -->
-      <image width="100%" source="circlesfig"/>
+      <image width = "75%" source="circlesfig"/>
     </figure>
     <p>
       Les lieux d'énergie constante,
@@ -430,7 +430,7 @@
           <m>-\frac{y}{x^2+y^2} dx + \frac{x}{x^2+y^2} dy = 0</m>, <m>y(1) = 2</m>,
           avec le point initial indiqué.</caption>
           <!-- \diffyincludegraphics{width=3in}{width=4.5in}{exact-y2x} -->
-          <image width="100%" source="exact-y2x"/>
+          <image width = "75%" source="exact-y2x"/>
         </figure>
       </statement>
     </example>

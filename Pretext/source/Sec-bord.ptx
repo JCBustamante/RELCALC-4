@@ -5,12 +5,8 @@
     <p>
       Avant de s'attaquer aux séries de Fourier,
       on va étudier les problèmes
-      <em>à valeurs au bord
-          <idx><h>boundary value problem</h></idx>
-      </em>
-      (ou <em>à valeurs limites
-          <idx><h>endpoint problem</h></idx>
-      </em>).
+      <em>à valeurs au bord</em>
+      (ou <em>à valeurs limites</em>).
       On considère
       <me>
         x'' + \lambda x = 0,  x(a) = 0,  x(b) = 0
@@ -100,14 +96,10 @@
     </p>
     <p>
       Un nombre <m>\lambda</m> est appelé
-      une <em>valeur propre <idx><h>eigenvalue of a boundary value problem</h></idx>
-      </em> de <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) si et seulement s'il existe une solution non nulle
-      (non identiquement nulle)
-      à
+      une <em>valeur propre </em> de <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) si et seulement s'il existe une solution non nulle (non identiquement nulle) à
       <xref ref="bv_eq1"/> (resp.<nbsp/><xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/>) donnée par un <m>\lambda</m> spécifique.
       Une solution non nulle est appelée
-      <em>fonction propre correspondante<idx><h>fonction propre correspondante</h></idx>
-      </em>.
+      <em>fonction propre correspondante</em>.
           <idx><h>corresponding eigenfunction</h></idx>
     </p>
     <p>
@@ -370,13 +362,9 @@
     <title>Orthogonalité des fonctions propres</title>
     <p>
       Une chose qui sera très utile dans la prochaine section est la propriété
-      d'<em>orthogonalité
-          <idx><h>orthogonalité</h></idx>
-      </em> des fonctions propres.
+      d'<em>orthogonalité</em> des fonctions propres.
       C'est analogue aux vecteurs propres d'une matrice.
-      Une matrice est <em>symétrique
-          <idx><h>symmetric matrix</h></idx>
-      </em> si <m>A = A^T</m>
+      Une matrice est <em>symétrique</em> si <m>A = A^T</m>
       (est égale à sa transposée).
       <em>Les vecteurs propres de deux valeurs propres distinctes d'une matrice symétrique sont orthogonaux.</em>
       L'opérateur différentiel que l'on considère agit plutôt comme une matrice symétrique.
@@ -387,8 +375,7 @@
         <p>
           Soit <m>x_1(t)</m> et <m>x_2(t)</m> deux fonctions propres du problème <xref ref="bv_eq1"/>,
           <xref ref="bv_eq2"/> ou <xref ref="bv_eq3"/> pour deux valeurs propres distinctes <m>\lambda_1</m> et <m>\lambda_2</m>.
-          Alors, elles sont <em>orthogonales <idx><h>orthogonal</h><h>functions</h></idx>
-          </em> dans le sens que
+          Alors, elles sont <em>orthogonales</em> dans le sens que
           <me>
             \int_a^b x_1(t) x_2(t) \,dt = 0
           </me>.
@@ -473,12 +460,10 @@
       On en donnera une version un peu plus générale plus tard.
     </p>
     <theorem xml:id="thm_fredholmsimple">
-      <title>Alternative de Fredholm<footnote>Nommée d'après le mathématicien suédois
-      <url href="https://fr.wikipedia.org/wiki/Ivar_Fredholm">Erik Ivar Fredholm</url>
-      (1866-1927).</footnote></title>
+      <title>Alternative de Fredholm <fn>Nommée d'après le mathématicien suédois<url href="https://fr.wikipedia.org/wiki/Ivar_Fredholm">Erik Ivar Fredholm</url>
+      (1866-1927).</fn></title>
       <statement>
         <p>
-              <idx><h>Fredholm alternative</h><h>simple case</h></idx>
           Exactement l'une des affirmations suivantes est vraie.
           Soit
           <men xml:id="simpfredhomeq">
@@ -626,11 +611,14 @@
     </p>
   </paragraphs>
   <exercises>
-    <p>
-      Astuce pour les exercices suivants : notez que lorsque <m>\lambda > 0</m>,
-      alors <m>\cos \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> et
-      <m>\sin \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> sont aussi des solutions de l'équation homogène.
-    </p>
+    <introduction>
+      <p>
+        Astuce pour les exercices suivants : notez que lorsque <m>\lambda > 0</m>,
+        alors <m>\cos \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> et
+        <m>\sin \bigl( \sqrt{\lambda}\, (t - a) \bigr)</m> sont aussi des solutions de l'équation homogène.
+      </p>
+    </introduction>
+    
     <exercise>
       <statement>
         <p>

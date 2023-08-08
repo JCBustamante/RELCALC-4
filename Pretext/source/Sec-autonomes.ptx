@@ -64,11 +64,11 @@
       <caption>Le champ de directions de
       <m>x' = 0.3\ (5-x)</m> et quelques solutions.</caption>
       <!-- \diffyincludegraphics{width=2.93in}{width=4.5in}{2-2-coffee} -->
-      <image width="100%" source="2-2-coffee"/>
+      <image width = "75%" source="2-2-coffee"/>
     </figure>
     <figure xml:id="x2_2_logisticfig">
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic} -->
-      <image width="100%" source="2-2-logistic"/>
+      <image width = "75%" source="2-2-logistic"/>
       <caption>Le champ de directions de <m>x' = 0.1\,x\,(5-x)</m> et quelques solutions.</caption>
     </figure>
     <p>
@@ -161,36 +161,37 @@
         </li>
       </ul>
     </p>
-    <p>
-      Dans notre exemple :
-      <ul>
-        <li>
-          <p>
-            Pour <m>x > 5</m> : <m>f(6) = -0{,}6 \lt 0</m>, donc <m>f(x) \lt 0</m>,
-            et la flèche au-dessus de <m>x=5</m> pointe vers le bas.
-          </p>
-        </li>
-        <li>
-          <p>
-            Pour <m>0 \lt x \lt 5</m> :
-            <m>f(1) = 0{,}4 > 0</m>, donc <m>f(x) > 0</m>,
-            et la flèche dans cet intervalle pointe vers le haut.
-          </p>
-        </li>
-        <li>
-          <p>
-            Pour <m>x \lt 0</m> :
-            <m>f(-1) = -0{,}6 \lt 0</m>, donc <m>f(x) \lt 0</m>,
-            et la flèche dans cet intervalle pointe vers le bas.
-          </p>
-        </li>
-      </ul>
-    </p>
+    
 
     
-    <!-- TODO : Images vs LaTeX --> 
-    <sidebyside widths = "15%">
-      <image width = "23%" source="2-2-l-phasedia"/>
+    
+    <sidebyside widths = "75% 10%" valign = "middle">
+      <p>
+        Dans notre exemple :
+        <ul>
+          <li>
+            <p>
+              Pour <m>x > 5</m> : <m>f(6) = -0{,}6 \lt 0</m>, donc <m>f(x) \lt 0</m>,
+              et la flèche au-dessus de <m>x=5</m> pointe vers le bas.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pour <m>0 \lt x \lt 5</m> :
+              <m>f(1) = 0{,}4 > 0</m>, donc <m>f(x) > 0</m>,
+              et la flèche dans cet intervalle pointe vers le haut.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pour <m>x \lt 0</m> :
+              <m>f(-1) = -0{,}6 \lt 0</m>, donc <m>f(x) \lt 0</m>,
+              et la flèche dans cet intervalle pointe vers le bas.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <image width = "10%" source="2-2-l-phasedia"/>
     </sidebyside>
     <p>
       Grâce à un diagramme de phase,
@@ -220,7 +221,7 @@
     </p>
     <!-- TODO : Images vs LaTeX --> 
     <p>
-      <image width="73%" source="2-2-ph-class"/>
+      <image width="50%" source="2-2-ph-class"/>
     </p>
     <p>
       Puisqu'un modèle mathématique est généralement une version approximative de la réalité, la présence de points critiques instables peut donner du fil à retordre.
@@ -285,11 +286,11 @@
       <caption>Le champ de directions et quelques solutions pour
       <m>x' = 0{,}1\ x\ (8-x)-1</m>.</caption>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h1} -->
-      <image width="100%" source="2-2-logistic-h1"/>
+      <image width = "75%" source="2-2-logistic-h1"/>
     </figure>
     <figure xml:id="x2_2_harvc">  
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-hc} -->
-      <image width="100%" source="2-2-logistic-hc"/>
+      <image width = "75%" source="2-2-logistic-hc"/>
       <caption>Le champ de directions et quelques solutions pour
       <m>x' = 0{,}1\,x\,(8-x)-1.6</m>.</caption>
     </figure>
@@ -313,7 +314,7 @@
       <caption>Le champ de directions et quelques solutions pour
       <m>x' = 0{,}1\ x\ (8-x)-2</m>.</caption>
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{2-2-logistic-h2} -->
-      <image width="100%" source="2-2-logistic-h2"/>
+      <image width = "75%" source="2-2-logistic-h2"/>
     </figure>
   <!-- </introduction> -->
   <exercises>

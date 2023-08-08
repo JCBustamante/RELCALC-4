@@ -335,7 +335,7 @@
       </statement>
     <answer>
       <p>
-        Yes.
+        Oui.
       </p>
     </answer>
     </exercise>
@@ -350,7 +350,7 @@
       </statement>
     <answer>
       <p>
-        No.
+        Non.
       <m>2 \left[ \begin{matrix}\cosh(t) \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{t} \\ 1 \end{matrix} \right] - \left[ \begin{matrix}e^{-t} \\ 1 \end{matrix} \right] = \vec{0}</m>
       </p>
     </answer>

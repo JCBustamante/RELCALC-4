@@ -210,7 +210,10 @@
     </p>
     <figure xml:id="implicitsols_fig">
       <caption>Solution implicite <m>y^2+2\ln|y|=x^2</m> à l'équation <m>y'=\frac{xy}{y^2+1}</m>.</caption>
-      \diffyincludegraphics{width=3in}{width=4.5in}{implicitsols}
+      <image source="implicitsols" width="75%">
+        <description>(for accessibility)</description>
+      </image>
+      <!-- \diffyincludegraphics{width=3in}{width=4.5in}{implicitsols} -->
     </figure>
     <p>
       Cet exemple admet aussi la solution <m>y=0</m>.
@@ -226,6 +229,7 @@
     </p>
   </paragraphs>
   <paragraphs>
+    
     <title>Exemples d'équations séparables</title>
     <example>
       <statement>

@@ -192,8 +192,8 @@
           Voyons maintenant une application des équations linéaires qui est couramment rencontrée :          la concentration de produits chimiques dans un plan d'eau.
         </p>
         
-        <sidebyside widths="45% 45%"  valign="top">
-          <image width="73%" source="lin-tank"/>
+        <sidebyside widths="35% 45%"  valign="top">
+          <image width="73%" source="lin-tank-FR"/>
           <p>
           <!-- TODO on ne voit pas le texte sur l'image -->
           Un réservoir d'une capacité de 100 litres contient 10 kilogrammes de sel dissous dans 60 litres d'eau. Une solution d'eau saline avec une concentration de 0,1 kilogramme par litre entre dans le réservoir à

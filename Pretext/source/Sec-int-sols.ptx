@@ -260,7 +260,7 @@
           Cette solution comporte des singularités.
           Par exemple, si <m>C=1</m>,
           alors la solution explose lorsqu'on s'approche de <m>x=1</m>.
-          Voir <xref ref="x1over1mx_fig">la</xref>.
+          Voir <xref ref="x1over1mx_fig">la figure </xref>.
           En général,
           c'est difficile de prédire le comportement d'une solution juste en regardant l'équation différentielle.
           En effet, l'équation <m>y' = y^2</m> est très jolie et définie partout,
@@ -275,8 +275,11 @@
           Dans la figure, c'est la partie gauche du graphe.
         </p>
         <figure xml:id="x1over1mx_fig">
+          <image source="1over1mx" width="85%">
+            <description>(for accessibility)</description>
+          </image>
           <caption>Graphe de <m>y=\frac{1}{1-x}</m>.</caption>
-          \diffyincludegraphics{width=3in}{width=4.5in}{1over1mx}
+          <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1over1mx} -->
         </figure>
       </statement>
     </example>
@@ -368,7 +371,7 @@
         </p>
       </statement>
     </example>
-    <!-- TODO Cet exercice n'est pas dans un "paragraph" -->
+    
     <exercise>
       <statement>
         <p>
@@ -378,7 +381,7 @@
     </exercise>
   <!--  </introduction> --> 
 
-  <!-- TODO -->
+  
   <exercises>
     <exercise>
       <statement>

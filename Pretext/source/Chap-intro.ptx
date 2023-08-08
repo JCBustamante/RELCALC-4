@@ -1,6 +1,6 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="intro_chapter">
   <title>Introduction</title>
-  <xi:include  href="Sec-notes.ptx"/>
+  <!-- <xi:include  href="Sec-notes.ptx"/> -->
   <xi:include  href="Sec-intro-edo.ptx"/>
   <xi:include  href="Sec-class-edo.ptx"/>
 </chapter>

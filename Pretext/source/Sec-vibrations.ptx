@@ -9,23 +9,24 @@
   <paragraphs>
     <title>Quelques exemples</title>
     <p>
-      <image width="50%" source="massfigforce"/>
-    </p>
+      Le premier exemple est une masse sur un ressort.
+        Supposons que nous avons une masse <m>m > 0</m>
+        (en kg)
+        connectée à
+        un mur fixe par un ressort, de constante <m>k > 0</m>
+        (en newtons par mètre).
+        Il pourrait y avoir des forces externes <m>F(t)</m>
+        (en newtons)
+        agissant sur la masse.
+        Finalement, il y a de la friction qui est mesurée par <m>c \geq 0</m>
+        (en newtons secondes par mètre)
+        lorsque la masse glisse sur le plancher
+        (ou possiblement un amortisseur est connecté).
+      </p>
     <p>
-    Le premier exemple est une masse sur un ressort.
-      Supposons que nous avons une masse <m>m > 0</m>
-      (en kg)
-      connectée à
-      un mur fixe par un ressort, de constante <m>k > 0</m>
-      (en newtons par mètre).
-      Il pourrait y avoir des forces externes <m>F(t)</m>
-      (en newtons)
-      agissant sur la masse.
-      Finalement, il y a de la friction qui est mesurée par <m>c \geq 0</m>
-      (en newtons secondes par mètre)
-      lorsque la masse glisse sur le plancher
-      (ou possiblement un amortisseur est connecté).
+      <image width="40%" source="massfigforce-FR"/>
     </p>
+    
     <p>
       Soit <m>x</m> le déplacement de la masse (<m>x=0</m> est la position au repos),
       avec <m>x</m> s'éloignant du mur.
@@ -92,7 +93,7 @@
       Regardons deux autres exemples.
     </p>
     <p>
-      <image width="73%" source="mv-rlc"/>
+      <image width="35%" source="mv-rlc-FR"/>
     </p>
     <p> 
       Voici un exemple pour le génie électrique.
@@ -129,22 +130,21 @@
       Les variations du voltage deviennent la fonction de force <mdash/> pour un voltage constant,
       il s'agit d'un mouvement qui n'est pas forcé.
     </p>
+    <sidebyside widths="65% 35%" valign="bottom">
+      <p>
+        Notre prochain exemple se comporte approximativement comme un système masse-ressort. Supposons que la masse <m>m</m> pend sur un fil de longueur <m>L</m>. On cherche une équation pour l'angle (en radians). Soit <m>g</m> la force gravitationnelle. La physique élémentaire dit que l'équation est :
+        <me>
+          \theta'' + \frac{g}{L} \sin \theta = 0
+        </me>.
+      </p> 
+      <p>
+        <image width="75%" source="mv-pend-deriv-FR"/>
+      </p>
+  
+    </sidebyside>
+    
     <p>
-      <image width="73%" source="mv-pend-deriv"/>
-    </p>
-    <p>
-      Notre prochain exemple se comporte approximativement comme un système masse-ressort.
-      Supposons que la masse <m>m</m> pend sur un fil de longueur <m>L</m>.
-      On cherche une équation pour l'angle
-      (en radians).
-      Soit <m>g</m> la force gravitationnelle.
-      La physique élémentaire dit que l'équation est :
-      <me>
-        \theta'' + \frac{g}{L} \sin \theta = 0
-      </me>.
-    </p>
-    <p>
-      Dérivons cette équation en utilisant la deuxième loi de Newton :
+      Déduisons cette équation en utilisant la deuxième loi de Newton :
           <idx><h>deuxième loi de Newton</h></idx>
       la force est égale au produit de la masse et de l'accélération.
       L'accélération est
@@ -156,19 +156,13 @@
       La masse <m>m</m> est curieusement annulée de l'équation.
     </p>
     <p>
-      Maintenant, approximons.
-      Pour un petit <m>\theta</m>,
-      nous avons l'approximation <m>\sin \theta \approx \theta</m>.
-      On le voit dans la <xref ref="mv_sinthetafig"></xref> :
-      sur l'intervalle <m>-0.5 \lt \theta \lt 0.5</m>
-      (en radians),
-      les graphes de <m>\sin \theta</m> et de <m>\theta</m> sont presque les mêmes.
+      Maintenant, approximons. Pour un petit <m>\theta</m>, nous avons l'approximation de Taylor <m>\sin \theta \approx \theta</m>. On le voit dans la <xref ref="mv_sinthetafig"></xref> : sur l'intervalle <m>-0.5 \lt \theta \lt 0.5</m> (en radians), les graphes de <m>\sin \theta</m> et de <m>\theta</m> sont presque les mêmes.
     </p>
     <figure xml:id="mv_sinthetafig">
       <caption>Graphes de  <m>\sin \theta</m> et de <m>\theta</m> (en radians).</caption>
       <!-- {3.25in} -->
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-sintheta} -->
-      <image source="mv-sintheta"/>
+      <image source="mv-sintheta" width = "75%"/>
     </figure>
     <p>
       Donc, quand le balancement est petit, <m>\theta</m> est petit,
@@ -238,7 +232,8 @@
         <p>
           Justifiez l'identité
           <m>A \cos (\omega_0 t) + B \sin (\omega_0 t) = C \cos ( \omega_0 t - \gamma )</m> et vérifiez l'équation pour <m>C</m> et <m>\gamma</m>.
-          Astuce : commencez avec <m>\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)</m> et multipliez par <m>C</m>.
+          Astuce : commencez avec 
+          <me>\cos (\alpha-\beta) = \cos (\alpha) \cos (\beta) + \sin (\alpha)\sin (\beta)</me> et multipliez par <m>C</m>.
           Alors, que devraient être <m>\alpha</m> et <m>\beta</m>?
         </p>
       </statement>
@@ -325,7 +320,7 @@
           <caption>Oscillation simple non amortie.</caption>
           <!-- {3.25in} -->
           <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-undamped} -->
-          <image source="mv-undamped"/>
+          <image width = "75%" source="mv-undamped" />
         </figure>
         <p>
           La solution générale est :
@@ -383,7 +378,7 @@
 
   <paragraphs>
     <title>Mouvement libre amorti</title>
-    <introduction>
+    
       <p>
         On considère maintenant le cas amorti.
             <idx><h>amorti</h></idx>
@@ -423,23 +418,27 @@
         Le signe de <m>p^2-\omega_0^2</m> est le même que le signe de <m>c^2 - 4km</m>.
         Ainsi, on obtient des racines réelles si et seulement si <m>c^2-4km</m> n'est pas négatif (c'est-à-dire si <m>c^2 \geq 4km</m>).
       </p>
-    </introduction>
+    
     <!-- <subsubsection> -->
-      <title>Suramortissement</title>
+      <paragraphs>
+        <title>Suramortissement</title>
+        <p>
+          Lorsque <m>c^2 - 4km > 0</m>,
+          le système est <em>suramorti
+              <idx><h>suramorti</h></idx>
+          </em>.
+          Dans ce cas, il y a deux racines réelles <m>r_1</m> et <m>r_2</m>.
+          Les deux racines sont négatives : puisque <m>\sqrt{p^2 - \omega_0^2}</m> est toujours plus petite que <m>p</m>, alors <m>-p \pm \sqrt{p^2 - \omega_0^2}</m> est négative dans tous les cas.
+        </p>
+     
+      
       <figure xml:id="mv_overdampedfig">
         <caption>Mouvement suramorti, avec quelques conditions initiales différentes.</caption>
         <!-- {3.25in} -->
         <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-overdamped} -->
-        <image source="mv-overdamped"/>
+        <image source="mv-overdamped" width = "75%"/>
       </figure>
-      <p>
-        Lorsque <m>c^2 - 4km > 0</m>,
-        le système est <em>suramorti
-            <idx><h>suramorti</h></idx>
-        </em>.
-        Dans ce cas, il y a deux racines réelles <m>r_1</m> et <m>r_2</m>.
-        Les deux racines sont négatives : puisque <m>\sqrt{p^2 - \omega_0^2}</m> est toujours plus petite que <m>p</m>, alors <m>-p \pm \sqrt{p^2 - \omega_0^2}</m> est négative dans tous les cas.
-      </p>
+      
       <p>
         La solution est
         <me>
@@ -472,6 +471,7 @@
           </p>
         </statement>
       </example>
+    </paragraphs>
     <!-- </subsubsection> -->
     <!-- <subsubsection> -->
       <!-- <title>Amortissement critique</title> -->
@@ -490,14 +490,14 @@
         Mais ces équations sont après tout des approximations :
         dans le vrai monde, on est toujours un peu sous-amorti ou un peu trop amorti. On ne s'attardera donc pas sur l'amortissement critique.
       </p>
-    <!-- </subsubsection> -->
-    <!-- <subsubsection>
+    </paragraphs> 
+    <paragraphs>
       <title>Sous-amortissement</title> -->
       <figure xml:id="mv_underdampedfig">
         <caption>Système sous-amorti avec ses courbes enveloppes.</caption>
         <!-- {3.25in} -->
         <!-- \diffyincludegraphics{width=3in}{width=4.5in}{mv-underdamped} -->
-        <image source="mv-underdamped"/>
+        <image source="mv-underdamped" width = "75%"/>
       </figure>
       <p>
         Lorsque <m>c^2 - 4km \lt  0</m>, le système est <em>sous-amorti
@@ -558,9 +558,8 @@
         </p>
       </statement>
     </exercise>
-    <p>
-      \end{samepage}
-    </p>
+    
+
     <exercise>
       <statement>
         <p>
