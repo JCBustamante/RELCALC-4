@@ -1,6 +1,6 @@
 <section xml:id="bvp_section">
   <title>Équations avec conditions au bord</title>
-  <paragraphs>
+  <subsection>
     <title>Valeurs au bord</title>
     <p>
       Avant de s'attaquer aux séries de Fourier,
@@ -77,8 +77,8 @@
       Ce problème est analogue à
       trouver les valeurs propres et les vecteurs propres des matrices.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Problèmes de valeurs propres</title>
     <p>
       Pour la théorie de base des séries de Fourier,
@@ -357,8 +357,8 @@
         </p>
       </statement>
     </example>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Orthogonalité des fonctions propres</title>
     <p>
       Une chose qui sera très utile dans la prochaine section est la propriété
@@ -449,8 +449,8 @@
         \int_{-\pi}^\pi \cos (mt) \sin (nt) \,dt = 0 \qquad \text{ (même si \(m=n\)). }
       </me>
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Alternative de Fredholm</title>
     <p>
       On arrive maintenant à
@@ -501,8 +501,8 @@
       vue est que, en général, un opérateur différentiel aura une infinité
       de valeurs propres, tandis qu'une matrice n'en a qu'un nombre fini.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Application</title>
     <p>
       Considérons une application physique.
@@ -609,7 +609,7 @@
       alors la vitesse augmente pour que la corde reste
       <q>sortie</q>.
     </p>
-  </paragraphs>
+  </subsection>
   <exercises>
     <introduction>
       <p>

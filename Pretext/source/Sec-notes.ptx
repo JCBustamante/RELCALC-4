@@ -21,12 +21,28 @@
     L'adaptation en français a été écrite pour les cours de GCH217 et MAT217, donnés à l'Université de Sherbrooke.
   </p>
   <p>
-    Voici d'autres références : E. L.<nbsp/>Ince,
-    <em>Ordinary Differential Equations</em><nbsp/><xref ref="I"/>, classique (et économique); Stanley Farlow,
-    <em>An Introduction to Differential Equations and Their Applications</em><nbsp/><xref ref="F"/>; Berg et McGregor,
-    <em>Elementary Partial Differential Equations</em><nbsp/><xref ref="BM"/>, maintenant disponible dans Dover;
-    et William Trench,
-    <em>Elementary Differential Equations with Boundary Value Problems</em><nbsp/><xref ref="T"/>, une ressource libre.
-    Voir le chapitre Lectures additionnelles à la fin de ce manuel.
+    Voici d'autres références (les détails se trouvent à la ... ): 
+    <ul marker = "circle">
+      <li>
+        <p>
+          E. L.<nbsp/>Ince, <em>Ordinary Differential Equations</em><nbsp/><xref ref="I"/>, classique (et économique);    
+        </p>
+      </li>
+      <li>
+        <p>
+          Stanley Farlow, <em>An Introduction to Differential Equations and Their Applications</em> <nbsp/> 
+          <xref ref="F"/>;                
+        </p>
+      </li>
+      <li>
+        <p>
+          Berg et McGregor, <em>Elementary Partial Differential Equations</em><nbsp/><xref ref="BM"/>, maintenant disponible dans Dover;                
+        </p>
+        <p>
+          William Trench,<em>Elementary Differential Equations with Boundary Value Problems</em><nbsp/><xref ref="T"/>, une ressource libre.
+        </p>
+      </li>
+    </ul>
   </p>
+  
 </section>

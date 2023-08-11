@@ -1,6 +1,6 @@
 <section xml:id="moreonfourier_section">
   <title>Plus sur les séries de Fourier</title>
-  <paragraphs>
+  <subsection>
     <title>Fonctions <m>2L</m>-périodiques</title>
     <p>
       On a calculé les séries de Fourier pour une fonction <m>2\pi</m>-périodique,
@@ -125,8 +125,8 @@
         </figure>
       </statement>
     </example>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Convergence</title>
     <p>
       On aura besoin de la limite d'un côté de la fonction.
@@ -245,8 +245,8 @@
       la dernière section, à
       la discussion sur le phénomène de Gibbs : plus on se rapproche de la discontinuité, plus on a besoin de termes pour obtenir une approximation acceptable de la fonction.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Dérivation et intégration de séries de Fourier</title>
     <p>
       Non seulement la série de Fourier converge bien,
@@ -300,8 +300,8 @@
       et l'on ne devrait pas s'attendre à
       une série de Fourier.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Taux de convergence et différentiabilité</title>
     <p>
       Considérons un exemple de fonction périodique qui se dérive partout.
@@ -434,7 +434,7 @@
         </p>
       </statement>
     </exercise>
-  </paragraphs>
+  </subsection>
   <exercises>
     <exercise>
       <statement>

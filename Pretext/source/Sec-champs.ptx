@@ -13,7 +13,7 @@
       ou trouver une solution approximative.
     </p>
   </introduction>
-  <paragraphs>
+  <subsection>
     <title>Champs de direction</title>
     <p>
       L'équation <m>y' = f(x , y)</m> donne une formule pour la pente de la tangente à une solution à
@@ -103,8 +103,8 @@
       <!-- \diffyincludegraphics{width=3in}{width=4.5in}{1-3-mysl-sol} -->
       <image width="75%" source="1-3-mysl-sol"/>
     </figure>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Existence et unicité</title>
     <p>
       Nous allons considérer maintenant deux questions fondamentales à
@@ -264,7 +264,7 @@
       Dans ce manuel,
       nous considérerons principalement des équations dont la solution existe et est unique pour toutes les valeurs de la variable indépendante.
     </p>
-  </paragraphs>
+  </subsection>
 
   <!-- TODO -->
   <exercises>

@@ -1,6 +1,6 @@
 <section xml:id="sec_ccsol">
   <title>Équations différentielles d'ordre deux à coefficients constants</title>
-  <paragraphs>
+  <subsection>
     <title>Résoudre les équations à coefficients constants</title>
     <p>
       Considérons le problème suivant :
@@ -234,9 +234,9 @@
       La limite est donc la valeur de cette dérivée, <m>x e^{rx}</m>,
       et c'est une solution dans le cas d'une racine double.
     </p>
-  </paragraphs>
+  </subsection>
   
-  <paragraphs>
+  <subsection>
     <title>Nombres complexes et formule d'Euler</title>
     <p>
       Un polynôme peut avoir des racines complexes.
@@ -366,9 +366,9 @@
         \operatorname{Re}(a+ib) = a \qquad \text{ et }  \qquad \operatorname{Im}(a+ib) = b
       </me>.
     </p>
-  </paragraphs>
+  </subsection>
   
-  <paragraphs>
+  <subsection>
     <title>Racines complexes</title>
     <p>
       Supposons que nous avons une équation <m>ay'' + by' + cy = 0</m>,
@@ -498,7 +498,7 @@
         </p>
       </statement>
     </example>
-  </paragraphs>
+  </subsection>
   
   <exercises>
     <exercise>

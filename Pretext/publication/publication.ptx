@@ -55,6 +55,7 @@
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
+    <divisions chapter-start="0" level="2"/>
     <blocks level="2" />
     <projects level="2" />
     <equations level="2" />
@@ -108,7 +109,7 @@
     <!-- @colors now implemented                               -->
     <!-- also @knowls, @toc, and @banner, although no          -->
     <!-- alternative styles exist yet for those.               -->
-    <css style="default" colors="blue_red" />
+    <css style="oscarlevin" colors="blue_green"/>
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default" />
@@ -116,6 +117,8 @@
     geogebra-geometry, and geogebra-3d.  For ActiveCode, you can specify a language (python,
     javascript, etc).  -->
     <calculator model="none" activecode="none" />
+    <analytics google-gst="G-Q86VHSK9QR"/>
+        
     <!-- Set the base URL of where the online version is hosted to have links in other formats -->
     <!-- <baseurl href="changetomywebsite.org"/> -->
     <!-- Control behavior of online WeBWorK, per type: -->

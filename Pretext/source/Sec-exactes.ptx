@@ -135,7 +135,7 @@
     </p>
   </introduction>
 
-  <paragraphs>
+  <subsection>
     <title>Résoudre des équations exactes</title>
     <p>
       Vous vous demandez peut-être :
@@ -474,7 +474,7 @@
         </p>
       </statement>
     </example>
-  </paragraphs>
+  </subsection>
   
   <exercises>
     <exercise>

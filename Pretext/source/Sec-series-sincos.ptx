@@ -1,6 +1,6 @@
 <section xml:id="sec_scs">
   <title>Séries de sinus et de cosinus</title>
-  <paragraphs>
+  <subsection>
     <title>Fonctions périodiques paires et impaires</title>
     <p>
       Vous avez peut-être remarqué qu'une fonction impaire n'a pas de termes en cosinus dans la série de Fourier et qu'une fonction paire n'a pas de termes en sinus dans la série de Fourier.
@@ -100,9 +100,9 @@
         </figure>
       </statement>
     </example>
-  </paragraphs>
+  </subsection>
 
-  <paragraphs>
+  <subsection>
     <title>Séries sinus et cosinus</title>
     <p>
       Soit <m>f(t)</m> une fonction <m>2L</m>-périodique impaire.
@@ -266,7 +266,7 @@
         </p>
       </statement>
     </exercise>
-  </paragraphs>
+  </subsection>
 
   <!-- TODO : Dans la version anglaise il y a deux applications qui semblent importantes. -->
 

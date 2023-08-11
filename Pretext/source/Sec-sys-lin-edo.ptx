@@ -2,9 +2,8 @@
   <title>Systèmes linéaires d'équations différentielles ordinaires</title>
   <!-- <introduction> -->
     <p>
-      Commençaons par parler des fonctions matricielles et vectorielles.
-      Ces fonctions sont des matrices ou des vecteurs où un élément dépend d'une variable.
-      Si <m>t</m> est la variable indépendante,
+      Commençons par parler des fonctions matricielles et vectorielles.
+      Ces fonctions sont des matrices ou des vecteurs où un élément dépend d'une variable. Si <m>t</m> est la variable indépendante,
       une <em>fonction vectorielle
           <idx><h>fonction vectorielle</h></idx>
       </em> <m>\vec{x}(t)</m> s'écrit
@@ -13,7 +12,7 @@
       </me>.
     </p>
     <p>
-      De la même façaon, une <em>fonction matricielle
+      De la même façon, une <em>fonction matricielle
           <idx><h>fonction matricielle</h></idx>
       </em> <m>A(t)</m> s'écrit
       <me>

@@ -34,7 +34,7 @@
       Quelques notions supplémentaires d'algèbre sont nécessaires pour résoudre cette équation.
     </p>
   </introduction>
-  <paragraphs>
+  <subsection>
     <title>Matrices de valeurs propres et de vecteurs propres</title>
     <p>
       Prenons <m>A</m>, une matrice carrée constante.
@@ -188,8 +188,8 @@
         </p>
       </statement>
     </exercise>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Décomposition en valeurs propres avec des valeurs propres réelles distinctes</title>
     <p>
       Supposons le système d'équations
@@ -282,8 +282,8 @@
       est essentiellement la même que l'équation caractéristique des sections <xref ref="sec_ccsol" text="global"></xref> et
       <xref ref="sec_hol" text="global"></xref>.
     </p>
-  </paragraphs>
-  <paragraphs>    
+  </subsection>
+  <subsection>    
     <title>Valeurs propres complexes</title>
     <p>
       Une matrice peut avoir des valeurs propres complexes même si tous les éléments sont réels.
@@ -471,7 +471,7 @@
       (nous ne verrons pas cette situation ici;
       consultez les références pour en savoir plus).
     </p>
-  </paragraphs>
+  </subsection>
   <exercises>
     <exercise>
       <title>facile</title>

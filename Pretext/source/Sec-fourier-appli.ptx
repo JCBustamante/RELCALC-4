@@ -1,6 +1,6 @@
 <section xml:id="appoffourier_section">
   <title>Applications des séries de Fourier</title>
-  <paragraphs>
+  <subsection>
     <title>Oscillations périodiques forcées</title>
     <p>
       <image width="73%" source="massfigforce"/>
@@ -159,8 +159,8 @@
         </figure>
       </statement>
     </example>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Résonance</title>
     <p>
       Tout comme lorsque la fonction de forçage était un simple cosinus,
@@ -325,7 +325,7 @@
       On ne va pas s'intéresser à
       ces détails ici.
     </p>
-  </paragraphs>
+  </subsection>
   <exercises>
     <exercise>
       <statement>

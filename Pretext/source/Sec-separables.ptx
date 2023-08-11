@@ -19,7 +19,7 @@
       puisque c'est une variable dépendante de <m>x</m>.
     </p>
   </introduction>
-  <paragraphs>
+  <subsection>
     <title>Équations séparables</title>
     <p>
       On dit qu'une équation différentielle est <em>séparable
@@ -130,8 +130,8 @@
       Comme on peut voir,
       on obtient la même formule que plus haut, qui est donc correcte.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Solutions implicites</title>
     <p>
       Parfois, on peut avoir de la difficulté
@@ -227,8 +227,8 @@
       <em>solutions singulières<idx><h>solutions singulières</h></idx>
       </em>.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     
     <title>Exemples d'équations séparables</title>
     <example>
@@ -355,7 +355,7 @@
         </p>
       </statement>
     </example>
-  </paragraphs>
+  </subsection>
   <exercises>
       <exercise>
         <statement>

@@ -71,7 +71,7 @@
       </statement>
     </theorem>
   </introduction>
-  <paragraphs>
+  <subsection>
     <title>Indépendance linéaire</title>
     <p>
       Lorsqu'on a seulement deux fonctions <m>y_1</m> et <m>y_2</m>,
@@ -201,9 +201,9 @@
         </p>
       </statement>
     </example>
-  </paragraphs>
+  </subsection>
 
-  <paragraphs>
+  <subsection>
     <title>Équations différentielles d'ordre supérieur à coefficients constants</title>
     <p>
       Lorsqu'on a une équation linéaire homogène d'ordre supérieur à
@@ -408,7 +408,7 @@
         </p>
       </statement>
     </example>
-  </paragraphs>
+  </subsection>
   <exercises>
     <exercise>
       <statement>

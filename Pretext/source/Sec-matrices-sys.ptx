@@ -5,7 +5,7 @@
       Note : lecture supplémentaire dans l'<xref ref="linalg_appendix"></xref>.
     </p>
   </introduction>
-  <paragraphs>
+  <subsection>
     <title>Matrices et vecteurs</title>
     <p>
       Avant de parler de systèmes linéaires d'EDO, il faut parler de matrices,
@@ -98,8 +98,8 @@
         \begin{bmatrix} 1 \amp  2 \amp  3 \\ 4 \amp  5 \amp  6 \end{bmatrix}^T = \begin{bmatrix} 1 \amp  4 \\ 2 \amp  5 \\ 3 \amp  6 \end{bmatrix}
       </me>.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Multiplication de matrices</title>
     <p>
       Voyons maintenant la multiplication de matrices.
@@ -242,8 +242,8 @@
       gauche) et l'on obtient <m>A^{-1}AB = A^{-1}AC</m> ou <m>IB=IC</m> ou <m>B=C</m>.
       On voit bien que <m>{(A^{-1})}^{-1} = A</m>.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Déterminant</title>
     <p>
       Le <em>déterminant
@@ -422,8 +422,8 @@
       La formule fonctionne seulement si le déterminant est non nul,
       sinon on obtient une division par zéro.
     </p>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Résolution de systèmes linéaires</title>
     <p>
       Les matrices peuvent entre autres servir à
@@ -632,8 +632,8 @@
         </p>
       </statement>
     </example>
-  </paragraphs>
-  <paragraphs>
+  </subsection>
+  <subsection>
     <title>Calcul de l'inverse</title>
     <p>
       Si la matrice <m>A</m> est carrée et qu'une solution unique <m>\vec{x}</m> à
@@ -666,7 +666,7 @@
       <m>[ \,I ~|~ A^{-1}\, ]</m> si et seulement si <m>A</m> est inversible.
       Il suffit alors de lire l'inverse <m>A^{-1}</m>.
     </p>
-  </paragraphs>
+  </subsection>
   <exercises>
     <exercise>
       <statement>

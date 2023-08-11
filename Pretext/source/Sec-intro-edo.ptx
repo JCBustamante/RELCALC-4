@@ -1,6 +1,6 @@
 <section xml:id="introde_section">
   <title>Introduction aux équations différentielles</title>
-  <paragraphs>
+  <subsection>
     <title>Équations différentielles</title>
     <p>
       Les lois de la physique sont généralement exprimées sous forme d'équations différentielles.
@@ -32,9 +32,9 @@
       Cette équation vient de la loi de refroidissement de Newton,
       lorsque la température ambiante oscille en fonction du temps.
     </p>
-  </paragraphs>
+  </subsection>
 
-  <paragraphs>
+  <subsection>
     <title>Solutions d'équations différentielles</title>
     <p>
       Quand on résout une équation différentielle comme <xref ref="eq1"/>,
@@ -151,9 +151,9 @@
       d'où l'importance d'apprendre des techniques de résolution de problèmes,
       afin d'appliquer ces techniques aux nouveaux problèmes.
     </p>
-  </paragraphs>
+  </subsection>
 
-  <paragraphs>
+  <subsection>
     <title>En pratique</title>
 
     <p>
@@ -311,8 +311,8 @@
       afin de trouver la <em>solution particulière<idx><h>solution particulière</h></idx>
       </em>.
     </p>
-  </paragraphs>
-  <paragraphs xml:id="pars_fourfundamental">
+  </subsection>
+  <subsection xml:id="pars_fourfundamental">
     <title>Quatre équations fondamentales</title>
     <p>
       Quelques équations apparaissent fréquemment,
@@ -467,7 +467,7 @@
         y = -127.7 \; \textrm{ft}  \cdot \cosh\left( x /127.7  \; \textrm{ft}  \right) + 757.7 \;\textrm{ft}
       </me>.
     </p>
-  </paragraphs>
+  </subsection>
 
 
 <!-- TODO exos -->
